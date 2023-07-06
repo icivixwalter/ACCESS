@@ -1,0 +1,37 @@
+
+PROGETTO_MSys_DF01_COMANDI
+
+	 Note
+            Tabella di contenimento di tutti i comandi del progetto
+            mysys  PER GESTIRE TUTTO IL PROGETTO
+            
+
+            @progetto.esporta.@MSys
+            @MSys.progetto
+            @MSys_DF01_COMANDI.tabella
+            
+
+
+    QUERY
+    	
+    	MSys_DF01_COMANDI_Qry_}----------------------------------------@
+
+    	MSys_DF01_COMANDI_Qry01_01_SELECT_TUTTI
+
+
+    		Note
+    			Con questa query estraggo tutti i comandi
+                    Query di estrazione di tutti icomandi 
+                    @tutte.le.query.db
+                    @db.tutte.le.query
+                    @db.query.tutte
+                    @query.comandi.tutti
+
+                        faq:
+                            dove si trovano i comandi, NELLA TABELLA COMANDI
+
+
+
+    
+
+    

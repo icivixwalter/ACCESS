@@ -1,0 +1,32 @@
+//i bat della directory corrente
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_PROGETTI_MDB\ACCESS_GE_OGGETTI_NEW\*.txt
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_PROGETTI_MDB\ACCESS_GE_OGGETTI_NEW\*.bat
+
+
+//archivi mdb
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_PROGETTI_MDB\ACCESS_GE_OGGETTI_NEW\GE_OGGETTI_NEW_MDB\*.mdb
+
+
+
+//archivi per il flow chart
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_PROGETTI_MDB\ACCESS_GE_OGGETTI_NEW\GE_OGGETTI_NEW_ANALISI\Analisi_FlowChart\*.mdj
+
+
+//archivi di sublimetext
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_PROGETTI_MDB\ACCESS_GE_OGGETTI_NEW\GE_OGGETTI_NEW_ANALISI\Analisi_SublimeText\
+
+
+//salvo la libreria OCX utile per il TreeView access 2000   
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_PROGETTI_MDB\ACCESS_GE_OGGETTI_NEW\GE_OGGETTI_NEW_LIBRERIE\MSCOMCTL.OCX
+
+//per la directory del Tex sono il file .text
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_PROGETTI_MDB\ACCESS_GE_OGGETTI_NEW\GE_OGGETTI_NEW_ANALISI\Analisi_Text\GE_OGGETTI_NEW_ANALISI_TEX.tex
+
+
+
+
+//Attenzione scrivi correttamente gli asterisci .bat ecc. altrimenti salva tutte le 
+//directory e il filtro non funziona piu.
+
+
+

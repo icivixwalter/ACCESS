@@ -1,0 +1,20 @@
+CONTR_TB01_OGGETTI.md
+
+	Nota
+		tabella per i lcontrollo oggetti
+
+
+	CAMPI
+		TIPOGGETTO_s
+
+			PROPRIETA
+				RICERCA
+					OrigineRiga
+						SELECT 
+							MSys_DF02_TIPO_OGGETTO.TIPOGGETTO_s 
+						
+								FROM 
+						MSys_DF02_TIPO_OGGETTO GROUP 
+							BY MSys_DF02_TIPO_OGGETTO.TIPOGGETTO_s 
+						ORDER BY MSys_DF02_TIPO_OGGETTO.TIPOGGETTO_s 
+							WITH OWNERACCESS OPTION; 

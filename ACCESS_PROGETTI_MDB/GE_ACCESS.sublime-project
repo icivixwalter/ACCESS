@@ -1,0 +1,29 @@
+{
+	/*"folders":
+	[
+		{
+			"path": ".",
+		},
+		{
+			"path": "C:\\CASA\\LINGUAGGI\\SUBLIMETEXT\\TutorialeSublimeText"
+		},
+	],*/
+	"folders":
+	[
+		{
+			"path": ".",
+		},
+		{
+			"path": "C:\\CASA\\LINGUAGGI\\SUBLIMETEXT\\TutorialSublimeText",
+		},
+		{
+			"path": "C:\\CASA\\LINGUAGGI\\HTML\\TUTORIAL_HTML",
+		},
+		{
+			"path": "C:\\CASA\\LINGUAGGI\\ACCESS\\ACCESS_VBA_2007\\TXT_OFFICE_VB_2007",
+		},
+		{
+			"path": "C:\\CASA\\LINGUAGGI\\ACCESS\\ACCESS_VBA_2000\\TXT_OFFICE_VBA_2000"
+		},
+	],
+}

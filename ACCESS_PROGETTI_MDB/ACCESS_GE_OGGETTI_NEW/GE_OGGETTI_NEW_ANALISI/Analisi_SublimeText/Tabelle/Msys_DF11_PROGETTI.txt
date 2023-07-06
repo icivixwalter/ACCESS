@@ -1,0 +1,64 @@
+Msys_DF11_PROGETTI
+        
+        Note
+                tabella base dei progetti, con gli oggetti per il funzionamento degli stessi
+                
+                Tabella base che serve a gestire tutti i PROGETTI MDB insieme a quello principale degli OGGETTI SI SISTEMA 
+                identificati dal codice MSys.
+                Questa tabella funge da master per altre due sottotabelle:
+                    
+                    Msys_DF11_PROGETTI  --> Msys_DF12_GE_ObjProgetti --> MSys_ELENCO_ObjProgetti
+
+                    @tutte.le.tabelle.db.@MSys
+                    @MSys.tabelle
+
+
+
+                @MSys.progetto
+                @progetto.esporta.@MSys
+                @tutte.le.tabelle.db.@MSys
+                @db.tutte.le.tabelle.@MSys
+                @db.tabelle.tutte.@MSys
+
+
+
+FORM MASTER_DF11
+
+    Msys_DF11_PROGETTI_Frm02_S01_GROUP_Obj
+                NOTA
+                    @form.master.DF11.PROGETTI
+                    @form.detail.DF12.
+
+                    questa form gestisce il master dell'elenco oggetti da esportare con tutti
+                    gli oggetti indicati nella sottoform collegata con i seguenti campi
+                        master ----> COD_PROGETTO_s;TIPOGGETTO_s
+                        detail ----> COD_PROGETTO_s;TIPOGGETTO_s
+
+        MSys_ELENCO_}-----------------------------------------------frm@
+        MSys_ELENCO_ObjProgetti_Frm01_S01_Tutti
+
+                nota
+                    sottoform con tutti gli oggetti da esportare
+
+                    @sottoform.elenco.oggetti.da.esportare
+                    @oggetti.da.esportare.sottoform
+                    @elenco.oggetti.Msys_DF12_GE_ObjProgetti.sottoform
+
+
+sistemare
+    
+    FORM
+        Note
+            La form di gestione dei progetti, si basa sulla  tabella DF11_PROGETTI... si basa su una form master e due sottoform 
+            di seguito indicate.   MASTER --> SOTTOFORM_01 --> SOTTOFORM_02
+
+        Msys_DF11_PROGETTI_Frm01_M01_Obj  
+            Note
+                Form master che si basa su questa query:    
+                Query_base  = Msys_DF11_PROGETTI_Qry01_10_GROUP_TUTTI
+    
+        Msys_DF11_PROGETTI_Frm02_S01_GROUPObj 
+            Note
+                2° sottoform che elenca gli oggetti appartenenti al progetto, QUERY, FORM, TABELLE ECC...
+                Query_base  = Msys_DF11_PROGETTI_Qry01_11_GROUP_OGGETTI 
+        

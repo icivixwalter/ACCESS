@@ -1,0 +1,304 @@
+
+
+
+PROGETTO MSsys.TIPO OGGETTO
+            Note
+                Il tipo di oggetto, si riferisce al progetto di esportazione degli oggetti di gestione delle tabelle, query, form ecc
+                del database corrente.
+                Per gestire i collegamenti e le esportazioni occorrono i seguenti oggetti:
+              MSsys.progetto
+
+    
+    TABELLE
+            TABELLA OGGETTI.MSsys
+                Note
+                    Per gestire gli oggetti del progettoMSsys.occorrono 2 tabelle, quella del TIPO_OGGETTO e quella degli ELENCO_OGGETTI_MSys
+                    @MSsys.progetto.tabelle
+                    @tabellMSsys.progetto
+
+              MSsys.DF02_}--------------------------------------------------@
+              MSsys.DF02_TIPO_OGGETTO
+              MSsys.ELENCO_}-------------------------------------------------@
+
+              MSsys_DF02_TIPO_OGGETTO
+
+                    Note
+                        Il tipo di oggetto permette di evidenziare quali sono gli oggetti che appartengono a un gruppo di progetti, 
+
+
+              MSsys.ELENCO_OGGETTI_MSys
+                Note
+                    Elenco oggetti da esportare
+                    @progetto.esporta.@MSsys
+                    @tutte.le.tabelle.db
+                    @db.tutte.le.tabelle
+                    @db.tabelle.tutte
+
+
+
+            MSsys_QUERY
+                 Note
+                    Tabella di salvataggio di tutte le query
+                    @progetto.esporta.@MSsys
+                    @tutte.le.query.db
+                    @db.tutte.le.query
+                    @db.query.tutte
+                        faq:
+                            dove vengono salvata tutte le tabelle del db?
+                            tutte le tabelle del db
+
+        TABELLE DEL PROGETTO DI GESTIONE DEL DATABASE MDB
+                Note
+                    Queste tabelle fanno parte del PROGETTO DI GESTIONE DEL DATABASE MDB sono divise per oggetti da salvare, LE TABELLE,
+                    LE QUERY, LE FORM, I MODULI, LE FORM I REPORT.
+        
+
+            02)
+                xx
+                    Note
+                        Tutte le query del database corrente vengono salvata in questa tabella, del gruppo PROGETTO DI GESTIONE DEL DATABASE
+
+
+
+                        @QUERY.DB.@progetto.gestione.DBMDB
+                        @PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+                        @tabella.MSys_TABELLE.@DBMDB
+                        faq:
+
+
+            TABELLA PATH DI ESPORTAZIONE OGGETTI
+                Note
+                    Dove esportare gli oggetti
+
+              MSsys_ELENCO_OGGETTI_DISCO_ESPORTA_MSys
+                
+                Note
+                    Il disco e la path di esportazione del progetto MSSys
+                    @tabella.progetto.esporta.MSsys
+                    @path.esportazione.progetto.MSsys
+
+
+
+    QUERY 
+            QUERY SELEZIONA OGGETTI
+                Note
+                    Le query che seleziona gli oggetti da lavorare ES:
+                                        
+                
+            
+
+            QUERY ELENCO OGGETTI
+                Note
+                    La query che elenca gli oggetti del progetto in questione da esportare
+
+               MSys_ELENCO_OGGETTI_SELECT_Qry01_01_Tutti
+
+                        Note
+                            Query che estra L'elenco degli oggetti da esportare 
+                            
+                            MSsys.progetto.query
+                            MSsys.elenco.oggetti.da.esporatare
+
+            QUERY DI GESTIONE DEL DATABASE
+                Note
+                    Le query che gestiscono tutti gli oggetto del database ed attinenti al progetto di GESTIONE DEL DATABASE
+                    @progetto.gestione.DBMDB
+                    @progetto.gestione.database.DBMDB
+
+
+                MSsys_TABELLE_Qry01_01_SELECT
+                    Note
+                        Query di estrazione di tutte le tabelle del PROGETTO DI GESTIONE DEL DATABASE, tutte le tabelle anche di sistema
+
+                        @query.TABELLE.DB.@progetto.gestione.DBMDB
+                        @TABELLE.DB.query.@progetto.gestione.DBMDB
+                        @PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+                        Faq:
+                            @dove.sono.tutte.le.tabelle.di.sistema.@PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+                            @tutte.le.tabelle.di.sistema.@PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+
+                            tutte le tabelle del database corrente
+                            tutte le tabelle di sistema del database corrente
+                            
+
+                    Struttura
+                        SELECT 
+                        MSsys_Qry01_01_MSys_ELENCO_OGGETTI_TABELLE.*
+                        FROM 
+                        MSsys_Qry01_01_MSys_ELENCO_OGGETTI_TABELLE;
+
+
+             
+                    
+
+
+
+    FORM
+            LA FORM DI GESTIONE IL DATABASE
+                Note
+                    Form di gestione di tutti gli oggetti del database, per l'acquisizione di 
+                        tutte le tabelle,
+                        tutte le query
+                        tutte le form
+                        tutti i moduli e classi
+                        tutti i report
+                    La form è composta da un tab controll che evidenzi gli oggetti in questa maniera:
+                        pag_01  = tutte le tabelle  (@pag_01.tutte.le.tabelle, @tutte.le.tabelle.pag_01)
+
+                MSsys_Frm01_M01_OGGETTI_DB_TabControll_(H14,5_L38_4Cmb+1Btn)
+
+            LE FORM CHE SELEZIONANO GLI OGGETTI DA ESPORTARE
+                Note
+                    Queste form selezionano gli oggetti da esportare 
+                    
+                    progettoMSsys.TIPO OGGETTO
+                    MSsys.progetto.form
+                    @forMSsys.progetto
+                
+               MSsys.Frm00_{=========================================}_OGGETTI
+               MSsys_Frm01_S01_DF00_}-----------------------------------------@
+               
+               MSsys_Frm01_S01_DF02_TIPO_OGGETTO
+
+               MSsys_Frm01_S01_ELENCO_OGGETTI_MSsys
+
+                        Note
+                            La form TIMO OGGETTO ha come sotto form la ELENCO OGGETTI da esportare 
+
+
+                    CMB_01
+                        Note
+                            La combinata 01 della form master permette la scelta dei menu per il 
+                            SALVATAGGIO DELLE TABELLE,
+                            SALVATAGGIO DELLE QUERY
+
+
+
+    FUNZIONI
+        FUNZIONE ESPORTA OGGETTI
+                Note
+                    Funzione che esporta gli oggetti di controllo
+                    @ESPORTA.oggettiMSsys.
+                   MSsys.esporta.oggetti
+               
+            Public Function ESPORTA_OGGETTI_PFunct()
+
+                On Error GoTo ESPORTA_ESPORTA_OGGETTI_PFunct_Err
+
+                    '//todo aprire un rs.
+                    
+                    '//PARAMETRI GENERALI
+                    Database_s = ""
+                    Disco_s = ""
+                    Path_s = ""
+                    Table_s = ""
+                    Cancella_b = True
+                     
+                        '//ITERO NEL RS
+                        '//----------------------------------------------------------------------------------------------------------//
+                         
+                             '//Inserire tabella o stringa ssql
+                             sSql = MSsys.ELENCO_OGGETTIMSsys.
+                             'RS ADO
+                             'Solo l'anno indicato nella variabile
+                             Set AdodaoRs = CurrentDb.OpenRecordset(sSql)
+                            
+                            '//WITH AdodaoRs
+                            '//............................................................................//
+                             With AdodaoRs
+                             
+                                 'Controllo Rs
+                                 If AdodaoRs.EOF = False And AdodaoRs.BOF = False Then
+                                
+                                     'RESET
+                                     Int1 = 0
+                                     icount = 0
+                                     iTOTcount = 0
+                                     ixNRO_ESTR = 0
+                                
+                                     .MoveFirst
+                                
+                                     'ITERAZIONE RS DI LETTURA
+                                     '----------------------------------------------------------------------
+                                         While Not AdodaoRs.EOF
+                                
+                                         'Controllo windows
+                                         DoEvents
+                                         sSql = ""
+                                         
+                                             
+                                            '//PARAMETRI COLLETTIVI PER TUTTE LE CHIAMATE
+                                                Disco_s = .Fields("Disco_s")
+                                                Path_s = .Fields("Path_s")
+                                                Database_s = .Fields("Database_s")
+                                                Table_s = .Fields("Table_s")
+                                                Cancella_b = .Fields("Cancella_b")
+                                                
+                                            'Vado avanti finche la base è uguale
+                                             '------------------------------------------------
+                                                 'Imposto i codici Base
+                                                 lngxID_TERN = .Fields("ID_lng")
+                                
+                                                 Debug.Print
+                                                 Debug.Print "--------------------------------------------"
+                                                 Debug.Print "CONTROLLO id tabella" & lngxID_TERN
+                                                 Debug.Print "collegato il seguente oggetto : " & Disco_s & Path_s & Database_s & Table_s & " cancella : " & Cancella_b
+                                               
+                                                 Debug.Print "--------------------------------------------"
+                                             '............................................
+                                                
+                                                'Vv1 = C_COLLEGA_PRES3000_PRES3000_TB25_DIPENDENTI(Disco_s, Path_s, Database_s, Table_s, Cancella_b)
+                                                
+                                                '//modello: DoCmd.CopyObject "C:\GESTIONI\GESTIONE_LLPP\25_GESTIONE_LLPP\LLPP_ARCHIVI_MDB\LLPP_ATTI_GESTIONE.mdb", "LLPP_IMPEGNI_Frm_S02_01_ELENCO_DI_SPESA", acForm, "LLPP_IMPEGNI_Frm_S02_01_ELENCO_DI_SPESA"
+                                                
+
+                                
+                                           
+                                
+                                             AdodaoRs.MoveNext
+                                
+                                         Wend
+                                     'ITERAZIONE RS DI LETTURA       *** fine ***
+                                     '----------------------------------------------------------------------
+                                     
+                                 End If '//If AdodaoRs.EOF = False And AdodaoRs.BOF = False Then
+                                
+                            
+                             End With
+                            '//WITH AdodaoRs     *** FINE ***
+                            '//............................................................................//
+                     
+
+                '//ITERO NEL RS     *** fine ***
+                '//----------------------------------------------------------------------------------------------------------//
+                 
+                ESPORTA_OGGETTI_PFunct_Exit:
+                    Exit Function
+
+
+                ESPORTA_ESPORTA_OGGETTI_PFunct_Err:
+                    MsgBox Error$
+                    Resume ESPORTA_OGGETTI_PFunct_Exit
+
+                End Function
+
+
+
+
+
+
+                
+        TABELLE        
+               MSsys.ELENCO_OGGETTI_MSys
+
+               MSsys.Frm01_S01_ELENCO_OGGETTI_MSys
+
+
+
+
+
+
+dim SottoForm_s as string
+dim NameSottoForm_s as string
+dim VisibleSottoForm_b as string
+dim LabelPagina_s as string

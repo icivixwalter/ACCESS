@@ -1,0 +1,115 @@
+MSys_MACRO
+				 Note
+					tabelle di contenimento di tutte LE MACRO del progetto msys
+
+
+QUERY_SELECT
+	MSys_MACRO_Qry01_00_}-----------------------------------@SELECT
+	MSys_MACRO_Qry01_01_SELECT_TUTTI
+
+						Note
+							QUERY DI ESTRAZIONE DI TUTTE LE MACRO 
+
+					    STRUTTURA
+							SELECT 
+							MSys_MACRO.*, 
+							MSys_MACRO.COD_PROGETTO_s, 
+							MSys_MACRO.NRO_OGGETTO_i AS ORD
+							FROM MSys_MACRO
+							ORDER BY 
+							MSys_MACRO.COD_PROGETTO_s, 
+							MSys_MACRO.NRO_OGGETTO_i;
+
+
+
+QUERY_INSERT
+
+						Note
+							QUERY DI TUTTE LE MACRO 
+
+
+
+	MSys_MACRO_Qry01_70_}-----------------------------------@INSERT
+	MSys_MACRO_Qry01_71_INSERT_toMsys_DF12
+					Note
+		               L'elenco degli oggetti MACRO come nome E tipo vengono accodate dalla tabella FORM alla tabella ELENCO OGGETTI DA ESPORTARE DF12
+		               La funzione che gestisce la copia e la cancellazione
+		               degli oggetti DF12 si trova in questo modulo identificato con questa chiave
+		               di ricerca:
+		                     @MACRO.accoda.Msys_DF12
+		                     @accoda.MACRO.to.DF12
+
+
+		                        faq:
+		                            accodo le MACRO nella tabella oggetti per una futura esportazione come accodo le FORM nella tabella DF12?
+
+		             struttura
+		                  NOTA: ATTENZIONE il campo COD_PROGETTO_s non esiste nella tabella di partenza MSys_MACRO e quindi è stato aggiunto come campo nella MACRO di accodamento
+
+		                  INSERT INTO 
+		                  MSys_ELENCO_ObjProgetti ( Scel_b, 
+		                                       Name1_s,
+		                                       IdOrd_lng, 
+		                                       NRO_OGGETTO_i,
+		                                       TIPOGGETTO_s,
+		                                       COD_PROGETTO_s, 
+		                                       PROGETTO_s,
+		                                       DATAINS_d, 
+		                                       TIMEOPER_d)
+		                  SELECT 
+		                  MSys_MACRO.Scel_b, 
+		                  MSys_MACRO.Name1_s, 
+		                  MSys_MACRO.ID_MCR_lng, 
+		                  MSys_MACRO.NRO_OGGETTO_i,
+		                  "MACRO"     	 	AS TIPOGGETTO_s,
+		                  "MSys"         	AS COD_PROGETTO_s,
+		                  "PROGETTO MSys" 	AS PROGETTO_s, 
+		                  MSys_MACRO.DATAINS_d,
+		                  MSys_MACRO.TIMEOPER_d
+
+		                  FROM 
+		                  MSys_MACRO LEFT JOIN MSys_ELENCO_ObjProgetti ON MSys_MACRO.Name1_s = MSys_ELENCO_ObjProgetti.Name1_s
+		                  WHERE 
+		                  (((MSys_MACRO.Scel_b)=True) AND ((MSys_ELENCO_ObjProgetti.Name1_s) Is Null))
+		                  WITH OWNERACCESS OPTION;
+
+
+QUERY_UPDATE
+	cmd_sql_Aggiorna_scelto
+				Note
+					Questo comando sql imposta true tutti i campi scelto tramite l'oggetto cmd
+					struttura
+					@SELEZIONA.TRUE.TUTTO.MSys_MACRO.Scel_b
+
+					UPDATE 
+					MSys_QUERY_
+					SET 
+					MSys_MACRO.Scel_b = True
+					WHERE (((MSys_MACRO.TIPOGGETTO_s)>""))
+					WITH OWNERACCESS OPTION;					
+
+
+
+QUERY_DELETE
+
+	MSys_MACRO_Qry01_80_}------------------------------------@DELETE
+	MSys_MACRO_Qry01_81_DELETE_TUTTE
+					Note
+						Query di cancellazione di tutte le macro dalla tabella MSys_MACRO
+
+					Struttura
+
+						DELETE MSys_MACRO.*
+						FROM MSys_MACRO;
+
+
+
+
+
+FUNZIONI
+	IMPORTA MACRO 
+					Note
+						La funzione che importa la macro all'interno della tabella MSys_MACRO è impostata nella combinata della form master principale; e viene attivata 
+						con IL COMANDO
+							04_ACCODA_MACRO_TO_Msys_DF12
+						il quale attiva la funzione iterazione_oggetti e permette l'accodamento nella tabella  liberata di tutte le macro.

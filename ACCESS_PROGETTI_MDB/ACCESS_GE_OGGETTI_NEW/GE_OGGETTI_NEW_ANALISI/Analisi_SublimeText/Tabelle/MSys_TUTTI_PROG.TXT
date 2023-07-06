@@ -1,0 +1,55 @@
+MSys_TUTTI_PRO_{@=========================================@}_Tab
+MSys_TUTTI_PRO_}-----------------------------------@
+MSys_TUTTI_PROG
+			Note
+				Tutti i progetti da caricare nelle pagine
+
+
+
+
+QUERY_SELECT
+	MSys_TUTTI_PROG_SELECT_}---------------------------------------@_Qry
+	MSys_TUTTI_PROG_SELECT_Qry01_01_PROGETTI
+			Note
+				Query di estrazione dei progetti da caricare nelle pagine collegata
+				alla sottoquery delle stesse
+
+				SOTTO_QUERY
+				La query del progetto ha come sottoquery l'elenco delle pagine
+
+					MSys_TUTTI_PROG_SELECT_Qry01_01_PROGETTI
+						campi secondari		--> KeyCOD_PROGETTO_s
+						campi master		--> KeyCOD_PROGETTO_s
+					MSys_TUTTI_PROG_VIS_PAGINE_SELECT_Qry01_01_Carica
+
+				faq:
+					@PROGETTI.DA.CARICARE
+
+
+
+
+FORM
+			
+	
+	MSys_TUTTI_PROG_FrmM00_}---------------------------------------@
+	MSys_TUTTI_PROG_SELECT_Qry01_01_PROGETTI
+			Note
+				La form di gestione è quella dei progetti che evidenzia solo il progetto; la sottoform collegata visualizza le pagine.
+
+
+
+
+
+
+			struttura
+				SELECT MSys_TUTTI_PROG.*
+				FROM MSys_TUTTI_PROG;
+
+
+
+FORM
+	MSys_TUTTI_PROG_Frm00_}---------------------------------@
+	MSys_TUTTI_PROG_FrmM01_01_PROGETTI
+			Note
+				Form che carica i progetti
+

@@ -1,0 +1,96 @@
+MSys_FORMS_TUTTE
+
+            Note
+               Le form utilizzate per il progetto
+
+
+               Msys_DF11_PROGETTI_Frm02_S01_GROUP_Obj = La form di gestione di tutti i progetti
+                                                         vedi @form.master.DF11.PROGETTI
+
+
+
+
+
+
+FORMS_DELETE
+
+FORMS_SELECT
+      MSys_FORMS_Qry01_01_SELECT_TUTTE
+            Note
+               seleziono tutti gli oggetti form
+               
+
+            Struttura
+               SELECT 
+               MSys_FORMS.*, 
+               MSys_FORMS.COD_PROGETTO_s, 
+               MSys_FORMS.NRO_OGGETTO_i AS ORD
+               FROM MSys_FORMS
+               ORDER BY 
+               MSys_FORMS.COD_PROGETTO_s, 
+               MSys_FORMS.NRO_OGGETTO_i;
+
+   
+
+
+FORMS_INSERT
+   MSys_FORMS_Qry01_70_}------------------------------------@INSERT
+   MSys_FORMS_Qry01_71_INSERT_toMsys_DF12
+
+            Note
+               L'elenco degli oggetti form come nome di tipo vengono accodante dalla tabella FORM alla tabella ELENCO OGGETTI DA ESPORTARE DF12
+               La funzione che gestisce la copia e la cancellazione
+               degli oggetti DF12 si trova in questo modulo identificato con questa chiave
+               di ricerca:
+                     @FORMS.accoda.Msys_DF12
+                     @accoda.FORMS.to.DF12
+
+
+                        faq:
+                            accodo le FORM nella tabella oggetti per una futura esportazione
+                            come accodo le FORM nella tabella DF12?
+
+             struttura
+                  NOTA: ATTENZIONE il campo COD_PROGETTO_s non esisete nella tabella di partenza
+                       MSys_FORMS e quindi è stato aggiunto come campo nella FORMS di accodamento
+
+                  INSERT INTO 
+                  MSys_ELENCO_ObjProgetti ( Scel_b, 
+                                       Name1_s,IdOrd_lng, 
+                                       NRO_OGGETTO_i,
+                                       TIPOGGETTO_s,
+                                       COD_PROGETTO_s, 
+                                       PROGETTO_s,
+                                       DATAINS_d, 
+                                       TIMEOPER_d)
+                  SELECT 
+                  MSys_FORMS.Scel_b, 
+                  MSys_FORMS.Name1_s, 
+                  MSys_FORMS.ID_FRM_lng, 
+                  MSys_FORMS.NRO_OGGETTO_i,
+                  "FORMS"     AS TIPOGGETTO_s,
+                  "MSys"         AS COD_PROGETTO_s,
+                  "PROGETTO MSys" AS PROGETTO_s, 
+                  MSys_FORMS.DATAINS_d,
+                  MSys_FORMS.TIMEOPER_d
+
+                  FROM 
+                  MSys_FORMS LEFT JOIN MSys_ELENCO_ObjProgetti ON MSys_FORMS.Name1_s = MSys_ELENCO_ObjProgetti.Name1_s
+                  WHERE 
+                  (((MSys_FORMS.Scel_b)=True) AND ((MSys_ELENCO_ObjProgetti.Name1_s) Is Null))
+                  WITH OWNERACCESS OPTION;
+
+QUERY_UPDATE
+    cmd_sql_Aggiorna_scelto
+                Note
+                    Questo comando sql imposta true tutti i campi scelto tramite l'oggetto cmd
+                    struttura
+                    @SELEZIONA.TRUE.TUTTO.MSys_FORMS.Scel_b
+
+                    UPDATE 
+                    MSys_FORMS 
+                    SET 
+                    MSys_FORMS.Scel_b = True
+                    WHERE (((MSys_FORMS.TIPOGGETTO_s)>""))
+                    WITH OWNERACCESS OPTION;
+

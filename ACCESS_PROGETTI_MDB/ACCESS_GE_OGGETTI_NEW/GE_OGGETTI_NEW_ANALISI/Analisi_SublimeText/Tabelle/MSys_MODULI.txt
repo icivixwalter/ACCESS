@@ -1,0 +1,139 @@
+MSys_MODULI
+				 Note
+					tabelle di contenimento di tutti i QUERY_del progetto msys
+
+
+
+
+QUERY_SELECT
+	MSys_MODULI_Qry01_00_}-----------------------------------@SELECT
+	MSys_MODULI_Qry01_01_SELECT_TUTTI
+
+						Note
+							QUERY_di estrazione di tutti i moduli
+
+					    STRUTTURA
+							SELECT 
+							MSys_MODULI.*, 
+							MSys_MODULI.COD_PROGETTO_s, 
+							MSys_MODULI.NRO_OGGETTO_i AS ORD
+							FROM MSys_MODULI
+							ORDER BY 
+							MSys_MODULI.COD_PROGETTO_s, 
+							MSys_MODULI.NRO_OGGETTO_i;
+
+
+
+
+QUERY_DELETE
+	MSys_MODULI_Qry01_80_}-----------------------------------@DELETE
+	MSys_MODULI_Qry01_81_DELETE_TUTTI
+
+                    Note
+                    	QUERY_di eliminazione di tutti i QUERY_nella tabella.
+
+
+                    	   Faq:
+                    	   		@cancella.moduli.to.tabella.MODULI
+                    	   		@MODULI.cancellazioni.moduli
+
+                                dove si cancellano i QUERY_del database
+                                @comando.Cmd_Cancella_Moduli
+                                @Cmd_Cancella_Moduli
+
+                	STRUTTURA
+                		DELETE MSys_MODULI.*
+						FROM MSys_MODULI;
+
+
+QUERY_INSERT
+MSys_MODULI_Qry01_70_}-----------------------------------@INSERT
+MSys_MODULI_Qry01_71_INSERT_toMsys_DF12
+
+
+				Note
+					QUERY_di ACCODAMENTO DATI  dalla tabella QUERY_alla tabella ELENCO
+					OGGETTI DA ESPORTARE. La funzione che gestisce la copia e la cancellazione
+					degli oggetti DF12 si trova in questo modulo identificato con questa chiave
+					di ricerca:
+						
+						@accoda.MODULI.to.DF12
+
+
+                        faq:
+                            accodo I QUERY_nella tabella oggetti per una futura esportazione
+                            come accodo I QUERY_nella tabella DF12?
+
+
+
+
+                struttura
+                	NOTA: ATTENZIONE il campo COD_PROGETTO_s non esisete nella tabella di partenza
+                		  MSys_QUERY_e quindi è stato aggiunto come campo nella QUERY_di accodamento
+
+						INSERT INTO 
+						MSys_ELENCO_ObjProgetti ( Scel_b, 
+									  Name1_s,
+									  IdOrd_lng, 
+									  NRO_OGGETTO_i,
+									  TIPOGGETTO_s,
+									  COD_PROGETTO_s, 
+									  PROGETTO_s,
+									  DATAINS_d, TIMEOPER_d)
+						SELECT 
+						MSys_MODULI.Scel_b, 
+						MSys_MODULI.Name1_s, 
+						MSys_MODULI.ID_MDL_lng, 
+						MSys_MODULI.NRO_OGGETTO_i,
+						"MODULES" 		AS TIPOGGETTO_s,
+						"MSys" 			AS COD_PROGETTO_s,
+						"PROGETTO MSys" AS PROGETTO_s, 
+						MSys_MODULI.DATAINS_d,
+						MSys_MODULI.TIMEOPER_d
+
+						FROM 
+						MSys_QUERY_LEFT JOIN MSys_ELENCO_ObjProgetti ON MSys_MODULI.Name1_s = MSys_ELENCO_ObjProgetti.Name1_s
+						WHERE 
+						(((MSys_MODULI.Scel_b)=True) AND ((MSys_ELENCO_ObjProgetti.Name1_s) Is Null))
+						WITH OWNERACCESS OPTION;
+
+QUERY_UPDATE
+	cmd_sql_Aggiorna_scelto
+				Note
+					Questo comando sql imposta true tutti i campi scelto tramite l'oggetto cmd
+					struttura
+					@SELEZIONA.TRUE.TUTTO.MSys_MODULI.Scel_b
+
+					UPDATE 
+					MSys_QUERY_
+					SET 
+					MSys_MODULI.Scel_b = True
+					WHERE (((MSys_MODULI.TIPOGGETTO_s)>""))
+					WITH OWNERACCESS OPTION;
+
+
+FUNZIONI
+
+
+		IMPORTA QUERY_
+
+				Note
+					Per caricare nella tabella QUERY_tutti quelli esistenti nel db corrente occorre attivare il comando del cmb:
+
+						03_IMPORTA_REPORT_IN_DB
+
+					Questo comando attiva il caricamento ed il salvataggio di tutti i QUERY_nella
+					tabella.
+					@IMPORTA.MODULI
+					
+
+		ACCODA MODULI
+				Note
+					Per accodare i QUERY_dalla tabella degli oggetti QUERY_alla DF12 occorre
+					attivare il comando della combinata denominato :
+
+							Cmd_Accoda_MODULI_TO_Msys_DF12
+
+					La funzione di gestione dell'accodamento attiva la query di accodamento e 
+					viene attivata nella posizione del modulo marcata con:
+							@accoda.MODULI.to.DF12

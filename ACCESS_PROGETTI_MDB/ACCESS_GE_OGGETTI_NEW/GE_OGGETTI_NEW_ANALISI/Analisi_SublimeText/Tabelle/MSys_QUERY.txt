@@ -1,0 +1,182 @@
+MSys_QUERY
+				 Note
+				 	tabelle di contenimento di tutte le ENTITA QUERY del progetto msys
+				 	La chiave primaria è il nome della query valorizzata nel campo 
+				 		Name1_s
+
+				 	@MSys_QUERY.entita
+				 	@entita.query@MSys_QUERY
+				 	@CHIAVE.PRIMARIA@MSys_QUERY
+
+
+QUERY_DELETE
+	MSys_QUERY_Qry01_80_}------------------------------------@DELETE
+	MSys_QUERY_Qry01_81_DELETE_TUTTE
+
+                    Note
+                        Query di cancellazione di tutte le tabelle del database
+                            @delete.query
+                            @query.TABELLE.DB.cancellazione.@progetto.gestione.DBMDB
+                            @TABELLE.DB.query.cancellazione.@progetto.gestione.DBMDB
+                            @PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+
+                            
+                            Faq:
+                                @cancellazione.tabelle.database.tutte.@PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+                                @cancello.tutte.le.tabelle.di.sistema.@PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+
+                                dove si cancellano le tabelle del database
+                                @comando.Cmd_Cancella_Table
+
+
+                    Struttura_query
+                        DELETE MSys_QUERY.*
+                        FROM MSys_QUERY;
+
+QUERY_SELECT
+	MSys_QUERY_Qry01_01_SELECT_TUTTE
+	                     Note
+	                        La query che gestisce tutte le query del db salvate sulla tabella MSsys_QUERY.
+	                        @progetto.gestione.DBMDB
+	                        @progetto.gestione.database.DBMDB
+	                        @tabella.MSsys_QUERY.query.di.estrazione
+	                        @query.di.estrazione.su.tabella.MSsys_QUERY
+	                            faq
+	                                tutte le query del database corrente
+
+                        STRUTTURA
+							SELECT 
+							MSys_QUERY.*, 
+							MSys_QUERY.COD_PROGETTO_s, 
+							MSys_QUERY.NRO_OGGETTO_i AS ORD
+							FROM MSys_QUERY
+							ORDER BY 
+							MSys_QUERY.COD_PROGETTO_s, 
+							MSys_QUERY.NRO_OGGETTO_i;
+    
+
+QUERY_INSERT
+	MSys_QUERY_Qry01_70_}------------------------------------@INSERT
+	MSys_QUERY_Qry01_71_INSERT_toMsys_DF12
+
+				Note
+					Query di ACCODAMENTO DATI  dalla tabella query alla tabella ELENCO
+					OGGETTI DA ESPORTARE. La funzione che gestisce la copia e la cancellazione
+					degli oggetti DF12 si trova in questo modulo identificato con questa chiave
+					di ricerca:
+						@UTIL_Nro40_N01_CONTROLLO_OGGETTI_DB.OGGETTI.DF12
+						@modulo.UTIL_Nro40_N01_CONTROLLO_OGGETTI_DB.OGGETTI.DF12
+
+                    	@query.accoda.Msys_DF12
+                    	@accoda.query.to.DF12
+
+
+                        faq:
+                            accodo le query nella tabella oggetti per una futura esportazione
+                            come accodo le query nella tabella DF12?
+
+
+
+
+                struttura
+                	NOTA: ATTENZIONE il campo COD_PROGETTO_s non esisete nella tabella di partenza
+                		  MSys_QUERY e quindi è stato aggiunto come campo nella query di accodamento
+
+						INSERT INTO 
+						MSys_ELENCO_ObjProgetti ( Scel_b, Name1_s,IdOrd_lng, NRO_OGGETTO_i,
+												  TIPOGGETTO_s,
+												  COD_PROGETTO_s, 
+												  PROGETTO_s,
+												  DATAINS_d, TIMEOPER_d)
+						SELECT 
+						MSys_QUERY.Scel_b, MSys_QUERY.Name1_s, MSys_QUERY.ID_QRY_lng, 
+						MSys_QUERY.NRO_OGGETTO_i,
+						"QUERY" 		AS TIPOGGETTO_s,
+						"MSys" 			AS COD_PROGETTO_s,
+						"PROGETTO MSys" AS PROGETTO_s, 
+						MSys_QUERY.DATAINS_d,
+						MSys_QUERY.TIMEOPER_d
+
+						FROM 
+						MSys_QUERY LEFT JOIN MSys_ELENCO_ObjProgetti ON MSys_QUERY.Name1_s = MSys_ELENCO_ObjProgetti.Name1_s
+						WHERE 
+						(((MSys_QUERY.Scel_b)=True) AND ((MSys_ELENCO_ObjProgetti.Name1_s) Is Null))
+						WITH OWNERACCESS OPTION;
+
+QUERY_UPDATE
+	cmd_sql_Aggiorna_scelto
+				Note
+					Questo comando sql imposta true tutti i campi scelto tramite l'oggetto cmd
+					struttura
+					@SELEZIONA.TRUE.TUTTO.MSys_QUERY.Scel_b
+
+					UPDATE 
+					MSys_QUERY 
+					SET 
+					MSys_QUERY.Scel_b = True
+					WHERE (((MSys_QUERY.TIPOGGETTO_s)>""))
+					WITH OWNERACCESS OPTION;
+
+
+
+
+
+
+
+
+                    
+
+FORM_TUTTE_LE_QUERY
+   MSys_QUERY_Frm01_S01_TUTTE
+
+                     Note
+                        La form che gestisce tutte le query mysys
+
+
+                        @form.query.tutte
+                        
+
+
+
+
+FUNZIONI
+	
+	SALVATAGGIO OGGETTI QUERY
+
+					Note
+						Gli oggetti query vengono salvate nella tabella 
+							MSys_QUERY
+						Le query che vengono salvate sono solo quelle create e non quelle di sistema che sono state cancellate, le quali sono identificate con il codice iniziale ~sq_ ....
+						La funzione che ACCODA LE QUERY è identificata con il codice:
+							@QUERY.ESCLUSE			= quelle di sistema
+							@query.salvate			= quelle salvate
+							@salvataggio.nome.query = salvo il nome in tabella
+
+
+						ACCODO LE QUERY IN DF12	
+						Le query accodate nella tabella DF12 si trovano con questo codice:
+								@accoda.query.to.DF12,
+
+						Il modulo che contiene le funzioni è il seguente:
+							UTIL_Nro40_N01_CONTROLLO_OGGETTI_DB.@query.salvate
+
+
+						CANCELLAZIONE TABELLA OGGETTI QUERY
+						Le query salvate nella tabella oggetto vengono cancellate in questo punto
+						ogni volta che viene attivata la procedura:
+							@cancellazione.query.Msys, 
+							@cancella.query.tutte.Msys
+
+						CANCELLAZIONE COLLETTIVA TUTTI GLI OGGETTI
+						Le query sono oggetto di una cancellazione collettiva vedi :
+							@CANCELLO.TABELLE+QUERY+FORM+REPORT+MODULI, 
+
+						RICERCA QUERY CON PARAMETRO  **** da fare ***
+						TODO : si deve attivare anche il salvataggio di una query ricercata mediante parametro per ora non funziona, vedi codice:
+							@query.ricerca.parametro
+							@controllo.nome.query.passata.con.parametro
+
+
+						CICLO OGGETTI QUERY
+							Tutte le funzioni utilizzano il ciclo oggetti nell'insieme query, vedi
+								@ciclo.for.QueryDefs

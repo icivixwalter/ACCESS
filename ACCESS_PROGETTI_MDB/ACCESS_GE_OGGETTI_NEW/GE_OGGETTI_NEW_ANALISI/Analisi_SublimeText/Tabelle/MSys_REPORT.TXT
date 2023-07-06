@@ -1,0 +1,100 @@
+MSys_REPORT
+				 Note
+				 	tabella di contenimento di TUTTI I REPORTY  del progetto msys
+
+
+
+REPORT_SELECT
+
+	MSys_REPORT_Qry01_01_SELECT_TUTTE
+	                     Note
+	                        La REPORT che gestisce tutte le REPORT del db salvate sulla tabella MSsys_REPORT.
+	                        @progetto.gestione.DBMDB
+	                        @progetto.gestione.database.DBMDB
+	                        @tabella.MSsys_REPORT.di.estrazione
+	                        @REPORT.di.estrazione.su.tabella.MSsys_REPORT
+	                            faq
+	                                tutte le REPORT del database corrente
+
+                        STRUTTURA
+							SELECT 
+							MSys_REPORT.*, 
+							MSys_REPORT.COD_PROGETTO_s, 
+							MSys_REPORT.NRO_OGGETTO_i AS ORD
+							FROM MSys_REPORT
+							ORDER BY 
+							MSys_REPORT.COD_PROGETTO_s, 
+							MSys_REPORT.NRO_OGGETTO_i;
+    
+
+REPORT INSERT
+		MSys_REPORT_Qry01_70_}-----------------------------------@INSERT
+		MSys_REPORT_Qry01_71_INSERT_toMsys_DF12
+	                     Note
+	                        La QUERY  che gestisce L'INSERIMENTO DI TUTTI I REPORT nella tabella
+	                        DF12
+	                            faq
+	                                come inserire tutti i report in DF12
+
+                        STRUTTURA
+                        
+            
+						INSERT INTO 
+						MSys_ELENCO_ObjProgetti ( Scel_b, 
+												  Name1_s,
+												  IdOrd_lng, 
+												  NRO_OGGETTO_i,
+												  TIPOGGETTO_s,
+												  COD_PROGETTO_s, 
+												  PROGETTO_s,
+												  DATAINS_d, 
+												  TIMEOPER_d)
+						SELECT 
+						MSys_REPORT.Scel_b, 
+						MSys_REPORT.Name1_s, 
+						MSys_REPORT.ID_RPT_lng, 
+						MSys_REPORT.NRO_OGGETTO_i,
+						"REPORTS" 		AS TIPOGGETTO_s,
+						"MSys" 			AS COD_PROGETTO_s,
+						"PROGETTO MSys" AS PROGETTO_s, 
+						MSys_REPORT.DATAINS_d,
+						MSys_REPORT.TIMEOPER_d
+
+						FROM 
+						MSys_REPORT 
+						LEFT JOIN 
+						MSys_ELENCO_ObjProgetti ON MSys_REPORT.Name1_s = MSys_ELENCO_ObjProgetti.Name1_s
+						WHERE 
+						(((MSys_REPORT.Scel_b)=True) 
+						AND 
+						((MSys_ELENCO_ObjProgetti.Name1_s) Is Null))
+						WITH OWNERACCESS OPTION;
+
+REPORT DELETE
+		MSys_REPORT_Qry01_80_}-----------------------------------@DELETE
+		MSys_REPORT_Qry01_81_DELETE_TUTTE
+
+							Note
+								REPORTS per cancellare tutti gli oggetti reports dalla tabella
+								MSys_REPORT
+
+
+							Struttura
+								DELETE MSys_REPORT.*
+								FROM MSys_REPORT;
+
+
+
+QUERY_UPDATE
+    cmd_sql_Aggiorna_scelto
+                Note
+                    Questo comando sql imposta true tutti i campi scelto tramite l'oggetto cmd
+                    struttura
+                    @SELEZIONA.TRUE.TUTTO.MSys_REPORT.Scel_b
+
+                    UPDATE 
+                    MSys_REPORT 
+                    SET 
+                    MSys_REPORT.Scel_b = True
+                    WHERE (((MSys_REPORT.TIPOGGETTO_s)>""))
+                    WITH OWNERACCESS OPTION;

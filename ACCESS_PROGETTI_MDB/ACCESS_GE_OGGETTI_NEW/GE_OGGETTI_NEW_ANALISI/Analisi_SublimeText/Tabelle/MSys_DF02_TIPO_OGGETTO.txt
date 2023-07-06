@@ -1,0 +1,54 @@
+  QUERY_SELECT
+      MSys_DF02_TIPO_OGGETTO_Qry01_01_SELECT_TUTTI
+                 Note
+                        Query di estrazione TIPO OGGETTO dalla tabella delle definizioni degli
+                        oggetti.
+
+                        
+                        @progetto.esporta.@MSys
+                        @tutte.le.query.db
+                        @db.tutte.le.query
+                        @db.query.tutte
+                        @query.estrazione.TIPO.OGGETTO
+                        @query.tipo.oggetto
+                        @tipo.oggetto.query
+                        
+                            faq:
+                                estrae il TIPO OGGETTO
+                                il tipo oggetto
+
+
+                struttura
+                    SELECT MSys_TABELLE.Name1_s
+                    FROM MSys_TABELLE;  
+
+
+                       
+                        STRUTTURA
+                            SELECT "DEF TIPO DI OGGETTO" AS tx01, 
+                          MSsys.DF02_TIPO_OGGETTO.TIPOGGETTO_s, 
+                          MSsys.DF02_TIPO_OGGETTO.ID_lng
+                            FROMSsys.DF02_TIPO_OGGETTO
+                            GROUP BY 
+                            "DEF TIPO DI OGGETTO", 
+                          MSsys.DF02_TIPO_OGGETTO.TIPOGGETTO_s, 
+                          MSsys.DF02_TIPO_OGGETTO.ID_lng;
+
+                       ESEMPIO QUERY ATTIVATA
+                             TIPOGGETTO_s    ID_lng
+                                    FORMS               1
+                                    MACRO               6
+                                    MODULES             7
+                                    PAGES               5
+                                    QUERY               3
+                                    REPORTS             4
+                                    TABLE               2       
+
+                        Note
+                            Query che estrae  il  tipo oggetto che viene lavorato per l'esportazione
+
+                            @query.tipo.oggetto
+                            @tipo.oggetto.query.MSsys
+                            MSsys.tipo.oggetto.query
+                            MSsys.progetto.query
+                            @querMSsys.progetto
