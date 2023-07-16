@@ -23,6 +23,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "MSYS_ANALISI/MSYS_README.MD",
+			"settings":
+			{
+				"buffer_size": 3738,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -175,11 +184,20 @@
 	"expanded_folders":
 	[
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/MSYS_OGGETTI",
-		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/MSYS_OGGETTI/MSYS_ANALISI",
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/MSYS_OGGETTI/SALVATAGGI_MSYS"
 	],
 	"file_history":
 	[
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-10-22_31-10-22_MOL56107915STDnch0027834642.csv",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-12-22_31-12-22_MOL56107915STDnch0027834642.csv",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-01-23_31-01-23_MOL56107915STDnch0027834642.csv",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-02-23_28-02-23_MOL56107915STDnch0027834642.csv",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-03-23_31-03-23_MOL56107915STDnch0027834642.csv",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-04-23_30-04-23_MOL56107915STDnch0027834642.csv",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-05-23_31-05-23_MOL56107915STDnch0027834642.csv",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-06-23_30-06-23_MOL56107915STDnch0027834642.csv",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/0027834642_CCE_XEC_CSV_1689264802038BTCAW2K.CSV",
+		"/C/Users/icivi/AppData/Local/Temp/_tc/01-10-22_30-06-23_MOL56107915STDnch0027834642.csv",
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/MSYS_OGGETTI/ZIP_RAR_INCREMENTALE_MSYS.BAT",
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/MSYS_OGGETTI/Zip_N70_ElencoFile.txt",
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/MSYS_OGGETTI/SALVATAGGI_MSYS/Zip_N70_CRIPTA.bat",
@@ -297,17 +315,7 @@
 		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/QUERY_ANAGRAFICA/MSys_TABELLE_TMP_Qry00_}-------------------------------------@.txt",
 		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/QUERY_ANAGRAFICA/MSys_TABELLE_TMP_Qry01_01_SELECT_TUTTE.txt",
 		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/AGGIORNAMENTI/MySys_AGGIORNAMENTI.TXT",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/AGGIORNAMENTI/ANAGR_STORICO_OPERAZIONI.md",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/FORM_ANAGRAFICA/TUTTE_LE_FORM_ANAGRAFICHE.txt",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/TABELLE_ANAGRAFICA/ANAG_DF01_PARAMETRI_INDIV.TXT",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/QUERY_ANAGRAFICA/ANAG_DF01_PARAMETRI_INDIV.txt",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/PROGETTO_ANAGRAFICA/ANAG_TB01_PROPRIETARI.txt",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/FORM_ANAGRAFICA/FORM_TUTTE_leForm_ANAGRAFICHE.txt",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/SUBLIMETEX_PROJECT/ANAGR_PROGETTO_ANAGRAFICA.txt",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/FORM_ANAGRAFICA/ANAG_QUERY_Qry01_01_SELECT_TUTTE.txt",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/SUBLIMETEX_PROJECT/PROJECT_ANAGR.sublime-project",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/SUBLIMETEX_PROJECT/ANAGR_SublimeText_Project.txt",
-		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/QUERY_ANAGRAFICA/ANAG_QryDF01_01_PARAMETRI_INDIV.TXT"
+		"/C/CASA/CDM/GE_CDM/ANAGR/ANAGR_SUBLIME_TEXT_ANALISI/AGGIORNAMENTI/ANAGR_STORICO_OPERAZIONI.md"
 	],
 	"find":
 	{
@@ -353,6 +361,38 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "MSYS_ANALISI/MSYS_README.MD",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3738,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
 			]
 		}
 	],
