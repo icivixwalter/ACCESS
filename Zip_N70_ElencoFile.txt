@@ -1,0 +1,9 @@
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_PROGETTI_MDB\*.*
+c:\CASA\LINGUAGGI\ACCESS\ACCESS_TUTORIAL\*.*
+
+
+c:\CASA\LINGUAGGI\ACCESS\A________________________________________________________________________A.txt
+c:\CASA\LINGUAGGI\ACCESS\.gitignore
+c:\CASA\LINGUAGGI\ACCESS\Zip_N70____________________________________________CRIPTA_DECODIFICA.txt
+c:\CASA\LINGUAGGI\ACCESS\Zip_N70_ElencoFile.txt
+c:\CASA\LINGUAGGI\ACCESS\ZIP_RAR_INCREMENTALE.BAT
