@@ -15,18 +15,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "GIT_BAT/git_STATUS+ADD+COMMIT+PUSH.BAT",
-			"settings":
-			{
-				"buffer_size": 666,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			},
-			"undo_stack":
-			[
-			]
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -84,9 +72,12 @@
 	},
 	"expanded_folders":
 	[
+		"/C/CASA/LINGUAGGI/LINGUAGGI_VARIE"
 	],
 	"file_history":
 	[
+		"/C/CASA/LINGUAGGI/ACCESS/GIT_BAT/git_STATUS+ADD+COMMIT+PUSH.BAT",
+		"/C/CASA/LINGUAGGI/LINGUAGGI_VARIE/LINGUAGGI_Project.sublime-project",
 		"/C/CASA/LINGUAGGI/ACCESS/.gitignore",
 		"/C/CASA/LINGUAGGI/ACCESS/Progetti_ACCESS.sublime-project",
 		"/C/CASA/LINGUAGGI/DOS/DOS_PROGETTI/TASKILL/TasKill_N51_KILL_SOLO_PROCESSI.bat",
@@ -268,36 +259,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "GIT_BAT/git_STATUS+ADD+COMMIT+PUSH.BAT",
-					"selected": true,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 666,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								78,
-								78
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Batch File/Batch File.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				}
 			]
 		}
 	],
