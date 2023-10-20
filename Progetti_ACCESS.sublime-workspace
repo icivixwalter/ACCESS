@@ -15,6 +15,104 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "GIT_BAT/git_OpenGitHub.bat",
+			"settings":
+			{
+				"buffer_size": 535,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": "utilita"
+					},
+					"CAAAADkAAAAAAAAAOgAAAAAAAAAAAAAAOgAAAAAAAAA6AAAAAAAAAAoAAABlcnJvcmlfZ2l0OgAAAAAAAAA7AAAAAAAAAAAAAAA7AAAAAAAAADwAAAAAAAAAAAAAADwAAAAAAAAAPQAAAAAAAAAAAAAAPQAAAAAAAAA+AAAAAAAAAAAAAAA+AAAAAAAAAD8AAAAAAAAAAAAAAD8AAAAAAAAAQAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQwAAAAAAAAA5AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"paste",
+					null,
+					"AgAAAKsAAAAAAAAAegEAAAAAAAAAAAAAegEAAAAAAAB6AQAAAAAAAAoAAABlcnJvcmlfZ2l0",
+					"AQAAAAAAAAABAAAAtQAAAAAAAACrAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "\n\n:"
+					},
+					"AwAAAHoBAAAAAAAAewEAAAAAAAAAAAAAewEAAAAAAAB8AQAAAAAAAAAAAAB8AQAAAAAAAH0BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAegEAAAAAAAB6AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"insert",
+					{
+						"characters": "utili"
+					},
+					"BQAAAH0BAAAAAAAAfgEAAAAAAAAAAAAAfgEAAAAAAAB/AQAAAAAAAAAAAAB/AQAAAAAAAIABAAAAAAAAAAAAAIABAAAAAAAAgQEAAAAAAAAAAAAAgQEAAAAAAACCAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfQEAAAAAAAB9AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert_completion",
+					{
+						"completion": "utilita",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "utilita"
+					},
+					"AgAAAH0BAAAAAAAAfQEAAAAAAAAFAAAAdXRpbGl9AQAAAAAAAIQBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggEAAAAAAACCAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"right_delete",
+					null,
+					"AQAAAKoAAAAAAAAAqgAAAAAAAAABAAAAOg",
+					"AQAAAAAAAAABAAAAqgAAAAAAAACqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAKoAAAAAAAAAqwAAAAAAAAAAAAAAqwAAAAAAAACsAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgAAAAAAAACqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"paste",
+					null,
+					"AQAAAKsAAAAAAAAApQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqwAAAAAAAACrAAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					20,
+					2,
+					"right_delete",
+					null,
+					"AgAAAEIAAAAAAAAAQgAAAAAAAABnAAAAQyAKCUNPTU1JVAoJCQlub3RoaW5nIHRvIGNvbW1pdCwgd29ya2luZyB0cmVlIGNsZWFuCgkJCQluaWVudGUgZGEgaW1wZWduYXJlLCBhbGJlcm8gZnVuemlvbmFudGUgcHVsaXRvCkIAAAAAAAAAQgAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAQgAAAAAAAACpAAAAAAAAAAAAAAAAAAAA"
+				]
+			]
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -72,10 +170,12 @@
 	},
 	"expanded_folders":
 	[
+		"/C/CASA/LINGUAGGI/ACCESS",
 		"/C/CASA/LINGUAGGI/LINGUAGGI_VARIE"
 	],
 	"file_history":
 	[
+		"/C/CASA/LINGUAGGI/ACCESS/GIT_BAT/git_OpenGitHub.bat",
 		"/C/CASA/LINGUAGGI/ACCESS/GIT_BAT/git_STATUS+ADD+COMMIT+PUSH.BAT",
 		"/C/CASA/LINGUAGGI/LINGUAGGI_VARIE/LINGUAGGI_Project.sublime-project",
 		"/C/CASA/LINGUAGGI/ACCESS/.gitignore",
@@ -128,7 +228,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 27.2
 	},
 	"find_in_files":
 	{
@@ -259,12 +359,44 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "GIT_BAT/git_OpenGitHub.bat",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Batch File/Batch File.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 27.2
 	},
 	"input":
 	{
@@ -301,7 +433,7 @@
 	"project": "Progetti_ACCESS.sublime-project",
 	"replace":
 	{
-		"height": 52.8
+		"height": 51.2
 	},
 	"save_all_on_build": false,
 	"select_file":
