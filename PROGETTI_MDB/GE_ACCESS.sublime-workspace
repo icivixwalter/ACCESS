@@ -72,8 +72,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB",
-		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/SERVIZI"
+		"/C/CASA/LINGUAGGI/ACCESS"
 	],
 	"file_history":
 	[
@@ -137,7 +136,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -233,7 +232,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -270,7 +269,7 @@
 	"project": "GE_ACCESS.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 60.0
 	},
 	"save_all_on_build": false,
 	"select_file":

@@ -1,7 +1,16 @@
 {
+	/*"folders":
+	[
+		{
+			"path": ".",
+		},
+		{
+			"path": "C:\\CASA\\LINGUAGGI\\SUBLIMETEXT\\TutorialeSublimeText"
+		},
+	],*/
 	"folders":
 	[
-		{   //la path del progetto c:\CASA\LINGUAGGI\ACCESS\
+		{
 			"path": ".",
 		},
 	],
