@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateSwitchboardWithSwitchboardManagerS'
+Feature='Forms: Advanced'
+Handoff='1'
+SourceFile='cfrmswch.doc'
+Tnum='188761'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare un pannello principale utilizzando il Gestore pannelli comandi</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreateswitchboardwithswitchboardmanagers"></A>Creare un pannello principale utilizzando il Gestore pannelli comandi</H1>
+
+<P class=T>Quando si utilizza la Creazione guidata Database per creare un database, viene creato un pannello comandi che semplifica lo spostamento tra le maschere ed i report del database stesso. Se si desidera generare lo stesso tipo di pannello comandi per un database creato dall'utente, è possibile utilizzare il Gestore pannelli comandi. 
+
+<OL>
+	<LI class=LPROC>Scegliere <B>Componenti aggiuntivi</B> dal menu <B>Strumenti</B>, quindi scegliere <B>Gestore pannelli comandi</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Quando viene richiesto se si desidera creare un pannello comandi, scegliere <B>Sì</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Gestore pannelli comandi</B> scegliere <B>Modifica</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Digitare un nome per il pannello comandi nella casella <B>Nome pannello comandi</B> della finestra di dialogo <B>Modifica pagina pannello comandi</B>, quindi scegliere <B>Nuovo</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Digitare il testo per il primo pulsante del pannello comandi nella casella <B>Testo</B> della finestra di dialogo <B>Modifica voce in pannello comandi</B>, quindi scegliere un comando nella casella <B>Comando</B>. Digitare, ad esempio, <B>Visualizza prodotti</B> nella casella <B>Testo</B>, quindi scegliere <B>Apri maschera in modalità Modifica</B> nella casella <B>Comando</B>.<BR><BR></LI>
+
+	<LI class=LPROC>A seconda del comando selezionato, viene visualizzata un'altra casella sotto la casella <B>Comando</B>. Scegliere una voce in questa casella, se necessario. Se, ad esempio, nel passo 5 è stata scelta l'opzione <B>Apri maschera in modalità Modifica</B> nella casella <B>Comando</B>, nella casella <B>Maschera</B> fare clic sul nome della maschera che si desidera aprire, ad esempio <B>Visualizza prodotti</B>, quindi scegliere <B>OK</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Ripetere i passi da 4 a 6 fino ad aggiungere tutte le voci al pannello comandi. Se si desidera modificare o eliminare una voce, selezionarla nella casella <B>Voci in questo pannello comandi</B>, quindi scegliere <B>Modifica</B> o <B>Elimina</B>. Se si desidera ridisporre le voci, sceglierne una nella casella, quindi fare clic su <B>Sposta su</B> o <B>Sposta giù</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Chiudi</B>.</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>È possibile utilizzare il Gestore pannelli comandi per creare un pannello comandi che contiene altri pannelli. Utilizzare la procedura descritta in precedenza per creare uno o più pannelli comandi. Per fare in modo che un determinato pannello si apra automaticamente all'apertura del database, sceglierne il nome nella finestra di dialogo <B>Gestore pannelli comandi</B>, quindi scegliere <B>Crea impostazione predefinita</B>. Per passare da un pannello comandi ad un altro, nel passo 5 della procedura descritta in precedenza scegliere il comando <B>Vai a pannello comandi</B> nella casella <B>Comando</B>, quindi specificare il pannello comandi al quale si desidera passare.<BR><BR></LI>
+
+	<LI class=NLB>Quando si crea un pannello comandi con il Gestore pannello comandi, viene creata una tabella Voci pannello comandi che descrive le caratteristiche ed il funzionamento dei pulsanti della maschera. Se in seguito vengono apportate modifiche alla maschera Pannello comandi nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura</A> della maschera, è possibile che l'applicazione non funzioni più. Se si prevede di personalizzare molti aspetti della maschera Pannello comandi, è consigliabile creare la maschera partendo da zero e definirla in seguito come maschera di avvio. Per informazioni su come strutturare una maschera di avvio, vedere "Creazione di un'applicazione" in <A HREF="javascript:HelpPopup('actip9.hlp','defBuildingApplications');" class="pop">Creazione di applicazioni con maschere e report</A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateSwitchboardWithSwitchboardManagerSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

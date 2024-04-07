@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproGroupInterval'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprogrp1_1a.rtf'
+Tnum='187286'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà GroupInterval (Intervallo raggruppamento)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtOpenClose">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprogroupinterval"></A>Proprietà GroupInterval (Intervallo raggruppamento)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproGroupIntervalC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproGroupIntervalX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproGroupIntervalA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>GroupInterval</B> insieme alla proprietà <A HREF="acproGroupOn.htm"><B>GroupOn</B></A> per specificare il modo in cui i record vengono raggruppati in un report. La proprietà <B>GroupInterval</B> specifica un intervallo di valori secondo il quale vengono raggruppati i record. Tale intervallo varia a seconda del <A HREF="javascript:HelpPopup('actip9.hlp','defFieldDataType');" class="pop">tipo di dati</A> e dell'impostazione della proprietà <B>GroupOn</B> relativa ai valori contenuti nel campo o nell'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> di cui si sta effettuando il raggruppamento. È possibile, ad esempio, impostare la proprietà <B>GroupInterval</B> a 1 se si desidera raggruppare record secondo la prima lettera di un campo Testo, ad esempio NomeProdotto.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>Le impostazioni della proprietà <B>GroupInterval</B> sono valori di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>Intero</B></A> che dipendono dal tipo di dati e dall'impostazione della relativa proprietà <B>GroupOn</B>. L'impostazione predefinita della proprietà <B>GroupInterval</B> è uno.</P>
+
+<P class=T>È possibile impostare la proprietà tramite la finestra <A HREF="javascript:HelpPopup('actip9.hlp','defSortingGroupingWindow');" class="pop"><B>Ordinamento e raggruppamento</B></A>, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=T>È possibile impostare la proprietà <B>GroupInterval</B> solo nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura del report</A> o nella routine evento <A HREF="JavaScript:hhobj_5.Click()">Apertura</A> di un report.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Sono riportati di seguito degli esempi di impostazione della proprietà <B>GroupInterval</B> relativa a diversi tipi di dati di campo.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=24%>Tipo di dati di campo</TH>
+<TH width=27%>Impostazione di GroupOn</TH>
+<TH width=49%>Impostazione di GroupInterval</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Tutti</TD>
+<TD class=TT width=27%>Ogni valore</TD>
+<TD class=TT width=49%>Impostazione predefinita. Impostato a 1.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Testo</TD>
+<TD class=TT width=27%>Caratteri iniziali</TD>
+<TD class=TT width=49%>Impostare a 3 per il raggruppamento in base ai primi tre caratteri del campo. Ad esempio verrebbero raggruppati insieme Chai, Chartreuse e Chang.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Data/Ora</TD>
+<TD class=TT width=27%>Settimana</TD>
+<TD class=TT width=49%>Impostare a 2 per restituire dati in base a gruppi di due settimane.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Data/Ora</TD>
+<TD class=TT width=27%>Ora</TD>
+<TD class=TT width=49%>Impostare a 12 per restituire dati in base a gruppi di 12 ore.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Per impostare la proprietà <B>GroupInterval</B> a un valore diverso da quello dell'impostazione predefinita (1), è necessario innanzitutto impostare la proprietà <A HREF="acproGroupHeaderFooter.htm"><B>GroupHeader</B> o <B>GroupFooter</B></A> o entrambe a Sì per il campo o l'espressione selezionati.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

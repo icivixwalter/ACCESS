@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowDeleteIndexS'
+Feature='Tables'
+Handoff='1'
+SourceFile='CTBLPRO.RTF'
+Tnum='187565'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eliminare un indice</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowdeleteindexs"></A>Eliminare un indice</H1>
+
+<P class=T>Gli indici rendono più veloci le ricerche ma possono anche rallentare gli aggiornamenti collettivi di record, ad esempio le query di accodamento. Se è stato indicizzato un campo o i campi in cui non si eseguono ricerche, ordinamenti o collegamenti mediante join e si eseguono operazioni che si desidera rendere più veloci, ad esempio gli aggiornamenti collettivi di record, eliminare l'indice. L'eliminazione di un indice non implica l'eliminazione del campo o dei dati in esso contenuti.</P>
+
+<H2>Per eliminare un indice a campo singolo:</H2>
+
+<OL>
+	<LI class=LPROC>Aprire una tabella in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella parte superiore della finestra fare clic sul campo di cui si desidera eliminare l'indice.<BR><BR></LI>
+
+	<LI class=LPROC>Nella scheda <B>Generale</B> nella parte inferiore della finestra fare clic nella casella della proprietà <B>Indicizzato</B>, quindi selezionare <B>No</B>.</LI>
+</OL>
+
+<H2>Per eliminare un indice multicampo:</H2>
+
+<OL>
+	<LI class=LPROC>Aprire una tabella in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul pulsante <B>Indici</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrIndexesQ');" class="pop"><IMG SRC="images/index.bmp" BORDER=0></A> sulla barra degli strumenti.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra degli indici selezionare le righe contenenti l'indice da eliminare e premere il tasto CANC. In questo modo verrà rimosso solo l'indice e non il campo.</LI>
+</OL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowDeleteIndexSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

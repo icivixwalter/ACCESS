@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconSettingFieldPropertiesThatDetermineWhatBlankFS'
+Feature='Tables: Field Properties'
+Handoff='3'
+SourceFile='ctblpro_3.rtf'
+Tnum='187558'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà che controllano la gestione dei campi vuoti</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconsettingfieldpropertiesthatdeterminewhatblankfs"></A>Proprietà che controllano la gestione dei campi vuoti</H1>
+
+<P class=T>È possibile controllare la modalità di gestione dei campi vuoti impostando combinazioni diverse delle proprietà <B>Richiesto</B> e <B>Consenti lunghezza zero</B>. La proprietà <B>Consenti lunghezza zero</B> è disponibile solo per i campi Testo, Memo o Collegamento ipertestuale. La proprietà <B>Richiesto</B> determina se deve essere effettuata un'immissione. Se la proprietà <B>Consenti lunghezza zero</B> è impostata a <B>Sì</B>, verranno differenziati due tipi di valore vuoti: valori <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A> e <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringhe a lunghezza zero</A>.</P>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=T><A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs_1">Differenza tra valori Null e stringhe a lunghezza zero</A></P>
+
+<P class=T><A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs_2">Quando consentire valori Null in un campo</A></P>
+
+<P class=T><A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs_3">Quando non consentire né valori Null né stringhe a lunghezza zero in un campo</A></P>
+
+<P class=T><A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs_4">Quando consentire sia valori Null che stringhe a lunghezza zero in un campo</A></P>
+
+<P class=T><A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs_5">Quando consentire solo stringhe a lunghezza zero o alcuni valori in un campo</A></P>
+
+<P class=T><A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs_6">Distinzione tra valori Null e stringhe a lunghezza zero</A></P>
+
+<P class=T><A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs_7">Ricerca di stringhe a lunghezza zero o valori Null</A></P>
+
+
+
+<H2><A NAME="acconsettingfieldpropertiesthatdeterminewhatblankfs_1"></A>Differenza tra valori Null e stringhe a lunghezza zero</H2>
+
+<P class=T>In Microsoft Access è possibile distinguere tra due tipi di valori vuoti. In alcuni casi un campo viene lasciato vuoto perché non si conoscono le informazioni a esso relative o perché non è valido per il record. Se ad esempio una tabella ha un campo Numero, è possibile lasciare questo campo vuoto se non si conosce con sicurezza il numero di fax di un cliente o se ne possiede uno. In questo caso, se si lascia il campo vuoto, verrà immesso un valore <B>Null</B> che indica la non conoscenza delle informazioni. Se si immette una stringa a lunghezza zero digitando (" "), per il campo non esiste alcun valore.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs">inizio</A></P>
+
+
+
+<H2><A NAME="acconsettingfieldpropertiesthatdeterminewhatblankfs_2"></A>Quando consentire valori Null in un campo</H2>
+
+<P class=T>Se si desidera lasciare un campo vuoto senza determinarne la ragione, impostare sia la proprietà <B>Richiesto</B> che la proprietà <B>Consenti lunghezza zero</B> a <B>No</B>. Questa è l'impostazione predefinita quando si crea un nuovo campo Testo, Memo o Collegamento ipertestuale.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs">inizio</A></P>
+
+
+
+<H2><A NAME="acconsettingfieldpropertiesthatdeterminewhatblankfs_3"></A>Quando non consentire né valori Null né stringhe a lunghezza zero in un campo</H2>
+
+<P class=T>Se si desidera che non sia mai possibile lasciare un campo vuoto, impostare la proprietà <B>Richiesto</B> a <B>Sì</B> e la proprietà <B>Consenti lunghezza zero</B> a <B>No</B>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs">inizio</A></P>
+
+
+
+<H2><A NAME="acconsettingfieldpropertiesthatdeterminewhatblankfs_4"></A>Quando consentire sia valori Null che stringhe a lunghezza zero in un campo</H2>
+
+<P class=T>Se si desidera poter fare distinzione tra un campo vuoto perché non si conoscono le informazioni e un campo vuoto perché non si applica al record, impostare la proprietà <B>Richiesto</B> a <B>No</B> e la proprietà <B>Consenti lunghezza zero</B> a <B>Sì</B>.</P>
+
+<P class=T>In questo caso, quando si aggiunge un record, se non si conoscono le informazioni il campo viene lasciato vuoto (quindi viene immesso un valore <B>Null</B>). D'altro canto, se il campo non si applica al record corrente, vengono digitate le virgolette (" ") non separate da alcuno spazio per immettere una stringa a lunghezza zero.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs">inizio</A></P>
+
+
+
+<H2><A NAME="acconsettingfieldpropertiesthatdeterminewhatblankfs_5"></A>Quando consentire solo stringhe a lunghezza zero o alcuni valori in un campo</H2>
+
+<P class=T>Se si desidera solo un campo vuoto se si sa che non è applicabile a un record, impostare sia la proprietà <B>Richiesto</B> che la proprietà <B>Consenti lunghezza zero</B> a <B>Sì</B>.</P>
+
+<P class=T>In questo caso l'unico modo per lasciare un campo vuoto è digitare le virgolette non separate da alcuno spazio oppure premere la barra spaziatrice per immettere una stringa a lunghezza zero.</P>
+
+<P class=T>Nella tabella che segue sono riportati i risultati di tutte le impostazioni possibili per le proprietà <B>Richiesto</B> e <B>Consenti lunghezza zero</B>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=16%>Richiesto</TH>
+<TH width=28%>Consenti lunghezza zero</TH>
+<TH width=32%>Azione dell'utente</TH>
+<TH width=24%>Valore immesso</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%><B>No</B></TD>
+<TD class=TT width=28%><B>No</B></TD>
+<TD class=TT width=32%>Premere INVIO</TD>
+<TD class=TT width=24%>&lt;Null&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>&nbsp;</TD>
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=32%>Premere la barra spaziatrice</TD>
+<TD class=TT width=24%>&lt;Null&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>&nbsp;</TD>
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=32%>Digitare <B>"</B> <B>"</B></TD>
+<TD class=TT width=24%>(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%><B>Sì</B></TD>
+<TD class=TT width=28%><B>No</B></TD>
+<TD class=TT width=32%>Premere INVIO</TD>
+<TD class=TT width=24%>(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>&nbsp;</TD>
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=32%>Premere la barra spaziatrice</TD>
+<TD class=TT width=24%>(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>&nbsp;</TD>
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=32%>Digitare <B>"</B> <B>"</B></TD>
+<TD class=TT width=24%>(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%><B>No</B></TD>
+<TD class=TT width=28%><B>Sì</B></TD>
+<TD class=TT width=32%>Premere INVIO</TD>
+<TD class=TT width=24%>&lt;Null&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>&nbsp;</TD>
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=32%>Premere la barra spaziatrice</TD>
+<TD class=TT width=24%>&lt;Null&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>&nbsp;</TD>
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=32%>Digitare <B>"</B> <B>"</B></TD>
+<TD class=TT width=24%>&lt;stringa a lunghezza zero&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%><B>Sì</B></TD>
+<TD class=TT width=28%><B>Sì</B></TD>
+<TD class=TT width=32%>Premere INVIO</TD>
+<TD class=TT width=24%>(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>&nbsp;</TD>
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=32%>Premere la barra spaziatrice</TD>
+<TD class=TT width=24%>&lt;stringa a lunghezza zero&gt;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>&nbsp;</TD>
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=32%>Digitare <B>"</B> <B>"</B></TD>
+<TD class=TT width=24%>&lt;stringa a lunghezza zero&gt;</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=rtt>Torna all'<A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs">inizio</A></P>
+
+
+
+<H2><A NAME="acconsettingfieldpropertiesthatdeterminewhatblankfs_6"></A>Distinzione tra i valori Null e le stringhe a lunghezza zero</H2>
+
+<P class=T>Quando si visualizzano i dati in un campo contenente sia valori Null che stringhe a lunghezza zero, i campi hanno lo stesso aspetto, ossia non contengono alcun valore. È possibile distinguere i valori Null dalle stringhe a lunghezza zero utilizzando un'espressione in un campo query o nell'origine di un controllo non associato in una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A>, un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A>. L'espressione seguente restituisce "Sconosciuto" se il campo contiene <B>Null</B> e "ZLS" se il campo contiene una stringa a lunghezza zero. Altrimenti l'espressione restituisce il valore contenuto in quel campo. </P>
+
+<P class=T>=IIf(IsNull([<I>nomecampo</I>]),”Sconosciuto”,Format([<I>nomecampo</I>],”@;\ZLS”))</P>
+
+<P class=T><A HREF="acproFormatText.htm">Informazioni sull'utilizzo della proprietà Formato con campi che contengono valori Null o stringhe a lunghezza zero</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs">inizio</A></P>
+
+<H2><A NAME="acconsettingfieldpropertiesthatdeterminewhatblankfs_7"></A>Ricerca di stringhe a lunghezza zero o valori Null</H2>
+
+<P class=T>Per ricercare stringhe a lunghezza zero e valori Null è possibile utilizzare il comando <B>Trova</B> del menu <B>Modifica</B>. In <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> selezionare il campo in cui si desidera effettuare la ricerca. Nella casella <B>Trova nel campo</B> digitare <B>Null</B> per ricercare i valori Null oppure digitare le virgolette (<B>"</B> <B>"</B>) non separate da alcuno spazio per ricercare le stringhe a lunghezza zero. Dalla casella <B>Confronta</B> selezionare <B>Campo intero</B> e assicurarsi che la casella di controllo <B>Cerca in campi come formattati</B> non sia selezionata.</P>
+
+<P class=T>Per ulteriori informazioni sull'utilizzo del comando <B>Trova</B>, fare clic su <A HREF="achowFindSpecificOccurrencesSpecifiedValueInFieldS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+
+<P class=rtt>Torna all'<A HREF="#acconsettingfieldpropertiesthatdeterminewhatblankfs">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconSettingFieldPropertiesThatDetermineWhatBlankFSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

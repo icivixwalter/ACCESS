@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthUndoX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186419'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Undo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthundox"></A>Esempio di metodo Undo</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare il metodo <B>Undo</B> nella routine evento <B>Modifica</B> di un controllo per forzare il ripristino al valore originale di un campo Cognome, se tale campo è stato modificato.</P>
+
+<PRE class=CT><CODE>Private Sub Modifica_Cognome()
+&nbsp;&nbsp;&nbsp; Me!Cognome.<B>Undo</B>
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo viene utilizzato il metodo <B>Undo</B> per ripristinare tutte le modifiche alla maschera prima dell'aggiornamento della maschera.</P>
+
+<PRE class=CT><CODE>Private Sub PrimaDiAggiornare_Maschera(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; Me.<B>Undo</B>
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

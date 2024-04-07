@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acidxDataEvents'
+Feature='acidx'
+Handoff='2'
+SourceFile='aidxlan_1a.doc'
+Tnum='187129'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi di dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acidxdataevents"></A>Eventi di dati</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxDataEventsC;acproText">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxDataEventsX">
+</OBJECT></P>
+
+
+
+<P class=T>Gli eventi di dati si verificano quando si immettono, si eliminano o si modificano i dati di una maschera o di un controllo oppure quando lo stato attivo si sposta da un record all'altro.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=28%>Evento</TH>
+<TH width=30%>Proprietà di evento</TH>
+<TH width=42%>Quando si verifica</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtDeleteBeforeAfterDelConfirm.htm">DopoConfermaEliminazione</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>AfterDelConfirm</B></A> (maschere)</TD>
+<TD class=LMC width=42%>Dopo che si è confermata l'eliminazione dei record e che questi sono stati effettivamente eliminati oppure dopo aver annullato le eliminazioni.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtBeforeAfterInsert.htm">DopoInserimento</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>AfterInsert</B></A> (maschere)</TD>
+<TD class=LMC width=42%>Dopo aver aggiunto un nuovo record nel database.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtBeforeAfterUpdate.htm">DopoAggiornamento</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>AfterUpdate</B></A> (maschere, controlli)</TD>
+<TD class=LMC width=42%>Dopo l'aggiornamento di un controllo o di un record con nuovi dati. Questo evento si verifica per record nuovi o esistenti quando il controllo o il record perde lo stato attivo oppure quando si sceglie <B>Salva record</B> dal menu <B>Record</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtDeleteBeforeAfterDelConfirm.htm">PrimaDiConfermaEliminazione</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>BeforeDelConfirm</B></A> (maschere)</TD>
+<TD class=LMC width=42%>Dopo l'eliminazione di uno o più record, ma prima della visualizzazione della finestra di dialogo di conferma o annullamento. Questo evento si verifica dopo l'evento Eliminazione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtBeforeAfterInsert.htm">PrimaDiInserire</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>BeforeInsert</B></A> (maschere)</TD>
+<TD class=LMC width=42%>Quando si digita il primo carattere in un nuovo record, ma prima che quest'ultimo venga aggiunto nel database.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtBeforeAfterUpdate.htm">PrimaDiAggiornare</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>BeforeUpdate</B></A> (maschere, controlli)</TD>
+<TD class=LMC width=42%>Prima dell'aggiornamento di un controllo o di un record con i nuovi dati. Questo evento si verifica per i record nuovi o esistenti quando il controllo o il record perde lo stato attivo oppure quando si sceglie <B>Salva record</B> dal menu <B>Record</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtChange.htm">Modifica</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnChange</B></A> (controlli)</TD>
+<TD class=LMC width=42%>Quando si modifica il contenuto di una casella di testo o la parte di testo di una casella combinata, ad esempio quando si digita un carattere nel controllo o si cambia la relativa proprietà <B>Testo</B> utilizzando una macro o Visual Basic.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtCurrent.htm">Corrente</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnCurrent</B></A> (maschere)</TD>
+<TD class=LMC width=42%>Quando si sposta lo stato attivo su un record oppure quando si esegue una nuova query su un'origine dati di una maschera. Questo evento si verifica quando si apre per la prima volta una maschera e ogni volta che lo stato attivo si sposta su un altro record, nonché quando si esegue una nuova query sull'origine dati di una maschera, ad esempio quando si sceglie <B>Rimuovi filtro/ordina</B> dal menu <B>Record</B>, si utilizza l'azione MostraOgniRecord oppure l'azione RieseguiQuery.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtDeleteBeforeAfterDelConfirm.htm">Eliminazione</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnDelete</B></A> (maschere)</TD>
+<TD class=LMC width=42%>Quando si elimina un record, ma prima della conferma e dell'esecuzione effettiva dell'operazione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtDirty.htm">Dirty</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnDirty</B></A> (maschere)</TD>
+<TD class=LMC width=42%>Quando si modifica il contenuto di una maschera o della parte di testo di una casella combinata e quando si passa da una pagina a un'altra in una struttura a schede. </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtNotInList.htm">NonInElenco</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnNotInList</B></A> (controlli)</TD>
+<TD class=LMC width=42%>Quando nella casella combinata si digita un valore che non è presente nell'elenco.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=28%><A HREF="acevtUpdated.htm">Aggiornato</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnUpdated</B></A> (controlli)</TD>
+<TD class=LMC width=42%>Quando i dati di un oggetto OLE sono stati modificati.</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

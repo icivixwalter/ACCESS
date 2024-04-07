@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconSpecifyDatabaseLogDevicesSizes'
+Feature='Access Project: Upsizing'
+Handoff='3'
+SourceFile='ccsupwiz.rtf'
+Tnum='274139'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Immettere le periferiche e le dimensioni del database e del file di registro delle transazioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconspecifydatabaselogdevicessizes"></A>Immettere le periferiche e le dimensioni del database e del file di registro delle transazioni</H1>
+
+<P class=T>Se si crea un nuovo database di Microsoft SQL Server 6.5, l'Upsize guidato richiede di immettere le periferiche e le dimensioni del database e del file di registro delle transazioni, nonché le dimensioni preallocate per il database e le transazioni. In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconspecifydatabaselogdevicessizes_1">Immettere la periferica e la dimensione di un database</A></P>
+
+<P class=LBR1><A HREF="#acconspecifydatabaselogdevicessizes_2">Immettere la dimensione e la periferica del file di registro delle transazioni</A></P>
+
+<P class=LBR1><A HREF="#acconspecifydatabaselogdevicessizes_3">Immettere la dimensione di un database e del file di registro delle transazioni</A></P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifydatabaselogdevicessizes">inizio</A></P>
+
+<H2><A NAME="acconspecifydatabaselogdevicessizes_1"></A>Immettere la periferica e la dimensione di un database</H2>
+
+<P class=T>Tutti i database e i file di registro delle transazioni di SQL Server sono posizionati su periferiche. Con il termine periferica si indica sia la posizione logica dei database e dei file di registro delle transazioni sia il file fisico. Quando si crea una periferica, in SQL Server viene creato un file al quale viene assegnata una quantità fissa di spazio su disco.</P>
+
+<P class=T>Per gli amministratori di sistema, l'Upsize guidato visualizza la quantità di spazio libero disponibile sulle periferiche esistenti. Selezionare una periferica che disponga di una quantità di spazio libero sufficiente a contenere almeno la <A HREF="#acconspecifydatabaselogdevicessizes_3">dimensione prevista per il database</A>.</P>
+
+<P class=T>Se nessuna delle periferiche esistenti dispone di spazio libero sufficiente, è possibile crearne una nuova mediante l'Upsize guidato. Le nuove periferiche devono avere una dimensione equivalente almeno alla dimensione prevista del database. Se possibile, è consigliabile creare una periferica con dimensione maggiore del database, in modo da poter espandere quest'ultimo in un momento successivo o posizionare altri database o file di registro delle transazioni sulla stessa periferica.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifydatabaselogdevicessizes">inizio</A></P>
+
+<H2><A NAME="acconspecifydatabaselogdevicessizes_2"></A>Immettere la dimensione e la periferica del file di registro delle transazioni</H2>
+
+<P class=T>Il file di registro delle transazioni è la registrazione cronologica di tutte le attività che si verificano sul server e viene utilizzato da SQL Server per il backup e il ripristino dei database.</P>
+
+<P class=T>La periferica del file di registro delle transazioni selezionata deve disporre di almeno un megabyte di spazio disponibile. È consigliabile posizionare il database e il file di registro delle transazioni corrispondente su periferiche in dischi fisici separati. È necessario creare queste periferiche prima dell'avvio dell'Upsize guidato, poiché in caso contrario tutte le nuove periferiche verrebbero create sullo stesso disco fisico in cui risiede la periferica del database Master.</P>
+
+<P class=T>Se si dispone di un solo disco fisico, è necessario collocare il database e il relativo file di registro delle transazioni su periferiche separate, in modo da poter ripristinare il database.</P>
+
+<P class=T>L'Upsize guidato crea il file di registro delle transazioni in base alla dimensione specificata. La dimensione del file di registro delle transazioni deve essere almeno equivalente alla dimensione di tutte le tabelle del database delle quali è stato eseguito l'upsize. La dimensione specificata non può eccedere lo spazio disponibile sulla periferica selezionata. </P>
+
+<P class=T><B>Nota&nbsp;&nbsp;</B> Per i nuovi database, l'Upsize guidato tronca il file di registro delle transazioni in corrispondenza del punto di arresto se si riempie prima del completamento dell'upsize. È tuttavia possibile che il file di registro di configurazione non venga contenuto da una sola tabella. In questo caso, non viene eseguito l'upsize della tabella e viene scritto un errore nel report dell'Upsize guidato.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifydatabaselogdevicessizes">inizio</A></P>
+
+<H2><A NAME="acconspecifydatabaselogdevicessizes_3"></A>Immettere la dimensione di un database e del file di registro delle transazioni</H2>
+
+<P class=T>Quando si crea un database con Microsoft SQL Server 6.5, al database viene assegnata una quantità fissa di spazio su una o più periferiche. Tutto questo spazio non viene necessariamente utilizzato subito dal database. Per dimensione del database si intende la dimensione massima che il database può raggiungere prima che lo spazio si esaurisca.</P>
+
+<P class=T>Per valutare lo spazio necessario per il database, considerare la dimensione del database di Microsoft Access e valutare il rapporto in base al quale aumenterà il nuovo database di SQL Server. Per ciascun megabyte di dati di Microsoft Access si richiedono in genere almeno da 1,3 a 1,5 megabyte su SQL Server. È necessario considerare che nella dimensione di un file di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (mdb) sono inclusi tutti gli oggetti del database di Microsoft Access e non solo i dati.</P>
+
+<P class=T>Se si dispone di molto spazio su disco sul server, è possibile moltiplicare la dimensione del database di Access per due. Ciò assicura uno spazio sufficiente per eseguire l'upsize del database con l'Upsize guidato e ulteriore spazio per l'eventuale aumento della dimensione. Se si prevede di aggiungere molti dati al database, si consiglia di utilizzare un multiplo superiore.</P>
+
+<P class=T>La dimensione del file di registro delle transazioni deve essere pari al 25% della dimensione del database.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifydatabaselogdevicessizes">inizio</A></P>
+
+<H2></H2>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconSpecifyDatabaseLogDevicesSizesW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

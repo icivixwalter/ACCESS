@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDatasheetBackForeColorX'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew8.doc'
+Tnum='187135'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di proprietà DatasheetBackColor, DatasheetForeColor</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodatasheetbackforecolorx"></A>Esempi di proprietà DatasheetBackColor, DatasheetForeColor</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzata la routine ImpostaProprietàTabella per impostare il colore del carattere di una tabella a blu scuro e il colore di fondo a grigio chiaro. Se si verifica un errore di "Proprietà non trovata" durante l'impostazione di tale proprietà, viene utilizzato il metodo <B>CreateProperty</B> per aggiungere la proprietà all'insieme <B>Properties</B>.</P>
+
+<PRE class=CT><CODE>Dim dbs As Database, tdfProdotti As TableDef
+Const lngColorePrimoPiano As Long = 8388608&nbsp;    ' Blu scuro.
+Const lngColoreSfondo As Long = 12632256    ' Grigio chiaro.
+Set dbs = CurrentDb
+Set tdfProdotti = dbs!Prodotti
+ImpostaProprietàTabella tdfProdotti, "<B>DatasheetBackColor</B>", DB_Long, lngColoreSfondo
+ImpostaProprietàTabella tdfProdotti, "<B>DatasheetForeColor</B>", DB_Long, lngColorePrimoPiano
+
+Sub ImpostaProprietàTabella(tdfOggTabella As TableDef, strNomeProprietà As String, _
+    intTipoProprietà As Integer, varValoreProprietà As Variant)
+  Const conErroreProprietàNonTrovata = 3270
+  Dim prpProprietà As Property
+  On Error Resume Next        ' Non rileva errori.
+  tdfOggTabella.Properties(strNomeProprietà) = varValoreProprietà
+  If Err &lt;&gt; 0 Then          ' Errore verificatosi durante l'impostazione del valore.
+    If Err &lt;&gt; conErroreProprietàNonTrovata Then
+      ' Errore sconosciuto.
+      MsgBox "Non è stato possibile impostare la proprietà '" &amp; strNomeProprietà _
+        &amp; "' nella tabella '" &amp; tdfOggTabella.Name &amp; "'", vbExclamation, Err.Description
+      Err.Clear
+    Else
+      ' Errore di "Proprietà non trovata", quindi aggiungerla all'insieme.
+      Set prpProprietà = tdfOggettoTabella.CreateProperty(strNomeProprietà, _
+        intTipoProprietà, varValoreProprietà)
+      tdfOggTabella.Properties.Append prpProprietà
+      Err.Clear
+    End If
+  End If
+  tdfOggTabella.Properties.Refresh
+End Sub</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

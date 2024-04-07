@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthGetRowsX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234435'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo GetRows (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthgetrowsx"></A>Esempio di metodo GetRows (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzato il metodo <B>GetRows</B> per restituire una matrice bidimensionale contenente tutte le righe di dati di un oggetto <B>Recordset</B>:</P>
+
+<PRE class=CT><CODE>Sub MatriceRighe()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset, strSQL As String
+&nbsp;&nbsp;&nbsp; Dim varRecord As Variant, intI As Integer, intJ As Integer
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Costruisce istruzione SQL che restituisce i campi specificati.
+&nbsp;&nbsp;&nbsp; strSQL = "SELECT Nome, Cognome, DataAssunzione " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "FROM Dipendenti"
+&nbsp;&nbsp;&nbsp; ' Apre oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset(strSQL)
+&nbsp;&nbsp;&nbsp; ' Passa alla fine del recordset.
+&nbsp;&nbsp;&nbsp; rst.MoveLast
+&nbsp;&nbsp;&nbsp; ' Ritorna al primo record.
+&nbsp;&nbsp;&nbsp; rst.MoveFirst
+&nbsp;&nbsp;&nbsp; ' Restituisce tutte le righe nella matrice.
+&nbsp;&nbsp;&nbsp; varRecord = rst.<B>GetRows</B>(rst.RecordCount)
+&nbsp;&nbsp;&nbsp; ' Trova il limite superiore di seconda dimensione.
+&nbsp;&nbsp;&nbsp; For intI = 0 To UBound(varRecord, 2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Trova il limite superiore di prima dimensione.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For intJ = 0 To UBound(varRecord, 1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stampa i dati di ciascuna riga della matrice.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print varRecord(intJ, intI)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next intJ
+&nbsp;&nbsp;&nbsp; Next intI
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

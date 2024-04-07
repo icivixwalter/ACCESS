@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctAccessErrorX'
+Feature='acmth'
+Handoff='3'
+SourceFile='replconf2.doc'
+Tnum='186968'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo AccessError</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctaccesserrorx"></A>Esempio di metodo AccessError</B></P>
+
+
+
+<P class=T>La funzione riportata di seguito restituisce una stringa di errore per un numero di errori valido.</P>
+
+<PRE class=CT><CODE>Function StringaErrore(lngErrore As Long) As String
+Const conErroreApp = "Errore definito dall'applicazione o " &amp; "errore definito dall'oggetto"
+
+On Error Resume Next
+Err.Raise lngErrore
+If Err.Description = conErroreApp Then
+StringaErrore = <B>AccessError</B>(lngErrore)
+ElseIf Err.Description = "" Then
+MsgBox "Nessuna stringa di errore associata a tale numero."
+Else
+StringaErrore = Err.Description
+End If
+End Function</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

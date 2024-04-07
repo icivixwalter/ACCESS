@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOptimizingSimpleComplexExpressionsRushmoreTecS'
+Feature='Queries: Optimize'
+Handoff='1'
+SourceFile='CQRYOPT.RTF'
+Tnum='188139'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Espressioni ottimizzabili semplici e complesse e ottimizzazione mediante la tecnica Rushmore</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlCount">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconoptimizingsimplecomplexexpressionsrushmoretecs"></A>Espressioni ottimizzabili semplici e complesse e ottimizzazione mediante la tecnica Rushmore</H1>
+
+<P class=T>Con Microsoft Access è possibile ottimizzare le espressioni semplici o complesse nella riga <B>Criteri</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> della query oppure in una proposizione WHERE di un'istruzione SQL SELECT. Per determinati tipi di espressioni complesse, Microsoft Access può utilizzare Rushmore, una tecnica di accesso ai dati utilizzata dal modulo di gestione di database Microsoft Jet per ottenere un maggiore livello di ottimizzazione.</P>
+
+<H2>Espressioni ottimizzabili semplici</H2>
+
+<P class=T>Un'espressione ottimizzabile semplice può costituire un'intera espressione o esserne una parte e può assumere una delle seguenti forme:</P>
+
+<P class=T><I>Campo indicizzato Operatore di confronto Espressione</I></P>
+
+<PRE class=CT><CODE>[Data ordine]=#15/09/96#</CODE></PRE>
+
+
+
+<P class=T>oppure</P>
+
+<P class=T><I>Espressione Operatore di confronto Campo indicizzato</I></P>
+
+<PRE class=CT><CODE>#1/11/96#&lt;[Data di assunzione]</CODE></PRE>
+
+
+
+<P class=T>In un'espressione ottimizzabile semplice:
+
+<UL>
+	<LI class=LB1>Un <I>campo indicizzato</I> è un campo con un proprio indice oppure il primo campo di un <A HREF="javascript:HelpPopup('actip9.hlp','defIndex');" class="pop">indice</A> multicampo.<BR><BR></LI>
+
+	<LI class=LB1>L'<I>operatore di confronto</I> deve essere uno dei seguenti operatori: <B>&lt;</B>, <B>&gt;</B>, <B>=</B>, <B>&lt;=</B>, <B>&gt;=</B>, <B>&lt;&gt;</B>, <B>BETWEEN…AND</B>, <B>LIKE</B>, <B>IN</B>.<BR><BR></LI>
+
+	<LI class=LB1>Un'<I>espressione</I> può essere una qualsiasi espressione valida, incluse costanti, funzioni e campi di altre tabelle.</LI>
+</UL>
+
+<P class=T>Per visualizzare degli esempi di espressioni ottimizzabili semplici, fare clic su <A HREF="acconExamplesSimpleExpressionsTheirCombinationsOptS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<H2>Espressioni complesse</H2>
+
+<P class=T>Un'espressione complessa viene creata attraverso la combinazione di due espressioni semplici con l'operatore <B>AND</B> oppure <B>OR</B> e può assumere una delle seguenti forme:</P>
+
+<P class=T><I>Espressione</I> <I>semplice</I> AND <I>Espressione semplice</I></P>
+
+<P class=T>oppure</P>
+
+<P class=T><I>Espressione semplice</I> OR <I>Espressione semplice</I></P>
+
+<P class=T>Il livello di ottimizzazione (intero o parziale) di un'espressione complessa dipende dal fatto che solo una o entrambe le espressioni semplici siano ottimizzabili o meno e dall'operatore che è stato utilizzato per combinarle. È possibile ottimizzare un'espressione complessa tramite la tecnica Rushmore se tutte le seguenti proposizioni sono vere:
+
+<UL>
+	<LI class=LB1>L' espressione utilizza <B>AND</B> oppure <B>OR</B> per unire i due criteri.<BR><BR></LI>
+
+	<LI class=LB1>Entrambi i criteri sono costituiti da espressioni ottimizzabili semplici.<BR><BR></LI>
+
+	<LI class=LB1>Entrambe le espressioni contengono campi indicizzati. I campi possono essere indicizzati singolarmente o far parte di un indice multicampo.</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile ottimizzare indici multicampo se la query dei campi indicizzati viene eseguita nell'ordine in cui essi appaiono nella <A HREF="javascript:HelpPopup('actip9.hlp','defIndexesWindow');" class="pop">finestra degli indici</A>, a partire dal primo campo indicizzato e proseguendo con i campi successivi, fino a un massimo di 10. Se ad esempio si trova un indice multicampo che include i campi Cognome e Nome, è possibile ottimizzare una query eseguita su Cognome oppure su Cognome e Nome, ma non su Nome.</P>
+
+<P class=T>La tabella riportata di seguito indica il livello di ottimizzazione delle query per le diverse combinazioni di espressioni semplici in base ai criteri specificati per la query.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=25%>Espressione</TH>
+<TH width=25%>Operatore</TH>
+<TH width=25%>Espressione</TH>
+<TH width=25%>Risultato della query</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Ottimizzabile</TD>
+<TD class=TT width=25%><B>AND</B></TD>
+<TD class=TT width=25%>Ottimizzabile</TD>
+<TD class=TT width=25%>Interamente ottimizzabile (utilizzando Rushmore)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Ottimizzabile</TD>
+<TD class=TT width=25%><B>OR</B></TD>
+<TD class=TT width=25%>Ottimizzabile</TD>
+<TD class=TT width=25%>Interamente ottimizzabile (utilizzando Rushmore)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Ottimizzabile</TD>
+<TD class=TT width=25%><B>AND</B></TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+<TD class=TT width=25%>Parzialmente ottimizzabile (Rushmore non viene utilizzato)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Ottimizzabile</TD>
+<TD class=TT width=25%><B>OR</B></TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Non ottimizzabile</TD>
+<TD class=TT width=25%><B>AND</B></TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Non ottimizzabile</TD>
+<TD class=TT width=25%><B>OR</B></TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>--</TD>
+<TD class=TT width=25%><B>NOT</B></TD>
+<TD class=TT width=25%>Ottimizzabile</TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>--</TD>
+<TD class=TT width=25%><B>NOT</B></TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+<TD class=TT width=25%>Non ottimizzabile</TD>
+</TR>
+</TABLE><BR>
+
+<P class=T>È possibile inoltre utilizzare le parentesi per raggruppare combinazioni di espressioni semplici. Le regole elencate precedentemente valgono anche per combinazioni di espressioni raggruppate con le parentesi.</P>
+
+<P class=T>Dopo aver effettuato delle combinazioni di espressioni ottimizzabili semplici, creando così delle espressioni complesse, queste ultime possono, a loro volta, essere combinate per creare espressioni ancora più complesse che è possibile ottimizzare in base alle regole indicate in precedenza.</P>
+
+<P class=T>Per visualizzare degli esempi di espressioni ottimizzabili complesse, fare clic su <A HREF="acconCombinationsSimpleExpressionsExtentOptimizatiS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=LB1>La funzione <B>Count</B> dispone di un alto livello di ottimizzazione per le query che utilizzano Rushmore. Per ulteriori informazioni sulla funzione <B>Count</B>, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Le query che utilizzano Rushmore operano con le tabelle di Microsoft Access, di Microsoft FoxPro e di dBASE (file DBF). Non è possibile utilizzare Rushmore con le <A HREF="javascript:HelpPopup('actip9.hlp','defODBCDataSource');" class="pop">origini dati ODBC</A>, poiché Microsoft Access invia queste query all'origine dati ODBC invece di elaborarle a livello locale.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOptimizingSimpleComplexExpressionsRushmoreTecSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

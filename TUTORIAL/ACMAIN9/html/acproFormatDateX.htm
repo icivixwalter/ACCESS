@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFormatDateX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproent1_1a.rtf'
+Tnum='187262'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Format - Esempio del tipo di dati Data/ora</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproformatdatex"></A>Proprietà Format - Esempio del tipo di dati Data/ora</B></P>
+
+
+
+<P class=T>Vengono riportati di seguito esempi di formati Data/ora personalizzati.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=43%>Impostazione</TH>
+<TH width=57%>Visualizzazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=43%>ddd d mmm yyy</TD>
+<TD class=TT width=57%>lun 2 giu 1997</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=43%>dd mmmm yyyy</TD>
+<TD class=TT width=57%>02 giugno 1996</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=43%>"Settimana numero "ww</TD>
+<TD class=TT width=57%>Settimana numero 22</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=43%>"Oggi è "dddd</TD>
+<TD class=TT width=57%>Oggi è martedì</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile utilizzare un formato personalizzato per visualizzare "d.C." o "a.C." prima dell'anno inserendo un numero positivo o negativo. Per esaminare un esempio di questo tipo di formato personalizzato, creare un nuovo campo di tabella, impostare il tipo di dati a Numerico e inserire un formato di questo tipo:</P>
+
+<P class=T>"d.C. " #;# " a.C."</P>
+
+<P class=T>I valori positivi vengono visualizzati con il numero relativo all'anno preceduto da "d.C.". I valori negativi vengono con visualizzati con il numero dell'anno seguito da "a.C."</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

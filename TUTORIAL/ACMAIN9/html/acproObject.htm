@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproObject'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproole2.doc'
+Tnum='187737'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Object</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmSet">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproobject"></A>Proprietà Object</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproObjectC;vaconUnderstandingOleAutomation">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproObjectX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproObjectA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>Object</B> in Visual Basic per restituire un riferimento per un <A HREF="javascript:HelpPopup('actip9.hlp','defOleAutomationObject');" class="pop">oggetto ActiveX</A> associato a un <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObject');" class="pop">oggetto OLE</A> <A HREF="javascript:HelpPopup('actip9.hlp','defLink');" class="pop">collegato</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defEmbed');" class="pop">incorporato</A> in un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A>. È possibile avere accesso alle proprietà o richiamare i metodi dell'oggetto OLE utilizzando questo riferimento.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>Object</B> restituisce un riferimento per un oggetto ActiveX. È possibile utilizzare l'istruzione <A HREF="JavaScript:hhobj_4.Click()"><B>Set</B></A> per assegnare questo oggetto ActiveX alla variabile di oggetto. Il tipo di riferimento dell'oggetto restituito dipende dall'applicazione che ha creato l'oggetto OLE.</P>
+
+<P class=T>L'impostazione della proprietà <B>Object</B> è di sola lettura in tutte le visualizzazioni.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando si incorpora o collega un oggetto OLE in una maschera di Microsoft Access, è possibile impostare le proprietà che determinano il tipo di oggetto e il comportamento del controllo del contenitore. Non è possibile, tuttavia, impostare direttamente o leggere le proprietà dell'oggetto OLE, né applicare i relativi metodi come quando si esegue l'automazione. La proprietà <B>Object</B> restituisce un riferimento per un oggetto di automazione che rappresenta l'oggetto OLE collegato o incorporato. Se si utilizza questo riferimento, è possibile modificare l'oggetto OLE impostandone o leggendone le proprietà o applicandone i metodi. Microsoft Excel è, ad esempio, una <A HREF="javascript:HelpPopup('actip9.hlp','defActiveXComponent');" class="pop">componente COM</A> che supporta l'<A HREF="javascript:HelpPopup('actip9.hlp','defOLEAutomation');" class="pop">automazione</A>. Se un foglio di lavoro di Microsoft Excel è stato incorporato in una maschera di Microsoft Access, è possibile utilizzare la proprietà <B>Object</B> per impostare un riferimento per l'oggetto <B>Foglio di lavoro</B> associato a tale foglio di lavoro. È quindi possibile utilizzare tutte le proprietà e i metodi dell'oggetto <B>Foglio di lavoro</B>.</P>
+
+<P class=T>Per ulteriori informazioni sulle proprietà e i metodi supportati da un oggetto ActiveX, consultare la documentazione relativa all'applicazione utilizzata per creare l'oggetto OLE.</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

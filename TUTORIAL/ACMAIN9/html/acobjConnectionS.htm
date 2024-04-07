@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjConnectionS'
+Feature='acobj'
+Handoff='3'
+SourceFile='acaNewTopics.doc'
+Tnum='255017'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Oggetto Connection, insieme Connection</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproProvider">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acobjconnections"></A>Oggetto Connection, insieme Connection</H1>
+
+
+
+<P class=T>Quando si lavora con oggetti ADO (ActiveX Data Objects) in Microsoft Access, è spesso richiesto l'uso di una variabile oggetto <B>Connection</B> che rappresenta il collegamento al <A HREF="JavaScript:hhobj_1.Click()">provider</A> del database corrente. Usare la proprietà <B>Connection</B> dell'oggetto <A HREF="acobjCurrentProject.htm"><B>CurrentProject</B></A> per restituire un oggetto <B>Connection</B> del database in cui si sta lavorando. Questo oggetto <B>Connection</B> viene accodato automaticamente all'insieme <B>Connections</B>.</P>
+
+<P class=T>Ad esempio, si supponga di lavorare in Microsoft Access con il database di esempio Northwind. È possibile creare un oggetto <B>Connection</B> che effettua il collegamento al provider di quel database dichiarando innanzitutto una variabile oggetto <B>Connection</B>, quindi facendo in modo che faccia riferimento all'oggetto <B>Connection</B> restituito dalla proprietà <B>Connection</B> dell'oggetto <B>CurrentProject</B>.</P>
+
+<PRE class=CT><CODE>Dim cnn As ADODB.Connection
+Set cnn = CurrentProject.Connection</CODE></PRE>
+
+
+
+<P class=T>Non è necessario conoscere il nome del provider per utilizzare il database corrente. Per conoscere il nome del provider corrente, controllare la proprietà <B>ConnectionString</B> dell'oggetto <B>Connection</B>, che contiene il nome del provider e la stringa di collegamento al database. Per trovarne la posizione nell'insieme <B>Connections</B>, esaminare l'insieme.</P>
+
+<P class=T>Dall'interno di un codice di Visual Basic è possibile creare più variabili oggetto <B>Connection</B> indipendenti per rappresentare i collegamenti a più database. Ciò consente di manipolare a livello del codice più database contemporaneamente. È possibile anche creare più variabili di oggetto <B>Connection</B> e fare in modo che facciano riferimento al database corrente.</P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Ogni riferimento alla proprietà <B>Connection</B> restituirà un nuovo oggetto collegamento che fa riferimento al collegamento attivo. Per eseguire più azioni su quel collegamento, ad esempio transazioni, assegnare Connection ad una variabile come descritto in precedenza.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acobjConnectionSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

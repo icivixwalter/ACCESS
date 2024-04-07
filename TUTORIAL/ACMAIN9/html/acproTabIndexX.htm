@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproTabIndexX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprofrd2.rtf'
+Tnum='188153'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà TabIndex</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprotabindexx"></A>Esempio di proprietà TabIndex</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si inverte l'ordine di tabulazione di un pulsante di comando e di una casella di testo. Poiché CasTest1 è stato creato per primo, la relativa proprietà <B>TabIndex</B> è impostata a zero, mentre quella relativa a Comando1 è impostata a 1.</P>
+
+<PRE class=CT><CODE>Sub Form_Click()
+&nbsp;&nbsp;&nbsp; Me!Comando1.<B>TabIndex</B> = 0
+&nbsp;&nbsp;&nbsp; Me!CasTest1.<B>TabIndex</B> = 1
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

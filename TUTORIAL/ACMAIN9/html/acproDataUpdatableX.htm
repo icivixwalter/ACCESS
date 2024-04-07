@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDataUpdatableX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234386'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà DataUpdatable (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodataupdatablex"></A>Esempio di proprietà DataUpdatable (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si creano due oggetti <B>Recordset</B> dalla stessa tabella, un oggetto <B>Recordset</B> di tipo dynaset e un oggetto <B>Recordset</B> di tipo snapshot. La routine verifica quindi la proprietà <B>DataUpdatable</B> per il campo Cognome in ogni oggetto <B>Recordset</B>. L'impostazione della proprietà <B>DataUpdatable</B> è <B>True</B> (-1) per l'oggetto <B>Recordset</B> di tipo dynaset e <B>False</B> (0) per l'oggetto <B>Recordset</B> di tipo snapshot.</P>
+
+<PRE class=CT><CODE>Sub VerificaDatiAggiornabili()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database
+&nbsp;&nbsp;&nbsp; Dim rstDynaset As Recordset, rstSnapshot As Recordset
+&nbsp;&nbsp;&nbsp; Dim fldDynaset As Field, fldSnapshot As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Apre oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rstDynaset = dbs.OpenRecordset("Impiegati", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbOpenDynaset)
+&nbsp;&nbsp;&nbsp; ' Apre oggetto Recordset di tipo snapshot.
+&nbsp;&nbsp;&nbsp; Set rstSnapshot = dbs.OpenRecordset("Impiegati",_
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbOpenSnapshot)
+&nbsp;&nbsp;&nbsp; ' Ottiene le variabili di oggetto Field che puntano a un campo di ogni oggetto Recordset.
+&nbsp;&nbsp;&nbsp; Set fldDynaset = rstDynaset.Fields!Cognome
+&nbsp;&nbsp;&nbsp; Set fldSnapshot = rstSnapshot.Fields!Cognome
+&nbsp;&nbsp;&nbsp; ' Ottiene il record corrente.
+&nbsp;&nbsp;&nbsp; rstDynaset.MoveFirst
+&nbsp;&nbsp;&nbsp; rstSnapshot.MoveFirst
+&nbsp;&nbsp;&nbsp; ' Visualizza il valore della proprietà DataUpdatable per ogni oggetto Recordset.
+&nbsp;&nbsp;&nbsp; Debug.Print "DatiAggiornabili (Recordset di tipo dynaset): "; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fldDynaset.<B>DataUpdatable</B>
+&nbsp;&nbsp;&nbsp; Debug.Print "DatiAggiornabili (Recordset di tipo snapshot): "; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fldSnapshot.<B>DataUpdatable</B>
+&nbsp;&nbsp;&nbsp; rstDynaset.Close
+&nbsp;&nbsp;&nbsp; rstSnapshot.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

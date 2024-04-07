@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconEnteringExpressions'
+Feature='Forms: Expressions'
+Handoff='3'
+SourceFile='cexpbas.rtf'
+Tnum='186737'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Immettere espressioni in una finestra delle proprietà, in una griglia di struttura o in un argomento di azione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconenteringexpressions"></A>Immettere espressioni in una finestra delle proprietà, in una griglia di struttura o in un argomento di azione</H1>
+
+<P class=T>Se si sta immettendo un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> più lunga dell'area di input standard di una <A HREF="javascript:HelpPopup('actip9.hlp','defPropertySheet');" class="pop">finestra delle proprietà</A>, di una <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> o di un <A HREF="javascript:HelpPopup('actip9.hlp','defActionArgument');" class="pop">argomento di azione</A>, è possibile digitare l'espressione nella <A HREF="javascript:HelpPopup('actip9.hlp','defZoomBox');" class="pop">finestra <B>Zoom</B></A>. Per aprire la finestra <B>Zoom</B>, premere MAIUSC+F2 quando il punto in cui si desidera immettere l'espressione è in <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A>.</P>
+
+<P class=T>Quando si immette un'espressione in una finestra delle proprietà, in una griglia di struttura o in un argomento di azione, è possibile:
+
+<UL>
+	<LI class=LB1>Riconoscere i nomi di funzione, i nomi di proprietà e i separatori di elenco relativi a paesi specifici per le versioni internazionali.<BR><BR></LI>
+
+	<LI class=LB1>Inserire alcuni caratteri quando viene modificato l'elemento che ha lo stato attivo. A seconda del punto in cui si desidera inserire l'espressione, è possibile inserire automaticamente:
+<UL>
+	<LI class=LB2>Parentesi quadre ([ ]) per racchiudere nomi di maschera, report, campo o <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A>.<BR><BR></LI>
+
+	<LI class=LB2>Segni di cancelletto (#) per racchiudere date.<BR><BR></LI>
+
+	<LI class=LB2>Virgolette doppie (") per racchiudere del testo.</LI>
+</UL>
+</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Le espressioni di <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> sono sempre precedute da un segno di uguale (<B>=</B>).</P>
+
+<P class=T><B>Utilizzo di funzioni e proprietà nelle versioni internazionali di Microsoft Access</B></P>
+
+<P class=T>Quando si immette una funzione o una proprietà in un'espressione nella maggior parte delle versioni internazionali del programma, è possibile:
+
+<UL>
+	<LI class=LB1>Digitare il nome tradotto nella propria lingua in una finestra delle proprietà, in una griglia di struttura o in un argomento di azione.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare il separatore di elenco del Paese di appartenenza quando si specificano più argomenti di una funzione. È inoltre possibile specificare il separatore di elenco nella scheda <B>Numeri</B> della finestra di dialogo <B>Proprietà - Impostazioni internazionali</B> del Pannello di controllo di Windows. Per la maggior parte delle versioni internazionali, il separatore di elenco predefinito è il punto e virgola (;).</LI>
+</UL>
+
+<P class=T>Nel codice Visual Basic, Applications Edition, è tuttavia necessario digitare il nome di funzione o di proprietà in inglese e utilizzare una virgola (,) come separatore di elenco.</P>
+
+<P class=T><B>Immissione di nomi di oggetto</B></P>
+
+<P class=T>Le parentesi quadre ([ ]) utilizzate per racchiudere un campo, un controllo o una proprietà in un identificatore indicano che l'elemento è il nome di una tabella, di una query, di una maschera, di un report, di un campo o di un controllo.</P>
+
+<P class=T>Quando si digita un nome di oggetto in un identificatore, sarà necessario racchiuderlo fra parentesi quadre se contiene uno spazio o un carattere speciale, ad esempio un carattere di sottolineatura. Se il nome non contiene uno spazio o un carattere speciale, lo si potrà digitare senza inserirlo tra parentesi quadre, le quali verranno tuttavia inserite automaticamente a eccezione dei due casi riportati di seguito.</P>
+
+<P class=T>È possibile digitare l'espressione riportata di seguito ad esempio come impostazione della proprietà <B>ControlSource</B> per calcolare la somma dei valori contenuti nei campi Trasporto e ImportoOrdine:</P>
+
+<P class=T>= Trasporto + ImportoOrdine</P>
+
+<P class=T>L'espressione è visualizzata nel modo seguente:</P>
+
+<P class=T>= [Trasporto] + [ImportoOrdine]</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Le parentesi quadre non vengono inserite automaticamente per racchiudere un nome nell'impostazione della proprietà <B>ValidationRule</B> o nella cella <B>Criteri</B> della griglia di struttura di una query. Se non si digitano parentesi quadre per racchiudere il nome di un oggetto, è possibile che tale operazione venga interpretata come inserimento di testo e che vengano quindi aggiunte delle virgolette doppie.</P>
+
+<P class=T><B>Immissione di valori di tipo Data/ora</B></P>
+
+<P class=T>I segni di cancelletto (#) utilizzati per racchiudere un elemento di un'espressione indicano che l'elemento che ha lo stato attivo è un valore Data/ora, consentendo di digitarlo in uno qualsiasi dei formati data o ora.</P>
+
+<P class=T>Non è necessario digitare dei segni di cancelletto per racchiudere un valore Data/ora in un'espressione di convalida o di definizione dei criteri in un campo il cui <A HREF="javascript:HelpPopup('actip9.hlp','defFieldDataType');" class="pop">tipo di dati</A> è Data/ora. È possibile digitare il valore in uno qualsiasi dei formati Data/ora, quindi i simboli cancelletto verranno automaticamente inseriti per racchiudere il valore.</P>
+
+<P class=T>Il valore viene visualizzato in base alle impostazioni della finestra di dialogo <B>Proprietà - Impostazioni internazionali</B> del Pannello di controllo di Windows. È possibile cambiare il formato di output di una data utilizzando la proprietà <B>Formato</B>.</P>
+
+<P class=T><B>Immissione di testo</B></P>
+
+<P class=T>Le virgolette doppie ("") utilizzate per racchiudere un elemento di un'espressione indicano che l'elemento è testo.</P>
+
+<P class=T>Quando si digita del testo in un'espressione di convalida o di criterio, non è necessario racchiuderlo fra virgolette doppie. Esse verranno comunque inserite automaticamente.</P>
+
+<P class=T>Se si digita ad esempio l'espressione <B>Parigi</B>, l'espressione viene visualizzata nel modo seguente:</P>
+
+<P class=T>"Parigi"</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconEnteringExpressionsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

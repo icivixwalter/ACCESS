@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCalcControlExpUseArithmeticOperators'
+Feature='Reports: Expressions'
+Handoff='3'
+SourceFile='CRPTEXP1.doc'
+Tnum='188476'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di esecuzione di operazioni aritmetiche in maschere, report e pagine di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconcalccontrolexpusearithmeticoperators"></A>Esempi di esecuzione di operazioni aritmetiche in maschere, report e pagine di accesso ai dati</H1>
+
+<P class=T>Nella tabella che segue vengono elencati esempi di espressioni che possono essere utilizzate nei controlli calcolati di maschere, report e pagine di accesso ai dati.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Se viene utilizzata l'espressione</TH>
+<TH width=52%>Verrà visualizzato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=[Subtotale]+[Trasporto]</TD>
+<TD class=TT width=52%>La somma dei valori dei campi Subtotale e Trasporto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=[DataRichiesta]-[DataSpedizione]</TD>
+<TD class=TT width=52%>La differenza tra i valori dei campi DataRichiesta e DataSpedizione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=[Prezzo]*1,06</TD>
+<TD class=TT width=52%>Il prodotto del valore del campo Prezzo e 1,06. Viene aggiunto il 6% al valore Prezzo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=[Quantità]*[Prezzo]</TD>
+<TD class=TT width=52%>Il prodotto dei valori dei campi Quantità e Prezzo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=[TotaleImpiegato]/[TotalePaese]</TD>
+<TD class=TT width=52%>Il quoziente dei valori dei campi TotaleImpiegato e TotalePaese.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Nella proprietà <B>Origine controllo</B> di un controllo calcolato è necessario inserire l'operatore <B>=</B> prima dell'espressione. In una pagina di accesso ai dati è possibile omettere l'operatore sostituendolo con un alias, ad esempio <B>PrezzoEsteso: [Quantità]*[Prezzo]</B>.<BR><BR></LI>
+
+	<LI class=NLB>Quando si imposta la proprietà <B>Nome</B> di un controllo calcolato in una maschera o in un report oppure la proprietà <B>ID</B> di un controllo calcolato in una pagina di accesso ai dati, assicurarsi di utilizzare un nome univoco. Non utilizzare il nome o l'ID di uno dei controlli utilizzati nell'espressione.<BR><BR></LI>
+
+	<LI class=NLB>In un'espressione in una maschera o report è possibile utilizzare il nome di un controllo o di un campo dell'origine record sottostante. In un'espressione in una pagina di accesso ai dati è possibile utilizzare solo il nome di un campo presente nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataDefinition');" class="pop">definizione dati</A> della pagina.<BR><BR></LI>
+
+	<LI class=NLB>Quando si utilizza un operatore aritmetico (<B>+</B>, <B>-</B>, <B>*</B>, <B>/</B>) in un'espressione e il valore di uno dei controlli dell'espressione è <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>, il risultato dell'intera espressione sarà <B>Null</B>. In maschere e report, se è possibile che alcuni record di uno dei controlli utilizzati nell'espressione abbiano dei valori <B>Null</B>, il valore <B>Null</B> può essere convertito in zero utilizzando la funzione <B>Nz</B>, ad esempio:
+<P class=LSYN2>=Nz([Subtotale])+Nz([Trasporto])
+
+<P class=LT1>Per ulteriori informazioni sulla funzione <B>Nz</B>, fare clic su <A HREF="acfctNZ.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.
+</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconCalcControlExpUseArithmeticOperatorsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

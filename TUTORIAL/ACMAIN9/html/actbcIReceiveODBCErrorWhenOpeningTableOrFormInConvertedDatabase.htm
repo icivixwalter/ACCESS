@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actbcIReceiveODBCErrorWhenOpeningTableOrFormInConvertedDatabase'
+Feature='External: ODBC'
+Handoff='1'
+SourceFile='CODBC.RTF'
+Tnum='189187'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+ CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Viene visualizzato un errore ODBC quando viene aperta una tabella o una maschera in un database convertito</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actbcireceiveodbcerrorwhenopeningtableorforminconverteddatabase"></A>Viene visualizzato un errore ODBC quando viene aperta una tabella o una maschera in un database convertito</H1>
+
+<P class=T>L'errore "ODBC - connessione a <I>nomeoriginedati</I> non riuscita" viene visualizzato quando una tabella contenuta nel database Microsoft Access convertito versione 1.<I>x</I> o 2.0 è <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegata</A> a un'origine dati ODBC che utilizza un driver e un gestore di driver a 16 bit. Microsoft Access 2000 può aprire solo origini dati ODBC collegate che utilizzano le versioni a 32 bit del Gestore di driver ODBC (Odbc32.dll) e del driver ODBC appropriato, ad esempio la versione a 32 bit del driver ODBC Microsoft SQL Server (Sqlsrv32.dll).</P>
+
+<P class=T>Per correggere questo problema, è necessario creare un nuovo nome di origine dati a 32 bit avente il medesimo nome (DSN) per ciascuna origine dati ODBC collegata al database originale 1.<I>x</I> o 2.0.
+
+<OL>
+	<LI class=LPROC>Fare clic sul pulsante  <B>Start</B> (Avvio in Windows 95 e Windows NT 4.0), scegliere <B>Impostazioni</B>, quindi <B>Pannello di controllo</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare doppio clic sull'icona <B>Fonti dati ODBC (32 bit)</B> (in Windows 95 o versione successiva) oppure sull'icona <B>ODBC</B> (in Windows NT Workstation 4.0 o versione successiva).<BR><BR></LI>
+
+	<LI class=LPROC>Creare il nuovo nome origine dati immettendo valori identici ai nome origine dati originale. Per Microsoft SQL Server è ad esempio necessario definire almeno il <B>Nome</B> e il <B>Server</B> per l'origine dati, ma potrebbe essere necessario definire ulteriori valori quali il <B>Nome database</B>. <A HREF="acconAboutODBCDataSources.htm">Ulteriori informazioni sulle origini dati</A>.</LI>
+</OL>
+
+<P class=T>Se non si è sicuri di quale fosse il nome dell'origine dati originale, aprire il database originale tramite la versione di Microsoft Access con cui è stato creato, aprire la tabella collegata in visualizzazione Struttura e visualizzare il foglio <B>Proprietà tabella</B>. La proprietà <B>Descrizione</B> della tabella contiene la definizione della stringa di connessione ODBC. Il parametro visualizzato dopo <B>DSN=</B> nella stringa di connessione è il nome dell'origine dati. Per visualizzare la parte restante della definizione, aprire il Pannello di controllo di Windows 95 o versione successiva, fare doppio clic sull'icona <B>ODBC</B> (non sull'icona ODBC 32 bit). Nell'elenco <B>Fonti dati (Driver)</B> fare clic sul nome dell'origine dati, quindi scegliere <B>Impostazione</B> per visualizzarne la definizione.</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actbcIReceiveODBCErrorWhenOpeningTableOrFormInConvertedDatabaseW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

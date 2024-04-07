@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowImportAttachTablesAnotherAccessDatabaseS'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='187612'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Importare o collegare tabelle da un altro database di Microsoft Access o da un progetto di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowimportattachtablesanotheraccessdatabases"></A>Importare o collegare tabelle da un altro database di Microsoft Access o da un progetto di Microsoft Access</H1>
+
+<P class=NT><B>Nota&nbsp;&nbsp;</B> È possibile <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegare</A> una tabella solo in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessdatabase');" class="pop">database di Microsoft Access</A>, non in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>.
+
+<OL>
+	<LI class=LPROC>Aprire un database oppure passare alla <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> aperto.<BR><BR></LI>
+
+	<LI class=LPROC>Per <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importare</A> delle tabelle, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Importa</B>.
+<P class=LBR2>Per collegare delle tabelle, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Collega tabelle</B>.
+
+</LI>
+
+	<LI class=LPROC>Assicurarsi che sia selezionato <B>Microsoft Access (*.mdb;*.adp;*.mdw;*.mda;*.mde;*.ade) </B> nella casella <B>Tipo file</B> della finestra di dialogo <B>Importa</B> o <B>Collega</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sulla freccia alla destra della casella <B>Cerca in</B>, selezionare l'unità e la cartella in cui è memorizzato il database di Access con estensione mdb o il progetto di Access con estensione adp che si desidera importare o collegare, quindi fare doppio clic sull'icona del database.<P class=LT1><B>Importante&nbsp;&nbsp;</B> Se ci si collega a un file in una rete locale, assicurarsi di utilizzare un percorso <A HREF="javascript:HelpPopup('actip9.hlp','defUNC');" class="pop">UNC (Universal Naming Convention)</A> invece di utilizzare la lettera identificativa di un'unità di rete mappata in Esplora risorse di Windows (Gestione risorse in Windows 95 e Windows NT 4.0). La lettera di un'unità può variare da computer a computer o non essere definita, mentre un percorso UNC è un modo affidabile e coerente per individuare l'origine dati che contiene la tabella collegata. 
+</LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Importa oggetti</B> selezionare le tabelle che si desidera importare o collegare.<P class=LT1>Se si sta effettuando un'importazione e si desidera importare soltanto le definizioni delle tabelle selezionate e non i dati in esse contenuti, scegliere <B>Opzioni</B>, quindi fare clic su <B>Solo definizione</B> nel riquadro <B>Importa tabelle</B>. Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="achowImportAllDatabaseObjectsAnotherMSAccessDatabaS.htm">importazione di altri oggetti di database</A>.
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=LB1>Se si importa una tabella già collegata, Microsoft Access non importa i dati, ma collega la tabella alla relativa origine dati, ovvero copia le informazioni collegate.<BR><BR></LI>
+
+	<LI class=LB1>Sebbene sia possibile importare tabelle da un progetto di Access in un database di Access, può risultare più efficiente <A HREF="achowImportAttachSqlDatabaseTablesS.htm">importare la tabella da Microsoft SQL Server</A>. Se si stanno importando tabelle da un progetto di Access a un altro, è consigliabile l'utilizzo di DTS (Data Transformation Services), un metodo più rapido e flessibile per l'importazione e la trasformazione dei dati. Per ulteriori informazioni, <A HREF="acconAboutMicrosoftSQLServerDocumentation.htm">consultare la documentazione di Microsoft SQL Server</A>.<BR><BR></LI>
+
+	<LI class=LB1>Quando si importa una tabella in un progetto di Access, vengono importati solo i dati e le definizioni dei dati, non le proprietà, i vincoli, le relazioni e gli indici.<BR><BR></LI>
+
+	<LI class=LB1>Se il database che si desidera importare o collegare ha una password di database, è necessario fornirla prima di continuare. Il collegamento delle tabelle di tale database può avere conseguenze non previste. Per ulteriori informazioni, fare clic su <A HREF="achowControlDatabasePasswordCachingS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Se si collegano due tabelle dello stesso database di Access, qualsiasi relazione stabilita fra le due tabelle nell'altro database rimane attiva.<BR><BR></LI>
+
+	<LI class=LB1>Se si importa una tabella contenente dei <A HREF="javascript:HelpPopup('actip9.hlp','defLookupField');" class="pop">campi di ricerca</A> in un database di Access, si consiglia di importare anche le tabelle o le query a cui fanno riferimento i campi di ricerca. Se non si effettua questa operazione, all'apertura della tabella importata in visualizzazione Foglio dati, verrà visualizzato un messaggio di errore per ciascuna tabella o query mancante. Per risolvere questo problema, è necessario importare la tabella o la query. Se non è possibile o non si desidera importare le tabelle o le query mancanti, aprire la tabella importata in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A>, selezionare un campo di ricerca che fa riferimento a una tabella o a una query mancante, fare clic sulla scheda <B>Ricerca</B>, quindi impostare a <B>Casella di testo</B> la proprietà <B>Visualizza controllo</B>. Ripetere questa procedura per ciascun campo di ricerca che fa riferimento a una tabella o query mancante.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowImportAttachTablesAnotherAccessDatabaseSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

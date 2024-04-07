@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowDisplayingPartOfADateFieldS'
+Feature='Queries: Troubleshooting'
+Handoff='1'
+SourceFile='CQRYTRB.RTF'
+Tnum='188699'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Estrarre una parte dei valori esistenti di tipo Data utilizzando un campo calcolato</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowdisplayingpartofadatefields"></A>Estrarre una parte dei valori esistenti di tipo Data utilizzando un campo calcolato</H1>
+
+<OL>
+	<LI class=LPROC>Creare una query in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura</A> della query. Aggiungere le tabelle di cui si desidera utilizzare i record.<BR><BR></LI>
+
+	<LI class=LPROC>Utilizzare la funzione <B>DatePart</B> in un'espressione contenuta in una cella vuota nella riga <B>Campo</B> nella griglia di struttura della query.
+<P class=LT1>La sintassi di questa funzione è:
+
+<P class=LT1>DatePart<I>(partedata,data)</I>
+
+<P class=LT1>L'argomento <I>partedata</I> è l'abbreviazione della parte della data che si desidera venga restituita. Esempi sono "yyyy" per un anno di quattro cifre e "q" per un trimestre. L'argomento <I>data</I> è un nome di campo con il tipo di dati Data/Ora oppure una data letterale quale "7-Nov-93".
+
+<P class=LT1>Nella tabella che segue sono riportati degli esempi di espressioni che applicano la funzione <B>DatePart</B> al campo DataOrdine della tabella Ordini.
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=27%>Se il valore in <BR>
+DataOrdine è</TH>
+<TH width=47%>Questa espressione</TH>
+<TH width=26%>Restituisce</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>3-Giu-93</TD>
+<TD class=TT width=47%>DatePart("m",[DataOrdine])</TD>
+<TD class=TT width=26%>6 (mese dell'anno)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>28-Mar-92</TD>
+<TD class=TT width=47%>DatePart("yyyy",[DataOrdine])</TD>
+<TD class=TT width=26%>1992 (numero dell'anno a quattro cifre)</TD>
+</TR>
+</TABLE></LI>
+
+
+	<LI class=LPROC>Aggiungere qualsiasi altro campo che si desidera includere nella query alla griglia di struttura della query.</LI>
+</OL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowDisplayingPartOfADateFieldSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

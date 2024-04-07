@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthNewCurrentDatabaseX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186407'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo NewCurrentDatabase</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthnewcurrentdatabasex"></A>Esempio di metodo NewCurrentDatabase</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un nuovo database di Microsoft Access in un'altra applicazione tramite Automazione, quindi viene creata una nuova tabella in tale database.</P>
+
+<P class=T>È possibile immettere il codice riportato di seguito in un modulo di Visual Basic in qualsiasi applicazione che sia in grado di agire come componente COM. È possibile, ad esempio, eseguire il codice riportato di seguito da Microsoft Excel, da Microsoft Visual Basic o da Microsoft Access.</P>
+
+<P class=T>Quando la variabile che punta all'oggetto <B>Application</B> non rientra nell'area di validità, anche l'istanza di Microsoft Access che rappresenta viene chiusa. Si consiglia, quindi, di dichiarare tale variabile a livello di modulo.</P>
+
+<PRE class=CT><CODE>' Includere il seguente codice nella sezione Dichiarazioni del modulo.
+Dim appAccess As Access.Application
+
+Sub NuovoDatabaseAccess()
+&nbsp;&nbsp;&nbsp; Dim dbs As Object, tdf As Object, fld As Variant
+&nbsp;&nbsp;&nbsp; Dim strDB As String
+&nbsp;&nbsp;&nbsp; Const DB_Text As Long = 10
+&nbsp;&nbsp;&nbsp; Const FldLen As Integer = 40
+
+&nbsp;&nbsp;&nbsp; ' Inizializza la stringa nel percorso del database.
+&nbsp;&nbsp;&nbsp; strDB = "C:\Documenti\Nuovodb.mdb"
+&nbsp;&nbsp;&nbsp; ' Crea nuova istanza di Microsoft Access.
+&nbsp;&nbsp;&nbsp; Set appAccess = _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CreateObject("Applicazione.Access.9")
+&nbsp;&nbsp;&nbsp; ' Apre database nella finestra Microsoft Access.
+&nbsp;&nbsp;&nbsp; appAccess.<B>NewCurrentDatabase</B> strDB
+&nbsp;&nbsp;&nbsp; ' Richiama variabile oggetto Database.
+&nbsp;&nbsp;&nbsp; Set dbs = appAccess.CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea nuova tabella.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.CreateTableDef("Contatti")
+&nbsp;&nbsp;&nbsp; ' Crea campo in nuova tabella.
+&nbsp;&nbsp;&nbsp; Set fld = tdf. _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CreateField("NomeSocietà", DB_Text, FldLen)
+&nbsp;&nbsp;&nbsp; ' Accoda oggetti Field e TableDef.
+&nbsp;&nbsp;&nbsp; tdf.Fields.Append fld
+&nbsp;&nbsp;&nbsp; dbs.TableDefs.Append tdf
+&nbsp;&nbsp;&nbsp; Set appAccess = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFeatureInstallX'
+Feature='acpro'
+Handoff='2'
+SourceFile='acproV9.doc'
+Tnum='279607'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà FeatureInstall</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprofeatureinstallx"></A>Esempio di proprietà FeatureInstall</B></P>
+
+
+
+<P class=T>In questo esempio viene verificato il valore della proprietà <B>FeatureInstall</B>. Se la proprietà è impostata a <B>msoFeatureInstallNone</B>, il codice visualizza una finestra di messaggio che chiede se desidera modificare l'impostazione della proprietà. Rispondendo affermativamente, la proprietà viene impostata a <B>msoFeatureInstallOnDemand</B>. Nell'esempio viene utilizzata una variabile oggetto denominata MyOfficeApp, dimensionata come oggetto applicazione.</P>
+
+<PRE class=CT><CODE>With MyOfficeApp
+&nbsp;&nbsp;&nbsp; If.<B>FeatureInstall</B> = msoFeatureInstallNone Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reply = MsgBox("Le funzioni non installate per " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "questa applicazione potrebbero " &amp; vbCrLf _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "causare un errore di run-time quando chiamate." _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; vbCrLf _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Si desidera cambiare questa impostazione" &amp; vbCrLf _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "per installare automaticamente le funzioni mancanti?", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vbYesNo, "Feature Install Setting")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Reply = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<B>FeatureInstall</B> = msoFeatureInstallOnDemand
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End If
+End With</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

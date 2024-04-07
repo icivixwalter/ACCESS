@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefTypesOfPermissionsS'
+Feature='Security: Accounts/Permissions'
+Handoff='3'
+SourceFile='csecprm.rtf'
+Tnum='188594'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Tipi di autorizzazioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acreftypesofpermissionss"></A>Tipi di autorizzazioni</H1>
+
+<P class=T>Nella tabella riportata di seguito vengono riepilogate le <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> che è possibile assegnare.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=27%>Autorizzazione</TH>
+<TH width=39%>Consente di</TH>
+<TH width=34%>Si applica a</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Apertura/esecuzione</TD>
+<TD class=TT width=39%>Aprire un database, una maschera o un report oppure eseguire una macro.</TD>
+<TD class=TT width=34%>Database, maschere, report e macro</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Apertura esclusiva</TD>
+<TD class=TT width=39%>Aprire un database in accesso <A HREF="javascript:HelpPopup('actip9.hlp','defExclusive');" class="pop">esclusivo</A>.</TD>
+<TD class=TT width=34%>Database</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Lettura struttura</TD>
+<TD class=TT width=39%>Visualizzare oggetti in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A>.</TD>
+<TD class=TT width=34%>Tabelle, query, maschere, report e macro</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Modifica struttura</TD>
+<TD class=TT width=39%>Visualizzare e modificare la struttura degli oggetti o eliminarli.</TD>
+<TD class=TT width=34%>Tabelle, query, maschere, report e macro</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Amministrazione</TD>
+<TD class=TT width=39%>Per i database, impostare la password di database, replicare un database e modificare le proprietà di avvio.<BR> Per tabelle, query, maschere, report e macro, avere accesso completo a tali oggetti e dati, inclusa la possibilità di assegnare autorizzazioni.</TD>
+<TD class=TT width=34%>Database, tabelle, query, maschere, report e macro</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Lettura dati</TD>
+<TD class=TT width=39%>Visualizzare dati.</TD>
+<TD class=TT width=34%>Tabelle e query</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Aggiornamento dati</TD>
+<TD class=TT width=39%>Visualizzare e modificare dati ma non inserirli o eliminarli.</TD>
+<TD class=TT width=34%>Tabelle e query</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Inserimento dati</TD>
+<TD class=TT width=39%>Visualizzare ed inserire dati ma non modificarli o eliminarli.</TD>
+<TD class=TT width=34%>Tabelle e query</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Eliminazione dati</TD>
+<TD class=TT width=39%>Visualizzare ed eliminare dati ma non modificarli o inserirli.</TD>
+<TD class=TT width=34%>Tabelle e query</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Note</B>&nbsp;&nbsp;
+
+<UL>
+	<LI class=LB1>Alcune autorizzazioni implicano automaticamente la selezione di altre. L'autorizzazione Aggiornamento dati per una tabella, ad esempio, implica automaticamente le autorizzazioni Lettura dati e Lettura struttura in quanto necessarie per modificare i dati in una tabella. Le autorizzazioni Modifica struttura e Lettura dati implicano Lettura struttura. Per le macro, l'autorizzazione Lettura struttura implica Apertura/esecuzione.<BR><BR></LI>
+
+	<LI class=LB1>Per progettare maschere, report, macro e moduli in un ambiente multiutente è necessario aprire il database di Microsoft Access in modalità esclusiva, il che significa che è necessario avere l'autorizzazione di Apertura Esclusiva per il database. Per ulteriori informazioni, vedere <A HREF="acconAboutSavingChangesSharedDatabase.htm">Informazioni sul salvataggio delle modifiche alla struttura in un database di Microsoft Access condiviso</A>.<BR><BR></LI>
+
+	<LI class=LB1>In generale, per consentire agli utenti di accedere a una tabella collegata, assegnare le autorizzazioni Lettura dati e Lettura struttura per la tabella del database esterno e l'autorizzazione Modifica struttura per il collegamento alla tabella definito nel database interno in modo da consentire agli utenti di creare un nuovo collegamento alla tabella in modo semplice. Per limitare tutti gli accessi alla tabella esterna ma consentire comunque agli utenti di visualizzare i dati e di creare nuovi collegamenti alle tabelle, rimuovere tutte le autorizzazioni per la tabella esterna e <A HREF="achowPermitOthersRestrictedAccessViewRunQueryS.htm">utilizzare query nel database interno con la proprietà <B>Applica autorizzazioni</B> impostata a <B>Proprietario</B></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefTypesOfPermissionsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

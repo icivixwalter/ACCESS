@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctIsObjectX'
+Feature='acfct'
+Handoff='2'
+SourceFile='acobisx.rtf'
+Tnum='234465'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione IsObject</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctisobjectx"></A>Esempio di funzione IsObject</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la funzione <B>IsObject</B> per controllare se un argomento passato alla funzione è un oggetto.</P>
+
+<PRE class=CT><CODE>Sub ControllaOggetto (varQualsiasi As Variant)
+    Dim varX as Variant
+
+    If <B>IsObject(</B>varAny<B>)</B> Then
+        Set varX = varQualsiasi
+    Else
+        varX = varQualsiasi
+    End If
+End Sub
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

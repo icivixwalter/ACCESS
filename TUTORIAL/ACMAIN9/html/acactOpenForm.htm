@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactOpenForm'
+Feature='acact'
+Handoff='2'
+SourceFile='act_a-p.doc'
+Tnum='187797'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione ApriMaschera</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactOpenForm">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactopenform"></A>Azione ApriMaschera</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenFormC;dasqlWhere">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenFormX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione ApriMaschera apre una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A>, in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura</A> della maschera, in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A>. È possibile selezionare l'immissione di dati e le modalità delle finestre per la maschera, nonché limitare i <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> visualizzati dalla maschera.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione ApriMaschera utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomenti azione</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Nome maschera</TD>
+<TD class=TT width=76%>Il nome della maschera da aprire. La casella <B>Nome maschera</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A> visualizza tutte le maschere del database corrente. L'argomento è richiesto.
+<P class=TT>Se viene eseguita una macro contenente l'azione ApriMaschera in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, Microsoft Access cerca la maschera contraddistinta da tale nome innanzitutto nel database di libreria, quindi nel database corrente.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Visualizzazione</TD>
+<TD class=TT width=76%>La <A HREF="javascript:HelpPopup('actip9.hlp','defView');" class="pop">visualizzazione</A> in cui viene aperta la maschera. Selezionare <B>Maschera</B>, <B>Struttura</B>, <B>Anteprima di stampa</B> o <B>Foglio dati</B> nella casella <B>Visualizzazione</B>. L'impostazione predefinita è Maschera.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=76%><B>Nota</B>&nbsp;&nbsp; L'impostazione dell'argomento Visualizzazione ha la precedenza sull'impostazione delle proprietà <A HREF="acproDefaultView.htm"><B>Visualizzazione predefinita</B> e <B>Visualizzazioni consentite</B></A> della maschera. Se ad esempio la proprietà <B>Visualizzazioni consentite</B> di una maschera è impostata a Foglio dati, è comunque possibile utilizzare l'azione ApriMaschera per aprire la maschera in visualizzazione Maschera.
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Nome filtro</TD>
+<TD class=TT width=76%>Un <A HREF="javascript:HelpPopup('actip9.hlp','defFilter');" class="pop">filtro</A> che limita o ordina i record della maschera. È possibile immettere il nome di una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> esistente o di un filtro salvato come query. È necessario tuttavia che la query includa tutti i campi contenuti nella maschera che viene aperta o che abbia la proprietà <A HREF="acproOutputAllFields.htm"><B>Mostra tutti i campi</B></A> impostata a Sì.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Condizione WHERE</TD>
+<TD class=TT width=76%>Una <A HREF="javascript:HelpPopup('actip9.hlp','defWhereClause');" class="pop">proposizione SQL WHERE</A> valida, cioè priva della parola WHERE, oppure un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> utilizzata da Microsoft Access per selezionare record dalla tabella o dalla query sottostante alla maschera. Se si imposta un filtro tramite l'argomento Nome filtro, Microsoft Access applica la proposizione WHERE ai risultati del filtro.
+
+
+<P class=TT>Per aprire una maschera e limitare i record in esso contenuti a quelli specificati dal valore di un controllo di un'altra maschera, utilizzare la seguente espressione:</P>
+
+<P class=TSYN><B>[</B><I>nomecampo</I><B>] = Forms![</B><I>nomemaschera</I><B>]![</B><I>nomecontrollo di altra maschera</I><B>]</B></P>
+
+
+
+<P class=TT>L'argomento <I>nomecampo</I> è il nome di un campo contenuto nella tabella o nella query sottostante alla maschera che si desidera aprire. L'argomento <I>nomecontrollo di altra maschera</I> è il nome del controllo dell'altra maschera contenente il valore al quale si desidera far corrispondere i record della prima maschera.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=76%><B>Nota</B>&nbsp;&nbsp; La lunghezza massima dell'argomento Condizione WHERE è di 256 caratteri. Se si rende necessario immettere una proposizione SQL WHERE più complessa e più lunga, utilizzare invece il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>OpenForm</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A> in Visual Basic. È possibile immettere istruzioni con proposizioni SQL WHERE contenenti fino a 32.768 caratteri in Visual Basic.
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Modalità Immissione dati</TD>
+<TD class=TT width=76%>La modalità per l'immissione di dati della maschera. Tale argomento viene applicato solo a maschere aperte in visualizzazione Maschera o in visualizzazione Foglio dati. Selezionare <B>Aggiungi</B> per consentire l'aggiunta di nuovi record ma non la modifica di quelli esistenti, <B>Modifica</B> per consentire la modifica dei record esistenti e l'aggiunta di nuovi record oppure <B>Sola lettura</B> per consentire solo la visualizzazione dei record. L'impostazione predefinita è Modifica.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=76%><B>Note</B>
+<UL>
+	<LI class=TLB>L'impostazione dell'argomento Modalità Immissione dati ha la precedenza sull'impostazione delle proprietà <A HREF="acproAllowEdits.htm"><B>Consenti modifiche</B></A>, <A HREF="acproAllowDeletions.htm"><B>Consenti eliminazioni</B></A>, <A HREF="acproAllowAdditions.htm"><B>Consenti aggiunte</B></A> e <A HREF="acproDataEntry.htm"><B>Immissione dati</B></A> della maschera. Se ad esempio la proprietà <B>Consenti modifiche</B> è impostata a No, è comunque possibile utilizzare l'azione ApriMaschera per aprire la maschera in modalità Modifica.<BR><BR></LI>
+
+	<LI class=TLB>Se si lascia vuota questa casella, Microsoft Access apre la maschera con la modalità Immissione dati definita dalle proprietà <B>Consenti modifiche</B>, <B>Consenti eliminazioni</B>, <B>Consenti aggiunte</B> e <B>Immissione dati</B> della maschera.</LI>
+</UL>
+
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Modalità finestra</TD>
+<TD class=TT width=76%>La modalità della finestra in cui viene aperta la maschera. Selezionare <B>Normale</B> per impostare la maschera secondo la modalità definita dalle relative <A HREF="javascript:HelpPopup('actip9.hlp','defFormProperties');" class="pop">proprietà</A>, <B>Nascosta</B> per nascondere la maschera, <B>Icona</B> per aprire la maschera e ridurla a icona nella parte inferiore dello schermo o <B>Dialogo</B> per impostare a Sì le proprietà <A HREF="acproModal.htm"><B>A scelta obbligatoria</B></A> e <A HREF="acproPopUp.htm"><B>Popup</B></A> della maschera. L'impostazione predefinita è Normale.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>L'azione equivale a fare clic sul pulsante <B>Apri</B> o <B>Struttura</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> dopo aver selezionato una maschera nella scheda <B>Maschere</B>.</P>
+
+<P class=T>Se una maschera è <A HREF="javascript:HelpPopup('actip9.hlp','defModal');" class="pop">a scelta obbligatoria</A>, deve essere chiusa o nascosta prima che si possa eseguire qualsiasi altra azione; se non è a scelta obbligatoria, è possibile spostarsi ad altre finestre quando è aperta. Nel caso si trattasse di una <A HREF="javascript:HelpPopup('actip9.hlp','defPopUp');" class="pop">maschera popup</A>, può essere utilizzata per riunire o visualizzare informazioni che rimangono in primo piano rispetto alle altre finestre di Microsoft Access. Impostare le proprietà <B>A scelta obbligatoria</B> e <B>Popup</B> quando si struttura la maschera. Se si imposta Normale per l'argomento Modalità finestra, la maschera viene aperta nella modalità specificata dalle impostazioni di tali proprietà. Se si imposta invece Dialogo, tali proprietà verranno entrambe impostate a Sì. Al momento della visualizzazione o del ripristino, la maschera aperta come nascosta o come icona viene ripristinata alla modalità specificata dalle impostazioni delle relative proprietà.</P>
+
+<P class=T>Quando si apre una maschera con l'argomento Modalità finestra impostato a Dialogo, Microsoft Access interrompe l'esecuzione della macro fino a quando la maschera viene chiusa o nascosta. È possibile nascondere una maschera impostando a No la proprietà <A HREF="acproVisible.htm"><B>Visibile</B></A>, utilizzando l'azione <A HREF="acactSetValue.htm">ImpostaValore</A>.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile selezionare una maschera nella finestra del database e trascinarla in una <A HREF="javascript:HelpPopup('actip9.hlp','defActionRow');" class="pop">riga di azione</A> della macro. In tal modo viene creata automaticamente un'azione ApriMaschera che apre la maschera in visualizzazione Maschera.</P>
+
+
+
+<P class=T>Se si passa in visualizzazione Struttura con la maschera aperta, la maggior parte delle impostazioni degli argomenti viene rimossa dalla maschera, come le impostazioni degli argomenti Modalità Immissione dati e Modalità finestra, i quali non sono più attivi anche se si torna alla visualizzazione Maschera o Foglio dati.</P>
+
+<P class=T>Il filtro e la condizione WHERE applicati diventano l'impostazione della proprietà <A HREF="acproFilter.htm"><B>Filtro</B></A> della maschera.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acactOpenFormW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

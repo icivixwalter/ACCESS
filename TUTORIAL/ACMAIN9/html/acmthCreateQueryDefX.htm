@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateQueryDefX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234378'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CreateQueryDef (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreatequerydefx"></A>Esempio di metodo CreateQueryDef (MDB)</B></P>
+
+
+
+<P class=T>Questo esempio utilizza il metodo CreateQueryDef per creare ed eseguire una QueryDef permanente e una temporale. La funzione GetrstTemp è richiesta per l'esecuzione di questa procedura.</P>
+
+<PRE class=CT>Sub CreateQueryDefX()
+
+&nbsp;&nbsp;&nbsp; Dim dbsNorthwind As Database
+&nbsp;&nbsp;&nbsp; Dim qdfTemp As QueryDef
+&nbsp;&nbsp;&nbsp; Dim qdfNew As QueryDef
+
+&nbsp;&nbsp;&nbsp; Set dbsNorthwind = OpenDatabase("Northwind.mdb")
+
+&nbsp;&nbsp;&nbsp; With dbsNorthwind
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea oggetto QueryDef temporaneo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set qdfTemp = .CreateQueryDef("", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "SELECT * FROM Dipendenti")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Apre Recordset e stampa report.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GetrstTemp qdfTemp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea oggetto QueryDef permanente.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set qdfNew = .CreateQueryDef("NuovoQueryDef", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "SELECT * FROM Categorie")
+
+' Apre Recordset e stampa report.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GetrstTemp qdfNew
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Elimina il nuovo QueryDef perché è soltanto una dimostrazione.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .QueryDefs.Delete qdfNew.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Close
+&nbsp;&nbsp;&nbsp; End With
+
+End Sub
+
+Function GetrstTemp(qdfTemp As QueryDef)
+
+&nbsp;&nbsp;&nbsp; Dim rstTemp As Recordset
+
+&nbsp;&nbsp;&nbsp; With qdfTemp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print .Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "&nbsp;&nbsp;&nbsp; " &amp; .SQL
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Apre Recordset da QueryDef.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set rstTemp = .OpenRecordset(dbOpenSnapshot)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With rstTemp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Riempie i Recordset e stampa il numero di record.
+
+.MoveLast
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "&nbsp;&nbsp;&nbsp; Numero di record = " &amp; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .RecordCount
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Close
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With
+
+&nbsp;&nbsp;&nbsp; End With
+
+End Function</PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

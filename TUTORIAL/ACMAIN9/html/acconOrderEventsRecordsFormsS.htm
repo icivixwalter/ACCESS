@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOrderEventsRecordsFormsS'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmacevt.rtf'
+Tnum='186832'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Ordine degli eventi per i record sulle maschere</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEventsRef">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconordereventsrecordsformss"></A>Ordine degli eventi per i record sulle maschere</H1>
+
+<P class=T>Gli <A HREF="javascript:HelpPopup('actip9.hlp','defEvent');" class="pop">eventi</A> per i record sulle maschere si verificano quando si sposta lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A> su un record, vengono aggiornati i dati in un record o viene eliminato un record o dei record esistenti oppure ne viene creato uno nuovo.</P>
+
+<H2>Spostamento dello stato attivo dei record e aggiornamento dei dati nei record</H2>
+
+<P class=T>Quando si sposta lo stato attivo su un record esistente di una maschera, si immettono o si modificano i dati nel record, quindi si sposta lo stato attivo su un altro record, per la maschera si verifica la sequenza di eventi riportata di seguito:</P>
+
+<P class=IND>Corrente (maschera) <font face="Symbol">Þ</FONT>
+PrimaDiAggiornare (maschera) <font face="Symbol">Þ</FONT>
+DopoAggiornamento (maschera) <font face="Symbol">Þ</FONT>
+Corrente (maschera)</P>
+
+<P class=T>Quando si esce dal record in cui sono stati modificati i dati, ma prima di entrare nel record successivo, si verificano gli eventi Uscita e Disattivato per il <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> con lo stato attivo. Questi eventi si verificano dopo gli eventi PrimaDiAggiornare e DopoAggiornamento per la maschera, come riportato di seguito:</P>
+
+<P class=IND>PrimaDiAggiornare (maschera) <font face="Symbol">Þ</FONT>
+DopoAggiornamento (maschera) <font face="Symbol">Þ</FONT>
+Uscita (controllo) <font face="Symbol">Þ</FONT>
+Disattivato (controllo) <font face="Symbol">Þ</FONT>
+Corrente (maschera)</P>
+
+<P class=T>Spostando lo stato attivo tra i controlli di una maschera, si verificano degli eventi per ciascun controllo. Si verificano ad esempio le sequenze di eventi riportate di seguito quando:
+
+<UL>
+	<LI class=LB1>Viene aperta una maschera e vengono modificati i dati in un controllo:
+<P class=LT1>Corrente (maschera) <font face="Symbol">Þ</FONT>
+Invio (controllo) <font face="Symbol">Þ</FONT>
+Attivato (controllo) <font face="Symbol">Þ</FONT>
+PrimaDiAggiornare (controllo) <font face="Symbol">Þ</FONT>
+DopoAggiornamento (controllo)
+</LI>
+
+	<LI class=LB1>Viene spostato lo stato attivo su un altro controllo:
+<P class=LT1>Uscita (controllo1) <font face="Symbol">Þ</FONT>
+Disattivato (controllo1) <font face="Symbol">Þ</FONT>
+Invio (controllo2) <font face="Symbol">Þ</FONT>
+Attivato (controllo2)
+</LI>
+
+	<LI class=LB1>Viene spostato lo stato attivo su un altro record:
+<P class=LT1>PrimaDiAggiornare (maschera) <font face="Symbol">Þ</FONT>
+DopoAggiornamento (maschera) <font face="Symbol">Þ</FONT>
+Uscita (controllo2) <font face="Symbol">Þ</FONT>
+Disattivato (controllo2) <font face="Symbol">Þ</FONT>
+Corrente (maschera)
+</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni sull'ordine degli eventi per i controlli sulle maschere, fare clic su <A HREF="acconOrderEventsControlsFormsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<H2>Eliminazione di record</H2>
+
+<P class=T>Quando viene eliminato un record, si verificano gli eventi riportati di seguito per la maschera e viene visualizzata una finestra di dialogo per confermare l'eliminazione:</P>
+
+<P class=IND>Eliminazione <font face="Symbol">Þ</FONT>
+PrimaDiConfermaEliminazione <font face="Symbol">Þ</FONT>
+DopoConfermaEliminazione</P>
+
+<P class=T>Se viene annullato l'evento Eliminazione, gli eventi PrimaDiConfermaEliminazione e DopoConfermaEliminazione non si verificano e la finestra di dialogo non viene visualizzata.</P>
+
+<H2>Creazione di un nuovo record</H2>
+
+<P class=T>Quando lo stato attivo viene spostato su un record nuovo (vuoto) su una maschera e viene quindi creato un nuovo record digitando un controllo, si verifica la sequenza di eventi riportata di seguito:</P>
+
+<P class=IND>Corrente (maschera) <font face="Symbol">Þ</FONT>
+Invio (controllo) <font face="Symbol">Þ</FONT>
+Attivato (controllo) <font face="Symbol">Þ</FONT>
+PrimaDiInserire (maschera) <font face="Symbol">Þ</FONT>
+DopoInserimento (maschera)</P>
+
+<P class=T>Gli eventi PrimaDiAggiornare e DopoAggiornamento per i controlli sulla maschera e per il nuovo record si verificano dopo l'evento PrimaDiInserire e prima dell'evento DopoInserimento.</P>
+
+<P class=T>Per ulteriori informazioni sugli eventi, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOrderEventsRecordsFormsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

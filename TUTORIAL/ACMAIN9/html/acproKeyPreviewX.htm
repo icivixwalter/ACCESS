@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproKeyPreviewX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apromsc3_1a.rtf'
+Tnum='187389'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà KeyPreview</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprokeypreviewx"></A>Esempio di proprietà KeyPreview</B></P>
+
+
+
+<P class=T>Nell'esempio seguente la proprietà <B>KeyPreview</B> della routine evento Caricamento della maschera è impostata a <B>True</B> (-1). Ciò consente alla maschera di ricevere gli eventi di tastiera prima di qualsiasi controllo. L'evento TastoGiù della maschera controlla quindi il valore dell'argomento KeyCode per determinare se sono stati premuti i tasti F2, F3 o F4.</P>
+
+<PRE class=CT><CODE>Private Sub Form_Load()
+&nbsp;&nbsp;&nbsp; Me.<B>KeyPreview</B> = True
+End Sub
+
+Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
+&nbsp;&nbsp;&nbsp; Select Case KeyCode
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case vbKeyF2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Elabora eventi tasto F2.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case vbKeyF3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Elabora eventi tasto F3.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case vbKeyF4
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Elabora eventi tasto F4.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case Else
+&nbsp;&nbsp;&nbsp; End Select
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

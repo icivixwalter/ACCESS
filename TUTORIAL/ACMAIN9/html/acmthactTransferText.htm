@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactTransferText'
+Feature='acmth'
+Handoff='2'
+SourceFile='amthact.doc'
+Tnum='186521'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo TransferText</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproActiveCon">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjODBRec">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthacttransfertext"></A>Metodo TransferText</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferTextC;damthCreateTableDef;damthRefreshLink;daobjTableDef;daproConnect">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferTextX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferTextA">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Specifiche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferText_S">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo TransferText esegue l'azione <A HREF="acactTransferText.htm">TrasferisciTesto</A> in Visual Basic. Per ulteriori informazioni sul funzionamento dell'azione e dei relativi argomenti, vedere l'argomento della Guida in linea relativo all'azione.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DoCmd.TransferText</B> [<I>tipotrasferimento</I>][, <I>nomefilespecifiche</I>], <I>nometabella</I>, <I>nomefile</I>[, <I>nomicampo</I>][, <I>nometabellaHTML</I>][, <I>tabellacodici</I>]</P>
+
+
+
+<P class=T>Il metodo TransferText utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=26%>Argomento</TH>
+<TH width=74%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>tipotrasferimento</I></TD>
+<TD class=TT width=74%>Una delle seguenti <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>&nbsp;</TD>
+<TD class=TT width=74%>acExportDelim<BR>
+acExportFixed<BR>
+acExportHTML<BR>
+acExportMerge<BR>
+acImportDelim (impostazione predefinita)<BR>
+acImportFixed<BR>
+acImportHTML<BR>
+acLinkDelim<BR>
+acLinkFixed<BR>
+acLinkHTML</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>&nbsp;</TD>
+<TD class=TT width=74%>Se si omette questo argomento, viene utilizzata la costante predefinita (acImportDelim).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>&nbsp;</TD>
+<TD class=TT width=74%><B>Note</B>&nbsp;&nbsp; È possibile collegarsi ai dati di un file di testo o di un file HTML ma tali dati risultano di sola lettura in Microsoft Access.<P class=TT>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (ADP) sono supportati soltanto i tipi di trasferimento <B>acImportDelim</B>, <B>acImportFixed</B>, <B>acExportDelim</B>, <B>acExportFixed</B> o <B>acExportMerge</B>.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>nomefilespecifiche</I></TD>
+<TD class=TT width=74%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che è il nome di una specifica di importazione o di esportazione creata e salvata nel database corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>&nbsp;</TD>
+<TD class=TT width=74%>Per un file di testo a larghezza fissa, occorre specificare un argomento o utilizzare un file schema.ini, che deve essere memorizzato nella stessa cartella del file importato, collegato o esportato. Per creare un file schema, è possibile utilizzare l'Importazione o l'Esportazione guidata. Per i file di testo delimitati e i file di dati di stampa unione, è possibile omettere questo argomento per selezionare le specifiche predefinite di importazione o esportazione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>nometabella</I></TD>
+<TD class=TT width=74%>Espressione stringa che è il nome della tabella di Microsoft Access nella quale si desidera importare, dalla quale si desidera esportare o alla quale si desidera collegare dati di testo, oppure della <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> di Microsoft Access i cui risultati si desidera esportare in un file di testo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>nomefile</I></TD>
+<TD class=TT width=74%>Espressione stringa che è il nome completo, compreso il percorso, del file di testo dal quale si vuole importare, al quale si vuole esportare o collegare dati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>nomicampo</I></TD>
+<TD class=TT width=74%>Utilizzare True (-1) per utilizzare la prima riga del file di testo come nomi di campo nell'importazione, nell'esportazione o nel collegamento. Utilizzare False (0) se si desidera che i dati della prima riga del file di testo siano considerati come dati normali. Se si omette questo argomento, viene utilizzata l'impostazione predefinita (False).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>&nbsp;</TD>
+<TD class=TT width=74%>Questo argomento viene ignorato nei file di dati di stampa unione di Microsoft Word per Windows, che devono sempre contenere nella prima riga i nomi dei campi.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>nometabellaHTML</I></TD>
+<TD class=TT width=74%>Espressione stringa che è il nome della tabella o dell'elenco nel file HTML che si desidera importare o a cui si desidera collegarsi. Questo argomento viene ignorato a meno che l'argomento <I>tipotrasferimento</I> sia impostato a acImportHTML o acLinkHTML. Se si omette questo argomento, viene importata o collegata la prima tabella del file HTML.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>&nbsp;</TD>
+<TD class=TT width=74%>Il nome della tabella o dell'elenco nel file HTML viene determinato dal testo specificato dal tag &lt;CAPTION&gt;, qualora esista. Se non esiste, il nome viene determinato dal testo specificato dal tag &lt;TITLE&gt;. Se vi sono più tabelle o elenchi con il medesimo nome, Microsoft Access le distingue aggiungendo un numero alla fine del relativo nome: ad esempio Impiegati1 e Impiegati2.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>tabellacodici</I></TD>
+<TD class=TT width=74%>Un valore di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defLongDataType');" class="pop"><B>Long</B></A> indicante il set di caratteri della tabella codici.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile omettere un argomento facoltativo all'interno della sintassi, ma è necessario includere la virgola dell'argomento stesso. Se si omette un argomento finale, non utilizzare la virgola dopo l'ultimo argomento specificato.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È anche possibile utilizzare gli <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti ADO</A> per creare un collegamento tramite la proprietà <A HREF="JavaScript:hhobj_5.Click()"><B>ActiveConnection</B></A> per l'oggetto <A HREF="JavaScript:hhobj_6.Click()"><B>Recordset</B></A>.</P>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

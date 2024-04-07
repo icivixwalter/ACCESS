@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctStringFromGUIDX'
+Feature='acfct'
+Handoff='1'
+SourceFile='afctv8_1a.doc'
+Tnum='186747'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione StringFromGUID</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctstringfromguidx"></A>Esempio di funzione StringFromGUID</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito il valore del controllo s_GUID di una maschera Impiegati viene restituito sotto forma di stringa e viene assegnato a una variabile di stringa. Il controllo s_GUID è associato al campo s_GUID, uno dei campi di sistema aggiunti a ogni tabella replicata in un database replicato.</P>
+
+<PRE class=CT><CODE>Sub ValoreStringaGUID()
+&nbsp;&nbsp;&nbsp; Dim ctl As Control, strGUID As String
+
+&nbsp;&nbsp;&nbsp; Set ctl = Forms!Impiegati!s_GUID
+&nbsp;&nbsp;&nbsp; Debug.Print TypeName(ctl.Value)
+&nbsp;&nbsp;&nbsp; strGUID = <B>StringFromGUID(</B>ctl.Value<B>)</B>
+&nbsp;&nbsp;&nbsp; Debug.Print TypeName(strGUID)
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

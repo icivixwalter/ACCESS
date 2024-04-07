@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconConvertingSendKeysKeyCombinations'
+Feature='accon'
+Handoff='2'
+SourceFile='acconnew.doc'
+Tnum='187106'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convertire combinazioni di tasti SendKeys</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmSendKeys">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acconconvertingsendkeyskeycombinations"></A>Convertire combinazioni di tasti SendKeys</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconConvertingSendKeysKeyCombinationsC;vastmSendKeys">
+</OBJECT></P>
+
+
+
+<P class=T>Se un database della versione 1.<I>x</I> o 2.0 viene convertito in Microsoft Access 2000, in alcune finestre di dialogo o in alcuni menu potrebbero verificarsi delle modifiche che richiedono la ricodifica dell'istruzione <A HREF="JavaScript:hhobj_2.Click()"><B>SendKeys</B></A> o dell'azione <A HREF="acactSendKeys.htm">InviaTasti</A>. Il sottomenu <B>Componenti aggiuntivi</B> ad esempio è stato spostato dal menu <B>File</B> al menu <B>Strumenti</B>, mentre i precedenti sottomenu <B>Importa</B>, <B>Esporta</B> e <B>Collega</B> del menu <B>File</B> sono stati trasformati nei sottomenu <B>Carica dati esterni</B> e <B>Salva con nome/esporta</B>. Dal momento che modifiche di questo tipo è probabile che di verifichino per tutte le nuove versioni di Microsoft Access, si consiglia di evitare, quando possibile, di utilizzare l'istruzione <B>SendKeys</B> o l'azione InviaTasti per eseguire comandi o immettere dati nelle finestre di dialogo.</P>
+
+<P class=T>Sono riportati di seguito alcuni suggerimenti per evitare di utilizzare l'istruzione <B>SendKeys</B> o l'azione InviaTasti.
+
+<UL>
+	<LI class=LB1>Per eseguire un comando di menu, prima di utilizzare l'istruzione <B>SendKeys</B> o l'azione InviaTasti, ricercare un'azione macro o un metodo di Visual Basic equivalenti. Per la maggior parte dei comandi normalmente eseguibili mediante un'opzione o un comando di menu esiste un'azione o un metodo equivalente. È possibile ad esempio utilizzare il metodo <A HREF="acmthDropdown.htm"><B>Dropdown</B></A> di una <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">casella combinata</A> anziché il codice <CODE>SendKeys "{F4}"</CODE>.<BR><BR></LI>
+
+	<LI class=LB1>Se per un comando di menu non esiste un'azione o un metodo equivalente, per eseguire il comando utilizzare l'azione <A HREF="acactRunCommand.htm">EseguiComando</A> anziché l'istruzione <B>SendKeys</B> o l'azione InviaTasti.<BR><BR></LI>
+
+	<LI class=LB1>Evitare di utilizzare l'istruzione <B>SendKeys</B> o l'azione InviaTasti per impostare le opzioni nella finestra di dialogo <B>Opzioni</B>. Le nuove versioni di Microsoft Access avranno opzioni nuove e modificate, quindi il codice contenuto nell'istruzione <B>SendKeys</B> o nell'azione InviaTasti potrebbe facilmente subire interruzioni. Utilizzare invece i metodi <A HREF="acmthGetSetOption.htm"><B>GetOption</B> e <B>SetOption</B></A>.<BR><BR></LI>
+
+	<LI class=LB1>Quando si utilizza l'istruzione <B>SendKeys</B> per eseguire un'azione, è consigliabile fare riferimento alle costanti incorporate dei codici dei tasti oppure definire nell'istruzione <B>SendKeys</B> le costanti per i valori. La definizione dei tasti come costanti renderà più semplice il futuro aggiornamento del codice.<BR><BR></LI>
+
+	<LI class=LB1>In Microsoft Access versione 2.0 è possibile, ma non obbligatorio, racchiudere tra virgolette l'argomento Sequenza tasti. Nelle versioni successive di Microsoft Access, se si racchiude tra virgolette questo argomento, si verifica un errore. Per utilizzare le virgolette nell'argomento Sequenza tasti è necessario inserire due serie di virgolette, come in Giuseppe ""Pino"" Rossi. Si verifica un errore anche quando l'argomento Sequenza tasti contiene una sintassi non corretta, errori di battitura o altri valori non appropriati per la finestra a cui è diretta la sequenza di tasti.<BR><BR></LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconConvertingSendKeysKeyCombinationsW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

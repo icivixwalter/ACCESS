@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconExamplesExpressionsPageNumbersS'
+Feature='Reports: Design'
+Handoff='1'
+SourceFile='crptdsn1.rtf'
+Tnum='187330'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di espressioni per i numeri di pagina</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconexamplesexpressionspagenumberss"></A>Esempi di espressioni per i numeri di pagina</H1>
+
+<P class=T>Nella tabella riportata di seguito vengono elencati alcuni esempi di espressioni per i numeri di pagina che è possibile utilizzare in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura della maschera</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura del report</A> e i risultati che appaiono in altre visualizzazioni.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=58%>Espressione</TH>
+<TH width=42%>Risultato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=58%>=[Page]</TD>
+<TD class=TT width=42%>1, 2, 3</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=58%>="Pagina " &amp; [Page]</TD>
+<TD class=TT width=42%>Pagina 1, Pagina 2, Pagina 3</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=58%>="Pagina " &amp; [Page] &amp; " di " &amp; [Pages]</TD>
+<TD class=TT width=42%>Pagina 1 di 3, Pagina 2 di 3, Pagina 3 di 3</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=58%>=[Page] &amp; " di " &amp; [Pages] &amp; " Pagine"</TD>
+<TD class=TT width=42%>1 di 3 Pagine, 2 di 3 Pagine, 3 di 3 Pagine</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=58%>=[Page] &amp; "/"&amp; [Pages] &amp; " Pagine"</TD>
+<TD class=TT width=42%>1/3 Pagine, 2/3 Pagine, 3/3 Pagine</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=58%>=[Country] &amp; " - " &amp; [Page]</TD>
+<TD class=TT width=42%>UK - 1, UK - 2, UK - 3</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=58%>=Format([Page], "000")</TD>
+<TD class=TT width=42%>001, 002, 003</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconExamplesExpressionsPageNumbersSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

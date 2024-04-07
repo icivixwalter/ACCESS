@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefOptimizeSqlDatabasePerformanceS'
+Feature='Optimization: Performance'
+Handoff='3'
+SourceFile='CDATLATE.RTF'
+Tnum='187458'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Suggerimenti per l'ottimizzazione delle prestazioni dei database SQL esterni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproCacheSize">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acrefoptimizesqldatabaseperformances"></A>Suggerimenti per l'ottimizzazione delle prestazioni dei database SQL esterni</H1>
+
+<P class=T>Se i dati nell'<A HREF="javascript:HelpPopup('actip9.hlp','defFrontBackEndApp');" class="pop">applicazione esterna/front end</A> consistono esclusivamente in tabelle di Microsoft SQL Server, è possibile utilizzare indifferentemente un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> come front end dell'applicazione. Se tuttavia si desidera che i dati dell'applicazione esterna/front end comprendano sia tabelle di Microsoft Access che tabelle di Microsoft SQL Server, è necessario utilizzare come front end un database di Access.</P>
+
+<P class=T>Quando ci si collega ad una tabella di un database SQL esterno, è possibile ottenere le migliori prestazioni effettuando il <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegamento</A> alle tabelle SQL invece di aprirle direttamente. È possibile aprire direttamente le tabelle SQL esterne solo con il codice di Visual Basic. Le tabelle collegate sono molto più rapide, potenti ed efficaci delle tabelle aperte direttamente.</P>
+
+<H2>Ulteriori suggerimenti per le prestazioni</H2>
+
+<UL>
+	<LI class=LB1>Recuperare solo i dati necessari. Progettare le query in modo da limitare il numero di record recuperati e selezionare solo i campi necessari per consentire il trasferimento di un minor numero di dati sulla rete. <BR><BR></LI>
+
+	<LI class=LB1>Se non si stanno recuperando molti record, non si stanno aggiornando i dati e non è necessario vedere le modifiche apportate da altri utenti, non utilizzare set di risultati aggiornabili (dynaset). Per fare in modo che i set di risultati non vengano aggiornati in una maschera, impostare la proprietà <B>Tipo Recordset</B> della maschera a <B>Snapshot</B>. Gli snapshot sono più rapidi da aprire e da scorrere rispetto ai dynaset. <BR><BR></LI>
+
+	<LI class=LB1>Se è necessario recuperare un gran numero di record, un dynaset risulta più rapido ed efficace rispetto ad uno snapshot. Lo spostamento alla fine di uno snapshot, ad esempio, richiede il caricamento dell'intero set di risultati sul computer locale, mentre con un dynaset viene caricata solo l'ultima schermata di dati. Inoltre, per aggiungere nuovi record ad una tabella, maschera o query in modo rapido, scegliere il comando <B>Immissione dati</B> dal menu <B>Record</B>. Se la proprietà <B>Tipo Recordset</B> è impostata a <B>Snapshot</B>, il comando <B>Immissione dati</B> non è disponibile. <BR><BR></LI>
+
+	<LI class=LB1>Utilizzare la memoria cache. Se gli ultimi dati recuperati dal server vengono riutilizzati durante l'esecuzione dell'applicazione, si consiglia di recuperare un'unica ampia parte di dati (molte righe) e memorizzarla nella cache piuttosto che recuperare molte singole righe, in quanto la prima operazione risulta molto più rapida della seconda. Nelle maschere e nei fogli dati viene utilizzata automaticamente una cache. Se si stanno recuperando dati con un oggetto <B>Recordset</B> creato in Microsoft Visual Basic, è possibile utilizzare la proprietà <A HREF="JavaScript:hhobj_1.Click()"><B>CacheSize</B></A> per specificare quanti record per volta vanno recuperati e copiati nella memoria locale.<BR><BR></LI>
+
+	<LI class=LB1>Evitare di utilizzare query che consentono di elaborare i dati su un computer client locale. Durante l'accesso ai dati esterni, il modulo di gestione di database Jet consente di elaborare i dati a livello locale solo quando l'operazione non può essere eseguita dal server di database esterno. Le operazioni delle query eseguite a livello locale, definite dai comandi SQL utilizzati per realizzarle, includono:
+<UL>
+	<LI class=LB2>Operazioni JOIN tra tabelle di diverse origini dati remote. Si noti che se il collegamento con join viene effettuato tra una tabella locale o una query con pochi record ed una tabella remota con un numero maggiore di record, ed il campo di join della tabella remota è indicizzato, vengono restituiti solo i record che corrispondono alla tabella locale o alla query, ottenendo quindi migliori prestazioni delle query.<BR><BR></LI>
+
+	<LI class=LB2>Operazioni JOIN basate su una query con il predicato DISTINCT o una proposizione GROUP BY.<BR><BR></LI>
+
+	<LI class=LB2><A HREF="javascript:HelpPopup('actip9.hlp','defOuterJoin');" class="pop">Join esterni</A> contenenti una sintassi non supportata dal server.<BR><BR></LI>
+
+	<LI class=LB2>Predicati DISTINCT contenenti le operazioni che non è possibile elaborare a livello remoto.<BR><BR></LI>
+
+	<LI class=LB2>Operatore LIKE utilizzato con i campi Testo o Memo. È possibile che non sia supportato da alcuni server. <BR><BR></LI>
+
+	<LI class=LB2>Formule e argomenti GROUP BY a più livelli, ad esempio quelli utilizzati nei report con più livelli di raggruppamento.<BR><BR></LI>
+
+	<LI class=LB2>Argomenti GROUP BY basati su una query con un predicato DISTINCT o una proposizione GROUP BY.<BR><BR></LI>
+
+	<LI class=LB2>Query a campi incrociati che hanno più aggregazioni o che hanno intestazioni di campi, righe o colonne contenenti aggregazioni, oppure che hanno una proposizione ORDER BY definita dall'utente.<BR><BR></LI>
+
+	<LI class=LB2>Predicati TOP <I>n</I> oppure TOP <I>n</I> PERCENT.<BR><BR></LI>
+
+	<LI class=LB2>Funzioni definite dall'utente, oppure operatori o funzioni che non sono supportati dal server.<BR><BR></LI>
+
+	<LI class=LB2>Combinazioni complesse di operazioni INNER JOIN, LEFT JOIN oppure RIGHT JOIN nelle query nidificate.</LI>
+</UL>
+</LI>
+
+	<LI class=LB1>Per query di aggiornamento collettivo per origini dati ODBC, ottimizzare le prestazioni sul server impostando a <B>Sì</B> la proprietà <B>FailOnError</B>. Per ulteriori informazioni, fare clic su  <A HREF="acproFailOnError.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefOptimizeSqlDatabasePerformanceSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

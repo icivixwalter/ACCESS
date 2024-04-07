@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRunningSumX1'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosrc1_1a.rtf'
+Tnum='188007'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà RunningSum (report Vendite)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorunningsumx1"></A>Esempio di proprietà RunningSum (report Vendite)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si indica un report Vendite con due livelli di gruppo: Mese e Tipo prodotto. Ciascuna casella di testo del piè di pagina del gruppo Tipo prodotto (Cioccolatini gennaio, Carne gennaio e così via) include la seguente espressione:</P>
+
+<PRE class=CT><CODE>=Somma([Vendite])</CODE></PRE>
+
+
+
+<P class=T>La proprietà <B>RunningSum</B> di ciascuna casella di testo è impostata a uno dei seguenti valori: No, Su gruppo e Su tutto.</P>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=5>
+
+<TR VALIGN="top">
+<TH width=33%>Livelli di gruppo</TH>
+<TH width=16%>No</TH>
+<TH width=23%>Su gruppo</TH>
+<TH width=24%>Su tutto</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=4 width=96%>Mese: gennaio</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=4 width=96%>Tipo prodotto: Cioccolatini</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>02/gen</TD>
+<TD class=TT width=16%>25</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>22/gen</TD>
+<TD class=TT width=16%>75</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>Cioccolatini gennaio</TD>
+<TD class=TT width=16%>100</TD>
+<TD class=TT width=23%>Prodotti gen 100</TD>
+<TD class=TT width=24%>Totale vendite 100</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=4 width=96%>Tipo prodotto: Carne</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>03/gen</TD>
+<TD class=TT width=16%>90</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>20/gen</TD>
+<TD class=TT width=16%>60</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>Carne gennaio</TD>
+<TD class=TT width=16%>150</TD>
+<TD class=TT width=23%>Prodotti gen 250</TD>
+<TD class=TT width=24%>Totale vendite 250</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=4 width=96%>Mese: febbraio</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=5 width=100%>Tipo prodotto: Cioccolatini</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>05/feb</TD>
+<TD class=TT width=16%>70</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>19/feb</TD>
+<TD class=TT width=16%>80</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>Cioccolatini febbraio</TD>
+<TD class=TT width=16%>150</TD>
+<TD class=TT width=23%>Prodotti feb 150</TD>
+<TD class=TT width=24%>Totale vendite 400</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=4 width=96%>Tipo prodotto: Carne</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>12/feb</TD>
+<TD class=TT width=16%>150</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>22/feb</TD>
+<TD class=TT width=16%>100</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>Carne febbraio</TD>
+<TD class=TT width=16%>250</TD>
+<TD class=TT width=23%>Prodotti feb 400</TD>
+<TD class=TT width=24%>Totale vendite 650</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

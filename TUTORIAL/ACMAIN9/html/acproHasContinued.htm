@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproHasContinued'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprorpt3_1a.rtf'
+Tnum='187290'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà HasContinued</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprohascontinued"></A>Proprietà HasContinued</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproHasContinuedC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproHasContinuedX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproHasContinuedA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>HasContinued</B> per determinare se una parte della sezione corrente inizia nella pagina precedente.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>HasContinued</B> viene impostata da Microsoft Access ed è di sola lettura in tutte le visualizzazioni.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=17%>Valore</TH>
+<TH width=83%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=17%><B>True</B> (-1)</TD>
+<TD class=TT width=83%>Parte della sezione corrente è stata stampata sulla pagina precedente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=17%><B>False</B> (0)</TD>
+<TD class=TT width=83%>Parte della sezione corrente non è stata stampata sulla pagina precedente.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile ottenere il valore della proprietà <B>HasContinued</B> utilizzando una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare questa proprietà per determinare se visualizzare o nascondere determinati controlli a seconda del valore della proprietà. È possibile, ad esempio, avere a disposizione un'etichetta nascosta in un'intestazione di pagina contenente il testo "Continua dalla pagina precedente". Se il valore della proprietà <B>HasContinued</B> è <B>True</B>, è possibile rendere visibile l'etichetta nascosta.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

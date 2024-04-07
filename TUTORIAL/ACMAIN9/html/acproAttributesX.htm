@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproAttributesX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234330'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Attributes (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproattributesx"></A>Esempio di proprietà Attributes (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si verifica la proprietà <B>Attributes</B> per ogni tabella del database corrente e si stampano i nomi delle tabelle di sistema e di quelle nascoste fornite dal modulo di gestione di database Microsoft Jet.</P>
+
+<P class=T>Si noti che l'operatore <B>And</B> esegue un confronto su singoli bit per determinare se un attributo è impostato correntemente.</P>
+
+<PRE class=CT><CODE>Sub VerificaAttributi()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; For Each tdf In dbs.TableDefs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Confronta la costante e l'impostazione della proprietà.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (tdf.<B>Attributes</B> And dbSystemObject) Or _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (tdf.<B>Attributes</B> And dbHiddenObject) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print tdf.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Next tdf
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

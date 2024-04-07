@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefSharePreviousVersionSecuredDatabaseAcrossSeveralVersionsMicrosoftAccess'
+Feature='Security: Conversion'
+Handoff='3'
+SourceFile='csecnew.rtf'
+Tnum='188966'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Database protetto di una versione precedente condiviso da versioni differenti di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefsharepreviousversionsecureddatabaseacrossseveralversionsmicrosoftaccess"></A>Database protetto di una versione precedente condiviso da versioni differenti di Microsoft Access</H1>
+
+<P class=T>Le informazioni relative a un database protetto condiviso da versioni differenti di Microsoft Access sono le stesse si quelle relative a un database non protetto condiviso da versioni differenti, con un'unica eccezione. Per ulteriori informazioni sulle informazioni generali relative alla condivisione di un database tra più versioni di Microsoft Access fare clic su  <A HREF="acconUseDatabaseWithSeveralVersionsOfMicrosoftAccess.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+<P class=T>L'eccezione riguarda il modo di gestire i <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> utilizzati con il database protetto. È possibile scegliere tra due alternative:
+
+<UL>
+	<LI class=LB1>Informare gli utenti che eseguono l'aggiornamento a Microsoft Access 2000 che è necessario associarvi il file appropriato di informazioni sul gruppo di lavoro con la versione meno recente di Microsoft Access che condividerà il database protetto. Con Microsoft Access 2000 è possibile utilizzare i file di informazioni sul gruppo di lavoro creati con le versioni precedenti, ma con una versione precedente è possibile utilizzare solo i file di informazioni sul gruppo di lavoro creati con Microsoft Access 2000 o una versione precedente. Per ulteriori informazioni su come associare un file di informazioni sul gruppo di lavoro fare clic su  <A HREF="achowJoinMSAccessWorkgroupS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+<P class=LNT><B>Importante</B>&nbsp;&nbsp; Se gli utenti devono condividere un database protetto di Microsoft Access 95 o 97, è opportuno compattare il file di informazioni sul gruppo di lavoro corrente mediante Microsoft Access 2000 prima di utilizzarlo. La compattazione del file mediante Microsoft Access 2000 non modifica il formato del file, quindi gli utenti di Microsoft Access 95 o 97 che non eseguono l'aggiornamento possono continuare a utilizzarlo. Per ulteriori informazioni sulla compattazione di un database fare clic su  <A HREF="achowCompactDatabaseDefragmentFreeDiskSpaceS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LB1>Se il database condiviso è nella versione 2.0 di Microsoft Access, convertire il file di informazioni sul gruppo di lavoro relativo al database protetto, quindi informare solo gli utenti che eseguono l'aggiornamento a Microsoft Access 2000 che è necessario associarvi il file di informazioni sul gruppo di lavoro convertito. Tutti gli utenti che non eseguono l'aggiornamento dalla versione 2.0 devono continuare a utilizzare il file di informazioni sul gruppo di lavoro prodotto con quella versione. Per ulteriori informazioni sulla conversione del file di informazioni sul gruppo di lavoro fare clic su  <A HREF="achowConvertWorkgroupFileS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefSharePreviousVersionSecuredDatabaseAcrossSeveralVersionsMicrosoftAccessW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutMDEADEFiles'
+Feature='Security: Code'
+Handoff='3'
+SourceFile='csecnew.rtf'
+Tnum='239302'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sui file MDE</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutmdeadefiles"></A>Informazioni sui file MDE</H1>
+
+<P class=T>Se il database contiene del codice Microsoft Visual Basic, il salvataggio del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> come MDE comporta la compilazione di tutti i moduli, la rimozione di tutto il codice sorgente modificabile e la compattazione del database di destinazione. Il codice Visual Basic continuerà a essere eseguito, ma non potrà essere visualizzato o modificato e la dimensione del database di Access si ridurrà a seguito della rimozione del codice. Verrà ottimizzato inoltre l'utilizzo della memoria con il conseguente miglioramento delle prestazioni. </P>
+
+<P class=T>Dopo avere salvato il database di Access come file MDE non sarà più possibile effettuare le seguenti operazioni:
+
+<UL>
+	<LI class=LB1>Visualizzazione, modifica o creazione di maschere, report o moduli in visualizzazione Struttura.<BR><BR></LI>
+
+	<LI class=LB1>Aggiunta, eliminazione o modifica dei riferimenti ai database o alle librerie di oggetti.<BR><BR></LI>
+
+	<LI class=LB1>Modifica del codice utilizzando le proprietà o i metodi dei modelli di oggetti Microsoft Access o VBA. Un file MDE non contiene codice sorgente.<BR><BR></LI>
+
+	<LI class=LB1>Importazione o esportazione di maschere, report o moduli. È tuttavia possibile importare o esportare tabelle, query, pagine di accesso ai dati e macro da o in database non MDE. Qualsiasi tabella, query, pagina di accesso ai dati o macro presente in un file MDE può essere importata in un altro database di Access, ma nessuna maschera, report o modulo può essere importato in un altro database di Access.</LI>
+</UL>
+
+<P class=NT><B>Attenzione</B>&nbsp;&nbsp; Salvare sempre una copia del database di Access originale. Per modificare la struttura di maschere, report o moduli di un database di Access salvato come file MDE, è necessario aprire il database originale, modificarlo, quindi salvarlo nuovamente come file MDE. Il salvataggio di un database di Access contenente tabelle come file MDE rende più difficoltosa la sincronizzazione delle diverse versioni dei dati qualora fosse necessario modificare in un secondo momento la struttura di maschere, report o moduli. Per questa ragione è più appropriato salvare un database di Access come file MDE per il database front end di un'<A HREF="javascript:HelpPopup('actip9.hlp','defFrontBackEndApp');" class="pop">applicazione back end/front end</A>. </P>
+
+<P class=NT><B>Attenzione</B>&nbsp;&nbsp; Nelle versioni future di Microsoft Access non sarà possibile aprire, convertire o eseguire il codice in un file MDE di Microsoft Access 2000. L'unico modo per convertire un file MDE di Microsoft Access 2000 consisterà nell'aprire il database di Access originale da cui è stato creato il file MDE, convertirlo, quindi salvarlo come file MDE.</P>
+
+<P class=NT><B>Importante</B>&nbsp;&nbsp; È possibile che alcune limitazioni impediscano di salvare il database di Access come file MDE.
+
+<UL>
+	<LI class=LB1>Se il database di Access è protetto a livello utente, è necessario soddisfare alcuni criteri. Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="achowAboutUsingOtherFormsOfSecurityWithDatabaseThatIsSavedAsMDEFile.htm">utilizzo di altri tipi di protezione con un database di Access salvato come file MDE</A>.<BR><BR></LI>
+
+	<LI class=LB1>È necessario disporre dell'accesso tramite password al codice Visual Basic. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="acdecProtectModules.htm">protezione del codice Visual Basic</A>.<BR><BR></LI>
+
+	<LI class=LB1>Se il database è stato replicato, prima di procedere è necessario rimuovere le proprietà e le tabelle del sistema di replica.<BR><BR></LI>
+
+	<LI class=LB1>Se il database di Access contiene dei riferimenti a un altro database di Access o a un <A HREF="javascript:HelpPopup('actip9.hlp','defAddIn');" class="pop">componente aggiuntivo</A>, è necessario salvare tutti i database o i componenti aggiuntivi di Access nella sequenza di riferimenti come file MDE.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutMDEADEFilesW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

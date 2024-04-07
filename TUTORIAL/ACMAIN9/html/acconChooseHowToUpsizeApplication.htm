@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconChooseHowToUpsizeApplication'
+Feature='Access Project: Upsizing'
+Handoff='3'
+SourceFile='ccsupwiz.rtf'
+Tnum='274167'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Modalità di upsize dell'applicazione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconchoosehowtoupsizeapplication"></A>Modalità di upsize dell'applicazione</H1>
+
+<P class=T>È possibile effettuare l'upsize dell'applicazione di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> seguendo diverse modalità. In questo argomento verranno fornite informazioni di riferimento relative a ciascuna opzione di modifica dell'applicazione:</P>
+
+<P class=LBR1><A HREF="#acconchoosehowtoupsizeapplication_1">Nessuna</A></P>
+
+<P class=LBR1><A HREF="#acconchoosehowtoupsizeapplication_2">Collega tabelle di SQL Server all'applicazione esistente</A></P>
+
+<P class=LBR1><A HREF="#acconchoosehowtoupsizeapplication_3">Crea una nuova applicazione client/server di Access</A></P>
+
+<P class=LBR1><A HREF="#acconchoosehowtoupsizeapplication_4">Salva password e ID utente</A></P>
+
+<H2><A NAME="acconchoosehowtoupsizeapplication_1"></A>Nessuna</H2>
+
+<P class=T>Selezionare <B>Nessuna</B> per effettuare l'upsize dei dati senza apportare altre modifiche all'applicazione di database di Access esistente.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconchoosehowtoupsizeapplication">inizio</A></P>
+
+<H2><A NAME="acconchoosehowtoupsizeapplication_2"></A>Collega tabelle di SQL Server all'applicazione esistente</H2>
+
+<P class=T>Se si seleziona <B>Collega tabelle di SQL Server all'applicazione esistente</B>, l'Upsize guidato modifica il database di Access in modo che le query, le maschere, i report e le pagine di accesso ai dati utilizzino i dati del nuovo database di Microsoft SQL Server anziché quelli del database di Microsoft Access. </P>
+
+<P class=T>L'Upsize guidato rinomina le tabelle di Microsoft Access sottoposte all'upsize aggiungendo il suffisso "_local". Se ad esempio si effettua l'upsize di una tabella denominata Impiegati, questa verrà rinominata Impiegati_local nel database di Access. A questo punto l'Upsize guidato creerà una tabella di SQL Server collegata denominata Impiegati. </P>
+
+<P class=T>Le query, le maschere, i report e le pagine di accesso ai dati basati sulle tabelle Impiegati originali utilizzeranno ora la tabella Impiegati di SQL Server collegata. Molte delle proprietà dei campi della tabella locale originale derivano dalla nuova tabella locale, tra cui <B>Descrizione</B>, <B>Etichetta</B>, <B>Formato</B>, <B>Maschera di input</B> e <B>Posizioni decimali</B>. Per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="acrefSettingPropertiesAttachedTablesS.htm">proprietà della tabella collegata</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconchoosehowtoupsizeapplication">inizio</A></P>
+
+<H2><A NAME="acconchoosehowtoupsizeapplication_3"></A>Crea una nuova applicazione client/server di Access</H2>
+
+<P class=T>Se si seleziona <B>Crea una nuova applicazione client/server di Access</B>, l'Upsize guidato crea un nuovo <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>. L'Upsize guidato richiede di immettere un nome, che in base all'impostazione predefinita corrisponde al nome del database di Access corrente, quindi aggiunge un suffisso "CS" e lo memorizza nello stesso percorso del database di Access esistente. </P>
+
+<P class=T>L'Upsize guidato crea un file di progetto di Access, visualizza la finestra di dialogo <B>Proprietà di Data Link</B> in modo da potersi connettere a un database di SQL Server, quindi effettua l'upsize di tutti gli oggetti di database dal database di Access al progetto di Access:
+
+<UL>
+	<LI class=LB1><B>Query</B>&nbsp;&nbsp; L'Upsize guidato modifica le query convertendole in visualizzazioni o in stored procedure ed <A HREF="acconComparingAccessSQLSSQLSyntax.htm">effettuando l'upsize della sintassi SQL di Access affinché venga utilizzata la sintassi SQL di SQL Server</A>. Le query di selezione vengono convertite in <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgView');" class="pop">visualizzazioni</A>. Le query ordinate vengono convertite in una combinazione di visualizzazioni e <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgStoredProcedure');" class="pop">stored procedure</A> per consentire la nidificazione e l'ordinamento. Tenere presente che le visualizzazioni possono essere nidificate, ma non possono contenere proposizioni ORDER BY, mentre le stored procedure possono contenere proposizioni ORDER BY, ma non possono essere nidificate. Le query con parametri, le query che dipendono da una query con parametri e le query di comando vengono convertite in stored procedure. Potrebbe essere necessario convertire manualmente le query non sottoposte all'upsize, ad esempio quelle nidificate a un livello troppo profondo. Le query SQL di tipo pass-through, le query di definizione dati e le query di unione non vengono sottoposte all'upsize. <BR><BR></LI>
+
+	<LI class=LB1><B>Maschere, report e controlli</B>&nbsp;&nbsp; L'Upsize guidato modifica le proprietà <B>Origine record</B>, <B>Origine controllo</B> e <B>Origine riga</B> cambiando i nomi delle tabelle, delle query, delle istruzioni SQL e dei campi nei nomi equivalenti delle tabelle, delle visualizzazioni, delle stored procedure o dei campi di SQL Server.<BR><BR></LI>
+
+	<LI class=LB1><B>Pagine di accesso ai dati&nbsp;&nbsp;</B> L'Upsize guidato modifica le informazioni relative alla connessione OLE DB e all'associazione dei dati nel controllo dell'origine dati di Microsoft Office affinché sia compatibile con il nuovo database di SQL Server, quindi copia il file HTML corrispondente della pagina nello stesso percorso del progetto di Access, rinominando il file HTML con un suffisso "_CS". Le nuove pagine del progetto di Access conservano il nome originale in modo che i collegamenti ipertestuali tra le pagine di SQL Server rimangano funzionanti.<BR><BR></LI>
+
+	<LI class=LB1><B>Macro e moduli&nbsp;&nbsp;</B> L'Upsize guidato non apporta alcuna modifica a questi oggetti di database. Dopo avere effettuato l'upsize, è necessario convertire manualmente il codice che utilizza recordset di <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti DAO (Data Access Object)</A> in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefADOActiveXDataObjects');" class="pop">oggetti ADO (ActiveX Data Object)</A> nei moduli e rivedere il codice di progettazione delle tabelle e delle query. L'Upsize guidato non effettua l'upsize del linguaggio di definizione dei dati (DDL) SQL. Per ulteriori informazioni sullo sviluppo di applicazioni client/server ottimizzate, vedere il <A HREF="JavaScript:hhobj_1.Click()"><I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I></A>.</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconchoosehowtoupsizeapplication">inizio</A></P>
+
+<H2><A NAME="acconchoosehowtoupsizeapplication_4"></A>Salva password e ID utente</H2>
+
+<P class=T>In base all'impostazione predefinita, la creazione guidata crea delle tabelle collegate nell'applicazione esistente oppure crea un progetto di Access senza salvare il nome utente e la password. Viene richiesto pertanto di immettere un nome e una password ogni volta che si effettua la connessione a un database di SQL Server. </P>
+
+<P class=T>Se si seleziona <B>Salva password e ID utente</B>, gli utenti possono accedere a un database di SQL Server senza effettuare la connessione. Se si seleziona <B>Crea una nuova applicazione client/server di Access</B>, il progetto di Access memorizza il nome utente e la password nella stringa di connessione OLE DB. </P>
+
+<P class=T><B>Nota&nbsp;&nbsp;</B> Questa opzione è disattivata per l'opzione <B>Nessuna</B> se una tabella di SQL Server collegata è <A HREF="achowMsysconfTableAttachedSqlDatabasesS.htm">configurata con una tabella MSysConf</A> per impedire che le password vengano salvate.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconchoosehowtoupsizeapplication">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconChooseHowToUpsizeApplicationW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

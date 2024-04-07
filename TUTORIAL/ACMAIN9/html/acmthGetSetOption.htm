@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthGetSetOption'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186324'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodi GetOption, SetOption</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthgetsetoption"></A>Metodi GetOption, SetOption</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthGetSetOptionC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthGetSetOptionX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthGetSetOptionA">
+</OBJECT></P>
+
+<P class=SANSR>
+
+<UL>
+	<LI class=LB1>Il metodo <B>GetOption</B> restituisce il valore corrente di un'opzione contenuta nella finestra di dialogo <B>Opzioni</B>, disponibile scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B>.<BR><BR></LI>
+
+	<LI class=LB1>Il metodo <B>SetOption</B> imposta il valore corrente di un'opzione contenuta nella finestra di dialogo <B>Opzioni</B>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I><B>.GetOption(</B><I>nomeopzione</I><B>)</B></P>
+
+<P class=SYN><I>oggetto</I><B>.SetOption</B> <I>nomeopzione</I>, <I>impostazione</I></P>
+
+
+
+<P class=T>I metodi <B>GetOption</B> e <B>SetOption</B> utilizzano gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>oggetto</I></TD>
+<TD class=TT width=76%>Facoltativo. L'oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>nomeopzione</I></TD>
+<TD class=TT width=76%>Nome dell'opzione. Per un elenco delle stringhe dell'argomento <I>nomeopzione</I>, vedere <A HREF="achowSettingOptionsFromVisualBasic.htm">Impostare le opzioni da Visual Basic</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>impostazione</I></TD>
+<TD class=TT width=76%>Un valore <A HREF="javascript:HelpPopup('actip9.hlp','defVariant');" class="pop"><B>variante</B></A> corrispondente all'impostazione dell'opzione. Il valore dell'argomento <I>impostazione</I> dipende dalle possibili impostazioni di una determinata opzione.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>I metodi <B>GetOption</B> e <B>SetOption</B> consentono di modificare le opzioni di ambiente dal codice di <A HREF="achowSettingOptionsFromVisualBasic.htm">Visual Basic</A>. Tramite tali metodi è possibile impostare o leggere qualsiasi opzione disponibile nella finestra di dialogo <B>Opzioni</B>, tranne le opzioni della scheda <B>Moduli</B>.</P>
+
+<P class=T>Le impostazioni disponibili per le opzioni dipendono dal tipo di opzione che viene impostata. Sono disponibili tre tipi generali di opzioni:
+
+<UL>
+	<LI class=LB1>Opzioni Sì/No che è possibile impostare attivando o disattivando una <A HREF="javascript:HelpPopup('actip9.hlp','defCheckBox');" class="pop">casella di controllo</A>.<BR><BR></LI>
+
+	<LI class=LB1>Opzioni che è possibile impostare immettendo una <A HREF="javascript:HelpPopup('actip9.hlp','defString');" class="pop">stringa</A> o un valore numerico.<BR><BR></LI>
+
+	<LI class=LB1>Opzioni predefinite che è possibile scegliere da una <A HREF="javascript:HelpPopup('actip9.hlp','defListBox');" class="pop">casella di riepilogo</A>, da una <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">casella combinata</A> o da un <A HREF="javascript:HelpPopup('actip9.hlp','defOptionGroup');" class="pop">gruppo di opzioni</A>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Per le opzioni che vengono impostate attivando o disattivando una casella di controllo, il metodo <B>GetOption</B> restituisce <B>True</B> (-1), se l'impostazione dell'opzione è Sì (la casella di controllo è selezionata), o <B>False</B> (0) se l'impostazione dell'opzione è No (la casella di controllo è disattivata). Per impostare un'opzione di questo tipo utilizzando il metodo <B>SetOption</B>, specificare <B>True</B> o <B>False</B> per l'argomento <I>impostazione</I>, come riportato nell'esempio che segue:</P>
+
+<PRE class=CT><CODE>Application.SetOption "Mostra barra di stato", True</CODE></PRE>
+
+
+
+<P class=T>Per le opzioni che vengono impostate digitando una stringa o un valore numerico, il metodo <B>GetOption</B> restituisce l'impostazione così come viene visualizzata nella finestra di dialogo. Nell'esempio riportato di seguito viene restituita una stringa contenente l'impostazione del margine sinistro:</P>
+
+<PRE class=CT><CODE>Dim varSetting As Variant
+varSetting = Application.GetOption("Margine sinistro")</CODE></PRE>
+
+
+
+<P class=T>Per impostare questo tipo di opzione utilizzando il metodo <B>SetOption</B>, specificare la stringa o il valore numerico che si desidera digitare nella finestra di dialogo. Nell'esempio riportato di seguito viene impostato il modello di maschera predefinito a ModelloOrdine:</P>
+
+<PRE class=CT><CODE>Application.SetOption "Modello maschera", "ModelloOrdine"</CODE></PRE>
+
+
+
+<P class=T>Per le opzioni le cui impostazioni sono delle scelte di caselle di riepilogo o di caselle combinate, il metodo <B>GetOption</B> restituisce un numero corrispondente alla posizione dell'impostazione nell'elenco. L'indice comincia da zero, quindi il metodo <B>GetOption</B> restituisce zero per il primo elemento, 1 per il secondo elemento e così via. Se, ad esempio, l'opzione <B>Tipo di campo predefinito</B> della scheda <B>Tabelle/Query</B> è impostata a Contatore, il sesto elemento dell'elenco, che è il metodo <B>GetOption</B>, restituisce 5.</P>
+
+<P class=T>Per impostare questo tipo di opzione, specificare la posizione numerica dell'opzione all'interno dell'elenco come argomento <I>impostazione</I> del metodo <B>SetOption</B>. Nell'esempio riportato di seguito viene impostata a Contatore l'opzione <B>Tipo di campo predefinito</B>:</P>
+
+<PRE class=CT><CODE>Application.SetOption "Tipo di campo predefinito", 5</CODE></PRE>
+
+
+
+<P class=T>Le altre opzioni vengono impostate facendo clic su un <A HREF="javascript:HelpPopup('actip9.hlp','defOptionButton');" class="pop">pulsante di opzione</A> di un gruppo di opzioni contenuto nella finestra di dialogo <B>Opzioni</B>. In Visual Basic, tali opzioni vengono impostate anche specificando una determinata posizione dell'opzione nel gruppo di opzioni. La prima opzione del gruppo è contraddistinta dal numero zero, la seconda da 1, e così via. Se, ad esempio, l'opzione <B>Comportamento selezione</B> della scheda <B>Maschere/Report</B> è impostata a Oggetto parzialmente incluso, il metodo <B>GetOption</B> restituisce zero, come riportato nell'esempio che segue:</P>
+
+<PRE class=CT><CODE>Debug.Print Application.GetOption("Comportamento selezione")</CODE></PRE>
+
+
+
+<P class=T>Per impostare un'opzione che è membro di un gruppo di opzioni, specificare il numero di indice dell'opzione all'interno del gruppo. Nell'esempio riportato di seguito <B>Comportamento selezione</B> viene impostato a Oggetto pienamente incluso:</P>
+
+<PRE class=CT><CODE>Application.SetOption "Comportamento selezione", 1</CODE></PRE>
+
+
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Quando si utilizza il metodo <B>GetOption</B> o il metodo <B>SetOption</B> per impostare un'opzione della finestra di dialogo <B>Opzioni</B>, non è necessario specificare la scheda specifica in cui si trova l'opzione.<BR><BR></LI>
+
+	<LI class=NLB>Non è possibile utilizzare il metodo <B>GetOption</B> o il metodo <B>SetOption</B> per leggere o impostare alcuna delle opzioni trovate nella scheda <B>Modulo</B> della finestra di dialogo <B>Opzioni</B>.<BR><BR></LI>
+
+	<LI class=NLB>Se il valore restituito del metodo <B>GetOption</B> è assegnato a una variabile, questa deve essere dichiarata come <B>Variante</B>.<BR><BR></LI>
+
+	<LI class=NLB>Se il database è in esecuzione su una versione di Microsoft Access in una lingua diversa da quella in cui è stato creato, allora è necessario fornire in inglese gli argomenti per i metodi <B>GetOption</B> e <B>SetOption</B>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Quando si esce da Microsoft Access, è possibile reimpostare tutte le opzioni secondo le impostazioni originali utilizzando il metodo <B>SetOption</B> su tutte le opzioni modificate. È possibile che si desideri creare variabili pubbliche per memorizzare i valori delle impostazioni originali. È possibile includere del codice per reimpostare le opzioni nella routine evento Chiusura per una maschera, o in una routine di uscita personalizzata che è necessario eseguire per uscire dall'applicazione.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

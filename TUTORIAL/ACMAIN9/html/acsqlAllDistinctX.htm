@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlAllDistinctX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234322'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di predicati ALL, DISTINCT, DISTINCTROW e TOP (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlalldistinctx"></A>Esempio di predicati ALL, DISTINCT, DISTINCTROW e TOP (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire in Microsoft Access gli esempi riportati di seguito, creare due tabelle simili a quelle riportate di seguito. Creare una nuova query nel database di esempio Northwind e chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare nessuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=RL><B>Tabella Clienti</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=49%>Nome</TH>
+<TH width=51%>IDCliente</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%>Paolo</TD>
+<TD class=TT width=51%>1</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%>Luca</TD>
+<TD class=TT width=51%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%>Elena</TD>
+<TD class=TT width=51%>3</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%>Paolo</TD>
+<TD class=TT width=51%>4</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Tabella Fatture</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=50%>IDCliente</TH>
+<TH width=50%>IDFattura</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>1</TD>
+<TD class=TT width=50%>1</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>1</TD>
+<TD class=TT width=50%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>2</TD>
+<TD class=TT width=50%>3</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>2</TD>
+<TD class=TT width=50%>4</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>2</TD>
+<TD class=TT width=50%>5</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>4</TD>
+<TD class=TT width=50%>6</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%> 4</TD>
+<TD class=TT width=50%>7</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono restituiti tutti i record provenienti da un join interno nelle due tabelle. Il set di risultati è aggiornabile.</P>
+
+<PRE class=CT><CODE>SELECT <B>ALL</B> Nome FROM Clienti INNER JOIN Fatture
+ON Clienti.IDCliente = Fatture.IDCliente;</CODE></PRE>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=50%>Risultato</TH>
+<TH width=50%>Aggiornabile</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>Paolo
+<P class=TT>Paolo</P>
+
+<P class=TT>Luca</P>
+
+<P class=TT>Luca</P>
+
+<P class=TT>Luca</P>
+
+<P class=TT>Paolo</P>
+
+<P class=TT>Paolo</P>
+</TD>
+<TD class=TT width=50%>Sì</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nell'esempio successivo si selezionano solo i record con valori univoci restituiti da un join interno nelle due tabelle. Il set di risultati non è aggiornabile.</P>
+
+<PRE class=CT><CODE>SELECT <B>DISTINCT</B> Nome FROM Clienti INNER JOIN Fatture ON Clienti.IDCliente = Fatture.IDCliente;</CODE></PRE>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=50%>Risultato</TH>
+<TH width=50%>Aggiornabile</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>Paolo
+<P class=TT>Luca</P>
+</TD>
+<TD class=TT width=50%>No</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si selezionano solo i record univoci restituiti da un join interno nelle due tabelle. Il set di risultati è aggiornabile.</P>
+
+<PRE class=CT><CODE>SELECT <B>DISTINCTROW</B> Nome FROM Clienti INNER JOIN Fatture ON Clienti.IDCliente = Fatture.IDCliente;</CODE></PRE>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=50%>Risultato</TH>
+<TH width=50%>Aggiornabile</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>Paolo
+<P class=TT>Luca</P>
+
+<P class=TT>Paolo</P>
+</TD>
+<TD class=TT width=50%>Sì</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nell'esempio successivo si selezionano i primi cinque record restituiti da un join interno nelle due tabelle. Il set di risultati è aggiornabile.</P>
+
+<PRE class=CT><CODE>SELECT <B>TOP</B> 5 Nome FROM Clienti INNER JOIN Fatture ON Clienti.IDCliente = Fatture.IDCliente ORDER BY Fatture.IDFattura;</CODE></PRE>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=50%>Risultato</TH>
+<TH width=50%>Aggiornabile</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>Paolo
+<P class=TT>Paolo</P>
+
+<P class=TT>Luca</P>
+
+<P class=TT>Luca</P>
+
+<P class=TT>Luca</P>
+</TD>
+<TD class=TT width=50%>Sì</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjSnapshotTypeRecordsetX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acdobjx.doc'
+Tnum='234539'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Recordset di tipo snapshot (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjsnapshottyperecordsetx"></A>Esempio di oggetto Recordset di tipo snapshot (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un oggetto <B>Recordset</B> di tipo snapshot da un'istruzione SQL, quindi viene stampato il valore della proprietà <B>Updatable</B> per l'oggetto <B>Recordset</B>. Poiché non è possibile aggiornare gli oggetti <B>Recordset</B> di tipo snapshot, il valore di tale proprietà è sempre <B>False</B> (0).</P>
+
+<PRE class=CT><CODE>Sub ImpiegatiConAnzianitàDiServizio ()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, qdf As QueryDef, rst As <B>Recordset</B>
+&nbsp;&nbsp;&nbsp; Dim strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Costruisce la stringa SQL.
+&nbsp;&nbsp;&nbsp; strSQL = "SELECT * FROM Impiegati WHERE DataAssunzione &lt;= #1-1-94#;"
+&nbsp;&nbsp;&nbsp; ' Apre oggetto Recordset di tipo snapshot.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset(strSQL, dbOpenSnapshot)
+&nbsp;&nbsp;&nbsp; Debug.Print rst.Updatable
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

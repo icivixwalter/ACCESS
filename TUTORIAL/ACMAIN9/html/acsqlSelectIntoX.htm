@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlSelectIntoX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234535'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione SELECT...INTO (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlselectintox"></A>Esempio di istruzione SELECT...INTO (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si selezionano tutti i record della tabella Impiegati e si copiano tali record in una nuova tabella chiamata Backup impiegati:</P>
+
+<PRE class=CT><CODE><B>SELECT</B> * <B>INTO</B> [Backup impiegati] FROM Impiegati;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea una nuova tabella chiamata Rappresentanti che contiene soltanto i record degli impiegati la cui posizione è Rappresentante:</P>
+
+<PRE class=CT><CODE><B>SELECT</B> Impiegati.Nome, Cognome <B>INTO</B> [Rappresentanti]
+FROM Impiegati
+WHERE Posizione = 'Rappresentante';</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea una copia della tabella Impiegati e la si colloca nell'ipotetico database Backup.mdb:</P>
+
+<PRE class=CT><CODE><B>SELECT</B> Impiegati.* <B>INTO</B> Impiegati IN Backup.mdb FROM Impiegati;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si ipotizza una tabella Libro paga con due campi, IDImpiegato e Stipendio, e si crea una nuova tabella che contiene i dati relativi agli impiegati e al libro paga per tutto il personale in addestramento. Le tabelle Impiegati e Libro paga hanno una relazione uno-a-uno. La nuova tabella contiene tutti i dati della tabella Impiegati e il campo Stipendio della tabella Libro paga.</P>
+
+<PRE class=CT><CODE><B>SELECT</B> Impiegati.*, Stipendio <B>INTO</B> Personale in addestramento
+FROM Impiegati
+INNER JOIN Libro paga ON Impiegati.IDImpiegato = _
+    Libro paga.IDImpiegato
+WHERE Posizione = 'In addestramento';</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

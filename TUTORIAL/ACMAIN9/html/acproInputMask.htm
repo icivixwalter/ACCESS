@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproInputMask'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproent1_1a.rtf'
+Tnum='187341'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà InputMask (Maschera di input)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproinputmask"></A>Proprietà InputMask (Maschera di input)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproInputMaskC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproInputMaskX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproInputMaskA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>InputMask</B> per semplificare l'immissione di dati e controllare i valori che è possibile immettere in un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di <A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">casella di testo</A>. È possibile, ad esempio, creare una maschera di input per un campo Numero di telefono che mostri con esattezza come immettere un nuovo numero: (___) ___-____. Per impostare la proprietà risulta spesso più facile utilizzare la <A HREF="acdecCreateInputMaskFieldControl.htm">Creazione guidata Maschera di input</A>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>InputMask</B> può includere fino a tre sezioni separate da punto e virgola (;).</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Sezione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Prima</TD>
+<TD class=TT width=75%>Specifica la maschera di input stessa, ad esempio, !(999) 999-9999. Per un l'elenco dei caratteri disponibili per definire la maschera di input vedere la tabella riportata oltre.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Seconda</TD>
+<TD class=TT width=75%>Specifica se Microsoft Access debba memorizzare al momento dell'immissione dei dati i <A HREF="javascript:HelpPopup('actip9.hlp','defLiteral');" class="pop">caratteri letterali</A> nella tabella. Se viene utilizzato il valore zero (0) per tale sezione, tutti i caratteri letterali, ad esempio il trattino in una maschera di input per un numero di telefono, verranno memorizzati con il valore. Se viene immesso il valore uno (1) o la sezione viene lasciata vuota, verranno memorizzati solo i caratteri digitati nel controllo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Terza</TD>
+<TD class=TT width=75%>Specifica il carattere che viene visualizzato al posto dello spazio in cui andrebbe immesso un carattere nella maschera di input. Per tale sezione è possibile utilizzare qualsiasi carattere. Per visualizzare una stringa vuota, utilizzare uno spazio racchiuso tra virgolette (" ").</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Per impostare tale proprietà in <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A> utilizzare un' <A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A>. Di seguito, ad esempio, viene indicato come specificare una maschera di input per un controllo di casella di testo utilizzato per immettere numeri di telefono.</P>
+
+<PRE class=CT><CODE>Forms!Clienti!Telefono.InputMask = "###-#######"</CODE></PRE>
+
+
+
+<P class=T>Quando si crea una maschera di input, è possibile, utilizzando caratteri speciali, richiedere che vengano immessi determinati dati, ad esempio il prefisso di un numero di telefono e che altri dati siano facoltativi, ad esempio, l'interno di un numero di telefono. Tali caratteri specificano il tipo di dati, numero o carattere, che è necessario immettere per ciascun carattere contenuto nella maschera di input.</P>
+
+<P class=T>È possibile definire una maschera di input utilizzando i caratteri riportati di seguito:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Carattere</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>0</TD>
+<TD class=TT width=75%>Cifra da 0 a 9. Immissione obbligatoria. Segni più (+) e meno (-) non consentiti.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>9</TD>
+<TD class=TT width=75%>Cifra o spazio. Immissione facoltativa. Segni più e meno non consentiti.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>#</TD>
+<TD class=TT width=75%>Cifra o spazio. Immissione facoltativa. Gli spazi vengono visualizzati come vuoti in modalità Modifica, ma vengono rimossi quando i dati vengono memorizzati. Segni più e meno consentiti.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>L</TD>
+<TD class=TT width=75%>Lettera da A a Z. Immissione obbligatoria.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>?</TD>
+<TD class=TT width=75%>Lettera da A a Z. Immissione facoltativa.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>A</TD>
+<TD class=TT width=75%>Lettera o cifra. Immissione obbligatoria.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>a</TD>
+<TD class=TT width=75%>Lettera o cifra. Immissione facoltativa.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&amp;</TD>
+<TD class=TT width=75%>Qualsiasi carattere o uno spazio. Immissione obbligatoria.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>C</TD>
+<TD class=TT width=75%>Qualsiasi carattere o uno spazio. Immissione facoltativa.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>,.; - /</TD>
+<TD class=TT width=75%>Segnaposto decimale e <A HREF="javascript:HelpPopup('actip9.hlp','defSeparator');" class="pop">separatori</A> delle migliaia, di data e di ora. Il carattere effettivamente utilizzato dipende dalle impostazioni effettuate nella finestra di dialogo <B>Proprietà - Impostazioni internazionali</B> del Pannello di controllo di Windows.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&lt;</TD>
+<TD class=TT width=75%>Converte tutti i caratteri in minuscolo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&gt;</TD>
+<TD class=TT width=75%>Converte tutti i caratteri in maiuscolo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>!</TD>
+<TD class=TT width=75%>Determina la visualizzazione nella maschera di input da destra a sinistra invece che da sinistra a destra. I caratteri digitati nella maschera vengono immessi sempre da sinistra a destra. È possibile includere il punto esclamativo in qualsiasi punto della maschera di input.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>\</TD>
+<TD class=TT width=75%>Fa in modo che il carattere successivo venga visualizzato come carattere letterale, ad esempio \A viene visualizzato come semplice A.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'impostazione della proprietà <B>InputMask</B> alla parola Password crea un controllo di immissione della password. Qualsiasi carattere digitato nel controllo viene memorizzato come carattere, ma visualizzato come asterisco (*). Utilizzare la maschera di input Password per impedire la visualizzazione dei caratteri digitati.</P>
+
+
+
+<P class=T>Per un controllo è possibile impostare la proprietà nella <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> del controllo. Per un campo contenuto in una tabella è possibile impostare la proprietà nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura della tabella</A>, nella sezione Proprietà campo, o nella visualizzazione Struttura della <A HREF="javascript:HelpPopup('actip9.hlp','defQueryWindow');" class="pop">finestra della query</A> nella <A HREF="achowSetPropertiesQueryItsFieldsFieldListsS.htm">finestra delle proprietà</A> della sezione Proprietà campo.</P>
+
+<P class=T>È inoltre possibile impostare la proprietà <B>InputMask</B> utilizzando una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o in Visual Basic.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando si digitano dei dati in un campo per cui è stata definita una maschera di input, i dati verranno sempre immessi in modalità Sovrascrittura. Se si utilizza il tasto BACKSPACE per eliminare un carattere, questo viene sostituito da uno spazio.</P>
+
+<P class=T>Se del testo viene spostato da un campo per cui è stata definita una maschera di input negli Appunti, i caratteri letterali visualizzati verranno copiati, anche se è stato specificato di non salvarli con i dati.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Solo i caratteri direttamente digitati in un controllo o in una <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">casella combinata</A> sono di pertinenza della maschera di input. Qualsiasi maschera di input viene ignorata quando si importano dati, quando viene eseguita una <A HREF="javascript:HelpPopup('actip9.hlp','defActionQuery');" class="pop">query di comando</A>, oppure vengono immessi dei caratteri in un controllo impostando la proprietà <A HREF="acproText.htm"><B>Text</B></A> del controllo in Visual Basic o utilizzando l'azione <A HREF="acactSetValue.htm">ImpostaValore</A> in una macro.</P>
+
+
+
+<P class=T>Una volta definita una maschera di input e impostata la proprietà <A HREF="acproFormat.htm"><B>Format</B></A> per lo stesso campo, la proprietà <B>Format</B> ha la precedenza al momento della visualizzazione dei dati. Ciò significa che, anche se una maschera di input è stata salvata, viene ignorata al momento della formattazione e della visualizzazione dei dati. I dati contenuti nella tabella sottostante non vengono modificati. La proprietà <B>Format</B> influisce solo sul modo di visualizzare i dati.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

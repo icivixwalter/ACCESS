@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconComparingAccessSQLSSQLSyntax'
+Feature='Access Project: Upsizing'
+Handoff='3'
+SourceFile='ccsupwiz.rtf'
+Tnum='274516'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Confronto tra la sintassi SQL di Microsoft Access e la sintassi SQL di SQL Server</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="acconcomparingaccesssqlssqlsyntax"></A>Confronto tra la sintassi SQL di Microsoft Access e la sintassi SQL di SQL Server</H1>
+
+<P class=T>Nella tabella riportata di seguito vengono riassunte le più importanti differenze tra la sintassi SQL di Microsoft Access e la sintassi SQL di Microsoft SQL Server e viene illustrato come vengono gestite queste differenze dall'Upsize guidato. Queste informazioni di riferimento sono utili anche per convertire manualmente la sintassi SQL da un'applicazione di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> a un'applicazione di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>.</P>
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=29%>Elemento di sintassi SQL</TH>
+<TH width=22%>Microsoft <BR>
+Access</TH>
+<TH width=26%>Microsoft SQL <BR>
+Server </TH>
+<TH width=22%>Upsize guidato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Identificatori</TD>
+<TD class=TT width=22%>Limite di 64 caratteri.
+<P class=TT>Consente l'utilizzo di parole chiave e caratteri speciali.</P>
+
+<P class=TT>Può iniziare con qualsiasi carattere.</P>
+
+
+</TD>
+<TD class=TT width=26%>SQL Server 6.5:
+<UL>
+	<LI class=LB1>Limite di 30 caratteri.<BR><BR></LI>
+
+	<LI class=LB1>Non consente l'utilizzo di parole chiave e caratteri speciali.<BR><BR></LI>
+
+	<LI class=LB1>Deve iniziare con un carattere alfabetico.</LI>
+</UL>
+
+<P class=TT>SQL Server 7.0 è compatibile con gli identificatori di Access.</P>
+
+
+</TD>
+<TD class=TT width=22%>Esegue la conversione nei nomi di SQL Server, se necessario.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Campi di output</TD>
+<TD class=TT width=22%>Consente l'utilizzo dello stesso nome per più campi di output.</TD>
+<TD class=TT width=26%>I nomi di campi di output multipli non sono supportati nelle visualizzazioni.</TD>
+<TD class=TT width=22%>Aggiunge un alias per i nomi di colonne doppi.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Separatore data</TD>
+<TD class=TT width=22%>Segno di cancelletto (#)</TD>
+<TD class=TT width=26%>Apostrofo (')</TD>
+<TD class=TT width=22%>Converte il separatore.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Costanti booleane</TD>
+<TD class=TT width=22%>True, False; On, Off; Yes, No</TD>
+<TD class=TT width=26%>Numeri interi: 1 (true), 0 (false)
+
+</TD>
+<TD class=TT width=22%>Converte la costante.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Concatenazione di stringhe</TD>
+<TD class=TT width=22%>E commerciale (&amp;)</TD>
+<TD class=TT width=26%>Segno più (+)</TD>
+<TD class=TT width=22%>Converte il carattere.
+<P class=TT><B>Nota&nbsp;&nbsp;</B> In SQL Server il carattere E commerciale (&amp;) viene utilizzato per le operazioni AND logiche bit per bit.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Caratteri jolly</TD>
+<TD class=TT width=22%>L'asterisco (*) corrisponde a zero o più caratteri.
+<P class=TT>Il punto interrogativo (?) corrisponde a un singolo carattere.</P>
+
+<P class=TT>Il punto esclamativo (!) indica non in elenco</P>
+
+<P class=TT>Il segno di cancelletto (#) indica una sola cifra.</P>
+
+
+</TD>
+<TD class=TT width=26%>Il segno di percentuale (%) corrisponde a zero o più caratteri.
+<P class=TT>Il carattere di sottolineatura (_) corrisponde a un singolo carattere.</P>
+
+<P class=TT>L'accento circonflesso (^) indica non in elenco.</P>
+
+<P class=TT>Nessun equivalente al segno di cancelletto (#).</P>
+
+
+</TD>
+<TD class=TT width=22%>Converte i caratteri.
+<P class=TT>Converte il segno di cancelletto (#) in [0-9] per indicare una singola cifra.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>TOP</TD>
+<TD class=TT width=22%>Include automaticamente dei legami se è presente una proposizione ORDER BY.</TD>
+<TD class=TT width=26%>Non supportato da SQL Server 6.5.
+<P class=TT>SQL Server 7.0 richiede una proposizione WITH TIES esplicita.</P>
+</TD>
+<TD class=TT width=22%>In SQL Server 6.5 vengono ignorate tutte le query TOP.
+<P class=TT>In SQL Server 7.0 viene aggiunta una proposizione WITH TIES alla fine di tutte le query TOP che contengono una proposizione ORDER BY. </P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>CREATE INDEX</TD>
+<TD class=TT width=22%>Consente l'utilizzo di indici crescenti e decrescenti.
+<P class=TT>Consente di dichiarare valori primary, no nulls e ignore nulls.</P>
+
+
+</TD>
+<TD class=TT width=26%>&nbsp;</TD>
+<TD class=TT width=22%>Converte l'indice.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>DROP INDEX</TD>
+<TD class=TT width=22%>La sintassi è la seguente: 
+<P class=TT>Drop Index &lt;nome indice&gt; ON &lt;nome tabella&gt;</P>
+</TD>
+<TD class=TT width=26%>La sintassi è la seguente: 
+<P class=TT>Drop Index &lt;nome tabella&gt;, &lt;nome indice&gt;</P>
+</TD>
+<TD class=TT width=22%>Non esegue la conversione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>DISTINCTROW</TD>
+<TD class=TT width=22%>Supportato (consente la selezione di record univoci).</TD>
+<TD class=TT width=26%>Non supportato.</TD>
+<TD class=TT width=22%>Non esegue la conversione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>OWNERACCESS</TD>
+<TD class=TT width=22%>Supportato (controlla le autorizzazioni durante l'esecuzione).</TD>
+<TD class=TT width=26%>Non supportato.</TD>
+<TD class=TT width=22%>Rimuove dall'istruzione SQL.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Tabella in UNION</TD>
+<TD class=TT width=22%>Supportato. Consente di specificare le tabelle utilizzando la sintassi:
+<P class=TT>TABLE &lt;nome tabella&gt; </P>
+
+
+</TD>
+<TD class=TT width=26%>Non supportato.</TD>
+<TD class=TT width=22%>Non esegue la conversione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>ORDER BY nelle unioni</TD>
+<TD class=TT width=22%>Supportato. Consente più ordini per proposizioni nelle query di unione.</TD>
+<TD class=TT width=26%>Supportato. Consente un solo ordine per proposizione alla fine dell'istruzione.</TD>
+<TD class=TT width=22%>Non esegue la conversione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>TRANSFORM</TD>
+<TD class=TT width=22%>Supportato. Utilizzato per le query di tabelle incrociate</TD>
+<TD class=TT width=26%>Non supportato</TD>
+<TD class=TT width=22%>Non esegue la conversione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>PARAMETERS</TD>
+<TD class=TT width=22%>Supportato (Registrato in SQL).</TD>
+<TD class=TT width=26%>Non supportato.</TD>
+<TD class=TT width=22%>Rimuove i parametri espliciti dalla stringa SQL.</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconComparingAccessSQLSSQLSyntaxW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

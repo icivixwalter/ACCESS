@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateMacroS'
+Feature='Macros: Basics'
+Handoff='1'
+SourceFile='cmacbas.rtf'
+Tnum='188191'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare una macro</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreatemacros"></A>Creare una macro</H1>
+
+<OL>
+	<LI class=LPROC>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> scegliere <B>Macro</B> <A HREF="javascript:HelpPopup('actip9.hlp','acrgnDatabaseMacroQ');" class="pop"><IMG SRC="images/dbcmac.bmp" BORDER=0></A> dall'elenco <B>Oggetti</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul pulsante <B>Nuovo</B> sulla barra degli strumenti della finestra del database.<BR><BR></LI>
+
+	<LI class=LPROC>Nella colonna <B>Azione</B> fare clic sulla prima cella, quindi fare clic sulla freccia per visualizzare l'<A HREF="javascript:HelpPopup('actip9.hlp','defActionList');" class="pop">elenco di azioni</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere l'azione che si desidera utilizzare.<BR><BR></LI>
+
+	<LI class=LPROC>Digitare un commento per l'azione. I commenti sono facoltativi, ma semplificano la comprensione e la gestione della macro.<BR><BR></LI>
+
+	<LI class=LPROC>Nella parte inferiore della finestra specificare gli <A HREF="javascript:HelpPopup('actip9.hlp','defArgument');" class="pop">argomenti</A> dell'azione, se necessari. Per suggerimenti sull'impostazione degli argomenti delle azioni, fare clic su <A HREF="acconTipsSettingArgumentsInMacroS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LPROC>Per aggiungere altre azioni alla macro, spostarsi in un'altra riga di azione e ripetere i passi da 3 a 6. Le azioni verranno eseguite nell'ordine in cui sono elencate.</LI>
+</OL>
+
+<P class=TPT><B>Suggerimento</B>&nbsp;&nbsp; Per creare rapidamente una macro che esegue un'azione su un <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetto di database</A> specifico, trascinare l'oggetto dalla finestra del database in una riga di azione della finestra della macro. Per creare ad esempio una macro che apre una maschera trascinandola in una riga di azione, scegliere <B>Affianca verticalmente</B> dal menu <B>Finestra</B> per posizionare la finestra della macro e quella del database in modo che siano una accanto all'altra sullo schermo; quindi dall'elenco <B>Oggetti</B> della finestra del database fare clic sul tipo di oggetto che si desidera trascinare, fare clic sull'oggetto, quindi trascinarlo in una riga di azione. Trascinando una macro o una stored procedure, verrà aggiunta un'azione che esegue la macro o la routine, mentre trascinando altri oggetti di database verrà aggiunta un'azione che apre l'oggetto.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateMacroSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

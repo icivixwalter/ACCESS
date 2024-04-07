@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acexaAccessJetErrorCodesX'
+Feature='acexa'
+Handoff='1'
+SourceFile='alanmsc3.rtf'
+Tnum='186920'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Determinare i codici di errore riservati tramite Microsoft Access e il modulo di gestione di database Microsoft Jet</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acexaaccessjeterrorcodesx"></A>Determinare i codici di errore riservati tramite Microsoft Access e il modulo di gestione di database Microsoft Jet</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acexaAccessJetErrorCodesXC">
+</OBJECT></P>
+
+
+
+<P class=T>La routine riportata di seguito crea una tabella contenente la maggior parte dei codici e delle stringhe di errore utilizzati o riservati da Microsoft Access e dal modulo di gestione di database Microsoft Jet. Non tutti i codici di errore sono contenuti nella tabella, in quanto alcuni non rientrano nell'intervallo dei codici di errore valutati da questa routine (da 0 a 4500).</P>
+
+<PRE class=CT><CODE>Function TabellaErroriAccessEJet() As Boolean
+&nbsp;&nbsp;&nbsp; Dim cat As New ADOX.Catalog
+&nbsp;&nbsp;&nbsp; Dim tbl As New ADOX.Table
+&nbsp;&nbsp;&nbsp; Dim cnn As ADODB.Connection
+&nbsp;&nbsp;&nbsp; Dim rst As New ADODB.Recordset, lngCodice As Long
+&nbsp;&nbsp;&nbsp; Dim strErrAccess As String&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; Const conErrOggApp = "Errore definito dall'applicazione o dall'oggetto"
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_TabellaErroriAccessEJet
+
+&nbsp;&nbsp;&nbsp; Set cnn = CurrentProject.Connection
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea una tabella Errori con i campi NumeroErrore e DescrizioneErrore.
+&nbsp;&nbsp;&nbsp; tbl.Name = "ErroriAccessEJet"
+&nbsp;&nbsp;&nbsp; tbl.Columns.Append "CodiceErrore", adInteger
+&nbsp;&nbsp;&nbsp; tbl.Columns.Append "StringaErrore", adLongVarWChar
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; Set cat.ActiveConnection = cnn
+&nbsp;&nbsp;&nbsp; cat.Tables.Append tbl
+&nbsp;&nbsp;&nbsp; ' Apre il set di record della tabella Errori.
+&nbsp;&nbsp;&nbsp; rst.Open "ErroriAccessEJet", cnn, adOpenStatic, adLockOptimistic
+&nbsp;&nbsp;&nbsp; ' Scorre i codici in modo iterativo.
+&nbsp;&nbsp;&nbsp; For lngCode = 0 To 3500
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On Error Resume Next
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Trova ogni errore.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strErrAccess = AccessError(lngCodice)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.Hourglass True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Salta i numeri di errore senza stringhe associate.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If strErrAccess &lt;&gt; "" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Salta i codici che generano errori definiti dall'applicazione o dall'oggetto.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If strErrAccess &lt;&gt; conErroreOggApp Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiunge ogni codice e stringa di errore alla tabella Errori.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.AddNew
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst!CodiceErrore = lngCodice
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Accoda una stringa al campo memo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst!StringaErrore = strErrAccess
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.Update
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Next lngCodice
+&nbsp;&nbsp;&nbsp; ' Chiude il set di record.
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; DoCmd.Hourglass False
+&nbsp;&nbsp;&nbsp; RefreshDatabaseWindow
+&nbsp;&nbsp;&nbsp; MsgBox "Tabella di errori Access e Jet creata."
+&nbsp;&nbsp;&nbsp; TabellaErroriAccessEJet = True
+
+Exit_TabellaErroriAccessEJet:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_TabellaErroriAccessEJet:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; TabellaErroriAccessEJet = False
+&nbsp;&nbsp;&nbsp; Resume Exit_TabellaErroriAccessEJet
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

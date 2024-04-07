@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjDatabaseS'
+Feature='acobj'
+Handoff='1'
+SourceFile='ACDOBJ01.rtf'
+Tnum='234384'
+Piece='1040'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Oggetto Database, insieme Databases (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acobjdatabases"></A>Oggetto Database, insieme Databases (MDB)</H1>
+
+
+
+<P class=T>Quando si lavora con <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti DAO</A> da Microsoft Access, è spesso necessaria una variabile di oggetto <B>Database</B> che rappresenta il database corrente. Utilizzare la funzione <B>CurrentDb</B> per restituire un oggetto <B>Database</B> per il database correntemente aperto. Tale oggetto <B>Database</B> viene automaticamente accodato all'insieme <B>Databases</B>.</P>
+
+<P class=T>Si supponga, ad esempio, di lavorare con il database di esempio Northwind in Microsoft Access. È possibile creare un oggetto <B>Database</B> che fa riferimento a tale database dichiarando innanzitutto una variabile di oggetto <B>Database</B>, quindi puntando tale variabile all'oggetto <B>Database</B> restituito dalla funzione <B>CurrentDb</B>.</P>
+
+<PRE class=CT><CODE>Dim dbs As Database
+Set dbs = CurrentDb</CODE></PRE>
+
+
+
+<P class=T>Non è necessario conoscere il nome del database o la relativa posizione nell'insieme <B>Databases</B> per poterlo utilizzare nel database corrente. Se si desidera comunque conoscere il nome del database corrente, controllare la proprietà <B>Name</B> dell'oggetto <B>Database</B>, che contiene il percorso e il nome del database. Per trovare la posizione dell'oggetto nell'insieme <B>Databases</B>, scorrere l'insieme.</P>
+
+<P class=T>Nella finestra di Microsoft Access è possibile aprire un solo database alla volta. Dal codice di Visual Basic è tuttavia possibile creare più variabili di oggetto <B>Database</B> indipendenti per rappresentare più database aperti e manipolare quindi più di un database alla volta. È inoltre possibile creare più variabili di oggetto <B>Database</B> e puntarle al database corrente.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Nel codice di Visual Basic, utilizzare la funzione <B>CurrentDb</B> per restituire un oggetto <B>Database</B> che fa riferimento al database corrente, piuttosto che la sintassi <CODE>DBEngine(0)(0)</CODE>. La funzione <B>CurrentDb</B> crea un'altra istanza del database corrente, mentre la sintassi <CODE>DBEngine(0)(0) </CODE>fa riferimento alla copia aperta del database corrente. L'utilizzo della funzione <B>CurrentDb</B> consente di creare più di una variabile di tipo <B>Database</B> che fa riferimento al database corrente. Microsoft Access supporta ancora la sintassi <CODE>DBEngine(0)(0)</CODE>, ma si consiglia di apportare tale modifica al codice in modo da evitare possibili conflitti in un ambiente multiutente.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

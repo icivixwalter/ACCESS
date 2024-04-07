@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutProtectingDAP'
+Feature='Security: Data Access Pages'
+Handoff='3'
+SourceFile='Csecbas_3.rtf'
+Tnum='279151'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla protezione di una pagina di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowConnectExistingAccessProjectToMicrosoftSQLServerDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowConnectExistingAccessProjectToMicrosoftSQLServerDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconAboutProtectingAccessProject">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowConnectExistingAccessProjectToMicrosoftSQLServerDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconaboutprotectingdap"></A>Informazioni sulla protezione di una pagina di accesso ai dati</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconaboutprotectingdap_1">Protezione del collegamento di una pagina di accesso ai dati e del file HTML corrispondente</A></P>
+
+<P class=LBR1><A HREF="#acconaboutprotectingdap_2">Protezione e controllo dell'accesso al database da una pagina di accesso ai dati</A></P>
+
+<P class=LBR1><A HREF="#acconaboutprotectingdap_3">Impedire l'accesso non autorizzato mediante uno script pericoloso</A></P>
+
+<H2><A NAME="acconaboutprotectingdap_1"></A>Protezione del collegamento di una pagina di accesso ai dati e del file HTML corrispondente</H2>
+
+<P class=T>Una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> è la combinazione di un collegamento memorizzato nel file del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (mdb) o del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (adp) e del file <A HREF="javascript:HelpPopup('actip9.hlp','defHTML');" class="pop">HTML</A> corrispondente che si trova nel file system del computer. Per impedire che il collegamento di una pagina e il file HTML corrispondente vengano rinominati, eliminati o modificati, utilizzare la protezione del file system del computer in cui sono memorizzati i file. Sul computer ad esempio è possibile impostare per la sola lettura il file del database o del progetto di Access contenente il collegamento della pagina. Sul server Web in cui è memorizzato il file HTML corrispondente alla pagina (dopo la <A HREF="achowPublishDataAccessPageToWebServer.htm">pubblicazione della pagina</A>), è possibile impostare per la sola lettura il file e la cartella che lo contiene. Per ulteriori informazioni sulla protezione di file e cartelle, vedere la Guida di Microsoft Windows.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutprotectingdap">inizio</A></P>
+
+<H2><A NAME="acconaboutprotectingdap_2"></A>Protezione e controllo dell'accesso al database da una pagina di accesso ai dati</H2>
+
+<P class=T>Per garantire un accesso protetto al database di Access o di Microsoft SQL Server al quale è connessa la pagina, considerare quanto segue:</P>
+
+<P class=T><B>Protezione del database&nbsp;&nbsp;</B> È possibile connettere una pagina a un database di Access o di SQL Server. Per proteggere l'accesso al database tramite la pagina, è necessario fornire un'adeguata protezione al database utilizzato. Come per qualsiasi applicazione, è necessario impedire l'accesso di utenti non autorizzati al database e controllare il livello di accesso degli utenti collegati. 
+
+<UL>
+	<LI class=LB1>Per un database di Access protetto a livello utente per il quale si desidera attivare questo tipo di protezione mediante una pagina, è necessario accertarsi che le informazioni di connessione per la pagina specifichino il file di informazioni sul gruppo di lavoro corretto e che il file si trovi su una rete pubblica condivisa accessibile a tutti gli utenti. <A HREF="JavaScript:hhobj_1.Click()">Modificare la connessione alla pagina</A> nella finestra di dialogo <B>Proprietà di Data Link</B> facendo clic sulla scheda <B>Tutti</B>, facendo doppio clic su <B>Jet OLEDB:System database</B> e specificando il percorso <A HREF="javascript:HelpPopup('actip9.hlp','defUNC');" class="pop">UNC</A> del file di informazioni sul gruppo di lavoro appropriato nella casella <B>Valore proprietà</B>. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="acdecSecureAccessDatabase.htm">protezione di un database di Access</A>.
+<P class=LT1>Se è stata <A HREF="achowProtectDatabaseByAddingDatabasePasswordS.htm">impostata una password di database</A> su un database di Access connesso a una pagina, verrà richiesta l'immissione della password la prima volta che si visualizza la pagina.
+</LI>
+
+	<LI class=LB1>Per un database di SQL Server, se si desidera utilizzare la protezione integrata di Windows NT per la connessione da una pagina, è necessario <A HREF="JavaScript:hhobj_2.Click()">modificare la connessione alla pagina </A> nella finestra di dialogo <B>Proprietà di Data Link</B> facendo clic sulla scheda <B>Connessione</B> e selezionando il pulsante di opzione <B>Utilizza protezione integrata di Windows NT</B>. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="JavaScript:hhobj_3.Click()">protezione di un database di SQL Server</A>.</LI>
+</UL>
+
+<P class=T><B>Non salvare il nome utente e la password con la pagina</B>&nbsp;&nbsp; Se si salvano il nome utente e la password del database con la pagina, qualsiasi utente può connettersi al database. Affinché la pagina richieda l'immissione della password per l'accesso al database, <A HREF="JavaScript:hhobj_4.Click()">modificare la connessione alla pagina</A> nella finestra di dialogo <B>Proprietà di Data Link</B> facendo clic sulla scheda <B>Connessione</B> e deselezionando la casella di controllo <B>Consenti salvataggio password</B>. </P>
+
+<P class=T><B>Restituzione dei record in base al nome utente</B>&nbsp;&nbsp; Può essere utile creare una pagina che non richieda l'immissione di un nome utente e di una password ma che rilevi automaticamente l'identità dell'utente e visualizzi i record in base a questa informazione. È possibile ad esempio creare una pagina che consenta agli utenti di modificare il loro file nell'ambito dei dati sul personale. I passaggi necessari per questa operazione sono i seguenti:
+
+<UL>
+	<LI class=LB1>Creare una pagina in un progetto di Access connesso a un database di SQL Server con protezione integrata di Microsoft Windows NT.<BR><BR></LI>
+
+	<LI class=LB1>Aggiungere una colonna alla tabella dei dipendenti con il nome utente di accesso di Windows NT di ciascun dipendente.<BR><BR></LI>
+
+	<LI class=LB1>Creare una visualizzazione che utilizzi la funzione suser_sname() per rilevare l'utente al momento connesso e impostare tale visualizzazione come <A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A> della pagina.</LI>
+</UL>
+
+<P class=T>Per un esempio dettagliato di questa procedura, consultare il <A HREF="JavaScript:hhobj_5.Click()"><I>Manuale del programmatore. di Microsoft Office 2000/Visual Basic</I></A>. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutprotectingdap">inizio</A></P>
+
+<H2><A NAME="acconaboutprotectingdap_3"></A>Impedire l'accesso non autorizzato mediante uno script pericoloso</H2>
+
+<P class=T>Per la connessione di una pagina alla relativa origine dati viene utilizzato Microsoft Office Data Source Control (MSODSC). Quando un utente apre una pagina, il controllo MSODSC della pagina può utilizzare il nome dell'utente per la connessione al database. Un autore di pagine malintenzionato potrebbe sfruttare questa situazione utilizzando <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasicScript');" class="pop">Microsoft Visual Basic Scripting Edition</A> o JScript contro MSODSC per tentare di accedere ai database sui server accessibili all'utente, ma non a lui stesso. La modalità di accesso ai dati utilizzata da MSODSC determina se una pagina può essere considerata sicura a prescindere o se consente l'accesso ai dati tra domini diversi. È possibile configurare MSODSC in modo da utilizzare due modalità di accesso ai dati: a due livelli o a tre livelli.</P>
+
+<P class=T>L'accesso ai dati a due livelli consiste nella connessione diretta all'origine dati secondo la modalità <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgClientserver');" class="pop">client/server</A> tradizionale: il client (primo livello) stabilisce una connessione diretta al server di database (secondo livello). Per eseguire questo tipo di accesso ai dati, MSODSC crea una connessione diretta all'origine dati tramite un provider OLE DB registrato sul computer dell'utente. Per un database di Access l'accesso ai dati a due livelli utilizza il Provider Microsoft Jet 4.0 OLE DB del computer locale per stabilire la connessione a un file mdb su una condivisione di rete. Per un database di SQL Server, utilizza invece il Provider OLE DB Microsoft for SQL Server del computer locale per stabilire la connessione a un server di database disponibile sulla rete locale.</P>
+
+<P class=T>L'accesso ai dati a tre livelli consiste nell'utilizzo di un terzo componente remoto tra il client e il database. Questo tipo di accesso è generalmente utilizzato per accedere ai dati su Internet. Per l'accesso ai dati a tre livelli con utilizzo di MSODSC il terzo componente è <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefADOActiveXDataObjects');" class="pop">ActiveX Data Objects (ADO)</A> Remote Data Service (RDS), anche denominato Data Factory, eseguito su Microsoft Internet Information Server (IIS). </P>
+
+<P class=T>Poiché l'utilizzo di qualsiasi pagina con accesso ai dati a due livelli viene rilevato da Microsoft Internet Explorer come un tentativo di accesso tra domini diversi, quando un utente apre una pagina con questo tipo di accesso, si verifica una delle tre seguenti situazioni, a seconda delle impostazioni di protezione di Internet Explorer: la pagina viene disattivata automaticamente, viene richiesto se consentire l'accesso ai dati oppure la pagina viene attivata automaticamente.</P>
+
+<P class=T>Le impostazioni di protezione di Internet Explorer definiscono inoltre diverse aree di protezione. Se una pagina si trova su un server Web in un'area sicura, il tentativo di accesso tra domini può essere attivato automaticamente. In un ambiente controllato, quale una rete Intranet aziendale, le pagine funzionano in modo ottimale se si utilizza l'accesso ai dati a due livelli e ci si assicura che vengano pubblicate da un server in un'area di protezione sicura. Questo è il metodo più semplice per proteggersi da tentativi di accesso non autorizzati mediante script pericolosi. Per ulteriori informazioni sulle impostazioni di protezione, vedere la Guida di Internet Explorer.</P>
+
+<P class=T>Una pagina che utilizza l'accesso ai dati a tre livelli per la connessione a un database viene considerata sicura indipendentemente dall'area di protezione di Internet Explorer da cui viene pubblicata. Quando viene aperta, l'utente non riceve avvertimenti su tentativi di accesso ai dati tra domini se non sono stati modificati i valori predefiniti delle impostazioni di autenticazione. </P>
+
+<P class=T>Per informazioni sull'implementazione dell'accesso ai dati a due o tre livelli, vedere il <A HREF="JavaScript:hhobj_6.Click()"><I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I></A>. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutprotectingdap">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutProtectingDAPW">
+</OBJECT>
+</P><SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

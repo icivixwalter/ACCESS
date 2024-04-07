@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutSpecsSchemaFiles'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='242000'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulle specifiche di importazione/esportazione e sui file Schema.ini</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dahowChangingText">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconaboutspecsschemafiles"></A>Informazioni sulle specifiche di importazione/esportazione e sui file Schema.ini</H1>
+
+<P class=T>Una specifica di importazione/esportazione contiene le informazioni, come il formato di file, date o numeri, utilizzate da Microsoft Access per <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importare</A> o <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefexport');" class="pop">esportare</A> un file di testo delimitato o a larghezza fissa. Una specifica di importazione/esportazione viene memorizzata con il nome predefinito: <I>Nomefile</I>_ImportSpec o <I>Nomefile</I>_ExportSpec nel database utilizzato per l'operazione di importazione o esportazione. </P>
+
+<P class=T>Per creare una specifica di importazione/esportazione, utilizzare l'<A HREF="achowImportDelimitedTextFileS.htm">Importazione guidata Testo</A> o l'<A HREF="achowExportTableDelimitedFixedwidthTextFileS.htm">Esportazione guidata Testo</A>. Nella prima schermata della creazione guidata selezionata scegliere il pulsante <B>Avanzate</B>, definire la specifica, quindi scegliere il pulsante <B>Salva con nome</B>. Scegliere il pulsante <B>Specifiche</B> per selezionare la specifica di importazione/esportazione al successivo utilizzo della creazione guidata.</P>
+
+<P class=T>Utilizzare una specifica di importazione/esportazione per importare ripetutamente nella stessa tabella, per esportare nello stesso file o per <A HREF="achowAutomateImportingExportingDataMacroS.htm">automatizzare il processo di importazione o esportazione</A>. </P>
+
+<P class=T>In alternativa, è possibile <A HREF="JavaScript:hhobj_1.Click()">utilizzare un file Schema.ini</A> in un programma Visual Basic per avere un maggiore controllo sui dati del file di testo e potere ad esempio specificare formati di valuta speciali o gestione dei tipi di dati a virgola mobile. Un file schema.ini è un file di testo contenente voci che sostituiscono le impostazioni predefinite del driver di testo nel registro di configurazione di Windows. È necessario memorizzare il file schema.ini nella stessa cartella del file di testo importato o esportato e denominarlo sempre schema.ini.</P>
+<P><OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutSpecsSchemaFilesW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

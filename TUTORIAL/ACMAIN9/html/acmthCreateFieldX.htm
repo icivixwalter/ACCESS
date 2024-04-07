@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateFieldX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234373'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CreateField (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreatefieldx"></A>Esempio di metodo CreateField (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea una nuova tabella con due nuovi campi. Uno di questi è un campo Contatore. La routine inoltre rende questo campo la chiave primaria della tabella.</P>
+
+<PRE class=CT><CODE>Sub NuovaTabella()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database
+&nbsp;&nbsp;&nbsp; Dim tdf As TableDef, fld1 As Field, fld2 As Field
+&nbsp;&nbsp;&nbsp; Dim idx As Index, fldIndex As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea la nuova tabella con due campi.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.CreateTableDef("Contatti")
+&nbsp;&nbsp;&nbsp; Set fld1 = tdf.<B>CreateField</B>("IDContatto", dbLong)
+&nbsp;&nbsp;&nbsp; fld1.Attributes = fld1.Attributes + dbAutoIncrField
+&nbsp;&nbsp;&nbsp; Set fld2 = tdf.<B>CreateField</B>("NomeContatto", dbText, 50)
+&nbsp;&nbsp;&nbsp; ' Accoda i campi.
+&nbsp;&nbsp;&nbsp; tdf.Fields.Append fld1
+&nbsp;&nbsp;&nbsp; tdf.Fields.Append fld2
+&nbsp;&nbsp;&nbsp; ' Crea indice di chiave primaria.
+&nbsp;&nbsp;&nbsp; Set idx = tdf.CreateIndex("ChiavePrimaria")
+&nbsp;&nbsp;&nbsp; Set fldIndex = idx.<B>CreateField</B>("IDContatto", dbLong)
+&nbsp;&nbsp;&nbsp; ' Accoda i campi indice.
+&nbsp;&nbsp;&nbsp; idx.Fields.Append fldIndex
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà Primary.
+&nbsp;&nbsp;&nbsp; idx.Primary = True
+&nbsp;&nbsp;&nbsp; ' Accoda indice.
+&nbsp;&nbsp;&nbsp; tdf.Indexes.Append idx
+&nbsp;&nbsp;&nbsp; ' Accoda oggetto TableDef.
+&nbsp;&nbsp;&nbsp; dbs.TableDefs.Append tdf
+&nbsp;&nbsp;&nbsp; dbs.TableDefs.Refresh
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

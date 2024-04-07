@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowUseTheRegistryEditorS'
+Feature='Miscellaneous: Registry'
+Handoff='3'
+SourceFile='CMSCNEW.RTF'
+Tnum='188614'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare l'Editor del registro di configurazione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowusetheregistryeditors"></A>Utilizzare l'Editor del registro di configurazione</H1>
+
+<P class=T><B>Attenzione</B>&nbsp;&nbsp; Molte delle impostazioni del registro di configurazione di Microsoft Access vengono aggiunte automaticamente durante l'installazione. La modifica delle impostazioni installate può causare risultati non previsti che potrebbero rendere necessario reinstallare Microsoft Access. Si consiglia quindi di non modificare le impostazioni del registro di configurazione di Microsoft Windows. Se tuttavia è necessario modificare le impostazioni o le opzioni di tale registro, utilizzare l'Editor del registro di configurazione di Microsoft Windows e modificare solo quelle documentate in modo esplicito. Le impostazioni modificate avranno effetto al riavvio di Microsoft Access. Si consiglia di effettuare una copia di backup di tutto il registro di configurazione o almeno della parte che si desidera modificare. Per ulteriori informazioni, ricercare l'argomento relativo al backup del registro di configurazione nell'indice della Guida in linea dell'Editor del registro di configurazione, disponibile sulla barra dei menu dell'Editor del registro di configurazione.
+
+<OL>
+	<LI class=LPROC>Per eseguire l'Editor del registro di configurazione, scegliere il pulsante <B>Start</B> di Windows (<B>Avvio</B> in Windows 95 e Windows NT 4.0), quindi <B>Esegui</B>. Digitare <B>regedit</B>, quindi scegliere <B>OK</B>.
+</LI>
+
+	<LI class=LPROC>Spostarsi sulla sottochiave del registro di configurazione appropriata. Le due sottochiavi principali che contengono le impostazioni che influiscono su Microsoft Access sono:
+<UL>
+	<LI class=LB2>\HKEY_LOCAL_MACHINE\SOFTWARE<B><BR> </B>\Microsoft\Office\9.0\Access<BR><BR></LI>
+
+	<LI class=LB2>\HKEY_LOCAL_MACHINE\SOFTWARE<B><BR> </B>\Microsoft\Jet\4.0</LI>
+</UL>
+
+<P class=LT1>Se a sinistra della sottochiave è presente un segno più (+), significa che vi sono sottochiavi aggiuntive. Per modificare i valori di una sottochiave del registro, fare doppio clic sulla sottochiave che si trova nel riquadro sinistro della finestra Editor del registro di configurazione in modo da aprirla, quindi fare doppio clic sul valore che si desidera modificare nel riquadro destro della finestra Editor del registro di configurazione. In alcuni casi può essere necessario aggiungere nuove sottochiavi o nuovi valori. Per ulteriori informazioni su come aggiungere nuove sottochiavi e nuovi valori, utilizzare la Guida in linea dell'Editor del registro di configurazione.
+</LI>
+</OL>
+
+<P class=NT><B>Importante</B>&nbsp;&nbsp; Le sottochiavi visualizzate sotto la sottochiave \Microsoft\Office\9.0\Access sono valide solo per Microsoft Access 2000. Le sottochiavi visualizzate sotto la sottochiave \Microsoft\Jet\4.0 sono valide per il <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A> che viene utilizzato da Microsoft Access per accedere ai dati. Le modifiche apportate a queste impostazioni influiscono su Microsoft Access 2000 e su altri programmi che utilizzano il modulo di gestione di database Microsoft Jet, come ad esempio Microsoft Excel 2000, Microsoft Visual Basic 6.0 o versioni successive e altri eventuali programmi. Per apportare modifiche alle impostazioni del modulo di gestione di database Microsoft Jet che siano valide solo per Microsoft Access, cambiare le impostazioni della sottochiave \HKEY_LOCAL_MACHINE\SOFTWARE<B><BR> </B>\Microsoft\Office\9.0\Access\Jet\4.0.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowUseTheRegistryEditorSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

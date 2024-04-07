@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='accstConstants'
+Feature='accst'
+Handoff='2'
+SourceFile='acstv2.doc'
+Tnum='186466'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni preliminari sulle costanti di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmConst">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctVarType">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vbcstADODataControlConstants">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damscDataAccessConstants">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vamscTypeLibConstants">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctVarType">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="accstconstants"></A>Informazioni preliminari sulle costanti di Microsoft Access</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="accstConstantsC;vbcstADODataControlConstants;vaconUnderstandingScope;vafctVarType;vamscTypeLibConstants">
+</OBJECT></P>
+
+
+
+<P class=RL><B>Generale</B></P>
+
+<P class=T>Una <A HREF="javascript:HelpPopup('actip9.hlp','defConstant');" class="pop">costante</A> rappresenta un valore <A HREF="javascript:HelpPopup('actip9.hlp','defNumberDataType');" class="pop">numerico</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defString');" class="pop">stringa</A> che rimane invariata. È possibile utilizzare le costanti per migliorare la leggibilità del codice Visual Basic e per gestirlo con più facilità. L'utilizzo di <A HREF="javascript:HelpPopup('actip9.hlp','defintrinsicconstant');" class="pop">costanti intrinseche</A> assicura inoltre il funzionamento del codice anche quando i valori sottostanti rappresentati dalle costanti vengono modificati nelle successive versioni di Microsoft Access.</P>
+
+<P class=T>Microsoft Access supporta tre tipi di costanti:
+
+<UL>
+	<LI class=LB1>Costanti simboliche, create tramite l'istruzione <A HREF="JavaScript:hhobj_2.Click()"><B>Const</B></A> e utilizzate nei <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">moduli</A>.<BR><BR></LI>
+
+	<LI class=LB1>Costanti intrinseche, che fanno parte di Microsoft Access o di una libreria a cui si fa riferimento.<BR><BR></LI>
+
+	<LI class=LB1>Costanti definite dal sistema: <B>True</B>, <B>False</B> e <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Costanti simboliche</B></P>
+
+<P class=T>Spesso può accadere che nel codice vengono utilizzati ripetutamente gli stessi valori oppure si scopre che il codice dipende da numeri che non hanno un ovvio significato. In questi casi è possibile semplificare la leggibilità e la gestione del codice tramite costanti simboliche o definite dall'utente che consentono di utilizzare un nome significativo invece di un numero o di una stringa.</P>
+
+<P class=T>Dopo aver creato una costante tramite l'istruzione <B>Const</B>, non è possibile modificarla o assegnarle un nuovo valore. Non è possibile inoltre creare una costante con lo stesso nome di una costante intrinseca.</P>
+
+<P class=T>Gli esempi riportati di seguito illustrano alcune modalità di utilizzo dell'istruzione <B>Const</B> per dichiarare costanti numeriche e costanti stringhe.</P>
+
+<PRE class=CT><CODE>Const conPI = 3.14159265 
+' PI corrisponde a questo numero.
+Const conPI2 = conPI *2 
+' Costante utilizzata per creare un'altra costante.
+Const conVersione = "Versione 7.0"
+' Dichiara una costante stringa.</CODE></PRE>
+
+
+
+<P class=RL><B>Costanti intrinseche</B></P>
+
+<P class=T>Oltre alle costanti dichiarate con l'istruzione <B>Const</B>, vengono dichiarate automaticamente un numero di costanti intrinseche e viene fornito l'accesso alle costanti di Visual Basic, Applications Edition (VBA) e alle costanti ADO. È possibile inoltre utilizzare le costanti in altre librerie di oggetti a cui si fa riferimento. Per ulteriori informazioni sull'aggiunta di riferimenti, vedere <A HREF="acconSettingReferences.htm">Impostazione di riferimenti a librerie dei tipi</A>.</P>
+
+<P class=T>È possibile utilizzare le costanti intrinseche in una macro o in Visual Basic. Queste costanti sono sempre disponibili. Le costanti specifiche incorporate utilizzate con una funzione, un metodo o una proprietà particolare vengono descritte nell'argomento della Guida relativo alla funzione, al metodo o alla proprietà corrispondente.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile utilizzare il <A HREF="achowUserObjectBrowserS.htm">Visualizzatore oggetti</A> per visualizzare gli elenchi delle costanti intrinseche di tutte le librerie di oggetti disponibili.</P>
+
+
+
+<P class=T>Le costanti intrinseche hanno un prefisso di due lettere che identifica la libreria di oggetti che definisce la costante. Le costanti della libreria di Microsoft Access hanno il prefisso "ac", quelle della libreria ADO "ad" e quelle della libreria Visual Basic "vb". Ad esempio:
+
+<UL>
+	<LI class=LB1><B>acForm</B><BR><BR></LI>
+
+	<LI class=LB1><B>adAddNew</B><BR><BR></LI>
+
+	<LI class=LB1><B>vbCurrency</B>
+<P class=4>
+</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Poiché i valori rappresentati dalle costanti intrinseche possono cambiare nelle versioni successive di Microsoft Access, è consigliabile utilizzare le costanti invece dei valori effettivi. È possibile tuttavia visualizzare il valore effettivo di una costante scegliendo la costante nel Visualizzatore oggetti oppure digitando <I>nomecostante</I> nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefImmediateWindow');" class="pop">finestra Immediata</A>.</P>
+
+
+
+<P class=T>Le costanti intrinseche possono essere utilizzate nei punti in cui è possibile utilizzare le costanti simboliche o quelle definite dall'utente, compreso nelle <A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressioni</A>. L'esempio riportato di seguito illustra il modo in cui è possibile utilizzare la costante intrinseca <B>vbCurrency</B> per determinare se la variabile <CODE>varNum</CODE> è di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defVariant');" class="pop"><B>Variant</B></A> in base alla quale la funzione <A HREF="JavaScript:hhobj_3.Click()"><B>VarType</B></A> restituisce 6 (<B>Valuta</B>).</P>
+
+<PRE class=CT><CODE>Dim varNum As Variant
+If VarType(varNum) = vbCurrency Then
+Debug.Print "varNum contiene dati Valuta."
+Else
+Debug.Print "varNum non contiene dati Valuta."
+End If</CODE></PRE>
+
+
+
+<P class=T>Esistono numerose categorie di costanti intrinseche. Per visualizzare un elenco delle costanti intrinseche di una determinata categoria, fare clic su una delle categorie riportate di seguito:
+
+<UL>
+	<LI class=LB1><A HREF="accstMacroActConstants.htm">Costanti di azione</A><BR><BR></LI>
+
+	<LI class=LB1>Costanti ADO<BR><BR></LI>
+
+	<LI class=LB1><A HREF="JavaScript:hhobj_5.Click()">Costanti DAO</A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="accstEventProcConstants.htm">Costanti di routine evento</A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="accstKeyCodeConstants.htm">Costanti di codicechiave</A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="accstMiscConstants.htm">Costanti varie</A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="accstRunMethodConstants.htm">Costanti del metodo <B>RunCommand</B></A> (si tratta di un sottoinsieme delle costanti di azione)<BR><BR></LI>
+
+	<LI class=LB1><A HREF="accstSecurityConstants.htm">Costanti di protezione</A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="JavaScript:hhobj_6.Click()">Costanti di Visual Basic</A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="JavaScript:hhobj_7.Click()">Costanti della funzione <B>VarType</B></A>
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Costanti definite dal sistema</B></P>
+
+<P class=T>Le costanti definite dal sistema <B>True</B>, <B>False</B> e <B>Null</B> possono essere utilizzate ovunque in Microsoft Access. È possibile ad esempio utilizzare <B>True</B> nella seguente espressione di condizione della macro. La condizione viene soddisfatta se l'impostazione della proprietà <A HREF="acproVisible.htm"><B>Visible</B></A> per la maschera Impiegati corrisponde a <B>True</B>.</P>
+
+<PRE class=CT><CODE>Forms!Impiegati.Visible = True</CODE></PRE>
+
+
+
+<P class=T>La costante <B>Null</B> può essere utilizzata ovunque in Microsoft Access. È possibile ad esempio utilizzare <B>Null</B> per impostare la proprietà <A HREF="acproDefaultValue.htm"><B>DefaultValue</B></A> per un controllo di maschera utilizzando la seguente espressione:</P>
+
+<PRE class=CT><CODE>=Null</CODE></PRE>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="accstConstantsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

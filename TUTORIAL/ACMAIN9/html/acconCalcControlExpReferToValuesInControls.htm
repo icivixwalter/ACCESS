@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCalcControlExpReferToValuesInControls'
+Feature='Reports: Expressions'
+Handoff='2'
+SourceFile='crptexp.rtf'
+Tnum='188479'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di riferimento ai valori delle maschere e dei report</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconcalccontrolexprefertovaluesincontrols"></A>Esempi di riferimento ai valori delle maschere e dei report</H1>
+
+<P class=T>Nella tabella che segue vengono elencati esempi di espressioni che possono essere utilizzate nei controlli calcolati delle maschere.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Se viene utilizzata l'espressione</TH>
+<TH width=52%>Verrà visualizzato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=Forms![Ordini]![IDOrdine]</TD>
+<TD class=TT width=52%>Il valore del controllo IDOrdine della maschera Ordini.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=Forms![Ordini]![Sottomaschera Ordini]![SubtotaleOrdine]</TD>
+<TD class=TT width=52%>Il valore del controllo SubtotaleOrdine nella sottomaschera Ordini della maschera Ordini.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=Forms![Ordini]![Sottomaschera Ordini]![IDProdotto].Column(2)</TD>
+<TD class=TT width=52%>Il valore della terza colonna in IDProdotto, una casella di riepilogo a colonne multiple nella Sottomaschera Ordini della maschera Ordini. 0 si riferisce alla prima colonna, 1 si riferisce alla seconda, e così via.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=Forms![Ordini]![Sottomaschera Ordini]![Prezzo]*1,06</TD>
+<TD class=TT width=52%>Il prodotto del valore del controllo Prezzo nella Sottomaschera Ordini della maschera Ordini e 1,06, viene aggiunto il 6% al valore del controllo Prezzo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=Parent![IDOrdine]</TD>
+<TD class=TT width=52%>Il valore del controllo IDOrdine nella maschera principale della sottomaschera corrente.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nella seguente tabella vengono elencati gli esempi delle espressioni che si possono utilizzare nei controlli calcolati dei report.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Se viene utilizzata l'espressione</TH>
+<TH width=52%>Verrà visualizzato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=Reports![Fattura]![IDOrdine]</TD>
+<TD class=TT width=52%>Il valore del controllo IDOrdine del report Fattura.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=Reports![Riepilogo]![Sottoreport Riepilogo]![TotaleVendite]</TD>
+<TD class=TT width=52%>Il valore del controllo TotaleVendite nel sottoreport Riepilogo del report Riepilogo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>=Parent![IDOrdine]</TD>
+<TD class=TT width=52%>Il valore del controllo IDOrdine nel report principale del sottoreport corrente.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>In un controllo calcolato l'espressione deve essere preceduta dall'operatore <B>=</B>.<BR><BR></LI>
+
+	<LI class=NLB>Quando si imposta la proprietà <B>Nome elemento</B> di un controllo calcolato, assicurarsi di utilizzare un nome univoco. Non utilizzare il nome di uno dei controlli utilizzati nell'espressione.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconCalcControlExpReferToValuesInControlsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

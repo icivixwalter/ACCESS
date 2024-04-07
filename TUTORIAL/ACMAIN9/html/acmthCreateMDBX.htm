@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateMDBX'
+Feature='acmth'
+Handoff='3'
+SourceFile='acaNewX.doc'
+Tnum='273500'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Create</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreatemdbx"></A>Esempio di metodo Create</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzato il metodo <B>Create</B> per creare un nuovo database crittografato con nome Nuovodb.mdb:</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Il metodo <B>Create</B> non è supportato nei progetti di Microsoft Access (adp) dal provider SQL fornito con Microsoft Access 2000. Per utilizzare questo esempio, è necessario impostare un riferimento a "Microsoft ADO ext. 2.1 for DDL and Security".</P>
+
+
+
+<PRE class=CT><CODE>Sub NuovoDatabase()
+&nbsp;&nbsp;&nbsp; Dim cat As New ADOX.Catalog
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ cat.<B>Create</B> "Provider=Microsoft.Jet.OLEDB.4.0;" _&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &amp; "Data Source=Nuovodb.mdb;" _
+    &amp; "Jet OLEDB:Encrypt Database=True"
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; Set cat = Nothing
+End Sub
+</CODE></PRE>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acmthCreateMDBXW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjDBEngineX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acdobjx.doc'
+Tnum='234395'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto DBEngine (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjdbenginex"></A>Esempio di oggetto DBEngine (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono stampate tutte le proprietà dell'oggetto <B>DBEngine</B>.</P>
+
+<PRE class=CT><CODE>Sub ProprietàEngine()
+&nbsp;&nbsp;&nbsp; Dim prp As Property
+
+&nbsp;&nbsp;&nbsp; For Each prp In <B>DBEngine</B>.Properties
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print prp.Name
+&nbsp;&nbsp;&nbsp; Next prp
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproResynchCommandX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproadpv9.doc'
+Tnum='274802'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ResyncCommand e UniqueTable</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproresynchcommandx"></A>Esempio di proprietà ResyncCommand e UniqueTable</B></P>
+
+
+
+<P class=T>Negli esempi riportati di seguito sono previste due tabelle SQL Server: Pazienti e Medici, con una relazione uno-a-molti tra Medici e Pazienti. Entrambe le tabelle hanno una colonna di identità come chiave primaria. </P>
+
+<P class=RL><B>Tabella Pazienti</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=27%>Colonna</TH>
+<TH width=28%>Tipo dati </TH>
+<TH width=45%>Attributi</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>ID</TD>
+<TD class=TT width=28%>int</TD>
+<TD class=TT width=45%>identità, Chiave primaria</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Cognome</TD>
+<TD class=TT width=28%>varchar(30)</TD>
+<TD class=TT width=45%>Not Null</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Nome</TD>
+<TD class=TT width=28%>varchar(20)</TD>
+<TD class=TT width=45%>Not Null</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>MedicoPrincipale</TD>
+<TD class=TT width=28%>int</TD>
+<TD class=TT width=45%>null Chiave esterna si riferisce ai Medico (IDMedico)</TD>
+</TR>
+</TABLE><BR>
+
+<P class=RL><B>Tabella Medici</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=33%>Colonna</TH>
+<TH width=33%>Tipo dati </TH>
+<TH width=34%>Attributi</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>IDMedico</TD>
+<TD class=TT width=33%>int</TD>
+<TD class=TT width=34%>identità, Chiave primaria</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>NomeMedico</TD>
+<TD class=TT width=33%>varchar(30)</TD>
+<TD class=TT width=34%>Not Null Unique</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=33%>TelMedico</TD>
+<TD class=TT width=33%>char(15)</TD>
+<TD class=TT width=34%>Not Null </TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>L'utente desidera creare una visualizzazione foglio dati aggiornabile dei dati sui pazienti e sui relativi medici. La griglia dovrà visualizzare quanto segue:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=6>
+
+<TR VALIGN="top">
+<TH width=7%>ID</TH>
+<TH width=16%>Cognome</TH>
+<TH width=17%>Nome</TH>
+<TH width=18%>MedicoPrincipale</TH>
+<TH width=16%>NomeMedico</TH>
+<TH width=26%>TelMedico</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=7%>1</TD>
+<TD class=TT width=16%>Corbo</TD>
+<TD class=TT width=17%>Chiara</TD>
+<TD class=TT width=18%>10</TD>
+<TD class=TT width=16%>Carta</TD>
+<TD class=TT width=26%>02412963</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=7%>2</TD>
+<TD class=TT width=16%>Dal Monte</TD>
+<TD class=TT width=17%>Valeria</TD>
+<TD class=TT width=18%>20</TD>
+<TD class=TT width=16%>Bergamaschi</TD>
+<TD class=TT width=26%>02465709</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=7%>3</TD>
+<TD class=TT width=16%>Vailati</TD>
+<TD class=TT width=17%>Marco</TD>
+<TD class=TT width=18%>20</TD>
+<TD class=TT width=16%>Bergamaschi</TD>
+<TD class=TT width=26%>02465709</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=7%>4</TD>
+<TD class=TT width=16%>Rancati</TD>
+<TD class=TT width=17%>Elena</TD>
+<TD class=TT width=18%>10</TD>
+<TD class=TT width=16%>Carta</TD>
+<TD class=TT width=26%>02412963</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>La query effettiva sottostante alla mascherà avrà la seguente struttura logica:</P>
+
+<PRE class=CT><CODE>SELECT P.ID, P.Cognome, P.Nome, P.MedicoPrincipale, D.NomeMedico, _
+  D.TeleMedico FROM Pazienti P JOIN Medici D ON _
+  ( P.MedicoPrincipale = D.IDMedico)</CODE></PRE>
+
+
+
+<P class=RL><B>Azioni dell'interfaccia utente</B>
+
+<OL>
+	<LI class=LPROC>Si desidera modificare il medico assegnato a Marco Vailati in Dott. Zerlini, un medico esistente senza pazienti assegnati. Si digita il valore IDMedico 30 per il Dott. Zerlini nella colonna MedicoPrincipale della terza riga. A questo punto ci si aspetta che venga visualizzato "Zerlini" sotto NomeMedico, con il numero telefonico del medico nella stessa riga. 
+<P class=LNT><B>Nota&nbsp;&nbsp;</B> Normalmente si vorrebbe avere una Ricerca guidata definita su MedicoPrincipale in modo che sia possibile selezionare un nome da un elenco a discesa senza dover conoscere l'ID del Dott. Zerlini. In questo caso, per NomeMedico non si avrebbe una colonna separata, poiché il nome verrebbe visualizzato nella colonna MedicoPrincipale. Ci si aspetta comunque di vedere il corretto numero telefonico del Dott. Zerlini una volta eseguito l'aggiornamento.
+</LI>
+
+	<LI class=LPROC>Si desidera aggiungere un nuovo paziente ed assegnarlo al Dott. Carta. Si fa clic sulla riga *, poiché la colonna ID è una colonna di identità per la tabella Pazienti, l'interfaccia utente dovrà visualizzare "(Contatore)" in quella prima cella e non consentire all'utente di immettere un valore. Si immette il nome e il cognome del nuovo paziente ed un valore IDMedico esistente nella colonna MedicoPrincipale. Nella tabella Pazienti viene inserito un nuovo record, la colonna ID dovrà essere aggiornata con il valore appena generato e visualizzato sulla griglia, e le colonne del nome e del numero telefonico del medico dovranno essere riprese dai dati esistenti. <BR><BR></LI>
+
+	<LI class=LPROC>Si desidera eliminare Chiara Corbo. Si seleziona la riga, quindi Elimina. Il record di Chiara Corbo viene eliminato dalla tabella Pazienti, la riga viene rimossa dal cursore, ma il cursore non tenta di eliminare il record del Dott. Carta dalla tabella Medici, poiché questa operazione darebbe luogo a un errore server se fosse attivato il DRI, ma anche se non attivato dal database, l'eliminazione di questo record renderebbe non validi i dati della riga 4. </LI>
+</OL>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtDblClickEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv1_1a.rtf'
+Tnum='187154'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento DoppioClic - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtdblclickepx"></A>Evento DoppioClic - Esempio di routine evento</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito illustra come utilizzare una routine evento DoppioClic per aprire una maschera che visualizza i record della tabella che rappresenta l'origine riga di una casella combinata. Quando si fa doppio clic sulla casella combinata Venditore in una maschera Ordini, viene visualizzata la maschera Impiegati che mostra il record relativo all'impiegato selezionato nella casella combinata.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la seguente routine evento a una maschera denominata Ordini contenente una casella combinata denominata IDImpiegato. La casella combinata dovrebbe avere come origine riga la stessa tabella che rappresenta l'origine per la maschera Impiegati oppure una query basata su tale tabella.</P>
+
+
+
+<PRE class=CT><CODE>Private Sub IDImpiegato_<B>DblClick</B>(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; DoCmd.OpenForm "Impiegati", , , _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "IDImpiegato = Forms!Ordini!IDImpiegato"
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

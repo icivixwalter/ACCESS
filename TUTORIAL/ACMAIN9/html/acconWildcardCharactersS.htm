@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWildcardCharactersS'
+Feature='Data: Find'
+Handoff='1'
+SourceFile='CFLTFND.RTF'
+Tnum='188185'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'utilizzo dei caratteri jolly nella ricerca di valori parziali o corrispondenti</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwildcardcharacterss"></A>Informazioni sull'utilizzo dei caratteri jolly nella ricerca di valori parziali o corrispondenti</H1>
+
+<P class=T>I caratteri jolly vengono utilizzati come segnaposto per altri caratteri quando si specifica un valore che si desidera trovare e:
+
+<UL>
+	<LI class=LB1>Si conosce solo parte del valore oppure<BR><BR></LI>
+
+	<LI class=LB1>Si desidera trovare dei valori che iniziano con una lettera specifica o che corrispondono a una determinata struttura.</LI>
+</UL>
+
+<P class=T>Per trovare valori di campo, record o nomi di file in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessdatabase');" class="pop">database di Microsoft Access</A>, è possibile utilizzare i seguenti caratteri nelle finestre di dialogo <B>Trova</B> e <B>Sostituisci</B> oppure in <A HREF="javascript:HelpPopup('actip9.hlp','defquery');" class="pop">query</A>, comandi ed <A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressioni</A>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=22%>Carattere</TH>
+<TH width=42%>Utilizzo</TH>
+<TH width=36%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>*</TD>
+<TD class=TT width=42%>Corrisponde a un numero qualsiasi di caratteri. Può essere utilizzato come primo o ultimo carattere nella stringa dei caratteri.</TD>
+<TD class=TT width=36%><I>no*</I> trova nome, note e notare</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>?</TD>
+<TD class=TT width=42%>Corrisponde a qualsiasi singolo carattere alfabetico.</TD>
+<TD class=TT width=36%><I>B?llo</I> trova ballo, bello e bollo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>[ ]</TD>
+<TD class=TT width=42%>Corrisponde a qualsiasi singolo carattere all'interno delle parentesi quadre.</TD>
+<TD class=TT width=36%><I>B[ae]llo</I> trova ballo e bello, ma non bollo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>!</TD>
+<TD class=TT width=42%>Corrisponde a qualsiasi carattere non incluso nelle parentesi quadre.</TD>
+<TD class=TT width=36%><I>b[!ae]llo</I> trova bollo e bullo, ma non ballo e bello</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>-</TD>
+<TD class=TT width=42%>Corrisponde a uno qualsiasi dei caratteri di un intervallo. È necessario specificare l'intervallo in ordine crescente (dalla A alla Z, non dalla Z alla A).</TD>
+<TD class=TT width=36%><I>b[a-c]d</I> trova bad, bbd e bcd</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>#</TD>
+<TD class=TT width=42%>Corrisponde a qualsiasi singolo carattere numerico.</TD>
+<TD class=TT width=36%><I>1#3</I> trova 103, 113, 123</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=LB1>I caratteri jolly vengono utilizzati in genere con i tipi di dati Testo anche se è possibile utilizzarli talvolta con altri tipi di dati, come le date, se non vengono modificate le proprietà delle Impostazioni internazionali per questi tipi di dati.<BR><BR></LI>
+
+	<LI class=LB1>Quando si utilizzano i caratteri jolly per ricercare un asterisco (*), un punto interrogativo (?), un cancelletto (#), una parentesi quadra di apertura ([) o un trattino (-), è necessario racchiudere tra parentesi quadre l'elemento che si sta ricercando. Per ricercare ad esempio un punto interrogativo, digitare <B>[?]</B> nella finestra di dialogo <B>Trova</B>. Se si sta ricercando contemporaneamente un trattino e altri caratteri, inserire il trattino prima o dopo tutti gli altri caratteri all'interno delle parentesi quadre. Se tuttavia dopo la parentesi quadra di apertura c'è un punto esclamativo (!), inserire il trattino dopo di esso. Se si sta ricercando un punto esclamativo (!) o una parentesi quadra di chiusura (]), non è necessario racchiuderlo tra parentesi.<BR><BR></LI>
+
+	<LI class=LB1>Non è possibile ricercare contemporaneamente le parentesi quadre di apertura e chiusura ([ ]) perché in Microsoft Access questa combinazione viene interpretata come una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A>. È necessario racchiudere a loro volta le parentesi quadre di apertura e chiusura tra parentesi ([[ ]]).<BR><BR></LI>
+
+	<LI class=LB1>Un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> utilizza caratteri jolly diversi da quelli utilizzati da un database di Access. Per ulteriori informazioni, ricercare l'argomento relativo ai caratteri jolly nell'indice della documentazione in linea di Microsoft SQL Server. Se si stanno ricercando valori in qualsiasi altra origine dati, potrebbe essere necessario utilizzare caratteri jolly diversi. Per ulteriori informazioni, consultare la documentazione relativa a quell'origine dati.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWildcardCharactersSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

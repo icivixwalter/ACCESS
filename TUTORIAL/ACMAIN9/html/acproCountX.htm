@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCountX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apromsc1.rtf'
+Tnum='187109'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Count</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocountx"></A>Esempio di proprietà Count</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la proprietà <B>Count</B> per controllare un ciclo che stampa informazioni su tutte le maschere aperte e sui relativi controlli.</P>
+
+<PRE class=CT><CODE>Sub Stampa_Controlli_Maschera()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, intI As Integer
+&nbsp;&nbsp;&nbsp; Dim intJ As Integer
+&nbsp;&nbsp;&nbsp; Dim intControlli As Integer, intMaschere As Integer
+&nbsp;&nbsp;&nbsp; intMaschere = Forms.<B>Count</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Numero di maschere aperte.
+&nbsp;&nbsp;&nbsp; If intMaschere &gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For intI = 0 To intMaschere - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set frm = Forms(intI)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print frm.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intControlli = frm.<B>Count</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If intControlli &gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For intJ = 0 To intControlli - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print vbTab; frm(intJ).Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next intJ
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print vbTab; "(non ci sono controlli)"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next intI
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Non ci sono maschere aperte.", vbExclamation, "Controlli delle maschere"
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio che segue viene determinato il numero di controlli di una maschera o di un report e assegnato tale numero a una variabile.</P>
+
+<PRE class=CT><CODE>Dim intControlliMaschera As Integer
+Dim intControlliReport As Integer
+intControlliMaschera = Forms!Impiegati.<B>Count</B>
+intControlliReport = Reports!SpeseTrasporto.<B>Count</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPrtDevMode'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproprt2_1a.rtf'
+Tnum='187912'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà PrtDevMode</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproprtdevmode"></A>Proprietà PrtDevMode</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPrtDevModeC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPrtDevModeX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPrtDevModeA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>PrtDevMode</B> per impostare o restituire le informazioni sulla modalità di periferica di stampa specificata per una maschera o per un report nella finestra di dialogo <B>Stampa</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per una documentazione completa relativa alle proprietà <B>PrtDevMode</B>, <B>PrtDevNames</B> e <B>PrtMip</B>, si consiglia di consultare Win32 Software Development Kit.</P>
+
+
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'impostazione della proprietà <B>PrtDevMode</B> è una struttura a 94-byte che riflette la struttura DEVMODE definita in Win32 Software Development Kit. Per informazioni dettagliate sui membri della proprietà <B>PrtDevMode</B>, consultare Win32 Software Development Kit.</P>
+
+<P class=T>La proprietà <B>PrtDevMode</B> utilizza i membri riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=22%>Membro</TH>
+<TH width=78%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>DeviceName</TD>
+<TD class=TT width=78%>Una <A HREF="javascript:HelpPopup('actip9.hlp','defString');" class="pop">stringa</A> di massimo 32 byte che specifica il nome della periferica supportata dal driver come, ad esempio, "HP LaserJet IIISi" se la stampante specificata è una Hewlett-Packard LaserJet IIISi. Ciascun driver di stampante dispone di una stringa univoca.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>SpecVersion</TD>
+<TD class=TT width=78%>Un valore <A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>Intero</B></A> che specifica il numero della versione della struttura DEVMODE in Win32 Software Development Kit.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>DriverVersion</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica il numero della versione del driver di stampante assegnato dallo sviluppatore del driver di stampante.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Size</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica in byte le dimensioni della struttura DEVMODE. Tale valore non include il membro opzionale <B>dmDriverData</B> per dati specifici della periferica. Il membro opzionale può essere posizionato dopo tale struttura. Se un'applicazione gestisce solo la porzione di dati indipendente dal driver, è possibile utilizzare tale membro per trovare la lunghezza della struttura senza dover tenere in considerazione versioni diverse.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>DriverExtra</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica in byte le dimensioni del membro opzionale <B>dmDriverData</B> per i dati specifici della periferica. Il membro opzionale può essere posizionato dopo tale struttura. Se un'applicazione non utilizza le informazioni specifiche del driver, impostare tale membro a zero.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Fields</TD>
+<TD class=TT width=78%>Un valore <A HREF="javascript:HelpPopup('actip9.hlp','defLongDataType');" class="pop"><B>Intero lungo</B></A> che specifica quale dei rimanenti membri della struttura DEVMODE è stato inizializzato. Si può trattare di qualsiasi combinazione di costanti specifiche o di nessuna di esse. Per un elenco delle costanti disponibili vedere <A HREF="FieldsConstants.htm">Costanti per il membro Fields</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Orientation</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica l'orientamento del foglio. Può essere sia 1 (verticale) sia 2 (orizzontale).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>PaperSize</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica le dimensioni del foglio di stampa. Se si imposta tale membro a zero o a 256, la lunghezza e la larghezza del foglio sono specificate rispettivamente dai membri PaperLength e PaperWidth. In caso contrario, è possibile impostare il membro PaperSize a un valore predefinito. Per un elenco dei valori disponibili vedere <A HREF="PaperSizeValues.htm">Valori per il membro PaperSize</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>PaperLength</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica la lunghezza del foglio in unità di 1/10 di millimetro. Tale membro ignora la lunghezza del foglio specificata dal membro PaperSize per le dimensioni personalizzate dei fogli o per le periferiche come stampanti ad aghi che sono in grado di stampare con più dimensioni di fogli.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>PaperWidth</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica la larghezza del foglio in unità di 1/10 di millimetro. Tale membro ignora la larghezza del foglio specificata dal membro PaperSize.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Scale</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica il fattore per cui verranno cambiate le dimensioni dell'output di stampa. Le dimensioni apparenti della pagina vengono ridimensionate rispetto alle sue dimensioni fisiche in base a un fattore di scala percentuale. Un foglio che misura, ad esempio, 21,6 per 27,9 cm (dimensione lettera) con il valore di Scale di 50 contiene una quantità di dati uguale a quelli di una pagina che misura 43,2 per 55,8 cm, poiché il testo di output e i grafici avranno l'altezza e la larghezza dimezzate rispetto a quelle originarie.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Copies</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica il numero di copie stampate se la periferica di stampa supporta copie multiple.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>DefaultSource</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica il cassetto di alimentazione predefinito. Per un elenco dei valori disponibili vedere <A HREF="DefaultSourceValues.htm">Valori per il membro DefaultSource</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>PrintQuality</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica la risoluzione della stampante. I valori sono -4 (alta), -3 (media), -2 (bassa), e -1 (bozza).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Color</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B>. Per stampanti a colori, il valore specifica se l'output viene stampato a colori. I valori sono 1 (a colori) e 2 (monocromatico).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Duplex</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B>. Per stampanti con stampa fronte retro. Il valore specifica se l'output viene stampato su entrambi i lati del foglio. I valori sono 1 (singolo), 2 (orizzontale) e 3 (verticale).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>YResolution</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica la risoluzione y della stampante in DPI (punti per pollice, Dots Per in). Se la stampante inizializza questo membro, il membro PrintQuality specifica la risoluzione x della stampante in DPI.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>TTOption</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica come verranno stampati i caratteri TrueType. Per un elenco dei valori disponibili vedere <A HREF="TTOptionValues.htm">Valori per il membro TTOption</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Collate</TD>
+<TD class=TT width=78%>Un valore <B>Intero</B> che specifica se utilizzare l'ordinamento nella stampa a copie multiple. L'utilizzo di copie non ordinate fa in modo che l'output sia più veloce ed efficiente, poiché i dati vengono inviati alla stampante una sola volta.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>FormName</TD>
+<TD class=TT width=78%>Una stringa di massimo 16 caratteri che specifica le dimensioni del foglio da usare, come, ad esempio, "Lettera" o "Legale".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Pad</TD>
+<TD class=TT width=78%>Un valore <B>Intero lungo</B> che viene utilizzato per riempire spazi, caratteri o valori per le versioni successive.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Bits</TD>
+<TD class=TT width=78%>Un valore <B>Intero lungo</B> che specifica in bit per pixel la risoluzione di colori della periferica di visualizzazione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>PW</TD>
+<TD class=TT width=78%>Un valore <B>Intero lungo</B> che specifica in pixel la larghezza della superficie visibile della periferica, schermo o stampante.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>PH</TD>
+<TD class=TT width=78%>Un valore <B>Intero lungo</B> che specifica in pixel l'altezza della superficie visibile della periferica, schermo o stampante.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>DFI</TD>
+<TD class=TT width=78%>Un valore <B>Intero lungo</B> che specifica la modalità di visualizzazione della periferica.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>DFR</TD>
+<TD class=TT width=78%>Un valore <B>Intero lungo</B> che specifica in hertz (cicli al secondo) la frequenza della periferica di visualizzazione in una determinata modalità.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare la proprietà <B>PrtDevMode</B> utilizzando <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=T>L'impostazione della proprietà è di lettura/scrittura in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A> e di sola lettura in altre visualizzazioni.</P>
+
+
+
+<P class=CAT><B>Attenzione</B>&nbsp;&nbsp; I driver delle stampanti possono aggiungere dati specifici della periferica subito dopo i 94 byte della struttura DEVMODE. È importante, pertanto, che i dati DEVMODE precedentemente delineati non superino i 94 byte.</P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>La struttura DEVMODE viene utilizzata solo da driver di stampanti che esportano la funzione <B>ExtDeviceMode</B>.</P>
+
+<P class=T>Un'applicazione può recuperare le dimensioni del foglio e i nomi supportati dalla stampante chiamando la funzione <B>DeviceCapabilities</B> tramite i valori DC_PAPERS, DC_PAPERSIZE e DC_PAPERNAMES.</P>
+
+<P class=T>Prima di impostare il valore del membro TTOption, le applicazioni dovrebbero verificare come il driver di una stampante sia in grado di utilizzare caratteri TrueType chiamando la funzione <B>DeviceCapabilities</B> tramite il valore DC_TRUETYPE.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRun'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186408'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Run</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthrun"></A>Metodo Run</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRunC;acactRunCode;vaconUnderstandingOleAutomation;vaconWorkingAcross;vafctCreateObject;vafctGetObject;vastmSet">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRunX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRunA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare il metodo <B>Run</B> per eseguire una determinata routine <A HREF="javascript:HelpPopup('actip9.hlp','defFunctionProcedure');" class="pop"><B>Function</B></A> o <A HREF="javascript:HelpPopup('actip9.hlp','defSubProcedure');" class="pop"><B>Sub</B></A> di Microsoft Access oppure una routine definita dall'utente. Tale metodo risulta utile quando si controlla Microsoft Access da un'altra applicazione tramite <A HREF="javascript:HelpPopup('actip9.hlp','defOLEAutomation');" class="pop">Automazione</A>, precedentemente nota come Automazione OLE. È possibile, ad esempio, utilizzare il metodo <B>Run</B> da un <A HREF="javascript:HelpPopup('actip9.hlp','defActiveXComponent');" class="pop">componente ActiveX</A> per eseguire una routine <B>Sub</B> definita in un database di Microsoft Access.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>applicazione</I><B>.Run</B> <I>routine</I>[<I>, arg1</I>, <I>arg2</I>, ..., <I>arg30</I>]</P>
+
+
+
+<P class=T>Il metodo <B>Run</B> prevede gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>applicazione</I></TD>
+<TD class=TT width=75%>Oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>routine</I></TD>
+<TD class=TT width=75%>Nome della routine <B>Function</B> o <B>Sub</B> da eseguire. Se si chiama una routine in un altro database, utilizzare il nome del progetto e il nome della routine separati da un punto secondo la forma seguente:
+<P class=TSYN>"<I>nomeprogetto</I>.<I>nomeroutine</I>"</P>
+
+
+
+<P class=TT>Se si esegue del codice di Visual Basic che contiene il metodo <B>Run</B> in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, Microsoft Access ricerca la routine dapprima nel database di libreria, poi nel database corrente.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%> <I>arg1</I>, <I>arg2</I>, ...</TD>
+<TD class=TT width=75%>Opzionale. Argomenti per la routine <B>Function</B> o <B>Sub</B> specificata. È possibile fornire un massimo di 30 argomenti.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile impostare un riferimento alla <A HREF="javascript:HelpPopup('actip9.hlp','defTypeLibrary');" class="pop">libreria dei tipi</A> di Microsoft Access da un qualsiasi altro componente ActiveX e utilizzare nel codice oggetti, metodi e proprietà definiti in tale libreria. Non è possibile, tuttavia, impostare un riferimento a un singolo database di Microsoft Access da un'applicazione diversa da Microsoft Access. Il metodo <B>Run</B> fornisce un modo per richiamare da un'altra applicazione una routine definita in un database di Microsoft Access.</P>
+
+<P class=T>Si supponga, ad esempio, di aver definito in un database una routine chiamata NuovaMaschera impostandone a "CodiceWiz" la proprietà <B>ProjectName</B>. La routine NuovaMaschera impiega un argomento stringa. È possibile richiamare da Visual Basic la routine NuovaMaschera come indicato di seguito.</P>
+
+<PRE class=CT><CODE>Dim appAccess As New Access.Application
+appAccess.OpenCurrentDatabase ("C:\Documenti\CodiceWiz.mdb")
+appAccess.Run "CodiceWiz.NuovaMaschera", "Stringa"</CODE></PRE>
+
+
+
+<P class=T>Se è possibile che in un database diverso sia presente un'altra routine con lo stesso nome, qualificare l'argomento <I>routine</I> con il nome del database in cui la routine risiede, come mostrato nell'esempio precedente.</P>
+
+<P class=T>È inoltre possibile utilizzare il metodo <B>Run</B> per richiamare una routine in un database di Microsoft Access con <A HREF="javascript:HelpPopup('actip9.hlp','defReferencedDatabase');" class="pop">riferimenti</A> a un altro database.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCodeContextObjectX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproobj3_1a.rtf'
+Tnum='187071'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà CodeContextObject</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocodecontextobjectx"></A>Esempio di proprietà CodeContextObject</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>CodeContextObject</B> viene utilizzata in una funzione per identificare il nome dell'oggetto in cui si è verificato un errore. Il nome dell'oggetto viene quindi utilizzato nel titolo della casella di messaggio e nel corpo del messaggio di errore. L'istruzione <B>Error</B> viene usata nell'evento Clic del pulsante di comando per generare l'errore per questo esempio.</P>
+
+<PRE class=CT><CODE>Private Sub Comando1_Click()
+&nbsp;&nbsp;&nbsp; On Error GoTo Comando1_Err
+&nbsp;&nbsp;&nbsp; Error 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Genera errore di divisione per zero.
+&nbsp;&nbsp;&nbsp; Exit Sub
+
+&nbsp;&nbsp;&nbsp; Comando1_Err:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If ErrorMessage("Comando1_Click() Evento", vbYesNo + _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vbInformation, Err) = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+End Sub
+
+Function MessaggioErrore(strTesto As String, intTipo As Integer, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intErrVal As Integer) As Integer
+&nbsp;&nbsp;&nbsp; Dim objCorrente As Object
+&nbsp;&nbsp;&nbsp; Dim strTitoloCasellaMess As String
+&nbsp;&nbsp;&nbsp; Set objCorrente = <B>CodeContextObject</B>
+&nbsp;&nbsp;&nbsp; strTitoloCasellaMess = "Errore in " &amp; objCorrente.Name
+&nbsp;&nbsp;&nbsp; strTesto = strTesto &amp; "Errore #" &amp; intValErr _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; " in " &amp; objCorrente.Name
+&nbsp;&nbsp;&nbsp; MessaggioErrore = MsgBox(strTesto, intTipo, strTitoloCasellaMess)
+&nbsp;&nbsp;&nbsp; Err = 0
+End Function</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproIndexed'
+Feature='acpro'
+Handoff='2'
+SourceFile='aprotbl1.doc'
+Tnum='187337'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Indexed (Indicizzato)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdmthAppend">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproindexed"></A>Proprietà Indexed (Indicizzato)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproIndexedC;adproPrimaryKey;damthCreateIndex;daproIgnoreNulls">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproIndexedX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproIndexedA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>Indexed</B> per impostare un <A HREF="javascript:HelpPopup('actip9.hlp','defIndex');" class="pop">indice</A> a campo singolo. Un indice rende più veloce le query su campi indicizzati così come le operazioni di ordinamento e raggruppamento. Se, ad esempio, si cercano i nomi di determinati impiegati nel campo Cognome, è possibile creare un indice relativo a tale campo.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>Indexed</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=27%>Impostazione</TH>
+<TH width=73%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>No</TD>
+<TD class=TT width=73%>Impostazione predefinita. Nessun indice.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Sì (con duplicati)</TD>
+<TD class=TT width=73%>L'indice consente duplicati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Sì (senza duplicati)</TD>
+<TD class=TT width=73%>L'indice non consente duplicati.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare questa proprietà solo nella sezione Proprietà campo in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura della tabella</A>. È possibile impostare un indice a campo singolo impostando la proprietà <B>Indexed</B> nella sezione Proprietà campo in visualizzazione Struttura della tabella. È inoltre possibile impostare indici multicampo nella <A HREF="javascript:HelpPopup('actip9.hlp','defIndexesWindow');" class="pop">finestra degli indici</A> scegliendo <B>Indici</B> dal menu <B>Visualizza</B>.</P>
+
+<P class=T>Se si aggiunge un indice a campo singolo nella finestra degli indici, Microsoft Access imposterà la proprietà <B>Indexed</B> per il campo a Sì.</P>
+
+<P class=T>In <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>, utilizzare il metodo ADO <A HREF="JavaScript:hhobj_4.Click()">Append</A> dell'insieme <B>Indexes</B> per creare un indice per un campo.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Utilizzare la proprietà <B>Indexed</B> per trovare e ordinare record <A HREF="achowCreateSinglefieldIndexS.htm">utilizzando un campo singolo</A> in una tabella. Il campo può contenere valori univoci o non univoci. È possibile, ad esempio, creare un indice in un campo IDImpiegato di una tabella Impiegati in cui ciascun ID impiegato è univoco oppure è possibile creare un indice basato su un campo Nome in cui alcuni nomi possono essere duplicati.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Non è possibile indicizzare campi contenenti il tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defMemoDataType');" class="pop">Memo</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkDataType');" class="pop">Collegamento ipertestuale</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObjectDataType');" class="pop">Oggetto OLE</A>.</P>
+
+
+
+<P class=T>È possibile creare indici secondo le necessità. Gli indici vengono creati salvando la tabella e vengono aggiornati automaticamente quando si modificano o aggiungono record. È possibile aggiungere o eliminare indici in qualsiasi momento in visualizzazione Struttura della tabella.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile specificare testo utilizzato, in genere all'inizio o alla fine di un nome di campo, come "ID", "codice" o "num" per l'opzione <B>Indice automatico all'importazione/creazione</B> nella scheda <B>Tabelle/Query</B>, disponibile scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B>. Quando si importano file di dati contenenti tale testo nei corrispondenti nomi di campo, per tali campi si crea un indice.</P>
+
+
+
+<P class=T>Se la <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> di una tabella è un campo singolo, la proprietà <B>Indexed</B> viene automaticamente impostata a Sì (senza duplicati).</P>
+
+<P class=T>Se si desidera <A HREF="achowCreateMultipleFieldIndexS.htm">creare indici multicampo</A>, utilizzare la finestra degli indici.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

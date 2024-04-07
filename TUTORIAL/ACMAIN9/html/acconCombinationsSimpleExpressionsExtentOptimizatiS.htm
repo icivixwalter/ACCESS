@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCombinationsSimpleExpressionsExtentOptimizatiS'
+Feature='Queries: Optimize'
+Handoff='1'
+SourceFile='CQRYOPT.RTF'
+Tnum='188141'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di espressioni ottimizzabili complesse</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconcombinationssimpleexpressionsextentoptimizatis"></A>Esempi di espressioni ottimizzabili complesse</H1>
+
+<P class=T>Gli esempi riportati di seguito presuppongono che siano stati creati degli indici per i campi Cognome e Data di assunzione, ma non per Città o Nome. La seguente tabella elenca degli esempi di combinazioni di espressioni semplici e il livello di ottimizzazione del risultato.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=26%>Espressione 
+ottimizzabile</TH>
+<TH width=15%>Operatore</TH>
+<TH width=32%>Espressione 
+ottimizzabile</TH>
+<TH width=27%>Risultato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>[Cognome]="Rossi" </TD>
+<TD class=TT width=15%><B>AND</B></TD>
+<TD class=TT width=32%>[Data di assunzione]&lt;#30/12/90#</TD>
+<TD class=TT width=27%>Ottimizzabile mediante Rushmore</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>[Cognome]="Rossi" </TD>
+<TD class=TT width=15%><B>OR</B></TD>
+<TD class=TT width=32%>[Data di assunzione]&lt;#30/12/90#</TD>
+<TD class=TT width=27%>Ottimizzabile mediante Rushmore</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=26%>Espressione
+ottimizzabile</TH>
+<TH width=15%>Operatore</TH>
+<TH width=32%>Espressione
+non ottimizzabile </TH>
+<TH width=27%>Risultato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>[Cognome]="Rossi" </TD>
+<TD class=TT width=15%><B>AND</B></TD>
+<TD class=TT width=32%>[Città]="Seattle"</TD>
+<TD class=TT width=27%>Parzialmente ottimizzabile (ma non utilizza Rushmore)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>[Cognome]="Rossi" </TD>
+<TD class=TT width=15%><B>OR</B></TD>
+<TD class=TT width=32%>[City]="Seattle"</TD>
+<TD class=TT width=27%>Non ottimizzabile</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=26%>Espressione
+non ottimizzabile </TH>
+<TH width=15%>Operatore</TH>
+<TH width=32%>Espressione
+non ottimizzabile </TH>
+<TH width=27%>Risultato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>[Nome]="Domenico"</TD>
+<TD class=TT width=15%><B>AND</B></TD>
+<TD class=TT width=32%>[Città]="Seattle"</TD>
+<TD class=TT width=27%>Parzialmente ottimizzabile (ma non utilizza Rushmore)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>[Nome]="Domenico" </TD>
+<TD class=TT width=15%><B>OR</B></TD>
+<TD class=TT width=32%>[Città]="Seattle"</TD>
+<TD class=TT width=27%>Non ottimizzabile</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconCombinationsSimpleExpressionsExtentOptimizatiSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

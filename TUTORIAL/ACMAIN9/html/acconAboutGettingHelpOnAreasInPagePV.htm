@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutGettingHelpOnAreasInPagePV'
+Feature='Miscellaneous: Help'
+Handoff='3'
+SourceFile='dappgvew.doc'
+Tnum='279638'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Visualizzare informazioni della Guida in linea su aree specifiche della pagina di accesso ai dati in visualizzazione Pagina</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutgettinghelponareasinpagepv"></A>Visualizzare informazioni della Guida in linea su aree specifiche della pagina di accesso ai dati in visualizzazione Pagina</H1>
+
+<P class=T>Gli argomenti della Guida in linea di Microsoft Access contengono informazioni generali sulla visualizzazione e l'utilizzo di una pagina di accesso ai dati. Gli autori della pagina tuttavia potrebbero avere aggiunto informazioni della Guida specifiche, inserendo delle istruzioni direttamente nella pagina, un pulsante della Guida personalizzato o un collegamento ipertestuale alle informazioni della Guida di maggiore interesse. </P>
+
+<P class=T>Una pagina di accesso ai dati può inoltre includere degli elementi provvisti di una Guida incorporata. Gli <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPivotTableList');" class="pop">elenchi di tabella pivot</A> o i <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefSpreadsheet');" class="pop">fogli di calcolo</A> ad esempio dispongono di una Guida propria che fornisce esclusivamente informazioni sull'utilizzo di quel tipo di oggetti nella pagina. </P>
+
+<P class=T>Nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPageView');" class="pop">visualizzazione Pagina</A> di una pagina di accesso ai dati effettuare una delle seguenti operazioni:
+
+<UL>
+	<LI class=LB1>Per ottenere informazioni della Guida dell'elenco di tabella pivot o del foglio di calcolo, fare clic sul pulsante <IMG SRC="images/0984.bmp"  BORDER=0> sulla barra degli strumenti dell'oggetto in questione.<BR><BR></LI>
+
+	<LI class=LB1>Per visualizzare di nuovo la Guida di Microsoft Access, chiudere la finestra della Guida del foglio di calcolo o dell'elenco di tabella pivot e fare clic sul pulsante <IMG SRC="images/0984.bmp"  BORDER=0> sulla barra degli strumenti nella parte superiore della finestra della visualizzazione Pagina. </LI>
+</UL>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Anche altre funzionalità, come il Lettore multimediale di Windows, dispongono di una propria Guida a cui è possibile accedere facendo clic con il tasto destro del mouse sulla funzionalità che interessa.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutGettingHelpOnAreasInPagePVW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

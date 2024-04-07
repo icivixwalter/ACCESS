@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproLastModifiedX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234468'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà LastModified (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprolastmodifiedx"></A>Esempio di proprietà LastModified (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si determina l'ultimo record modificato in un set di record e si imposta un segnalibro per tale record.</P>
+
+<PRE class=CT><CODE>Sub UltimoRecordModificato()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset, varLibro As Variant
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("SELECT * " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "FROM Ordini ORDER BY PaeseDestinatario;")
+&nbsp;&nbsp;&nbsp; With rst
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.FindFirst "PaeseDestinatario = 'UK'"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Modifica il record e salva le modifiche.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Edit
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !PaeseDestinatario = "USA"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Update
+&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; ' Verifica se il set di record supporta i segnalibri.
+&nbsp;&nbsp;&nbsp; If rst.Bookmarkable Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta il segnalibro all'ultimo record modificato.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varLibro = rst.<B>LastModified</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta la valuta all'ultimo record modificato.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.Bookmarks = varLibro
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

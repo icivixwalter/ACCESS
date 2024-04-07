@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlFirstLastS'
+Feature='acfct'
+Handoff='1'
+SourceFile='acdsql04_1.rtf'
+Tnum='234428'
+Piece='1039'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzioni First, Last</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acsqlfirstlasts"></A>Funzioni First, Last</H1>
+
+
+
+<P class=T>In Microsoft Access è possibile utilizzare le funzioni <B>First</B> e <B>Last</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura della query</A>, in un'istruzione <A HREF="javascript:HelpPopup('actip9.hlp','defSQL');" class="pop">SQL</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defSQLView');" class="pop">visualizzazione SQL</A> della <A HREF="javascript:HelpPopup('actip9.hlp','defQueryWindow');" class="pop">finestra della query</A> o in un'istruzione SQL all'interno del codice di Visual Basic. È anche possibile utilizzare le funzioni <B>First</B> e <B>Last</B> in un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> di una maschera o di un report.</P>
+
+<P class=T>Le funzioni <B>First</B> e <B>Last</B> risultano particolarmente utili nei controlli calcolati su un report. Se ad esempio si dispone di un report Ordini raggruppato secondo il campo PaeseDestinatario e ordinato in base al campo DataOrdine, è possibile utilizzare le funzioni <B>First</B> e <B>Last</B> nei controlli calcolati per visualizzare l'intervallo delle date relative a ordini a partire dal primo fino al più recente per ciascun raggruppamento. Per effettuare un raggruppamento in base al campo PaeseDestinatario, fare clic sul pulsante <B>Ordinamento e raggruppamento</B>  <A HREF="javascript:HelpPopup('actip9.hlp','actbrSortingAndGroupingQ');" class="pop"><IMG SRC="images/sortgrp.bmp" BORDER=0></A> sulla <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> <B>Struttura report</B>. Scegliere PaeseDestinatario nella colonna <B>Campo/Espressione</B> e impostare a Sì le proprietà <B>Intestazione (gruppo)</B> e <B>Piè di pagina (gruppo)</B>. In <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura</A>, creare due nuove caselle di testo nel piè di pagina PaeseDestinatario e impostare la proprietà <B>Origine controllo</B> per le due espressioni riportate di seguito:</P>
+
+<PRE class=CT><CODE>=<B>First(</B>[DataOrdine]<B>)</B>
+=<B>Last(</B>[DataOrdine]<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Quando si passa all'<A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">anteprima di stampa</A>, verranno visualizzate le date del primo ordine e dell'ordine più recente per ciascun gruppo di ordini.</P>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; Se si desidera la restituzione del primo o dell'ultimo record di un set di record in Access 2000, creare una query disposta sia in ordine crescente che decrescente e impostare a 1 la proprietà <B>Primi valori</B>. Per ulteriori informazioni, vedere l'argomento relativo alla proprietà <B>TopValues</B>. Da Visual Basic, è inoltre possibile creare un set di risultati ordinati per la query e utilizzare il metodo DAO <B>MoveFirst</B> o <B>MoveLast</B> per la restituzione del primo o dell'ultimo record di un set di record.</P>
+<P class=NT>Nei progetti di Access (adp), le funzioni <B>First</B> e <B>Last</B> presuppongono la mancanza di ordinamento delle informazioni di origine. La funzione restituirà quindi la prima voce corrispondente ai criteri elencati nella funzione che potrebbe non coincidere con la prima o con l'ultima voce nelle informazioni di origine.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

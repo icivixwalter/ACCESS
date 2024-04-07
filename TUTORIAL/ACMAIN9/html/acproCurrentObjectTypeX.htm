@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCurrentObjectTypeX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproref2_1a.rtf'
+Tnum='187116'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà CurrentObjectType, CurrentObjectName</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocurrentobjecttypex"></A>Esempio di proprietà CurrentObjectType, CurrentObjectName</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono utilizzate le proprietà <B>CurrentObjectType</B> e <B>CurrentObjectName</B> con la funzione <B>SysCmd</B> per determinare se l'oggetto attivo è la maschera Prodotti e se tale maschera è aperta ed è stata modificata senza essere salvata. Se tali condizioni sono vere, la maschera viene salvata e quindi chiusa.</P>
+
+<PRE class=CT><CODE>Sub VerificaProdotti()
+&nbsp;&nbsp;&nbsp; Dim intStato As Integer
+&nbsp;&nbsp;&nbsp; Dim intTipoCorrente As Integer
+&nbsp;&nbsp;&nbsp; Dim strNomeCorrente As String
+
+&nbsp;&nbsp;&nbsp; intTipoCorrente = Application.<B>CurrentObjectType</B>
+&nbsp;&nbsp;&nbsp; strNomeCorrente = Application.<B>CurrentObjectName</B>
+&nbsp;&nbsp;&nbsp; If intTipoCorrente = acForm And strNomeCorrente = "Prodotti" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intStato = SysCmd(acSysCmdGetObjectState, intTipoCorrente, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNomeCorrente)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Maschera Prodotti modificata ma non salvata.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If intStato = acObjStateDirty + _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; acObjStateOpen Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Chiude maschera Prodotti e salva modifiche.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.Close intTipoCorrente, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNomeCorrente, acSaveYes
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

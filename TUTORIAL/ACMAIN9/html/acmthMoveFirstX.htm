@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthMoveFirstX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234480'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthmovefirstx"></A>Esempio di metodi MoveFirst, MoveLast, MoveNext e MovePrevious (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzato il metodo <B>MoveLast</B> per richiamare l'oggetto <B>Recordset</B> in modo che sia possibile contare il numero di record. Il metodo <B>MoveFirst</B> sposta quindi il puntatore del record corrente al primo record dell'oggetto <B>Recordset</B>. La routine richiede di immettere un numero, quindi sposta avanti tanti record quanti ne indica quel numero.</P>
+
+<PRE class=CT><CODE>Sub SpostaTraRecord()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset, intI As Integer
+&nbsp;&nbsp;&nbsp; Dim strNumber As String
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("Prodotti")
+&nbsp;&nbsp;&nbsp; ' Richiama oggetto Recordset.
+&nbsp;&nbsp;&nbsp; rst.<B>MoveLast</B>
+&nbsp;&nbsp;&nbsp; ' Ritorna al primo record.
+&nbsp;&nbsp;&nbsp; rst.<B>MoveFirst</B>
+&nbsp;&nbsp;&nbsp; ' Richiama un numero inferiore al numero di record.
+&nbsp;&nbsp;&nbsp; strNumber = InputBox("Immettere un numero inferiore a " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; rst.RecordCount &amp; ".")
+&nbsp;&nbsp;&nbsp; ' Sposta il numero specificato di record.
+&nbsp;&nbsp;&nbsp; For intI = 1 To strNumber
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.<B>MoveNext</B>
+&nbsp;&nbsp;&nbsp; Next intI
+&nbsp;&nbsp;&nbsp; Debug.Print rst!ProductName
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthSetFocus'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186328'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo SetFocus</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproText">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproVisible">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEnabled">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthsetfocus"></A>Metodo SetFocus</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthSetFocusC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthSetFocusX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthSetFocusA">
+</OBJECT></P>
+
+
+
+<P class=T>Con il metodo <B>SetFocus</B>, la <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> specificata, il <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> specificato sulla maschera attiva o il campo specificato sul <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> attivo acquisiscono lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I><B>.SetFocus</B></P>
+
+
+
+<P class=T>Il metodo <B>SetFocus</B> utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>oggetto</I></TD>
+<TD class=TT width=76%>Oggetto <A HREF="acobjForm.htm"><B>Form</B></A> che rappresenta una maschera, oppure un oggetto <A HREF="acobjControl.htm"><B>Control</B></A> che rappresenta un controllo nella maschera o nel foglio dati attivo.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare il metodo <B>SetFocus</B> quando si desidera che un determinato campo o controllo acquisisca lo stato attivo, in modo che ogni input dell'utente venga diretto a tale oggetto.</P>
+
+<P class=T>Per leggere alcune delle proprietà di un controllo, è necessario assicurarsi che tale controllo abbia acquisito lo stato attivo. È necessario, ad esempio, che una <A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">casella di testo</A> acquisisca lo stato attivo prima di poter leggere la relativa proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>Text</B></A>.</P>
+
+<P class=T>È possibile impostare altre proprietà solo quando un controllo non acquisisce lo stato attivo. Non è possibile, ad esempio, impostare le proprietà <A HREF="JavaScript:hhobj_5.Click()"><B>Visible</B></A> o <A HREF="JavaScript:hhobj_6.Click()"><B>Enabled</B></A> a <B>False</B> quando tale controllo ha acquisito lo stato attivo.</P>
+
+<P class=T>È inoltre possibile utilizzare il metodo <B>SetFocus</B> per spostarsi all'interno di una maschera, rispettando alcune condizioni. Se, ad esempio, si seleziona <B>Non applicabile</B> per la prima domanda di un set di domande di una maschera che rappresenta un questionario, è possibile che il codice di Visual Basic salti automaticamente le domande di quel set e che acquisisca lo stato attivo il primo controllo del set di domande successivo.</P>
+
+<P class=T>Solo un controllo o una maschera visibile può acquisire lo stato attivo. Una maschera e i controlli di una maschera non sono visibili fino al completamento dell'evento <A HREF="acevtLoadUnload.htm">Caricamento</A> della maschera. Se si utilizza, quindi, il metodo <B>SetFocus</B> nell'evento Caricamento di una maschera affinché tale maschera acquisisca lo stato attivo, è necessario utilizzare il metodo <A HREF="acmthRepaint.htm"><B>Repaint</B></A> prima del metodo <B>SetFocus</B>.</P>
+
+<P class=T>Non è possibile che un controllo acquisisca lo stato attivo, se la relativa proprietà <B>Enabled</B> è impostata a <B>False</B>. Prima che un controllo possa acquisire lo stato attivo, è necessario impostare a <B>True</B> (-1) la proprietà <B>Enabled</B> di tale controllo. È tuttavia possibile che un controllo acquisisca lo stato attivo, se la relativa proprietà <B>Locked</B> è impostata a <B>True</B>.</P>
+
+<P class=T>Se una maschera contiene controlli per cui la proprietà <B>Enabled</B> è impostata a <B>True</B>, non è possibile che tale maschera acquisisca lo stato attivo. Solo i controlli della maschera possono acquisire lo stato attivo. In tal caso, se si prova a utilizzare <B>SetFocus</B> per una maschera, lo stato attivo passa a quel controllo della maschera che per ultimo è stato oggetto di questo stato.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile utilizzare il metodo <B>SetFocus</B> affinché acquisisca lo stato attivo una <A HREF="javascript:HelpPopup('actip9.hlp','defSubform');" class="pop">sottomaschera</A> che è un tipo di controllo. È inoltre possibile che un controllo di una sottomaschera acquisisca lo stato attivo utilizzando due volte il metodo <B>SetFocus</B>, in modo che la prima ad acquisire lo stato attivo sia la sottomaschera e quindi il controllo della sottomaschera.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

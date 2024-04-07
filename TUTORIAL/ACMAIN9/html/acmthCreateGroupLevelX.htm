@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateGroupLevelX'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186375'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CreateGroupLevel</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreategrouplevelx"></A>Esempio di metodo CreateGroupLevel</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un livello di gruppo in un campo DataOrdine di un report chiamato ReportOrdini. Il report sul quale si desidera creare il livello di gruppo deve essere aperto in visualizzazione Struttura. Poiché gli argomenti <I>intestazione</I> e <I>piè di pagina</I> sono impostati a <B>True</B> (-1), il metodo crea l'intestazione e il piè di pagina per il livello di gruppo, dopodiché, intestazione e piè di pagina vengono ridimensionati.</P>
+
+<PRE class=CT><CODE>Sub CreaGL()
+&nbsp;&nbsp;&nbsp; Dim varGroupLevel As Variant
+
+&nbsp;&nbsp;&nbsp; ' Crea un nuovo livello di gruppo sul campo DataOrdine.
+&nbsp;&nbsp;&nbsp; varGroupLevel = <B>CreateGroupLevel(</B>"ReportOrdini", "DataOrdine", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; True, True<B>)</B>
+&nbsp;&nbsp;&nbsp; ' Imposta altezza delle sezioni intestazione/piè di pagina.
+&nbsp;&nbsp;&nbsp; Reports!OrderReport.Section(acGroupLevel1Header).Height = 400
+&nbsp;&nbsp;&nbsp; Reports!OrderReport.Section(acGroupLevel1Footer).Height = 400
+End Sub
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctInputBoxX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acob2fcx_1a.rtf'
+Tnum='234459'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione InputBox</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctinputboxx"></A>Esempio di funzione InputBox</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la funzione <B>InputBox</B> per restituire il nome dell'utente. Si noti che non è possibile aprire un file della Guida dalla finestra di dialogo creata tramite la funzione <B>InputBox</B> in Microsoft Access.</P>
+
+<PRE class=CT><CODE>Sub Saluti()
+&nbsp;&nbsp;&nbsp; Dim strInput As String, strMsg As String
+
+&nbsp;&nbsp;&nbsp; strMsg = "Immettere il nome."
+&nbsp;&nbsp;&nbsp; strInput = <B>InputBox(</B>Prompt:=strMsg, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Title:="Informazioni utente", XPos:=2000, YPos:=2000<B>)</B>
+&nbsp;&nbsp;&nbsp; MsgBox "Ciao, " &amp; strInput
+End Sub</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

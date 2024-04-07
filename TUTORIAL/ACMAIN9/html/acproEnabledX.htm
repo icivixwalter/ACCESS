@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproEnabledX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproedt1_1a.rtf'
+Tnum='187201'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Enabled e Locked</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproenabledx"></A>Esempio di proprietà Enabled e Locked</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>Enabled</B> di un pulsante di comando e le proprietà <B>Enabled</B> e <B>Locked</B> di un controllo vengono alternate a seconda del tipo di impiegato visualizzato nel record corrente. Se l'impiegato è un manager, viene attivato il pulsante DettagliStipendio e il controllo InfPersonali viene sbloccato e attivato.</P>
+
+<PRE class=CT><CODE>Sub Form_Current()
+&nbsp;&nbsp;&nbsp; If Me!TipoImpiegato = "Manager" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!DettagliStipendio.<B>Enabled</B> = True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!InfPersonali.<B>Enabled</B> = True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!InfPersonali.<B>Locked</B> = False
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!DettagliStipendio.<B>Enabled</B> = False
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!InfPersonali.<B>Enabled</B> = False
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!InfPersonali.<B>Locked</B> = True
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

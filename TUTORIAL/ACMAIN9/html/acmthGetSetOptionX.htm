@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthGetSetOptionX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186531'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi GetOption, SetOption</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthgetsetoptionx"></A>Esempio di metodi GetOption, SetOption</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare il metodo <B>GetOption</B> per restituire l'impostazione dell'opzione <B>Tipo di campo predefinito</B> della scheda <B>Tabelle/Query</B> della finestra di dialogo <B>Opzioni</B> e quindi salvare l'impostazione in una variabile. Se l'opzione <B>Tipo di campo predefinito</B> non è correntemente impostata a Testo, Microsoft Access visualizza una finestra di dialogo che richiede se l'opzione deve essere impostata a Testo. Se si sceglie <B>Sì</B>, il metodo <B>SetOption</B> modifica l'opzione.</P>
+
+<PRE class=CT><CODE>Sub ModificaDimensioneCampo()
+&nbsp;&nbsp;&nbsp; ' La costante rappresenta le impostazioni di testo di una opzione
+&nbsp;&nbsp;&nbsp; ' tipo di campo predefinito.
+&nbsp;&nbsp;&nbsp; Const conText = 0
+
+&nbsp;&nbsp;&nbsp; Dim varSize As Variant, intResponse As Integer
+&nbsp;&nbsp;&nbsp; Dim strMsg As String
+
+&nbsp;&nbsp;&nbsp; ' Determina le impostazioni correnti.
+&nbsp;&nbsp;&nbsp; varSize = Application.<B>GetOption(</B>"Tipo di campo predefinito"<B>)</B>
+&nbsp;&nbsp;&nbsp; strMsg = "Impostare il tipo di campo predefinito a Testo?"
+&nbsp;&nbsp;&nbsp; If varSize &lt;&gt; conText Then
+&nbsp;&nbsp;&nbsp; ' Richiede di modificare le impostazioni se non è Testo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If MsgBox(strMsg, vbYesNo) = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Modifica le impostazioni a Testo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application.<B>SetOption</B> "Tipo di campo predefinito", conText
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

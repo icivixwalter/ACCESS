@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actbcTheFilterReturnsTooManyRecords'
+Feature='Filters: Troubleshooting'
+Handoff='1'
+SourceFile='CFLTTRB.RTF'
+Tnum='189148'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Il filtro restituisce troppi record</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actbcthefilterreturnstoomanyrecords"></A>Il filtro restituisce troppi record</H1>
+
+<P class=T>Se il filtro restituisce troppi record, provare con la soluzione più adatta alla situazione.</P>
+
+<H2>Filtro in base a maschera</H2>
+
+<UL>
+	<LI class=LB1>Immettere un valore o un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> oppure selezionare un valore dall'elenco in altri campi della scheda <B>Cerca</B>.<BR><BR></LI>
+
+	<LI class=LB1>Eliminare alcuni dei criteri alternativi che i record possono soddisfare, eliminando una o più schede <B>Oppure</B>.</LI>
+</UL>
+
+<H2>Filtro in base a selezione</H2>
+
+<UL>
+	<LI class=LB1>Selezionare un altro valore che si desidera sia contenuto nei record, quindi fare clic su <B>Filtro in base a selezione</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrFilterQ');" class="pop"><IMG SRC="images/autofilt.bmp" BORDER=0></A> sulla barra degli strumenti. Ripetere questa operazione fino a quando non si ottengono solo i record desiderati.</LI>
+</UL>
+
+<H2>Filtro ad esclusione selezione</H2>
+
+<UL>
+	<LI class=LB1>Assicurarsi di non avere selezionato valori in più di una riga alla volta. Sebbene ciò sia consentito, i criteri del filtro vengono interpretati nel modo seguente: "escludere il primo OPPURE il secondo valore selezionato", piuttosto che "escludere il primo E il secondo valore selezionato". 
+<P class=LT1>Selezionare invece il primo valore che si desidera escludere, fare clic con il pulsante destro del mouse, quindi selezionare <B>Filtro ad esclusione selezione</B>. Selezionare il valore successivo da escludere e ripetere il passo precedente. 
+</LI>
+
+	<LI class=LB1>Modificare il filtro scegliendo <B>Filtro</B> dal menu <B>Record</B>, quindi scegliere <B>Ordinamento/filtro avanzato</B>. Nella riga <B>Criteri</B> della griglia di struttura, modificare <B>Or</B> in <B>And</B>.</LI>
+</UL>
+
+<H2>Filtro per &lt;definizione&gt;</H2>
+
+<UL>
+	<LI class=LB1>Specificare un altro valore nella casella <B>Filtro per</B>, quindi premere INVIO. Ripetere l'operazione fino a che non si ottengono i record desiderati.</LI>
+</UL>
+
+<H2>Finestra Ordinamento/filtro avanzato</H2>
+
+<UL>
+	<LI class=LB1>Aggiungere altri campi alla griglia di struttura, quindi specificarne i criteri nella riga <B>Criteri</B>.<BR><BR></LI>
+
+	<LI class=LB1>Eliminare una o più righe di criteri in eccesso (le righe <B>Or</B>) ed utilizzare espressioni con <B>And</B> invece che con <B>Or</B>.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actbcTheFilterReturnsTooManyRecordsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDAORequiredX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234530'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Required (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodaorequiredx"></A>Esempio di proprietà Required (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea un oggetto <B>Index</B> nella tabella Impiegati e si imposta la proprietà <B>Required</B> per l'indice. Il nuovo indice è composto dai campi Cognome e Nome.</P>
+
+<PRE class=CT><CODE>Sub NuovoIndice()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef, idx As Index
+&nbsp;&nbsp;&nbsp; Dim fldCognome As Field, fldNome As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento alla tabella Impiegati.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs!Impiegati
+&nbsp;&nbsp;&nbsp; ' Crea un nuovo indice.
+&nbsp;&nbsp;&nbsp; Set idx = tdf.CreateIndex("NomeCompleto")
+&nbsp;&nbsp;&nbsp; ' Crea e accoda i campi indice.
+&nbsp;&nbsp;&nbsp; Set fldCognome = idx.CreateField("Cognome", dbText)
+&nbsp;&nbsp;&nbsp; Set fldNome = idx.CreateField("Nome", dbText)
+&nbsp;&nbsp;&nbsp; idx.Fields.Append fldCognome
+&nbsp;&nbsp;&nbsp; idx.Fields.Append fldNome
+&nbsp;&nbsp;&nbsp; ' Verifica che sia stato immesso un valore in ogni campo indice.
+&nbsp;&nbsp;&nbsp; idx.<B>Required</B> = True
+&nbsp;&nbsp;&nbsp; ' Accoda oggetto Index.
+&nbsp;&nbsp;&nbsp; tdf.Indexes.Append idx
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

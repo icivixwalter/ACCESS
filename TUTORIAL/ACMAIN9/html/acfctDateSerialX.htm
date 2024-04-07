@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDateSerialX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acobdatx_1a.rtf'
+Tnum='234393'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzioni DateSerial, Day, Month e Year</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdateserialx"></A>Esempio di funzioni DateSerial, Day, Month e Year</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la funzione <B>DateSerial</B> con le funzioni <B>Year</B>, <B>Month</B> e <B>Day</B> per restituire il numero di giorni in un mese. È possibile passare alla funzione GiorniMese una data o una stringa.</P>
+
+<PRE class=CT><CODE>Function GiorniMese(dteInput As Date) As Integer
+&nbsp;&nbsp;&nbsp; Dim intGiorni As Integer
+
+&nbsp;&nbsp;&nbsp; ' Aggiunge un mese, sottrae le date per trovare la differenza.
+&nbsp;&nbsp;&nbsp; intGiorni = <B>DateSerial(Year</B>(dteInput), _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>Month</B>(dteInput) + 1, <B>Day</B>(dteInput)<B>)</B> _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>DateSerial(Year</B>(dteInput), _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>Month</B>(dteInput), <B>Day</B>(dteInput)<B>)</B>
+&nbsp;&nbsp;&nbsp; GiorniMese = intGiorni
+&nbsp;&nbsp;&nbsp; Debug.Print intGiorni
+End Function</CODE></PRE>
+
+
+
+<P class=T>Nella routine <B>Sub</B> riportata di seguito si indicano i diversi modi disponibili per chiamare la funzione GiorniMese.</P>
+
+<PRE class=CT><CODE>Sub ChiamaGiorniMese()
+&nbsp;&nbsp;&nbsp; Dim intGiorni As Integer
+&nbsp;&nbsp;&nbsp; intGiorni = GiorniMese(#01/04/96#)
+&nbsp;&nbsp;&nbsp; intGiorni = GiorniMese("1-4-96")
+&nbsp;&nbsp;&nbsp; intGiorni = GiorniMese("1 aprile 1996")
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

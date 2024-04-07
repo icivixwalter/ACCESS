@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRecordSourceX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosrc1.rtf'
+Tnum='187943'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà RecordSource</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorecordsourcex"></A>Esempio di proprietà RecordSource</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come impostare la proprietà <B>RecordSource</B> di una maschera alla tabella Clienti.</P>
+
+<PRE class=CT><CODE>Forms!frmClienti.<B>RecordSource</B> = "Clienti"</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si modifica l'origine record di una maschera a un unico record contenuto nella tabella Clienti, a seconda del nome della società selezionato nel controllo della casella combinata <CODE>cmboNomeSocietà</CODE>. Nella casella combinata viene inserita un'istruzione SQL che restituisce l'ID cliente nella colonna associata e il nome della società.</P>
+
+<PRE class=CT><CODE>Sub cmboNomeSocietà_AfterUpdate()
+&nbsp;&nbsp;&nbsp; Dim strNuovoRecord As String
+&nbsp;&nbsp;&nbsp; strNuovoRecord = "SELECT * FROM Clienti " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; " WHERE IDCliente = '" _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Me!cmboNomeSocietà.Value &amp; "'"
+&nbsp;&nbsp;&nbsp; Me.<B>RecordSource</B> = strNuovoRecord
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

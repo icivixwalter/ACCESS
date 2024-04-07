@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowResetPageNumbersInReportS'
+Feature='Reports: Advanced'
+Handoff='1'
+SourceFile='CRPTADV.RTF'
+Tnum='187401'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Reimpostare i numeri di pagina per ciascun gruppo in un report</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowresetpagenumbersinreports"></A>Reimpostare i numeri di pagina per ciascun gruppo in un report</H1>
+
+<H2>Creare una macro che reimposta i numeri di pagina</H2>
+
+<OL>
+	<LI class=LPROC>Creare una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> che utilizza l'azione ImpostaValore per impostare la proprietà <B>Page</B> a <B>1</B>.
+<P class=LBR2><A HREF="achowCreateMacroS.htm">Procedura</A>
+
+<P class=LT1>Decidere se il numero di pagina apparirà nell'<A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportPageHeaderSectionQ');" class="pop">intestazione</A> oppure nel <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportPageFooterSectionQ');" class="pop">piè di pagina</A> della pagina, quindi utilizzare i seguenti valori per gli argomenti dell'azione ImpostaValore:
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=47%>Posizione del numero di pagina</TH>
+<TH width=53%>Argomenti di ImpostaValore</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>Intestazione di pagina</TD>
+<TD class=TT width=53%>Elemento: [Page]
+<P class=TT>Espressione: 0</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>Piè di pagina</TD>
+<TD class=TT width=53%>Elemento: [Page]
+<P class=TT>Espressione: 1</P>
+</TD>
+</TR>
+</TABLE>
+</LI>
+
+	<LI class=LPROC>Salvare e chiudere la macro.</LI>
+</OL>
+
+<H2>Modificare il report</H2>
+
+<OL>
+	<LI class=LPROC>Aprire il report in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Creare una casella di testo per il numero di pagina nell'intestazione o nel piè pagina, se non lo si è ancora fatto.
+<P class=LBR2><A HREF="achowAddPageNumbersFormReportS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Per l'<A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportGroupHeaderSectionQ');" class="pop">intestazione</A> e il <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportGroupFooterSectionQ');" class="pop">piè di pagina del gruppo</A> di primo livello, impostare le seguenti proprietà.
+<P class=LT1>Se il numero di pagina viene visualizzato nell'intestazione di pagina, impostare le seguenti proprietà:
+
+<TABLE cellpadding=4 cellspacing=4 cols=6>
+
+<TR VALIGN="top">
+<TH width=15%>Sezione</TH>
+<TH width=26%>Proprietà</TH>
+<TH width=29%>Impostazione</TH>
+<TH width=29%>Scopo</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Intestazione di gruppo</TD>
+<TD class=TT width=26%><B>Interruzione pagina</B></TD>
+<TD class=TT width=29%><B>Prima di sezione</B></TD>
+<TD class=TT width=29%>Inizia ciascun gruppo su una nuova pagina.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Piè di pagina di gruppo</TD>
+<TD class=TT width=26%><B>Su formattazione</B></TD>
+<TD class=TT width=29%>Nome della macro creata nella prima routine</TD>
+<TD class=TT width=29%>Reimposta a 1 il numero di pagina per il nuovo gruppo.</TD>
+</TR>
+</TABLE><BR>
+
+<P class=LT1>Se il numero di pagina viene visualizzato nel piè di pagina, impostare le seguenti proprietà:
+
+<TABLE cellpadding=4 cellspacing=4 cols=6>
+
+<TR VALIGN="top">
+<TH width=15%>Sezione</TH>
+<TH width=26%>Proprietà</TH>
+<TH width=29%>Impostazione</TH>
+<TH width=29%>Scopo</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Intestazione di gruppo</TD>
+<TD class=TT width=26%><B>Su formattazione</B></TD>
+<TD class=TT width=29%>Nome della macro creata nella prima routine</TD>
+<TD class=TT width=29%>Reimposta a 1 il numero di pagina per il nuovo gruppo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Piè di pagina di gruppo</TD>
+<TD class=TT width=26%><B>Interruzione pagina</B></TD>
+<TD class=TT width=29%><B>Dopo sezione</B></TD>
+<TD class=TT width=29%>Inizia ciascun gruppo su una nuova pagina.</TD>
+</TR>
+</TABLE>
+</LI>
+</OL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Il report Vendite impiegato per paese del database di esempio Northwind utilizza una routine evento nella proprietà <B>Su formattazione</B> per reimpostare il numero di pagina di ciascun Paese. Per visualizzare questo report, aprire il database Northwind nella sottocartella Esempi della cartella di Office, quindi aprire il report Vendite impiegato per paese in visualizzazione Struttura. Per informazioni su come aprire il database Northwind, fare clic su <A HREF="acconNorthwind.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowResetPageNumbersInReportSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

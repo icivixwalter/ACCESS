@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproLockEditsX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234471'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà LockEdits (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprolockeditsx"></A>Esempio di proprietà LockEdits (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si apre un oggetto <B>Recordset</B> di tipo dynaset e si imposta la relativa proprietà <B>LockEdits</B> a <B>False</B> (0). In tal modo, viene attuato un blocco ottimistico in modo che sia possibile ad altri utenti modificare i record del database in qualsiasi momento. Microsoft Access attiva un errore intercettabile se i dati vengono modificati prima di utilizzare il metodo <B>Update</B>.</P>
+
+<PRE class=CT><CODE>Sub MostraStatoBlocco()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Apri oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("Clienti", dbOpenDynaset)
+&nbsp;&nbsp;&nbsp; rst.<B>LockEdits</B> = False
+&nbsp;&nbsp;&nbsp; On Error Goto ErroreModificheBlocco
+&nbsp;&nbsp;&nbsp; ' Consente la modifica.
+&nbsp;&nbsp;&nbsp; rst.Edit
+&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Modifica i record.
+&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp; rst.Update&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Tenta di aggiornare le modifiche.
+
+EsciModificheBlocco:
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+&nbsp;&nbsp;&nbsp; Exit Sub
+
+ErroreModificheBlocco:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Err.Number = 3197 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Dati modificati da un altro utente."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume Next
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Altro errore."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume EsciModificheBlocco
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

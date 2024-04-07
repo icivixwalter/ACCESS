@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowConvertDatabasesEarlierVersionsVersion30S'
+Feature='Databases: Conversion'
+Handoff='3'
+SourceFile='cdatconv.rtf'
+Tnum='186381'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convertire in Access 2000 un database creato con una versione precedente</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowconvertdatabasesearlierversionsversion30s"></A>Convertire in Access 2000 un database creato con una versione precedente</H1>
+
+<OL>
+	<LI class=LPROC><A HREF="achowBackUpDatabaseS.htm">Creare una copia di backup del database di Access</A> che si desidera convertire e conservarla fino a quando non si sia acquisita una certa dimestichezza nell'uso del database in formato Access 2000.<BR><BR></LI>
+
+	<LI class=LPROC>Chiudere il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> che si desidera convertire.
+<P class=LT1>Se si tratta di un <A HREF="javascript:HelpPopup('actip9.hlp','defMultiUserDatabase');" class="pop">database multiutente</A> che si trova in un server o in una cartella condivisa, assicurarsi che non sia aperto da altri utenti.
+</LI>
+
+	<LI class=LPROC>In Microsoft Access 2000 scegliere <B>Utilità database</B> dal menu <B>Strumenti</B>, scegliere <B>Converti database</B>, quindi fare clic su <B>Alla versione corrente del database di Access</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Converti database</B> selezionare il database da convertire e scegliere il pulsante <B>Converti</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella della proprietà <B>Converti database con nome</B> effettuare una delle seguenti operazioni:
+<UL>
+	<LI class=LB2>Digitare un nuovo nome (senza l'estensione mdb) per il file del database di Microsoft Access 2000.<BR><BR></LI>
+
+	<LI class=LB2>Selezionare un percorso diverso per il file del database Microsoft Access 97. È possibile conservare o cambiare il nome.</LI>
+</UL>
+
+<P class=LT1>Non è possibile convertire un database di Access in un file con nome e percorso uguali a quello del database originale.
+</LI>
+
+	<LI class=LPROC>Scegliere il pulsante <B>Salva</B>.</LI>
+</OL>
+
+<P class=T>Il database verrà convertito in formato Access 2000.</P>
+
+<P class=T>Per ulteriori informazioni, vedere <A HREF="mk:@MSITStore:rplbrf35.chm::/html/rpconAboutConvertingReplicaSetToMicrosoftAccess2000.htm">Conversione di un database replicato</A>.</P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>È possibile <A HREF="acdecConvertSecuredDatabaseFromPreviousVersionOfMicrosoftAccess.htm">convertire un database protetto di Access</A>. Tuttavia la <A HREF="javascript:HelpPopup('actip9.hlp','defUserLevelSecurity');" class="pop">protezione a livello utente</A> non proteggerà più i moduli. Per proteggere i moduli del database convertito di Access, <A HREF="achowProtectVBACode.htm">proteggere con una password il codice di Visual Basic, Applications Edition (VBA)</A>.<BR><BR></LI>
+
+	<LI class=NLB>Quando si converte un database di una versione precedente di Microsoft Access contenente <A HREF="javascript:HelpPopup('actip9.hlp','defAttachedTable');" class="pop">tabelle collegate</A>, assicurarsi che le tabelle esterne si trovino nella stessa cartella in cui si trovavano in origine. Se le tabelle collegate a un database in fase di conversione non vengono trovate, non sarà possibile utilizzare il database convertito. Dopo la conversione del database di Access, è possibile spostare queste tabelle e ricollegarle utilizzando il Gestore tabelle collegate. La conversione di un database al quale sono collegate delle tabelle non comporta la conversione delle tabelle.<BR><BR></LI>
+
+	<LI class=NLB>È possibile convertire un database di una versione precedente di Access anche <A HREF="acconAboutImportLinkData.htm">importando gli oggetti del database</A> in un nuovo database di Access 2000. Tale metodo può essere utilizzato per evitare di importare nel database in formato Access 2000 tutti gli oggetti esistenti nella versione precedente del database.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowConvertDatabasesEarlierVersionsVersion30SW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

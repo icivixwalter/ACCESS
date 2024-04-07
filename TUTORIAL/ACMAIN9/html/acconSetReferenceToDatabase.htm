@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconSetReferenceToDatabase'
+Feature='accon'
+Handoff='2'
+SourceFile='acvbanew.doc'
+Tnum='188058'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostare un riferimento a un progetto di Visual Basic in un altro database o in un altro progetto di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vakeyPrivate">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acconsetreferencetodatabase"></A>Impostare un riferimento a un progetto di Visual Basic in un altro database o in un altro progetto di Microsoft Access</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconSetReferenceToDatabaseC">
+</OBJECT></P>
+
+
+
+<P class=T>Ciascun database di Microsoft Access (mdb o adp) include un <A HREF="javascript:HelpPopup('actip9.hlp','defProject');" class="pop">progetto</A> di Visual Basic, che è l'insieme di tutti i moduli del progetto, inclusi i <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">moduli standard</A> e i <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">moduli di classe</A>. Tutti i database (mdb o adp), i <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A> e i <A HREF="javascript:HelpPopup('actip9.hlp','defAddIn');" class="pop">componenti aggiuntivi</A> di Microsoft Access contenuti in un file con estensione MDE includono un progetto di Visual Basic.</P>
+
+<P class=T>Il nome del database di Access e il nome del progetto possono essere diversi. Il nome del database di Access è determinato dal nome del file con estensione MDB, MDA, MDE o ADP, mentre il nome del progetto è determinato dall'impostazione dell'opzione <B>Nome progetto</B> nella scheda <B>Avanzate</B> della finestra di dialogo <B>Opzioni</B>, che si apre scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B>. In base all'impostazione predefinita, quando si crea un database (mdb o adp), il nome del database e il nome del progetto sono uguali. Se però si rinomina il database, non viene modificato automaticamente anche il nome del progetto. Allo stesso modo, le modifiche effettuate al nome del progetto non si ripercuotono sul nome del database.</P>
+
+<P class=T>È possibile impostare un riferimento da un progetto di Visual Basic di un database di Microsoft Access a un progetto in un altro database, un database libreria o un componente aggiuntivo contenuto in un file con estensione MDE. Una volta impostato un riferimento, è possibile eseguire le routine Visual Basic nel progetto a cui si fa riferimento. Il database di esempio Northwind include ad esempio il modulo Funzioni di utilità contenente un funzione chiamata Caricata. È possibile impostare un riferimento al progetto del database di esempio Northwind dal database corrente, quindi chiamare la funzione Caricata come se fosse definita all'interno del database corrente.</P>
+
+<P class=T>Per impostare un riferimento al progetto del database di esempio Northwind da un altro progetto:
+
+<OL>
+	<LI class=LS>Aprire la finestra del modulo.<BR><BR></LI>
+
+	<LI class=LS>Scegliere <B>Riferimenti</B> dal menu <B>Strumenti</B>, quindi il pulsante <B>Sfoglia</B> nella finestra di dialogo <B>Riferimenti</B>.<BR><BR></LI>
+
+	<LI class=LS>Dalla casella <B>Tipo file</B> selezionare <B>Database Microsoft Access (*.mdb)</B>.<BR><BR></LI>
+
+	<LI class=LS>Individuare il file Northwind.mdb. Se è stato installato, in base all'impostazione predefinita il file si trova nella cartella \Programmi\Microsoft Office\Office\Esempi.<BR><BR></LI>
+
+	<LI class=LS>Scegliere <B>OK</B>.
+<P class=4>
+</LI>
+</OL>
+
+<P class=T>Nell'elenco dei riferimenti disponibili nella finestra di dialogo <B>Riferimenti</B> verrà visualizzato il file "Northwind.mdb".</P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Impostare un riferimento al progetto in un altro database di Microsoft Access quando si desidera chiamare una routine pubblica definita all'interno di un modulo standard di quel database. Non è consentito chiamare una routine definita all'interno di un modulo di classe o routine di moduli standard precedute dalla parola chiave <A HREF="JavaScript:hhobj_2.Click()"><B>Private</B></A>.<BR><BR></LI>
+
+	<LI class=NLB>È possibile impostare un riferimento al progetto in un database di Microsoft Access solo da un altro database di Microsoft Access.<BR><BR></LI>
+
+	<LI class=NLB>È possibile impostare un riferimento a un progetto solo in un altro database di Microsoft Access 2000. Per impostare un riferimento a un progetto di un database creato con una versione precedente di Microsoft Access è necessario innanzitutto convertire tale database in Microsoft Access 2000.<BR><BR></LI>
+
+	<LI class=NLB>Se si imposta un riferimento a un progetto o a una libreria dei tipi da Microsoft Access e in seguito si sposta il file contenente il progetto o la libreria dei tipi in una cartella diversa, Microsoft Access tenterà di individuare il file e di ristabilire il riferimento. Se nel registro di configurazione esiste la chiave <B>RefLibPaths</B>, la ricerca verrà iniziata da tale chiave. In assenza di una voce corrispondente, il file verrà ricercato innanzitutto nella cartella corrente e quindi in tutte le cartelle dell'unità. È possibile creare la chiave <B>RefLibPaths</B> utilizzando l'Editor del registro di Windows nel percorso \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Access. Per ulteriori informazioni sull'utilizzo dell'Editor del registro, consultare la documentazione di Windows.
+<P class=4>
+</LI>
+</UL>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

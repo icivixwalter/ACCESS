@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRecalcX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186543'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Recalc</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthrecalcx"></A>Esempio di metodo Recalc</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare il metodo <B>Recalc</B> per aggiornare i controlli di una maschera Ordini. Tale maschera comprende la casella di testo SpeseTrasporto, che visualizza il costo del trasporto, e un controllo calcolato che visualizza il costo complessivo di un ordine comprese le spese di trasporto. Se si posiziona l'istruzione contenente il metodo <B>Recalc</B> nella routine evento AfterUpdate per la casella di testo SpeseTrasporto, il costo complessivo di un ordine viene ricalcolato ogni volta che si immette un nuovo importo relativo a tali spese.</P>
+
+<PRE class=CT><CODE>Sub SpeseTrasporto_AfterUpdate()
+&nbsp;&nbsp;&nbsp; Me.<B>Recalc</B>
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSetUpMoreThanOneMSAccessWorkgroupUseSameSecurS'
+Feature='Security: Workgroup'
+Handoff='3'
+SourceFile='csecbas.rtf'
+Tnum='188250'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostare più gruppi di lavoro di Microsoft Access per utilizzare lo stesso database con protezione all'accesso</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowsetupmorethanonemsaccessworkgroupusesamesecurs"></A>Impostare più gruppi di lavoro di Microsoft Access per utilizzare lo stesso database con protezione all'accesso</H1>
+
+<P class=T>È possibile assegnare agli utenti di diversi gruppi di lavoro l'accesso a un database protetto e ai relativi oggetti creando un account gruppo con un nome e un <A HREF="javascript:HelpPopup('actip9.hlp','defPin');" class="pop">ID personale (PID</A>) identici in ciascun gruppo di lavoro che si desidera condivida il database protetto. Aggiungere quindi utenti di ciascun gruppo di lavoro a quell'account gruppo. Questa procedura è utile se si desidera che gli utenti che si trovano in posizioni remote gestiscano la loro appartenenza a gruppi di lavoro.
+
+<OL>
+	<LI class=LPROC>Uscire da Microsoft Access.<BR><BR></LI>
+
+	<LI class=LPROC>Utilizzare l'Amministratore gruppi di lavoro per entrare in uno dei gruppi di lavoro.
+<P class=LBR2><A HREF="achowJoinMSAccessWorkgroupS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Avviare Microsoft Access, aprire un database, quindi accedere come amministratore di gruppi di lavoro, membro del <A HREF="javascript:HelpPopup('actip9.hlp','defAdminsGroup');" class="pop">gruppo Amministratori</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Creare un account gruppo, assicurandosi di aver scritto esattamente il nome del gruppo e il PID facendo <A HREF="javascript:HelpPopup('actip9.hlp','defCaseSensitive');" class="pop">distinzione tra maiuscole e minuscole</A>.
+<P class=LBR2><A HREF="achowCreateSecurityGroupAccountS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Aggiungere utenti al nuovo gruppo.
+<P class=LBR2><A HREF="achowAddUsersSecurityGroupsS.htm">Procedura</A>
+
+<P class=LT1><B>Nota</B>&nbsp;&nbsp; È possibile aggiungere o eliminare utenti da questo gruppo in qualsiasi momento.
+</LI>
+
+	<LI class=LPROC>Ripetere i passaggi da 1 a 5 per ciascun gruppo di lavoro che condividerà lo stesso database con protezione all'accesso. Al passaggio 3, assicurarsi di aver digitato esattamente lo stesso nome di gruppo e PID con distinzione tra maiuscole e minuscole come per l'account gruppo creato nel primo gruppo di lavoro.<BR><BR></LI>
+
+	<LI class=LPROC>Aprire il database con protezione all'accesso che si desidera condividere tra i gruppi di lavoro e assegnare le autorizzazioni al nuovo gruppo.
+<P class=LBR2><A HREF="achowAssignPermissionsSecurityAccountsS.htm">Procedura</A>
+</LI>
+</OL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È inoltre possibile che un amministratore del gruppo di lavoro che si trova in una posizione remota aggiunga lo stesso gruppo al proprio <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> fornendo all'amministratore il nome di gruppo e il PID con esatta distinzione tra maiuscole e minuscole utilizzati per creare quel gruppo nel file di informazioni.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowSetUpMoreThanOneMSAccessWorkgroupUseSameSecurSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

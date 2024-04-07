@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjDocumentS'
+Feature='acobj'
+Handoff='1'
+SourceFile='ACDOBJ01.rtf'
+Tnum='234407'
+Piece='1040'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Oggetto Document, insieme Documents</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acobjdocuments"></A>Oggetto Document, insieme Documents</H1>
+
+<P class=T>Oltre agli oggetti <B>Document</B> definiti dal <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A>, vengono definiti da Microsoft Access gli oggetti <B>Document</B> riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=27%>Oggetto Document</TH>
+<TH width=27%>Oggetto Container</TH>
+<TH width=46%>Tipo di informazioni</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Form</TD>
+<TD class=TT width=27%>Forms</TD>
+<TD class=TT width=46%>Maschera salvata</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Macro</TD>
+<TD class=TT width=27%>Scripts</TD>
+<TD class=TT width=46%>Macro salvata</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Module</TD>
+<TD class=TT width=27%>Modules</TD>
+<TD class=TT width=46%>Modulo salvato</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Report</TD>
+<TD class=TT width=27%>Reports</TD>
+<TD class=TT width=46%>Report salvato</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>DataAccessPage</TD>
+<TD class=TT width=27%>DataAccessPages</TD>
+<TD class=TT width=46%>PaginaDiAccessoAiDati salvata</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>SummaryInfo</TD>
+<TD class=TT width=27%>Databases</TD>
+<TD class=TT width=46%>Riepilogo del documento database</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>UserDefined</TD>
+<TD class=TT width=27%>Databases</TD>
+<TD class=TT width=46%>Proprietà definite dall'utente</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Gli oggetti <B>Document</B> definiti da Microsoft Access sono <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetti di database</A> di Microsoft Access e non <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti DAO</A>. Tali oggetti <B>Document</B> forniscono al modulo di gestione di database Microsoft Jet informazioni sugli oggetti di Microsoft Access. Il modulo di gestione utilizza tali informazioni per implementare la protezione per gli oggetti di database nello stesso modo in cui viene implementata per gli oggetti DAO.</P>
+
+<P class=T>L'insieme <B>Documents</B> di un oggetto <B>Container</B> contiene oggetti <B>Document</B> che rappresentano i singoli oggetti del tipo descritto dall'oggetto <B>Container</B>. L'oggetto <B>Container</B> Forms, ad esempio, dispone di un insieme <B>Documents</B> che potrebbe comprendere un oggetto <B>Document</B> corrispondente a una maschera chiamata Ordini.</P>
+
+<P class=T>Microsoft Access definisce due oggetti <B>Document</B> nell'oggetto <B>Container</B> Databases: SummaryInfo e UserDefined.</P>
+
+<P class=T>L'oggetto <B>Document</B> SummaryInfo consente l'accesso a livello di programmazione alle proprietà di riepilogo del documento, comprese le proprietà <B>Title</B>, <B>Subject</B>, <B>Author</B>, <B>Keywords</B>, <B>Comments</B>, <B>Manager</B>, <B>Company</B>, <B>Category</B> e <B>Hyperlink Base</B>. È anche possibile impostare tali proprietà nella scheda <B>Riepilogo</B> della finestra di dialogo <B>Proprietà database</B>, disponibile scegliendo <B>Proprietà database</B> dal menu <B>File</B>.</P>
+
+<P class=T>Per impostare tali proprietà in Visual Basic, è necessario crearle e accodarle all'insieme <B>Properties</B> dell'oggetto <B>Document</B> SummaryInfo, se non sono già state impostate nella finestra di dialogo <B>Proprietà database</B>. Una volta creata una proprietà, è necessario fare esplicito riferimento all'insieme <B>Properties</B> per impostarla. Nell'esempio riportato di seguito, <CODE>doc</CODE> è una variabile di oggetto che punta all'oggetto <B>Document</B> SummaryInfo:</P>
+
+<PRE class=CT><CODE>doc.Properties!Title = "Commercianti Northwind"</CODE></PRE>
+
+
+
+<P class=T>Per ulteriori informazioni sulla creazione e l'impostazione di proprietà definite da Microsoft Access, ricercare "Oggetto Property" e "Metodo CreateProperty" nell'indice della Guida in linea.</P>
+
+<P class=T>L'oggetto <B>Document</B> UserDefined consente l'accesso a livello di programmazione alle proprietà definite dall'utente nella scheda <B>Personalizza</B> della finestra di dialogo <B>Proprietà database</B>. È anche possibile creare tali proprietà in Visual Basic e accodarle all'insieme <B>Properties</B> dell'oggetto <B>Document</B> UserDefined.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Non confondere le proprietà definite nell'insieme <B>Properties</B> di un documento <B>Database</B> con le proprietà definite nell'insieme <B>Properties</B> di un oggetto <B>Database</B>. È possibile creare proprietà definite dall'utente in entrambi gli insiemi <B>Properties</B>, ma è possibile impostare dalla finestra di dialogo <B>Proprietà database</B> solo le proprietà definite negli oggetti <B>Document</B> SummaryInfo o UserDefined.</P>
+
+
+
+<P class=T>È possibile utilizzare gli oggetti <B>Document</B> per stabilire e applicare <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> per singoli oggetti di database di Microsoft Access. Per impostare le autorizzazioni per un oggetto <B>Document</B>, impostare la proprietà <B>UserName</B> dell'oggetto <B>Document</B> al nome di un oggetto <B>User</B> o <B>Group</B> esistente. Impostare quindi la proprietà <B>Permissions</B> per l'oggetto <B>Document</B>.</P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Non confondere i tipi specifici di oggetti <B>Container</B> con i tipi di insieme che hanno lo stesso nome. Gli oggetti <B>Container</B> Forms e Reports contengono ciascuno insiemi <B>Documents</B>. Tali insiemi comprendono singoli oggetti <B>Document</B> che rappresentano ogni maschera o report salvato. Gli insiemi <B>Forms</B> e <B>Reports</B> fanno riferimento solo a maschere o report aperti.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconEditDataInMultiuserEnvironmentS'
+Feature='Data: Sharing'
+Handoff='3'
+SourceFile='cmusbas.rtf'
+Tnum='188292'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla modifica dei dati in un database di Access in un ambiente multiutente</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconeditdatainmultiuserenvironments"></A>Informazioni sulla modifica dei dati in un database di Access in un ambiente multiutente</H1>
+
+<P class=T>In un ambiente multiutente è possibile che più utenti utilizzino contemporaneamente gli stessi record. Dal momento che altri utenti possono modificare o addirittura eliminare gli stessi dati che si sta tentando di modificare, talvolta può crearsi un conflitto con tali utenti.</P>
+
+<P class=T>In Microsoft Access è possibile tenere traccia dello stato dei record durante la modifica e assicurarsi di utilizzare i dati più recenti. Quando due o più utenti tentano di modificare lo stesso record, vengono visualizzati dei messaggi che consentono di risolvere i conflitti. Se ad esempio si tenta di salvare un record bloccato da un altro utente, viene visualizzato il nome dell'utente che ha bloccato quel record.</P>
+
+<P class=T>Per consentire di tenere traccia dello stato dei record, nel selettore di record corrente vengono visualizzati i simboli riportati di seguito:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Simbolo</TH>
+<TH width=80%>Significato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><IMG SRC="images/rowselc.bmp"  BORDER=0></TD>
+<TD class=TT width=80%>Questo record è il record corrente e non è stato modificato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><IMG SRC="images/pencil.bmp"  BORDER=0></TD>
+<TD class=TT width=80%>Questo record è stato modificato, ma le modifiche non sono state ancora salvate. Fino a quando viene visualizzato questo simbolo, gli altri utenti non possono vedere le modifiche apportate al record e non possono modificarlo, se è bloccato. Per liberare il record in modo che altri utenti possano utilizzarlo, salvare o annullare le modifiche.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><IMG SRC="images/lockrec.bmp"  BORDER=0></TD>
+<TD class=TT width=80%>Questo record è bloccato da un altro utente e non è possibile modificarlo. Se si tenta di effettuare una digitazione in un record bloccato, viene emesso un segnale acustico.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=TT>Per informazioni sulla scelta di una strategia per il blocco di un record, fare clic su <A HREF="acconChoosingRecordLockingStrategyInMultiuserEnvirS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconEditDataInMultiuserEnvironmentSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

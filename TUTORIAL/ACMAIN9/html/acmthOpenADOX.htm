@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthOpenADOX'
+Feature='acmth'
+Handoff='2'
+SourceFile='ACAMETHX9.doc'
+Tnum='261115'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Open</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthopenadox"></A>Esempio di metodo Open</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene restituita una variabile Connessione che punta alla connessione corrente, quindi viene aperta un'altra connessione denominata Altro.mdb tramite il  metodo <B>Open</B>. La routine quindi enumera tutti gli oggetti <B>Table</B> nei due database.</P>
+
+<P class=T>Per provare questo esempio, creare un nuovo database chiamato Altro.mdb, chiuderlo e inserirlo nella stessa directory del database dal quale si esegue il codice.</P>
+
+<PRE class=CT><CODE>Sub ApriAltro()
+&nbsp;&nbsp;&nbsp; Dim cat As New ADOX.Catalog, catAnother As New ADOX.Catalog
+&nbsp;&nbsp;&nbsp; Dim cnnAnother As New ADODB.Connection
+&nbsp;&nbsp;&nbsp; Dim tbl As ADOX.Table
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set cat.ActiveConnection = CurrentProject.Connection
+cnnAnother.Provider = "Microsoft.Jet.OLEDB.4.0"&nbsp;&nbsp;&nbsp;&nbsp; cnnAnother.<B>Open</B> "ORIGINE DATI=Altro.mdb"
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento ad Altro.mdb.
+&nbsp;&nbsp;&nbsp; Set catAnother.ActiveConnection = cnnAnother
+&nbsp;&nbsp;&nbsp; ' Enumera tutti gli oggetti Table in ciascun database.
+&nbsp;&nbsp;&nbsp; Debug.Print CurrentProject.Connection.Properties("Nome origine dati") &amp; ":"
+&nbsp;&nbsp;&nbsp; For Each tbl In cat.Tables
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print tbl.Name
+&nbsp;&nbsp;&nbsp; Next tbl
+&nbsp;&nbsp;&nbsp; Debug.Print vbCrLf &amp; cnnAnother.Properties("Nome origine dati") &amp; ":"
+&nbsp;&nbsp;&nbsp; For Each tbl In catAnother.Tables
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print tbl.Name
+&nbsp;&nbsp;&nbsp; Next tbl
+&nbsp;&nbsp;&nbsp; Set cat = Nothing
+&nbsp;&nbsp;&nbsp; Set cnnAnother = Nothing
+&nbsp;&nbsp;&nbsp; Set catAnother = Nothing
+End Sub</CODE></PRE>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si esegue questo codice in un ADP, il provider dovrà essere impostato a "SQLOLEDB.1" e il parametro ConnectionString del metodo OPEN della connessione dovrà essere impostato in modo che punti a un database SQL.
+
+
+
+
+
+<P class=T>Nell'esempio seguente viene aperto un oggetto <B>Recordset</B> di tipo keyset, quindi viene stampato il numero di record contenuti nell'oggetto <B>Recordset</B>.</P>
+
+<PRE class=CT><CODE>Sub OrdiniIT()
+    Dim rst As New ADODB.Recordset
+    Dim strSQL As String
+
+    strSQL = "SELECT * FROM Ordini WHERE [PaeseDestinatario] = 'IT'"
+    rst.<B>Open</B> strSQL, CurrentProject.Connection, adOpenKeyset, adLockOptimistic
+    rst.MoveLast
+    Debug.Print rst.RecordCount
+    rst.Close
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

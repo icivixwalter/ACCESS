@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproNewRowOrCol'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproprt1_1a.rtf'
+Tnum='187705'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà NewRowOrCol (Nuova riga o colonna)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acpronewroworcol"></A>Proprietà NewRowOrCol (Nuova riga o colonna)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproNewRowOrColC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproNewRowOrColX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproNewRowOrColA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>NewRowOrCol</B> per specificare se una <A HREF="javascript:HelpPopup('actip9.hlp','defSection');" class="pop">sezione</A> e i dati a essa associati debbano essere stampati in una nuova riga o colonna all'interno di una maschera o di un <A HREF="achowCreateSnakingcolumnReportS.htm">report a colonne multiple</A>. È possibile, ad esempio, utilizzare la proprietà per stampare ogni <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportGroupHeaderSectionQ');" class="pop">intestazione di gruppo</A> all'inizio di una nuova colonna di un report a colonne multiple.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>NewRowOrCol</B> non si applica a <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportPageHeaderSectionQ');" class="pop">intestazioni di pagina</A> o <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportPageFooterSectionQ');" class="pop">piè di pagina di pagina</A>.</P>
+
+
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>NewRowOrCol</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=23%>Impostazione</TH>
+<TH width=20%>Visual Basic</TH>
+<TH width=57%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Nessuna</TD>
+<TD class=TT width=20%>0</TD>
+<TD class=TT width=57%>Impostazione predefinita. Le interruzioni di riga o colonna sono determinate dall'impostazione della finestra di dialogo <B>Imposta pagina</B>, disponibile scegliendo <B>Imposta pagina</B> dal menu <B>File</B>, e dallo spazio disponibile sulla pagina.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Prima di sezione</TD>
+<TD class=TT width=20%>1</TD>
+<TD class=TT width=57%>Microsoft Access inizia a stampare in una nuova riga o colonna la sezione corrente ovvero la sezione per cui si sta impostando la proprietà, ad esempio una sezione intestazione di gruppo. Stampa quindi nella stessa riga o colonna la sezione successiva, ad esempio una <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportDetailSectionQ');" class="pop">sezione</A> corpo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Dopo sezione</TD>
+<TD class=TT width=20%>2</TD>
+<TD class=TT width=57%>Microsoft Access inizia a stampare nella riga o colonna corrente la sezione corrente, ad esempio una sezione intestazione di gruppo. Inizia nella riga o colonna successiva la stampa della sezione successiva, ad esempio una sezione Corpo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Prima e dopo</TD>
+<TD class=TT width=20%>3</TD>
+<TD class=TT width=57%>Microsoft Access inizia a stampare la sezione corrente in una nuova riga o colonna. Inizia a stampare la sezione seguente nella riga o colonna successiva.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare tale proprietà utilizzando la <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> della sezione, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=T>È possibile impostare la proprietà <B>NewRowOrCol</B> solo nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura della maschera</A> o nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura del report</A>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Gli elementi riportati di seguito esemplificano alcune impostazioni di sezione intestazione di gruppo in un report a colonne multiple. Verificare che nella scheda <B>Colonne</B> della finestra di dialogo <B>Imposta pagina</B> sia selezionato <B>Priorità verticale</B> sotto <B>Layout colonne</B>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=28%>Impostazione di esempio</TH>
+<TH width=72%>Risultato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Prima della sezione</TD>
+<TD class=TT width=72%>L'intestazione di gruppo viene stampata in cima a una nuova colonna.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Dopo la sezione</TD>
+<TD class=TT width=72%>La sezione Corpo viene stampata in cima a una nuova colonna.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Prima e dopo</TD>
+<TD class=TT width=72%>L'intestazione di gruppo viene stampata in una colonna a sé stante e la sezione Corpo viene stampata in cima a una nuova colonna.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Le sezioni di report contenute in una maschera o in un report vengono in genere stampate in una pagina in senso verticale. L'opzione predefinita <B>Layout colonne</B> è <B>Priorità orizzontale</B>. È possibile stampare le sezioni in più colonne su una pagina in senso orizzontale impostando <B>Priorità verticale</B> sotto <B>Layout colonne</B> nella scheda <B>Colonne</B> della finestra di dialogo <B>Imposta pagina</B>.</P>
+
+<P class=T>Quando si imposta la proprietà <B>NewRowOrCol</B> a Prima della sezione, l'orientamento verticale o orizzontale della pagina influisce su come viene stampata la sezione. Se si sceglie <B>Priorità orizzontale</B> presente in <B>Layout colonne</B> nella scheda <B>Colonne</B> della finestra di dialogo <B>Imposta pagina</B>, Microsoft Access inizia a stampare la sezione cominciando da una nuova riga. Se si sceglie <B>Priorità verticale</B>, Microsoft Access inizia a stampare la sezione cominciando da una nuova colonna.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

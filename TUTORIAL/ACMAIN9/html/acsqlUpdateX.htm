@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlUpdateX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234578'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione UPDATE (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlupdatex"></A>Esempio di istruzione UPDATE (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+
+
+<P class=WT><B>Attenzione</B>&nbsp;&nbsp; Questi esempi modificano il database di esempio Northwind. Di conseguenza, prima di iniziare è opportuno eseguire una copia di backup.</P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito, i valori del campo Superiore relativi ai record degli impiegati vengono modificati da 2 a 5:</P>
+
+<PRE class=CT><CODE><B>UPDATE</B> Impiegati SET Superiore = 5 WHERE Superiore = 2;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si aumenta del 10% il PrezzoUnitario dei prodotti non sospesi dal fornitore numero 8:</P>
+
+<PRE class=CT><CODE><B>UPDATE</B> Prodotti SET PrezzoUnitario = PrezzoUnitario * 1.1
+WHERE IDFornitore = 8 AND Sospeso = No;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si riduce del 5% il PrezzoUnitario dei prodotti non sospesi forniti dalla Tokyo Traders. Le tabelle Prodotti e Fornitori hanno una relazione molti-a-uno.</P>
+
+<PRE class=CT><CODE><B>UPDATE</B> Fornitori INNER JOIN Prodotti
+ON Fornitori.IDFornitore = Prodotti.IDFornitore SET PrezzoUnitario = PrezzoUnitario * .95
+WHERE NomeSocietà = 'Tokyo Traders' _
+    AND Sospeso = No;</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

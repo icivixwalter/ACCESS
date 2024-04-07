@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconbidiLearnAboutRTLProperties'
+Feature='International'
+Handoff='3'
+SourceFile='bidi.doc'
+Tnum='257946'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulle proprietà della direzionalità da destra a sinistra</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconbidilearnaboutrtlproperties"></A>About right-to-left properties</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>Microsoft Access 2000 has specific <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiRightToLeft');" class="pop">right-to-left</A> properties to support <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiBidirectional');" class="pop">bidirectional</A> data entry and display.</P>
+
+<P class=T>This topic provides reference information about the following properties:
+
+<UL>
+	<LI class=LB1><A HREF="#acconbidilearnaboutrtlproperties_1"><B>ReadingOrder</B></A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="#acconbidilearnaboutrtlproperties_2"><B>KeyboardLanguage</B></A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="#acconbidilearnaboutrtlproperties_3"><B>TextAlign</B></A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="#acconbidilearnaboutrtlproperties_4"><B>ScrollBarAlign</B></A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="#acconbidilearnaboutrtlproperties_5"><B>NumeralShapes</B></A> (Arabic only)</LI>
+</UL>
+
+<P class=T>The settings for these properties are initially determined when the control is placed on the grid in form Design view or report Design view.</P>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; The settings associated with these properties are available for forms and reports. Control behavior for tables and queries is a fixed, bidirectional-capable configuration: <B>ScrollBarAlign</B> = <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiSystem');" class="pop">System</A>, <B>NumeralShapes</B> = System, <B>KeyboardLanguage</B> = System, <B>TextAlign</B> = <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiGeneral');" class="pop">General</A>, <B>ReadingOrder</B> = <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiContext');" class="pop">Context</A>, and initial insertion point position = data dependent. If the control contains no text, then alignment, <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiReadingOrder');" class="pop">reading order</A>, and initial insertion point position are determined by the <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiKeyboardLanguage');" class="pop">keyboard language</A> when the control is entered: Right-to-Left if the keyboard language is a right-to-left language, and <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiLeftToRight');" class="pop">Left-to-Right</A> if otherwise.</P>
+
+<H2><A NAME="acconbidilearnaboutrtlproperties_1"></A>ReadingOrder property</H2>
+
+<P class=T>Determines the reading order of the control. You can specify right-to-left or left-to-right reading order or choose to have the reading order determined by the keyboard language of text first entered. See how to <A HREF="achowbidiSpecifyTextReadingOrder.htm">set the <B>ReadingOrder</B> property for a control</A>.</P>
+
+<P class=rtt>Return to<A HREF="#acconbidilearnaboutrtlproperties"> top</A></P>
+
+<H2><A NAME="acconbidilearnaboutrtlproperties_2"></A>KeyboardLanguage property</H2>
+
+<P class=T>The <B>KeyboardLanguage</B> property overrides the keyboard language that is currently in use (including changing the active keyboard language icon on the taskbar). This property specifies the initial keyboard language when the control receives focus. This feature is useful for volume data entry programs because it reduces the need to make keyboard language changes when moving from one field to the next. You can subsequently choose a new keyboard language.</P>
+
+<P class=T>In Form view or Datasheet view, Microsoft Access 2000 will activate the designated keyboard language. If the operation fails (most likely because the requested keyboard language is not available on the developer/user system), the active keyboard language is not changed. For more sophisticated error handling, refer to the discussion of the Visual Basic for Applications <A HREF="acproKeyboardLanguage.htm"><B>KeyboardLanguage</B> property</A>. See how to <A HREF="achowbidiSpecifyInitialKeyboardLanguage.htm">set the <B>KeyboardLanguage</B> property for a control</A>.</P>
+
+<P class=rtt>Return to<A HREF="#acconbidilearnaboutrtlproperties"> top</A></P>
+
+<H2><A NAME="acconbidilearnaboutrtlproperties_3"></A>TextAlign property</H2>
+
+<P class=T>This property determines the placement of text within a control. In addition to the standard left, right, and center character alignments, right-to-left features in Access 2000 use the <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiGeneral');" class="pop">General</A> alignment setting to specify how text is aligned. See how to <A HREF="achowbidiSpecifyTextAlignment.htm">set the <B>TextAlign</B> property for a control</A>.</P>
+
+<P class=rtt>Return to<A HREF="#acconbidilearnaboutrtlproperties"> top</A></P>
+
+<H2><A NAME="acconbidilearnaboutrtlproperties_4"></A>ScrollBarAlign property</H2>
+
+<P class=T>This property allows you to place the control's vertical scroll bars and buttons in the applicable right-to-left or left-to-right <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiDirection');" class="pop">direction</A>. The System setting orients the vertical scroll bar according to the <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiUserInterfaceLanguage');" class="pop">user-interface language</A> in effect. If the user-interface language is a right-to-left language, the vertical scroll bar will be on the left; if the user interface language is a left-to-right language, the vertical scroll bar will be on the right. See how to <A HREF="achowbidiSpecifyScrollBars.htm">set the <B>ScrollBarAlign</B> property for a control</A>.</P>
+
+<P class=rtt>Return to<A HREF="#acconbidilearnaboutrtlproperties"> top</A></P>
+
+<H2><A NAME="acconbidilearnaboutrtlproperties_5"></A>NumeralShapes property (Arabic only)</H2>
+
+<P class=T>Two different representations of digit shapes are used in Middle Eastern countries: Arabic and <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiHindi');" class="pop">Hindi</A>. You can choose to have text in controls be specifically Arabic or Hindi, you can let the Microsoft Windows operating system determine the numerals, or you choose the numeral shape depending on the context of adjacent text. See how to <A HREF="achowbidiSpecifyAppearanceNumbers.htm">set the <B>NumeralShapes</B> property for a control</A>.</P>
+
+<P class=rtt>Return to <A HREF="#acconbidilearnaboutrtlproperties">top</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconbidiLearnAboutRTLPropertiesW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

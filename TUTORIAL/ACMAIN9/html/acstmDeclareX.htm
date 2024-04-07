@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acstmDeclareX'
+Feature='acstm'
+Handoff='2'
+SourceFile='acobdex_1a.rtf'
+Tnum='234397'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione Declare</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acstmdeclarex"></A>Esempio di istruzione Declare</B></P>
+
+
+
+<P class=T>In Microsoft Access è possibile utilizzare l'istruzione <B>Declare</B> a livello di modulo in un modulo standard per dichiarare un riferimento ad una routine esterna in una DLL (dynamic-link library, libreria a collegamento dinamico). Un'istruzione <B>Declare</B> è pubblica per impostazione predefinita. Per poter includere un'istruzione <B>Declare</B> in un modulo di classe, anteporre la parola chiave <B>Private</B>.</P>
+
+<P class=T>Nell'esempio riportato di seguito si fa riferimento ad una routine in una DLL che viene quindi chiamata da Visual Basic.</P>
+
+<PRE class=CT><CODE>' In standard module.
+<B>Declare Sub</B> MessageBeep <B>Lib</B> "User32" (ByVal intN As _
+    Integer)
+
+' In class module.
+Private <B>Declare Sub</B> MessageBeep <B>Lib</B> "User32" (ByVal _
+    intN As Integer)
+
+' Once you have referenced procedure in DLL with Declare
+' statement, you can call that procedure normally from code.
+Sub SystemBeep(intBeeps As Integer, sngPause As Single)
+    Dim intI As Integer
+    Dim sngStart As Single
+
+    For intI = 1 To intBeeps
+        ' Call system function.
+        Call MessageBeep(intBeeps)
+        ' Get start time.
+        sngStart = Timer
+        ' Pause between beeps.
+        Do While Timer &lt; sngStart + sngPause
+            ' Return control to operating system.
+            DoEvents
+        Loop
+    Next intI
+End Sub
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

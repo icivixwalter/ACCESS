@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconResolveErrorsInVisualBasicCode'
+Feature='Modules: Basics'
+Handoff='3'
+SourceFile='cmodbas.rtf'
+Tnum='186859'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Risolvere gli errori nel codice Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconresolveerrorsinvisualbasiccode"></A>Risolvere gli errori nel codice Visual Basic</H1>
+
+<P class=T>L'esecuzione del debug è la routine utilizzata per rilevare e risolvere gli errori nel codice <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasic');" class="pop">Visual Basic</A>. Durante l'esecuzione del codice, è possibile che si verifichino tre tipi di errore:
+
+<UL>
+	<LI class=LB1>Errori di<A HREF="javascript:HelpPopup('actip9.hlp','defCompileTime');" class="pop"> compilazione</A>, che si verificano se il codice è costruito in modo non corretto. È possibile che a un'istruzione non corrisponda l'equivalente istruzione di chiusura come <B>If</B> ed <B>End If</B> o <B>For</B> e <B>Next</B> oppure che sia stato commesso un errore di programmazione che viola le regole di Microsoft Visual Basic, come una parola digitata erroneamente, un separatore mancante o un errore di mancata corrispondenza tra tipi.
+<P class=LT1>Gli errori di compilazione includono inoltre gli<A HREF="javascript:HelpPopup('actip9.hlp','defSyntaxError');" class="pop"> errori di sintassi</A>, ossia gli errori di grammatica o di punteggiatura, comprese parentesi di apertura a cui non corrispondono parentesi di chiusura o un numero errato di<A HREF="javascript:HelpPopup('actip9.hlp','defArgument');" class="pop"> argomenti</A> passati a una funzione.
+</LI>
+
+	<LI class=LB1><A HREF="javascript:HelpPopup('actip9.hlp','defRunTimeError');" class="pop">Errori di run-time</A>, che si verificano dopo l'inizio dell'esecuzione dell'applicazione. Gli esempi di errori di run-time includono il tentativo di eseguire un'operazione non valida, come la divisione per zero o la scrittura su un file non esistente.<BR><BR></LI>
+
+	<LI class=LB1>Errori logici, che si verificano quando l'applicazione non funziona come si desidera e produce risultati non corretti.</LI>
+</UL>
+
+<P class=T>Per contribuire all'individuazione dei tre tipi di errore e per controllare come procede l'esecuzione del codice, in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasicEditor');" class="pop">Visual Basic Editor</A> vengono forniti gli strumenti di debug che consentono di analizzare il codice una riga alla volta, di esaminare o controllare i valori delle espressioni e delle variabili e di tenere traccia delle chiamate di routine.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La maggior parte degli strumenti di debug di Microsoft Access richiede la sospensione dell'esecuzione del codice. Per ulteriori informazioni, fare clic su <A HREF="achowSuspendExecutionS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconResolveErrorsInVisualBasicCodeW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

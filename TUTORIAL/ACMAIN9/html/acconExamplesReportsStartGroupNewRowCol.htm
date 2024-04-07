@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconExamplesReportsStartGroupNewRowCol'
+Feature='Reports: Advanced'
+Handoff='1'
+SourceFile='CRPTADV.RTF'
+Tnum='188860'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di report in cui ogni gruppo inizia su una nuova riga o colonna</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconexamplesreportsstartgroupnewrowcol"></A>Esempi di report in cui ogni gruppo inizia su una nuova riga o colonna</H1>
+
+<P class=T>Nei record a più colonne è possibile evidenziare le intestazioni dei gruppi posizionandole lungo il lato sinistro o nella parte superiore della pagina. Nell'esempio riportato di seguito i report utilizzano IDCategoria come intestazione di gruppo e NomeProdotto come record di dettaglio.</P>
+
+<P class=ART><IMG SRC="images/crptadv4.bmp" ALT="Report in cui ogni intestazione di gruppo viene stampata in una nuova riga" BORDER=0></P>
+
+<P class=T>Per creare il report precedente, posizionare la casella di testo per IDCategoria nell'intestazione di gruppo e la casella di testo per NomeProdotto nella sezione Corpo. Quindi impostare la proprietà <B>Nuova riga o colonna</B> dell'intestazione IDCategoria a <B>Prima e dopo</B> e impostare le seguenti proprietà sulla scheda <B>Colonne</B> della finestra di dialogo <B>Imposta pagina</B> (disponibile scegliendo <B>Imposta pagina</B> dal menu <B>File</B>):</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=29%>Gruppo</TH>
+<TH width=37%>Proprietà</TH>
+<TH width=34%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>Impostazioni griglia</B></TD>
+<TD class=TT width=37%><B>Numero di colonne</B> </TD>
+<TD class=TT width=34%>3</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>Dimensioni colonna</B></TD>
+<TD class=TT width=37%><B>Larghezza</B></TD>
+<TD class=TT width=34%>Larghezza di una colonna nella sezione Corpo, ad esempio 2 pollici.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>&nbsp;</TD>
+<TD class=TT width=37%><B>Altezza</B></TD>
+<TD class=TT width=34%>Altezza di una riga, ad esempio 0,25 pollici.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>Layout colonna</B></TD>
+<TD class=TT width=37%><B>Priorità orizzontale</B></TD>
+<TD class=TT width=34%>Selezionata</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Per creare il report dell'esempio seguente, utilizzare la stessa struttura di report dell'esempio precedente, ma impostare la proprietà <B>Nuova riga o colonna</B> dell'intestazione IDCategoria a <B>Prima sezione</B> e impostare <B>Layout colonna</B> a <B>Priorità verticale</B> nella finestra di dialogo <B>Imposta pagina</B>.</P>
+
+<P class=ART><IMG SRC="images/crptadv5.bmp" ALT="Report in cui ogni intestazione di gruppo viene stampata in una nuova colonna" BORDER=0></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconExamplesReportsStartGroupNewRowColW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

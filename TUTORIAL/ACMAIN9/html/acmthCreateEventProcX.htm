@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateEventProcX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186740'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi CreateEventProc, InsertLines</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreateeventprocx"></A>Esempio di metodi CreateEventProc, InsertLines</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come creare una nuova maschera, viene aggiunto un pulsante di comando e creata una routine evento Clic per il pulsante di comando:</P>
+
+<PRE class=CT><CODE>Function ClickEventProc() As Boolean
+&nbsp;&nbsp;&nbsp; Dim frm As Form, ctl As Control, mdl As Module
+&nbsp;&nbsp;&nbsp; Dim lngReturn As Long
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_ClickEventProc
+&nbsp;&nbsp;&nbsp; ' Crea la nuova maschera.
+&nbsp;&nbsp;&nbsp; Set frm = CreateForm
+&nbsp;&nbsp;&nbsp; ' Crea il pulsante di comando sulla maschera.
+&nbsp;&nbsp;&nbsp; Set ctl = CreateControl(frm.Name, acCommandButton, , , , _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1000, 1000)
+&nbsp;&nbsp;&nbsp; ctl.Caption = "Fare clic qui"
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al modulo della maschera.
+&nbsp;&nbsp;&nbsp; Set mdl = frm.Module
+&nbsp;&nbsp;&nbsp; ' Aggiunge una routine evento.
+&nbsp;&nbsp;&nbsp; lngReturn = mdl.<B>CreateEventProc</B>("Clic", ctl.Name)
+&nbsp;&nbsp;&nbsp; ' Inserisce il testo nel corpo della routine.
+&nbsp;&nbsp;&nbsp; mdl.<B>InsertLines</B> lngReturn + 1, vbTab &amp; "MsgBox ""In arrivo!"""
+&nbsp;&nbsp;&nbsp; ClickEventProc = True
+
+Exit_ClickEventProc:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_ClickEventProc:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; " :" &amp; Err.Description
+&nbsp;&nbsp;&nbsp; ClickEventProc = False
+&nbsp;&nbsp;&nbsp; Resume Exit_ClickEventProc
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

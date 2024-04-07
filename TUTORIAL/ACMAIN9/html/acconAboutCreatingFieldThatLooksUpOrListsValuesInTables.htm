@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutCreatingFieldThatLooksUpOrListsValuesInTables'
+Feature='Tables'
+Handoff='1'
+SourceFile='CTBLNEW.RTF'
+Tnum='241665'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla creazione di un campo che cerca o elenca valori nelle tabelle</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutcreatingfieldthatlooksuporlistsvaluesintables"></A>Informazioni sulla creazione di un campo che cerca o elenca valori nelle tabelle</H1>
+
+<H2>Elenco di ricerca</H2>
+
+<P class=T>L'elenco di ricerca più comune visualizza i valori recuperati da una tabella correlata. Il campo ID fornitore della tabella Prodotti del database di esempio Northwind visualizza questo elenco di ricerca:</P>
+
+<P class=ART><IMG SRC="images/ctblnew1.bmp" ALT="Informazioni della tabella Fornitori visualizzate nell'elenco di ricerca della tabella Prodotti" BORDER=0></P>
+
+<P class=T>Questo elenco viene creato cercando i valori del campo ID fornitore nella tabella Fornitori e visualizzando i corrispondenti nomi dei fornitori. Selezionando un valore da un elenco di ricerca, il valore della <A HREF="javascript:HelpPopup('actip9.hlp','defForeignKey');" class="pop">chiave esterna</A> del record corrente (ID fornitore nella tabella Prodotti) viene impostato al valore della <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> del record corrispondente della tabella correlata (ID fornitore nella tabella Fornitori). In questo modo viene creata un'associazione alla tabella correlata per visualizzare, ma non per memorizzare, i nomi dei fornitori nel record. La chiave esterna (ID fornitore) viene memorizzata, ma non visualizzata. Per questo motivo, tutti gli aggiornamenti apportati ai dati nella tabella Fornitori verranno riportati sia nell'elenco che nei record della tabella Prodotti. È necessario definire un campo con elenco di ricerca nella tabella che conterrà la chiave esterna e in cui sarà visualizzato l'elenco di ricerca. In questo esempio il campo con l'elenco di ricerca deve essere definito dalla tabella Prodotti.</P>
+
+<H2>Elenco valori</H2>
+
+<P class=T>Un elenco di valori è identico a un elenco di ricerca, ma è composto da un set fisso di valori che vengono immessi quando viene creato l'elenco. Un elenco di valori dovrebbe essere utilizzato solo per i valori che non vengono modificati spesso e che non è necessario memorizzare in una tabella. Un esempio di elenco di valori potrebbe essere un elenco per un campo Qualifica contenente Sig., Sig.ra o Sig.na. Selezionando un valore dall'elenco, il valore verrà memorizzato nel record e non verrà creata un'associazione a una tabella correlata. Per questo motivo, se successivamente si modifica uno dei valori originali nell'elenco, gli aggiornamenti non verranno riportati nei record aggiunti prima che fosse apportata la modifica.</P>
+
+<P class=T>È possibile aggiungere un nuovo campo che visualizza un elenco di ricerca o di valori nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A> o nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> della tabella. Se però il campo che si desidera utilizzare come chiave esterna per un campo di ricerca è già esistente, la tabella contenente questo campo deve essere aperta in visualizzazione Struttura per poter definire il campo di ricerca. Se ad esempio nella tabella Prodotti è già stato definito un campo ID fornitore e si desidera modificarlo in un campo di ricerca per visualizzare i nomi dei fornitori inclusi nella tabella Fornitori, sarà necessario aprire la tabella Prodotti in visualizzazione Struttura per apportare la modifica.</P>
+
+<P class=T>Torna a <A HREF="acdecCreatingLookupAndListFieldsInTablesS.htm">Creare un campo che cerca o elenca valori nelle tabelle</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutCreatingFieldThatLooksUpOrListsValuesInTablesW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

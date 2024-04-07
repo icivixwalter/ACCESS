@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthFollowHyperlinkX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186805'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo FollowHyperlink</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthfollowhyperlinkx"></A>Esempio di metodo FollowHyperlink</B></P>
+
+
+
+<P class=T>La funzione riportata di seguito richiede all'utente l'inserimento dell'indirizzo di un collegamento ipertestuale, quindi il collegamento viene visitato:</P>
+
+<PRE class=CT><CODE>Function GetUserAddress() As Boolean
+&nbsp;&nbsp;&nbsp; Dim strInput As String
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_GetUserAddress
+&nbsp;&nbsp;&nbsp; strInput = InputBox("Immettere un indirizzo valido")
+&nbsp;&nbsp;&nbsp; Application.<B>FollowHyperlink</B> strInput, , True
+&nbsp;&nbsp;&nbsp; GetUserAddress = True
+
+Exit_GetUserAddress:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_GetUserAddress:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; GetUserAddress = False
+&nbsp;&nbsp;&nbsp; Resume Exit_GetUserAddress
+End Function</CODE></PRE>
+
+
+
+<P class=T>È possibile richiamare tale funzione con una routine come quella riportata di seguito:</P>
+
+<PRE class=CT><CODE>Sub RichiamaIndirizzoUtente()
+&nbsp;&nbsp;&nbsp; If GetUserAddress = True Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Collegamento ipertestuale riuscito."
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Impossibile eseguire il collegamento ipertestuale."
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

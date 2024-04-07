@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlAvgX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acdsqlx1_1.rtf'
+Tnum='234332'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Media</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlavgx"></A>Esempio di funzione Media</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si suppone di disporre di una tabella Ordini contenente un campo Trasporto. È possibile utilizzare la funzione <B>Media</B> per calcolare il costo medio di trasporto per ordini con costi superiori a L. 100.000. In visualizzazione SQL della finestra Query immettere l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>SELECT <B>Media(</B>[Trasporto]<B>)</B> AS [MediaTrasporto] FROM Ordini WHERE [Trasporto] &gt; 100000;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea un controllo calcolato che visualizza i costi medi di trasporto relativi ai record sottostanti di una maschera in base alla stessa tabella Ordini. Aprire una nuova maschera ed impostare a Ordini la proprietà <B>Origine record</B>. Immettere la seguente espressione nella proprietà <B>Origine controllo</B> di una casella di testo sulla maschera. Per applicare una condizione che limiti il calcolo solo ad alcuni record, ad esempio ai record relativi ad ordini superiori a L. 100.000, impostare la proprietà <B>Filtro</B> della maschera.</P>
+
+<PRE class=CT><CODE>=<B>Media(</B>[Trasporto]<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

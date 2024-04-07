@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlCreateTableX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234370'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione CREATE TABLE e proposizione CONSTRAINT (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlcreatetablex"></A>Esempio di istruzione CREATE TABLE e proposizione CONSTRAINT (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, è necessario creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+
+
+<P class=WT><B>Attenzione</B>&nbsp;&nbsp; Questi esempi modificano il database di esempio Northwind. Di conseguenza, prima di iniziare è opportuno eseguire una copia di backup.</P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea una nuova tabella con due campi Testo:</P>
+
+<PRE class=CT><CODE><B>CREATE TABLE</B> PrimaTabella (Nome TEXT, _
+    Cognome TEXT);</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea una nuova tabella con due campi Testo, un campo Data/ora e un indice univoco composto dai tre campi:</P>
+
+<PRE class=CT><CODE><B>CREATE TABLE</B> SecondaTabella (Nome TEXT _
+    Cognome TEXT,  DataNascita DATETIME _
+    CONSTRAINT LimiteTabella UNIQUE (Nome _
+    Cognome, DataNascita));</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea una nuova tabella con due campi Testo e un campo Intero. Il campo SSN è la chiave primaria.</P>
+
+<PRE class=CT><CODE><B>CREATE TABLE</B> TerzaTabella (Nome TEXT _
+    Cognome TEXT, SSN INTEGER _
+    CONSTRAINT LimiteCampo PRIMARY KEY);</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctIsDateX'
+Feature='acfct'
+Handoff='2'
+SourceFile='acobisx.rtf'
+Tnum='234463'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione IsDate</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctisdatex"></A>Esempio di funzione IsDate</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si richiede un valore di stringa e si utilizza la funzione <B>IsDate</B> per determinare se è possibile convertire la stringa in una data. Si visualizza quindi il messaggio appropriato.</P>
+
+<PRE class=CT><CODE>Sub VerificaData()
+    Dim strData As String
+
+    strData = InputBox("Immettere la stringa da visualizzare come data.")
+    ' Verifica la variabile.
+    If <B>IsDate(</B>strData<B>)</B> Then
+        ' Se la stringa è una data, formatta e visualizza nella finestra.
+        MsgBox "La data è: " &amp; Format(DateValue(strData), _
+            "Data estesa")
+    Else
+        MsgBox "Il valore immesso non è una data."
+    End If
+End Sub</CODE></PRE>
+
+<UL></UL>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

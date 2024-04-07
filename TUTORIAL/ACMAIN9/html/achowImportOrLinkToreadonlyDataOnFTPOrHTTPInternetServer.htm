@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowImportOrLinkToreadonlyDataOnFTPOrHTTPInternetServer'
+Feature='Web'
+Handoff='3'
+SourceFile='ctbliel.rtf'
+Tnum='189076'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Importare o collegare (sola lettura) i dati in un server Internet FTP oppure HTTP</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowimportorlinktoreadonlydataonftporhttpinternetserver"></A>Importare o collegare (sola lettura) i dati in un server Internet FTP oppure HTTP</H1>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Non è possibile utilizzare come origine o come destinazione un database di Microsoft Access, un file di testo o un'<A HREF="javascript:HelpPopup('actip9.hlp','defODBCDataSource');" class="pop">origine dati ODBC</A> quando si importa o ci si collega a un server FTP o HTTP. Per un riepilogo generale dei dati che è possibile importare o collegare, fare clic su <A HREF="acdecImportingAttachingDataS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.
+<OL>
+	<LI class=LPROC>Aprire un database o passare alla <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> di un database già aperto.<BR><BR></LI>
+
+	<LI class=LPROC>Per importare dei dati, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Importa</B>.
+<P class=LT1>Per <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegare</A> dei dati, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Collega tabelle</B>.
+<br><br></LI>
+
+	<LI class=LPROC>Per importare o collegare dati da un server HTTP, digitare l'indirizzo Internet nella casella <B>Nome file</B>. Per collegare ad esempio il file Vendgenn.html del server HTTP //webpub, digitare <B>http://webpub/venditegenn.html</B>.<P class=LT1>Per importare o collegare dati da un server FTP, digitare l'indirizzo Internet nella casella <B>Nome file</B> oppure fare clic sulla freccia a destra della casella <B>Cerca in</B> e selezionare <B>Percorsi FTP</B>. Nell'elenco dei percorsi FTP fare doppio clic sul percorso desiderato e poi sulla voce desiderata.<BR><BR></LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+
+	<LI class=NLB>Sebbene non sia possibile importare o collegare un file di testo tramite il comando <B>Importa</B>, è consentito utilizzare l'azione <B>TrasferisciTesto</B> o il metodo <B>TransferText</B>.<BR><BR></LI>
+
+	<LI class=NLB>Microsoft Access copia l'intero file nella cartella della cache di Microsoft Internet Explorer nel computer locale. Questo processo quindi può richiedere del tempo, poiché da Internet possono venire trasferite grandi quantità di dati.<BR><BR></LI>
+
+	<LI class=NLB>Una tabella collegata è uno snapshot dei dati dell'origine remota originaria al momento della creazione del collegamento. Mentre la tabella è aperta, gli aggiornamenti dei dati eseguiti presso la postazione remota non vengono visualizzati, ma alla successiva apertura della tabella, Microsoft Access aggiornerà la copia locale nella cartella della cache.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowImportOrLinkToreadonlyDataOnFTPOrHTTPInternetServerW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

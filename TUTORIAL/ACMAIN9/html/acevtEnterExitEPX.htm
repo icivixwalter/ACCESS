@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtEnterExitEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv1_1a.rtf'
+Tnum='187206'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Invio, Uscita - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtenterexitepx"></A>Eventi Invio, Uscita - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito due routine evento vengono allegate alla casella di testo Cognome. La routine evento Invio visualizza un messaggio in cui viene specificato il tipo di dati che è possibile immettere nella casella di testo. La routine evento Uscita visualizza una finestra di dialogo in cui viene richiesto se si desidera salvare le modifiche prima che lo stato attivo si sposti su un altro controllo. Se si sceglie Annulla, l'argomento Cancel viene impostato a <B>True</B> (-1) e lo stato attivo si sposta sulla casella di testo senza che le modifiche vengano salvate. Se si sceglie OK, le modifiche vengono salvate e lo stato attivo si sposta su un altro controllo.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la seguente routine evento a una maschera contenente una casella di testo denominata Cognome.</P>
+
+<PRE class=CT><CODE>Private Sub Cognome_<B>Enter</B>()
+&nbsp;&nbsp;&nbsp; MsgBox "Immettere il proprio cognome."
+End Sub
+
+Private Sub Cognome_<B>Exit</B>(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; Dim strMsg As String
+
+&nbsp;&nbsp;&nbsp; strMsg = "Il cognome '" &amp; Me!Cognome _
+&nbsp;&nbsp;&nbsp;&nbsp; &amp; "' è stato immesso." &amp; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vbCrLf &amp; "Corretto?"
+&nbsp;&nbsp;&nbsp; If MsgBox(strMsg, vbYesNo) = vbNo Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cancel = True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Annulla l'uscita.
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Salva le modifiche ed esce.
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

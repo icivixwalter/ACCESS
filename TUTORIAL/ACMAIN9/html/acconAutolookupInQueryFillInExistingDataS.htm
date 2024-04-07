@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAutolookupInQueryFillInExistingDataS'
+Feature='Queries: Multiple tables'
+Handoff='1'
+SourceFile='CQRYMUL.RTF'
+Tnum='188584'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulle query di Ricerca automatica che immettono dati automaticamente</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconautolookupinqueryfillinexistingdatas"></A>Informazioni sulle query di Ricerca automatica che immettono dati automaticamente</H1>
+
+<P class=T>È possibile strutturare una query a più tabelle per inserire automaticamente alcuni valori di campo per un nuovo record. Quando si immette un valore nel campo di <A HREF="javascript:HelpPopup('actip9.hlp','defJoin');" class="pop">join</A> contenuto nella query o in una maschera, un report o una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> basata sulla query, in Microsoft Access vengono ricercate e inserite le informazioni esistenti correlate a quel valore. Se ad esempio si conosce il valore contenuto nel campo di join tra una tabella Clienti e una tabella Ordini (generalmente un identificatore clienti come ID cliente), l'utente può immettere l'ID cliente, mentre le informazioni restanti relative a quel cliente vengono immesse dal programma. Se non vengono trovate informazioni corrispondenti, viene visualizzato un messaggio di errore quando il record non è più nello stato attivo sulla query.</P>
+
+<P class=ART><IMG SRC="images/cqrymul5.bmp" ALT="Immissione di un valore in un campo di join" BORDER=0></P>
+
+<P class=ART><IMG SRC="images/cqrymul6.bmp" ALT="Recupero dei dati restanti" BORDER=0></P>
+
+<P class=T>Per consentire il funzionamento della Ricerca automatica, è necessario che siano soddisfatte alcune condizioni:
+
+<UL>
+	<LI class=LB1>La query deve essere basata su più di una tabella e le tabelle devono avere una <A HREF="javascript:HelpPopup('actip9.hlp','defOneToMany');" class="pop">relazione uno-a-molti</A>. L'<A HREF="javascript:HelpPopup('actip9.hlp','defReferentialIntegrity');" class="pop">integrità referenziale</A> non deve essere applicata.<BR><BR></LI>
+
+	<LI class=LB1>Il campo di join sul lato "uno" della relazione deve avere un <A HREF="javascript:HelpPopup('actip9.hlp','defUniqueIndex');" class="pop">indice univoco</A>. Un indice univoco significa che il campo è una <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> o che la relativa proprietà <B>Indicizzato</B> in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A> della tabella è impostata a <B>Sì (Duplicati non ammessi)</B>.<BR><BR></LI>
+
+	<LI class=LB1>Il campo di join aggiunto alla griglia di struttura deve provenire dalla tabella sul lato "molti" della relazione uno-a-molti. In altre parole, deve essere la <A HREF="javascript:HelpPopup('actip9.hlp','defForeignKey');" class="pop">chiave esterna</A> di quella tabella. Per fare in modo che la Ricerca automatica funzioni, questo campo non può essere una chiave primaria e la relativa proprietà <B>Indicizzato</B> non può essere impostata a <B>Sì (Duplicati non ammessi)</B>. In una query che ad esempio include le tabelle Clienti e Ordini trascinare sulla griglia di struttura il campo ID cliente della tabella Ordini e non quello della tabella Clienti.<BR><BR></LI>
+
+	<LI class=LB1>Il valore immesso nel campo di join dal lato "molti" deve essere già esistente nel campo di join dal lato "uno".</LI>
+</UL>
+
+<P class=T>Quando il valore del campo di join dal lato "molti" della relazione viene aggiunto o modificato in un record, in Microsoft Access vengono trovati e visualizzati automaticamente i valori associati dalla tabella sul lato "uno" della relazione.</P>
+
+<P class=T>Mentre il campo di join dal alto "molti" della relazione può essere aggiornato in qualsiasi momento, il campo di join dal lato "uno" può essere aggiornato solo se è stata attivata l'opzione per gli <A HREF="javascript:HelpPopup('actip9.hlp','defCascadeUpdate');" class="pop">aggiornamenti a catena</A> durante la definizione della relazione tra le tabelle. In ogni caso, quando si aggiornano dei dati viene automaticamente eseguito il ricalcolo di qualsiasi formula o espressione contenuta nella query che dipenda dai dati aggiornati.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAutolookupInQueryFillInExistingDataSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

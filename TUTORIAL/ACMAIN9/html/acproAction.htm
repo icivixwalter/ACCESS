@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproAction'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproole2_1a.rtf'
+Tnum='186969'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Action</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproaction"></A>Proprietà Action</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproActionC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproActionX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproActionA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>Action</B> in Visual Basic per specificare l'operazione da eseguire su un <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObject');" class="pop">oggetto OLE</A>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>Action</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=37%>Costante</TH>
+<TH width=63%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLECreateEmbed</B> (0)</TD>
+<TD class=TT width=63%>Crea un oggetto <A HREF="javascript:HelpPopup('actip9.hlp','defEmbed');" class="pop">incorporato</A>. Per utilizzare questa impostazione, è necessario innanzitutto impostare a <B>acOLEEmbedded</B> o <B>acOLEEither</B> la proprietà <A HREF="acproOleTypeAllowed.htm"><B>OLETypeAllowed</B></A>  <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">del controllo</A>. Impostare la proprietà <A HREF="acproClass.htm"><B>Class</B></A> al tipo di oggetto OLE che si desidera creare. È possibile utilizzare la proprietà <A HREF="acproSourceDoc.htm"><B>SourceDoc</B></A> per utilizzare come modello un file esistente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLECreateLink</B> (1)</TD>
+<TD class=TT width=63%>Crea un oggetto OLE <A HREF="javascript:HelpPopup('actip9.hlp','defLink');" class="pop">collegato</A> dal contenuto di un file. Per utilizzare questa impostazione, è necessario innanzitutto impostare le proprietà <B>OLETypeAllowed</B> e <B>SourceDoc</B> del controllo. Impostare a <B>acOLELinked</B> o <B>acOLEEither</B> la proprietà <B>OLETypeAllowed</B>. La proprietà <B>SourceDoc</B> specifica il file utilizzato per creare l'oggetto OLE. È inoltre possibile impostare la proprietà <A HREF="acproSourceItem.htm"><B>SourceItem</B></A> del controllo per specificare, ad esempio, un intervallo di righe e colonne, se l'oggetto che si crea è un foglio di lavoro di Microsoft Excel. Quando si crea un oggetto OLE utilizzando questa impostazione, il controllo visualizza un <A HREF="javascript:HelpPopup('actip9.hlp','defMetafile');" class="pop">metafile</A> con immagine grafica relativo al file specificato dalla proprietà <B>SourceDoc</B> del controllo. Se si salva l'oggetto OLE, vengono salvate solo le informazioni di collegamento, come il nome dell'applicazione che ha fornito l'oggetto e il nome del file collegato, poiché il controllo contiene un'immagine dei dati, ma non i dati origine.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLECopy</B> (4)</TD>
+<TD class=TT width=63%>Copia un oggetto negli Appunti. Quando si copia un oggetto OLE negli Appunti, anche tutti i dati e le informazioni di collegamento associati all'oggetto vengono copiati negli Appunti. È possibile copiare negli Appunti sia gli oggetti incorporati che quelli collegati. L'uso di questa impostazione equivale a scegliere <B>Copia</B> dal menu <B>Modifica</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLEPaste</B> (5)</TD>
+<TD class=TT width=63%>Incolla i dati dagli Appunti al controllo. Se l'operazione riesce, la proprietà <A HREF="acproOleType.htm"><B>OLEType</B></A> del controllo viene impostata a <B>acOLELinked</B> o <B>acOLEEmbedded</B>. Se l'operazione non riesce, la proprietà <B>OLEType</B> viene impostata a <B>acOLENone</B>. L'uso<B> </B>di questa impostazione equivale a scegliere <B>Incolla</B> dal menu <B>Modifica</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLEUpdate</B> (6)</TD>
+<TD class=TT width=63%>Recupera i dati correnti dall'applicazione che fornisce l'oggetto e visualizza tali dati nel controllo come metafile grafico.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLEActivate</B> (7)</TD>
+<TD class=TT width=63%>Apre un oggetto OLE per un'operazione, come la modifica. Per utilizzare questa impostazione è necessario innanzitutto impostare la proprietà <A HREF="acproVerb.htm"><B>Verb</B></A> del controllo. La proprietà <B>Verb</B> specifica l'operazione da eseguire quando viene attivato l'oggetto OLE.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLEClose</B> (9)</TD>
+<TD class=TT width=63%>Chiude un oggetto OLE e termina la connessione con l'applicazione che ha fornito l'oggetto. Questa impostazione si applica solo a oggetti incorporati. L'uso di questa impostazione equivale a scegliere <B>Chiudi</B> dal <A HREF="javascript:HelpPopup('actip9.hlp','defControlMenu');" class="pop">menu di <B>controllo</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLEDelete</B> (10)</TD>
+<TD class=TT width=63%>Elimina l'oggetto OLE specificato e libera la memoria associata. Questa impostazione consente di eliminare esplicitamente un oggetto OLE. Gli oggetti vengono automaticamente eliminati quando si chiude una maschera o quando si aggiorna l'oggetto con un nuovo oggetto. Non è possibile utilizzare la proprietà <B>Action</B> per eliminare un oggetto OLE associato dalla relativa tabella o query sottostante.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLEInsertObjDlg</B> (14)</TD>
+<TD class=TT width=63%>Visualizza la finestra di dialogo <B>Inserisci oggetto</B>. Si visualizza tale finestra di dialogo in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">Foglio dati</A> per consentire di creare un nuovo oggetto o di collegare o incorporare un oggetto esistente. È possibile utilizzare la proprietà <B>OLETypeAllowed</B> del controllo per determinare il tipo di oggetto che è possibile creare con la costante <B>acOLELinked</B>, <B>acOLEEmbedded</B> o <B>acOLEEither</B>, utilizzando questa finestra di dialogo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLEPasteSpecialDlg</B> (15)</TD>
+<TD class=TT width=63%>Visualizza la finestra di dialogo <B>Incolla speciale</B>. Si visualizza tale finestra di dialogo in visualizzazione Maschera o Foglio dati per consentire di incollare un oggetto dagli Appunti. La finestra di dialogo offre più opzioni, compresa l'opzione di incollare un oggetto collegato o incorporato. È possibile utilizzare la proprietà <B>OLETypeAllowed</B> del controllo per determinare il tipo di oggetto che è possibile incollare con la costante <B>acOLELinked</B>, <B>acOLEEmbedded</B> o <B>acOLEEither</B>, utilizzando questa finestra di dialogo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>acOLEFetchVerbs</B> (17)</TD>
+<TD class=TT width=63%>Aggiorna l'elenco di <A HREF="javascript:HelpPopup('actip9.hlp','defVerb');" class="pop">verbi</A> supportati da un oggetto OLE. Per visualizzare l'elenco di verbi, utilizzare le proprietà <A HREF="acproObjectVerbs.htm"><B>ObjectVerbs</B></A> e <A HREF="acproObjectVerbsCount.htm"><B>ObjectVerbsCount</B></A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare la proprietà <B>Action</B> solo utilizzando <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>. L'impostazione della proprietà <B>Action</B> ha un valore di tipo di dati  <A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>Intero</B></A>.</P>
+
+<P class=T>La proprietà <B>Action</B> non è disponibile in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A> ma è possibile leggerla o impostarla in altre visualizzazioni.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando, relativamente a un controllo, la proprietà <A HREF="acproEnabled.htm"><B>Enabled</B></A> è impostata a No o la proprietà <A HREF="acproEnabled.htm"><B>Locked</B></A> è impostata a Sì, non è possibile utilizzare alcune delle impostazioni della proprietà <B>Action</B>. La tabella riportata di seguito indica quali impostazioni sono consentite o meno rispettando tali condizioni.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=42%>Impostazione</TH>
+<TH width=22%>Enabled = No</TH>
+<TH width=36%>Locked = Si</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLECreateEmbed</B> (0)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Non consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLECreateLink</B> (1)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Non consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLECopy</B> (4)</TD>
+<TD class=TT width=22%>Consentita</TD>
+<TD class=TT width=36%>Consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLEPaste</B> (5)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Non consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLEUpdate</B> (6)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Non consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLEActivate</B> (7)</TD>
+<TD class=TT width=22%>Consentita</TD>
+<TD class=TT width=36%>Consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLEClose</B> (9)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLEDelete</B> (10)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Non consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLEInsertObjDlg</B> (14)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Non consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLEPasteSpecialDlg</B> (15)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Non consentita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%><B>acOLEFetchVerbs</B> (17)</TD>
+<TD class=TT width=22%>Non consentita</TD>
+<TD class=TT width=36%>Consentita</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproColumnHeadingsX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproqry1_1a.rtf'
+Tnum='187077'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ColumnHeadings</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocolumnheadingsx"></A>Esempio di proprietà ColumnHeadings</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono create quattro intestazioni colonna (Trim 1, Trim 2, Trim 3, Trim 4) in visualizzazione Foglio dati di una query a campi incrociati che elenca gli ordini trimestrali secondo il prodotto. Immettere la seguente istruzione in visualizzazione SQL della finestra di query.</P>
+
+<PRE class=CT><CODE>TRANSFORM Sum(CCur([Dettagli Ordini].PrezzoUnitario * [Dettagli Ordini].Quantità * (1-[Sconto])/100) * 100)
+AS TotaleProdotto SELECT Prodotti. NomeProdotto FROM Prodotti
+INNER JOIN (Ordini INNER JOIN [Dettagli Ordini] ON Ordini.IDOrdine = [Dettagli Ordini]. IDOrdine)
+ON Prodotti.IDProdotto = [Dettagli Ordini].IDProdotto
+WHERE (((Ordini.DataSpedizione) Between #01/01/94# And #31/12/94#))
+GROUP BY Prodotti.NomeProdotto PIVOT "Qtr " &amp; DatePart("q",[DataSpedizione],1,0);</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

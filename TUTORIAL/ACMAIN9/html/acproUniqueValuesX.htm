@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproUniqueValuesX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproqry2.doc'
+Tnum='188219'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà UniqueValues</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprouniquevaluesx"></A>Esempio di proprietà UniqueValues</B></P>
+
+
+
+<P class=T>L'istruzione SELECT contenuta in questo esempio restituisce un elenco dei paesi in cui si hanno clienti. Poiché si potrebbero avere molti clienti in ciascun paese, molti record potrebbero risultare con l'indicazione dello stesso paese nella tabella Clienti. Ciascun paese, tuttavia, viene rappresentato una sola volta nei risultati della query.</P>
+
+<P class=T>Nell'esempio successivo viene utilizzata la tabella Clienti, contenente i seguenti dati:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2 width=420>
+
+<TR VALIGN="top">
+<TH width=30%>Paese</TH>
+<TH width=70%>Nome società</TH>
+</TR>
+
+<TR VALIGN="top">
+
+<TD class=TT width=30%>Brasile</TD>
+<TD class=TT width=70%>Familia Arquibaldo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Brasile</TD>
+<TD class=TT width=70%>Gourmet Lanchonetes</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Brasile</TD>
+<TD class=TT width=70%>Hanari Carnes</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Francia</TD>
+<TD class=TT width=70%>Du monde entier</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Francia</TD>
+<TD class=TT width=70%>Folies gourmandes</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Germania</TD>
+<TD class=TT width=70%>Frankenversand</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Irlanda</TD>
+<TD class=TT width=70%>Hungry Owl All-Night Grocers</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Tale istruzione SQL restituisce i paesi nella tabella seguente:</P>
+
+<PRE class=CT><CODE>SELECT DISTINCT Clienti.Paese
+FROM Clienti;</CODE></PRE>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=1 width=420>
+
+<TR VALIGN="top">
+<TH width=100%>Paesi restituiti</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=100%>Brasile</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=100%>Francia</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=100%>Germania</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=100%>Irlanda</TD>
+</TR>
+</TABLE><BR>
+
+
+
+
+
+</BODY>
+</HTML>

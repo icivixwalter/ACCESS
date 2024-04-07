@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconConsiderationsSettingoptionsiStartupDialogBoxS'
+Feature='Databases: Startup options'
+Handoff='1'
+SourceFile='cdatobj3.rtf'
+Tnum='188724'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Considerazioni sull'impostazione delle opzioni nella finestra di dialogo Avvio</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSetStartupPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconconsiderationssettingoptionsistartupdialogboxs"></A>Considerazioni sull'impostazione delle opzioni nella finestra di dialogo Avvio</H1>
+
+<UL>
+	<LI class=LB1>Le opzioni di avvio si applicano soltanto al <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o al <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> correnti.<BR><BR></LI>
+
+	<LI class=NLB>Quando si specifica un'impostazione nella finestra di dialogo <B>Avvio</B>, viene automaticamente impostata la proprietà del database di Microsoft Access o del progetto di Microsoft Access associata a quell'impostazione. Per visualizzare un elenco di queste proprietà, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Le proprietà di avvio non hanno la priorità sulle impostazioni delle proprietà di una barra degli strumenti, una barra dei menu, un menu di scelta rapida, una maschera o un report. Le opzioni <B>Barra dei menu</B> e <B>Barra dei menu di scelta rapida</B> della finestra di dialogo <B>Avvio</B> ad esempio non hanno la priorità sulle impostazioni delle proprietà di maschere o report specifici che dispongono di una barra dei menu personalizzata o di un <A HREF="javascript:HelpPopup('actip9.hlp','defShortcutMenus');" class="pop">menu di scelta rapida</A>. Quando viene aperta pertanto una maschera o un report, verrà visualizzata la barra dei menu personalizzata associata alla maschera o al report invece della barra dei menu globale specificata nella finestra di dialogo <B>Avvio</B>.<BR><BR></LI>
+
+	<LI class=LB1>È possibile utilizzare la finestra di dialogo <B>Avvio</B> al posto o in aggiunta a una macro AutoExec. Una macro AutoExec viene eseguita dopo che le opzioni di avvio sono diventate effettive. È consigliabile quindi evitare qualsiasi azione in una macro AutoExec che modifichi l'effetto delle impostazioni delle opzioni di avvio. Se ad esempio viene specificata una maschera nella casella <B>Visualizza maschera/pagina</B> nella finestra di dialogo <B>Avvio</B> e viene utilizzata anche l'azione <B>ApriMaschera</B> in una macro AutoExec, verrà visualizzata prima la maschera specificata nella finestra di dialogo <B>Avvio</B> e immediatamente dopo la maschera specificata nell'azione <B>ApriMaschera</B>.<BR><BR></LI>
+
+	<LI class=NLB>Se per il database di Access è stata definita la <A HREF="javascript:HelpPopup('actip9.hlp','defUserLevelSecurity');" class="pop">protezione a livello utente</A> è possibile impedire che gli utenti modifichino le impostazioni della finestra di dialogo <B>Avvio</B> assicurandosi che non dispongano dell'autorizzazione Amministrazione per il database. Per ulteriori informazioni, fare clic su <A HREF="acdecSecureAccessDatabase.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>. <BR><BR></LI>
+
+	<LI class=NLB>Per ignorare le impostazioni delle opzioni di avvio, tenere premuto MAIUSC quando si apre il database.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconConsiderationsSettingoptionsiStartupDialogBoxSW">
+</OBJECT>
+</P>
+
+<UL></UL>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

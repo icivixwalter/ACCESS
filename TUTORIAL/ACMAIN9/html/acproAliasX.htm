@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproAliasX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproqry1_1a.rtf'
+Tnum='186987'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Alias</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproaliasx"></A>Esempio di proprietà Alias</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene impostata la proprietà <B>RecordSource</B> per una maschera a un'istruzione SQL che utilizza la proposizione AS per specificare Direttori come alias della tabella Impiegati.</P>
+
+<PRE class=CT><CODE>Dim strOttieniSQL AS String
+strOttieniSQL = "SELECT Impiegati.Nome, Impiegati.Cognome, " _
+&nbsp;&nbsp;&nbsp; &amp; "Impiegati.Titolo, Direttori.Nome, Direttori.Cognome FROM Impiegati " _
+&nbsp;&nbsp;&nbsp; &amp; "INNER JOIN Impiegati AS Direttori " _
+&nbsp;&nbsp;&nbsp; &amp; "ON Impiegati.ReportsTo = Direttori.IDImpiegato; "
+Forms!Maschera1.RecordSource = strOttieniSQL</CODE></PRE>
+
+<P class=T>Nell'esempio successivo viene utilizzato un self-join per mostrare gli impiegati e i relativi direttori. Viene utilizzata la proposizione AS per impostare la proprietà <B>Alias</B> della tabella duplicata Impiegati a Direttori. Immettere la seguente istruzione SQL in visualizzazione SQL della finestra di query.</P>
+
+<PRE class=CT><CODE>SELECT Impiegati.Nome, Impiegati.Cognome, Impiegati.Titolo, Direttori.Nome, Direttori.Cognome
+FROM Impiegati INNER JOIN Impiegati AS Direttori
+ON Impiegati.ReportsTo = Direttori.IDImpiegato;</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjParameterX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acdobjx.doc'
+Tnum='234501'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Parameter e insieme Parameters (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjparameterx"></A>Esempio di oggetto Parameter e insieme Parameters (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creata una nuova query con parametri e vengono forniti i valori per tali parametri:</P>
+
+<PRE class=CT><CODE>Sub NuovaQueryConParametri()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, qdf As QueryDef, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim prm As <B>Parameter</B>, strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Costruisce la stringa SQL.
+&nbsp;&nbsp;&nbsp; strSQL = "PARAMETERS [DataOrdine iniziale] DataOra, " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "[DataOrdine finale] DataOra; SELECT * FROM Ordini " &amp; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "WHERE ([DataOrdine] Between[DataOrdine iniziale] " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "And [DataOrdine finale]);"
+&nbsp;&nbsp;&nbsp; ' Crea il nuovo oggetto QueryDef.
+&nbsp;&nbsp;&nbsp; Set qdf = dbs.CreateQueryDef("QueryConParametri", strSQL)
+&nbsp;&nbsp;&nbsp; ' Fornisce i valori per i parametri.
+&nbsp;&nbsp;&nbsp; qdf.<B>Parameters</B>![DataOrdine iniziale] = #1/4/95#
+&nbsp;&nbsp;&nbsp; qdf.<B>Parameters</B>![DataOrdine finale] = #30/4/95#
+&nbsp;&nbsp;&nbsp; ' Apre il recordset su oggetto QueryDef.
+&nbsp;&nbsp;&nbsp; Set rst = qdf.OpenRecordset
+&nbsp;&nbsp;&nbsp; rst.MoveLast
+&nbsp;&nbsp;&nbsp; MsgBox "Query restituita " &amp; rst.RecordCount &amp; " record."
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

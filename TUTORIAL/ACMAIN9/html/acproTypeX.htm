@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproTypeX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprov8_1a.rtf'
+Tnum='186824'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Type</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprotypex"></A>Esempio di proprietà Type</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si determina se un oggetto <B>Module</B> rappresenti un modulo standard o un modulo di classe.</P>
+
+<PRE class=CT><CODE>Function VerificaTipoModulo(strNomeModulo As String) As Integer
+&nbsp;&nbsp;&nbsp; Dim mdl As Module
+
+&nbsp;&nbsp;&nbsp; ' Apre il modulo da includere nell'insieme Modules.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenModule strNomeModulo
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento all'oggetto Module.
+&nbsp;&nbsp;&nbsp; Set mdl = Modules(strNomeModulo)
+&nbsp;&nbsp;&nbsp; ' Controlla la proprietà Type.
+&nbsp;&nbsp;&nbsp; If mdl.<B>Type</B> = acClassModule Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inserisce il commento.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mdl.InsertLines 1, "' Modulo di classe."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VerificaTipoModulo = acClassModule
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inserisce il commento.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mdl.InsertLines 1, "' Modulo standard."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VerificaTipoModulo = acModuloStandard
+&nbsp;&nbsp;&nbsp; End If
+End Function</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

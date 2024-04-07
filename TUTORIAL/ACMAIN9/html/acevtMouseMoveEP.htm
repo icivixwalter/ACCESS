@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtMouseMoveEP'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187487'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento MouseSpostato - Routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEventProperties">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaoprAnd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acevtmousemoveep"></A>Evento MouseSpostato - Routine evento</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtMouseMoveEPC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtMouseMoveEPX">
+</OBJECT></P>
+
+
+
+<P class=T>Per creare una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> che venga eseguita quando si verifica l'evento <A HREF="acevtMouseMove.htm">MouseSpostato</A>, impostare la proprietà <A HREF="JavaScript:hhobj_3.Click()"><B>Su mouse spostato</B></A> a [Routine evento] e fare clic sul pulsante dei<B> </B>generatori <A HREF="javascript:HelpPopup('actip9.hlp','defBuildButton');" class="pop"><IMG SRC="images/buildbut.bmp" BORDER=0></A>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>Private Sub Form_MouseMove(</B>Button <B>As Integer</B>, Shift <B>As Integer</B>, X <B>As Single</B>, Y <B>As Single)</B></P>
+
+<P class=SYN><B>Private Sub</B> <I>nomecontrollo</I><B>_MouseMove(</B>Button <B>As Integer</B>, Shift <B>As Integer</B>, X <B>As Single</B>, Y <B>As Single)</B></P>
+
+
+
+<P class=T>L'evento MouseSpostato utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH colspan=2 width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>nomecontrollo</I></TD>
+<TD class=TT colspan=2 width=76%>Il nome del <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> a cui viene applicata la routine evento MouseSpostato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Button</TD>
+<TD class=TT colspan=2 width=76%>Lo stato dei pulsanti del mouse quando si verifica l'evento. Se è necessario provare l'argomento Button, è possibile <A HREF="acevtMouseDownUpTip.htm">utilizzare una delle seguenti costanti intrinseche come maschere di bit</A>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TH width=25%>Costante</TH>
+<TH width=51%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=25%><B>acLeftButton</B></TD>
+<TD class=TT width=51%>La maschera di bit per il pulsante sinistro del mouse.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=25%><B>AcRightButton</B></TD>
+<TD class=TT width=51%>La maschera di bit per il pulsante destro del mouse.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=25%><B>AcMiddleButton</B></TD>
+<TD class=TT width=51%>La maschera di bit per il pulsante centrale del mouse.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Shift</TD>
+<TD class=TT colspan=2 width=76%>Lo stato dei tasti MAIUSC, CTRL e ALT quando il pulsante specificato dall'argomento Button è stato premuto o rilasciato. Se è necessario provare l'argomento Shift, è possibile utilizzare una delle seguenti costanti intrinseche come maschere di bit:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TH width=25%>Costante</TH>
+<TH width=51%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=25%><B>acShiftMask</B></TD>
+<TD class=TT width=51%>La maschera di bit per MAIUSC.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=25%><B>AcCtrlMask</B></TD>
+<TD class=TT width=51%>La maschera di bit per CTRL.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=25%><B>AcAltMask</B></TD>
+<TD class=TT width=51%>La maschera di bit per ALT.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>X, Y</TD>
+<TD class=TT colspan=2 width=76%>Le coordinate x e y per la posizione corrente del puntatore del mouse. Gli argomenti X e Y sono sempre espressi in <A HREF="javascript:HelpPopup('actip9.hlp','defTwip');" class="pop">twip</A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Una condizione si prova assegnando innanzitutto ciascun risultato a una variabile temporanea di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>Intero</B></A> e paragonando quindi l'argomento Shift o Button a una <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costante intrinseca</A>. Utilizzare l'operatore <A HREF="JavaScript:hhobj_4.Click()"><B>And</B></A> con l'argomento Button per provare se la condizione è maggiore di zero, indicando che è stato premuto il pulsante sinistro, centrale o destro del mouse, come nell'esempio riportato di seguito:</P>
+
+<PRE class=CT><CODE>SinGiù = (Button And acLeftButton) &gt; 0</CODE></PRE>
+
+
+
+<P class=T>In una routine, è possibile provare qualsiasi combinazione di condizioni, come nell'esempio riportato di seguito:</P>
+
+<PRE class=CT><CODE>If MaiuscGiù And CtrlGiù Then
+&nbsp;&nbsp;&nbsp; .' Eseguire se MAIUSC e CTRL sono premuti.
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+End If</CODE></PRE>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'argomento Button per gli eventi <A HREF="acevtMouseDownUp.htm">PulsanteMouseGiù e PulsanteMouseSu</A> è diverso dall'argomento Button per l'evento MouseSpostato. Per l'evento MouseSpostato, l'argomento Button indica lo stato corrente di tutti i pulsanti; un unico evento MouseSpostato indica probabilmente che sono premuti alcuni, tutti o nessun pulsante. Se si premono ad esempio entrambi i pulsanti sinistro e destro mentre si sposta il mouse, l'argomento Button viene impostato a tre (1 + 2). Per gli eventi PulsanteMouseGiù e PulsanteMouseSu, l'argomento Button indica un pulsante per ciascun evento.</P>
+
+
+
+<P class=T>È possibile utilizzare gli argomenti per gli eventi <A HREF="acevtKeyDownUp.htm">TastoGiù</A>, <A HREF="acevtKeyPress.htm">Pressione</A> e <A HREF="acevtKeyDownUp.htm">TastoSu</A> insieme agli argomenti per gli eventi PulsanteMouseGiù, PulsanteMouseSu e MouseSpostato, per fare in modo che l'applicazione sia più efficiente con l'utilizzo sia della tastiera sia del mouse. È possibile ad esempio che sia necessario coordinare lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A> della tastiera con lo stato attivo del mouse. Questi sono, in genere, gli stessi. Se ad esempio si sposta il puntatore del mouse a una casella di testo e si fa clic con il pulsante del mouse, lo stato attivo della tastiera e del mouse si spostano entrambi sulla casella di testo. Lo spostamento del puntatore del mouse su un controllo tuttavia non sposta lo stato attivo della tastiera su tale controllo. È necessario fare clic con il pulsante del mouse, utilizzare uno dei tasti di spostamento della tastiera o impostare lo stato attivo al controllo nella routine evento MouseSpostato.</P>
+
+<P class=T>Poiché l'evento MouseSpostato si verifica per ciascuna area della maschera su cui si sposta, è possibile che si abbiano infine molti eventi MouseSpostato se si presta poca attenzione. È possibile che si desideri essere sicuri che se un controllo o una sezione hanno ricevuto un evento MouseSpostato, l'evento non si verifichi di nuovo per il controllo o per la sezione mentre il puntatore del mouse è ancora in quell'area della maschera. A tale scopo, impostare e verificare una variabile di modulo che indichi se l'evento MouseSpostato si è già verificato per quel controllo o per quella sezione della maschera.</P>
+
+<P class=T>Non è possibile annullare l'evento MouseSpostato.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

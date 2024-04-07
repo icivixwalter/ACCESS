@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactMsgBox'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187499'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione FinestraMessaggio</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctMsgBox">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactmsgbox"></A>Azione FinestraMessaggio</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactMsgBoxC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactMsgBoxX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione FinestraMessaggio visualizza una finestra contenente un messaggio informativo o di avviso. È possibile ad esempio utilizzare l'azione FinestraMessaggio con <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> di<A HREF="javascript:HelpPopup('actip9.hlp','defValidation');" class="pop"> convalida</A>. Se un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> non rispettano una condizione di convalida della macro, è possibile che una finestra di messaggio visualizzi un messaggio di errore e fornisca istruzioni relative al tipo di dati da immettere.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione FinestraMessaggio utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomenti azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Messaggio</TD>
+<TD class=TT width=75%>Il testo contenuto nella finestra di messaggio. Immettere il testo nella casella <B>Messaggio</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. È possibile digitare fino a 255 caratteri o immettere un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> preceduta da un segno di uguale (=).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Segnale acustico</TD>
+<TD class=TT width=75%>Specifica se l'altoparlante del computer emette un segnale acustico al momento della visualizzazione del messaggio. Selezionare <B>Sì</B> per attivare il segnale acustico o <B>No</B> per non attivarlo. L'impostazione predefinita è Sì.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Tipo</TD>
+<TD class=TT width=75%>Il tipo di finestra di messaggio. Ciascun tipo ha un'icona differente. Selezionare <B>Nessuna</B>, <B>Messaggio critico</B>, <B>Avviso ?</B>, <B>Avviso !</B> o <B>Informazione</B>. L'impostazione predefinita è Nessuna.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Titolo</TD>
+<TD class=TT width=75%>Il testo visualizzato nella <A HREF="javascript:HelpPopup('actip9.hlp','defTitleBar');" class="pop">barra del titolo</A> della finestra di messaggio. È possibile ad esempio che la barra del titolo visualizzi "Convalida ID cliente". Se viene lasciata vuota questa casella, viene visualizzato "Microsoft Access".</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare l'azione FinestraMessaggio per creare un messaggio di errore formattato simile ai messaggi incorporati visualizzati da Microsoft Access. Tale azione consente di fornire un messaggio composto da tre sezioni nella casella Messaggio. Separare le sezioni con il carattere "@".</P>
+
+<P class=T>Nell'esempio riportato di seguito viene visualizzata una finestra di messaggio formattata che contiene un messaggio composto da sezioni. La prima sezione di testo del messaggio viene visualizzata come intestazione in grassetto. La seconda sezione viene visualizzata come testo semplice al di sotto dell'intestazione. La terza sezione viene visualizzata come testo semplice al di sotto di una riga vuota dopo la seconda sezione.</P>
+
+<P class=T>Immettere quanto segue nella casella Messaggio:</P>
+
+<P class=LT1><B>Pulsante sbagliato!@Il pulsante non funziona.@Provarne un altro</B>.</P>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se è visibile l'Assistente di Office, il messaggio viene visualizzato nel fumetto dell'assistente, anziché in una finestra di messaggio distinta.</P>
+
+
+
+<P class=T>Non è possibile eseguire l'azione FinestraMessaggio in Visual Basic. Utilizzare invece la funzione <A HREF="JavaScript:hhobj_3.Click()"><B>MsgBox</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

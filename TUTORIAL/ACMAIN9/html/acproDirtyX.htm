@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDirtyX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosrc2_1a.rtf'
+Tnum='187176'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Dirty</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodirtyx"></A>Esempio di proprietà Dirty</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene attivato il pulsante <CODE>btnAnnulla</CODE> quando si modificano i dati. Viene richiamata la subroutine AnnullaModifiche( ) dall'evento DopoAggiornamento delle caselle di testo. Selezionando il pulsante <CODE>btnAnnulla</CODE> così attivato viene ripristinato il valore originario del controllo utilizzando la proprietà <B>OldValue</B>.</P>
+
+
+
+<PRE class=CT><CODE>Sub AnnullaModifiche()
+&nbsp;&nbsp;&nbsp; If Me.<B>Dirty</B> Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!btnAnnulla.Enabled = True&nbsp;&nbsp;&nbsp; ' Attiva il pulsante.
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!btnAnnulla.Enabled = False&nbsp;&nbsp;&nbsp; ' Disattiva il pulsante.
+&nbsp;&nbsp;&nbsp; End If
+End Sub
+
+Sub btnAnnulla_Click()
+&nbsp;&nbsp;&nbsp; Dim ctlC As Control
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Per ciascun controllo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For Each ctlC in Me.Controls
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If ctlC.ControlType = acTextBox Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Ripristina il valore originario.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctlC.Value = ctlC.OldValue
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next ctlC
+End Sub
+</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

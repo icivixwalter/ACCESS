@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowErrorTrapping'
+Feature='achow'
+Handoff='3'
+SourceFile='acvbhow1.rtf'
+Tnum='186626'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Rilevamento degli errori</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmOnError">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmExit">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmExit">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vamthRaise">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaobjErr">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaproNumber">
+</OBJECT>
+<OBJECT ID="hhobj_8" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaproDescription">
+</OBJECT>
+<OBJECT ID="hhobj_9" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefobtainmicrosoftoffice97visualbasicprogrammersguide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowerrortrapping"></A>Rilevamento degli errori</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowErrorTrappingC;dacolError;daidxRealDataAccessErrors;daobjError;vafctIsError;vamsgTrappableErrors;vamthRaise;vaobjErr;vaproDescription;vaproNumber;vastmErr;vastmExit;vastmOnError;vastmResume">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'istruzione <A HREF="JavaScript:hhobj_2.Click()"><B>On Error GoTo</B></A> per rilevare gli errori ed indirizzare il flusso della routine nella posizione delle istruzioni di gestione degli errori all'interno di una routine. L'istruzione seguente indirizza, ad esempio, il flusso nella riga di etichetta <CODE>GestoreErrori:</CODE></P>
+
+<PRE class=CT><CODE>On Error GoTo GestoreErrori</CODE></PRE>
+
+
+
+<P class=T>Assegnare un nome univoco a ogni etichetta di gestione degli errori di una routine, in modo da non generare conflitti con altri elementi nella routine ed aggiungere al nome i due punti. All'interno della routine, posizionare l'istruzione <A HREF="JavaScript:hhobj_3.Click()"><B>Exit Sub</B></A> o <A HREF="JavaScript:hhobj_4.Click()"><B>Exit Function</B></A> davanti all'etichetta di gestione degli errori, in modo tale che la routine non esegua il codice di controllo degli errori se questi non si verificano.</P>
+
+<PRE class=CT><CODE>Sub CausesAnError()
+  ' Indirizza il flusso della routine.
+  On Error GoTo GestoreErrori
+  ' Causa l'errore divisione per zero.
+  Err.Raise 11
+  Exit Sub
+
+GestoreErrori:
+  ' Visualizza le informazioni relative all'errore.
+  MsgBox "Numero errore " &amp; Err.Number &amp; ": " &amp; Err.Description
+  ' Riprende con l'istruzione successiva alla ricorrenza di errore.
+  Resume Next
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Il metodo <A HREF="JavaScript:hhobj_5.Click()"><B>Raise</B></A> dell'oggetto <A HREF="JavaScript:hhobj_6.Click()"><B>Err</B></A> genera l'errore specificato. La proprietà <A HREF="JavaScript:hhobj_7.Click()"><B>Number</B></A> dell'oggetto <B>Err</B> restituisce il numero corrispondente al più recente <A HREF="javascript:HelpPopup('actip9.hlp','defRunTimeError');" class="pop">errore di run-time</A>; la proprietà <A HREF="JavaScript:hhobj_8.Click()"><B>Description</B></A> restituisce il testo del messaggio corrispondente a un dato errore.</P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Nelle versioni 1.<I>x</I> e 2.0 di Microsoft Access, è possibile che siano state utilizzate l'istruzione <B>Error</B> per generare l'errore, la funzione <B>Err</B> per restituire il numero di errore e la funzione <B>Error</B> per restituire una descrizione dell'errore. Il codice esistente di gestione degli errori che si riferisce all'istruzione <B>Error</B> ed alla funzione <B>Error</B> continuerà a essere valido. È preferibile tuttavia, quando si scrive un nuovo codice, utilizzare l'oggetto <B>Err</B> con le relative proprietà ed i relativi metodi.<BR><BR></LI>
+
+	<LI class=NLB>Le versioni 1.<I>x</I> e 2.0 di Microsoft Access restituivano solo un errore per tutti gli errori di <A HREF="javascript:HelpPopup('actip9.hlp','defOLEAutomation');" class="pop">automazione</A> (precedentemente chiamata automazione OLE) . L'applicazione di <A HREF="javascript:HelpPopup('actip9.hlp','defActiveXComponent');" class="pop">componenti COM</A> che genera l'errore restituisce ora le stesse informazioni di errore che si ricevono quando si utilizza quella applicazione. Potrebbe essere necessario riscrivere il codice esistente di gestione degli errori per gestire i nuovi errori di automazione in modo appropriato.<BR><BR></LI>
+
+	<LI class=NLB>Se si desidera che venga restituita la stringa descrittiva associata ad un errore di Microsoft Access o a un errore della funzionalità <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">DAO (Data Access Objects</A>), anche se l'errore non si è realmente verificato nel proprio codice, è possibile utilizzare il metodo <A HREF="acmthAccessError.htm"><B>AccessError</B></A>.</LI>
+</UL>
+
+
+
+<P class=T>Per ulteriori informazioni sull'impostazione dei rilevamenti degli errori e sulla scrittura delle istruzioni di gestione degli errori, vedere il capitolo relativo alla gestione e al debug degli errori in <I>OPG9TBD</I>. Per informazioni su come richiedere <I>OPG9TBD</I>, fare clic su <A HREF="JavaScript:hhobj_9.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

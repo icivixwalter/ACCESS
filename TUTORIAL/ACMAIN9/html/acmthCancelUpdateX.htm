@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCancelUpdateX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234342'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi CancelUpdate, Update (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcancelupdatex"></A>Esempio di metodi CancelUpdate, Update (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un nuovo record in una tabella Dipendenti, vengono immessi valori e viene richiesto di salvare le modifiche. Se si sceglie di non salvare le modifiche, l'esecuzione del metodo <B>Update</B> viene annullata.</P>
+
+<PRE class=CT><CODE>Sub NuovoRecord()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("Dipendenti")
+&nbsp;&nbsp;&nbsp; With rst
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiunge un nuovo record alla fine del Recordset.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .AddNew
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !Cognome = "Carloni"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiunge i dati.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !Nome = "Stefano"
+&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; ' Richiede di salvare le modifiche.
+&nbsp;&nbsp;&nbsp; If MsgBox("Salvare le modifiche?", vbYesNo) = vbNo Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Se la scelta è No, annullare le modifiche.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.<B>CancelUpdate</B>
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Se la scelta è Sì, salvare le modifiche.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.<B>Update</B>
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

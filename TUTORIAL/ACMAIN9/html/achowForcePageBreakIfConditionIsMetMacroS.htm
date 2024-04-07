@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowForcePageBreakIfConditionIsMetMacroS'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmactsk.rtf'
+Tnum='186918'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare una macro per forzare un'interruzione di pagina in un report quando la condizione è soddisfatta</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowforcepagebreakifconditionismetmacros"></A>Utilizzare una macro per forzare un'interruzione di pagina in un report quando la condizione è soddisfatta</H1>
+
+<OL>
+	<LI class=LPROC>Aprire il report in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella degli strumenti fare clic su <B>Interruzione di pagina</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrPageBreakQ');" class="pop"><IMG SRC="images/pagebrk.bmp" BORDER=0></A>, quindi nella sezione del report fare clic nel punto in cui si desidera inserire un'interruzione di pagina condizionale.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul pulsante <B>Proprietà</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrPropertiesQ');" class="pop"><IMG SRC="images/property.bmp" BORDER=0></A> sulla barra degli strumenti e specificare un nome per il <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> Interruzione di pagina nella casella <B>Nome elemento</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Creare una macro.
+<P class=LBR2><A HREF="achowCreateMacroS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>In una riga di comando vuota selezionare <B>ImpostaValore</B> nell'<A HREF="javascript:HelpPopup('actip9.hlp','defActionList');" class="pop">elenco di azioni</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Impostare l'argomento <B>Elemento</B> all'<A HREF="javascript:HelpPopup('actip9.hlp','defIdentifier');" class="pop">identificatore</A> della proprietà <B>Visibile</B> del controllo Interruzione di pagina. Se ad esempio il nome del controllo è InterruzionePaginaCondizionale, impostare l'argomento <B>Elemento</B> a <B>[InterruzionePaginaCondizionale].[Visible]</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Impostare l'argomento <B>Espressione</B> a <B>No</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul pulsante <B>Salva</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrSaveQ');" class="pop"><IMG SRC="images/save.bmp" BORDER=0></A> per salvare la macro.<BR><BR></LI>
+
+	<LI class=LPROC>In visualizzazione Struttura del report impostare la proprietà <B>Su formattazione</B> della sezione intestazione di pagina del report al nome della macro.
+<P class=LT1>In questo modo il controllo Interruzione di pagina viene nascosto quando il report inizia a formattare ogni pagina e la pagina non viene interrotta.
+</LI>
+
+	<LI class=LPROC2>Creare una seconda macro che consenta di impostare la proprietà <B>Visibile</B> del controllo Interruzione di pagina a <B>Sì</B> quando viene soddisfatta un'<A HREF="javascript:HelpPopup('actip9.hlp','defConditionalExpression');" class="pop">espressione condizionale</A>.
+</LI>
+</OL>
+
+<P class=T><IMG SRC="images/cmactsk8.bmp" ALT="Selezionare l'azione da eseguire quando viene soddisfatta la condizione specificata." BORDER=0>
+
+<OL start=11>
+	<LI class=LPROC2>Fare clic sul pulsante <B>Salva</B> per salvare la macro.<BR><BR></LI>
+
+	<LI class=LPROC2>Selezionare la sezione in cui si desidera inserire l'interruzione di pagina e impostare la proprietà <B>Su formattazione</B> della sezione al nome della seconda macro. Nell'esempio precedente, per fare in modo che venga inserita un'interruzione di pagina se il valore del controllo Contatore nella sezione Corpo è 10, impostare la relativa proprietà <B>Su formattazione</B> al nome della seconda macro.</LI>
+</OL>
+
+<P class=T>Quando la condizione viene soddisfatta, la pagina viene interrotta e la macro allegata all'intestazione di pagina nasconde il controllo Interruzione di pagina fino a quando la condizione non viene nuovamente soddisfatta.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowForcePageBreakIfConditionIsMetMacroSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateWhatsThisTipS'
+Feature='Forms: Advanced'
+Handoff='3'
+SourceFile='CFRMADV2.rtf'
+Tnum='188541'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare suggerimenti di Guida rapida per maschere o controlli</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreatewhatsthistips"></A>Creare suggerimenti di Guida rapida per maschere o controlli</H1>
+
+<OL>
+	<LI class=LPROC>Creare il file di origine utilizzando l'editor di testo o il programma di elaborazione testi desiderato. Per ulteriori informazioni sulla creazione del file di origine, vedere la Guida di Microsoft Help Workshop. Assicurarsi di aver salvato il file di origine in formato RTF (Rich Text Format).<BR><BR></LI>
+
+	<LI class=LPROC>Compilare il file della Guida utilizzando Microsoft Help Workshop.<BR><BR></LI>
+
+	<LI class=LPROC>Visualizzare la finestra delle proprietà relativa alla maschera e specificare nella casella della proprietà <B>FileGuida</B> il nome del file della Guida compilato.
+<P class=LNT><B>Nota</B>&nbsp;&nbsp; Per ottenere risultati migliori, collocare il file della Guida nella stessa cartella dell'applicazione. In tal modo, è possibile mantenere la stessa impostazione della proprietà <B>HelpFile</B> per ogni sito che utilizza l'applicazione e allo stesso tempo consentire agli utenti di installare l'applicazione nella cartella desiderata. Se in questa proprietà non viene specificata l'impostazione del percorso, il file della Guida viene ricercato nella cartella in cui è installata l'applicazione.
+</LI>
+
+	<LI class=LPROC>Nella casella della proprietà <B>ID argomento guida</B> relativa alla maschera digitare il numero dell'argomento (un numero diverso da zero) che verrà visualizzato quando si fa clic sul pulsante <B>Guida rapida</B> <A HREF="javascript:HelpPopup('actip9.hlp','defWhatsThisButton');" class="pop"><IMG SRC="images/help1.bmp" BORDER=0></A> e quindi sullo sfondo della maschera. Tale argomento, in genere, fornisce informazioni per l'intera maschera.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella della proprietà <B>ID argomento guida</B> di ciascun <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> della maschera che può ricevere lo stato attivo digitare il numero dell'argomento che viene visualizzato quando si fa clic sul pulsante <B>Guida rapida</B> <A HREF="javascript:HelpPopup('actip9.hlp','defWhatsThisButton');" class="pop"><IMG SRC="images/help1.bmp" BORDER=0></A> e quindi sul controllo.
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+<UL>
+	<LI class=NLB>È necessario associare i valori impostati per la proprietà <B>ID argomento guida</B> alle stringhe di contesto nel sistema della Guida. Per ulteriori informazioni, vedere la Guida di Microsoft Help Workshop.<BR><BR></LI>
+
+	<LI class=NLB>Se un controllo non dispone di un argomento della Guida personalizzato, viene visualizzato l'argomento della Guida personalizzato per la maschera quando si fa clic sul pulsante <B>Guida rapida</B> <A HREF="javascript:HelpPopup('actip9.hlp','defWhatsThisButton');" class="pop"><IMG SRC="images/help1.bmp" BORDER=0></A> e quindi sul controllo. Se quest'ultimo non esiste, verrà visualizzata la finestra di dialogo <B>Assistente di Office</B>.<BR><BR></LI>
+
+	<LI class=NLB>Se si inserisce l'ID contestuale dell'argomento della Guida come numero positivo, l'argomento verrà visualizzato in una finestra intera. Aggiungendo il segno meno (-) davanti all'ID contestuale, l'argomento della Guida verrà visualizzato in una finestra popup. È importante notare che l'ID contestuale non ha un numero negativo se realizzato in Microsoft Help Workshop. Quando si imposta la proprietà, è necessario aggiungere il segno meno per fare in modo che l'argomento venga visualizzato nella finestra popup.<BR><BR></LI>
+
+	<LI class=NLB>Non è possibile visualizzare i suggerimenti di Guida rapida personalizzati mediante l'<B>Assistente di Office</B>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateWhatsThisTipSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

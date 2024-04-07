@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFullNameX'
+Feature='acpro'
+Handoff='2'
+SourceFile='acproV9.doc'
+Tnum='268822'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà FullName</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RL><B><A NAME="acprofullnamex"></A>Esempio di proprietà FullName</B></P>
+
+<P class=T>Nell'esempio seguente viene esaminato l'insieme <B>AllDataAccessPages</B> e viene restituito il nome del collegamento e il percorso di ogni pagina di accesso ai dati del progetto corrente.</P>
+
+<PRE class=CT><CODE>Sub PrintDAPLocationInfo()
+  Dim dapObject As AccessObject
+  For Each dapObject In CurrentProject.AllDataAccessPages
+    Debug.Print "Il '" &amp; dapObject.Name &amp; _
+    "' si trova in: "; dapObject.FullName
+  Next dapObject
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

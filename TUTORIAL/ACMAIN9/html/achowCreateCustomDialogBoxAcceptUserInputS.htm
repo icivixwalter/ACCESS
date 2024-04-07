@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateCustomDialogBoxAcceptUserInputS'
+Feature='Forms: Advanced'
+Handoff='3'
+SourceFile='CFRMADV2.rtf'
+Tnum='187918'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare una finestra di dialogo personalizzata</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dvhowUsingParametersInStoredProcedures">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowcreatecustomdialogboxacceptuserinputs"></A>Creare una finestra di dialogo personalizzata</H1>
+
+<OL>
+	<LI class=LPROC>Creare la maschera con una qualsiasi combinazione di <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura</A> della maschera fare doppio clic sul <A HREF="javascript:HelpPopup('actip9.hlp','defFormSelector');" class="pop">selettore di maschera</A> per aprire la relativa finestra delle proprietà.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella della proprietà <B>Popup</B> selezionare <B>Sì</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella della proprietà <B>A scelta obbligatoria</B> selezionare <B>Sì</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella della proprietà <B>Stile bordo</B> selezionare <B>Dialogo</B>. Se si seleziona <B>Dialogo</B>, la maschera avrà un bordo spesso, potrà includere solo una barra del titolo e un menu dei controlli e non potrà essere ingrandita, ridotta o ridimensionata.<BR><BR></LI>
+
+	<LI class=LPROC>Creare una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> che apre la maschera.<BR><BR>
+</LI>
+
+	<LI class=LPROC>Allegare la macro o la routine evento a una maschera o a un report specificando il nome della macro o la routine evento come impostazione della proprietà di evento appropriata. Digitare ad esempio il nome della macro o della routine evento nella casella della proprietà <B>Su clic</B> di un pulsante di comando.
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+<UL>
+	<LI class=NLB>Una finestra di dialogo personalizzata in genere contiene uno o più pulsanti di comando che eseguono macro oppure routine evento che utilizzano le informazioni immesse nella finestra di dialogo per eseguire altre azioni. Questi pulsanti in genere si chiamano <B>OK</B> e <B>Annulla</B>. È possibile controllare a quale pulsante assegnare lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A> e quale pulsante configurare come pulsante <B>Annulla</B> impostando le proprietà <B>Pulsante predefinito</B> e <B>Annulla</B> relative a tali tipi di pulsanti di comando. Per ulteriori informazioni sulla proprietà <B>Pulsante predefinito</B>, fare clic su <A HREF="achowMakeCommandButtonDefaultButtonS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>. Per ulteriori informazioni sulla proprietà <B>Annulla</B>, fare clic su <A HREF="achowMakeCommandButtonCancelButtonS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>Per posizionare sullo schermo una finestra di dialogo personalizzata, aprire la maschera in visualizzazione Struttura, ingrandire la finestra di Microsoft Access, posizionare la finestra di dialogo nel punto desiderato, quindi salvare la maschera. Quando verrà aperta, la finestra di dialogo apparirà in questa posizione, a condizione che la proprietà <B>Centratura automatica</B> sia impostata a <B>No</B>.<BR><BR></LI>
+
+	<LI class=NLB>Per ulteriori informazioni su altre proprietà che si desidera impostare per una finestra di dialogo personalizzata, fare clic su <A HREF="acconPopupPropertiesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>Per ulteriori informazioni sulla creazione di una finestra di dialogo personalizzata che richieda di immettere criteri relativi ai report, fare clic su <A HREF="achowUseFormEnterReportCriteriaS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>Per ulteriori informazioni sulla creazione di una query che ottiene i relativi criteri da una finestra di dialogo personalizzata di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access (.mbd)</A>, fare clic su <A HREF="achowCreateAQuerytGetsCriteriaFromAFormS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>. Per ulteriori informazioni sulla creazione di una stored procedure che ottiene i relativi criteri da una finestra di dialogo personalizzata di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access (adp)</A>, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>Se si desidera utilizzare la maschera come maschera comune e come finestra di dialogo, è possibile utilizzare l'impostazione Dialogo dell'azione Apri maschera per aprire la maschera temporaneamente come una finestra di dialogo invece di utilizzare questa routine. Per ulteriori informazioni, fare clic su <A HREF="achowOpenFormAsDialogS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateCustomDialogBoxAcceptUserInputSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

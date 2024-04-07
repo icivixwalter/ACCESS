@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthAddFromFileX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186739'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi AddFromFile, AddFromString</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthaddfromfilex"></A>Esempio di metodi AddFromFile, AddFromString</B></P>
+
+
+
+<P class=T>La funzione riportata di seguito indica come utilizzare i metodi <B>AddFromString</B> e <B>AddFromFile</B> per aggiungere il contenuto di una stringa e di un file di testo ad un modulo standard:</P>
+
+<PRE class=CT><CODE>Function AddTextToModule(strModuleName As String, _
+&nbsp;&nbsp;&nbsp;&nbsp; strFileName As String, strText As String) As Boolean
+&nbsp;&nbsp;&nbsp; Dim mdl As Module
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_AddTextToModule
+&nbsp;&nbsp;&nbsp; DoCmd.OpenModule strModuleName
+&nbsp;&nbsp;&nbsp; Set mdl = Modules(strModuleName)
+&nbsp;&nbsp;&nbsp; mdl.<B>AddFromFile</B> strFileName
+&nbsp;&nbsp;&nbsp; mdl.<B>AddFromString</B> strText
+&nbsp;&nbsp;&nbsp; AddTextToModule = True
+
+Exit_AddTextToModule:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_AddTextToModule:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; AddTextToModule = False
+&nbsp;&nbsp;&nbsp; Resume Exit_AddTextToModule
+End Function</CODE></PRE>
+
+
+
+<P class=T>È possibile richiamare la funzione precedente da una routine quale quella riportata di seguito: creare un file di testo chiamato Funzioni.txt, aggiungere alcune routine di Visual Basic e salvarlo nella directory Documenti. Incollare quindi la routine precedente e quella seguente in un nuovo modulo standard nel database di esempio Northwind. Eseguire la routine riportata di seguito:</P>
+
+<PRE class=CT><CODE>Sub AggiungiFunzioniDaTesto()
+&nbsp;&nbsp;&nbsp; Dim strModuleName As String, strFileName As String
+&nbsp;&nbsp;&nbsp; Dim strText As String
+
+&nbsp;&nbsp;&nbsp; strModuleName = "Funzioni di utilità"
+&nbsp;&nbsp;&nbsp; strFileName = "C:\Documenti\Funzioni.txt"
+&nbsp;&nbsp;&nbsp; strText = "Public intX As Integer" &amp; vbCrLf _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Const conPathName As String = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; """C:\Programmi\Microsoft Office\Office\Esempi\"""
+&nbsp;&nbsp;&nbsp; If AddTextToModule(strModuleName, strFileName, strText) = True Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Stringa e contenuto del file aggiunti con esito positivo."
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print " Stringa e contenuto del file aggiunti con esito negativo."
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea una nuova maschera e si aggiunge il contenuto di una stringa e del file Funzioni.txt al relativo modulo. Eseguire la routine riportata di seguito da un modulo standard:</P>
+
+<PRE class=CT><CODE>Sub AggiungiTestoAModuloMaschera()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, mdl As Module
+
+&nbsp;&nbsp;&nbsp; Set frm = CreateForm
+&nbsp;&nbsp;&nbsp; Set mdl = frm.Module
+&nbsp;&nbsp;&nbsp; mdl.AddFromString "Public intY As Integer"
+&nbsp;&nbsp;&nbsp; mdl.AddFromFile "C:\Documenti\Funzioni.txt"
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

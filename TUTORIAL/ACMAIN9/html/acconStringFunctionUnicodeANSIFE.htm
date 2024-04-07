@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconStringFunctionUnicodeANSIFE'
+Feature='accon'
+Handoff='3'
+SourceFile='feacc2.doc'
+Tnum='255706'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Differenze nelle operazioni con funzioni di stringa</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acconstringfunctionunicodeansife"></A>Differences in String Function Operations</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconStringFunctionUnicodeANSIFE_C">
+</OBJECT></P>
+
+
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>The memory storage formats for text are different in Visual Basic for Microsoft Access 7.0 and Access Basic of previous versions of Microsoft Access. Text is stored in ANSI format within Access Basic code, and in Unicode format in Visual Basic.</P>
+
+<P class=T>The Unicode format is used in Visual Basic to match the format of text within OLE, which is indirectly related to Visual Basic. </P>
+
+<P class=T>For example, the text string "ABC<IMG SRC="images/fe140.bmp"  BORDER=0><IMG SRC="images/fe086.bmp"  BORDER=0><IMG SRC="images/fe228.bmp"  BORDER=0>" would be stored in memory as shown below.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=20%>Storage format</TH>
+<TH width=44%>Storage pattern</TH>
+<TH width=36%>Description</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>Unicode</TD>
+<TD class=TT width=44%>41 00 42 00 43 00 42 30 44 30 46 30</TD>
+<TD class=TT width=36%>Each character is stored as 2 bytes.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>ANSI</TD>
+<TD class=TT width=44%>41 42 43 82 A0 82 A2 82 A4</TD>
+<TD class=TT width=36%>ASCII characters are stored as 1 byte; Japanese characters are stored as 2 bytes.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Because of these differences in internal format, there are string processing functions that operate differently in Access Basic and Visual Basic. The functions that operate differently and their statements are as shown below.</P>
+
+<P class=T><B>Asc</B> function, <B>Chr</B> function, <B>InputB</B> function, <B>InStrB</B> function, <B>LeftB</B> function, <B>LenB</B> function, <B>RightB</B> function, <B>MidB</B> function, and their corresponding statements. </P>
+
+<P class=T>Also, the <B>ChrB</B> function and <B>AscB</B> function have been added to Visual Basic.</P>
+
+<P class=T>In that these functions and statements both process text in byte units, they are the same in Access Basic and Visual Basic, but because their storage formats for text are different, they operate differently. For example, in <B>LenB</B>("A") would be 1 in Access Basic, but 2 in Visual Basic.</P>
+
+<P class=T>Programs created in previous versions of Microsoft Access that use the string processing functions that work in byte units must be changed in Visual Basic to a source code that recognizes Unicode. However, if only string processing functions that process character units, such as the <B>Len</B> function, <B>Left</B> function, and <B>Right</B> function, are used, there is no need to recognize them.</P>
+
+<P class=T>If programs created in a previous version of Microsoft Access are moved to Microsoft Access 7.0, consider the following points regarding string processing.</P>
+
+<P class=RL><B>Asc Function and AscB Function</B></P>
+
+<P class=T>This program ran properly in previous versions of Access, but produces a run-time error in Visual Basic in Microsoft Access 7.0.</P>
+
+<PRE class=CT><CODE>Print Asc(MidB("<IMG SRC="images/fe140.bmp"  BORDER=0>", 2,1))</CODE></PRE>
+
+
+
+<P class=T>This is because <B>MidB</B>("<IMG SRC="images/fe140.bmp"  BORDER=0>", 2,1), an argument of the <B>Asc</B> function, does not correctly return data to Unicode text.</P>
+
+<P class=T>Use the following <B>AscB</B> function to make this program run in Microsoft Access 7.0:</P>
+
+<PRE class=CT><CODE>Print AscB(MidB("<IMG SRC="images/fe140.bmp"  BORDER=0>", 2,1))</CODE></PRE>
+
+
+
+<P class=T>In this program, the value (&amp;H30) of the second Unicode byte is returned.</P>
+
+<P class=RL><B>Chr Function and ChrB Function</B></P>
+
+<P class=T>The <B>Chr</B> function in Microsoft Access 7.0 always returns 2-byte characters. In previous versions of Microsoft Access, <B>Chr</B>(&amp;H41) and <B>ChrB</B>(&amp;H41) were equal, but in Microsoft Access 7.0, <B>Chr</B>(&amp;H41) and <B>ChrB</B>(&amp;H41) + <B>ChrB</B>(0) are equal.</P>
+
+<P class=T>Also, in previous versions of Microsoft Access, "<IMG SRC="images/fe140.bmp"  BORDER=0>" was expressed as <B>ChrB</B>(&amp;H82) + <B>ChrB</B>(&amp;HA0), but in Microsoft Access 7.0 it is expressed as <B>ChrB</B>(&amp;H42) + <B>ChrB</B>(&amp;H30).</P>
+
+<P class=RL><B>Calling the Windows Application Programming Interface (API)</B></P>
+
+<P class=T>In several Windows API the byte length of a string has a special meaning. For example, the following program returns a folder set up in Windows. In Microsoft Access 7.0, <B>LeftB</B>(Buffer, ret) does not return the correct string. This is because, in spite of the fact that it shows the byte length of an ANSI string, the <B>LeftB</B> function processes Unicode strings. In this case, use the <B>InStr</B> function so that only the character string, without nulls, is returned.</P>
+
+<PRE class=CT><CODE>Private Declare Function GetWindowsDirectory Lib "kernel32" _ 
+    Alias "GetWindowsDirectoryA" (ByVal lpBuffer As String, _
+    ByVal nSize As Long) As Long
+
+Private Sub Command1_Click()
+    Buffer$ = Space(255)
+    ret = GetWindowsDirectory(Buffer$, 255)
+    ' WinDir = LeftB(Buffer, ret)&nbsp;&nbsp; '&lt;--- Incorrect code"
+
+    WinDir = Left(Buffer$, InStr(Buffer$, Chr(0)) - 1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '&lt;--Correct code"
+    Print WinDir
+End Sub</CODE></PRE>
+
+
+
+<P class=RL><B>Input Function and InputB Function</B></P>
+
+<P class=T>The <B>Input</B> function in Microsoft Access 7.0 converts the number of characters designated when the text is read from the file into a Unicode string and reads them as variables. The <B>InputB</B> function, on the other hand, assumes the data to be binary data and stores it as variables without converting it. If the <B>InputB</B> function is used when reading a file stored in a fixed length field, the fixed byte length data must be converted once it is read.</P>
+
+<PRE class=CT><CODE>Open "Data.Dat" For Input As 1
+dat1 = StrConv(InputB(10, 1), vbUnicode)
+dat2 = StrConv(InputB(10, 1), vbUnicode)
+dat3 = StrConv(InputB(10, 1), vbUnicode)
+
+===DATA.DAT
+123456789012345678901234567
+Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Telephone</CODE></PRE>
+
+
+
+<P class=RL><B>Processing ANSI string bytes in Microsoft Access 7.0</B></P>
+
+<P class=T>If it is necessary to process ANSI string bytes in Microsoft Access 7.0, use the <B>StrConv</B> function. You can convert text between ANSI and Unicode by setting the <B>vbUnicode</B> or <B>vbFromUnicode</B> constant. If you process bytes after temporarily converting a string to an ANSI string, and then reconvert it back to Unicode once the process is finished, you can use codes from previous version of Access relatively easily.</P>
+
+<PRE class=CT><CODE>'<IMG SRC="images/fe141.bmp"  BORDER=0></CODE><IMG SRC="images/fe141.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0> <IMG SRC="images/fe143.bmp"  BORDER=0><IMG SRC="images/fe144.bmp"  BORDER=0><IMG SRC="images/fe145.bmp"  BORDER=0><IMG SRC="images/fe146.bmp"  BORDER=0><IMG SRC="images/fe147.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe148.bmp"  BORDER=0><IMG SRC="images/fe149.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe089.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe153.bmp"  BORDER=0><IMG SRC="images/fe154.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe155.bmp"  BORDER=0><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe160.bmp"  BORDER=0><IMG SRC="images/fe161.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><CODE> ANSI <IMG SRC="images/fe163.bmp"  BORDER=0></CODE><IMG SRC="images/fe164.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe160.bmp"  BORDER=0><IMG SRC="images/fe166.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>dat = StrConv(dat, vbFromUnicode)</CODE>
+<CODE>.</CODE>
+<CODE>.</CODE>
+<CODE>.    '<IMG SRC="images/fe141.bmp"  BORDER=0></CODE><IMG SRC="images/fe141.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0> <IMG SRC="images/fe143.bmp"  BORDER=0><IMG SRC="images/fe144.bmp"  BORDER=0><IMG SRC="images/fe145.bmp"  BORDER=0><IMG SRC="images/fe146.bmp"  BORDER=0><IMG SRC="images/fe147.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe148.bmp"  BORDER=0><IMG SRC="images/fe149.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><IMG SRC="images/fe167.bmp"  BORDER=0><IMG SRC="images/fe086.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>.    '<IMG SRC="images/fe016.bmp"  BORDER=0></CODE><IMG SRC="images/fe084.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0> <CODE><IMG SRC="images/fe169.bmp"  BORDER=0></CODE><IMG SRC="images/fe170.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe155.bmp"  BORDER=0><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe146.bmp"  BORDER=0><IMG SRC="images/fe147.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe155.bmp"  BORDER=0><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe148.bmp"  BORDER=0><IMG SRC="images/fe149.bmp"  BORDER=0><IMG SRC="images/fe090.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0><IMG SRC="images/fe009.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe172.bmp"  BORDER=0><IMG SRC="images/fe173.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>.</CODE>
+<CODE>.</CODE>
+<CODE>' <IMG SRC="images/fe141.bmp"  BORDER=0></CODE><IMG SRC="images/fe141.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0> <IMG SRC="images/fe143.bmp"  BORDER=0><IMG SRC="images/fe144.bmp"  BORDER=0><IMG SRC="images/fe145.bmp"  BORDER=0><IMG SRC="images/fe146.bmp"  BORDER=0><IMG SRC="images/fe147.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe148.bmp"  BORDER=0><IMG SRC="images/fe149.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe089.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe153.bmp"  BORDER=0><IMG SRC="images/fe154.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe155.bmp"  BORDER=0><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe174.bmp"  BORDER=0><IMG SRC="images/fe161.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><CODE> Unicode <IMG SRC="images/fe163.bmp"  BORDER=0></CODE><IMG SRC="images/fe164.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe160.bmp"  BORDER=0><IMG SRC="images/fe166.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>dat = StrConv(dat, vbUnicode)</CODE></PRE>
+
+
+
+<P class=RL><B>Sample Functions that perform operations that are compatible with byte processing functions of 16-bit versions</B></P>
+
+<P class=T>In Microsoft Access 7.0's Visual Basic, the internal processing of strings is performed using Unicode. Thus, the binary processing functions are different from those of Access Basic used in previous versions of Microsoft Access. </P>
+
+<P class=T>The <B>ANSI</B> function was created to preserve compatibility between the operations of Access Basic and Visual Basic. </P>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; Strings input and removed with these ANSI processing functions are always Unicode. After being converted temporarily to ANSI strings within the function, they are restored to Unicode once the process is finished.</P>
+
+<P class=T>The following cannot combine the first and second byte of a DBCS character to create a DBCS character.</P>
+
+<PRE class=CT><CODE>AnsiMidB("<IMG SRC="images/fe140.bmp"  BORDER=0>",1,1) + AnsiMidB("<IMG SRC="images/fe140.bmp"  BORDER=0>",2,1)</CODE></PRE>
+
+
+
+<P class=T>These functions have been created to process strings in byte units. However, a different character cannot be created by the byte-unit processing. In this case, it would be expressed as follows:</P>
+
+<PRE class=CT><CODE>StrArg = "<IMG SRC="images/fe140.bmp"  BORDER=0>"
+StrArg = StrConv(StrArg, vbFromUnicode)    ' ANSI <IMG SRC="images/fe165.bmp"  BORDER=0></CODE><IMG SRC="images/fe160.bmp"  BORDER=0><IMG SRC="images/fe166.bmp"  BORDER=0>
+<CODE>RetArg = MidB(StrArg,1,1) + MidB(StrArg,2,1)    ' <IMG SRC="images/fe143.bmp"  BORDER=0></CODE><IMG SRC="images/fe144.bmp"  BORDER=0><IMG SRC="images/fe145.bmp"  BORDER=0><IMG SRC="images/fe146.bmp"  BORDER=0><IMG SRC="images/fe147.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe155.bmp"  BORDER=0><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0>
+<CODE>    ' <IMG SRC="images/fe175.bmp"  BORDER=0></CODE><IMG SRC="images/fe176.bmp"  BORDER=0>
+<CODE>StrArg = StrConv(StrArg, vbUnicode)    ' <IMG SRC="images/fe177.bmp"  BORDER=0></CODE><IMG SRC="images/fe178.bmp"  BORDER=0><IMG SRC="images/fe235.bmp"  BORDER=0><IMG SRC="images/fe181.bmp"  BORDER=0><IMG SRC="images/fe182.bmp"  BORDER=0><IMG SRC="images/fe161.bmp"  BORDER=0><CODE><IMG SRC="images/fe150.bmp"  BORDER=0> Unicode <IMG SRC="images/fe165.bmp"  BORDER=0></CODE>
+<CODE>RetArg = StrConv(RetArg, vbUnicode)    ' <IMG SRC="images/fe160.bmp"  BORDER=0></CODE><IMG SRC="images/fe166.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe089.bmp"  BORDER=0><CODE><IMG SRC="images/fe232.bmp"  BORDER=0></CODE></PRE>
+
+
+
+<P class=T>Generally, if you convert a string to an ANSI character before processing, you should restore the converted string to a Unicode character after the process is finished.</P>
+
+<P class=T>A byte string process is always a function for processing a string. To process binary data, use a byte Array, not a string variable or a byte string processing function.</P>
+
+<P class=T>A string stored in a byte Array appears as follows:</P>
+
+<PRE class=CT><CODE><IMG SRC="images/fe143.bmp"  BORDER=0></CODE><IMG SRC="images/fe144.bmp"  BORDER=0><IMG SRC="images/fe145.bmp"  BORDER=0><CODE> Array <IMG SRC="images/fe165.bmp"  BORDER=0></CODE> <CODE><IMG SRC="images/fe155.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><IMG SRC="images/fe184.bmp"  BORDER=0><IMG SRC="images/fe185.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe089.bmp"  BORDER=0><IMG SRC="images/fe186.bmp"  BORDER=0><IMG SRC="images/fe187.bmp"  BORDER=0><IMG SRC="images/fe090.bmp"  BORDER=0> <IMG SRC="images/fe188.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe229.bmp"  BORDER=0><IMG SRC="images/fe230.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>Dim Var() As Byte</CODE>
+<CODE>Var = "<IMG SRC="images/fe189.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe191.bmp"  BORDER=0><IMG SRC="images/fe192.bmp"  BORDER=0><IMG SRC="images/fe193.bmp"  BORDER=0><CODE>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Unicode <IMG SRC="images/fe163.bmp"  BORDER=0></CODE><IMG SRC="images/fe164.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0><IMG SRC="images/fe184.bmp"  BORDER=0><IMG SRC="images/fe185.bmp"  BORDER=0>
+<CODE>Var = StrConv("<IMG SRC="images/fe189.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe191.bmp"  BORDER=0><IMG SRC="images/fe192.bmp"  BORDER=0><IMG SRC="images/fe193.bmp"  BORDER=0><CODE>", vbFromUnicode)    ' ANSI <IMG SRC="images/fe163.bmp"  BORDER=0></CODE><IMG SRC="images/fe164.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0><IMG SRC="images/fe184.bmp"  BORDER=0><IMG SRC="images/fe185.bmp"  BORDER=0>
+
+<CODE>Function AnsiStrConv(StrArg, flag)</CODE>
+<CODE>    nsiStrConv = StrConv(StrArg, flag)</CODE>
+<CODE>End Function</CODE>
+
+<CODE>' LenB <IMG SRC="images/fe087.bmp"  BORDER=0></CODE><IMG SRC="images/fe175.bmp"  BORDER=0><IMG SRC="images/fe176.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe089.bmp"  BORDER=0><IMG SRC="images/fe199.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><CODE>ANSI <IMG SRC="images/fe155.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe160.bmp"  BORDER=0><IMG SRC="images/fe166.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><CODE><IMG SRC="images/fe233.bmp"  BORDER=0></CODE> <IMG SRC="images/fe175.bmp"  BORDER=0><IMG SRC="images/fe176.bmp"  BORDER=0><IMG SRC="images/fe177.bmp"  BORDER=0><IMG SRC="images/fe178.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><CODE> Unicode <IMG SRC="images/fe165.bmp"  BORDER=0></CODE><IMG SRC="images/fe174.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><CODE><IMG SRC="images/fe232.bmp"  BORDER=0></CODE>
+<CODE>Function AnsiLenB(ByVal StrArg As String) As Long</CODE>
+<CODE>    AnsiLenB = LenB(AnsiStrConv(StrArg, vbFromUnicode))</CODE>
+<CODE>End Function</CODE>
+
+<CODE>' MidB <IMG SRC="images/fe087.bmp"  BORDER=0></CODE><IMG SRC="images/fe175.bmp"  BORDER=0><IMG SRC="images/fe176.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe089.bmp"  BORDER=0><IMG SRC="images/fe199.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe233.bmp"  BORDER=0><CODE>ANSI <IMG SRC="images/fe155.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe160.bmp"  BORDER=0><IMG SRC="images/fe166.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><CODE><IMG SRC="images/fe233.bmp"  BORDER=0></CODE><IMG SRC="images/fe233.bmp"  BORDER=0> <IMG SRC="images/fe175.bmp"  BORDER=0><IMG SRC="images/fe176.bmp"  BORDER=0><IMG SRC="images/fe177.bmp"  BORDER=0><IMG SRC="images/fe178.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><CODE> Unicode <IMG SRC="images/fe165.bmp"  BORDER=0></CODE><IMG SRC="images/fe174.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><CODE><IMG SRC="images/fe232.bmp"  BORDER=0></CODE>
+<CODE>' <IMG SRC="images/fe201.bmp"  BORDER=0></CODE><IMG SRC="images/fe202.bmp"  BORDER=0><IMG SRC="images/fe226.bmp"  BORDER=0><IMG SRC="images/fe227.bmp"  BORDER=0><IMG SRC="images/fe205.bmp"  BORDER=0><IMG SRC="images/fe181.bmp"  BORDER=0><IMG SRC="images/fe182.bmp"  BORDER=0><IMG SRC="images/fe161.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><IMG SRC="images/fe208.bmp"  BORDER=0><IMG SRC="images/fe209.bmp"  BORDER=0><IMG SRC="images/fe210.bmp"  BORDER=0><IMG SRC="images/fe112.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe154.bmp"  BORDER=0><IMG SRC="images/fe211.bmp"  BORDER=0><IMG SRC="images/fe081.bmp"  BORDER=0><IMG SRC="images/fe224.bmp"  BORDER=0><IMG SRC="images/fe182.bmp"  BORDER=0><IMG SRC="images/fe161.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><IMG SRC="images/fe213.bmp"  BORDER=0><IMG SRC="images/fe214.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>Function AnsiMidB(ByVal StrArg As String, ByVal arg1 As Long, _</CODE>
+<CODE>            Optional arg2) As String</CODE>
+<CODE>    If IsMissing(arg2) Then</CODE>
+<CODE>    AnsiMidB = AnsiStrConv(MidB(AnsiStrConv(StrArg, vbFromUnicode) _</CODE>
+<CODE>            , arg1),vbUnicode)</CODE>
+<CODE>    Else</CODE>
+<CODE>    AnsiMidB = AnsiStrConv(MidB(AnsiStrConv(StrArg, vbFromUnicode) _</CODE>
+<CODE>            , arg1, arg2), vbUnicode)</CODE>
+<CODE>    End If</CODE>
+<CODE>End Function</CODE>
+
+<CODE>' LeftB <IMG SRC="images/fe087.bmp"  BORDER=0></CODE><IMG SRC="images/fe175.bmp"  BORDER=0><IMG SRC="images/fe176.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe089.bmp"  BORDER=0><IMG SRC="images/fe199.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe233.bmp"  BORDER=0><CODE> ANSI <IMG SRC="images/fe155.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe160.bmp"  BORDER=0><IMG SRC="images/fe166.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><CODE><IMG SRC="images/fe233.bmp"  BORDER=0></CODE><IMG SRC="images/fe233.bmp"  BORDER=0> <IMG SRC="images/fe175.bmp"  BORDER=0><IMG SRC="images/fe176.bmp"  BORDER=0><IMG SRC="images/fe177.bmp"  BORDER=0><IMG SRC="images/fe178.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><CODE> Unicode <IMG SRC="images/fe165.bmp"  BORDER=0></CODE><IMG SRC="images/fe174.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><CODE><IMG SRC="images/fe232.bmp"  BORDER=0></CODE>
+<CODE>Function AnsiLeftB(ByVal StrArg As String, ByVal arg1 As Long) As String</CODE>
+<CODE>    AnsiLeftB = AnsiStrConv(LeftB(AnsiStrConv(StrArg, _</CODE>
+<CODE>            vbFromUnicode), arg1), vbUnicode)</CODE>
+<CODE>End Function</CODE>
+
+<CODE>' RightB <IMG SRC="images/fe087.bmp"  BORDER=0></CODE><IMG SRC="images/fe175.bmp"  BORDER=0><IMG SRC="images/fe176.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe089.bmp"  BORDER=0><IMG SRC="images/fe199.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe233.bmp"  BORDER=0><CODE>ANSI <IMG SRC="images/fe155.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><IMG SRC="images/fe160.bmp"  BORDER=0><IMG SRC="images/fe166.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><CODE><IMG SRC="images/fe233.bmp"  BORDER=0></CODE><IMG SRC="images/fe233.bmp"  BORDER=0> <IMG SRC="images/fe175.bmp"  BORDER=0><IMG SRC="images/fe176.bmp"  BORDER=0><IMG SRC="images/fe177.bmp"  BORDER=0><IMG SRC="images/fe178.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><CODE> Unicode <IMG SRC="images/fe165.bmp"  BORDER=0></CODE><IMG SRC="images/fe174.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><CODE><IMG SRC="images/fe232.bmp"  BORDER=0></CODE>
+<CODE>Function AnsiRightB(ByVal StrArg As String, ByVal arg1 As Long) As String</CODE>
+<CODE>    AnsiRightB = AnsiStrConv(RightB(AnsiStrConv(StrArg, _</CODE>
+<CODE>            vbFromUnicode), arg1), vbUnicode)</CODE>
+<CODE>End Function</CODE>
+
+<CODE>' InStrB <IMG SRC="images/fe019.bmp"  BORDER=0></CODE> 2 <CODE><IMG SRC="images/fe215.bmp"  BORDER=0></CODE><IMG SRC="images/fe019.bmp"  BORDER=0><IMG SRC="images/fe155.bmp"  BORDER=0><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe181.bmp"  BORDER=0><IMG SRC="images/fe182.bmp"  BORDER=0><IMG SRC="images/fe161.bmp"  BORDER=0><IMG SRC="images/fe165.bmp"  BORDER=0><CODE><IMG SRC="images/fe233.bmp"  BORDER=0> Ansi <IMG SRC="images/fe155.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><CODE><IMG SRC="images/fe157.bmp"  BORDER=0></CODE><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe235.bmp"  BORDER=0><IMG SRC="images/fe233.bmp"  BORDER=0><CODE>Ansi <IMG SRC="images/fe143.bmp"  BORDER=0></CODE><IMG SRC="images/fe144.bmp"  BORDER=0><IMG SRC="images/fe145.bmp"  BORDER=0><IMG SRC="images/fe147.bmp"  BORDER=0><IMG SRC="images/fe216.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><IMG SRC="images/fe181.bmp"  BORDER=0><IMG SRC="images/fe182.bmp"  BORDER=0><IMG SRC="images/fe009.bmp"  BORDER=0><IMG SRC="images/fe218.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>Function AnsiInStrB(arg1, arg2, Optional arg3) As Integer</CODE>
+<CODE>    If IsNumeric(arg1) Then</CODE>
+<CODE>    pos = LenB(AnsiLeftB(arg2, arg1))</CODE>
+<CODE>    AnsiInStrB = InStrB(arg1, AnsiStrConv(arg2, vbFromUnicode) _</CODE>
+<CODE>            , AnsiStrConv(arg3, vbFromUnicode))</CODE>
+<CODE>    Else</CODE>
+<CODE>    AnsiInStrB = InStrB(AnsiStrConv(arg1, vbFromUnicode) _</CODE>
+<CODE>            , AnsiStrConv(arg2, vbFromUnicode))</CODE>
+<CODE>    End If</CODE>
+<CODE>End Function</CODE></PRE>
+
+
+
+<P class=RL><B>Using byte data type</B></P>
+
+<P class=T>In Microsoft Access 7.0 <B>Byte</B> data type is added as a new data type. If a string variable is used when processing binary data, text is converted between ANSI and Unicode, and binary data is changed. Thus, when dealing with binary data, use <B>Byte</B> data type variables.</P>
+
+<PRE class=CT><CODE>Dim ByteData() As Byte
+ByteData = "<IMG SRC="images/fe155.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><CODE>"        ' Unicode <IMG SRC="images/fe163.bmp"  BORDER=0></CODE><IMG SRC="images/fe164.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0><IMG SRC="images/fe184.bmp"  BORDER=0><IMG SRC="images/fe185.bmp"  BORDER=0><IMG SRC="images/fe085.bmp"  BORDER=0><IMG SRC="images/fe221.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>ByteData = StrConv("<IMG SRC="images/fe155.bmp"  BORDER=0></CODE><IMG SRC="images/fe156.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><CODE>", vbFromUnicode)     'ANSI <IMG SRC="images/fe163.bmp"  BORDER=0></CODE><IMG SRC="images/fe164.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0><IMG SRC="images/fe184.bmp"  BORDER=0><IMG SRC="images/fe185.bmp"  BORDER=0><IMG SRC="images/fe085.bmp"  BORDER=0><IMG SRC="images/fe221.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>ByteData = InputB(10, #1)    '<IMG SRC="images/fe143.bmp"  BORDER=0></CODE><IMG SRC="images/fe144.bmp"  BORDER=0><IMG SRC="images/fe145.bmp"  BORDER=0><IMG SRC="images/fe222.bmp"  BORDER=0> <CODE><IMG SRC="images/fe191.bmp"  BORDER=0></CODE><IMG SRC="images/fe192.bmp"  BORDER=0><CODE><IMG SRC="images/fe193.bmp"  BORDER=0></CODE><IMG SRC="images/fe236.bmp"  BORDER=0><IMG SRC="images/fe184.bmp"  BORDER=0><IMG SRC="images/fe185.bmp"  BORDER=0><IMG SRC="images/fe085.bmp"  BORDER=0><IMG SRC="images/fe221.bmp"  BORDER=0><IMG SRC="images/fe093.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+<CODE>Debug.Print ByteData(5)        '<IMG SRC="images/fe223.bmp"  BORDER=0></CODE><IMG SRC="images/fe224.bmp"  BORDER=0><IMG SRC="images/fe157.bmp"  BORDER=0><IMG SRC="images/fe158.bmp"  BORDER=0><IMG SRC="images/fe235.bmp"  BORDER=0><IMG SRC="images/fe231.bmp"  BORDER=0><IMG SRC="images/fe154.bmp"  BORDER=0><IMG SRC="images/fe191.bmp"  BORDER=0><IMG SRC="images/fe192.bmp"  BORDER=0><IMG SRC="images/fe193.bmp"  BORDER=0><IMG SRC="images/fe150.bmp"  BORDER=0><IMG SRC="images/fe148.bmp"  BORDER=0><IMG SRC="images/fe149.bmp"  BORDER=0><IMG SRC="images/fe226.bmp"  BORDER=0><IMG SRC="images/fe227.bmp"  BORDER=0><IMG SRC="images/fe087.bmp"  BORDER=0><IMG SRC="images/fe095.bmp"  BORDER=0><IMG SRC="images/fe232.bmp"  BORDER=0>
+</PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

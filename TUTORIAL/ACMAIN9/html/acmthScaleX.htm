@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthScaleX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186665'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Scale</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthscalex"></A>Esempio di metodo Scale</B></P>
+
+
+
+<P class=T>Nell'esempio seguente viene indicato come disegnare un cerchio secondo una scala, quindi come utilizzare il metodo <B>Scale</B> per cambiare la scala e disegnare un altro cerchio secondo una nuova scala.</P>
+
+<PRE class=CT><CODE>Private Sub Stampa_Dettaglio(Cancel As Integer, PrintCount As Integer)
+&nbsp;&nbsp;&nbsp; DisegnaCerchio
+End Sub
+
+Sub DisegnaCerchio()
+&nbsp;&nbsp;&nbsp; Dim sngHCtr As Single, sngVCtr As Single
+&nbsp;&nbsp;&nbsp; Dim sngNewH As Single, sngNewV As Single
+&nbsp;&nbsp;&nbsp; Dim sngRadius As Single
+
+&nbsp;&nbsp;&nbsp; Me.ScaleMode = 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta la scala a pixel.
+&nbsp;&nbsp;&nbsp; sngHCtr = Me.ScaleWidth / 2&nbsp;&nbsp;&nbsp;&nbsp; ' Centro orizzontale.
+&nbsp;&nbsp;&nbsp; sngVCtr = Me.ScaleHeight / 2&nbsp;&nbsp;&nbsp;&nbsp; ' Centro verticale.
+&nbsp;&nbsp;&nbsp; sngRadius = Me.ScaleHeight / 3&nbsp;&nbsp;&nbsp;&nbsp; ' Raggio del cerchio.
+&nbsp;&nbsp;&nbsp; ' Disegna il cerchio.
+&nbsp;&nbsp;&nbsp; Me.Circle (sngHCtr, sngVCtr), sngRadius
+&nbsp;&nbsp;&nbsp; ' Nuova scala orizzontale.
+&nbsp;&nbsp;&nbsp; sngNewH = Me.ScaleWidth * 0.9
+&nbsp;&nbsp;&nbsp; ' Nuova scala verticale.
+&nbsp;&nbsp;&nbsp; sngNewV = Me.ScaleHeight * 0.9
+&nbsp;&nbsp;&nbsp; ' Passa alla nuova scala.
+&nbsp;&nbsp;&nbsp; Me.<B>Scale</B>(0, 0)-(sngNewH, sngNewV)
+&nbsp;&nbsp;&nbsp; ' Disegna il cerchio.
+&nbsp;&nbsp;&nbsp; Me.Circle (sngHCtr + 100, sngVCtr), sngRadius, RGB(0, 256, 0)
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

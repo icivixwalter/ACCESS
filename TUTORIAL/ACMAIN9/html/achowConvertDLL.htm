@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowConvertDLL'
+Feature='achow'
+Handoff='2'
+SourceFile='alanmsc2.doc'
+Tnum='187102'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convertire codice che richiama una DLL</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmDeclare">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowconvertdll"></A>Convertire codice che richiama una DLL</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowConvertDLLC;vastmDeclare;vastmFunction;vastmSub">
+</OBJECT></P>
+
+
+
+<P class=RL><B>Chiamata di routine nell'interfaccia API di Windows</B></P>
+
+<P class=T>Se un database creato nelle versioni precedenti di Microsoft Access ha chiamato delle routine nell'<A HREF="javascript:HelpPopup('actip9.hlp','defWindowsAPI');" class="pop">interfaccia API di Microsoft Windows</A>, è necessario effettuare alcune modifiche nel codice quando si converte la versione 2.0 o precedente del database in Microsoft Access 2000.</P>
+
+<P class=T>L'interfaccia API di Windows è composta da un set di <A HREF="javascript:HelpPopup('actip9.hlp','defDLL');" class="pop">librerie a collegamento dinamico</A> (DLL) che contiene routine correlate al sistema che includono funzioni, messaggi, strutture di dati, tipi di dati ed istruzioni che è possibile utilizzare nella creazione di applicazioni che vengono eseguite in Windows 95 o con la piattaforma Windows NT. Per chiamare queste routine da Visual Basic, è necessario prima dichiararle utilizzando l'istruzione <A HREF="JavaScript:hhobj_2.Click()"><B>Declare</B></A>. È possibile quindi chiamarle nello stesso modo delle altre routine.</P>
+
+<P class=T>Le versioni 1.<I>x</I> e 2.0 di Microsoft Access sono applicazioni a 16 bit la cui esecuzione avviene su versioni a 16 bit di Windows. Microsoft Access 2000 è un'applicazione a 32 bit la cui esecuzione è possibile solo in Windows 95 e con la piattaforma Windows NT. Se il codice esistente di Access Basic ha eseguito chiamate ad un'interfaccia API di Windows a 16 bit, quando si esegue la conversione del database in Microsoft Access 2000 sarà necessario modificare queste chiamate. Nell'elenco riportato di seguito vengono forniti alcuni suggerimenti su come convertire il codice.
+
+<UL>
+	<LI class=LB1>Verificare qualsiasi istruzione <B>Declare</B> per assicurarsi che queste facciano riferimento alle DLL corrette. Nella tabella riportata di seguito vengono indicati i nomi delle DLL di Windows a 32 bit.
+<P class=4>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=41%>DLL di Windows a 16 bit</TH>
+<TH width=59%>DLL di Windows a 32 bit</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>User.dll</TD>
+<TD class=TT width=59%>User32.dll</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Kernel.dll</TD>
+<TD class=TT width=59%>Kernel32.dll</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>GDI.dll</TD>
+<TD class=TT width=59%>GDI32.dll</TD>
+</TR>
+</TABLE><BR>
+
+<P class=4>
+</LI>
+
+	<LI class=LB1>I nomi di alcune funzioni nell'interfaccia API di Windows a 32 bit sono stati cambiati. Inoltre, le funzioni nell'interfaccia API di Windows a 32 bit fanno distinzione tra maiuscole e minuscole. Verificare che il nome dell'alias e della routine siano stati immessi correttamente.<BR><BR></LI>
+
+	<LI class=LB1>Alcune funzioni hanno nuovi tipi di dati di parametro nelle interfacce API di Windows a 32 bit. Per determinare le chiamate di funzione che è necessario aggiornare, vedere quanto riportato più avanti in questo argomento.<BR><BR></LI>
+
+	<LI class=LB1>Se nel computer è presente una versione a 16 bit di una DLL con un nome identico a quello di una DLL a 32 bit, è possibile che Microsoft Access tenti di chiamare una funzione in tale DLL se la directory in cui risiede precede nel percorso la directory che contiene la nuova versione.<BR><BR></LI>
+
+	<LI class=LB1>Alcune DLL a 32 bit contengono funzioni con versioni leggermente diverse in modo da poter contenere sia stringhe <A HREF="javascript:HelpPopup('actip9.hlp','defUnicode');" class="pop">Unicode</A> che <A HREF="javascript:HelpPopup('actip9.hlp','defANSI');" class="pop">ANSI</A>. Una <I>A</I> alla fine del nome di funzione specifica la versione ANSI, mentre una <I>W</I> specifica la versione Unicode. Se la funzione assume argomenti di tipo stringa, accodare una <I>A</I> al nome di funzione.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni sull'uso delle routine API di Windows a 32 bit e su come esportare le applicazioni di database esistenti in Microsoft Access 2000 a 32 bit, consultare:
+
+<UL>
+	<LI class=LB1>Windows API Viewer, disponibile in Microsoft Office 2000 Developer, che include la sintassi Visual Basic per tutte le costanti, i tipi di dati e le dichiarazioni a 32 bit.<BR><BR></LI>
+
+	<LI class=LB1>Microsoft Office 2000 Resource Kit, che contiene informazioni su come esportare le soluzioni basate su Microsoft Office a 16 bit, incluse applicazioni sviluppate con versioni precedenti di Microsoft Access, in soluzioni a 32 bit.<BR><BR></LI>
+
+	<LI class=LB1>Microsoft Win32 Software Development Kit, che fornisce informazioni di riferimento complete sulle routine API di Windows a 32 bit.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Chiamata del codice in altre DLL</B></P>
+
+<P class=T>Se l'applicazione di database chiama delle routine presenti in altre DLL, è necessario creare od ottenere versioni a 32 bit di tali DLL ed effettuare le modifiche necessarie al codice quando si converte il database in Microsoft Access 2000.</P>
+
+<P class=T>Se non è possibile ottenere una versione a 32 bit di una DLL, sarà necessaria una DLL che possa convertire chiamate a 32 bit in chiamate a 16 bit. Per ulteriori informazioni, vedere l'elenco dei riferimenti riportati sopra.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowUseAddInManagerS'
+Feature='Add-ins'
+Handoff='3'
+SourceFile='cdatlat2.doc'
+Tnum='278880'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Installare o rimuovere componenti aggiuntivi di menu</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowuseaddinmanagers"></A>Installare o rimuovere componenti aggiuntivi di menu</H1>
+
+<P class=T>È possibile installare o rimuovere <A HREF="javascript:HelpPopup('actip9.hlp','defAddIn');" class="pop">componenti aggiuntivi</A> utilizzando il Gestore componenti aggiuntivi.
+
+<OL>
+	<LI class=LPROC>Scegliere <B>Componenti aggiuntivi</B> dal menu <B>Strumenti</B>, quindi <B>Gestore componenti aggiuntivi</B>.
+<P class=LT1>Verrà visualizzata la finestra di dialogo <B>Gestore componenti aggiuntivi</B>. Nell'elenco <B>Componenti aggiuntivi disponibili</B> sono visualizzati i componenti aggiuntivi correntemente disponibili. Una x accanto al nome di un componente aggiuntivo, indica che è già installato. Se un componente aggiuntivo viene rimosso, verrà eliminata la x ma non il nome dall'elenco.
+</LI>
+
+	<LI class=LPROC>Effettuare una delle seguenti operazioni:
+<UL>
+	<LI class=LB2>Per inserire un componente aggiuntivo nell'elenco, scegliere il pulsante <B>Aggiungi</B>, quindi specificarne la posizione.<BR><BR></LI>
+
+	<LI class=LB2>Per installare un componente aggiuntivo correntemente disponibile, selezionare il nome nell'elenco <B>Componenti aggiuntivi disponibili</B>, quindi scegliere il pulsante <B>Installa</B>.<BR><BR></LI>
+
+	<LI class=LB2>Per rimuovere un componente aggiuntivo correntemente disponibile, selezionare il nome nell'elenco <B>Componenti aggiuntivi disponibili</B>, quindi scegliere il pulsante <B>Rimuovi</B>.</LI>
+</UL>
+</LI>
+
+	<LI class=LPROC>Scegliere il pulsante <B>Chiudi</B> al termine delle operazioni.</LI>
+</OL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È necessario rimuovere un componente aggiuntivo prima di aprirlo come database per modificarne la struttura.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowUseAddInManagerSW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='3' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconBringingTogetherDataFromMoreThanOneTableInQueryS'
+Feature='Queries: Multiple tables'
+Handoff='1'
+SourceFile='CQRYMUL.RTF'
+Tnum='188568'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodi per collegare dati in una query da più tabelle o query</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconbringingtogetherdatafrommorethanonetableinquerys"></A>Metodi per collegare dati in una query da più tabelle o query</H1>
+
+<P class=T>L'efficacia delle query consiste nella capacità di collegare o di eseguire un comando su dati di più tabelle o query. È possibile ad esempio visualizzare informazioni su un cliente e sui relativi ordini effettuati. Per visualizzare tali informazioni sono necessari i dati delle tabelle Clienti e Ordini.</P>
+
+<P class=T>Quando si aggiungono a una query più tabelle o query, è necessario assicurarsi che i relativi elenchi di campi siano collegati l'uno all'altro con una linea di <A HREF="javascript:HelpPopup('actip9.hlp','defJoin');" class="pop">join</A>, in modo che in Microsoft Access sia possibile connettere le informazioni.</P>
+
+<P class=ART><IMG SRC="images/cqrymul1.bmp" ALT="Le linee di join mostrano la relazione tra le tabelle" BORDER=0></P>
+
+<P class=T>Se le tabelle in una query non sono collegate l'una all'altra con join, direttamente o indirettamente, i record a esse associate non vengono riconosciuti, pertanto vengono visualizzate tutte le combinazioni di record (operazione definita "tra prodotti" o "prodotto cartesiano") tra le due tabelle. Se ciascuna tabella contenesse quindi 10 record, i risultati della query conterrebbero 100 record (10X10). Ciò significa inoltre che l'esecuzione della query potrebbe richiedere molto tempo e in definitiva produrre dei risultati meno significativi.</P>
+
+<P class=T>Se sono state create in precedenza delle <A HREF="javascript:HelpPopup('actip9.hlp','defRelationship');" class="pop">relazioni</A> tra tabelle nella <A HREF="javascript:HelpPopup('actip9.hlp','defRelationshipsWindow');" class="pop">finestra Relazioni</A>, vengono visualizzate automaticamente delle linee di join quando si aggiungono tabelle correlate in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura</A> della query. Se viene applicata l'<A HREF="javascript:HelpPopup('actip9.hlp','defReferentialIntegrity');" class="pop">integrità referenziale</A>, viene visualizzato anche un "1" sulla linea di join per mostrare quale tabella si trova sul lato "uno" di una relazione <A HREF="javascript:HelpPopup('actip9.hlp','defOneToMany');" class="pop">uno-a-molti</A> e un simbolo di infinito <IMG SRC="images/infinity.bmp" BORDER=0> per mostrare quale tabella si trovi sul lato "molti".</P>
+
+<P class=T>Anche se non sono state create relazioni tra tabelle, vengono creati automaticamente dei join se si aggiungono due tabelle a una query, se le tabelle contengono ciascuna un campo con il tipo di dati uguale o compatibile e se uno dei campi di join è una <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A>. In questo caso i simboli "uno" e "molti" non vengono visualizzati, in quanto non viene applicata l'integrità referenziale.</P>
+
+<P class=T>A volte le tabelle aggiunte alla query non includono campi che possono essere collegati con join. In tal caso è necessario aggiungere una o più tabelle o query che servano soltanto da ponte tra le tabelle di cui si desidera utilizzare i dati. Se ad esempio si aggiungono le tabelle Clienti e Dettagli ordini a una query, queste non avranno tra di loro una linea di join perché non contengono campi che possono essere collegati con join. La tabella Ordini è invece correlata a entrambe le tabelle, pertanto è possibile includerla nella query per fornire una connessione tra le altre due.</P>
+
+<P class=ART><IMG SRC="images/cqrymul8.bmp" ALT="Una tabella supplementare in un join fornisce una relazione tra le tabelle" BORDER=0></P>
+
+<P class=T>Dopo aver collegato con join tabelle e query e aver aggiunto i campi da entrambe le tabelle o query alla <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> in visualizzazione Struttura della query, il join predefinito indica alla query di ricercare i valori corrispondenti nei campi di join. Questa operazione viene definita <A HREF="javascript:HelpPopup('actip9.hlp','defInnerJoin');" class="pop">join interno</A> nella terminologia del database. Quando si trovano corrispondenze, questi due record vengono combinati e visualizzati come un unico record nei risultati della query. Se una tabella o una query non ha un record corrispondente nell'altra tabella o query, nei risultati della query non viene visualizzato nessuno dei due record. Se si desidera che la query selezioni tutti i record da una tabella o da una query sia che abbia o meno dei record corrispondenti nell'altra tabella o query, è possibile modificare il tipo di join.</P>
+
+<P class=T><A HREF="achowJoinTypesHowTheyAffectQueryResults.htm">Esempi di diversi tipi di join e della relativa influenza sui risultati delle query</A> Se si desidera che la query selezioni dei record basati sul valore nel campo di join maggiore di, minore di, diverso da, maggiore o uguale a oppure minore o uguale al valore nell'altro campo di join, è necessario creare un'istruzione SQL in <A HREF="javascript:HelpPopup('actip9.hlp','defSQLView');" class="pop">visualizzazione SQL</A>.</P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Dopo aver creato una query a più tabelle, esiste la possibilità o meno di aggiornare i dati. Per ulteriori informazioni, fare clic su <A HREF="acconDeterminingWhenCanUpdateDataQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconBringingTogetherDataFromMoreThanOneTableInQuerySW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

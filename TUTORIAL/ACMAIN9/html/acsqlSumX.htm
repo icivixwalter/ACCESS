@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlSumX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acdsqlx1_1.rtf'
+Tnum='234555'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Somma</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlsumx"></A>Esempio di funzione Somma</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si suppone di disporre di una tabella Ordini contenente i campi IDOrdine e PaeseDestinatario e di una tabella DettagliOrdini contenente i campi PrezzoUnitario e Quantità. È possibile utilizzare la funzione <B>Somma</B> per calcolare il totale delle vendite relativo a ordini inviati nel Regno Unito. In visualizzazione SQL della finestra Query, immettere l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>SELECT <B>Somma(</B>[PrezzoUnitario]*[Quantità]<B>)</B> AS [TotaleVenditeUK]
+FROM Ordini INNER JOIN [DettagliOrdini]
+ON Ordini.[IDOrdine]= [DettagliOrdini].[IDOrdine]
+WHERE ([PaeseDestinatario] = 'UK');</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea un controllo calcolato che visualizza il totale delle vendite relative ai record contenuti nella tabella DettagliOrdini. Aprire una nuova maschera ed impostare la relativa proprietà <B>Origine record</B> a Dettagli Ordini. Immettere la seguente espressione nella proprietà <B>Origine controllo</B> di una casella di testo sulla maschera. Per applicare una condizione che limiti la ricerca solo ad alcuni record, ad esempio ai record relativi ad ordini inviati nel Regno Unito, impostare la proprietà <B>Filtro</B> della maschera.</P>
+
+<PRE class=CT><CODE>=<B>Somma(</B>[PrezzoUnitario]*[Quantità]<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

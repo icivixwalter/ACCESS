@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproInheritX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234454'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Inherit (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproinheritx"></A>Esempio di proprietà Inherit (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si imposta la proprietà <B>Inherit</B> dell'oggetto <B>Container</B> di tipo Forms a <B>True</B> (-1), quindi si imposta la proprietà <B>Permissions</B> per assegnare agli utenti accesso alla protezione completo per tutte le maschere. Tutti i nuovi oggetti <B>Document</B> di tipo Form ereditano queste autorizzazioni. La routine crea un nuovo oggetto <B>Form</B> e visualizza le autorizzazioni relative a tale oggetto.</P>
+
+<P class=T>Si noti che l'oggetto <B>Container</B> di tipo Forms è diverso dall'insieme <B>Forms</B>. L'oggetto <B>Container</B> di tipo Forms include tutti gli oggetti <B>Document</B> di tipo Form nel database. L'insieme <B>Forms</B> contiene solo le maschere aperte correntemente.</P>
+
+<P class=T>Si noti anche che l'operatore <B>Or</B> esegue un confronto su singoli bit per determinare quali autorizzazioni sono impostate correntemente.</P>
+
+<PRE class=CT><CODE>Sub AutorizzazioniMaschera()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, ctrMaschere As Container
+&nbsp;&nbsp;&nbsp; Dim docMaschera As Document, frmNuova As Form
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al contenitore Forms.
+&nbsp;&nbsp;&nbsp; Set ctrMaschere = dbs.Containers!Forms
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà Inherit.
+&nbsp;&nbsp;&nbsp; ctrMaschere.<B>Inherit</B> = True
+&nbsp;&nbsp;&nbsp; ' Imposta le autorizzazioni da ereditare.
+&nbsp;&nbsp;&nbsp; ctrMaschere.Permissions = ctrMaschere.Permissions Or _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; acSecFrmRptWriteDef
+&nbsp;&nbsp;&nbsp; ' Crea nuova maschera.
+&nbsp;&nbsp;&nbsp; Set frmNuova = CreateForm()
+&nbsp;&nbsp;&nbsp; ' Salva la maschera.
+&nbsp;&nbsp;&nbsp; DoCmd.Save, "MascheraOrdine"
+&nbsp;&nbsp;&nbsp; ' Restituisce l'oggetto Document associato alla nuova maschera.
+&nbsp;&nbsp;&nbsp; Set docMaschera = ctrMaschere.Documents!OrderForm
+&nbsp;&nbsp;&nbsp; ' Confronta le autorizzazioni degli oggetti Container e Document.
+&nbsp;&nbsp;&nbsp; If docMaschera.Permissions &lt;&gt; ctrMaschere.Permissions Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Errore!"
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Autorizzazioni ereditate."
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

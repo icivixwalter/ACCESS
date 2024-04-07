@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproBoundColumn'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprocmb1_1a.rtf'
+Tnum='187045'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà BoundColumn (Colonna associata)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproboundcolumn"></A>Proprietà BoundColumn (Colonna associata)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproBoundColumnC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproBoundColumnX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproBoundColumnA">
+</OBJECT></P>
+
+
+
+<P class=T>Quando si effettua una selezione da una <A HREF="javascript:HelpPopup('actip9.hlp','defListBox');" class="pop">casella di riepilogo</A> o da una <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">casella combinata</A>, la proprietà <B>BoundColumn</B> indica a Microsoft Access quali tra i valori della <A HREF="javascript:HelpPopup('actip9.hlp','defColumn');" class="pop">colonna</A> utilizzare come valore del <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A>. Se il controllo è <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">associato</A> a un <A HREF="javascript:HelpPopup('actip9.hlp','defField');" class="pop">campo</A>, nel campo indicato nella proprietà <A HREF="acproControlSource.htm"><B>ControlSource</B></A> viene memorizzato il valore contenuto nella colonna specificata dalla proprietà <B>BoundColumn</B>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>BoundColumn</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Impostazione</TH>
+<TH width=80%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>0</TD>
+<TD class=TT width=80%>Nel <A HREF="javascript:HelpPopup('actip9.hlp','defCurrentRecord');" class="pop">record corrente</A> viene memorizzato il valore della proprietà <A HREF="acproListIndex.htm"><B>ListIndex</B></A> e non il valore contenuto nella colonna. Il valore della proprietà <B>ListIndex</B> della prima riga è zero, quello della seconda è 1 e così via. Microsoft Access imposta la proprietà <B>ListIndex</B> quando si seleziona un elemento da una casella di riepilogo o dalla parte casella di riepilogo di una casella combinata. L'impostazione a zero della proprietà <B>BoundColumn</B> e l'utilizzo del valore della proprietà <B>ListIndex</B> del controllo può risultare utile se si desidera solo memorizzare una sequenza di numeri.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1 o maggiore</TD>
+<TD class=TT width=80%>L'impostazione predefinita è 1. Il valore della colonna specificata diventa il valore del controllo. Se il controllo è associato ad un campo, l'impostazione viene memorizzata in quel campo nel record corrente. La proprietà <B>BoundColumn</B> non può essere impostata a un valore maggiore di quello dell'impostazione della proprietà <A HREF="acproColumnCount.htm"><B>ColumnCount</B></A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare la proprietà <B>BoundColumn</B> utilizzando la <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> del controllo, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=T>Per i <A HREF="acconTableFields.htm">campi di tabelle</A>, con la proprietà <A HREF="acproDisplayControl.htm"><B>DisplayControl</B></A> impostata a Casella combinata o Casella di Riepilogo, è possibile impostare tale proprietà nella scheda <B>Ricerca</B> della sezione Proprietà campo della <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura della tabella</A>.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; La proprietà <B>BoundColumn</B> viene impostata automaticamente quando in visualizzazione Struttura della tabella si seleziona come tipo di dati per un campo Ricerca guidata.</P>
+
+
+
+<P class=T>In Visual Basic impostare la proprietà <B>BoundColumn</B> utilizzando un numero o un'<A HREF="javascript:HelpPopup('actip9.hlp','defnumericexpression');" class="pop">espressione numerica</A> uguale ad un valore compreso tra zero e il numero impostato per la proprietà <B>ColumnCount</B>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>La colonna visibile all'estrema sinistra di una casella combinata, cioè la colonna all'estrema sinistra la cui impostazione nella casella combinata della proprietà <A HREF="acproColumnWidths.htm"><B>ColumnWidths</B></A> non sia 0, contiene i dati che, nella <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> o in un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>, vengono visualizzati nella parte casella di testo di una casella combinata. La proprietà <B>BoundColumn</B> determina quale valore della colonna di una casella di testo o di un elenco della casella combinata viene memorizzato quando si effettua una selezione. Ciò consente di visualizzare dati diversi rispetto a quelli memorizzati come valore del controllo.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se la colonna associata non contiene gli stessi valori di quella visibile all'estrema sinistra del controllo, o se imposta la proprietà <B>BoundColumn</B> a 0, la proprietà <A HREF="acproLimitToList.htm"><B>LimitToList</B></A> è impostata a Sì.</P>
+
+
+
+<P class=T>In Microsoft Access si utilizzano numeri che iniziano da zero per fare riferimento alle colonne della proprietà <A HREF="acproColumn.htm"><B>Column</B></A>. Ciò significa che per fare riferimento alla prima colonna viene utilizzata l'espressione <CODE>Column(0)</CODE>, per fare riferimento alla seconda colonna <CODE>Column(1)</CODE>e così via. La proprietà <B>BoundColumn</B>, tuttavia, per fare riferimento alle colonne utilizza numeri che iniziano da uno. Ciò significa che, se la proprietà <B>BoundColumn</B> è impostata a uno, è possibile accedere al valore memorizzato in tale colonna utilizzando l'espressione <CODE>Column(0)</CODE>.</P>
+
+<P class=T>Se la proprietà <A HREF="acproAutoExpand.htm"><B>AutoExpand</B></A> è impostata a Sì, Microsoft Access inserisce automaticamente nella parte casella di testo della casella combinata un valore che, mentre viene digitato, corrisponde a un valore presente.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

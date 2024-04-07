@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproInsideHeightX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apronew_1a.rtf'
+Tnum='187352'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di proprietà InsideHeight, InsideWidth</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproinsideheightx"></A>Esempi di proprietà InsideHeight, InsideWidth</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si indica come utilizzare le proprietà <B>InsideHeight</B> e <B>InsideWidth</B> per confrontare l'altezza e la larghezza interna di una maschera con l'altezza e la larghezza della finestra che la contiene. Se le dimensioni di quest'ultima non sono uguali a quelle della maschera, la finestra viene ridimensionata in modo che l'altezza e la larghezza corrispondano a quelle della maschera.</P>
+
+<PRE class=CT><CODE>Sub ReimpostaDimFinestra(frm As Form)
+&nbsp;&nbsp;&nbsp; Dim intAltezzaFinestra As Integer
+&nbsp;&nbsp;&nbsp; Dim intLarghezzaFinestra As Integer
+&nbsp;&nbsp;&nbsp; Dim intAltezzaTotMaschera As Integer
+&nbsp;&nbsp;&nbsp; Dim intLarghezzaTotMaschera As Integer
+&nbsp;&nbsp;&nbsp; Dim intIntestAltezza As Integer
+&nbsp;&nbsp;&nbsp; Dim intDettaglioAltezza As Integer
+&nbsp;&nbsp;&nbsp; Dim intPièDiPAltezza As Integer
+
+&nbsp;&nbsp;&nbsp; ' Determina l'altezza della maschera.
+&nbsp;&nbsp;&nbsp; intIntestAltezza = frm.Section(acHeader).Height
+&nbsp;&nbsp;&nbsp; intDettaglioAltezza = frm.Section(acDetail).Height
+&nbsp;&nbsp;&nbsp; intPièDiPAltezza = frm.Section(acFooter).Height
+&nbsp;&nbsp;&nbsp; intAltezzaTotMaschera = intIntestazAltezza _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + intDettaglioAltezza + intPièDiPAltezza
+&nbsp;&nbsp;&nbsp; ' Determina la larghezza della maschera.
+&nbsp;&nbsp;&nbsp; intLarghezzaTotMaschera = frm.Width
+&nbsp;&nbsp;&nbsp; ' Determina l'altezza e la larghezza della maschera.
+&nbsp;&nbsp;&nbsp; intAltezzaFinestra = frm.<B>InsideHeight</B>
+&nbsp;&nbsp;&nbsp; intLarghezzaFinestra = frm.<B>InsideWidth</B>
+
+&nbsp;&nbsp;&nbsp; If intLarghezzaFinestra &lt;&gt; intLarghezzaTotMaschera Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frm.InsideWidth = intLarghezzaTotMaschera
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; If intAltezzaFinestra &lt;&gt; intAltezzaTotMaschera Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frm.InsideHeight = intAltezzaTotMaschera
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

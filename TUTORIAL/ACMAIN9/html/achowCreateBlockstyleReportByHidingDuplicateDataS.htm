@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateBlockstyleReportByHidingDuplicateDataS'
+Feature='Reports: Advanced'
+Handoff='1'
+SourceFile='CRPTADV2.RTF'
+Tnum='187403'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Nascondere dati duplicati in un report</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreateblockstylereportbyhidingduplicatedatas"></A>Nascondere dati duplicati in un report</H1>
+
+<P class=T>È possibile nascondere i dati duplicati in un report con record ordinati oppure in un report con record raggruppati.</P>
+
+<H2>Nascondere dati duplicati su un report contenente solo record ordinati</H2>
+
+<OL>
+	<LI class=LPROC>Creare un report che ordini i record su uno o più campi che potrebbero contenere valori duplicati. 
+<P class=LBR2><A HREF="achowSortRecordsInReportS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione struttura</A> del report posizionare le caselle di testo per tutti i campi nella sezione Corpo. <BR><BR></LI>
+
+	<LI class=LPROC>Per visualizzare la finestra delle proprietà per una casella di testo contenente dati che potrebbero essere duplicati, assicurarsi che la casella di testo sia <A HREF="javascript:HelpPopup('actip9.hlp','defSelectedControl');" class="pop">selezionata</A>, quindi fare clic sul pulsante <B>Proprietà</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrPropertiesQ');" class="pop"><IMG SRC="images/property.bmp" BORDER=0></A> sulla barra degli strumenti. <BR><BR></LI>
+
+	<LI class=LPROC>Impostare la proprietà <B>Nascondi duplicati</B> a <B>Sì</B>.
+<P class=LPROCT><B>Nota</B>&nbsp;&nbsp; In tutte le caselle di testo per le quali la proprietà <B>Nascondi duplicati</B> è impostata a <B>Sì</B>, viene stampato un valore nel primo record in cui tale valore ricorre e, se i record con il valore duplicato continuano su un'altra pagina, viene stampato anche sulla parte superiore della nuova pagina. 
+</LI>
+</OL>
+
+<H2>Nascondere dati duplicati su un report con record raggruppati</H2>
+
+<OL>
+	<LI class=LPROC>Creare un report con uno o più <A HREF="javascript:HelpPopup('actip9.hlp','defGroupLevel');" class="pop">livelli di gruppo</A>.
+<P class=LBR2><A HREF="achowGroupRecordsReport.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Nella visualizzazione struttura del report spostare la casella di testo per il campo nel quale si sta effettuando il raggruppamento dall'<A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportGroupHeaderSectionQ');" class="pop">intestazione di gruppo</A> alla <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportDetailSectionQ');" class="pop">sezione Corpo</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Per visualizzare la finestra delle proprietà della casella di testo, assicurarsi che la quest'ultima sia selezionata e fare clic sul pulsante <B>Proprietà</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrPropertiesQ');" class="pop"><IMG SRC="images/property.bmp" BORDER=0></A> sulla barra degli strumenti.<BR><BR></LI>
+
+	<LI class=LPROC>Impostare la proprietà <B>Nascondi duplicati</B> a <B>Sì</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Rimuovere le linee e tutti gli altri <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A> dall'intestazione di gruppo.<BR><BR></LI>
+
+	<LI class=LPROC>Fare doppio clic sul <A HREF="javascript:HelpPopup('actip9.hlp','defSectionSelector');" class="pop">selettore di sezione</A> dell'intestazione di gruppo per visualizzarne la finestra delle proprietà. <BR><BR></LI>
+
+	<LI class=LPROC>Impostare la proprietà <B>Altezza</B> dell'intestazione di gruppo a <B>0</B>.
+<P class=LPROCT><B>Nota</B>&nbsp;&nbsp; Il nome del gruppo apparirà soltanto all'inizio di un nuovo gruppo oppure nella parte superiore di una nuova pagina se il gruppo continua per più pagine.
+</LI>
+</OL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateBlockstyleReportByHidingDuplicateDataSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

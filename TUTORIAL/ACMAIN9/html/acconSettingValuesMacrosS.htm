@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconSettingValuesMacrosS'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmactsk.rtf'
+Tnum='186636'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'impostazione del valore di un controllo o di una proprietà in risposta a un evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconsettingvaluesmacross"></A>Informazioni sull'impostazione del valore di un controllo o di una proprietà in risposta a un evento</H1>
+
+<P class=T>Mediante l'assegnazione di nuovi valori ai <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A> e alle proprietà in risposta agli <A HREF="javascript:HelpPopup('actip9.hlp','defEvent');" class="pop">eventi</A> che si verificano in una maschera o in un report, è possibile far funzionare insieme oggetti creati, in modo da facilitarne l'utilizzo.</P>
+
+<P class=T>Di seguito vengono illustrate alcune situazioni comuni in cui è richiesta l'impostazione di valori tramite una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A>.</P>
+
+<H2>Impostazione del valore di un controllo in una maschera corrispondente al valore di un controllo in un'altra maschera</H2>
+
+<P class=T>È possibile ad esempio inserire in una maschera Clienti un pulsante di comando per aprire una maschera Ordini e inserire automaticamente i dati di fatturazione della maschera Clienti.</P>
+
+<P class=ART><IMG SRC="images/cmactsk1.bmp" ALT="Aprire un'altra maschera da un pulsante di comando" BORDER=0></P>
+
+<H2>Aggiornamento del valore di un controllo dipendente dal valore di un altro controllo</H2>
+
+<P class=T>È possibile ad esempio avere un controllo DataPagamento il cui valore predefinito è la data di spedizione, ossia il valore del controllo DataSpedizione. È possibile utilizzare una macro o una routine evento per reimpostare automaticamente il valore del controllo DataPagamento al variare del valore del controllo DataSpedizione.</P>
+
+<P class=T>Per ulteriori informazioni sull'impostazione del valore di un controllo in base al valore di un altro controllo, fare clic su <A HREF="achowSetValueControlBasedValueAnotherControlS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<H2>Impostazione della proprietà di una maschera o di un controllo in risposta a una selezione o a un altro evento</H2>
+
+<P class=T>È possibile utilizzare una macro o una routine evento per impostare la proprietà di una maschera o di un controllo in modo da:
+
+<UL>
+	<LI class=LB1>Nascondere o visualizzare un controllo in base al valore di un altro controllo. È possibile ad esempio che si desideri nascondere il controllo DataScadenza di una maschera Ordini se il pagamento relativo all'ordine è già stato effettuato, ossia se il valore del controllo Pagato è uguale a Sì, oppure è possibile che si desideri visualizzarlo se il pagamento non è ancora avvenuto.<BR><BR></LI>
+
+	<LI class=LB1>Disattivare o bloccare un controllo in base al valore di un altro controllo. È possibile ad esempio disattivare un controllo PatenteGuida se il valore di un controllo Età è inferiore all'età minima richiesta per la patente di guida.<BR><BR></LI>
+
+	<LI class=LB1>Visualizzare diversi set di record a seconda di una selezione. È possibile ad esempio controllare quali record vengono visualizzati in una maschera Clienti, a seconda dell'opzione selezionata in un gruppo di opzioni relative al tipo di cliente. Per effettuare tale operazione, impostare la proprietà <B>Origine record</B> della maschera a una tra più query, ognuna contenente i record di un diverso set di clienti.</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni sull'impostazione del valore di una proprietà in risposta a un evento, fare clic su <A HREF="achowSetValuePropertyBasedEventS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconSettingValuesMacrosSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

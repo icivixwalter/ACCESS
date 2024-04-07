@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDoEventsS'
+Feature='acfct'
+Handoff='1'
+SourceFile='acob2fct.rtf'
+Tnum='234409'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzione DoEvents</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acfctdoeventss"></A>Funzione DoEvents</H1>
+
+
+
+<P class=T>La funzione <B>DoEvents</B> viene ignorata se utilizzata in:
+
+<UL>
+	<LI class=LB1>Una funzione definita dall'utente o in una routine che calcola un campo di una query, di una maschera o di un report.<BR><BR></LI>
+
+	<LI class=LB1>Una funzione definita dall'utente che crea un elenco per riempire una casella combinata, una casella di riepilogo o un oggetto OLE.</LI>
+</UL>
+
+<P class=T>Se si include la funzione <B>DoEvents</B> in una delle funzioni descritte, il controllo non viene ceduto al sistema operativo.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

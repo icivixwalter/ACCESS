@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthDefaultControl'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv3_1a.rtf'
+Tnum='186456'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo DefaultControl</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFontNameSize">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctCreateControl">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="accolProperties">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthdefaultcontrol"></A>Metodo DefaultControl</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthDefaultControlC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthDefaultControlX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthDefaultControlA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>DefaultControl</B> restituisce un oggetto <A HREF="acobjControl.htm"><B>Control</B></A> con il quale è possibile impostare le <A HREF="javascript:HelpPopup('actip9.hlp','defDefaultProperty');" class="pop">proprietà predefinite</A> per un determinato tipo di <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di una determinata <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>. Ad esempio, prima di creare una <A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">casella di testo</A> in una maschera, è possibile impostare le proprietà predefinite per tale casella di testo. È possibile, quindi, creare alcune caselle di testo con le stesse impostazioni delle proprietà di base, piuttosto che impostare le proprietà per ciascuna casella di testo al momento della creazione.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>Set</B> <I>controllo</I> <B>=</B> <I>oggetto</I><B>.DefaultControl(</B><I>tipocontrollo</I><B>)</B></P>
+
+
+
+<P class=T>Il metodo <B>DefaultControl</B> dispone degli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>controllo</I></TD>
+<TD class=TT width=75%>Un oggetto <B>Control</B> per cui è necessario impostare le proprietà predefinite.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>oggetto</I></TD>
+<TD class=TT width=75%>Un oggetto <A HREF="acobjForm.htm"><B>Form</B></A> o <A HREF="acobjReport.htm"><B>Report</B></A> in cui è necessario creare controlli. Le impostazioni predefinite delle proprietà definite per un tipo di controllo si applicano solo a controlli dello stesso tipo creati nella maschera o nel report.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>tipocontrollo</I></TD>
+<TD class=TT width=75%><A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">Costante intrinseca</A> che indica il tipo di controllo per cui è necessario impostare le proprietà predefinite.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Il metodo <B>DefaultControl</B> consente di impostare le proprietà predefinite di un controllo tramite il codice. Una volta impostate le proprietà predefinite per un determinato tipo di controllo, ciascun controllo dello stesso tipo creato successivamente avrà gli stessi valori predefiniti.</P>
+
+<P class=T>Se, ad esempio, si imposta a 12 la proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>FontSize</B></A> del <A HREF="javascript:HelpPopup('actip9.hlp','defCommandButton');" class="pop">pulsante di comando</A> predefinito, la dimensione dei caratteri di ciascun pulsante di comando nuovo sarà di 12 <A HREF="javascript:HelpPopup('actip9.hlp','defPoint');" class="pop">punti</A>.</P>
+
+<P class=T>Non tutte le proprietà di un controllo sono disponibili come proprietà predefinite. Le proprietà predefinite disponibili per un controllo dipendono dal tipo di controllo.</P>
+
+<P class=T>Il metodo <B>DefaultControl</B> restituisce un oggetto <B>Control</B> del tipo specificato dall'argomento <I>tipocontrollo</I>. Tale oggetto<B> </B>non rappresenta un controllo effettivo di una maschera, ma un controllo predefinito che agisce da modello per tutti i controlli dello stesso tipo creati successivamente. Impostare le proprietà predefinite del controllo per l'oggetto <B>Control</B> restituito dal metodo <B>DefaultControl</B> nello stesso modo in cui si impostano le proprietà per un singolo controllo di una maschera.</P>
+
+<P class=T>Per un elenco di costanti intrinseche che è possibile passare come argomento <I>tipocontrollo</I> vedere la funzione <A HREF="JavaScript:hhobj_5.Click()"><B>CreateControl</B></A>. Tali costanti sono, inoltre, elencate nel modulo Costanti della libreria di Microsoft Access nel Visualizzatore oggetti.</P>
+
+<P class=T>Il metodo <B>DefaultControl</B> può essere utilizzato solo in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura maschera</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura report</A>. Se si prova ad applicare tale metodo a una maschera o a un report che non sono in visualizzazione Struttura, si verifica un <A HREF="javascript:HelpPopup('actip9.hlp','defRunTimeError');" class="pop">errore di run-time</A>.</P>
+
+<P class=T>Se si prova a impostare una proprietà che non è possibile impostare come proprietà predefinita tramite il metodo <B>DefaultControl</B> si verifica un errore di run-time. Per determinare quali proprietà possono essere quelle predefinite, scorrere l'insieme  <A HREF="JavaScript:hhobj_6.Click()"><B>Properties</B></A> dell'oggetto <B>Control</B> restituito dal metodo <B>DefaultControl</B>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

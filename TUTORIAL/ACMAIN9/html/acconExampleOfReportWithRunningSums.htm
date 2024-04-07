@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconExampleOfReportWithRunningSums'
+Feature='Reports: Expressions'
+Handoff='2'
+SourceFile='crptexp.rtf'
+Tnum='188564'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di un report che calcola le somme parziali</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconexampleofreportwithrunningsums"></A>Esempio di un report che calcola le somme parziali</H1>
+
+<P class=T>È possibile calcolare somme parziali che vengono incrementate all'interno di ogni gruppo e reimpostate ogni volta che inizia un nuovo gruppo di record. È inoltre possibile calcolare le somme parziali incrementate all'interno del report.</P>
+
+<P class=T>Nella figura che segue, per i due campi sulla destra associati al campo Subtotale, la proprietà <B>Somma parziale</B> è impostata rispettivamente a <B>Su gruppo</B> e a <B>Su tutto</B>.</P>
+
+<P class=ART><IMG SRC="images/crptexp3.bmp" ALT="Caselle di testo che calcolano le somme parziali che appaiono in visualizzazione Struttura" BORDER=0></P>
+
+<P class=T>Nel report che segue è possibile vedere come vengono calcolate le somme parziali.</P>
+
+<P class=ART><IMG SRC="images/crptexp4.bmp" ALT="Somme parziali riportate nel report stampato" BORDER=0></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconExampleOfReportWithRunningSumsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

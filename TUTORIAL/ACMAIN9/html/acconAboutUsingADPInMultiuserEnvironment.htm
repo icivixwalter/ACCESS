@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutUsingADPInMultiuserEnvironment'
+Feature='Access Project: Basic'
+Handoff='3'
+SourceFile='ccsbas.rtf'
+Tnum='275189'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'utilizzo di un progetto di Microsoft Access in un ambiente multiutente</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowOpenMicrosoftAccessProject">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acdecSecureAccessProject">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconaboutusingadpinmultiuserenvironment"></A>Informazioni sull'utilizzo di un progetto di Microsoft Access in un ambiente multiutente</H1>
+
+<P class=T>Vi sono diversi modi per condividere i dati in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (adp). È inoltre necessario fare alcune considerazioni prima di lavorare in un ambiente multiutente. In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconaboutusingadpinmultiuserenvironment_1">Utilizzo di progetti di Access in un ambiente multiutente</A></P>
+
+<P class=LBR1><A HREF="#acconaboutusingadpinmultiuserenvironment_2">Gestione di aggiornamenti concomitanti</A></P>
+
+<P class=LBR1><A HREF="#acconaboutusingadpinmultiuserenvironment_3">Condivisione di un database di Microsoft SQL su Internet</A></P>
+
+<P class=LBR1><A HREF="#acconaboutusingadpinmultiuserenvironment_4">Replica di un database di SQL Server</A></P>
+
+<H2><A NAME="acconaboutusingadpinmultiuserenvironment_1"></A>Utilizzo di progetti di Access in un ambiente multiutente</H2>
+
+<P class=T>In un ambiente multiutente ogni utente deve avere a disposizione una propria copia del file del progetto di Access connesso allo stesso database di Microsoft SQL Server. Non è possibile condividere lo stesso file del progetto di Access tra due o più utenti. </P>
+
+<P class=T>Quando si <A HREF="JavaScript:hhobj_1.Click()">apre un progetto di Access</A>, si attiva sempre la modalità <A HREF="javascript:HelpPopup('actip9.hlp','defExclusive');" class="pop">esclusiva</A>. Se un altro utente ha già aperto un progetto di Access e si tenta di aprire lo stesso progetto, Access avverte che il file è stato aperto in modalità esclusiva e dà la possibilità di aprirne una copia in sola lettura. </P>
+
+<P class=T>In pratica, quando si esegue un'applicazione condivisa, si fornisce semplicemente una copia del file del progetto di Access a ogni utente dell'applicazione. In questo caso ogni utente dispone di una copia di maschere, report, pagine di accesso ai dati, macro e moduli. Gli utenti stanno di fatto condividendo un database di SQL Server e le tabelle, le visualizzazioni, le stored procedure e i diagrammi di database che risiedono in quel database. Pertanto, in un ambiente multiutente, è importante fornire una protezione adeguata per questi oggetti di database condivisi in modo che la loro integrità non venga compromessa. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="JavaScript:hhobj_2.Click()">protezione di un progetto di Access</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutusingadpinmultiuserenvironment">inizio</A></P>
+
+<H2><A NAME="acconaboutusingadpinmultiuserenvironment_2"></A>Gestione di aggiornamenti concomitanti</H2>
+
+<P class=T>In un ambiente multiutente è possibile che nello stesso momento più utenti lavorino sullo stesso record. Poiché alcuni utenti possono modificare o eliminare gli stessi dati che un altro sta utilizzando, è possibile che di tanto in tanto si verifichino dei conflitti. I progetti di Access utilizzano una tecnica chiamata "blocco dei record ottimistico" per gestire le priorità relative ai record.</P>
+
+<P class=T>Se un utente modifica un record e un altro aggiorna lo stesso record prima che venga salvato dal primo utente, un messaggio avverte che se si salva il record, le modifiche apportate dall'altro utente verranno sovrascritte. Procedere in uno dei seguenti modi:
+
+<UL>
+	<LI class=LB1>Scegliere il pulsante <B>Salva</B> <B>il record</B> per salvare il record e sovrascrivere le modifiche dell'altro utente.<BR><BR></LI>
+
+	<LI class=LB1>Scegliere il pulsante <B>Copia negli Appunti</B> per esaminare le modifiche apportate dall'altro utente in modo da poterle allineare adeguatamente con le proprie.<BR><BR></LI>
+
+	<LI class=LB1>Scegliere il pulsante <B>Non salvare le modifiche</B> per ignorare le proprie modifiche e accettare quelle dell'altro utente.</LI>
+</UL>
+
+<P class=T>Poiché è possibile che altri utenti aggiungano, modifichino o eliminino i record a cui si sta accedendo, è opportuno <A HREF="achowDisplayMostCurrentDataInFormViewDatasheetViewS.htm">aggiornare periodicamente la visualizzazione dei dati in visualizzazione Foglio dati o Maschera</A> utilizzando il comando <B>Aggiorna</B> del menu <B>Record</B> per eseguire di nuovo le query e vedere i dati aggiornati.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutusingadpinmultiuserenvironment">inizio</A></P>
+
+<H2><A NAME="acconaboutusingadpinmultiuserenvironment_3"></A>Condivisione di un database di Microsoft SQL su Internet</H2>
+
+<P class=T>È possibile creare pagine di accesso ai dati oppure inviare come output uno o più oggetti di database in codice HTML statico o generato dal server, visualizzare queste pagine Web in un <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefBrowser');" class="pop">browser</A>, ad esempio Microsoft Internet Explorer, e accedere ai dati tramite queste pagine Web. Per ulteriori informazioni, vedere l'argomento relativo ai <A HREF="acconAboutChoosingWebPageOutputFormat.htm">tre tipi di pagine Web create da Access</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutusingadpinmultiuserenvironment">inizio</A></P>
+
+<H2><A NAME="acconaboutusingadpinmultiuserenvironment_4"></A>Replica di un database di SQL Server</H2>
+
+<P class=T>Se si utilizzano due computer, ad esempio un computer desktop e uno portatile, è possibile eseguire delle repliche del database di SQL Server e mantenerle in sincronia. Molti utenti in diverse postazioni possono lavorare contemporaneamente sulle proprie copie di un database master e quindi sincronizzarle sulla rete, tramite una connessione di accesso remoto o Internet. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="acconAboutReplicationInMicrosoftAccessProject.htm">replica di un progetto di Access</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutusingadpinmultiuserenvironment">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutUsingADPInMultiuserEnvironmentW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

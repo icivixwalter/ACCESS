@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='MySubreportPrintsOnlyOneColumn'
+Feature='Reports: Subreport'
+Handoff='2'
+SourceFile='crptadv4.rtf'
+Tnum='189184'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Il sottoreport stampa solo una colonna invece di più colonne</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="mysubreportprintsonlyonecolumn"></A>Il sottoreport stampa solo una colonna invece di più colonne</H1>
+
+<P class=T>È possibile che un sottoreport stampi solo una colonna qualora, nel sottoreport, <B>Layout colonne</B> sia impostato a <B>Priorità verticale</B> nella scheda <B>Colonne</B> della finestra di dialogo <B>Imposta pagina</B> e, nel report principale, la proprietà <B>Espandibile</B> sia impostata a <B>Sì</B> per il controllo del sottoreport.</P>
+
+<P class=T>È possibile riprogettare la struttura del report seguendo una delle procedure riportate di seguito.
+
+<UL>
+	<LI class=LB1>Nel sottoreport modificare l'impostazione di <B>Layout colonne</B> in <B>Priorità orizzontale</B> e, nel report principale, mantenere l'impostazione della proprietà <B>Espandibile</B> a <B>Sì</B> per il controllo del sottoreport, che in tal modo visualizzerà più colonne e si espanderà come desiderato.<BR><BR></LI>
+
+	<LI class=LB1>Nel sottoreport mantenere l'impostazione di <B>Layout colonne</B> a <B>Priorità verticale</B>. Nel report principale ridimensionare il controllo del sottoreport per adattarlo al numero massimo di record e impostare la relativa proprietà <B>Espandibile</B> a <B>No</B>. Dato che il controllo del sottoreport conserva sempre la medesima dimensione, i record che non possono essere visualizzati nel sottoreport verranno troncati nel caso in cui il loro numero sia superiore al numero massimo specificato.</LI>
+</UL>
+
+<P class=T>Se possibile, non utilizzare un sottoreport. Collocare in un'intestazione di gruppo o di pagina i controlli che stampano i dati nel report, e nella sezione Corpo i controlli che stampano i dati nel sottoreport.</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="MySubreportPrintsOnlyOneColumnW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjDoCmdX'
+Feature='acobj'
+Handoff='1'
+SourceFile='aobjv8.rtf'
+Tnum='186400'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto DoCmd</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjdocmdx"></A>Esempio di oggetto DoCmd</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene aperta una maschera in visualizzazione Maschera e viene effettuato uno spostamento a un nuovo record.</P>
+
+<PRE class=CT><CODE>Sub MostraNuovoRecord()
+&nbsp;&nbsp;&nbsp; <B>DoCmd</B>.OpenForm "Impiegati", acNormal
+&nbsp;&nbsp;&nbsp; <B>DoCmd</B>.GoToRecord , , acNewRec
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

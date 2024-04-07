@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefOptimizeGeneralTablePerformanceS'
+Feature='Tables: Field Properties'
+Handoff='1'
+SourceFile='ctblpro_1.rtf'
+Tnum='188656'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Ottimizzare le prestazioni generali delle tabelle</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefoptimizegeneraltableperformances"></A>Ottimizzare le prestazioni generali delle tabelle</H1>
+
+<P class=T>Per ottimizzare le prestazioni delle tabelle si possono effettuare varie operazioni. Oltre ai suggerimenti riportati di seguito, è possibile utilizzare l'Analizzatore prestazioni per analizzare determinate tabelle contenute nel database. Per informazioni sull'utilizzo dell'Analizzatore prestazioni, fare clic su <A HREF="achowAnalyzerTopicsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</P>
+
+<P class=T><B>Strutturare le tabelle senza dati superflui</B>&nbsp;&nbsp; Per recuperare ed aggiornare i dati rapidamente è necessario disporre di un database ben strutturato. Se le tabelle esistenti contengono dati superflui, è possibile utilizzare la Creazione guidata Analizzatore tabelle per dividerle in tabelle correlate che consentono di memorizzare i dati in modo più efficace. Per ulteriori informazioni, fare clic su <A HREF="achowNormalizerTopicsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T><B>Scegliere i tipi di dati appropriati per i campi</B>&nbsp;&nbsp; Ciò consente di ridurre lo spazio utilizzato nel database e di migliorare le operazioni di join. Durante la definizione di un campo, scegliere le dimensioni minime per il tipo dati o per il campo appropriate per i dati contenuti nel campo. Per ulteriori informazioni, fare clic su <A HREF="acrefWhatDataTypeShouldUseMyFieldS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T><B>Creare indici per i campi che vengono ordinati, collegati con <A HREF="javascript:HelpPopup('actip9.hlp','defJoin');" class="pop">join</A> o per cui vengono impostati dei criteri</B>&nbsp;&nbsp; Indicizzando i campi su entrambi i lati dei join oppure creando una relazione tra i campi ed indicizzando tutti i campi utilizzati per l'impostazione dei criteri per la query, è possibile velocizzare notevolmente le operazioni con le query. Anche la ricerca dei record tramite la finestra di dialogo <B>Trova</B> risulta molto più rapida se viene effettuata in un campo indicizzato.
+</P>
+
+<P class=T>Gli indici, tuttavia, non sono sempre consigliabili. Essi accrescono notevolmente le dimensioni dei file MDB, limitano la simultaneità (la capacità per cui più utenti possono modificare contemporaneamente una pagina) nelle applicazioni multiutente e riducono le prestazioni quando si aggiornano i dati nei campi indicizzati o quando si aggiungono e si eliminano record. È consigliabile provare a determinare i campi che è necessario indicizzare. L'aggiunta di un indice può velocizzare una query di un secondo, ma può rallentare di due secondi l'aggiunta di una riga di dati e causare problemi di blocco. Oppure i vantaggi ottenuti possono rivelarsi trascurabili se sono già indicizzati altri campi. L'aggiunta, ad esempio, di un indice al campo Codice postale può offrire un miglioramento delle prestazioni minimo se nella stessa tabella i campi Nome della società e Cognome sono già indicizzati. È necessario indicizzare solo i campi che contengono prevalentemente valori univoci, indipendentemente dal tipo di query creato.</P>
+
+<P class=T><B>In un indice a più campi, utilizzare solo i campi necessari</B>&nbsp;&nbsp; Per ulteriori informazioni sugli indici, fare clic su <A HREF="acconWhatIsIndexWhyDoNeedOneS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefOptimizeGeneralTablePerformanceSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

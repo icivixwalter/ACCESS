@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDatasheetFontItalicX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aprosht2.doc'
+Tnum='187138'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà DatasheetFontItalic, DatasheetFontUnderline</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodatasheetfontitalicx"></A>Esempio di proprietà DatasheetFontItalic, DatasheetFontUnderline</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene mostrato come far sì che vengano visualizzati in corsivo e sottolineati i dati e i nomi dei campi contenuti nella maschera Prodotti in visualizzazione Foglio dati.</P>
+
+<PRE class=CT><CODE>Forms![Prodotti].<B>DatasheetFontItalic</B> = True
+Forms![Prodotti].<B>DatasheetFontUnderline</B> = True</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene mostrato come far sì che vengano visualizzati in corsivo e sottolineati i dati e i nomi dei campi contenuti nella maschera Prodotti in visualizzazione Foglio dati.</P>
+
+<P class=T>Per impostare le proprietà <B>DatasheetFontItalic</B> e <B>DatasheetFontUnderline</B> nell'esempio viene utilizzata la routine ImpostaProprietàTabella contenuta nel modulo standard del database.</P>
+
+<PRE class=CT><CODE>Dim dbs As Object, objProducts As Object
+Const DB_Boolean As Long = 1
+Set dbs = CurrentDb
+Set objProducts = dbs![Products]
+SetTableProperty objProducts, "<B>DatasheetFontItalic</B>", DB_Boolean, True
+SetTableProperty objProducts, "<B>DatasheetFontUnderline</B>", DB_Boolean, True
+
+Sub SetTableProperty(objTableObj As Object, strPropertyName As String, _
+    intPropertyType As Integer, varPropertyValue As Variant)
+  ' Imposta la proprietà della tabella definita da Microsoft Access senza
+  ' causare un errore di run-time irrecuperabile.
+  Const conErrPropertyNotFound = 3270
+  Dim prpProperty As Variant
+  On Error Resume Next        ' Non rileva errori.
+  objTableObj.Properties(strPropertyName) = varPropertyValue
+  If Err &lt;&gt; 0 Then          ' Si è verificato un errore impostando il valore.
+    If Err &lt;&gt; conErrPropertyNotFound Then
+      On Error GoTo 0
+      MsgBox "Impossibile impostare la proprietà'" &amp; strPropertyName _
+        &amp; "' on table '" &amp; objTableObj.Name &amp; "'", 48, "SetTableProperty"
+    Else
+      On Error GoTo 0
+      Set prpProperty = objTableObj.CreateProperty(strPropertyName, _
+        intPropertyType, varPropertyValue)
+      objTableObj.Properties.Append prpProperty
+    End If
+  End If
+  objTableObj.Properties.Refresh
+End Sub</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

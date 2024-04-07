@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjDocumentX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acdobjx.doc'
+Tnum='234408'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Document e insieme Documents (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjdocumentx"></A>Esempio di oggetto Document e insieme Documents (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene stampato il nome di ciascun oggetto <B>Document</B> Form nel database corrente e la data dell'ultima modifica:</P>
+
+<PRE class=CT><CODE>Sub DocumentoModificato()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, ctr As Container, doc As <B>Document</B>
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al contenitore Forms.
+&nbsp;&nbsp;&nbsp; Set ctr = dbs.Containers!Forms
+&nbsp;&nbsp;&nbsp; ' Elenca insieme Documents del contenitore Forms.
+&nbsp;&nbsp;&nbsp; For Each doc In ctr.<B>Documents</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stampa il nome di oggetto Document e il valore della proprietà LastUpdated.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print doc.Name; "&nbsp;&nbsp;&nbsp; "; doc.LastUpdated
+&nbsp;&nbsp;&nbsp; Next doc
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

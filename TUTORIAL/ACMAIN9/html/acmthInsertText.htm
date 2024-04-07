@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthInsertText'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186382'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo InsertText</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthinserttext"></A>Metodo InsertText</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthInsertTextC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthInsertTextX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthInsertTextA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>InsertText</B> inserisce una <A HREF="javascript:HelpPopup('actip9.hlp','defString');" class="pop">stringa</A> di testo specificata in un <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">modulo standard</A> o in un <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">modulo di classe</A>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I><B>.InsertText</B> <I>testo</I></P>
+
+
+
+<P class=T>Il metodo <B>InsertText</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>oggetto</I></TD>
+<TD class=TT width=75%>Oggetto <A HREF="acobjModule.htm"><B>Module</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>testo</I></TD>
+<TD class=TT width=75%>Testo da inserire nel modulo.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando si inserisce una stringa utilizzando il metodo <B>InsertText</B>, il nuovo testo viene posizionato alla fine del modulo, dopo tutte le altre routine.</P>
+
+<P class=T>Per aggiungere più righe, includere la <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costante intrinseca</A> <B>vbCrLf</B> sulle interruzioni di riga desiderate all'interno della stringa che costituisce l'argomento <I>testo</I>. Questa costante provoca un ritorno a capo e un avanzamento riga.</P>
+
+<P class=T>Per specificare la riga su cui viene inserito il testo, utilizzare il metodo <A HREF="acmthInsertLines.htm"><B>InsertLines</B></A>. Per inserire codice all'interno della <A HREF="javascript:HelpPopup('actip9.hlp','defDeclarationsSection');" class="pop">sezione Dichiarazioni</A> del modulo, utilizzare il metodo <B>InsertLines</B> piuttosto che il metodo <B>InsertText</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Nelle versioni precedenti di Microsoft Access, il metodo <B>InsertText</B> era un metodo dell'oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>. È ancora possibile utilizzare il metodo <B>InsertText</B> dell'oggetto <B>Application</B>, ma è più opportuno utilizzare invece il metodo <B>InsertText</B> dell'oggetto <B>Module</B>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

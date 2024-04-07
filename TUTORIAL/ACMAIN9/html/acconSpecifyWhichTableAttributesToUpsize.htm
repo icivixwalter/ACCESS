@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconSpecifyWhichTableAttributesToUpsize'
+Feature='Access Project: Upsizing'
+Handoff='3'
+SourceFile='ccsupwiz.rtf'
+Tnum='274166'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Scegliere gli attributi di tabella su cui eseguire l'upsize</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconspecifywhichtableattributestoupsize"></A>Scegliere gli attributi di tabella su cui eseguire l'upsize</H1>
+
+<P class=T>È possibile selezionare gli attributi di tabella su cui eseguire l'upsize nel database di Microsoft SQL Server. L'Upsize guidato converte come minimo i nomi di campo di Access in nomi di campo di SQL Server validi e <A HREF="acrefComparingAccesstSQLServerDatatypes.htm">i tipi di dati di Access nei tipi di dati equivalenti di SQL Server</A>. In base all'impostazione predefinita, vengono selezionati tutti gli attributi per l'upsize. In questo argomento verranno fornite informazioni di riferimento relative alle seguenti operazioni:</P>
+
+<P class=LBR1><A HREF="#acconspecifywhichtableattributestoupsize_1">Eseguire l'upsize degli indici</A></P>
+
+<P class=LBR1><A HREF="#acconspecifywhichtableattributestoupsize_2">Eseguire l'upsize delle regole di convalida</A></P>
+
+<P class=LBR1><A HREF="#acconspecifywhichtableattributestoupsize_3">Eseguire l'upsize delle impostazioni predefinite</A></P>
+
+<P class=LBR1><A HREF="#acconspecifywhichtableattributestoupsize_4">Eseguire l'upsize delle relazioni tra le tabelle</A></P>
+
+<P class=LBR1><A HREF="#acconspecifywhichtableattributestoupsize_5">Aggiungere campi data e ora alle tabelle</A></P>
+
+<P class=LBR1><A HREF="#acconspecifywhichtableattributestoupsize_6">Scegliere di non eseguire l'upsize dei dati</A></P>
+
+<H2><A NAME="acconspecifywhichtableattributestoupsize_1"></A>Eseguire l'upsize degli indici</H2>
+
+<P class=T>Se si seleziona la casella di controllo <B>Indici</B>, l'Upsize guidato esegue l'upsize di tutti gli indici.</P>
+
+<P class=T>L'Upsize guidato converte le chiavi primarie di Microsoft Access in indici univoci non raggruppati di Microsoft SQL Server e li contrassegna come chiavi primarie di SQL Server. Se si desidera collegare la tabella di SQL Server di cui è stato eseguito l'upsize al database di Access, l'Upsize guidato aggiunge anche il prefisso "aaaaa". Poiché viene scelto come chiave primaria il primo indice in ordine alfabetico nell'elenco degli indici disponibili, il prefisso "aaaaa" assicura la scelta dell'indice corretto. </P>
+
+<P class=T>Tutti gli altri indici conservano il proprio nome, a eccezione di quelli contenenti caratteri non validi, che vengono sostituiti dal carattere "_". Gli indici di Microsoft Access univoci o non univoci diventano indici di SQL Server univoci o non univoci. È opportuno tenere presente che in SQL Server non sono supportati gli indici in ordine crescente o decrescente. </P>
+
+<P class=T>Una tabella collegata deve disporre di un indice univoco aggiornabile in Microsoft Access. L'Upsize guidato è in grado di eseguire l'upsize di un indice univoco esistente, ma non di crearne uno. Per poter aggiornare le tabelle, accertarsi di aggiungere un indice univoco a ciascuna tabella di Access prima di eseguire l'upsize. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifywhichtableattributestoupsize">inizio</A></P>
+
+<H2><A NAME="acconspecifywhichtableattributestoupsize_2"></A>Eseguire l'upsize delle regole di convalida</H2>
+
+<P class=T>Se si seleziona la casella di controllo <B>Regole di convalida</B>, l'Upsize guidato esegue l'upsize di tutte le regole di convalida di tabelle, record e campi e delle proprietà <B>Richiesto</B> dei campi come <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgTrigger');" class="pop">trigger</A> di aggiornamento e inserimento.</P>
+
+<P class=T>Un trigger è costituito da una serie di istruzioni Transact-SQL associate a una tabella SQL Server. Una tabella può avere tre trigger, uno per ciascuno dei comandi che possono modificare i dati della tabella: UPDATE, INSERT e DELETE. Il trigger viene eseguito automaticamente con l'esecuzione del comando. L'Upsize guidato utilizza i trigger invece delle regole di SQL Server per applicare la convalida a livello di campo poiché le regole di SQL Server non consentono di visualizzare i messaggi di errore personalizzati. </P>
+
+<P class=T>Le regole di convalida non hanno necessariamente una corrispondenza uno-a-uno con un trigger. È possibile che una regola di convalida diventi parte di più trigger oppure che ciascun trigger contenga codice per l'emulazione delle funzionalità di più regole di convalida. </P>
+
+<P class=T>Quando si imposta la proprietà <B>Richiesto</B> di un campo di Microsoft Access a <B>Vero</B>, l'utente non può inserire un record e lasciare il campo richiesto nullo se non esiste alcuna associazione predefinita al campo, né può assegnare un valore nullo quando si aggiorna un record. I campi richiesti vengono sottoposti all'upsize e trasformati in campi che non accettano valori nulli (Null) su SQL Server. L'Upsize guidato crea inoltre un blocco di codice Transact-SQL che visualizza un messaggio simile a quello visualizzato da Microsoft Access se viene rilevato un campo nullo quando si aggiunge o si aggiorna un record. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifywhichtableattributestoupsize">inizio</A></P>
+
+<H2><A NAME="acconspecifywhichtableattributestoupsize_3"></A>Eseguire l'upsize delle impostazioni predefinite</H2>
+
+<P class=T>Se si seleziona la casella di controllo <B>Predefiniti</B>, l'Upsize guidato esegue l'upsize di tutti i valori predefiniti come valori predefiniti <A HREF="javascript:HelpPopup('actip9.hlp','defANSI');" class="pop"> ANSI (American National Standards Institute)</A>, non come oggetti predefiniti associati al campo SQL Server appropriato. Le impostazioni predefinite di Microsoft SQL Server, a differenza di quelle di Microsoft Access, sono indipendenti da campi e tabelle. Una volta creata un'impostazione predefinita, è possibile associarla a un numero indefinito di campi diversi. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifywhichtableattributestoupsize">inizio</A></P>
+
+<H2><A NAME="acconspecifywhichtableattributestoupsize_4"></A>Eseguire l'upsize delle relazioni tra le tabelle</H2>
+
+<P class=T>È possibile decidere come eseguire l'upsize delle relazioni tra le tabelle e dell'integrità referenziale utilizzando i trigger di aggiornamento, inserimento o eliminazione oppure l'Integrità referenziale integrativa (DRI, Declarative Referential Integrity). </P>
+
+<P class=T>L'Integrità referenziale integrativa funziona allo stesso modo dell'integrità referenziale di Microsoft Access in quanto definisce i vincoli della chiave primaria per le tabelle di base (la parte "uno" di una relazione uno-a-molti) e i vincoli delle chiavi esterne per le tabelle esterne (generalmente la parte "molti" di una relazione uno-a-molti). L'Integrità referenziale dichiarativa di SQL Server non dispone tuttavia delle funzioni di aggiornamento o eliminazione a catena di Microsoft Access. 
+
+<UL>
+	<LI class=LB1><B>Usa trigger&nbsp;&nbsp;</B> Se per le relazioni tra le tabelle di Microsoft Access sono stati definiti aggiornamenti o eliminazioni a catena e si desidera conservare questa funzione dopo l'upsize delle tabelle, selezionare le caselle di controllo <B>Relazioni della tabella</B> e <B>Usa trigger</B> per eseguire l'upsize degli aggiornamenti o eliminazioni a catena come trigger per l'applicazione dell'integrità referenziale.
+<P class=LT1>Una relazione tra tabelle non deve necessariamente avere una corrispondenza uno-a-uno con un trigger. Ciascuna relazione può diventare parte di più trigger oppure ciascun trigger può contenere codice per l'emulazione delle funzionalità di più regole di integrità referenziale. I trigger di inserimento vengono utilizzati nelle tabelle secondarie e quelli di eliminazione nelle tabelle principali.
+
+<P class=LT1><B>Nota&nbsp;&nbsp;</B> Lo strumento di progettazione di Microsoft SQL Server necessita dell'Integrità referenziale dichiarativa (DRI) per leggere il <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgDatabaseDiagram');" class="pop">diagramma di database</A> di un database di SQL Server. Per consentire la lettura dei diagrammi del database da parte degli strumenti di progettazione di SQL Server, contemporaneamente all'applicazione dell'integrità referenziale mediante i trigger, l'Upsize guidato colloca la DRI sulle relazioni disattivando però il controllo dei vincoli delle chiavi esterne.
+</LI>
+
+	<LI class=LB1><B>Usa DRI&nbsp;&nbsp;</B> Se non sono state definite operazioni di aggiornamento o eliminazione a catena nel database oppure non si desidera conservare queste funzioni nel database di cui si esegue l'upsize, selezionare le caselle di controllo <B>Relazioni della tabella</B> e <B>Usa DRI</B> per utilizzare la DRI per l'applicazione dell'integrità referenziale. In questo caso un messaggio di avvertimento informa che si perderanno le funzionalità di aggiornamento ed eliminazione a catena. </LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifywhichtableattributestoupsize">inizio</A></P>
+
+<H2><A NAME="acconspecifywhichtableattributestoupsize_5"></A>Aggiungere campi data e ora alle tabelle</H2>
+
+<P class=T>In Microsoft SQL Server vengono utilizzati i campi data e ora per indicare che un record è stato modificato (ma non quando sono state apportate le modifiche) creando un campo di valore univoco e aggiornando tale campo ogni volta che viene aggiornato un record. Per una tabella collegata, il valore dei campi data e ora viene utilizzato da Access prima di aggiornare un record per determinare se è stato modificato. Un campo data e ora in genere garantisce ottime prestazioni e affidabilità. Senza un campo di questo tipo SQL Server deve controllare tutti i campi del record per determinare se sono state apportate modifiche, con conseguente rallentamento delle prestazioni.
+
+<UL>
+	<LI class=LB1>Se si seleziona il valore predefinito <B>Sì, determinazione automatica</B>, l'Upsize guidato crea nuovi campi con tipo di dati data e ora nelle tabelle SQL Server di cui è stato eseguito l'upsize dalle tabelle di Microsoft Access contenenti campi con virgola mobile (semplice o doppia), <A HREF="javascript:HelpPopup('actip9.hlp','defMemoDataType');" class="pop">Memo</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObject');" class="pop">Oggetto OLE</A>.<BR><BR></LI>
+
+	<LI class=LB1>È anche possibile fare in modo che l'Upsize guidato crei un campo data e ora per tutte le tabelle di cui si è eseguito l'upsize indipendentemente dai tipi di campi in esse contenuti selezionando <B>Sì, sempre</B>. Questa opzione ottimizza le prestazioni delle tabelle di Access di cui si è eseguito l'upsize che non contengono campi Memo, Oggetto OLE o con virgola mobile, bensì campi di altro tipo. </LI>
+</UL>
+
+<P class=T><B>Nota&nbsp;&nbsp;</B> Nelle tabelle SQL Server collegate non viene eseguito alcun controllo da Microsoft Access per determinare se i campi Memo o Oggetto OLE sono stati modificati perché questi campi possono essere di dimensioni molto elevate e il confronto potrebbe impiegare troppe risorse di rete e troppo tempo. Se è stato modificato solo un campo di testo o immagine e non è presente alcun campo data e ora, la modifica verrà sovrascritta. Il valore di un campo con virgola mobile inoltre potrebbe apparire modificato anche se non lo è e, in assenza di un campo data e ora, il record potrebbe essere rilevato come modificato anche se non è stata apportata alcuna modifica. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifywhichtableattributestoupsize">inizio</A></P>
+
+<H2><A NAME="acconspecifywhichtableattributestoupsize_6"></A>Scegliere di non eseguire l'upsize dei dati</H2>
+
+<P class=T>In base all'impostazione predefinita, l'Upsize guidato esegue l'upsize di tutti i dati su SQL Server. Se si seleziona la casella di controllo <B>Crea solo la struttura della tabella e non eseguire l'upsize dei dati</B>, viene eseguito l'upsize solo della struttura dei dati. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconspecifywhichtableattributestoupsize">inizio</A></P>
+
+<H2></H2>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconSpecifyWhichTableAttributesToUpsizeW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

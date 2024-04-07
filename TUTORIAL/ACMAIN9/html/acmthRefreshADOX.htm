@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRefreshADOX'
+Feature='acmth'
+Handoff='2'
+SourceFile='ACAMETHX9.doc'
+Tnum='261123'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Refresh</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthrefreshadox"></A>Esempio di metodo Refresh</B></P>
+
+<P class=T>Nell'esempio riportato di seguito viene aggiornato l'insieme <B>Indexes</B> di un oggetto <B>Table</B>. In un database di ambiente multiutente, è possibile utilizzare il metodo <B>Refresh</B> per vedere le modifiche apportate da altri utenti all'oggetto <B>Index</B> nell'insieme <B>Indexes</B> di un oggetto <B>Table</B>.</P>
+
+<PRE class=CT><CODE>Sub AggiornaIndice()
+&nbsp;&nbsp;&nbsp; Dim cat As New ADOX.Catalog, tbl As ADOX.Table
+&nbsp;&nbsp;&nbsp; Dim idx As ADOX.Index, clm As ADOX.Column
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set cat.ActiveConnection = CurrentProject.Connection
+&nbsp;&nbsp;&nbsp; Set tbl = cat.Tables!Dipendenti
+&nbsp;&nbsp;&nbsp; tbl.Indexes.<B>Refresh</B>
+&nbsp;&nbsp;&nbsp; For Each idx In tbl.Indexes
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print idx.Name; ":"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For Each clm In idx.Columns
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "&nbsp;&nbsp; "; clm.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next clm
+&nbsp;&nbsp;&nbsp; Next idx
+&nbsp;&nbsp;&nbsp; Set cat = Nothing
+End Sub
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowRemoveUserlevelSecurityS'
+Feature='Security: User-level'
+Handoff='3'
+SourceFile='csecbas.rtf'
+Tnum='188240'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Rimuovere la protezione a livello utente</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowremoveuserlevelsecuritys"></A>Rimuovere la protezione a livello utente</H1>
+
+<P class=T>Questa procedura comprende due fasi. Connettersi innanzitutto come amministratore del gruppo di lavoro e assegnare al gruppo Utenti le autorizzazioni per tutte le tabelle, le query, le maschere, le macro e per tutti i report. Restituire quindi la proprietà del database e di questi oggetti all'<A HREF="javascript:HelpPopup('actip9.hlp','defAdminAccount');" class="pop">Amministratore</A> predefinito uscendo e connettendosi come Amministratore, creando un database vuoto e importando tutti gli oggetti dal database originale in quello nuovo.
+
+<OL>
+	<LI class=LPROC>Avviare Microsoft Access.<BR><BR></LI>
+
+	<LI class=LPROC>Aprire il database.<BR><BR></LI>
+
+	<LI class=LPROC>Connettersi come amministratore del gruppo di lavoro (membro del <A HREF="javascript:HelpPopup('actip9.hlp','defAdminsGroup');" class="pop">gruppo Amministratori</A>).<BR><BR></LI>
+
+	<LI class=LPROC>Assegnare al gruppo Utenti autorizzazioni complete per tutte le tabelle, le query, le maschere, le macro e per tutti i report del database.
+<P class=LBR2><A HREF="achowAssignPermissionsSecurityAccountsS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Uscire e riavviare Microsoft Access, aprire un database, quindi connettersi come Amministratore.<BR><BR></LI>
+
+	<LI class=LPROC>Creare un nuovo database vuoto e lasciarlo aperto.<BR><BR></LI>
+
+	<LI class=LPROC>Importare tutti gli oggetti dal database originale in quello nuovo.
+<P class=LBR2><A HREF="achowImportAllDatabaseObjectsAnotherMSAccessDatabaS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Se all'apertura del database gli utenti utilizzeranno il <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> corrente, è necessario cancellare la password dell'Amministratore in modo da disattivare la finestra di dialogo <B>Accesso</B> del gruppo di lavoro corrente. Questa operazione non è necessaria se gli utenti utilizzeranno il file di informazioni sul gruppo di lavoro predefinito creato al momento dell'installazione di Microsoft Access.</LI>
+</OL>
+
+<P class=T>In questa fase il nuovo database è privo di qualsiasi protezione. Tutti gli utenti che sono in grado di aprire il nuovo database dispongono di autorizzazioni complete per tutte le tabelle, le query, le maschere, le macro e per tutti i report in esso contenuti. Queste autorizzazioni valgono per qualsiasi gruppo di lavoro, dato che l'account Amministratore è lo stesso in ciascun file di informazioni sul gruppo di lavoro. Il file di informazioni del gruppo di lavoro corrente al momento della creazione del nuovo database nel passaggio 6 definisce il gruppo Amministratori per il nuovo database.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowRemoveUserlevelSecuritySW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

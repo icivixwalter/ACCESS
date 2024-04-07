@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefExampleOfSelfjoin'
+Feature='Queries: Multiple tables'
+Handoff='1'
+SourceFile='CQRYMUL.RTF'
+Tnum='188971'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di un self-join</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefexampleofselfjoin"></A>Esempio di un self-join</H1>
+
+<P class=T>Per visualizzare i nomi dei responsabili nel campo Superiore invece che nell'ID dei responsabili, effettuare le seguenti operazioni.
+
+<OL>
+	<LI class=LPROC>In visualizzazione Struttura della query, aggiungere due volte alla query la tabella Impiegati. Informazioni su come <A HREF="achowRenameTableThatsAddedQueryS.htm">rinominare la seconda tabella nella query</A><BR><BR></LI>
+
+	<LI class=LPROC>Creare il join trascinando il campo Superiore nell'elenco di campi della prima tabella al campo ID impiegati nell'elenco di campi della seconda tabella. <BR><BR></LI>
+
+	<LI class=LPROC>Aggiungere i campi Cognome, Nome e Posizione dal primo elenco di campi alla griglia di struttura. <BR><BR></LI>
+
+	<LI class=LPROC>Aggiungere il campo Cognome dal secondo elenco di campi alla griglia di struttura. Per visualizzare il nome del campo come "Responsabile" invece che "Cognome", impostare la proprietà <B>Etichetta</B> nella finestra delle proprietà di quel campo. Per informazioni su come modificare la proprietà <B>Etichetta</B> di un campo, fare clic su <A HREF="achowChangeFeldsCaptionFromQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</OL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefExampleOfSelfjoinW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

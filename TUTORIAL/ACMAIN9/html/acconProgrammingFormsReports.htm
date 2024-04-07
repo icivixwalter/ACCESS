@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconProgrammingFormsReports'
+Feature='accon'
+Handoff='2'
+SourceFile='acvbanew1.doc'
+Tnum='187902'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Programmare con i moduli di classe</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmSub">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmFunction">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmPropertyLet">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmPropertyGet">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmPropertySet">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vakeyNew">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acconprogrammingformsreports"></A>Programmare con i moduli di classe</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconProgrammingFormsReportsC;vaobjCollection">
+</OBJECT></P>
+
+
+
+<P class=T>In Microsoft Access 2000 sono disponibili due tipi di moduli: <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">moduli standard</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">moduli di classe</A>. In Microsoft Access 95 i moduli di classe esistevano solo in associazione a una maschera o a un report. In Microsoft Access 97 erano disponibili anche nella scheda <B>Moduli</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A>.</P>
+
+<P class=RL><B>Creazione di oggetti personalizzati con i moduli di classe</B></P>
+
+<P class=T>È possibile utilizzare un modulo di classe per creare una definizione per un oggetto personalizzato. Il nome con il quale viene salvato il modulo di classe diventa il nome dell'oggetto personalizzato. Le routine pubbliche <A HREF="JavaScript:hhobj_2.Click()"><B>Sub</B></A> e <A HREF="JavaScript:hhobj_3.Click()"><B>Function</B></A>, definite all'interno di un modulo di classe, diventano i metodi personalizzati dell'oggetto. Le routine pubbliche <A HREF="JavaScript:hhobj_4.Click()"><B>Property Let</B></A>, <A HREF="JavaScript:hhobj_5.Click()"><B>Property Get</B></A> e <A HREF="JavaScript:hhobj_6.Click()"><B>Property Set</B></A> diventano le proprietà dell'oggetto.</P>
+
+<P class=T>Una volta definite le routine all'interno del modulo di classe, è possibile creare il nuovo oggetto creando una nuova <A HREF="javascript:HelpPopup('actip9.hlp','defInstance');" class="pop">istanza</A> della classe. Per fare ciò, dichiarare una variabile del tipo definito da tale classe. Se ad esempio il nome della classe è ABasicClass, una nuova istanza viene creata nel seguente modo:</P>
+
+<PRE class=CT><CODE>Dim abc As New ABasicClass</CODE></PRE>
+
+
+
+<P class=T>Quando si esegue il codice contenente tale dichiarazione, Visual Basic crea la nuova istanza. A questo punto è possibile applicare i relativi metodi e proprietà utilizzando la variabile <CODE>abc</CODE>. Se ad esempio è stato definito un metodo personalizzato denominato Nomi, è possibile applicarlo nel seguente modo:</P>
+
+<PRE class=CT><CODE>abc.Nomi</CODE></PRE>
+
+
+
+<P class=RL><B>Novità in Microsoft Access 95: Creazione di un'istanza predefinita per una classe della maschera</B></P>
+
+<P class=T>Quando si apre la maschera in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A>, sia dall'interfaccia utente sia da Visual Basic, si crea un'istanza del modulo di classe di tale maschera. In altre parole si designa uno spazio nella memoria in cui viene collocato l'oggetto e si possono quindi chiamare i relativi metodi e impostare o restituire le relative proprietà dal codice, come si farebbe per qualsiasi oggetto incorporato. Lo stesso avviene quando si apre un report in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A>.</P>
+
+<P class=T>Quando si fa riferimento a una maschera nel codice Visual Basic, in genere si utilizza l'istanza predefinita della classe della maschera. La classe di una maschera è dotata di una sola istanza predefinita. È inoltre possibile creare più istanze della stessa classe della maschera da Visual Basic. Quando vengono create più istanze di una classe di maschera, vengono create istanze non predefinite.</P>
+
+<P class=T>Esistono quattro modi per creare l'istanza predefinita di una maschera. È possibile aprire una maschera esistente utilizzando l'interfaccia utente, eseguendo il metodo <A HREF="acmthactOpenForm.htm"><B>OpenForm</B></A> dell'oggetto <A HREF="acobjDoCmd.htm"><B>DoCmd</B></A>, chiamando il metodo <A HREF="acmthCreateForm.htm"><B>CreateForm</B></A> e passando alla nuova maschera in visualizzazione Maschera o utilizzando Visual Basic al fine di creare una variabile di tipo <B>Form</B> per fare riferimento all'istanza predefinita. Nell'esempio riportato di seguito viene indicato come aprire una maschera Impiegati cui punta una variabile oggetto <B>Form</B>.</P>
+
+<PRE class=CT><CODE>Dim frm As Form
+DoCmd.OpenForm "Impiegati"
+Set frm = Forms!Impiegati</CODE></PRE>
+
+
+
+<P class=T>Microsoft Access inoltre fornisce un collegamento che consente di aprire la maschera e fare riferimento a un metodo o a una proprietà di tale maschera o a uno dei controlli di tale maschera in un solo passaggio. Viene fatto riferimento al modulo della classe della maschera come mostrato nell'esempio riportato di seguito.</P>
+
+<PRE class=CT><CODE>Form_Impiegati.Visible = True
+Form_Impiegati.Caption = "Nuovi impiegati"</CODE></PRE>
+
+
+
+<P class=T>Quando si esegue questo codice, se non è stata già aperta, viene aperta la maschera Impiegati in visualizzazione Maschera e viene impostata l'etichetta a "Nuovi impiegati". La maschera non è visibile fino a quando la relativa proprietà <A HREF="acproVisible.htm"><B>Visible</B></A> non viene impostata a <B>True</B> (-1). Al termine dell'esecuzione della routine che ha chiamato questo codice, l'istanza della maschera viene distrutta,<font face="Symbol"> </FONT>in altre parole la maschera viene chiusa.</P>
+
+<P class=T>Se si tenta di eseguire questo codice quando la maschera Impiegati è aperta in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura</A>, viene generato un <A HREF="javascript:HelpPopup('actip9.hlp','defRunTimeError');" class="pop">errore di run-time</A>. La maschera deve essere aperta in visualizzazione Maschera o non essere aperta affatto.</P>
+
+<P class=T>Se si utilizza questa sintassi per modificare una proprietà della maschera o uno dei suoi controlli, tale modifica viene perduta quando l'istanza della maschera viene distrutta. Ciò avviene tutte le volte che si modifica un'impostazione di una proprietà di una maschera in visualizzazione Maschera. È infatti necessario modificare la proprietà in visualizzazione Struttura e salvare le modifiche insieme alla maschera.</P>
+
+<P class=RL><B>Creazione di più istanze non predefinite di maschere</B></P>
+
+<P class=T>Se si desidera visualizzare più istanze di una maschera alla volta, è possibile creare più istanze non predefinite della classe di una maschera. È possibile ad esempio che si desideri visualizzare allo stesso tempo i record relativi a un impiegato e quelli relativi al suo superiore. È possibile creare un'istanza della classe della maschera Impiegati per visualizzare i record relativi all'impiegato e un'altra istanza per visualizzare i record relativi al superiore.</P>
+
+<P class=T>Per creare nuove istanze non predefinite della classe di una maschera da Visual Basic, dichiarare una variabile il cui tipo sia il nome del modulo della classe della maschera. Nella dichiarazione della variabile è necessario includere la parola chiave <A HREF="JavaScript:hhobj_7.Click()"><B>New</B></A>. Con il codice seguente ad esempio viene creata una nuova istanza della maschera Impiegati che viene assegnata a una variabile di tipo <B>Form</B>:</P>
+
+<PRE class=CT><CODE>Dim frm As New Form_Impiegati</CODE></PRE>
+
+
+
+<P class=T>Questa istanza non predefinita della maschera non è visibile fino a quando non si imposta esplicitamente la relativa proprietà <B>Visible</B>.</P>
+
+<P class=T>Al termine dell'esecuzione della routine che ha creato questa istanza, l'istanza viene rimossa dalla memoria a meno che non sia stata dichiarata la variabile che la rappresenta come <A HREF="javascript:HelpPopup('actip9.hlp','defModuleLevelVariable');" class="pop">variabile a livello di modulo</A>. Poiché le variabili a livello di modulo conservano i valori fino a quando non vengono reimpostate con il comando <B>Reimposta</B> del menu <B>Esegui</B> o facendo clic sul pulsante <B>Reimposta</B> <A HREF="javascript:HelpPopup('actip9.hlp','accmdRunResetQ');" class="pop"><IMG SRC="images/reset.bmp" BORDER=0></A> sulla barra degli strumenti, se la variabile è stata dichiarata come variabile a livello di modulo, la maschera rimane aperta.</P>
+
+<P class=T>Tutte le proprietà impostate influenzano tale istanza della classe della maschera, ma non vengono salvate con la maschera. Non è possibile creare una nuova istanza della classe della maschera se la maschera viene aperta in visualizzazione Struttura.</P>
+
+<P class=T>Nell'insieme <A HREF="accolForms.htm"><B>Forms</B></A> non è consentito fare riferimento a una istanza non predefinita della classe della maschera in base al nome. L'unico riferimento possibile è quello in base al numero di indice. Poiché è possibile creare più istanze non predefinite e tutte le istanze hanno lo stesso nome, è possibile che più maschere nell'insieme <B>Forms</B> abbiano lo stesso nome e l'unico modo di distinguerle è il numero di indice.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

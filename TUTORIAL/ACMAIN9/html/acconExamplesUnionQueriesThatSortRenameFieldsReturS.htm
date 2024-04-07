@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconExamplesUnionQueriesThatSortRenameFieldsReturS'
+Feature='Queries: SQL'
+Handoff='1'
+SourceFile='CQRYSQL_1.rtf'
+Tnum='188052'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di query di unione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconexamplesunionqueriesthatsortrenamefieldsreturs"></A>Esempi di query di unione</H1>
+
+<P class=T>Le <A HREF="javascript:HelpPopup('actip9.hlp','defUnionQuery');" class="pop">query di unione</A> combinano in un solo campo i campi contenuti in due o più tabelle o query. Di seguito sono riportati alcuni esempi di query di unione di base, di ordinamento di record, di ridenominazione di campi e di restituzione di record duplicati nelle query di unione.</P>
+
+<P class=T>In questo argomento verranno fornite informazioni relative a:</P>
+
+<P class=LBR1><A HREF="#acconexamplesunionqueriesthatsortrenamefieldsreturs_1">Query di unione di base</A></P>
+
+<P class=LBR1><A HREF="#acconexamplesunionqueriesthatsortrenamefieldsreturs_2">Ordinamento in una query di unione</A></P>
+
+<P class=LBR1><A HREF="#acconexamplesunionqueriesthatsortrenamefieldsreturs_3">Ridenominazione di campi in una query di unione</A></P>
+
+<P class=LBR1><A HREF="#acconexamplesunionqueriesthatsortrenamefieldsreturs_4">Restituzione di record duplicati in una query di unione</A></P>
+
+<H2><A NAME="acconexamplesunionqueriesthatsortrenamefieldsreturs_1"></A>Query di unione di base</H2>
+
+<P class=T>La query di unione che segue è costituita da due istruzioni SQL SELECT che restituiscono i nomi delle società e delle città che si trovano in Brasile contenute nelle tabelle Fornitori e Clienti.</P>
+
+<P class=ART><IMG SRC="images/cqrysql2.bmp" ALT="Unione di dati provenienti da due o più tabelle tramite una query di unione" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#acconexamplesunionqueriesthatsortrenamefieldsreturs">inizio</A></P>
+
+<H2><A NAME="acconexamplesunionqueriesthatsortrenamefieldsreturs_2"></A>Ordinamento in una query di unione</H2>
+
+<P class=T>Nella query di unione che segue vengono selezionati tutti i nomi di società e le città contenute nelle tabelle Fornitori e Clienti e i dati vengono ordinati alfabeticamente per città:</P>
+
+<PRE class=CT><CODE>SELECT [NomeSocietà], [Città]
+FROM [Fornitori]
+
+UNION SELECT [NomeSocietà], [Città]
+FROM [Clienti]
+ORDER BY [Città];
+</CODE></PRE>
+
+<P class=rtt>Torna all'<A HREF="#acconexamplesunionqueriesthatsortrenamefieldsreturs">inizio</A></P>
+
+<H2><A NAME="acconexamplesunionqueriesthatsortrenamefieldsreturs_3"></A>Ridenominazione di campi in una query di unione</H2>
+
+<P class=T>Nella query di unione che segue il campo Nome società viene rinominato come "Nome cliente/fornitore" nell'output della query:</P>
+
+<PRE class=CT><CODE>SELECT [NomeSocietà] AS [Nome cliente/fornitore], [Città]
+FROM [Fornitori]
+
+UNION SELECT [NomeSocietà] AS [Nome cliente/fornitore], [Città]
+FROM [Clienti];
+</CODE></PRE>
+
+<P class=rtt>Torna all'<A HREF="#acconexamplesunionqueriesthatsortrenamefieldsreturs">inizio</A></P>
+
+<H2><A NAME="acconexamplesunionqueriesthatsortrenamefieldsreturs_4"></A>Restituzione di record duplicati in una query di unione</H2>
+
+<P class=T>Nella query di unione che segue viene utilizzata l'istruzione UNION ALL per recuperare tutti i record, compresi i record duplicati:</P>
+
+<PRE class=CT><CODE>SELECT [NomeSocietà], [Città]
+FROM [Fornitori]
+
+UNION ALL SELECT [NomeSocietà], [Città]
+FROM [Clienti];</CODE></PRE>
+
+<P class=rtt>Torna all'<A HREF="#acconexamplesunionqueriesthatsortrenamefieldsreturs">inizio</A></P>
+
+
+
+<H2>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="acconSqlQueriesFormsReportsMacrosS.htm">Utilizzare il linguaggio SQL nelle query, nelle maschere, nei report, nelle macro e nei moduli</A></P>
+
+<P class=LBR1><A HREF="acconBringingTogetherDataFromMoreThanOneTableInQueryS.htm">Metodi per collegare dati in una query da più tabelle o query</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconExamplesUnionQueriesThatSortRenameFieldsReturSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbTheFilterReturnsTooFewRecords'
+Feature='Filters: Troubleshooting'
+Handoff='1'
+SourceFile='CFLTTRB.RTF'
+Tnum='189147'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Il filtro restituisce pochi record</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrbthefilterreturnstoofewrecords"></A>Il filtro restituisce pochi record</H1>
+
+<P class=T>Se il filtro restituisce pochi record, provare con la soluzione più adatta alla situazione.</P>
+
+<H2>Filtro in base a maschera</H2>
+
+<UL>
+	<LI class=LB1>Aggiungere criteri alternativi che i record possono soddisfare nella scheda <B>Oppure</B>, nella parte inferiore della finestra.<BR><BR></LI>
+
+	<LI class=LB1>Se nella scheda <B>Cerca</B> o <B>Oppure</B> sono disponibili più criteri, eliminare il valore o l'espressione che causa le limitazioni ai record desiderati.</LI>
+</UL>
+
+<H2>Filtro in base a selezione</H2>
+
+<UL>
+	<LI class=LB1>Rimuovere il filtro e selezionare il valore ricercato, quindi fare clic su <B>Filtro in base a selezione</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrFilterQ');" class="pop"><IMG SRC="images/autofilt.bmp" BORDER=0></A> sulla barra degli strumenti. Se necessario, ripetere l'operazione fino a quando non si ottengono i record desiderati.<BR><BR></LI>
+
+	<LI class=LB1>Se si sta utilizzando Filtro in base a selezione nel campo di una casella combinata che ottiene i valori da un elenco, controllare che la colonna associata della casella combinata sia visualizzata come prima colonna dell'elenco. Diversamente, se come parte dei criteri di un valore è stata selezionata la colonna visualizzata della casella combinata, non è possibile far corrispondere i criteri ai dati della colonna associata. È necessario modificare la casella combinata in modo che la colonna associata sia la prima colonna visualizzata nell'elenco oppure compilare la casella combinata con i valori provenienti da una tabella o da una query.</LI>
+</UL>
+
+<H2>Filtro in base a input</H2>
+
+<UL>
+	<LI class=LB1>Rimuovere il filtro se al momento è applicato, quindi nella casella <B>Filtro per</B> specificare un valore o un'espressione diversa. <BR><BR></LI>
+
+	<LI class=LB1>Passare alla finestra Ordinamento/filtro avanzato per controllare se sono stati specificati più criteri che devono essere soddisfatti dai record o se sono stati specificati i criteri errati.</LI>
+</UL>
+
+<H2>Finestra Ordinamento/filtro avanzato</H2>
+
+<UL>
+	<LI class=LB1>Eliminare i criteri per uno o più campi della griglia di struttura.<BR><BR></LI>
+
+	<LI class=LB1>Aggiungere altre righe <B>Or</B> dove è possibile specificare criteri alternativi.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare espressioni con <B>Or</B> invece che con <B>And</B>.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbTheFilterReturnsTooFewRecordsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

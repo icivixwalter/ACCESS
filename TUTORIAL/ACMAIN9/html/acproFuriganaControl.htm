@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFuriganaControl'
+Feature='acpro'
+Handoff='3'
+SourceFile='feacc1.doc'
+Tnum='255700'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà FuriganaControl</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprofuriganacontrol"></A>FuriganaControl Property</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:See Also">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFuriganaControlC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Example">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFuriganaControlX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Applies To">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFuriganaControlA">
+</OBJECT></P>
+
+
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>You can use the <B>FuriganaControl</B> property to indicate a target control and automatically create furigana for text entered in a text box.</P>
+
+<P class=RL><B>Settings</B></P>
+
+<P class=T>The setting value is the name of the control for entering Furigana.</P>
+
+<P class=T>You can set this property by using the <A HREF="achowSetFormReportControlProperties.htm">property sheet</A>, a <A HREF="achowSettingPropsUsingMacros.htm">macro</A>, or <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=RL><B>Remarks</B></P>
+
+<P class=T>If the <B>FuriganaControl</B> property is set in the control, furigana will automatically be created, and can be displayed in a separately designated control. Only if a control name in the same form is set with the <B>FuriganaControl</B> property will the form run properly when executed. If text is entered in a control other than the designated control name in the same form, an error will occur. The type of furigana characters is determined by the <A HREF="acproIMEMode.htm"><B>IMEMode/KanjiConversionMode</B></A> property settings in the control.</P>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; If you enter text in the target control, the furigana of the newly entered text is automatically added to the end of the designated target control content. Even if the text of the target control is revised or deleted, the characters before the change in the target control will not be revised or deleted. Changing the content of the target control revises the text in the Furigana control as necessary. The <B>FuriganaControl</B> property will not run if text is pasted into the target control.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

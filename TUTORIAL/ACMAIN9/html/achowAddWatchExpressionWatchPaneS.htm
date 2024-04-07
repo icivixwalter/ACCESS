@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowAddWatchExpressionWatchPaneS'
+Feature='Modules: Basics'
+Handoff='3'
+SourceFile='cmodbas.rtf'
+Tnum='186647'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Aggiungere un'espressione di controllo nella finestra Controllo di Visual Basic Editor</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowaddwatchexpressionwatchpanes"></A>Aggiungere un'espressione di controllo nella finestra Controllo di Visual Basic Editor</H1>
+
+<OL>
+	<LI class=LPROC>Aprire una routine nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefCodeWindow');" class="pop">finestra Codice</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Aggiungi Controllo</B> dal menu <B>Debug</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Se è stata già selezionata un'espressione nella finestra Codice, essa viene visualizzata automaticamente nella finestra di dialogo. Se non viene visualizzata alcuna espressione, immettere l'espressione che si desidera valutare. L'espressione può essere una <A HREF="javascript:HelpPopup('actip9.hlp','defVariable');" class="pop">variabile</A>, una <A HREF="javascript:HelpPopup('actip9.hlp','defProperty');" class="pop">proprietà</A>, una chiamata di funzione o qualsiasi altra <A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione </A> valida. 
+<P class=LBR2>È inoltre possibile selezionare un'espressione nella finestra Codice e trascinarla sulla <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefWatchWindow');" class="pop">finestra Controllo</A>, anziché digitarla.
+</LI>
+
+	<LI class=LPROC>Per selezionare l'intervallo per il quale verrà valutata l'espressione, selezionare un <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">modulo</A> e il contesto della <A HREF="javascript:HelpPopup('actip9.hlp','defProcedure');" class="pop">routine</A> nel riquadro <B>Contesto</B>.
+<P class=LNT><B>Nota</B>&nbsp;&nbsp; Selezionare l'area di validità più limitata possibile. La selezione di tutte le routine o di tutti i moduli può rallentare l'esecuzione del codice.
+</LI>
+
+	<LI class=LPROC>Per definire la risposta del sistema all'espressione di controllo, selezionare un'opzione nel riquadro <B>Tipo di controllo</B>.
+<UL>
+	<LI class=LB2>Per visualizzare il valore dell'espressione di controllo, selezionare <B>Espressione di controllo</B>.<BR><BR></LI>
+
+	<LI class=LB2>Per interrompere l'esecuzione se l'espressione risulta uguale a <B>True</B>, selezionare <B>Interrompi con valore uguale a Vero</B>.<BR><BR></LI>
+
+	<LI class=LB2>Per interrompere l'esecuzione se l'espressione cambia, selezionare <B>Interrompi con valore modificato</B>.</LI>
+</UL>
+</LI>
+</OL>
+
+<P class=T>Quando si esegue il codice, la finestra Controllo mostra il valore dell'espressione impostata. Per modificare un'espressione di controllo, selezionare l'espressione nella finestra Controllo, quindi scegliere <B>Modifica controllo</B> dal menu <B>Debug</B>. Per eliminare l'espressione di controllo, scegliere <B>Elimina</B> nella finestra di dialogo <B>Modifica controllo</B>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowAddWatchExpressionWatchPaneSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

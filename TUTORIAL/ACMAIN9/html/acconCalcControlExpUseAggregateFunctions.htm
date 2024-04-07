@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCalcControlExpUseAggregateFunctions'
+Feature='Reports: Expressions'
+Handoff='3'
+SourceFile='crptexp2.doc'
+Tnum='188478'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi dell'utilizzo delle funzioni di aggregazione nelle maschere e nei report</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlAvg">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlCount">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlSum">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconcalccontrolexpuseaggregatefunctions"></A>Esempi dell'utilizzo delle funzioni di aggregazione nelle maschere e nei report</H1>
+
+<P class=T>Nella tabella che segue vengono elencati esempi di espressioni che possono essere utilizzate nei controlli calcolati delle maschere e dei report.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=46%>Espressione</TH>
+<TH width=54%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=46%>=Media([Trasporto])</TD>
+<TD class=TT width=54%>Utilizza la funzione <A HREF="JavaScript:hhobj_1.Click()"><B>Media</B></A> per visualizzare la media dei valori del controllo Trasporto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=46%>=Conteggio([IDOrdine])</TD>
+<TD class=TT width=54%>Utilizza la funzione <A HREF="JavaScript:hhobj_2.Click()"><B>Conteggio</B></A> per visualizzare il numero di record del controllo IDOrdine.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=46%>=Somma([Vendite])</TD>
+<TD class=TT width=54%>Utilizza la funzione <A HREF="JavaScript:hhobj_3.Click()"><B>Somma</B></A> per visualizzare la somma dei valori del controllo Vendite.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=46%>=Somma([Quantità]*[Prezzo])</TD>
+<TD class=TT width=54%>Utilizza la funzione <B>Somma</B> per visualizzare la somma del prodotto dei valori dei controlli Quantità e Prezzo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=46%>=[Vendite]/Somma([Vendite])*100</TD>
+<TD class=TT width=54%>Visualizza la percentuale delle vendite, calcolata dividendo il valore del controllo Vendite per la somma di tutti i valori del controllo Vendite.
+<P class=TT><B>Nota</B>&nbsp;&nbsp; Se la proprietà <B>Formato</B> del controllo è impostata a <B>Percentuale</B>, non includere il *100.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>In un controllo calcolato ogni espressione deve essere preceduta dall'operatore =.<BR><BR></LI>
+
+	<LI class=NLB>Quando si imposta la proprietà <B>Nome</B> di un controllo calcolato, assicurarsi di utilizzare un nome univoco. Non utilizzare il nome di uno dei controlli utilizzati nell'espressione.<BR><BR></LI>
+
+	<LI class=NLB>Non è possibile utilizzare il nome di un controllo in un'espressione che utilizza una <A HREF="javascript:HelpPopup('actip9.hlp','defAggregateFunction');" class="pop">funzione di aggregazione</A>; utilizzare solo i nomi dei campi di una tabella, di una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> o di un'istruzione SQL. Per informazioni sull'utilizzo delle funzioni di aggregazione con i controlli calcolati, fare clic su <A HREF="achowComputeTotalCalculatedControlInReportS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconCalcControlExpUseAggregateFunctionsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

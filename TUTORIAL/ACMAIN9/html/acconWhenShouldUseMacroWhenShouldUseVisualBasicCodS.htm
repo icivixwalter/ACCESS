@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWhenShouldUseMacroWhenShouldUseVisualBasicCodS'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmactsk.rtf'
+Tnum='186884'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare una macro o Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwhenshouldusemacrowhenshouldusevisualbasiccods"></A>Utilizzare una macro o Visual Basic</H1>
+
+<P class=T>In Microsoft Access è possibile eseguire molte attività utilizzando le <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> o l'interfaccia utente. In molti altri programmi di database per le stesse attività è necessaria la programmazione. L'utilizzo di una macro o di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasic');" class="pop">Visual Basic, Applications Edition</A> dipende in genere dall'operazione che si desidera effettuare.</P>
+
+<H2>Quando utilizzare una macro</H2>
+
+<P class=T>Le macro consentono di effettuare con facilità operazioni semplici come aprire e chiudere le maschere, visualizzare e nascondere le barre degli strumenti ed eseguire i report. È possibile unire in modo rapido e semplice gli <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetti di database</A> creati, in quanto è sufficiente ricordare pochi elementi di sintassi. Gli argomenti per ogni azione vengono visualizzati nella parte inferiore della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>.</P>
+
+<P class=T>È inoltre necessario utilizzare le macro per:
+
+<UL>
+	<LI class=LB1>Eseguire assegnazioni di tasti globali.<BR><BR></LI>
+
+	<LI class=LB1>Eseguire un'azione o una serie di azioni quando un database viene aperto per la prima volta. È possibile tuttavia utilizzare la finestra di dialogo <B>Avvio</B> affinché vengano eseguite determinate operazioni quando si apre un database, come aprire una maschera.
+</LI>
+</UL>
+
+<H2>Quando utilizzare Visual Basic</H2>
+
+<P class=T>È necessario utilizzare Visual Basic invece delle macro se si desidera:
+
+<UL>
+	<LI class=LB1>Facilitare la gestione di un database. Dal momento che le macro sono oggetti separati dalle maschere e dai report in cui vengono utilizzate, la gestione di un database contenente più macro che rispondono a eventi delle maschere e dei report può risultare difficile. Le routine evento di Visual Basic vengono invece generate all'interno della definizione della maschera o del report. Se una maschera o un report viene spostato da un database a un altro, vengono spostate anche le routine evento generate al loro interno.<BR><BR></LI>
+
+	<LI class=LB1>Creare funzioni personalizzate. In Access sono incluse molte funzioni incorporate, come la funzione <B>IPmt</B> che consente di calcolare il pagamento degli interessi. È possibile utilizzare queste funzioni per eseguire calcoli, senza dover creare espressioni complesse. Utilizzando Visual Basic è inoltre possibile creare funzioni personalizzate per eseguire calcoli che non sono possibili in un'espressione oppure per sostituire espressioni complesse. Le funzioni create possono inoltre essere utilizzate nelle espressioni per applicare a più oggetti un'operazione comune.<BR><BR></LI>
+
+	<LI class=LB1>Sostituire i messaggi di errore. Quando si verifica un'operazione non prevista durante l'utilizzo di un database e viene visualizzato un messaggio di errore, quest'ultimo può essere poco comprensibile all'utente, soprattutto se non ha familiarità con Access. Utilizzando Visual Basic è possibile rilevare l'errore quando si verifica e visualizzare un messaggio personalizzato oppure eseguire un'azione.<BR><BR></LI>
+
+	<LI class=LB1>Creare o manipolare oggetti. Nella maggior parte dei casi risulta più facile creare e modificare un oggetto in visualizzazione Struttura. In alcune situazioni può essere tuttavia necessario manipolare la definizione di un oggetto nel codice. Utilizzando Visual Basic è possibile manipolare tutti gli oggetti contenuti in un database, così come il database stesso.<BR><BR></LI>
+
+	<LI class=LB1>Eseguire azioni a livello di sistema. È possibile eseguire l'azione EseguiApplicazione in una macro per eseguire un'altra applicazione per Microsoft Windows o per MS-DOS dall'applicazione attiva, ma una macro non consente di eseguire molte altre operazioni al di fuori di Access. Utilizzando Visual Basic è invece possibile controllare se nel sistema esiste un file, utilizzare <A HREF="javascript:HelpPopup('actip9.hlp','defOLEAutomation');" class="pop">Automazione</A> o il <A HREF="javascript:HelpPopup('actip9.hlp','defDDE');" class="pop">DDE</A> per comunicare con altre applicazioni per Windows come Microsoft Excel e chiamare funzioni nelle <A HREF="javascript:HelpPopup('actip9.hlp','defDLL');" class="pop">DLL</A> di Windows.<BR><BR></LI>
+
+	<LI class=LB1>Manipolare i record uno alla volta. È possibile utilizzare Visual Basic per esaminare un record alla volta in un set di record ed eseguire un'operazione su ogni record, mentre le macro utilizzano interi set di record contemporaneamente.<BR><BR></LI>
+
+	<LI class=LB1>Passare argomenti alle routine Visual Basic. Quando viene creata una macro, è possibile impostare gli argomenti per le relative azioni nella parte inferiore della finestra della macro, ma non è possibile modificarli durante l'esecuzione della macro. Con Visual Basic è invece possibile passare argomenti al codice durante l'esecuzione oppure utilizzare le variabili per gli argomenti, operazione che non è possibile effettuare nelle macro. Tutto questo fornisce una grande flessibilità al funzionamento delle routine Visual Basic.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWhenShouldUseMacroWhenShouldUseVisualBasicCodSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

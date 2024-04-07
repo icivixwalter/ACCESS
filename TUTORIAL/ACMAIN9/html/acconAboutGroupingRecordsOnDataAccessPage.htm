@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutGroupingRecordsOnDataAccessPage'
+Feature='Page: Grouping'
+Handoff='3'
+SourceFile='cdapcon.doc'
+Tnum='278692'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sul raggruppamento dei record in una pagina di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutgroupingrecordsondataaccesspage"></A>Informazioni sul raggruppamento dei record in una pagina di accesso ai dati</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconaboutgroupingrecordsondataaccesspage1">Utilità delle pagine di accesso ai dati con gruppi</A></P>
+
+<P class=LBR1><A HREF="#acconaboutgroupingrecordsondataaccesspage2">Pagina di accesso ai dati con gruppi in visualizzazione Struttura</A></P>
+
+<P class=LBR1><A HREF="#acconaboutgroupingrecordsondataaccesspage3">Pagina di accesso ai dati con gruppi in visualizzazione Pagina o in Internet Explorer</A></P>
+
+<H2><A NAME="acconaboutgroupingrecordsondataaccesspage1"></A>Utilità delle pagine di accesso ai dati con gruppi</H2>
+
+<P class=T>Il raggruppamento dei record su una pagina di accesso ai dati è simile all'operazione corrispondente eseguita su un report. È possibile creare una gerarchia in cui i record vengono raggruppati a partire dalle categorie più generali fino ai dettagli più specifici. Le pagine di accesso ai dati presentano comunque alcuni vantaggi rispetto ai report stampati.
+
+<UL>
+	<LI class=LB1>Grazie alla connessione a un database, le pagine associate ai dati di database visualizzano sempre informazioni aggiornate.<BR><BR></LI>
+
+	<LI class=LB1>Le pagine sono interattive, il che consente agli utenti di filtrare, ordinare e visualizzare i record come desiderano.<BR><BR></LI>
+
+	<LI class=LB1>È possibile distribuire elettronicamente le pagine tramite posta elettronica. I destinatari potranno vedere i dati correnti ogni volta che apriranno il messaggio.</LI>
+</UL>
+
+
+
+<P class=T>Nella figura che segue è mostrata la pagina di accesso ai dati di esempio Ordini per data, contenente i totali degli ordini raggruppati per data, così come appare in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPageView');" class="pop">visualizzazione Pagina</A> o in Microsoft Internet Explorer 5 o versioni successive.</P>
+
+<P class=ART><IMG SRC="images/cdapcon1.bmp" ALT="Pagina di accesso ai dati con un gruppo espanso" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutgroupingrecordsondataaccesspage">inizio</A></P>
+
+<H2><A NAME="acconaboutgroupingrecordsondataaccesspage2"></A>Pagina di accesso ai dati con gruppi in visualizzazione Struttura</H2>
+
+<P class=T><B>Corpo</B>&nbsp;&nbsp; Il corpo è la superficie strutturale di base di una pagina di accesso ai dati. In una pagina con gruppi è possibile utilizzare il corpo per visualizzare il testo informativo e le sezioni. In base all'impostazione predefinita, la posizione del testo, delle sezioni e di altri elementi del corpo è relativa, ossia gli elementi si dispongono l'uno dopo l'altro nello stesso ordine che presentano nell'origine HTML. La posizione di un elemento del corpo è determinata dal contenuto che lo precede. In visualizzazione Pagina o in Internet Explorer il contenuto del corpo si adatta alle dimensioni della finestra del browser Web.</P>
+
+<P class=T><B>Sezioni</B>&nbsp;&nbsp; Le sezioni consentono di visualizzare il testo, i dati di un database e le barre degli strumenti. In base all'impostazione predefinita, la posizione dei controlli e degli altri elementi di una sezione è assoluta. Ciò significa che ogni controllo o elemento è fisso rispetto alle coordinate superiore e di sinistra della sezione. I controlli con una posizione assoluta all'interno di una sezione la mantengono anche quando la finestra del browser viene ridimensionata.</P>
+
+<P class=T>Sono disponibili quattro tipi di <A HREF="javascript:HelpPopup('actip9.hlp','defSection');" class="pop">sezioni</A> su una pagina di accesso ai dati con gruppi: intestazione gruppo, piè di pagina gruppo, didascalia e spostamento tra record. È possibile utilizzare solo le sezioni necessarie per un <A HREF="javascript:HelpPopup('actip9.hlp','defGroupLevel');" class="pop">livello di gruppo</A>. 
+
+<UL>
+	<LI class=LB1><B>Intestazione gruppo</B>&nbsp;&nbsp; Questa sezione viene utilizzata principalmente per visualizzare i dati e per calcolare le formule. Per raggruppare i dati, è necessario disporre di almeno due livelli di gruppo. L'intestazione gruppo del livello di gruppo più basso è simile ai dettagli di un report: viene ripetuta finché non vengono stampati tutti i record per il gruppo corrente. <BR><BR></LI>
+
+	<LI class=LB1><B>Piè di pagina gruppo</B>&nbsp;&nbsp; Questa sezione viene utilizzata principalmente per calcolare le formule. È posizionata prima della sezione di spostamento tra record per il livello di gruppo. Il piè di pagina gruppo non è disponibile per il livello di gruppo più basso su una pagina di accesso ai dati.<BR><BR></LI>
+
+	<LI class=LB1><B>Didascalia</B>&nbsp;&nbsp; Questa sezione viene utilizzata per visualizzare le didascalie per le colonne di dati. È posizionata prima dell'intestazione gruppo e viene visualizzata solo quando si espande il livello di gruppo immediatamente superiore. Non è possibile posizionare dei controlli associati nella sezione didascalia.<BR><BR></LI>
+
+	<LI class=LB1><B>Spostamento tra record</B>&nbsp;&nbsp; Questa sezione viene utilizzata per visualizzare il controllo di spostamento tra record per il livello di gruppo. Viene visualizzata dopo la sezione di intestazione gruppo se il livello di gruppo non dispone di piè di pagina e dopo quest'ultimo, se è presente. Non è possibile posizionare dei controlli associati nella sezione di spostamento tra record.</LI>
+</UL>
+
+<P class=T>A ciascun livello di gruppo corrisponde un'<A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A>. Il nome dell'origine record compare sulla barra di ciascuna sezione utilizzata per un livello di gruppo. Nella figura che segue viene mostrata la pagina di accesso ai dati Ordini per data in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura</A>.</P>
+
+<P class=ART><IMG SRC="images/cdapcon2.bmp" ALT="Sezioni utilizzate su una pagina di accesso ai dati con due livelli di gruppo" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutgroupingrecordsondataaccesspage">inizio</A></P>
+
+<H2><A NAME="acconaboutgroupingrecordsondataaccesspage3"></A>Pagina di accesso ai dati con gruppi in visualizzazione Pagina o in Internet Explorer</H2>
+
+<P class=T>Nella figura che segue viene mostrato come appaiono le sezioni sulla stessa pagina di accesso ai dati aperta in visualizzazione Pagina oppure in Internet Explorer 5 o versioni successive. È possibile specificare il numero di record da visualizzare sulla pagina per ciascun livello di gruppo impostando la proprietà <B>Dimensione pagina dati</B> nella finestra <B>Ordinamento e raggruppamento</B> nella visualizzazione Struttura della pagina. Nella pagina di esempio la proprietà <B>Dimensione pagina dati</B> è impostata a <B>2</B> per il livello di gruppo TotaliOrdine-DataOrdine e a <B>Tutto</B> per il livello di gruppo TotaliOrdine.</P>
+
+<P class=ART><IMG SRC="images/cdapcon3.bmp" ALT="Pagina di accesso ai dati con gruppi con i record di un gruppo espansi" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutgroupingrecordsondataaccesspage">inizio</A></P>
+
+<H2>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="acdecGroupRecordsOnDataAccessPage.htm">Raggruppare record in una pagina di accesso ai dati</A></P>
+
+<P class=LBR1><A HREF="acconAboutGroupingRecordsOnIntervalsOfAutonumberedCurrencyOrNumericValuesOnDataAccessPage.htm">Informazioni sul raggruppamento dei record in base a intervalli di valori numerati automaticamente, numerici o di valuta</A></P>
+
+<P class=LBR1><A HREF="acconAboutGroupingRecordsOnIntervalsOfDateOrTimeValuesOnDataAccessPage.htm">Informazioni sul raggruppamento dei record in base a intervalli di valori di data o ora</A></P>
+
+<P class=LBR1><A HREF="acconAboutGroupingRecordsOnFirstNCharactersInFieldOnDataAccessPage.htm">Informazioni sul raggruppamento dei record in base ai primi <I>n</I> caratteri di un valore di testo</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutGroupingRecordsOnDataAccessPageW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

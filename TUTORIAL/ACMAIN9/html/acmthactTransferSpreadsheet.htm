@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactTransferSpreadsheet'
+Feature='acmth'
+Handoff='2'
+SourceFile='amthact.doc'
+Tnum='186520'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo TransferSpreadsheet</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproActiveCon">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjODBRec">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthacttransferspreadsheet"></A>Metodo TransferSpreadsheet</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferSpreadsheetC;damthCreateTableDef;damthRefreshLink;daobjTableDef;daproConnect">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferSpreadsheetX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferSpreadsheetA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>TransferSpreadsheet</B> esegue l'azione <A HREF="acactTransferSpreadsheet.htm">TrasferisciFoglioCalcolo</A> in Visual Basic. Per ulteriori informazioni sul funzionamento dell'azione e dei relativi argomenti, vedere l'argomento della Guida in linea relativo all'azione.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DoCmd.TransferSpreadsheet</B> [<I>tipotrasferimento</I>][, <I>tipofogliocalcolo</I>], <I>nometabella</I>, <I>nomefile</I>[, <I>nomicampo</I>][, <I>intervallo</I>]</P>
+
+
+
+<P class=T>Il metodo <B>TransferSpreadsheet</B> utilizza gli argomenti riportati di seguito </P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=23%>Argomento</TH>
+<TH width=77%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>tipotrasferimento</I></TD>
+<TD class=TT width=77%>Una delle seguenti <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%><B>acImport</B> (impostazione predefinita)<BR>
+<B>acExport</B><BR>
+<B>acLink</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%>Se si omette questo argomento, viene utilizzata la costante predefinita (<B>acImport</B>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>tipofogliocalcolo</I></TD>
+<TD class=TT width=77%>Una delle seguenti costanti intrinseche o l'impostazione numerica equivalente:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%>0  <B>acSpreadsheetTypeExcel3</B> (impostazione predefinita)<BR>
+6  <B>acSpreadsheetTypeExcel4</B><BR>
+5  <B>acSpreadsheetTypeExcel5</B><BR>
+5  <B>acSpreadsheetTypeExcel7</B><BR>
+8  <B>acSpreadsheetTypeExcel8</B><BR>
+8  <B>acSpreadsheetTypeExcel9</B><BR>
+2  <B>acSpreadsheetTypeLotusWK1</B><BR>
+3  <B>acSpreadsheetTypeLotusWK3</B><BR>
+7  <B>acSpreadsheetTypeLotusWK4</B><BR>
+4  <B>acSpreadsheetTypeLotusWJ2</B> — solo per la versione giapponese</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%><B>Nota</B>&nbsp;&nbsp; È possibile collegarsi a dati contenuti in file di fogli di calcolo di Lotus 1-2-3 ma tali dati risultano di sola lettura in Microsoft Access. È possibile importare e collegare in sola lettura dati di file di Lotus con estensione WK4 ma non è possibile esportare i dati di Microsoft Access nel formato di quel foglio di calcolo. Inoltre, utilizzando questo metodo, Microsoft Access non supporta più l'importazione, l'esportazione o il collegamento di dati da fogli di calcolo di Lotus.WKS o Microsoft Excel versione 2.0.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%>Se si omette questo argomento viene utilizzata la costante predefinita (acSpreadsheetTypeExcel8).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>nometabella</I></TD>
+<TD class=TT width=77%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che è il nome della tabella di Microsoft Access nella quale si desidera importare, dalla quale si desidera esportare o alla quale si desidera collegare dati di foglio di calcolo oppure della <A HREF="javascript:HelpPopup('actip9.hlp','defSelectQuery');" class="pop">query di selezione</A> di Microsoft Access i cui risultati si desidera esportare in un foglio di calcolo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>nomefile</I></TD>
+<TD class=TT width=77%>Espressione stringa che è il nome di file e il percorso del foglio di calcolo dal quale si desidera importare, nel quale si desidera esportare o al quale si desidera collegare dati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>nomicampo</I></TD>
+<TD class=TT width=77%>Utilizzare True (-1) per utilizzare la prima riga del foglio di calcolo come nomi di campo nell'importazione o nel collegamento. Utilizzare False (0) se si desidera che i dati della prima riga del foglio di calcolo siano considerati come dati normali. Se si omette questo argomento, viene utilizzata l'impostazione predefinita (False).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%>Quando si esportano in un foglio di calcolo i dati di una tabella o di una query di selezione di Microsoft Access, i nomi dei campi vengono inseriti nella prima riga del foglio di calcolo, indipendentemente dal valore attribuito a questo argomento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>intervallo</I></TD>
+<TD class=TT width=77%>Espressione stringa che è un intervallo valido di celle o il nome di un intervallo del foglio di calcolo. Questo argomento si applica solo all'importazione. Omettere questo argomento per importare l'intero foglio di calcolo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%>Quando si esporta in un foglio di calcolo è necessario omettere questo argomento. Se si immette un intervallo l'importazione non viene eseguita.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile omettere un argomento facoltativo all'interno della sintassi, ma è necessario includere la virgola dell'argomento stesso. Se si omette un argomento finale, non utilizzare la virgola dopo l'ultimo argomento specificato.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È anche possibile utilizzare gli <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti ADO</A> per creare un collegamento tramite la proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>ActiveConnection</B></A> per l'oggetto <A HREF="JavaScript:hhobj_5.Click()"><B>Recordset</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

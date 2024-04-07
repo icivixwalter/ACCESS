@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='3' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFeatureInstall'
+Feature='acpro'
+Handoff='2'
+SourceFile='acproV9.doc'
+Tnum='279605'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà FeatureInstall</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprofeatureinstall"></A>Proprietà FeatureInstall</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFeatureInstall_C">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFeatureInstall_X">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFeatureInstall_A;acobjApplication">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>FeatureInstall</B> per specificare o determinare il modo in cui Microsoft Access gestisce le chiamate ai metodi e alle proprietà che richiedono funzioni non ancora installate.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>FeatureInstall</B> utilizza una delle costanti <B>msoFeatureInstall</B> riportate di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=46%>Costante</TH>
+<TH width=12%>Valore</TH>
+<TH width=42%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=T width=46%><B>msoFeatureInstallNone</B></TD>
+<TD class=TT width=12%>0</TD>
+<TD class=TT width=42%>Impostazione predefinita. Quando vengono chiamate funzioni non installate, si verifica un errore di automazione in fase di esecuzione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=46%><B>msoFeatureInstallOnDemand</B></TD>
+<TD class=TT width=12%>1</TD>
+<TD class=TT width=42%>Viene chiesto di installare le nuove funzioni.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=T width=46%><B>msoFeatureInstallOnDemandWithUI</B></TD>
+<TD class=TT width=12%>2</TD>
+<TD class=TT width=42%>La funzione viene installata automaticamente e durante l'installazione viene visualizzato un misuratore di avanzamento. Non viene chiesto di installare le nuove funzioni.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando il codice VBA fa riferimento a un oggetto che non è installato, viene effettuato il tentativo di installare la funzione richiesta. La proprietà <B>FeatureInstall</B> viene utilizzata per controllare cosa accade quando si fa riferimento a un oggetto non installato. Quando per questa proprietà viene selezionata l'impostazione predefinita, qualsiasi tentativo di utilizzare un oggetto non installato fa sì che si tenti di installare la funzione richiesta. In alcune circostanze, ciò può richiedere del tempo e può sembrare che la macchina si sia bloccata rispondendo ad altri comandi.</P>
+
+<P class=T>È possibile impostare la proprietà <B>FeatureInstall</B> a <B>msoFeatureInstallOnDemandWithUI</B> in modo che venga visualizzato cosa accade durante l'installazione della funzione. È possibile impostare la proprietà <B>FeatureInstall</B> a <B>msoFeatureInstallNone</B> se si desidera bloccare l'errore che viene restituito e visualizzare una finestra di dialogo personalizzata o intraprendere altre azioni personalizzate.</P>
+
+<P class=T>Se la proprietà <A HREF="acproUserControl.htm"><B>UserControl</B></A> è impostata a <B>False</B>, non verrà chiesto di installare nuove funzioni anche se la proprietà <B>FeatureInstall</B> è impostata a <B>msoFeatureInstallOnDemand</B>. Se la proprietà <B>UserControl</B> è impostata a <B>True</B>, verrà visualizzato un indicatore di avanzamento dell'installazione se la proprietà <B>FeatureInstall</B> è installata a <B>msoFeatureInstallOnDemand</B>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acproFeatureInstallW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+
+

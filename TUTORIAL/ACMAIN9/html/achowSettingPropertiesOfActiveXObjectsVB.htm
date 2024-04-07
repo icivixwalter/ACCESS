@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSettingPropertiesOfActiveXObjectsVB'
+Feature='accon'
+Handoff='2'
+SourceFile='alanmsc2.doc'
+Tnum='254772'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostare le proprietà degli oggetti ADO (ActiveX Data Object) in Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjField">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdcolProperties">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproType">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="adobjTable">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowsettingpropertiesofactivexobjectsvb"></A>Impostare le proprietà degli oggetti ADO (ActiveX Data Object) in Visual Basic</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropertiesOfActiveXDataObjectsVBC;daconMSJetDatabaseEngine25">
+</OBJECT></P>
+
+
+
+<P class=T>Gli <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefADOActiveXDataObjects
+');" class="pop">oggetti ADO (ActiveX Data Object)</a> consentono di gestire la struttura del proprio database e i dati in esso contenuti da Visual Basic. Molti oggetti ADO corrispondono a oggetti visualizzati nel proprio database. Un oggetto <A HREF="JavaScript:hhobj_5.Click()"><B>Table</B></A> ad esempio corrisponde a una tabella di Microsoft Access, mentre un oggetto <A HREF="JavaScript:hhobj_2.Click()"><B>Field</B></A> corrisponde a un campo di una tabella.</P>
+
+<P class=T>La maggior parte delle proprietà che è possibile impostare per gli oggetti ADO è rappresentata da proprietà ADO. Tali proprietà vengono definite dal <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A> e possono essere impostate allo stesso modo in qualunque applicazione che includa questo modulo di gestione. Alcune delle proprietà che è possibile impostare per gli oggetti ADO vengono definite da Microsoft Access e non sono riconosciute automaticamente dal modulo di gestione di database Microsoft Jet. La modalità di impostazione delle proprietà per gli oggetti ADO varia a seconda che queste vengano definite dal modulo di gestione di database Microsoft Jet oppure da Microsoft Access.</P>
+
+<P class=RL><B>Impostazione di proprietà ADO per oggetti ADO</B></P>
+
+<P class=T>Per impostare una proprietà definita dal modulo di gestione di database Microsoft Jet, è necessario fare riferimento all'oggetto nella gerarchia ADO. Il modo più semplice e veloce per effettuare questa operazione consiste nel creare variabili di oggetto che rappresentino i diversi oggetti necessari per lavorare, facendo riferimento alle variabili dell'oggetto nei passaggi successivi del codice. Con il codice seguente ad esempio viene creato un nuovo oggetto <B>TableDef</B> per cui viene impostata la proprietà <B>Name</B>:</P>
+
+<PRE class=CT><CODE>Dim tbl As New ADOX.Table
+Dim cnn As ADODB.Connection
+Set cnn = CurrentProject.Connection
+tbl.Name = "Contatti"</CODE></PRE>
+
+
+
+<P class=RL><B>Impostazione di proprietà Microsoft Access per oggetti ADO</B></P>
+
+<P class=T>Quando si imposta una proprietà definita da Microsoft Access applicandola a un oggetto ADO, il modulo di gestione di database Microsoft Jet non riconosce automaticamente la proprietà come valida. Quando si imposta la proprietà per la prima volta, è necessario innanzitutto crearla e accodarla all'insieme <A HREF="JavaScript:hhobj_3.Click()"><B>Properties</B></A> dell'oggetto a cui viene applicata. Una volta aggiunta la proprietà nell'insieme <B>Properties</B>, sarà possibile impostarla come qualsiasi proprietà ADO.</P>
+
+<P class=T>Se la proprietà viene impostata per la prima volta nell'interfaccia utente, verrà aggiunta automaticamente nell'insieme <B>Properties</B> da cui sarà possibile impostarla normalmente.</P>
+
+<P class=T>Quando vengono scritte procedure per l'impostazione di proprietà definite da Microsoft Access, è necessario includere codice di gestione degli errori che verifichi che le proprietà in corso di impostazione siano già esistenti nell'insieme <B>Properties</B>. Per ulteriori informazioni, vedere l'argomento della Guida in linea sul metodo <A HREF="acmthAddAOP.htm"><B>Add</B></A> o sulla singola proprietà.</P>
+
+<P class=T>Tenere presente che quando si crea la proprietà, è necessario specificare in modo corretto la relativa proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>Type</B></A> prima di accodarla all'insieme <B>Properties</B>. Per determinare la proprietà <B>Type</B>, è possibile fare riferimento alle informazioni fornite nella sezione sulle impostazioni dell'argomento della Guida in linea relativo alla singola proprietà desiderata. Nella tabella che segue vengono fornite alcune istruzioni per la determinazione delle impostazioni della proprietà <B>Type</B>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=41%>Se la proprietà è impostata a</TH>
+<TH width=59%>L'impostazione della proprietà Type dovrà essere</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Una stringa</TD>
+<TD class=TT width=59%><B>adLongVarWChar</B> o <B>adVarWChar</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%><B>True</B>/<B>False</B></TD>
+<TD class=TT width=59%><B>adBoolean</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Un numero intero</TD>
+<TD class=TT width=59%><B>adInteger</B></TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nella tabella che segue vengono elencate alcune proprietà definite da Microsoft Access valide per oggetti ADO.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=37%>Oggetto ADO</TH>
+<TH width=63%>Proprietà definite da Microsoft Access</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>Connection</B></TD>
+<TD class=TT width=63%><B>AppTitle</B>, <B>AppIcon</B>, <B>StartupShowDBWindow</B>, <B>StartupShowStatusBar</B>, <B>AllowShortcutMenus</B>, <B>AllowFullMenus</B>, <B>AllowBuiltInToolbars</B>, <B>AllowToolbarChanges</B>, <B>AllowBreakIntoCode</B>, <B>AllowSpecialKeys</B>, <B>Replicable</B>, <B>ReplicationConflictFunction</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>Table</B></TD>
+<TD class=TT width=63%><B>DatasheetBackColor</B>, <B>DatasheetCellsEffect</B>, <B>DatasheetFontHeight</B>, <B>DatasheetFontItalic</B>, <B>DatasheetFontName</B>, <B>DatasheetFontUnderline</B>, <B>DatasheetFontWeight</B>, <B>DatasheetForeColor</B>, <B>DatasheetGridlinesBehavior</B>, <B>DatasheetGridlinesColor</B>, <B>Description</B>, <B>FrozenColumns</B>, <B>RowHeight</B>, <B>ShowGrid</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>QueryDef</B></TD>
+<TD class=TT width=63%><B>DatasheetBackColor</B>, <B>DatasheetCellsEffect</B>, <B>DatasheetFontHeight</B>, <B>DatasheetFontItalic</B>, <B>DatasheetFontName</B>, <B>DatasheetFontUnderline</B>, <B>DatasheetFontWeight</B>, <B>DatasheetForeColor</B>, <B>DatasheetGridlinesBehavior</B>, <B>DatasheetGridlinesColor</B>, <B>Description</B>, <B>FailOnError</B>, <B>FrozenColumns</B>, <B>LogMessages</B>, <B>MaxRecords</B>, <B>RecordLocks</B>, <B>RowHeight</B>, <B>ShowGrid, UseTransaction</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%><B>Field</B></TD>
+<TD class=TT width=63%><B>Caption</B>, <B>ColumnHidden</B>, <B>ColumnOrder</B>, <B>ColumnWidth</B>, <B>DecimalPlaces</B>, <B>Description</B>, <B>Format</B>, <B>InputMask</B></TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

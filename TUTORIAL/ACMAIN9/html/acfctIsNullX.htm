@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctIsNullX'
+Feature='acfct'
+Handoff='2'
+SourceFile='acobisx.rtf'
+Tnum='234464'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione IsNull</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctisnullx"></A>Esempio di funzione IsNull</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la funzione <B>IsNull</B> per determinare se il valore di un controllo è <B>Null</B>. In caso affermativo un messaggio richiede all'utente di immettere i dati. Se il valore non è <B>Null</B>, un messaggio visualizza il valore del controllo.</P>
+
+<PRE class=CT><CODE>Sub ValoreControllo (ctlTesto As Control)
+    Dim strMsg As String
+
+    ' Verifica che il controllo sia una casella di testo
+    If ctlTesto.ControlType = acTextBox Then
+        ' Se il valore del controllo è Null, richiede dati.
+        If <B>IsNull(</B>ctlTesto.Value<B>)</B> Then
+            strMsg = "Nessun dato nel campo '" &amp; ctlTesto.Name _
+                    &amp; "'." &amp; vbCrLf &amp; "Immettere i dati per " _
+                    &amp; "il campo."
+                If MsgBox(strMsg, vbQuestion) = vbOK Then
+                    Exit Sub
+                End If
+        ' Se il valore non è Null, visualizza il valore.
+        Else
+            MsgBox (ctlTesto.Value)
+        End If
+    End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

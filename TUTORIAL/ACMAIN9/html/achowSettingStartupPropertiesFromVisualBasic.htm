@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSettingStartupPropertiesFromVisualBasic'
+Feature='accon'
+Handoff='2'
+SourceFile='alanmsc2.doc'
+Tnum='188072'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostare le proprietà di avvio da Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dacolProperty">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowsettingstartuppropertiesfromvisualbasic"></A>Impostare le proprietà di avvio da Visual Basic</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingStartupPropertiesFromVisualBasicC">
+</OBJECT></P>
+
+
+
+<P class=T>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (mdb) le proprietà di avvio sono proprietà di un oggetto <A HREF="JavaScript:hhobj_2.Click()"><B>Database</B></A>. Un oggetto <B>Database</B> è un <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetto DAO</A> fornito dal <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">gestore di database Microsoft Jet</A>, ma poiché le proprietà di avvio vengono definite da Microsoft Access, queste non vengono riconosciute automaticamente dal gestore di database Jet. Se una proprietà di avvio non è stata impostata in precedenza, è necessario crearla e aggiungerla all'insieme <A HREF="JavaScript:hhobj_3.Click()"><B>Properties</B></A> dell'oggetto <B>Database</B>.</P>
+
+<P class=T>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (adp) le proprietà di avvio sono proprietà di un oggetto <A HREF="acobjCurrentProject.htm"><B>CurrentProject</B></A> e, come l'oggetto <B>Database</B> in un database di Access (mdb), non vengono riconosciute automaticamente dal gestore di database Microsoft Jet. Se una proprietà di avvio non è stata impostata in precedenza, è necessario crearla e aggiungerla all'insieme <A HREF="accolAccessObjectProperties.htm"><B>AccessObjectProperties</B></A> dell'oggetto <B>CurrentProject</B>. </P>
+
+<P class=T>Quando si impostano le proprietà di avvio da Visual Basic, è opportuno includere il codice di gestione degli errori per verificare la presenza della proprietà nell'insieme <B>Properties</B> o nell'insieme <B>AccessObjectProperties</B>. Per ulteriori informazioni sull'impostazione delle proprietà definite da Microsoft Access, vedere <A HREF="achowSettingPropertiesOfDataAccessObjectsInVisualBasic.htm">Impostare le proprietà di oggetti DAO in Visual Basic</A> o <A HREF="achowSettingPropertiesOfActiveXObjectsVB.htm">Impostare le proprietà di oggetti ADO (ActiveX Data Object) in Visual Basic</A>.</P>
+
+<P class=T>I nomi delle proprietà di avvio sono diversi dal testo contenuto nella finestra di dialogo <B>Avvio</B> che viene visualizzata scegliendo <B>Avvio</B> dal menu <B>Strumenti</B>. La tabella riportata di seguito indica il nome di ciascuna proprietà di avvio come viene utilizzata nel codice Visual Basic.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=53%>Testo nella finestra di dialogo Avvio</TH>
+<TH width=47%>Nome proprietà</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Titolo applicazione</TD>
+<TD class=TT width=47%><A HREF="acproAppTitle.htm"><B>AppTitle</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Icona applicazione</TD>
+<TD class=TT width=47%><A HREF="acproAppIcon.htm"><B>AppIcon</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Visualizza maschera/pagina</TD>
+<TD class=TT width=47%><A HREF="acproStartupForm.htm"><B>StartupForm</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Visualizza finestra database</TD>
+<TD class=TT width=47%><A HREF="acproStartupShowDBWindow.htm"><B>StartupShowDBWindow</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Visualizza barra di stato</TD>
+<TD class=TT width=47%><A HREF="acproStartupShowStatusBar.htm"><B>StartupShowStatusBar</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Barra dei menu</TD>
+<TD class=TT width=47%><A HREF="acproStartupMenuBar.htm"><B>StartupMenuBar</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Barra dei menu di scelta rapida</TD>
+<TD class=TT width=47%><A HREF="acproStartupShortcutMenuBar.htm"><B>StartupShortcutMenuBar</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Menu completi</TD>
+<TD class=TT width=47%><A HREF="acproAllowFullMenus.htm"><B>AllowFullMenus</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Menu di scelta rapida predefiniti</TD>
+<TD class=TT width=47%><A HREF="acproAllowShortcutMenus.htm"><B>AllowShortcutMenus</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Barre degli strumenti incorporate</TD>
+<TD class=TT width=47%><A HREF="acproAllowBuiltInToolbars.htm"><B>AllowBuiltInToolbars</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Consenti modifiche a barre degli strumenti/menu</TD>
+<TD class=TT width=47%><A HREF="acproAllowToolbarChanges.htm"><B>AllowToolbarChanges</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Visualizzazione codice dopo errore</TD>
+<TD class=TT width=47%><A HREF="acproAllowBreakIntoCode.htm"><B>AllowBreakIntoCode</B></A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=53%>Usa tasti speciali Access</TD>
+<TD class=TT width=47%><A HREF="acproAllowSpecialKeys.htm"><B>AllowSpecialKeys</B></A></TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

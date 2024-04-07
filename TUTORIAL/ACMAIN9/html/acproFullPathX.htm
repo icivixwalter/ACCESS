@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFullPathX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprov8_1a.rtf'
+Tnum='186768'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà FullPath, GUID, IsBroken, Major, Minor</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprofullpathx"></A>Esempio di proprietà FullPath, GUID, IsBroken, Major, Minor</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come visualizzare il valore delle proprietà <B>FullPath</B>, <B>GUID, IsBroken, Major</B> e <B>Minor</B> per ciascun oggetto <B>Reference</B> contenuto nell'insieme <B>References</B>.</P>
+
+<PRE class=CT><CODE>Sub ProprietàDiRiferimento()
+&nbsp;&nbsp;&nbsp; Dim ref As Reference
+
+&nbsp;&nbsp;&nbsp; ' Enumera l'insieme References.
+&nbsp;&nbsp;&nbsp; For Each ref In References
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Controlla la proprietà IsBroken.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If ref.<B>IsBroken</B> = False Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Nome: ", ref.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Percorso intero: ", ref.<B>FullPath</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Versione: ", ref.<B>Major</B> &amp; "." &amp; ref.<B>Minor</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "GUID di riferimenti interrotti:"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print ref.<B>GUID</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EndIf
+&nbsp;&nbsp;&nbsp; Next ref
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

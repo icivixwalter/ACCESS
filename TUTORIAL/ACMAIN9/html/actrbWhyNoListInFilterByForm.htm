@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbWhyNoListInFilterByForm'
+Feature='Filters: Troubleshooting'
+Handoff='1'
+SourceFile='CFLTTRB.RTF'
+Tnum='188310'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Nella finestra Filtro in base a maschera i record nei campi indicizzati e non indicizzati vengono letti diversamente</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrbwhynolistinfilterbyform"></A>Nella finestra Filtro in base a maschera i record nei campi indicizzati e non indicizzati vengono letti diversamente</H1>
+
+<P class=T>La quantità di record letti varia a seconda che il campo sia indicizzato o meno. Se il campo è indicizzato non vengono letti tutti i valori, ma solo quelli univoci. Se il campo non è indicizzato, invece, vengono letti tutti i valori. Se il numero di record letti è maggiore del numero massimo che è consentito visualizzare, determinato dall'impostazione di <B>Non visualizzare elenchi con numero di record superiore a</B>, i valori di quel campo non verranno visualizzati nell'elenco. È necessario, quindi,  modificare l'impostazione per tale opzione specificando un numero maggiore o uguale al numero di record presenti nel campo non indicizzato con più valori, dato che nei campi non indicizzati vengono letti tutti i valori e non solo quelli univoci.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Quando l'elenco di un campo può essere visualizzato, verranno mostrati solo i valori univoci, anche per un campo non indicizzato.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbWhyNoListInFilterByFormW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

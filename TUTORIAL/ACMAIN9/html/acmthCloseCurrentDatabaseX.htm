@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCloseCurrentDatabaseX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv3_1a.rtf'
+Tnum='186547'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CloseCurrentDatabase</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthclosecurrentdatabasex"></A>Esempio di metodo CloseCurrentDatabase</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene aperto un database di Microsoft Access da un'altra applicazione mediante automazione, viene creata e salvata una nuova maschera, quindi viene chiuso il database.</P>
+
+<P class=T>È possibile immettere questo codice in un modulo di Visual Basic in qualsiasi applicazione che funzioni come componente COM. È possibile, ad esempio, eseguire il codice da Microsoft Excel o da Microsoft Visual Basic.</P>
+
+<P class=T>Quando la variabile che punta all'oggetto <B>Application</B> non rientra nell'area di validità, viene anche chiusa l'istanza di Microsoft Access che la variabile rappresenta. Si consiglia, quindi, di dichiarare tale variabile a livello di modulo.</P>
+
+<PRE class=CT><CODE>' Nella sezione Dichiarazioni del modulo immettere quanto segue.
+Dim appAccess As Access.Application
+
+Sub CreaMaschera()
+&nbsp;&nbsp;&nbsp; Const strConPathToSamples = "C:\Programmi\Microsoft Office\Office\Esempi\"
+
+&nbsp;&nbsp;&nbsp; Dim frm As Form, strDB As String
+
+&nbsp;&nbsp;&nbsp; ' Inizializza la stringa al percorso del database.
+&nbsp;&nbsp;&nbsp; strDB = strConPathToSamples &amp; "Northwind.mdb"
+&nbsp;&nbsp;&nbsp; ' Crea una nuova istanza di Microsoft Access.
+&nbsp;&nbsp;&nbsp; Set appAccess = CreateObject("Access.Application.9")
+&nbsp;&nbsp;&nbsp; ' Apre il database nella finestra di Microsoft Access.
+&nbsp;&nbsp;&nbsp; appAccess.OpenCurrentDatabase strDB
+&nbsp;&nbsp;&nbsp; ' Crea una nuova maschera.
+&nbsp;&nbsp;&nbsp; Set frm = appAccess.CreateForm
+&nbsp;&nbsp;&nbsp; ' Salva la nuova maschera.
+&nbsp;&nbsp;&nbsp; appAccess.DoCmd.Save , "NuovaMaschera1"
+&nbsp;&nbsp;&nbsp; ' Chiude il database corrente aperto.
+&nbsp;&nbsp;&nbsp; appAccess.<B>CloseCurrentDatabase</B>
+&nbsp;&nbsp;&nbsp; Set AppAccess = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

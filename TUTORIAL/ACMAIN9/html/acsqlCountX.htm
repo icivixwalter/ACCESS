@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlCountX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acdsqlx1_1.rtf'
+Tnum='234367'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Conteggio</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlcountx"></A>Esempio di funzione Conteggio</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si suppone di disporre di una tabella Ordini contenente un campo PaeseDestinatario. È possibile utilizzare la funzione <B>Conteggio</B> per calcolare il numero di ordini inviati nel Regno Unito. In visualizzazione SQL della finestra Query, immettere l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>SELECT <B>Conteggio(</B>[PaeseDestinatario]<B>)</B> AS [OrdiniUK] FROM Ordini
+WHERE [PaeseDestinatario] = 'UK';</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea un controllo calcolato che visualizza il numero di ordini contenuti nella stessa tabella Ordini. Aprire una nuova maschera ed impostare a Ordini la relativa proprietà <B>Origine record</B>. Immettere la seguente espressione nella proprietà <B>Origine controllo</B> di una casella di testo sulla maschera. Per applicare una condizione che limiti il conteggio solo ad alcuni record, ad esempio ai record relativi ad ordini inviati nel Regno Unito, impostare la proprietà <B>Filtro</B> della maschera.</P>
+
+<PRE class=CT><CODE>=<B>Conteggio(</B>[PaeseDestinatario]<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

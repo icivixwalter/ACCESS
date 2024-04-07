@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCopyQueryDefX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234365'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CopyQueryDef (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcopyquerydefx"></A>Esempio di metodo CopyQueryDef (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzato il metodo <B>CopyQueryDef</B> per restituire una copia di un oggetto <B>QueryDef</B> che rappresenta una query Fatture e viene stampata la proprietà <B>SQL</B> di tale oggetto <B>QueryDef</B>.</P>
+
+<PRE class=CT><CODE>Sub RestituisciCopiaQueryDef()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim qdfOriginal As QueryDef, qdfCopy As QueryDef
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento alla query Fatture.
+&nbsp;&nbsp;&nbsp; Set qdfOriginal = dbs.QueryDefs!Fatture
+&nbsp;&nbsp;&nbsp; ' Apre oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rst = qdfOriginal.OpenRecordset
+&nbsp;&nbsp;&nbsp; ' Restituisce la copia dell'oggetto QueryDef originale.
+&nbsp;&nbsp;&nbsp; Set qdfCopy = rst.<B>CopyQueryDef</B>
+&nbsp;&nbsp;&nbsp; ' Stampa il valore della proprietà SQL per la copia.
+&nbsp;&nbsp;&nbsp; Debug.Print qdfCopy.SQL
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

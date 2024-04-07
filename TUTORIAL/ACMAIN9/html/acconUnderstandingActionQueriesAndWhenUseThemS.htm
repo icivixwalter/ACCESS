@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconUnderstandingActionQueriesAndWhenUseThemS'
+Feature='Queries: Basics'
+Handoff='1'
+SourceFile='CQRYNEW_1.rtf'
+Tnum='188411'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Definizione e funzionamento delle query di comando</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconunderstandingactionqueriesandwhenusethems"></A>Definizione e funzionamento delle query di comando</H1>
+
+<P class=T>Una query di comando apporta modifiche a molti record con una sola operazione. Esistono quattro tipi di query di comando: di eliminazione, di aggiornamento, di accodamento e di creazione tabella.</P>
+
+<P class=T>In questa sezione verranno forniti esempi di:</P>
+
+<P class=LBR1><A HREF="#acconunderstandingactionqueriesandwhenusethems_1">Query di eliminazione</A></P>
+
+<P class=LBR1><A HREF="#acconunderstandingactionqueriesandwhenusethems_2">Query di aggiornamento</A></P>
+
+<P class=LBR1><A HREF="#acconunderstandingactionqueriesandwhenusethems_3">Query di accodamento</A></P>
+
+<P class=LBR1><A HREF="#acconunderstandingactionqueriesandwhenusethems_4">Query di creazione tabella</A></P>
+
+<H2><A NAME="acconunderstandingactionqueriesandwhenusethems_1"></A>Query di eliminazione</H2>
+
+<P class=T>Questo tipo di query elimina un gruppo di record da una o più tabelle. È possibile ad esempio utilizzare una query di eliminazione per rimuovere i prodotti di cui è stata interrotta la produzione o per i quali non esistono ordini. Con le query di eliminazione vengono eliminati sempre record interi, non solo determinati campi al loro interno.</P>
+
+<P class=T>Per informazioni sulla creazione di query di eliminazione, fare clic su <A HREF="acdecDecideMethodUseDeleteGroupRecordsQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconunderstandingactionqueriesandwhenusethems">inizio</A></P>
+
+<H2><A NAME="acconunderstandingactionqueriesandwhenusethems_2"></A>Query di aggiornamento</H2>
+
+<P class=T>Questo tipo di query apporta modifiche globali a un gruppo di record in una o più tabelle. È possibile ad esempio aumentare i prezzi del 10% per tutti i prodotti caseari o aumentare gli stipendi del 5% per le persone appartenenti a una determinata categoria lavorativa. Con una query di aggiornamento è possibile modificare dati in tabelle esistenti.</P>
+
+<P class=T>Per informazioni sulla creazione di query di aggiornamento, fare clic su <A HREF="achowChangeRecordsAsGroupUpdateQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconunderstandingactionqueriesandwhenusethems">inizio</A></P>
+
+<H2><A NAME="acconunderstandingactionqueriesandwhenusethems_3"></A>Query di accodamento</H2>
+
+<P class=T>Questo tipo di query aggiunge un gruppo di record di una o più tabelle alla fine di una o più tabelle. Si supponga ad esempio che vengano acquisiti nuovi clienti e un database contenente una tabella di informazioni su di essi. Invece di digitare nuovamente tutte queste informazioni, si accodano alla propria tabella Clienti. Le query di accodamento sono inoltre utili per:
+
+<UL>
+	<LI class=LB1>Accodare campi in base a dei criteri. È possibile ad esempio accodare solo i nomi e gli indirizzi di clienti con ordini di rilievo.<BR><BR></LI>
+
+	<LI class=LB1>Accodare record nel caso in cui alcuni campi di una tabella non esistano in un'altra tabella. Nel database di esempio Northwind nella tabella Clienti esistono 11 campi. Si supponga di voler accodare record di un'altra tabella con campi corrispondenti a 9 degli 11 della tabella Clienti. Una query di accodamento accoderà i dati nei campi corrispondenti e ignorerà gli altri.</LI>
+</UL>
+
+<P class=T>Per informazioni sulla creazione di query di accodamento, fare clic su <A HREF="achowAddRecordsTableInCurrentDatabaseEndAnotherTabS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconunderstandingactionqueriesandwhenusethems">inizio</A></P>
+
+<H2><A NAME="acconunderstandingactionqueriesandwhenusethems_4"></A>Query di creazione tabella</H2>
+
+<P class=T>Questo tipo di query crea una nuova tabella in base a tutti i dati o parte di essi contenuti in una o più tabelle. Le query di creazione tabella sono utili per:
+
+<UL>
+	<LI class=LB1>Creare una tabella da esportare in altri database di Microsoft Access. È possibile ad esempio creare una tabella che contiene diversi campi della tabella Impiegati, quindi esportarla in un database utilizzato dall'ufficio del personale.<BR><BR></LI>
+
+	<LI class=LB1>Creare pagine di accesso ai dati che visualizzano dati riferiti a un determinato momento. Si supponga ad esempio che il 15 maggio 1996 si desideri visualizzare una pagina di accesso ai dati nella quale vengano visualizzati i totali vendite del primo trimestre in base ai dati contenuti nelle tabelle sottostanti al 1° aprile alle ore 9.00. Una pagina di accesso ai dati basata su una query o un'<A HREF="javascript:HelpPopup('actip9.hlp','defSQLString');" class="pop">istruzione SQL</A> estrae dalle tabelle i dati più aggiornati (ossia i dati al 15 maggio 1996), piuttosto che quelli riferiti a un determinato momento. Per conservare i dati esattamente come erano alle 9.00 del 1° aprile 1996 è necessario definire una query di creazione tabella riferita esattamente a quel momento che recuperi i record necessari e li memorizzi in una nuova tabella, quindi utilizzare come base della pagina di accesso ai dati questa tabella anziché una query.<BR><BR></LI>
+
+	<LI class=LB1>Creare una copia di backup di una tabella.<BR><BR></LI>
+
+	<LI class=LB1>Creare una tabella cronologica che contiene i vecchi record. È possibile ad esempio creare una tabella che memorizza tutti i vecchi ordini prima di eliminarli dalla tabella Ordini corrente.<BR><BR></LI>
+
+	<LI class=LB1>Migliorare le prestazioni di maschere, report e pagine di accesso ai dati basati su query a tabella multipla o su istruzioni SQL. Si supponga ad esempio di voler stampare più record basati su una query a cinque tabelle con i totali. È possibile rendere più veloce questa procedura definendo una query di creazione tabella che recupera i record necessari e li memorizza in una sola tabella. Quindi basare i report su questa tabella o porre la stessa in un'istruzione SQL come origine record di una maschera, di un report o di una pagina di accesso ai dati in modo che non sia necessario rieseguire la query per ogni report. I dati nella tabella tuttavia sono congelati al momento in cui si esegue la query di creazione tabella.</LI>
+</UL>
+
+<P class=T>Per informazioni sulla creazione di query di creazione tabella, fare clic su <A HREF="achowCreateNewTableResultsQueryMaketableQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconunderstandingactionqueriesandwhenusethems">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconUnderstandingActionQueriesAndWhenUseThemSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

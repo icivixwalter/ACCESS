@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactOpenReport'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthact_1b.rtf'
+Tnum='186500'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo OpenReport</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenReport">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthactopenreport"></A>Metodo OpenReport</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactOpenReportC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactOpenReportX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactOpenReportA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>OpenReport</B> esegue l'azione <A HREF="JavaScript:hhobj_4.Click()">ApriReport</A> in Visual Basic. Per ulteriori informazioni sul funzionamento dell'azione e dei relativi argomenti, vedere l'argomento della Guida in linea relativo all'azione.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DoCmd.OpenReport</B> <I>nomereport</I>[, <I>visualizzazione</I>][, <I>nomefiltro</I>][, <I>condizioneWHERE</I>]</P>
+
+
+
+<P class=T>Il metodo <B>OpenReport</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=21%>Argomento</TH>
+<TH width=79%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>nomereport</I></TD>
+<TD class=TT width=79%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che è il nome valido di un report contenuto nel database corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=79%>Se si esegue del codice di Visual Basic contenente il metodo <B>OpenReport</B> in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, Microsoft Access cerca il report con questo nome prima nel database di libreria, quindi nel database corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>visualizzazione</I></TD>
+<TD class=TT width=79%>Una delle seguenti <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=79%><B>acViewDesign</B><BR>
+<B>acViewNormal</B> (impostazione predefinita)<BR>
+<B>acViewPreview</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=79%><B>acViewNormal</B> stampa il <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A> immediatamente. Se si omette questo argomento, viene utilizzata la costante predefinita (<B>acViewNormal</B>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>nomefiltro</I></TD>
+<TD class=TT width=79%>Espressione stringa che è il nome valido di una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> contenuta nel database corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>condizioneWHERE</I></TD>
+<TD class=TT width=79%>Espressione stringa che è una proposizione SQL <A HREF="javascript:HelpPopup('actip9.hlp','defWhereClause');" class="pop">WHERE</A> valida senza la parola WHERE.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>L'argomento <I>condizioneWHERE</I> può avere una lunghezza massima di 32.768 caratteri, a differenza dell'argomento dell'azione condizione WHERE nella finestra della macro, che può avere una lunghezza massima di 256 caratteri.</P>
+
+<P class=T>È possibile omettere un argomento facoltativo all'interno della sintassi, ma è necessario includere la virgola dell'argomento stesso . Se si omettono uno o più argomenti finali, non utilizzare la virgola dopo l'ultimo argomento specificato.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

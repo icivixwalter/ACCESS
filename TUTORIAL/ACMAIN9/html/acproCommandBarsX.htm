@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCommandBarsX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproadd1.rtf'
+Tnum='187089'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà CommandBars</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocommandbarsx"></A>Esempio di proprietà CommandBars</B></P>
+
+
+
+<P class=T>Nella routine riportata di seguito, la proprietà <B>CommandBars</B> dell'oggetto <B>Application</B> viene utilizzata per manipolare varie proprietà e metodi dell'oggetto insieme <B>CommandBars</B>. Per eseguire questo esempio, incollare il codice riportato di seguito nella sezione Dichiarazioni di un modulo standard. Creare un riferimento a Microsoft Office 9.0 Object Library utilizzando la finestra di dialogo <B>Riferimenti</B> che viene visualizzata scegliendo <B>Riferimenti</B> dal menu <B>Strumenti</B>. Fare clic in un punto qualsiasi della routine InfoBarraComandi e premere F5 per eseguirla.</P>
+
+<PRE class=CT><CODE>Sub nfoBarraComandi()
+&nbsp;&nbsp;&nbsp; Dim strNomeBarraBC As String
+
+&nbsp;&nbsp;&nbsp; strNomeBarraBC = InputBox("Immettere il nome di una barra dei comandi", "Informazioni su BarraComandi", "Barra dei menu")
+&nbsp;&nbsp;&nbsp; If Len(strNomeBarraBC) &gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BarraComandi strNomeBarraBC
+&nbsp;&nbsp;&nbsp; End If
+End Sub
+
+Sub BarraComandi(strNomeBarraBC As String)
+&nbsp;&nbsp;&nbsp; Dim cbr As CommandBar
+
+&nbsp;&nbsp;&nbsp; On Error Resume Next
+&nbsp;&nbsp;&nbsp; Set cbr = <B>CommandBars</B>(strNomeBarraBC)
+&nbsp;&nbsp;&nbsp; If Err = 0 then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With cbr
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "La barra dei comandi chiamata '" &amp;.Name &amp; "' contiene " &amp; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Controls.Count &amp; IIf(.Controls.Count = 1, " controllo e ", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " controlli e ") &amp; IIf(.BuiltIn, "è", "non è") &amp; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " una barra degli strumenti incorporata", vbOKOnly, "'" &amp; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Nome &amp; "' Informazioni:"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Nome BarraComandi non valido"
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

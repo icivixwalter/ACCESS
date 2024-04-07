@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutCompactingRepairingAccessDatabaseOrAccessProject'
+Feature='Optimization: Compact/Repair'
+Handoff='3'
+SourceFile='cdatbas3.rtf'
+Tnum='272726'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla compattazione di un database o di un progetto di Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutcompactingrepairingaccessdatabaseoraccessproject"></A>Informazioni sulla compattazione di un database o di un progetto di Access</H1>
+
+<P class=T>A partire da questa versione Microsoft Access fornisce la possibilità di compattare e ripristinare i <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> nel corso di un unico processo. Microsoft Access tuttavia è in grado solo di compattare i <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetti di Microsoft Access</A>, non di ripristinarli. </P>
+
+<P class=T><B>Compattazione di un database o di un progetto di Access</B>&nbsp;&nbsp; A seguito dell'eliminazione di dati o oggetti da un database di Access oppure di oggetti da un progetto, è possibile che si vengano a creare delle frammentazioni e che il database o il progetto utilizzi lo spazio su disco in modo inefficiente. Eseguendo la compattazione di un database o di un progetto di Access si crea una copia del file e si riorganizza lo spazio di memorizzazione sul disco.</P>
+
+<P class=T>La compattazione comporta un miglioramento delle prestazioni sia per i database che per i progetti di Access. La compattazione di un progetto tuttavia non incide sugli <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetti di database</A>, quali tabelle o visualizzazioni, contenuti nel database di Microsoft SQL Server, non nel progetto di Access vero e proprio. Analogamente, la compattazione non incide in alcun modo sul processo di numerazione automatica di un progetto di Access. Se però si sono eliminati dei record dalla parte finale di una tabella di un database di Access contenente un <A HREF="javascript:HelpPopup('actip9.hlp','defAutoNumber');" class="pop">campo Contatore</A>, compattando il database si reimposta il valore Contatore e il valore Contatore del record successivo sarà maggiore di uno rispetto al valore Contatore dell'ultimo record non eliminato della tabella.</P>
+
+<P class=T><B>Ripristino di un database di Access</B>&nbsp;&nbsp; Nella maggior parte dei casi Microsoft Access rileva se un suo database è danneggiato quando si tenta di aprirlo, fornendo la possibilità di compattarlo. In alcune situazioni Microsoft Access potrebbe però non rilevare eventuali problemi in un database. Se un database di Access funziona in modo anomalo, si consiglia di compattarlo.</P>
+
+<P class=T>La compattazione di un database di Access di una versione precedente non comporta la conversione nel formato Access 2000. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="acdecConvertingDatabasesS.htm">conversione di un database di Access di una versione precedente</A>.</P>
+
+<P class=T>Se si intende eseguire la compattazione di un <A HREF="javascript:HelpPopup('actip9.hlp','defMultiUserDatabase');" class="pop">database multiutente (condiviso)</A> presente su un server o in una cartella condivisa, accertarsi che nessun altro utente lo abbia aperto. È necessario disporre delle <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> di Apertura/esecuzione e di Apertura esclusiva per un database di Access per poterlo compattare. Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="achowAssignPermissionsSecurityAccountsS.htm">assegnazione delle autorizzazioni</A>.</P>
+
+<P class=T>Torna a <A HREF="achowCompactDatabaseDefragmentFreeDiskSpaceS.htm">Compattare un database o un progetto di Access</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutCompactingRepairingAccessDatabaseOrAccessProjectW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

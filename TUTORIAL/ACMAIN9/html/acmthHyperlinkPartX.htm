@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthHyperlinkPartX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186932'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo HyperlinkPart</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthhyperlinkpartx"></A>Esempio di metodo HyperlinkPart</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono utilizzate le quattro costanti dell'argomento <I>parte</I> per visualizzare le informazioni restituite dal metodo <B>HyperlinkPart</B> per ciascun record di una tabella contenente un campo Collegamento ipertestuale. Per provare questo esempio, incollare la routine DisplayHyperlinkParts nella sezione Dichiarazioni di un modulo. È possibile richiamare la routine DisplayHyperlinkParts dalla finestra Debug, passando il nome di una tabella contenente collegamenti ipertestuali e il nome del campo contenente dati Collegamento ipertestuale. Ad esempio:</P>
+
+<PRE class=CT><CODE>DisplayHyperlinkParts "NomeTabellaCollegamIpertestuale", "NomeCampoCollegamIpertestuale"
+
+Sub DisplayHyperlinkParts(strTable As String, strField As String)
+&nbsp;&nbsp;&nbsp; Dim rst As New ADODB.Recordset
+&nbsp;&nbsp;&nbsp; Dim strMsg As String
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; rst.Open(strTable,currentproject.connection,_
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; adOpenForwardOnly, adLockReadOnly)
+
+&nbsp;&nbsp;&nbsp; While Not rst.EOF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Per ciascun record in tabella.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = "ValoreVisualizzato = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; <B>HyperlinkPart(</B>rst(strField), acDisplayedValue<B>)</B> _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; "TestoVisualizzato = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; <B>HyperlinkPart(</B>rst(strField), acDisplayText<B>)</B> _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; "Indirizzo = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; <B>HyperlinkPart(</B>rst(strField), acAddress<B>)</B> _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; "SottoIndirizzo = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; <B>HyperlinkPart(</B>rst(strField), acSubAddress<B>) _</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; "Descrizione = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; <B>HyperlinkPart(</B>rst(strField), acScreenTip<B>) _</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; "Indirizzo completo = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; <B>HyperlinkPart(</B>rst(strField), acFullAddress<B>)</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Visualizza le parti restituite dalla funzione HyperlinkPart.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox strMsg
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.MoveNext
+&nbsp;&nbsp;&nbsp; Wend
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Quando si utilizza il metodo <B>HyperlinkPart</B> in una query, viene richiesto l'argomento <I>parte</I>. L'istruzione SQL riportata di seguito utilizza, ad esempio, il metodo <B>HyperlinkPart</B> per restituire le informazioni relative ai dati memorizzati come tipo di dati Collegamento ipertestuale nel campo URL della tabella Collegamenti:</P>
+
+<PRE class=CT><CODE>SELECT Collegamenti.URL, HyperlinkPart([URL],0)
+AS Display, HyperlinkPart([URL],1)
+AS Name, HyperlinkPart([URL],2)
+AS Addr, HyperlinkPart([URL],3)
+AS SubAddr, HyperlinkPart([URL],4)
+AS ScreenTip
+FROM Collegamenti;</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

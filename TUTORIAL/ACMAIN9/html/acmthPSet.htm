@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthPSet'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186435'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo PSet</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEventProperties">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproCurrentXY">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproForeColor">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctRGB">
+</OBJECT>
+<OBJECT ID="hhobj_8" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctQBColor">
+</OBJECT>
+<OBJECT ID="hhobj_9" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproDrawWidth">
+</OBJECT>
+<OBJECT ID="hhobj_10" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproDrawMode">
+</OBJECT>
+<OBJECT ID="hhobj_11" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproDrawStyle">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthpset"></A>Metodo PSet</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthPSetC;vafctQBColor;vafctRGB">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthPSetX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthPSetA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>PSet</B> consente di impostare un punto di un oggetto <A HREF="acobjReport.htm"><B>Report</B></A> a un determinato colore quando si verifica l'evento <A HREF="acevtPrint.htm">Stampa</A>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I><B>.PSet</B> [<B>Step</B>]<B>(</B><I>x</I>, <I>y</I><B>)</B>[, <I>colore</I>]</P>
+
+
+
+<P class=T>È possibile utilizzare questo metodo solo in una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> o in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> specificata dalla <A HREF="JavaScript:hhobj_4.Click()">proprietà di evento</A> <B>SuStampa</B> o <B>Su Formattazione</B> per una sezione di <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>, o dalla proprietà di evento <B>SuPagina</B> per un report.</P>
+
+<P class=T>Il metodo <B>PSet</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>oggetto</I></TD>
+<TD class=TT width=76%>Oggetto <B>Report</B> in cui va disegnato il punto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>Step</B></TD>
+<TD class=TT width=76%><A HREF="javascript:HelpPopup('actip9.hlp','defReservedWord');" class="pop">Parola chiave</A> indicante che le coordinate sono relative alla posizione grafica corrente data dalle impostazioni delle proprietà <A HREF="JavaScript:hhobj_5.Click()"><B>CurrentX</B> e <B>CurrentY</B></A> dell'argomento <I>oggetto</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>x</I>, <I>y</I></TD>
+<TD class=TT width=76%>Valori a <A HREF="javascript:HelpPopup('actip9.hlp','defSingleDataType');" class="pop"><B>precisione singola</B></A> che indicano le coordinate orizzontale e verticale del punto da impostare.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>colore</I></TD>
+<TD class=TT width=76%>Valore <A HREF="javascript:HelpPopup('actip9.hlp','defLongDataType');" class="pop"><B>Intero lungo</B></A> che indica il colore RGB (rosso, verde, blu) a cui impostare il punto. Se si omette tale argomento, viene utilizzato il valore della proprietà <A HREF="JavaScript:hhobj_6.Click()"><B>ForeColor</B></A>. Per specificare il colore è inoltre possibile utilizzare la funzione <A HREF="JavaScript:hhobj_7.Click()"><B>RGB</B></A> o <A HREF="JavaScript:hhobj_8.Click()"><B>QBColor</B></A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>La dimensione del punto dipende dall'impostazione della proprietà <A HREF="JavaScript:hhobj_9.Click()"><B>DrawWidth</B></A>. Quando si imposta a 1 la proprietà <B>DrawWidth</B>, il metodo <B>PSet</B> imposta un unico pixel al colore specificato. Quando la proprietà <B>DrawWidth</B> è maggiore di 1, il punto viene centrato secondo le coordinate specificate.</P>
+
+<P class=T>Il modo in cui viene disegnato il punto dipende dalle impostazioni delle proprietà <A HREF="JavaScript:hhobj_10.Click()"><B>DrawMode</B></A> e <A HREF="JavaScript:hhobj_11.Click()"><B>DrawStyle</B></A>.</P>
+
+<P class=T>Quando si applica il metodo <B>PSet</B>, le proprietà <B>CurrentX</B> e <B>CurrentY</B> vengono impostate al punto specificato dagli argomenti <I>x</I> e <I>y</I>.</P>
+
+<P class=T>Per cancellare un solo pixel con il metodo <B>Pset</B>, specificare le coordinate del pixel e utilizzare &amp;HFFFFFF (bianco) come argomento <I>colore</I>.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È più rapido disegnare una linea con il metodo <B>Line</B> che con il metodo <B>PSet</B>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlInsertIntoX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234461'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione INSERT INTO (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlinsertintox"></A>Esempio di istruzione INSERT INTO (MDB)</B></P>
+
+
+
+
+
+<P class=WT><B>Attenzione</B>&nbsp;&nbsp; Questi esempi modificano il database di esempio Northwind. Di conseguenza, prima di iniziare è opportuno eseguire una copia di backup.</P>
+
+
+
+<P class=T>Per eseguire l'esempio riportato di seguito, creare una copia della tabella Clienti e chiamarla NuoviClienti. In questo esempio si selezionano tutti i record della tabella NuoviClienti e si aggiungono alla tabella Clienti. Se le singole colonne non sono definite, i nomi delle colonne della tabella SELECT devono corrispondere esattamente a quelli della tabella INSERT INTO.</P>
+
+<PRE class=CT><CODE><B>INSERT INTO</B> Clienti SELECT * FROM NuoviClienti;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea un nuovo record nella tabella Impiegati:</P>
+
+<PRE class=CT><CODE><B>INSERT INTO</B> Impiegati (Nome,Cognome, Posizione)
+    VALUES ('Harry', 'Washington', 'In addestramento');</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si selezionano da una tabella ipotetica Personale in addestramento tutto il personale in addestramento assunto da oltre 30 giorni e si aggiungono i relativi record nella tabella Impiegati.</P>
+
+<PRE class=CT><CODE><B>INSERT INTO</B> Impiegati SELECT Personale in addestramento.* FROM Personale in addestramento
+    WHERE DataAssunzione &lt; Now() - 30;</CODE></PRE>
+
+
+
+<P class=T>La proposizione INSERT INTO può essere utilizzata per eseguire una copia di backup delle informazioni prima di modificare il database. È possibile, ad esempio, eseguire una copia delle informazioni in una tabella Impiegati immediatamente prima di modificarne i dati.</P>
+
+<P class=T>Per eseguire l'esempio riportato di seguito, nella finestra del database copiare la tabella Impiegati in una nuova tabella chiamata StoriaImpiegati. Per effettuare tale operazione, fare clic sulla tabella, fare clic su <B>Copia</B> sulla barra degli strumenti, quindi fare clic su <B>Incolla</B>. Nel riquadro <B>Opzioni di incollamento</B> della finestra di dialogo <B>Incolla tabella con nome</B>, fare clic su <B>Solo struttura</B>. In questo modo, viene copiata solo la struttura della tabella e non i dati. Copiare la seguente istruzione SQL in una nuova query e salvare quest'ultima con il nome QueryBackup:</P>
+
+<PRE class=CT><CODE><B>INSERT INTO</B> StoriaImpiegati (Nome, Cognome, Posizione)
+    VALUES (Maschere!Impiegati!Nome, _
+        Maschere!Impiegati!Cognome,Maschere!Impiegati!Posizione);</CODE></PRE>
+
+
+
+<P class=T>Aprire la maschera Impiegati in visualizzazione Struttura della maschera e impostare la proprietà <B>Prima di aggiornare</B> a [Routine evento]. Nella routine evento PrimaDiAggiornare, immettere il codice riportato di seguito:</P>
+
+<PRE class=CT><CODE>DoCmd.OpenQuery "QueryBackup"</CODE></PRE>
+
+
+
+<P class=T>I dati della tabella Impiegati verranno copiati nella tabella di backup ogni volta che l'utente effettua delle modifiche.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

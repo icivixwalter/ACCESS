@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDataType'
+Feature='acpro'
+Handoff='2'
+SourceFile='aprotbl1.doc'
+Tnum='187145'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà DataType (Tipo dati)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproType">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprodatatype"></A>Proprietà DataType (Tipo dati)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproDataTypeC;damthCreateField;daproSize;mdproType">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproDataTypeX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproDataTypeA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>DataType</B> per determinare il tipo di dati memorizzati in un campo di una tabella. Ciascun campo è in grado di memorizzare dati di un solo tipo.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>DataType</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=23%>Impostazione</TH>
+<TH width=42%>Tipo di dati</TH>
+<TH width=34%>Dimensioni</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Testo</TD>
+<TD class=TT width=42%>Impostazione predefinita. Testo o combinazioni di testo e numeri, compresi numeri che non richiedono calcoli, come numeri di telefono.</TD>
+<TD class=TT width=34%>Fino a 255 caratteri oppure la lunghezza impostata dalla proprietà <A HREF="acproFieldSize.htm"><B>FieldSize</B></A>. Viene impostato il valore minore. Non viene riservato spazio per parti di campo testo non utilizzate.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Memo</TD>
+<TD class=TT width=42%>Testo lungo o combinazioni di testo e numeri.</TD>
+<TD class=TT width=34%>Fino a 65.535 caratteri. Se il campo Memo viene manipolato tramite DAO per memorizzarvi solo testo e numeri, ma non dati binari, le dimensioni del campo Memo verranno limitate dalle dimensioni del database.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Numerico</TD>
+<TD class=TT width=42%>Dati numerici utilizzati in calcoli matematici. Per ulteriori informazioni relative all'impostazione di determinati tipi numerici, vedere l'argomento relativo alla proprietà <B>FieldSize</B>.</TD>
+<TD class=TT width=34%>1, 2, 4 o 8 byte (16 byte se la proprietà <B>FieldSize</B> è impostata a ID replica.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Data/Ora</TD>
+<TD class=TT width=42%>Valori data e ora per gli anni da 100 a 9999.</TD>
+<TD class=TT width=34%>8 byte.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Valuta</TD>
+<TD class=TT width=42%>Valori per valuta e dati numerici utilizzati in calcoli matematici che impiegano dati contenenti da una a quattro posizioni decimali. Tali numeri hanno fino a quattro cifre a destra e 15 a sinistra del separatore decimale.</TD>
+<TD class=TT width=34%>8 byte.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Contatore</TD>
+<TD class=TT width=42%>Numero sequenziale univoco, cioè incrementato di un'unità o numero casuale ogni volta che viene aggiunto un nuovo record a una tabella. Non è possibile aggiornare i campi Contatore. Per ulteriori informazioni, vedere l'argomento relativo alla proprietà <A HREF="acproNewValues.htm"><B>NewValues</B></A>.</TD>
+<TD class=TT width=34%>4 byte (16 byte se la proprietà <B>FieldSize</B> è impostata a ID replica).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Sì/No</TD>
+<TD class=TT width=42%>I valori e i campi Sì e No contenenti uno di due valori (Sì/No, True/False, On/Off).</TD>
+<TD class=TT width=34%>1 bit.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Oggetto OLE</TD>
+<TD class=TT width=42%>Un oggetto, come un foglio di calcolo di Microsoft Excel, un documento di Microsoft Word, grafici, suoni o altri dati binari, <A HREF="javascript:HelpPopup('actip9.hlp','defLink');" class="pop">collegati</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defEmbed');" class="pop">incorporati</A> in una tabella di Microsoft Access.</TD>
+<TD class=TT width=34%>Fino a 1 gigabyte, secondo lo spazio disponibile su disco.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Collegamento ipertestuale</TD>
+<TD class=TT width=42%>Testo o combinazioni di testo e numeri memorizzate come testo e utilizzate come <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkAddress');" class="pop">indirizzo di collegamento ipertestuale</A>. Un indirizzo può essere composto da un massimo di tre parti:
+<P class=TT><I>testovisualizzato -</I> il testo che viene visualizzato in un campo o controllo.</P>
+
+<P class=TT><I>indirizzo -</I> il percorso di un file (<A HREF="javascript:HelpPopup('actip9.hlp','defUNC');" class="pop">percorso UNC</A>) o una pagina (<A HREF="javascript:HelpPopup('actip9.hlp','defURL');" class="pop">URL</A>).</P>
+
+<P class=TT><I>sottoindirizzo -</I> una posizione all'interno del file o della pagina.</P>
+
+<P class=TT><I>descrizione -</I> il testo che viene visualizzato come suggerimento.</P>
+
+<P class=TT>Il modo più semplice per inserire un indirizzo di collegamento ipertestuale in un campo o in controllo è scegliere <B>Collegamento ipertestuale</B> dal menu <B>Inserisci</B>.</P>
+
+<P class=TT>Per ulteriori informazioni, vedere <A HREF="acrefTypeHyperlinkAddressCreateBoundHyperlink.htm">Digitare un indirizzo per collegamento ipertestuale in visualizzazione Maschera o Foglio dati</A>.</P>
+</TD>
+<TD class=TT width=34%>Ciascuna delle tre parti che compongono un tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkDataType');" class="pop">Collegamento ipertestuale</A> può contenere fino a 2048 caratteri.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Ricerca guidata</TD>
+<TD class=TT width=42%>Crea un campo che consente di scegliere un valore da un'altra tabella o da un elenco di valori utilizzando una <A HREF="javascript:HelpPopup('actip9.hlp','defListBox');" class="pop">casella di riepilogo</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">casella combinata</A>. Scegliendo tale opzione nell'elenco Tipo di dati si avvia la Ricerca guidata che crea un <A HREF="javascript:HelpPopup('actip9.hlp','defLookupField');" class="pop">campo di ricerca</A>. Al termine della ricerca il tipo di dati viene impostato in base ai valori selezionati nella procedura guidata.</TD>
+<TD class=TT width=34%>Stesse dimensioni del campo <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> utilizzato per eseguire la ricerca, in genere 4 byte.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare questa proprietà solo nella sezione superiore in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura della tabella</A>.</P>
+
+<P class=T>In <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A> è possibile utilizzare la proprietà ADO <A HREF="JavaScript:hhobj_4.Click()"><B>Type</B></A> per impostare il tipo di dati del campo prima di accodarlo all'insieme <B>Fields</B>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>I campi Memo, Collegamento ipertestuale e Oggetto OLE non possono essere <A HREF="javascript:HelpPopup('actip9.hlp','defIndex');" class="pop">indicizzati</A>.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Utilizzare il tipo di dati Valuta per un campo che richiede molte operazioni di calcolo con dati contenenti da uno a quattro posizioni decimali. I campi tipo di dati <B>Precisione singola</B> e <B>Precisione doppia</B> richiedono calcoli a virgola mobile. Il tipo di dati Valuta utilizza un tipo di calcolo più veloce a virgola fissa.</P>
+
+
+
+
+
+<P class=CAT><B>Attenzione</B>&nbsp;&nbsp; La modifica del tipo di dati di un campo dopo l'immissione di dati in una tabella può determinare un lungo processo di conversione dei dati al momento del salvataggio della tabella. Se il tipo di dati contenuto in una tabella è in conflitto con l'impostazione modificata della proprietà <B>DataType</B>, è possibile che si verifichi la perdita di alcuni dati.</P>
+
+
+
+<P class=T>Impostare la proprietà <A HREF="acproFormat.htm"><B>Format</B></A> per specificare un <A HREF="javascript:HelpPopup('actip9.hlp','defFormat');" class="pop">formato di visualizzazione</A> predefinito per i dati di tipo Numerico, Data/Ora, Valuta e Sì/No.</P>
+
+<P class=T>Per ulteriori informazioni sulla scelta di un tipo dati di campo, vedere il capitolo relativo alle tecniche di scrittura del codice nel <I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I>. Per informazioni su come ottenere il <I>Manuale del programmatore</I>, fare clic su <A HREF="JavaScript:hhobj_5.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRefresh'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186427'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Refresh</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthrefresh"></A>Metodo Refresh</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRefreshC;damthRefresh">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRefreshX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRefreshA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>Refresh</B> aggiorna immediatamente i record contenuti nell'origine record sottostante relativa a una determinata <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> o a un determinato <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> in modo da riflettere le modifiche apportate ai dati in un ambiente multiutente.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>maschera</I><B>.Refresh</B></P>
+
+
+
+<P class=T>Il metodo <B>Refresh</B> utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>maschera</I></TD>
+<TD class=TT width=76%>Oggetto <A HREF="acobjForm.htm"><B>Form</B></A> che rappresenta la maschera da aggiornare.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>L'utilizzo del metodo <B>Refresh</B> equivale a scegliere <B>Aggiorna</B> dal menu <B>Record</B>.</P>
+
+<P class=T>Microsoft Access aggiorna automaticamente i record in base all'impostazione di <B>Intervallo aggiornamenti</B> nella scheda <B>Avanzate</B> della finestra di dialogo <B>Opzioni</B>, disponibile scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B>. Le origini dati ODBC vengono aggiornate in base all'impostazione di <B>Intervallo aggiornamenti ODBC</B> nella scheda <B>Avanzate</B> della finestra di dialogo <B>Opzioni</B>. È possibile utilizzare il metodo <B>Refresh</B> per visualizzare le modifiche apportate al set di record corrente in una maschera o in un foglio dati dall'ultimo aggiornamento dell'origine record sottostante la maschera o il foglio dati.</P>
+
+<P class=T>Il metodo <B>Refresh</B> mostra solo le modifiche apportate ai record del set corrente. Poiché il metodo <B>Refresh</B> non riesegue effettivamente la query sul database, il set corrente non include record aggiunti o non esclude record eliminati dal momento in cui è stata ripetuta per l'ultima volta una query sul database. Il metodo non esclude nemmeno i record che non soddisfano più i criteri della query o del filtro. Per rieseguire una query sul database, utilizzare il metodo <A HREF="acmthRequery.htm"><B>Requery</B></A>. Quando si riesegue una query sull'origine record di una maschera, il set corrente di record rifletterà accuratamente tutti i dati contenuti nell'origine record.</P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Risulta spesso più veloce effettuare l'aggiornamento di una maschera o di un foglio dati che rieseguire la query. Ciò è particolarmente vero se l'esecuzione della query iniziale era lenta.<BR><BR></LI>
+
+	<LI class=NLB>Occorre prestare attenzione a non confondere il metodo <B>Refresh</B> con il metodo <A HREF="acmthRepaint.htm"><B>Repaint</B></A>, che <A HREF="javascript:HelpPopup('actip9.hlp','defRepaint');" class="pop">aggiorna</A> lo schermo con qualsiasi modifica visiva in sospeso.</LI>
+</UL>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

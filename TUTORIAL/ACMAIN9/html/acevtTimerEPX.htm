@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtTimerEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='188180'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Timer - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevttimerepx"></A>Evento Timer - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si dimostra come è possibile visualizzare un orologio digitale in una maschera. Un controllo Etichetta visualizza l'ora corrente secondo l'orologio di sistema del computer.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera contenente un'etichetta chiamata Orologio. Impostare la proprietà <B>Intervallo timer</B> a 1000 millisecondi in modo che l'orologio venga aggiornato a ogni secondo.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Timer</B>()
+&nbsp;&nbsp;&nbsp; Orologio.Caption = Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiorna la visualizzazione dell'ora.
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRowSourceTypeFunctionParameters'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosrc1_1a.rtf'
+Tnum='187987'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà RowSourceType (funzione definita dall'utente) - Valori degli argomenti di codice</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmStatic">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprorowsourcetypefunctionparameters"></A>Proprietà RowSourceType (funzione definita dall'utente) - Valori degli argomenti di codice</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproRowSourceTypeFunctionParametersC;vastmStatic">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproRowSourceTypeFunctionParametersX">
+</OBJECT></P>
+
+
+
+<P class=T>È necessario che la funzione di Visual Basic creata accetti cinque <A HREF="javascript:HelpPopup('actip9.hlp','defArgument');" class="pop">argomenti</A>. Il primo argomento deve essere dichiarato come <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> e gli altri argomenti come <A HREF="javascript:HelpPopup('actip9.hlp','defVariant');" class="pop"><B>Varianti</B></A>. La funzione stessa restituisce una <B>Variante</B>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>Funzione</B> <I>nomefunzione</I> <B>(</B><I>campo</I> <B>As Control</B>, <I>id</I> <B>As Variant</B>, <I>riga</I> <B>As Variant</B>, <I>col</I> <B>As Variant</B>, <I>codice</I> <B>As Variant) As Variant</B></P>
+
+
+
+<P class=T>La routine <B>Funzione</B> richiede i cinque argomenti riportati di seguito:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>campo</I></TD>
+<TD class=TT width=75%>Una variabile di controllo che fa riferimento alla <A HREF="javascript:HelpPopup('actip9.hlp','defListBox');" class="pop">casella di riepilogo</A> o alla <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">casella combinata</A> da completare.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>id</I></TD>
+<TD class=TT width=75%>Un valore univoco che identifica il controllo da completare. Il valore risulta particolarmente utile quando si desidera utilizzare la stessa funzione definita dall'utente per più caselle di riepilogo o caselle combinate e quando è necessario distinguerle. Nell'esempio la variabile viene impostata al valore della funzione <B>Timer</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>riga</I></TD>
+<TD class=TT width=75%>La riga da completare, con numerazione a partire da zero.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>col</I></TD>
+<TD class=TT width=75%>La colonna da completare, con numerazione a partire da zero.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>codice</I></TD>
+<TD class=TT width=75%>Una <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costante intrinseca</A> che specifica il tipo di informazioni richieste.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Poiché Microsoft Access chiama più volte una funzione definita dall'utente per inserire voci in un elenco, è spesso necessario conservare le informazioni di chiamata in chiamata. Il modo migliore consiste nell'utilizzo di variabili <A HREF="JavaScript:hhobj_3.Click()"><B>Statiche</B></A>.</P>
+
+
+
+<P class=T>La funzione definita dall'utente viene chiamata più volte utilizzando valori diversi nell'argomento <I>codice</I> per specificare le informazioni necessarie. L'argomento <I>codice</I> può utilizzare le costanti intrinseche indicate nella tabella riportata di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=29%>Costante</TH>
+<TH width=26%>Significato</TH>
+<TH width=45%>La funzione restituisce</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBInitialize</B></TD>
+<TD class=TT width=26%>Inizializza</TD>
+<TD class=TT width=45%>Valore diverso da zero se la funzione è in grado di completare l'elenco. In caso contrario restituisce <B>False</B> (0) o <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBOpen</B></TD>
+<TD class=TT width=26%>Apre</TD>
+<TD class=TT width=45%>Valore ID diverso da zero se la funzione può completare l'elenco. In caso contrario <B>False</B> o <B>Null</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBGetRowCount</B></TD>
+<TD class=TT width=26%>Numero di righe</TD>
+<TD class=TT width=45%>Numero di righe contenute nell'elenco (anche zero). -1 se non determinato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBGetColumnCount</B></TD>
+<TD class=TT width=26%>Numero di colonne</TD>
+<TD class=TT width=45%>Numero di colonne contenute nell'elenco (mai zero). Deve corrispondere al valore contenuto nella finestra delle proprietà.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBGetColumnWidth</B></TD>
+<TD class=TT width=26%>Larghezza colonna</TD>
+<TD class=TT width=45%>Larghezza in <A HREF="javascript:HelpPopup('actip9.hlp','defTwip');" class="pop">twip</A> della colonna specificata dall'argomento <I>col</I>. Specificare -1 per utilizzare la larghezza predefinita.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBGetValue</B></TD>
+<TD class=TT width=26%>Immissione elenco</TD>
+<TD class=TT width=45%>Voce di elenco da visualizzare nella riga e nella colonna specificate dagli argomenti <I>riga</I> e <I>col</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBGetFormat</B></TD>
+<TD class=TT width=26%>Stringa di formato</TD>
+<TD class=TT width=45%>Stringa di formato da utilizzare per formattare la voce di elenco visualizzata nella riga e nella colonna specificate dagli argomenti <I>riga</I> e <I>col</I>. Specificare -1 per utilizzare il formato predefinito.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBEnd</B></TD>
+<TD class=TT width=26%>Fine. L'ultima chiamata ad una funzione definita dall'utente utilizza sempre tale valore.</TD>
+<TD class=TT width=45%>Niente</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><B>acLBClose</B></TD>
+<TD class=TT width=26%>(Non utilizzata)</TD>
+<TD class=TT width=45%>Non utilizzata.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>La funzione definita dall'utente viene chiamata una volta per <B>acLBInitialize</B>, <B>acLBOpen</B>, <B>acLBGetRowCount</B> e <B>acLBGetColumnCount</B>. La funzione definita dall'utente viene inizializzata, viene aperta la query e determinato il numero di righe e di colonne.</P>
+
+<P class=T>La funzione definita dall'utente viene chiamata due volte per <B>acLBGetColumnWidth</B>, una volta per determinare la larghezza complessiva della casella di riepilogo o della casella combinata e una seconda volta per impostare la larghezza della colonna.</P>
+
+<P class=T>Il numero di volte che la funzione definita dall'utente viene chiamata per <B>acLBGetValue</B> e <B>acLBGetFormat</B> per ottenere le voci contenute nell'elenco e per formattare le stringhe varia a seconda del numero di voci, dello scorrimento da parte dell'utente e di altri fattori.</P>
+
+<P class=T>La funzione definita dall'utente per <B>acLBEnd</B> viene chiamata al momento della chiusura della maschera oppure ogni volta che viene eseguita una query sulla casella di riepilogo o sulla casella combinata.</P>
+
+<P class=T>Ogni volta che viene richiesto un determinato valore, ad esempio il numero di colonne, la restituzione di <B>Null</B> o di un altro valore non valido provoca l'interruzione della chiamata della funzione definita dall'utente con tale codice.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile utilizzare la struttura del codice Select Case dell'esempio come modello per le funzioni definite dall'utente della proprietà <B>RowSourceType</B>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

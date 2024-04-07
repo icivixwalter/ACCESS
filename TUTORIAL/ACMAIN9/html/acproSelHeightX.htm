@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproSelHeightX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apronew_1a.rtf'
+Tnum='188045'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di proprietà SelHeight, SelWidth, SelTop e SelLeft</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproselheightx"></A>Esempi di proprietà SelHeight, SelWidth, SelTop e SelLeft</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si indica come utilizzare le proprietà <B>SelHeight</B>, <B>SelWidth</B>, <B>SelTop</B> e <B>SelLeft</B> per determinare la posizione e le dimensioni di un rettangolo di selezione in visualizzazione Foglio dati. La routine ImpostaAltezzaLarghezza assegna l'altezza e la larghezza del rettangolo di selezione corrente alle variabili <CODE>lngNumRighe</CODE>, <CODE>lngNumColonne</CODE>, <CODE>lngRigaInAlto</CODE> e <CODE>lngColonnaSin</CODE> e visualizza tali valori in una casella di messaggio.</P>
+
+<PRE class=CT><CODE>Sub ImpostaAltezzaLarghezza(frm As Form)
+&nbsp;&nbsp;&nbsp; Dim lngNumRighe As Long, lngNumColonne As Long
+&nbsp;&nbsp;&nbsp; Dim lngRigaInAlto As Long, lngColonnaSin As Long
+&nbsp;&nbsp;&nbsp; Dim strMsg As String
+
+&nbsp;&nbsp;&nbsp; If frm.CurrentView = 2 Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' La maschera è in visualizzazione Foglio dati.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lngNumRighe = frm.<B>SelHeight</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Numero di righe selezionate.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lngNumColonne = frm.<B>SelWidth</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Numero di colonne selezionate.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lngRigaInAlto = frm.<B>SelTop</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Riga più in alto selezionata.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lngColonnaSin = frm.<B>SelLeft</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Colonna più a sinistra selezionata.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = "Numero di righe: " &amp; lngNumRighe &amp; vbCrLf
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = strMsg &amp; "Numero di colonne: " &amp; lngNumColonne &amp; vbCrLf
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = strMsg &amp; "Riga in alto: " &amp; lngRigaInAlto &amp; vbCrLf
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = strMsg &amp; "Colonna sinistra: " &amp; lngColonnaSin
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox strMsg
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

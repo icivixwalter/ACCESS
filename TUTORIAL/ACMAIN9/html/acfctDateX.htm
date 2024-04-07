@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDateX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acobdatx_1a.rtf'
+Tnum='234388'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Date</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdatex"></A>Esempio di funzione Date</B></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>Date</B> in un controllo calcolato impostando la proprietà <B>Origine controllo</B> relativa al controllo come nell'esempio riportato di seguito:</P>
+
+<PRE class=CT><CODE>= <B>Date()</B></CODE></PRE>
+
+
+
+<P class=T>È inoltre possibile utilizzare la funzione <B>Date</B> per impostare i criteri per una query. Se si dispone ad esempio di una tabella Ordini contenente un campo DataOrdine, è possibile creare una query sulla tabella Ordini che restituisca tutti i record con DataOrdine compresa tra 01/04/95 e la data odierna. Immettere nella cella Criteri sottostante il campo DataOrdine l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>Between #01/04/95# and <B>Date()</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

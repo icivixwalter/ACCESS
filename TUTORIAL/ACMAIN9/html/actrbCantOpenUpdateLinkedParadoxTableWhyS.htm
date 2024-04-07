@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbCantOpenUpdateLinkedParadoxTableWhyS'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='188548'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impossibile aprire o aggiornare una tabella collegata di Paradox</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrbcantopenupdatelinkedparadoxtablewhys"></A>Impossibile aprire o aggiornare una tabella collegata di Paradox</H1>
+
+<UL>
+	<LI class=LB1>Se si <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collega</A> una tabella di Paradox che ha una chiave primaria, il file indice con estensione px associato sarà necessario per l'apertura della tabella collegata. Se si collega una tabella di Paradox contenente un campo Memo, il file memo con estensione mb associato sarà necessario per l'apertura della tabella collegata. Se si eliminano o si spostano questi file, non sarà possibile aprire la tabella collegata.<BR><BR></LI>
+
+	<LI class=LB1>Se si collega una tabella di Paradox che non ha una chiave primaria, non si potranno aggiornare i dati della tabella utilizzando Microsoft Access. Se si desidera rendere la tabella aggiornabile, definire una chiave primaria per la tabella di Paradox.<BR><BR></LI>
+
+	<LI class=LB1>Degli oggetti OLE memorizzati in una tabella di Paradox collegata o <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importata</A> non possono essere aperti dall'interno di Microsoft Access.<BR><BR></LI>
+
+	<LI class=LB1>Non è possibile aggiornare una tabella, se il relativo file di dati con estensione dbf o i file indice con estensione idx, cdx, ndx o mdx sono di sola lettura. Utilizzare Risorse del computer o Esplora risorse (Gestione risorse in Windows 95 e Windows NT 4.0) per visualizzare la cartella in cui si trovano i file, fare clic con il pulsante destro del mouse su un file, scegliere <B>Proprietà</B>, quindi scegliere la scheda <B>Generale</B>. Se la casella di controllo <B>Sola lettura</B> è selezionata, deselezionarla e scegliere <B>OK</B>.<BR><BR></LI>
+
+	<LI class=LB1>Non è possibile aggiornare una tabella di Paradox, se il relativo file di dati con estensione db o file indice con estensione px è di sola lettura. Utilizzare Risorse del computer o Esplora risorse (Gestione risorse in Windows 95 e Windows NT 4.0) per visualizzare la cartella in cui si trovano i file, fare clic con il pulsante destro del mouse su un file, scegliere <B>Proprietà</B>, quindi scegliere la scheda <B>Generale</B>. Se la casella di controllo <B>Sola lettura</B> è selezionata, deselezionarla e scegliere <B>OK</B>.<BR><BR></LI>
+
+	<LI class=LB1>Per collegare (in lettura/scrittura) una tabella di Paradox 8.0, è necessario avere installato nel computer Borland Database Engine (BDE) versione 4.<I>x</I> o successiva. Se non è installato BDE 4.<I>x</I> o versione successiva, è possibile ottenerlo installando Paradox 8.0 o Delphi.  Se è installata una versione precedente di BDE che non supporta il formato di file di Paradox 8, è possibile aggiornare il modulo di gestione dal sito <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefWorldWideWeb');" class="pop"> Web</A> di Borland. In alternativa, se BDE non è installato nel computer, è possibile comunque effettuare collegamenti (sola lettura) a tabelle di Paradox 3.x, 4.x e 5.0.<BR><BR></LI>
+
+	<LI class=LB1>Quando si collega una tabella di Paradox residente su un server e condivisa da più utenti, impostare la chiave <B>ParadoxNetPath</B> nel registro di configurazione di Windows al percorso del file Paradox.net o Pdoxusrs.net. Se inoltre si utilizza la versione 4.<I>x</I> di Paradox per condividere dati all'interno del gruppo di lavoro, è necessario impostare a "4.<I>x</I>." la chiave <B>ParadoxNetStyle</B>. Per ulteriori informazioni su queste impostazioni, fare clic su  <A HREF="achowCustomizeParadoxSettingsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Se si utilizza Microsoft Access per collegare i dati di Paradox a una rete mentre gli utenti di Paradox li stanno utilizzando, è necessario definire tutte e tre le impostazioni <B>ParadoxUserName</B>, <B>ParadoxNetPath</B> e <B>ParadoxNetStyle</B> nel registro di configurazione. Utilizzare l'impostazione <B>ParadoxUserName</B> per specificare un nome utente univoco per accedere ai dati di Paradox condivisi. Utilizzare l'impostazione <B>ParadoxNetPath</B> per specificare il percorso completo della cartella contenente il file Paradox.net, per Paradox 3.<I>x</I>, o il file Pdoxusrs.net, per Paradox 4.<I>x</I> e 5.0. L'impostazione <B>ParadoxNetPath</B>, che comprende la lettera dell'unità, deve essere coerente per tutti gli utenti che condividono un determinato database. Utilizzare l'impostazione <B>ParadoxNetStyle</B> per specificare lo stile di blocco di rete da utilizzare quando si accede ai dati di Paradox. Valori possibili sono "3.<I>x</I>" per Paradox 3.<I>x</I> e "4.<I>x</I>" per Paradox 4.<I>x</I> e 5.0. Per ulteriori informazioni, consultare la guida dell'amministratore di rete Paradox. Per ulteriori informazioni su queste impostazioni, fare clic su  <A HREF="achowCustomizeParadoxSettingsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbCantOpenUpdateLinkedParadoxTableWhySW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

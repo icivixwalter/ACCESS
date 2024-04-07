@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowHideColumnInQuerysResultsS'
+Feature='Queries: Basics'
+Handoff='1'
+SourceFile='CQRYMOD.RTF'
+Tnum='187986'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Visualizzare o nascondere un campo nei risultati di una query</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowhidecolumninquerysresultss"></A>Visualizzare o nascondere un campo nei risultati di una query</H1>
+
+<P class=T>È possibile aggiungere alla <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> della query un campo da utilizzare per impostare i criteri o un criterio di ordinamento, ma non visualizzare i dati di quel determinato campo nei risultati della query.
+
+<UL>
+	<LI class=LPROCS>In <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura</A> della query, selezionare la casella <B>Mostra</B> nella griglia di struttura per visualizzare il campo oppure disattivare questa casella<B> </B>per nasconderlo.</LI>
+</UL>
+
+<P class=T><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>Se si desidera creare una maschera, un report o una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> basata sulla query e la proprietà <B>Mostra tutti i campi</B> è impostata a <B>No</B>, è necessario visualizzare i campi per i quali verranno creati i <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">controlli associati</A> nella maschera, nel report o nella pagina di accesso ai dati.<BR><BR></LI>
+
+	<LI class=NLB>Quando si chiude una query, i campi nascosti vengono spostati nelle colonne all'estrema destra della griglia di struttura.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowHideColumnInQuerysResultsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

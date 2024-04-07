@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWhatIsSubformS'
+Feature='Forms: Subform'
+Handoff='1'
+SourceFile='CFRMSUB.RTF'
+Tnum='188395'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Definizione e funzionamento delle sottomaschere</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwhatissubforms"></A>Definizione e funzionamento delle sottomaschere</H1>
+
+<P class=T>Una sottomaschera è una maschera all'interno di un'altra. La maschera primaria viene chiamata maschera principale e la maschera al suo interno viene chiamata sottomaschera. La combinazione maschera/sottomaschera viene spesso definita maschera gerarchica, maschera principale/dettaglio o maschera principale/secondaria.</P>
+
+<P class=T>Le sottomaschere sono particolarmente utili per visualizzare i dati di tabelle o <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> caratterizzate dalla relazione <A HREF="javascript:HelpPopup('actip9.hlp','defOneToMany');" class="pop">uno-a-molti</A>. È possibile ad esempio creare una maschera con una sottomaschera per visualizzare i dati delle tabelle Categorie e Prodotti. I dati della tabella Categorie rappresentano il lato "uno" della relazione e i dati della tabella Prodotti il lato "molti" poiché per ogni categoria possono esistere più prodotti.</P>
+
+<P class=ART><IMG SRC="images/cfrmsub1.bmp" ALT="Maschera principale con una sottomaschera" BORDER=0></P>
+
+<P class=T>La maschera principale e la sottomaschera in questo tipo di maschera sono collegate in modo da visualizzare nella sottomaschera solo i record correlati al record corrente della maschera principale. Se ad esempio nella maschera principale è visualizzata la categoria Bevande, nella sottomaschera appaiono solo i prodotti di tale categoria.</P>
+
+<P class=T>Quando si immettono nuovi record in una maschera contenente una sottomaschera, il record corrente nella maschera principale viene salvato quando si accede alla sottomaschera. In tal modo viene garantito che i record nella tabella del lato "molti" avranno un record corrispondente nella tabella del lato "uno". Ogni record viene salvato automaticamente quando viene aggiunto alla sottomaschera.</P>
+
+<P class=T>È possibile visualizzare una sottomaschera sotto forma di foglio dati, come nella figura precedente, o come maschera singola o continua. Una maschera principale può essere visualizzata soltanto come maschera singola.</P>
+
+<P class=T>La maschera principale può contenere un numero qualsiasi di sottomaschere a condizione che ognuna di esse vi venga posizionata. Inoltre è possibile inserire fino a dieci livelli di sottomaschere, vale a dire che vi può essere una sottomaschera all'interno della maschera principale, un'altra sottomaschera all'interno della prima, e così via. È possibile ad esempio creare una maschera principale per i clienti, una sottomaschera per gli ordini e un'altra sottomaschera per i dettagli relativi agli ordini.</P>
+
+<H2>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="acconSubformTypeS.htm">Esempi di diversi tipi di sottomaschere</A></P>
+
+<P class=LBR1><A HREF="acdecCreateSubformS.htm">Creare una o più sottomaschere</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWhatIsSubformSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

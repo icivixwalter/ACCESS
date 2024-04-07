@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowChangeStartingValueAutoNumberFieldS'
+Feature='Tables'
+Handoff='1'
+SourceFile='CTBLNEW.RTF'
+Tnum='188774'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Modificare il valore iniziale di un campo Contatore incrementale</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowchangestartingvalueautonumberfields"></A>Modificare il valore iniziale di un campo Contatore incrementale</H1>
+
+<P class=T>Per una nuova tabella che non contiene alcun record, è possibile cambiare con un numero diverso da uno il valore iniziale di un campo <A HREF="javascript:HelpPopup('actip9.hlp','defAutoNumber');" class="pop">Contatore</A> la cui proprietà <B>Nuovi valori</B> è impostata a <B>Incremento</B>. La stessa procedura può essere usata anche per una tabella in cui sono contenuti dei record, in modo da modificare con un altro numero il valore successivo che viene assegnato ad un campo Contatore.
+
+<OL>
+	<LI class=LPROC>Creare un tabella temporanea con un solo campo Numerico, impostare la relativa proprietà <B>Dimensione campo</B> a <B>Intero lungo</B> e assegnarle lo stesso nome del campo Contatore incluso nella tabella di cui si desidera modificare il valore.
+<P class=LBR2><A HREF="achowCreateTableDesignViewS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>In visualizzazione Foglio dati inserire un valore nel campo Numerico della tabella temporanea che sia inferiore di uno rispetto al valore iniziale desiderato per il campo Contatore. Se ad esempio si desidera che il valore iniziale del campo Contatore sia 100, inserire 99 nel campo Numerico.<BR><BR></LI>
+
+	<LI class=LPROC>Creare ed eseguire una query di accodamento per accodare la tabella temporanea a quella in cui si desidera modificare il valore del campo Contatore.
+<P class=LBR2><A HREF="achowAddRecordsTableInCurrentDatabaseEndAnotherTabS.htm">Procedura</A>
+
+<P class=LT1><B>Nota</B>&nbsp;&nbsp; Se la tabella originale dispone di una chiave primaria, è necessario rimuovere temporaneamente la chiave primaria prima di eseguire la query accodata. Se inoltre la tabella originale contiene campi la cui proprietà <B>Richiesto</B> è impostata a <B>Sì</B>, la proprietà <B>Indicizzato</B> è impostata a <B>Sì (Duplicati non ammessi)</B> oppure contiene impostazioni della proprietà <B>Valido se</B> di campi e/o record che impediscono l'inserimento di voci <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A> nei campi, è necessario disattivare temporaneamente queste impostazioni.
+</LI>
+
+	<LI class=LPROC>Eliminare la tabella temporanea.<BR><BR></LI>
+
+	<LI class=LPROC>Eliminare il record aggiunto dalla query di accodamento.<BR><BR></LI>
+
+	<LI class=LPROC>Se nel passo 3 è stato necessario disattivare le impostazioni delle proprietà, riportarle alle impostazioni originali.</LI>
+</OL>
+
+<P class=T>Quando si immette un record nella restante tabella, per il campo Contatore viene utilizzato un valore maggiore di uno rispetto al valore immesso nella tabella temporanea.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si desidera compattare il database dopo aver modificato il valore iniziale del campo Contatore, assicurarsi di aver prima aggiunto almeno un record alla tabella, altrimenti in fase di compattazione il valore del campo Contatore per il successivo record aggiunto sarà reimpostato ad un valore maggiore di uno rispetto al più alto valore precedente. Se, ad esempio, nella tabella non vi era alcun record quando è stato reimpostato il valore iniziale, la compattazione imposterà ad 1 il valore del campo Contatore per il successivo record aggiunto. Se, invece, erano presenti dei record ed il più alto valore precedente era 50, la compattazione imposterà a 51 il valore del campo Contatore per il successivo record aggiunto.</P>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowChangeStartingValueAutoNumberFieldSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

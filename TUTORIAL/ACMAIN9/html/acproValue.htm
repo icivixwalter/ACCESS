@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproValue'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproedt1.doc'
+Tnum='188245'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Value</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprovalue"></A>Proprietà Value</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproValueC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproValueX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproValueA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>Value</B> per determinare o specificare se un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> è stato selezionato, il valore selezionato o l'opzione all'interno del controllo, il testo contenuto in un controllo Casella di testo o il valore di una proprietà personalizzata.
+
+<UL>
+	<LI class=LB1>Controlli Casella di controllo, Pulsante di opzione e Interruttore. Determina o specifica se il controllo è stato selezionato oppure no.<BR><BR></LI>
+
+	<LI class=LB1>Controlli Casella combinata, Casella di riepilogo e Gruppo di opzioni. Determina o specifica quale valore o opzione sono stati selezionati nel controllo.<BR><BR></LI>
+
+	<LI class=LB1>Controlli Casella di testo. Determina o specifica il testo contenuto nella casella di testo.<BR><BR></LI>
+
+	<LI class=LB1>Controllo Struttura a schede. Determina o specifica l'oggetto <A HREF="acobjPage.htm"><B>Page</B></A> selezionato.<BR><BR>
+</LI>
+
+	<LI class=LB1>Proprietà incorporate. Determina o specifica il valore della proprietà incorporata di un oggetto <A HREF="acobjAccessObject.htm"><B>AccessObject</B></A>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>Value</B> viene impostata come riportato di seguito, a seconda del controllo specificato.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=19%>Controllo</TH>
+<TH width=20%>Impostazione</TH>
+<TH width=38%>Descrizione</TH>
+<TH width=23%>Visual Basic</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Casella di controllo</TD>
+<TD class=TT width=20%><B>True</B>
+
+
+<P class=TT><B>False</B></P>
+</TD>
+<TD class=TT width=38%>La casella di controllo è selezionata
+<P class=TT>Impostazione predefinita. La casella di controllo è deselezionata.</P>
+</TD>
+<TD class=TT width=23%><B>True</B> (-1)
+
+
+<P class=TT><B>False</B> (0)</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Casella combinata</TD>
+<TD class=TT width=20%>[Il testo contenuto nella parte casella di testo del controllo]</TD>
+<TD class=TT width=38%>Può corrispondere o meno all'impostazione della proprietà <A HREF="acproText.htm"><B>Text</B></A> del controllo. L'impostazione corrente della proprietà <B>Text</B> è quanto risulta visualizzato nella parte casella di testo della casella combinata. La proprietà <B>Value</B> è impostata secondo l'impostazione della proprietà <B>Text</B> solo dopo che il testo è stato salvato.</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Casella di riepilogo</TD>
+<TD class=TT width=20%>[Valore dell'elemento contenuto nella casella di riepilogo]</TD>
+<TD class=TT width=38%>Il valore contenuto nella colonna associata relativo all'elemento selezionato nell'elenco.</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Pulsante di opzione</TD>
+<TD class=TT width=20%><B>True</B>
+
+
+<P class=TT><B>False</B></P>
+</TD>
+<TD class=TT width=38%>Il pulsante di opzione è selezionato.
+<P class=TT>Impostazione predefinita. Il pulsante di opzione non è selezionato.</P>
+</TD>
+<TD class=TT width=23%><B>True</B>
+
+
+<P class=TT><B>False</B></P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Gruppo di opzioni</TD>
+<TD class=TT width=20%>[L'impostazione della proprietà<A HREF="acproOptionValue.htm"> <B>OptionValue</B></A>]</TD>
+<TD class=TT width=38%>L'impostazione della proprietà <B>OptionValue</B> per il controllo selezionato nel gruppo.</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Casella di testo</TD>
+<TD class=TT width=20%>[Il valore della proprietà <B>Text</B> del controllo]</TD>
+<TD class=TT width=38%>La proprietà <B>Text</B> restituisce la stringa formattata. La proprietà <B>Text</B> potrebbe essere diversa dalla proprietà <B>Value</B> per un controllo Casella di testo. La proprietà <B>Text</B> è il contenuto corrente del controllo. La proprietà <B>Value</B> è il valore salvato del controllo Casella di testo. La proprietà <B>Text</B> è sempre corrente mentre il controllo ha lo stato attivo.</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Interruttore</TD>
+<TD class=TT width=20%><B>True</B>
+<P class=TT><B>False</B></P>
+</TD>
+<TD class=TT width=38%>L'interruttore è premuto.
+<P class=TT>L'interruttore non è premuto.</P>
+</TD>
+<TD class=TT width=23%><B>True</B>
+<P class=TT><B>False</B></P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Controllo Struttura a schede</TD>
+<TD class=TT width=20%>[Un valore <A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>Intero</B></A> rappresentante il numero indice dell'oggetto <B>Page</B> attualmente selezionato]</TD>
+<TD class=TT width=38%>La proprietà <B>Value</B> di un controllo Struttura a schede contiene il numero indice dell'oggetto <B>Page</B> corrente. Esiste un oggetto <B>Page</B> per ciascuna scheda di un controllo Struttura a schede. Il primo oggetto <B>Page</B> ha sempre un numero indice corrispondente a zero, il secondo ha un numero indice corrispondente a uno e così via.</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Controllo Cornice oggetto associato o Grafico associato</TD>
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=38%>La proprietà <B>Value</B> per un controllo Cornice oggetto associato o un controllo Grafico associato è impostata al valore del campo al quale il controllo è associato. Poiché questi campi normalmente contengono oggetti OLE oppure oggetti grafici, memorizzati come dati binari, questo valore in genere non ha alcun significato.</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Controllo ActiveX</TD>
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=38%>Alcuni controlli ActiveX supportano la proprietà <B>Value</B>. L'impostazione della proprietà <B>Value</B> per un Controllo calendario, ad esempio, è la data attualmente selezionata nel controllo. Per ulteriori informazioni, vedere la documentazione relativa a ciascun controllo ActiveX.</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Proprietà personalizzate</TD>
+<TD class=TT width=20%>Un'espressione di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defLongDataType');" class="pop"><B>Intero lungo</B></A> o un'espressione <A HREF="javascript:HelpPopup('actip9.hlp','defStringDataType');" class="pop">stringa</A> che rappresenta il valore della proprietà personalizzata.</TD>
+<TD class=TT width=38%>La proprietà <B>Value</B> di una proprietà personalizzata contiene il valore della proprietà personalizzata specificata di un oggetto <B>AccessObject</B>. Per ulteriori informazioni sulle proprietà personalizzate, vedere gli argomenti della Guida in linea relativa all'oggetto <B>AccessObject</B>, all'oggetto <A HREF="acobjAccessObjectProperty.htm"><B>AccessObjectProperty</B></A> e all'insieme <A HREF="accolAccessObjectProperties.htm"><B>AccessObjectProperties</B></A>.</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare la proprietà utilizzando una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=RL><B>Osservazioni</B><UL>
+	<LI class=LB1>La proprietà <B>Value</B> restituisce o imposta una proprietà predefinita del controllo, che è la proprietà corrente quando non viene specificato esplicitamente un nome di proprietà. Nell'esempio riportato di seguito, poiché il valore predefinito della casella di testo è il valore della proprietà <B>Text</B>, è possibile fare riferimento all'impostazione della relativa proprietà <B>Text</B> senza specificare esplicitamente il nome della proprietà stessa.<PRE class=LCT1><CODE>Forms!frmCustomers!txtLastName = "Smith"</CODE></PRE>
+</LI>
+</UL>
+
+
+
+<P class=T>Ciò significa che le due istruzioni seguenti sono equivalenti.</P>
+
+<PRE class=LCT1><CODE>Forms!frmCustomers!optCreditApproved.Value = True</CODE></PRE>
+
+
+
+<PRE class=LCT1><CODE>Forms!frmCustomers!optCreditApproved = True</CODE></PRE>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>Value</B> non è uguale alla proprietà <A HREF="acproDefaultValue.htm"><B>DefaultValue</B></A>, che specifica il valore assegnato a una proprietà con la creazione di un nuovo record.</P>
+
+<P class=6>
+
+<UL>
+	<LI class=LB1>La proprietà <B>Value</B> può inoltre restituire o impostare una proprietà predefinita che fa parte delle proprietà personalizzate, cioè una proprietà utilizzata quando non si specifica automaticamente un nome di proprietà. Ciò significa che le due istruzioni riportate di seguito sono equivalenti.
+<PRE class=LCT1><CODE>CurrentProject.AllForms!optCreditApproved.Value = True</CODE></PRE>
+</LI>
+</UL>
+
+
+
+<PRE class=LCT1><CODE>CurrentProject.AllForms!optCreditApproved = True</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

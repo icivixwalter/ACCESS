@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRequired'
+Feature='acpro'
+Handoff='2'
+SourceFile='aprotbl1.doc'
+Tnum='187962'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Required (Richiesto)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daproRequired">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprorequired"></A>Proprietà Required (Richiesto)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproRequiredC;daproAllowZeroLength;daproRequired">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproRequiredX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproRequiredA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>Required</B> per determinare se un valore deve essere richiesto in un campo. Se la proprietà è impostata a Sì, quando si immettono dati in un <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A>, è necessario immettere un valore nel campo o in un qualsiasi <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">associato</A> e il valore non può essere <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>. È possibile, ad esempio, che si desideri essere certi che il controllo Cognome abbia un valore in ciascun record. Quando si desidera consentire in un campo valori <B>Null</B>, non basta impostare la proprietà <B>Required</B> a No, ma in presenza dell'impostazione della proprietà <A HREF="acproValidationRule.htm"><B>ValidationRule</B></A> è necessario che essa riporti esplicitamente "<I>regolaconvalida</I> Or Is Null".</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>Required</B> non si applica a campi di tipo Contatore.</P>
+
+
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>Required</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=20%>Impostazione</TH>
+<TH width=19%>Visual Basic</TH>
+<TH width=61%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>Sì</TD>
+<TD class=TT width=19%><B>True</B> (-1)</TD>
+<TD class=TT width=61%>Il campo richiede un valore.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>No</TD>
+<TD class=TT width=19%><B>False</B> (0)</TD>
+<TD class=TT width=61%>Impostazione predefinita. Il campo non richiede un valore.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare questa proprietà per tutti i campi di una tabella, tranne i campi con tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defAutoNumber');" class="pop">Contatore</A>, utilizzando la <A HREF="achowSetFieldPropertyInTableS.htm">finestra delle proprietà</A> della tabella o <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per avere accesso alla proprietà <B>Required</B> di un campo in Visual Basic, utilizzare la proprietà DAO <A HREF="JavaScript:hhobj_4.Click()"><B>Required</B></A>.</P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>La proprietà <B>Required</B> è rafforzata a livello di tabella dal <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A>. Se si imposta a Sì la proprietà, il campo che ha lo stato attivo deve ricevere o contenere già un valore, quando si immettono dati in una tabella o in una maschera o in un foglio dati basati su una tabella, quando una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o Visual Basic imposta il valore del campo oppure si importano dati nella tabella.</P>
+
+<P class=T>È possibile utilizzare le impostazioni delle proprietà <B>Required</B> e <A HREF="acproAllowZeroLength.htm"><B>AllowZeroLength</B></A> per diversificare le informazioni non esistenti, memorizzate nel campo come <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A> (" ") e le informazioni probabilmente esistenti ma sconosciute, memorizzate nel campo come valore <B>Null</B>. Se si imposta la proprietà <B>AllowZeroLength</B> a Sì, una stringa a lunghezza zero costituisce un'immissione valida nel campo, senza tener conto dell'impostazione della proprietà <B>Required</B>. Se la proprietà <B>Required</B> viene impostata a Sì e la proprietà <B>AllowZeroLength</B> a No, è necessario immettere nel campo un valore. Una stringa a lunghezza zero non costituisce un'immissione valida.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile utilizzare una <A HREF="javascript:HelpPopup('actip9.hlp','defInputMask');" class="pop">maschera di input</A> quando si immettono dati in un campo, in modo da diversificare la visualizzazione di un valore <B>Null</B> e una stringa a lunghezza zero. È possibile, ad esempio, visualizzare la stringa "Nessuno" al momento dell'immissione di una stringa a lunghezza zero.</P>
+
+
+
+<P class=T>La tabella riportata di seguito indica i risultati che è possibile ottenere combinando le impostazioni delle proprietà <B>Required</B> e <B>AllowZeroLength</B>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=16%>Required</TH>
+<TH width=24%>AllowZeroLength</TH>
+<TH width=35%>Azione dell'utente</TH>
+<TH width=25%>Valore memorizzato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>No</TD>
+<TD class=TT width=24%>No</TD>
+<TD class=TT width=35%>Premere INVIO<BR>
+Premere BARRA SPAZIATRICE<BR>
+Immettere una stringa a lunghezza zero</TD>
+<TD class=TT width=25%><B>Null</B><BR>
+<B>Null</B><BR>
+(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>No</TD>
+<TD class=TT width=24%>Sì</TD>
+<TD class=TT width=35%>Premere INVIO<BR>
+Premere BARRA SPAZIATRICE <BR>
+Immettere una stringa a lunghezza zero</TD>
+<TD class=TT width=25%><B>Null</B><BR>
+<B>Null</B><BR>
+Stringa a lunghezza zero</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>Sì</TD>
+<TD class=TT width=24%>No</TD>
+<TD class=TT width=35%>Premere INVIO<BR>
+Premere BARRA SPAZIATRICE<BR>
+Immettere una stringa a lunghezza zero</TD>
+<TD class=TT width=25%>(non consentito)<BR>
+(non consentito)<BR>
+(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>Sì</TD>
+<TD class=TT width=24%>Sì</TD>
+<TD class=TT width=35%>Premere INVIO<BR>
+Premere BARRA SPAZIATRICE<BR>
+ <BR>
+Immettere una stringa a lunghezza zero</TD>
+<TD class=TT width=25%>(non consentito)<BR>
+Stringa a lunghezza zero<BR>
+Stringa a lunghezza zero</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Se si imposta la proprietà <B>Required</B> a Sì per un campo di una tabella che contiene già dati, è possibile controllare se il campo ha un valore in tutti i record esistenti. È possibile, tuttavia, richiedere che un valore venga immesso in tale campo in tutti i nuovi record anche se sono presenti nel campo record con valori <B>Null</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per rafforzare una relazione tra tabelle correlate che non consentono valori <B>Null</B>, impostare a Sì la proprietà <B>Required</B> del campo <A HREF="javascript:HelpPopup('actip9.hlp','defForeignKey');" class="pop">chiave esterna</A> della tabella correlata. Il modulo di gestione di database Jet assicura allora la presenza di un record correlato nella tabella principale prima di poter creare un record nella tabella secondaria. Se il campo chiave esterna fa parte della chiave primaria della tabella secondaria, tale operazione non risulta necessaria, poiché non è possibile che un campo <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> contenga un valore <B>Null</B>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

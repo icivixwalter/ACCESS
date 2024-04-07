@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproAllowZeroLength'
+Feature='acpro'
+Handoff='2'
+SourceFile='aprotbl1.doc'
+Tnum='187003'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà AllowZeroLength (Consenti lunghezza zero)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daproAllowZeroLength">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproallowzerolength"></A>Proprietà AllowZeroLength (Consenti lunghezza zero)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproAllowZeroLengthC;daproAllowZeroLength;daproRequired">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproAllowZeroLengthX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproAllowZeroLengthA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>AllowZeroLength</B> per determinare se una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A> (" ") è un'immissione valida in un campo di tabella.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>AllowZeroLength</B> viene applicata ai campi di tabella di tipo Testo, Memo e Collegamento ipertestuale.</P>
+
+
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>AllowZeroLength</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=20%>Impostazione</TH>
+<TH width=19%>Visual Basic</TH>
+<TH width=61%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>Sì</TD>
+<TD class=TT width=19%><B>True</B> (-1)</TD>
+<TD class=TT width=61%>Una stringa a lunghezza zero è un'immissione valida.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>No</TD>
+<TD class=TT width=19%><B>False</B> (0)</TD>
+<TD class=TT width=61%>Impostazione predefinita. Una stringa a lunghezza zero non è un'immissione valida.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare questa proprietà utilizzando la <A HREF="achowSetFieldPropertyInTableS.htm">finestra delle proprietà</A> della tabella o tramite <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per accedere alla proprietà <B>AllowZeroLength</B> di un campo tramite Visual Basic, utilizzare la proprietà DAO <A HREF="JavaScript:hhobj_4.Click()"><B>AllowZeroLength</B></A> o la proprietà ADO <B>Column.Properties</B> ("Set OLEDB:Allow Zero Length").</P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Se si desidera fare in modo che Microsoft Access memorizzi una stringa a lunghezza zero anziché un valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A> quando si lascia un campo vuoto, impostare le proprietà <B>AllowZeroLength</B> e <A HREF="acproRequired.htm"><B>Required</B></A> a Sì.</P>
+
+<P class=T>La tabella riportata di seguito indica i possibili risultati della combinazione di impostazioni delle proprietà <B>AllowZeroLength</B> e <B>Required</B>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=24%>AllowZeroLength</TH>
+<TH width=16%>Required</TH>
+<TH width=35%>Azione dell'utente</TH>
+<TH width=25%>Valore memorizzato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>No</TD>
+<TD class=TT width=16%>No</TD>
+<TD class=TT width=35%>Premere INVIO<BR>
+Premere BARRA SPAZIATRICE<BR>
+Immettere una stringa a lunghezza zero</TD>
+<TD class=TT width=25%><B>Null</B><BR>
+<B>Null</B><BR>
+(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Sì</TD>
+<TD class=TT width=16%>No</TD>
+<TD class=TT width=35%>Premere INVIO<BR>
+Premere BARRA SPAZIATRICE<BR>
+Immettere una stringa a lunghezza zero</TD>
+<TD class=TT width=25%><B>Null</B><BR>
+<B>Null</B><BR>
+Stringa a lunghezza zero</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>No</TD>
+<TD class=TT width=16%>Sì</TD>
+<TD class=TT width=35%>Premere INVIO<BR>
+Premere BARRA SPAZIATRICE<BR>
+Immettere una stringa a lunghezza zero</TD>
+<TD class=TT width=25%>(non consentito)<BR>
+(non consentito)<BR>
+(non consentito)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Sì</TD>
+<TD class=TT width=16%>Sì</TD>
+<TD class=TT width=35%>Premere INVIO<BR>
+Premere BARRA SPAZIATRICE<BR>
+<BR>
+Immettere una stringa a lunghezza zero</TD>
+<TD class=TT width=25%>(non consentito)<BR>
+Stringa a lunghezza zero<BR>
+Stringa a lunghezza zero</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile utilizzare la proprietà <A HREF="acproFormat.htm"><B>Format</B></A> per fare una distinzione tra la visualizzazione di un valore <B>Null</B> e una stringa a lunghezza zero. Al momento dell'immissione di una stringa a lunghezza zero, ad esempio, è possibile visualizzare la stringa "Nessuno".</P>
+
+
+
+<P class=T>La proprietà <B>AllowZeroLength</B> agisce in modo indipendente dalla proprietà <B>Required</B>. La proprietà <B>Required</B> determina solo la validità di un valore <B>Null</B> rispetto a un campo. Se la proprietà <B>AllowZeroLength</B> è impostata a Sì, una stringa a lunghezza zero costituisce un valore valido per il campo senza tener conto dell'impostazione della proprietà <B>Required</B>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

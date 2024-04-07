@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactRename'
+Feature='acact'
+Handoff='1'
+SourceFile='act_q-z_1a.rtf'
+Tnum='187948'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione Rinomina</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactRename">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactrename"></A>Azione Rinomina</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRenameC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRenameX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione Rinomina per rinominare un <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetto di database</A> specificato.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione Rinomina utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nuovo nome</TD>
+<TD class=TT width=75%>Il nuovo nome per l'oggetto di database. Immettere il nome dell'oggetto nella casella <B>Nuovo nome</B> della sezione <B>Argomenti azione</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. L'argomento è obbligatorio.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Tipo oggetto</TD>
+<TD class=TT width=75%>Il tipo di oggetto che si desidera rinominare. Selezionare <B>Tabella</B>, <B>Query</B>, <B>Maschera</B>, <B>Report</B>, <B>Macro</B>, <B>Modulo</B>, <B>Pagina di accesso ai dati</B>, <B>Visualizzazione server</B>, <B>Diagramma</B> o <B>Stored procedure</B>. Per rinominare l'oggetto selezionato nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A>, non immettere alcun valore per questo argomento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome precedente</TD>
+<TD class=TT width=75%>Il nome dell'oggetto da rinominare. La casella <B>Nome precedente</B> visualizza tutti gli oggetti nel database del tipo selezionato dall'argomento Tipo oggetto. Se non si immette alcun valore per l'argomento Tipo oggetto, fare altrettanto per questo.
+<P class=TT><B>Nota</B>&nbsp;&nbsp; Se si esegue una macro contenente l'azione Rinomina in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, l'oggetto con tale nome viene cercato innanzitutto nel database di libreria, quindi nel database corrente.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È necessario che il nuovo nome dell'oggetto di database segua le <A HREF="javascript:HelpPopup('actip9.hlp','defStandardNamingConventions');" class="pop">regole per la denominazione</A> degli gli oggetti di Microsoft Access.</P>
+
+<P class=T>Non è possibile rinominare un oggetto aperto.</P>
+
+<P class=T>Se non si immette alcun valore per gli argomenti Tipo oggetto e Nome precedente, viene rinominato l'oggetto selezionato nella finestra del database. Per selezionare un oggetto nella finestra del database, è possibile utilizzare l'azione <A HREF="acactSelectObject.htm">SelezionaOggetto</A> con l'argomento Da finestra database impostato a Sì.</P>
+
+<P class=T>È inoltre possibile rinominare un oggetto facendo clic su di esso nella finestra del database, facendo di nuovo clic in modo che sia possibile modificarne il nome e immettendo un nuovo nome. Con l'azione Rinomina non è necessario selezionare innanzitutto l'oggetto nella finestra del database e non è neanche necessario arrestare la macro per immettere il nuovo nome.</P>
+
+<P class=T>Questa azione è diversa dall'azione <A HREF="acactCopyObject.htm">CopiaOggetto</A>, che crea una copia dell'oggetto con un nuovo nome.</P>
+
+<P class=T>Per eseguire l'azione Rinomina in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>Rename</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOptimizingVBS'
+Feature='Modules'
+Handoff='3'
+SourceFile='cmodtrb.rtf'
+Tnum='186823'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Ottimizzazione delle prestazioni del codice Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconoptimizingvbs"></A>Ottimizzazione delle prestazioni del codice Visual Basic</H1>
+
+<P class=T>Il modo migliore per ottimizzare la velocità di esecuzione del codice <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasic');" class="pop">Visual Basic</A> consiste spesso nello scegliere un approccio più efficace. Alcune tecniche possono essere tuttavia di aiuto nella velocizzazione dell'esecuzione del codice.
+
+<UL>
+	<LI class=LB1>Verificare che il codice presente nel database sia compilato. Nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefCodeWindow');" class="pop">finestra Codice</A> di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasicEditor');" class="pop">Visual Basic Editor</A> scegliere <B>Compila</B> dal menu <B>Debug</B>.
+<P class=LNT><B>Nota</B>&nbsp;&nbsp; Poiché assegnando un nuovo nome a un database il codice viene decompilato, accertarsi di ricompilare il codice dopo aver rinominato un database.
+</LI>
+
+	<LI class=LB1>Dichiarare sempre in modo esplicito le <A HREF="javascript:HelpPopup('actip9.hlp','defVariable');" class="pop">variabili</A>. È possibile richiedere che le variabili siano dichiarate in modo esplicito prima che vengano utilizzate in una <A HREF="javascript:HelpPopup('actip9.hlp','defProcedure');" class="pop">routine</A> selezionando la casella di controllo <B>Dichiarazione di variabili obbligatoria</B> nella scheda <B>Editor</B> della finestra di dialogo <B>Opzioni</B>. Per ulteriori informazioni, fare clic su <A HREF="achowRequereDeclarationsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare il tipo più specifico possibile quando si dichiarano le variabili. Dichiarare ad esempio una variabile che verrà utilizzata per rappresentare una maschera come <B>Form</B> anziché come <B>Object</B> o <B>Variant</B>.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare le variabili per fare riferimento a <A HREF="javascript:HelpPopup('actip9.hlp','defProperty');" class="pop">proprietà</A>, controlli e oggetti DAO. Se si fa riferimento più volte al valore di una proprietà o di un controllo in una maschera oppure a un oggetto DAO o alla relativa proprietà, creare variabili di oggetto e fare riferimento alle variabili anziché utilizzare gli identificatori completi.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare la parola chiave <B>Me</B> per riferimenti alle maschere all'interno di una routine evento.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare la funzione <B>Ilf</B> solo quando è necessario. Evitare di utilizzare questa<B> </B>funzione se è necessario molto tempo per valutare una delle espressioni restituite.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare le funzioni stringa solo quando è necessario. Utilizzare le funzioni $ (ad esempio <B>Str$</B>) quando si utilizzano le stringhe e le funzioni non di tipo $ quando si utilizzano tipi di dati <B>Variant</B> o altri tipi di dati.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare il tipo di dati <B>Intero</B> o <B>Lungo</B> per operazioni matematiche, quando è possibile.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare le matrici dinamiche e l'istruzione <B>Erase</B> o <B>ReDim</B> per liberare memoria.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare le <A HREF="javascript:HelpPopup('actip9.hlp','defConstant');" class="pop">costanti</A> ogni volta risulti possibile.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare i segnalibri per velocizzare il riposizionamento. Utilizzare i segnalibri anziché il metodo <B>FindNext</B> o altri mezzi per tornare a un determinato record.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare i metodi <B>FindRecord</B> e <B>FindNext</B> sui campi indicizzati. Tali metodi sono molto più efficaci quando vengono utilizzati su un campo indicizzato.<BR><BR></LI>
+
+	<LI class=LB1>Organizzare i <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">moduli</A>. In Visual Basic i moduli vengono caricati su richiesta, ossia vengono caricati in memoria solo quando il codice chiama una delle routine in tale modulo. Se le routine correlate vengono posizionate nello stesso modulo, i moduli aggiuntivi vengono caricati solo quando è necessario.<BR><BR></LI>
+
+	<LI class=LB1>Eliminare le routine e le variabili che non vengono più utilizzate. Quando si sviluppano e si modificano le applicazioni, si potrebbero tralasciare le routine che non vengono più chiamate nel codice o le variabili dichiarate che non vengono più utilizzate. È consigliabile rivedere il codice in modo da rimuovere le routine e le variabili inutilizzate.</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni, vedere <A HREF="javascript:HelpPopup('actip9.hlp','defBuildingApplications');" class="pop"><I>Creazione di applicazioni con maschere e report</I></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOptimizingVBSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

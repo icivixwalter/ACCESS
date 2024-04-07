@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjContainerObjS'
+Feature='acobj'
+Handoff='3'
+SourceFile='ACDMisc.doc'
+Tnum='255743'
+Piece='1039'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Oggetto Container, insieme Containers (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acobjcontainerobjs"></A>Oggetto Container, insieme Containers (MDB)</H1>
+
+
+
+<P class=T>Oltre agli oggetti <B>Container</B> definiti dal <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Jet</A>, i cinque oggetti <B>Container</B> indicati di seguito vengono definiti da Microsoft Access.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=42%>Nome contenitore</TH>
+<TH width=58%>Contiene informazioni su</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Forms</TD>
+<TD class=TT width=58%>Maschere salvate</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Modules</TD>
+<TD class=TT width=58%>Moduli salvati</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Reports</TD>
+<TD class=TT width=58%>Report salvati</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>DataAccessPages</TD>
+<TD class=TT width=58%>Pagine di accesso ai dati salvate</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Scripts</TD>
+<TD class=TT width=58%>Macro salvate</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Gli oggetti <B>Container</B> definiti da Microsoft Access costituiscono <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetti di database </A> di Microsoft Access e non <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti (DAO)</A> e<B> </B>forniscono al modulo di gestione di database Jet le informazioni sugli oggetti di Microsoft Access. Il modulo di gestione di database Jet usa tali informazioni per implementare la protezione per gli oggetti di database di Microsoft Access analogamente a quanto avviene per gli oggetti DAO.</P>
+
+<P class=T>Gli oggetti <B>Container</B> definiti da Microsoft Access e gli oggetti <B>Container</B> definiti dal modulo di gestione di database Jet sono compresi tutti nell'insieme <B>Containers</B> di Microsoft Access.</P>
+
+<P class=T>L'insieme <B>Documents</B> di un oggetto <B>Container</B> contiene gli oggetti <B>Document</B> che rappresentano i singoli oggetti del tipo descritto dall'oggetto <B>Container</B>. Ad esempio, l'oggetto <B>Container</B> Forms ha un insieme <B>Documents</B> che potrebbe comprendere un oggetto <B>Document</B> corrispondente a una maschera denominata Ordini.</P>
+
+<P class=T>Esclusi i contenitori Modules, gli oggetti <B>Container</B> possono essere utilizzati per stabilire e rendere operative le <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> per oggetti di database Microsoft Access. Per impostare le autorizzazioni per un oggetto <B>Container</B>, impostare la proprietà <B>UserName</B> dell'oggetto <B>Container</B> sul nome di un oggetto <B>User</B> o <B>Group</B> esistente, quindi impostare la proprietà <B>Permissions</B> dell'oggetto <B>Container</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Fare attenzione a non confondere i vari tipi di oggetto <B>Container</B> con i tipi di insieme che hanno lo stesso nome. Gli oggetti <B>Container</B> Forms e Reports contengono insiemi <B>Documents</B>, che comprendono singoli oggetti <B>Document</B> rappresentanti ogni maschera o report salvato. Gli insiemi <B>Forms</B> e <B>Reports</B> fanno riferimento solo a maschere o report aperti.</P>
+
+<P class=T>Il contenitore Modules è ancora presente in Microsoft Access 2000 per garantire la compatibilità con le versioni precedenti. Siccome in questa nuova versione la protezione dei moduli viene gestita all'interno dell'ambiente Visual Basic dalla funzione Protezione, le autorizzazioni e le proprietà relative agli utenti dei singoli moduli non sono più supportate.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

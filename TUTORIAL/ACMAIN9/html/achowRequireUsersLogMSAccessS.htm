@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowRequireUsersLogMSAccessS'
+Feature='Security: Workgroup'
+Handoff='3'
+SourceFile='csecbas.rtf'
+Tnum='188252'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Richiedere agli utenti di accedere a Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowrequireuserslogmsaccesss"></A>Richiedere agli utenti di accedere a Microsoft Access</H1>
+
+<P class=T>Fino a quando non viene attivata la procedura di accesso per un gruppo di lavoro, tutti gli utenti vengono connessi automaticamente utilizzando l'<A HREF="javascript:HelpPopup('actip9.hlp','defAdminAccount');" class="pop">account Amministratore</A> predefinito. Agli utenti di un gruppo di lavoro viene richiesto di connettersi mediante l'aggiunta di una password all'account Amministratore.
+
+<OL>
+	<LI class=LPROC>Entrare nel gruppo di lavoro con la procedura di accesso che si desidera attivare.
+<P class=LBR2><A HREF="achowJoinMSAccessWorkgroupS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Avviare Microsoft Access e aprire un database.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Protezione</B> dal menu <B>Strumenti</B>, quindi <B>Account utenti e gruppi</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sulla scheda <B>Utenti</B> e assicurarsi che l'account Amministratore predefinito sia evidenziato nella casella <B>Nome</B>.
+</LI>
+
+	<LI class=LPROC>Fare clic sulla scheda <B>Cambia password di accesso</B>, fare clic nella casella <B>Nuova password</B>, quindi digitare la nuova password. Lasciare vuota la casella <B>Vecchia password</B>.
+
+<P class=LT1>Per mantenere la riservatezza della password vengono visualizzati degli asterischi (*) durante la digitazione. Le password possono contenere da 1 a 20 caratteri e possono includere qualsiasi carattere a eccezione del carattere ASCII 0 (Null). Nelle password viene fatta <A HREF="javascript:HelpPopup('actip9.hlp','defCaseSensitive');" class="pop">distinzione tra maiuscole e minuscole</A>.
+</LI>
+
+	<LI class=LPROC>Verificare la password digitandola di nuovo nella casella <B>Verifica</B>, quindi scegliere <B>OK</B>.
+<P class=LT1>La finestra di dialogo <B>Accesso</B> viene visualizzata la volta successiva che un membro del gruppo di lavoro in cui si è entrati nel passaggio 1 avvia Microsoft Access e apre un database. Se gli account utente per quel gruppo di lavoro al momento non sono definiti, l'utente Amministratore è l'unico account valido in questa fase. Per ulteriori informazioni sulla definizione di account utente, fare clic su <A HREF="achowCreateSecurityUserAccountS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+</OL>
+
+<P class=T><B>Nota&nbsp;&nbsp;</B> Quando l'accesso a un database viene protetto, vengono creati degli account utente in un gruppo di lavoro di Microsoft Access e vengono assegnate delle autorizzazioni per database, tabelle, query, maschere, report e macro a quegli account e a qualunque account di gruppo a cui questi appartengono. Quando gli utenti si connettono a Microsoft Access utilizzando i propri account, dispongono soltanto delle autorizzazioni associate a tali account. Essi si connettono digitando un nome utente e una password nella finestra di dialogo <B>Accesso</B>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowRequireUsersLogMSAccessSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

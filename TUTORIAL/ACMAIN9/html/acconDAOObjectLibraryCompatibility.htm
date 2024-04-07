@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconDAOObjectLibraryCompatibility'
+Feature='accon'
+Handoff='3'
+SourceFile='acconnew1.doc'
+Tnum='187127'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Compatibilità con la libreria di oggetti DAO</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="accondaoobjectlibrarycompatibility"></A>Compatibilità con la libreria di oggetti DAO</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconDAOObjectLibraryCompatibilityC">
+</OBJECT></P>
+
+
+
+<P class=T>In Microsoft Access 2000 sono inclusi oggetti, metodi e proprietà <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">DAO</A> che sostituiscono quelli delle versioni 1.<I>x</I>, 2.0 e 7.0. È necessario sostituire gli elementi dei linguaggi non più supportati da Microsoft Access 2000 con quelli forniti dalla libreria di oggetti DAO 3.6.</P>
+
+<P class=T>È possibile utilizzare la tabella riportata di seguito per individuare gli oggetti, i metodi e le proprietà non inclusi nella libreria di oggetti Microsoft DAO 3.6 e le funzionalità che li sostituiscono. Nella seconda colonna sono riportati i nuovi elementi che è possibile utilizzare per modificare il codice scritto nelle versioni precedenti di Microsoft Access.</P>
+
+
+<P class=T>Per alcuni esempi di modifica del codice, vedere <A HREF="achowConvertingJetCode.htm">Esempi di conversione del codice DAO</A>.</P>
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=47%>Funzionalità non presenti in DAO 3.6</TH>
+<TH width=53%>Sostituzioni DAO 3.6 consigliate</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>&nbsp;&nbsp; <B>FreeLocks</B></TD>
+<TD class=TT width=53%>Metodo <B>Idle</B> dell'oggetto <B>DBEngine</B> (non necessario per i database di Microsoft Access 2000)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><B>SetDefaultWorkspace</B></TD>
+<TD class=TT width=53%>Proprietà <B>DefaultUser</B>/<B>DefaultPassword</B> dell'oggetto <B>DBEngine</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><B>SetDataAccessOption</B></TD>
+<TD class=TT width=53%>Proprietà <B>IniPath</B> dell'oggetto <B>DBEngine</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.BeginTrans</B></TD>
+<TD class=TT width=53%><I>AreaLavoro</I><B>.BeginTrans</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.CommitTrans</B></TD>
+<TD class=TT width=53%><I>AreaLavoro</I><B>.CommitTrans</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.CreateDynaset</B></TD>
+<TD class=TT width=53%><I>Database</I><B>.OpenRecordset</B> di tipo <B>dbOpenDynaset</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.CreateSnapshot</B></TD>
+<TD class=TT width=53%><I>Database</I><B>.OpenRecordset</B> di tipo <B>dbOpenSnapshot</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.DeleteQueryDef</B></TD>
+<TD class=TT width=53%>Metodo <B>Delete</B> dell'insieme <B>QueryDefs</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.ExecuteSQL</B></TD>
+<TD class=TT width=53%>Metodo <I>Database</I><B>.Execute</B> e proprietà <I>Database</I><B>.RecordsAffected</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.ListTables</B></TD>
+<TD class=TT width=53%>Insieme <I>Database</I><B>.TableDefs</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.OpenQueryDef</B></TD>
+<TD class=TT width=53%>Insieme <I>Database</I><B>.QueryDefs</B> </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.OpenTable</B></TD>
+<TD class=TT width=53%><I>Database</I><B>.OpenRecordset</B> di tipo <B>dbOpenTable</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Database</I><B>.Rollback</B></TD>
+<TD class=TT width=53%><I>AreaLavoro</I><B>.Rollback</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>Metodo <B>ListFields</B> degli oggetti <B>Table</B>, <B>Dynaset</B> e <B>Snapshot</B></TD>
+<TD class=TT width=53%>Insieme <I>Recordset</I><B>.Fields</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>Tabella</I><B>.ListIndexes</B></TD>
+<TD class=TT width=53%>Insieme <I>TableDef</I><B>.Indexes</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>QueryDef</I><B>.CreateDynaset</B></TD>
+<TD class=TT width=53%><I>QueryDef</I><B>.OpenRecordset</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>QueryDef</I><B>.CreateSnapshot</B></TD>
+<TD class=TT width=53%><I>QueryDef</I><B>.OpenRecordset</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%><I>QueryDef</I><B>.ListParameters</B></TD>
+<TD class=TT width=53%>Insieme <I>QueryDef</I><B>.Parameters</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>Oggetto <B>Dynaset</B></TD>
+<TD class=TT width=53%>Oggetto <B>Recordset</B> di tipo dynaset</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>Oggetto <B>Snapshot</B></TD>
+<TD class=TT width=53%>Oggetto <B>Recordset</B> di tipo snapshot</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>Oggetto <B>Table</B></TD>
+<TD class=TT width=53%>Oggetto <B>Recordset</B> di tipo tabella</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>Metodo <B>CreateDynaset</B> degli oggetti <B>Dynaset</B> e <B>QueryDef</B></TD>
+<TD class=TT width=53%><I>Recordset</I><B>.OpenRecordset</B> con parametro <B>dbOpenDynaset</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=47%>Metodo <B>CreateSnapshot</B> degli oggetti<BR>
+<B>Dynaset</B> e <B>QueryDef</B></TD>
+<TD class=TT width=53%><I>Recordset</I><B>.OpenRecordset</B> con parametro <B>dbOpenSnapshot</B></TD>
+</TR>
+</TABLE><BR>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconDAOObjectLibraryCompatibilityW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

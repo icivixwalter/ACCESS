@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjReportX'
+Feature='acobj'
+Handoff='1'
+SourceFile='aobjv8.rtf'
+Tnum='186474'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Report e di insieme Reports</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjreportx"></A>Esempio di oggetto Report e di insieme Reports</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come creare un nuovo report e impostare determinate proprietà.</P>
+
+<PRE class=CT><CODE>Sub NuovoReport()
+&nbsp;&nbsp;&nbsp; Dim rpt As Report
+
+&nbsp;&nbsp;&nbsp; ' Restituisce una variabile di tipo dati Report che punta 
+&nbsp;&nbsp;&nbsp; ' al nuovo oggetto Report.
+&nbsp;&nbsp;&nbsp; Set rpt = CreateReport
+&nbsp;&nbsp;&nbsp; ' Imposta le proprietà per il nuovo report.
+&nbsp;&nbsp;&nbsp; With rpt
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .RecordSource = "Prodotti"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Caption = "Report Prodotti"
+&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; ' Ripristina il nuovo report.
+&nbsp;&nbsp;&nbsp; DoCmd.Restore
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo viene indicato come scorrere l'insieme <B>Reports</B> e stampare il nome di ciascun report dell'insieme <B>Reports</B>. Viene enumerato quindi l'insieme <B>Controls</B> di ciascun report e stampato il nome di ciascun controllo del report.</P>
+
+<PRE class=CT><CODE>Sub ReportAperti()
+&nbsp;&nbsp;&nbsp; Dim rpt As Report, ctl As Control
+
+&nbsp;&nbsp;&nbsp; ' Scorre insieme Reports.
+&nbsp;&nbsp;&nbsp; For Each rpt In Reports
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stampa il nome del report
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print rpt.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Scorre insieme Controls di ciascun report.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For Each ctl In rpt.Controls
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stampa il nome di ciascun controllo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "&gt;&gt;&gt;"; ctl.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next ctl
+&nbsp;&nbsp;&nbsp; Next rpt
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

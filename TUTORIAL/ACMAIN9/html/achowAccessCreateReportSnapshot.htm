@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowAccessCreateReportSnapshot'
+Feature='Reports: Report Snapshots'
+Handoff='3'
+SourceFile='Snapshot.rtf'
+Tnum='261216'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare lo snapshot di un report</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowaccesscreatereportsnapshot"></A>Creare lo snapshot di un report</H1>
+
+<OL>
+	<LI class=LPROC>Nella finestra del database fare clic sul nome del report da esportare, quindi scegliere <B>Esporta</B> dal menu <B>File</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Dalla casella <B>Tipo file</B> selezionare <B>Formato Snapshot (*.snp)</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sulla freccia a destra della casella <B>Salva in</B> e selezionare l'unità o la cartella in cui effettuare l'esportazione. <BR><BR></LI>
+
+	<LI class=LPROC>Nella casella <B>Nome file</B> immettere il nome del file.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere il pulsante <B>Salva</B>.
+<P class=LT1>In base all'impostazione predefinita, lo snapshot del report viene visualizzato in Snapshot Viewer. Se è la prima volta che si crea lo snapshot di un report e si è scelto di non installare Snapshot Viewer durante l'installazione di Microsoft Access, Snapshot Viewer verrà installato automaticamente.
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+<UL>
+	<LI class=NLB>Lo snapshot del report si basa sul set di record che compone il report, comprese eventuali impostazioni della proprietà <B>Ordina per</B> o <B>Filtro</B>. <BR><BR></LI>
+
+	<LI class=NLB>Se il report contiene una query con parametri, vengono prima richiesti i valori dei parametri e poi viene inviato l'output dei risultati.<BR><BR></LI>
+
+	<LI class=NLB>È inoltre possibile <A HREF="achowAccessCreateReportSnapshotOutputTo.htm">utilizzare l'azione <B>OutputSu</B> in una macro per esportare un report in formato snapshot</A>.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowAccessCreateReportSnapshotW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

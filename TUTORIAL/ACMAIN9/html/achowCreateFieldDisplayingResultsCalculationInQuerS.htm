@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateFieldDisplayingResultsCalculationInQuerS'
+Feature='Queries: Expressions'
+Handoff='1'
+SourceFile='CQRYCAL_1.RTF'
+Tnum='188023'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare un campo per l'esecuzione di calcoli personalizzati o la manipolazione dei valori di campo in una query</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="aclsaUsingExpressionBuilder">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowcreatefielddisplayingresultscalculationinquers"></A>Creare un campo per l'esecuzione di calcoli personalizzati o la manipolazione dei valori di campo in una query</H1>
+
+<P class=LPROCT>È possibile creare un nuovo campo che visualizzi i risultati di un calcolo definito da un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A>.
+
+<OL>
+	<LI class=LPROC>Aprire la query in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Effettuare una delle seguenti operazioni:
+<UL>
+	<LI class=LB2>Digitare un'espressione in una cella vuota della riga <B>Campo</B>. Se l'espressione include un nome di campo, è necessario scrivere il nome tra parentesi quadre.</LI>
+</UL>
+
+<P class=LA><IMG SRC="images/cqrycal1.bmp" ALT="Nomi di campo tra parentesi quadre in un'espressione" BORDER=0>
+
+<UL>
+	<LI class=LB2>Se è necessario un aiuto per creare l'espressione, utilizzare il <A HREF="javascript:HelpPopup('actip9.hlp','defExpressionBuilder');" class="pop">Generatore di espressioni</A>. Per visualizzarlo, fare clic con il pulsante destro del mouse sulla cella <B>Campo</B> in cui si desidera aggiungere il campo calcolato, quindi fare clic su <B>Genera</B>. Per ulteriori informazioni sull'uso del Generatore di espressioni, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+<P class=LT1>Dopo aver premuto INVIO o essersi spostati su un'altra cella, verrà immesso il nome di campo predefinito Espr<I>N</I>, dove <I>N</I> è un numero intero incrementato per ciascun nuovo campo di espressione della query. Il nome viene visualizzato prima dell'espressione ed è seguito da due punti. In un <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> tale nome è l'intestazione della colonna.
+</LI>
+</UL>
+
+<P class=LA><IMG SRC="images/cqrycal2.bmp" ALT="Sostituire Expr1 per modificare il nome di campo predefinito dell'espressione" BORDER=0>
+
+<P class=LT1>È possibile sostituire Espr<I>N</I> con un nome più descrittivo, quale PrezzoNuovo.
+</LI>
+
+	<LI class=LPROC>Se l'espressione include una o più funzioni di aggregazione (<B>Somma</B>, <B>Media</B>, <B>Conteggio</B>, <B>Min</B>, <B>Max</B>, <B>DevSt</B>, o <B>Var</B>) e se la griglia di struttura include un altro campo o altri campi che si desidera utilizzare per eseguire un raggruppamento, scegliere <B>Totali</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrTotalsQ');" class="pop"><IMG SRC="images/totals.bmp" BORDER=0></A> sulla barra degli strumenti, a meno che non sia già visualizzata la riga <B>Totale</B>. Non modificare <B>Raggruppare per</B> nella cella <B>Totale</B> per il campo di raggruppamento, ma nel campo calcolato modificare <B>Raggruppare per</B> in <B>Espressione</B>.
+<P class=LA><IMG SRC="images/cqrycal3.bmp" ALT="Per raggruppare i record, aggiungere Raggruppare per e Espressione nella riga Totale" BORDER=0>
+</LI>
+
+	<LI class=LPROC>Se si desidera, effettuare una delle seguenti operazioni per completare la query:
+<UL>
+	<LI class=LB2>Immettere dei criteri per influire sul calcolo. Per ulteriori informazioni, fare clic su <A HREF="achowEntercriteriaInQueryCalculatesAggregatesUsingTotalRowS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB2>Ordinare i risultati. Per ulteriori informazioni, fare clic su <A HREF="achowSortRecordsBySpecifyingSortOrderInQueryFilterS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB2>Impostare le proprietà del campo quali <B>Formato</B>, poiché il campo non eredita le proprietà della tabella sottostante. Per ulteriori informazioni, fare clic su <A HREF="achowSetPropertiesQueryItsFieldsFieldListsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=LB1>La query Dettagli ordini complessivi nel database di esempio Northwind riporta un esempio di un campo calcolato denominato PrezzoComplessivo. La query Subtotale ordini riporta un esempio di campo calcolato chiamato Subtotale che esegue dei calcoli su gruppi di record. Per visualizzare tali query, aprire il database Northwind nella sottocartella Esempi della cartella di Office, quindi aprire la query Dettagli ordini complessivi o Subtotale ordini in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A>. Per ulteriori informazioni sull'apertura del database Northwind, fare clic su <A HREF="acconNorthwind.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Per immettere o visualizzare un'intera espressione senza effettuare uno scorrimento, premere la combinazione di tasti MAIUSC +F2 in modo da visualizzare la casella <B>Zoom</B>.<BR><BR></LI>
+
+	<LI class=LB1>Per vedere esempi di espressioni, fare clic su <A HREF="acconExamplesExpressionsCalculatedFieldsInQueriesFS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateFieldDisplayingResultsCalculationInQuerSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

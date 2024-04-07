@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproConnectionStringX'
+Feature='acpro'
+Handoff='2'
+SourceFile='acproV9.doc'
+Tnum='279692'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ConnectionString</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproconnectionstringx"></A>Esempio di proprietà ConnectionString</B></P>
+
+<P class=T>L'esempio seguente visualizza l'impostazione della proprietà <B>ConnectionString</B> della pagina di accesso ai dati attualmente attiva:</P>
+
+<PRE class=CT><CODE>Dim objCurrent As Object
+Set objCurrent = Application.DataAccessPages(0)
+MsgBox "La connessione di base corrente è " _
+  &amp; objCurrent.<B>ConnectionString</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

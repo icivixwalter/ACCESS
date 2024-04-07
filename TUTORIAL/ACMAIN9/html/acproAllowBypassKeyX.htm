@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproAllowBypassKeyX'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew.doc'
+Tnum='258481'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà AllowBypassKey</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproallowbypasskeyx"></A>Esempio di proprietà AllowBypassKey</B></P>
+
+
+
+<P class=T>Nell'esempio che segue viene illustrata una routine denominata SetBypassProperty che passa il nome della proprietà da impostare, il tipo di dati e l'impostazione desiderata della stessa. La routine di tipo generico ChangeProperty tenta di impostare la proprietà <B>AllowBypassKey</B> e, se non la trova, utilizza il metodo <B>CreateProperty</B> per accodarla all'insieme <B>Properties</B>. Questa operazione è necessaria perché questa proprietà non appare nell'insieme <B>Properties</B> finché non viene aggiunta.</P>
+
+<PRE class=CT><CODE>Sub SetBypassProperty()
+Const DB_Boolean As Long = 1
+    ChangeProperty "<B>AllowBypassKey</B>", DB_Boolean, False
+End Sub
+
+Function ChangeProperty(strPropName As String, varPropType As Variant, varPropValue As Variant) As Integer
+    Dim dbs As Object, prp As Variant
+    Const conPropNotFoundError = 3270
+
+    Set dbs = CurrentDb
+    On Error GoTo Change_Err
+    dbs.Properties(strPropName) = varPropValue
+    ChangeProperty = True
+
+Change_Bye:
+    Exit Function
+
+Change_Err:
+    If Err = conPropNotFoundError Then    ' Proprietà non trovata.
+        Set prp = dbs.CreateProperty(strPropName, _
+            varPropType, varPropValue)
+        dbs.Properties.Append prp
+        Resume Next
+    Else
+        ' Errore sconosciuto.
+        ChangeProperty = False
+        Resume Change_Bye
+    End If
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

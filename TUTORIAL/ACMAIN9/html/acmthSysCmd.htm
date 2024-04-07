@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthSysCmd'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186385'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo SysCmd</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthsyscmd"></A>Metodo SysCmd</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthSysCmdC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthSysCmdX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare il metodo <B>SysCmd</B> per eseguire una delle seguenti funzioni:
+
+<UL>
+	<LI class=LB1>Visualizzare un indicatore di avanzamento o testo specificato facoltativo nella barra di stato.<BR><BR></LI>
+
+	<LI class=LB1>Restituire informazioni relative a Microsoft Access e ai file associati.<BR><BR></LI>
+
+	<LI class=LB1>Restituire lo stato di un determinato <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetto di database</A> per indicare se l'oggetto è aperto, se si tratta di un nuovo oggetto o se è stato modificato ma non salvato.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Se, ad esempio, si struttura una Creazione guidata personalizzata che crea una nuova maschera, è possibile utilizzare il metodo <B>SysCmd</B> per visualizzare un indicatore di avanzamento che indica l'avanzamento della Creazione guidata durante la progettazione della maschera.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN>ValoreRestituito <B>= SysCmd(</B><I>azione</I>[, <I>testo</I>][, <I>valore</I>]<B>)</B></P>
+
+<P class=SYN>StatoOggetto <B>= SysCmd(</B><I>azione</I>[, <I>tipooggetto</I>][, <I>nomeoggetto</I>]<B>)</B></P>
+
+
+
+<P class=T>Il metodo <B>SysCmd</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=21%>Argomento</TH>
+<TH colspan=2 width=79%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>azione</I></TD>
+<TD class=TT colspan=2 width=79%>Una delle <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A> riportate di seguito che identificano il tipo di azione da eseguire.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT colspan=2 width=79%>Tale set di costanti è applicato a un indicatore di avanzamento. Il metodo <B>SysCmd</B> restituisce un valore <B>Null</B> se le azioni hanno esito positivo. In caso contrario, viene generato un <A HREF="javascript:HelpPopup('actip9.hlp','defRunTimeError');" class="pop">errore di run-time</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>acSysCmdInitMeter</B></TD>
+<TD class=TT width=38%>Inizializza l'indicatore di avanzamento. Quando si utilizza questa azione, è necessario specificare gli argomenti <I>testo</I> e <I>valore</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdUpdateMeter</B></TD>
+<TD class=TT width=38%>Aggiorna l'indicatore di avanzamento con il valore specificato. Quando si utilizza questa azione, è necessario specificare l'argomento <I>testo</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdRemoveMeter</B></TD>
+<TD class=TT width=38%>Rimuove l'indicatore di avanzamento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdSetStatus</B></TD>
+<TD class=TT width=38%>Imposta il testo della barra di stato all'argomento <I>testo</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdClearStatus</B>
+
+</TD>
+<TD class=TT width=38%>Ripristina il testo della barra di stato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT colspan=2 width=79%>Il set di costanti riportato di seguito fornisce informazioni su Microsoft Access.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdRuntime</B></TD>
+<TD class=TT width=38%>Restituisce <B>True</B> (-1) se è in esecuzione una versione di run-time di Microsoft Access.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdAccessVer</B></TD>
+<TD class=TT width=38%>Restituisce il numero della versione di Microsoft Access.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdIniFile</B></TD>
+<TD class=TT width=38%>Restituisce il nome del file ini associato a Microsoft Access.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdAccessDir</B></TD>
+<TD class=TT width=38%>Restituisce il nome della directory in cui è posizionato Msaccess.exe.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>acSysCmdProfile</B></TD>
+<TD class=TT width=38%>Restituisce l'impostazione di <B>/profile</B> specificata dall'utente all'avvio di Microsoft Access dalla riga di comando.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdGetWorkgroupFile</B></TD>
+<TD class=TT width=38%>Restituisce il percorso al file del gruppo di lavoro (System.mdw).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>acSysCmdClearHelpTopic</B></TD>
+<TD class=TT width=38%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT colspan=2 width=79%>La costante riportata di seguito fornisce informazioni sullo stato di un oggetto di database.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=41%><B>AcSysCmdGetObjectState</B></TD>
+<TD class=TT width=38%>Restituisce lo stato dell'oggetto di database specificato. Quando si utilizza questo valore <I>azione</I>, è necessario specificare le parti <I>tipooggetto</I> e <I>nomeoggetto</I>.
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>testo</I></TD>
+<TD class=TT colspan=2 width=79%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che identifica il testo da visualizzare allineato a sinistra nella barra di stato. Questo argomento viene richiesto quando l'argomento <I>azione</I> è <B>acSysCmdInitMeter</B>, <B>acSysCmdUpdateMeter</B> o <B>acSysCmdSetStatus</B>; non è valido per altri valori di <I>azione</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>valore</I></TD>
+<TD class=TT colspan=2 width=79%><A HREF="javascript:HelpPopup('actip9.hlp','defNumericExpression');" class="pop">Espressione numerica</A> che controlla la visualizzazione dell'indicatore di avanzamento. Questo argomento viene richiesto quando l'argomento <I>azione</I> è <B>acSysCmdInitMeter</B>; non è valido per altri valori di <I>azione</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>tipooggetto</I></TD>
+<TD class=TT colspan=2 width=79%>Una delle costanti intrinseche riportate di seguito.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT colspan=2 width=79%><B>acTable<BR>
+acQuery<BR>
+acForm<BR>
+acReport<BR>
+acMacro<BR>
+acModule<BR>
+acDataAccessPage<BR>
+acDefault<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoreProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT colspan=2 width=79%>Questo argomento viene richiesto quando l'argomento <I>azione</I> è <B>acSysCmdGetObjectState</B>; non è valido per altri valori di <I>azione</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>nomeoggetto</I></TD>
+<TD class=TT colspan=2 width=79%>Espressione stringa che corrisponde al nome valido dell'oggetto di database del tipo specificato dall'argomento <I>tipooggetto</I>. Questo argomento viene richiesto quando l'argomento <I>azione</I> è <B>acSysCmdGetObjectState</B>; non è valido per altri valori di <I>azione</I>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Richiamando il metodo <B>SysCmd</B> con le varie azioni dell'indicatore di avanzamento, è possibile visualizzare un indicatore di avanzamento nella barra di stato per un'operazione di cui è noto il numero dei passaggi o la durata e aggiornare l'indicatore in modo da indicare l'avanzamento dell'operazione.</P>
+
+<P class=T>Per visualizzare un indicatore di avanzamento nella barra di stato, è necessario innanzitutto richiamare il metodo <B>SysCmd</B> con l'argomento <I>azione</I> <B>acSysCmdInitMeter</B> e gli argomenti <I>testo</I> e <I>valore</I>. Quando l'argomento <I>azione</I> è <B>acSysCmdInitMeter</B>, l'argomento <I>valore</I> corrisponde al valore massimo dell'indicatore o al 100%.</P>
+
+<P class=T>Per aggiornare l'indicatore in modo da mostrare l'avanzamento dell'operazione, richiamare il metodo <B>SysCmd</B> con l'argomento <I>azione</I> <B>acSysCmdUpdateMeter</B> e l'argomento <I>valore</I>. Quando l'argomento <I>azione</I> è <B>acSysCmdUpdateMeter</B>, il metodo <B>SysCmd</B> utilizza l'argomento <I>valore</I> per calcolare la percentuale visualizzata dall'indicatore. Se, ad esempio, viene impostato il valore massimo a 200 e l'indicatore viene quindi aggiornato a un valore di 100, l'indicatore di avanzamento viene visualizzato riempito per metà.</P>
+
+<P class=T>È inoltre possibile modificare il testo visualizzato nella barra di stato richiamando il metodo <B>SysCmd</B> con l'argomento <I>azione</I> <B>acSysCmdSetStatus</B> e l'argomento <I>testo</I>. Durante un ordinamento, ad esempio, è possibile modificare il testo in "Ordinamento in corso...". Quando l'ordinamento è stato completato, è possibile ripristinare la barra di stato rimuovendo il testo. L'argomento <I>testo</I> può contenere circa 80 caratteri. Poiché il testo della barra di stato viene visualizzato utilizzando un tipo di carattere proporzionale, il numero effettivo di caratteri che è possibile visualizzare viene determinato dalla larghezza complessiva di tutti i caratteri specificati dall'argomento <I>testo</I>.</P>
+
+<P class=T>Aumentando la larghezza del testo della barra di stato, si diminuisce la lunghezza dell'indicatore. Se il testo eccede la lunghezza della barra di stato e l'argomento <I>azione</I> è <B>acSysCmdInitMeter</B>, il metodo <B>SysCmd</B> ignora il testo e nella barra di stato non viene visualizzato nulla. Se il testo eccede la lunghezza della barra di stato e l'argomento <I>azione</I> è <B>acSysCmdSetStatus</B>, il metodo <B>SysCmd</B> tronca il testo per adattarlo alla barra di stato.</P>
+
+<P class=T>Non è possibile impostare il testo della barra di stato a una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A> (" "). Se si desidera rimuovere il testo esistente dalla barra di stato, impostare l'argomento <I>testo</I> a uno spazio. Negli esempi riportati di seguito vengono illustrati i metodi per rimuovere il testo dalla barra di stato:</P>
+
+<PRE class=CT><CODE>varRestituito = SysCmd(acSysCmdInitMeter, " ", 100)
+varRestituito = SysCmd(acSysCmdSetStatus, " ")</CODE></PRE>
+
+
+
+<P class=T>Se l'indicatore di avanzamento viene già visualizzato quando si imposta il testo richiamando il metodo <B>SysCmd</B> con l'argomento <I>azione</I> <B>acSysCmdSetStatus</B>, il metodo <B>SysCmd</B> rimuove automaticamente l'indicatore.</P>
+
+<P class=T>Richiamare il metodo <B>SysCmd</B> con altre azioni per determinare le informazioni di sistema relative a Microsoft Access che comprendono il numero della versione in esecuzione, se si tratta di una versione run-time, la posizione del file eseguibile di Microsoft Access, l'impostazione dell'argomento <B>/profile</B> specificato nella riga di comando e il nome di un file ini associato a Microsoft Access.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Sia le impostazioni generali che quelle personalizzate di Microsoft Access sono memorizzate nel registro di configurazione di Windows, quindi è probabile che non sia necessario un file ini con l'applicazione di Microsoft Access. L'argomento <I>azione</I> <B>acSysCmdIniFile</B> è presente per motivi di compatibilità con le versioni precedenti di Microsoft Access.</P>
+
+
+
+<P class=T>Richiamare il metodo <B>SysCmd</B> con l'argomento <I>azione</I> <B>acSysCmdGetObjectState</B> e gli argomenti <I>tipooggetto</I> e <I>nomeoggetto</I> per restituire lo stato di un determinato oggetto di database. Un oggetto può essere caratterizzato da quattro stati: non aperto o non esistente, aperto, nuovo o modificato ma non salvato.</P>
+
+<P class=T>Se, ad esempio, viene progettata una Creazione guidata che inserisce un nuovo campo in una tabella, è necessario determinare se la struttura della tabella è stata modificata ma non ancora salvata, in modo da poterla salvare prima di modificarne la struttura. Per determinare lo stato della tabella, è possibile verificare il valore restituito dal metodo <B>SysCmd</B>.</P>
+
+<P class=T>È possibile che il metodo <B>SysCmd</B> con l'argomento <I>azione</I> <B>acSysCmdGetObjectState</B> restituisca una qualsiasi combinazione delle costanti riportate di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=28%>Costante</TH>
+<TH width=36%>Stato dell'oggetto di database</TH>
+<TH width=36%>Valore</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>acObjStateOpen</B></TD>
+<TD class=TT width=36%>Aperto</TD>
+<TD class=TT width=36%>1</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>acObjStateDirty</B></TD>
+<TD class=TT width=36%>Modificato ma non salvato</TD>
+<TD class=TT width=36%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>acObjStateNew</B></TD>
+<TD class=TT width=36%>Nuovo</TD>
+<TD class=TT width=36%>4</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se l'oggetto a cui fa riferimento l'argomento <I>nomeoggetto</I> non è aperto o non esiste, il metodo <B>SysCmd</B> restituisce un valore zero.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

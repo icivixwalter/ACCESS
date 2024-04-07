@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlPARAMETERSX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234504'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di dichiarazione PARAMETERS (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlparametersx"></A>Esempio di dichiarazione PARAMETERS (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si richiede il cognome di un impiegato e si utilizza tale informazione come criterio per la query:</P>
+
+<PRE class=CT><CODE><B>PARAMETERS</B> [Immettere un cognome:] Text;
+SELECT *
+FROM Impiegati
+WHERE Cognome = [Immettere un cognome:];</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si richiede un ID categoria e si utilizza tale informazione come criterio per la query:</P>
+
+<PRE class=CT><CODE><B>PARAMETERS</B> [Immettere un ID categoria:] Valore;
+SELECT IDCategoria, NomeProdotto, _
+    Conteggio([Dettagli ordini].IDOrdine) AS Registrazione
+FROM Prodotti
+INNER JOIN [Dettagli ordini] ON Prodotti.IDProdotto = _
+    [Dettagli ordini].IDProdotto
+GROUP BY IDCategoria, NomeProdotto
+HAVING IDCategoria = [Immettere un ID categoria:];</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconBeforeYouUpsizeAccessDatabase'
+Feature='Access Project: Upsizing'
+Handoff='3'
+SourceFile='ccsupwiz.rtf'
+Tnum='274144'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Prima di effettuare l'upsize di un database di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rphowMakeDatabaseRegular">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconbeforeyouupsizeaccessdatabase"></A>Prima di effettuare l'upsize di un database di Microsoft Access</H1>
+
+<P class=T>Prima di effettuare l'upsize di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> in un database di Microsoft SQL Server o in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>, è opportuno effettuare le seguenti operazioni:</P>
+
+<P class=T><B>Eseguire un backup del database&nbsp;&nbsp;</B> Sebbene l'Upsize guidato non rimuova alcun dato o oggetto dal database di Access, è opportuno creare una copia di backup del database prima di effettuarne l'upsize.</P>
+
+<P class=T><B>Accertarsi di avere a disposizione una quantità di spazio su disco sufficiente</B> sulla periferica che conterrà il database di SQL Server sottoposto a upsize. Le prestazioni dell'Upsize guidato sono migliori quando la quantità di spazio disponibile su disco è considerevole.</P>
+
+<P class=T>Se sul server è disponibile una grande quantità di spazio su disco disponibile, moltiplicare la dimensione del database di Access per due e riservare quello spazio. In questo modo si garantisce alla procedura guidata una quantità di spazio sufficiente per effettuare l'upsize del database e un considerevole margine per espansioni future. Se si prevede di aggiungere molti dati al database, moltiplicare per un multiplo superiore.</P>
+
+<P class=T><B>Attenzione&nbsp;&nbsp;</B> Se lo spazio su disco del server per l'Upsize guidato si esaurisce, la procedura si blocca, lasciando un database parziale e le eventuali periferiche create sul server. In questo caso, è possibile eliminare le periferiche, i database e le tabelle utilizzando Microsoft SQL Server Enterprise Manager.</P>
+
+<P class=T><B>Se si desidera, creare più periferiche a disco&nbsp;&nbsp;</B> Se si sta effettuando l'upsize in un database di SQL Server 6.5, è possibile creare delle periferiche prima di eseguire l'Upsize guidato. L'Upsize guidato crea tutte le nuove periferiche sullo stesso disco fisico in cui risiede il database master. Se il server dispone di più dischi, è possibile collocare il database su un disco e il file di registro delle transazioni su un altro disco. Nel caso di un problema del disco, sarà così possibile ripristinare il database. Accertarsi che le periferiche su entrambi i dischi siano grandi abbastanza. Se necessario, creare nuove periferiche. </P>
+
+<P class=T>In SQL Server i database e i file di registro delle transazioni possono estendersi su diverse periferiche. L'Upsize guidato consente tuttavia di specificare una sola periferica per il database e una per il file di registro delle transazioni. Per specificare più periferiche per un database o per un file di registro delle transazioni, rendere predefinite tali periferiche (e nessun'altra). A questo punto eseguire l'Upsize guidato e selezionare la periferica del file di registro delle transazioni o del database predefinita.</P>
+
+<P class=T><B>Nota&nbsp;&nbsp;</B> Se le dimensioni del nuovo database di SQL Server o le dimensioni del file di registro delle transazioni non richiedono l'utilizzo di tutte le periferiche impostate come predefinite, SQL Server utilizza unicamente le periferiche necessarie.</P>
+
+<P class=T><B>Impostare una stampante predefinita</B>&nbsp;&nbsp; È necessario <A HREF="ofhowSetDefaultPrinterInWindows.htm">impostare una stampante predefinita</A> per l'Upsize guidato in quanto questa procedura guidata crea automaticamente <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefReportSnapshot');" class="pop">uno snapshot</A> del report dell'Upsize guidato.</P>
+
+<P class=T><B>Assegnarsi le autorizzazioni appropriate per il database di Access&nbsp;&nbsp;</B> Sono necessarie le autorizzazioni di Lettura struttura per tutti gli oggetti di database per sottoporli a upsize.</P>
+
+<P class=T><B>Assegnarsi le autorizzazioni appropriate per il database di SQL Server</B>
+
+<UL>
+	<LI class=LB1>Per effettuare l'upsize in un database esistente, è necessario essere in possesso delle autorizzazioni CREATE TABLE e CREATE DEFAULT.<BR><BR></LI>
+
+	<LI class=LB1>Per creare un nuovo database, è necessario essere in possesso dell'autorizzazione CREATE DATABASE e delle autorizzazioni SELECT per le tabelle di sistema del database master. <BR><BR></LI>
+
+	<LI class=LB1>Solo gli amministratori del sistema possono creare nuove periferiche.</LI>
+</UL>
+
+<P class=T><B>Aderire fin dall'inizio alle regole di denominazione di SQL Server 6.5&nbsp;&nbsp;</B> Se si effettua l'upsize in un database di SQL Server 6.5, l'Upsize guidato converte i nomi non validi trasformando gli spazi e i caratteri non consentiti in caratteri di sottolineatura (_). È tuttavia opportuno aderire fin dall'inizio alle regole di denominazione di SQL Server 6.5, se possibile. I nomi di SQL Server 6.5 possono contenere al massimo 30 caratteri, di cui il primo deve essere una lettera o il simbolo @. I caratteri successivi possono essere numeri, lettere, il simbolo del dollaro ($), il simbolo di cancelletto (#) o il carattere di sottolineatura (_). Gli spazi non sono consentiti. </P>
+
+<P class=T><B>Nota&nbsp;&nbsp;</B> I nomi dei database di SQL Server 7.0 sono completamente compatibili con i nomi dei database di Access.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconBeforeYouUpsizeAccessDatabaseW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

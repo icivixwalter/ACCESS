@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthSysCmdX'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186394'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di metodo SysCmd</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthsyscmdx"></A>Esempi di metodo SysCmd</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un oggetto <B>Recordset</B> di tipo snapshot, viene letto ciascun record e visualizzato un contatore di programma che mostra la posizione relativa corrente nello snapshot.</P>
+
+<PRE class=CT><CODE>Function ReadRecords(strTableName As String) As Integer
+&nbsp;&nbsp;&nbsp; Const conBadArgs = -1
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim lngCount As Long, strMsg As String
+&nbsp;&nbsp;&nbsp; Dim varReturn As Variant, lngX As Long
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ReadRecords = 0
+&nbsp;&nbsp;&nbsp; If strTableName &lt;&gt; "" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.Hourglass True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On Error Resume Next
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordSet(strTableName)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Richiama il numero di record.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.MoveLast
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.MoveFirst
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Err Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReadRecords = conBadArgs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lngCount = rst.RecordCount
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; On Error GoTo 0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If lngCount Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = "Lettura in corso " &amp; UCase$(strTableName) &amp; "..."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varReturn = <B>SysCmd(</B>acSysCmdInitMeter, strMsg, lngCount<B>)</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Visualizza il messaggio nella barra di stato.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For lngX = 1 To lngCount
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varReturn = <B>SysCmd(</B>acSysCmdUpdateMeter, lngX<B>)</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiorna il contatore.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Esegue operazioni con i record.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.MoveNext&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Passa al record successivo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next lngX
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varReturn = SysCmd(acSysCmdClearStatus)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GoSub ChiudiOggetti
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReadRecords = lngCount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Restituisce il numero di record.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Function
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; ' Nessun record trovato o mancante.
+&nbsp;&nbsp;&nbsp; strMsg = "La tabella '" &amp; strTableName &amp; "'non è stata trovata o non contiene record.'"
+&nbsp;&nbsp;&nbsp; MsgBox strMsg, vbInformation, "LeggiRecord"
+&nbsp;&nbsp;&nbsp; GoSub ChiudiOggetti
+&nbsp;&nbsp;&nbsp; Exit Function
+ChiudiOggetti:
+&nbsp;&nbsp;&nbsp; On Error Resume Next
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; dbs.Close
+&nbsp;&nbsp;&nbsp; On Error GoTo 0
+&nbsp;&nbsp;&nbsp; DoCmd.Hourglass False
+&nbsp;&nbsp;&nbsp; Return
+End Function</CODE></PRE>
+
+
+
+<P class=T>L'esempio riportato di seguito illustra l'utilizzo del metodo <B>SysCmd</B> con l'argomento dell'<I>azione</I> <B>acSysCmdGetObjectState</B> per determinare lo stato dell'oggetto di database attivo.</P>
+
+<PRE class=CT><CODE>Dim intObjType As Integer, strObjName As String, intObjState As Integer
+
+intObjType = Application.CurrentObjectType
+strObjName = Application.CurrentObjectName
+intObjState = <B>SysCmd(</B>acSysCmdGetObjectState, intObjType, strObjName<B>)</B>
+If intObjState &lt;&gt; 0 Then
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+End If</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

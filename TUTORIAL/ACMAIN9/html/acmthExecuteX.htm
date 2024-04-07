@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthExecuteX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234417'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Execute (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthexecutex"></A>Esempio di metodo Execute (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene eseguita una query di comando e stampato il relativo numero di record:</P>
+
+<PRE class=CT><CODE>Sub RecordAggiornati()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, qdf As QueryDef
+&nbsp;&nbsp;&nbsp; Dim strSQL As String
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; strSQL = "UPDATE Dipendenti SET Posizione = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "'Rappresentante senior' " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "WHERE Posizione = 'Rappresentante';"
+&nbsp;&nbsp;&nbsp; ' Crea il nuovo oggetto QueryDef.
+&nbsp;&nbsp;&nbsp; Set qdf = dbs.CreateQueryDef("AggiornaPosizioni", strSQL)
+&nbsp;&nbsp;&nbsp; ' Esegue QueryDef.
+&nbsp;&nbsp;&nbsp; qdf.Execute
+&nbsp;&nbsp;&nbsp; Debug.Print qdf.RecordsAffected
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

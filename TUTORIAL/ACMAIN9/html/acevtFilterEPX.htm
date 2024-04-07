@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtFilterEPX'
+Feature='acevt'
+Handoff='2'
+SourceFile='aevtv3.doc'
+Tnum='187232'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Filtro - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtfilterepx"></A>Evento Filtro - Esempio di routine evento</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito mostra in che modo disattivare il controllo TotaleDovuto su una maschera Ordini durante la creazione di un filtro per impedire l'applicazione del filtro al campo. I record che hanno un valore TotaleDovuto e soddisfano gli altri criteri del filtro verranno sempre mostrati nella maschera filtrata. In questo esempio viene utilizzata la finestra Filtro in base a maschera anziché la finestra Ordinamento/filtro avanzato.</P>
+
+<P class=T>Per eseguire l'esempio, aggiungere la routine evento a una maschera Ordini contenente un controllo TotaleDovuto. Creare un filtro tramite la finestra Ordinamento/filtro avanzato che utilizza il controllo TotaleDovuto e tramite la finestra Filtro in base a maschera.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Filter(</B>Cancel As Integer, FilterType As Integer<B>)</B>
+    If FilterType = acFilterByForm Then
+        Forms!Ordini!TotaleDovuto.Enabled = False
+    ElseIf FilterType = acFilterAdvanced Then
+        MsgBox "Il modo migliore per filtrare la maschera consiste nell'utilizzare " _
+            &amp; "il comando o il pulsante della barra degli strumenti Filtro in base a maschera.", vbOKOnly + vbInformation
+        Cancel = True
+    End If
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

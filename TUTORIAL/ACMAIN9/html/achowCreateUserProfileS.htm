@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateUserProfileS'
+Feature='Miscellaneous: User Profiles'
+Handoff='3'
+SourceFile='cmscnew_3.rtf'
+Tnum='188988'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare un profilo utente di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthSetOption">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowcreateuserprofiles"></A>Creare un profilo utente di Microsoft Access</H1>
+
+<H2>Per creare un profilo utente di Microsoft Access
+
+</H2>
+
+<OL>
+	<LI class=LPROC>Avviare l'Editor del registro di configurazione.
+<P class=LBR2><A HREF="achowUseTheRegistryEditorS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Spostarsi alla sottochiave \HKEY_LOCAL_MACHINE\SOFTWARE.<BR><BR></LI>
+
+	<LI class=LPROC>Aggiungere tre sottochiavi nidificate utilizzando il seguente formato per garantirne l'univocità: <B>\<I>Società</I>\<I>Applicazione</I>\<I>Numero versione applicazione</I></B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella sottochiave <B>\<I>Numero versione applicazione</I></B> ricreare una delle sottochiavi posizionate nella sottochiave \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Access che contengono i valori da modificare (a eccezione della sottochiave \Profiles che verrà creata al passo 7), quindi copiare i valori appropriati in ciascuna sottochiave.<BR><BR></LI>
+
+	<LI class=LPROC>Modificare i valori desiderati.<BR><BR></LI>
+
+	<LI class=LPROC>Spostarsi alla sottochiave \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Access</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Aggiungere una nuova sottochiave e assegnarle il nome <B>\Profiles</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Aggiungere una stringa alla sottochiave \Profiles e assegnarle il nome che si desidera utilizzare sulla riga di comando. <BR><BR></LI>
+
+	<LI class=LPROC>Per i dati del valore, immettere una stringa che punti alla posizione delle sottochiavi create nel passo 3: <B>\SOFTWARE\<I>Società</I>\<I>Applicazione</I>\<I>Numero versione applicazione</I></B><BR><BR></LI>
+
+	<LI class=LPROC2>Creare una riga di comando per l'applicazione che specifichi il nome immesso nel passo 8 racchiudendolo tra virgolette ("). Ad esempio: <B>MSAccess.exe /profile "Profilo" "Applicazione.mdb"</B></LI>
+</OL>
+
+<H2>Per avere la precedenza sulle impostazioni predefinite del modulo di gestione di database Jet 4.0 Microsoft per Access
+
+</H2>
+
+<OL>
+	<LI class=LPROC>Spostarsi alla sottochiave del profilo <B>\HKEY_LOCAL_MACHINE\SOFTWARE\<I>Società</I>\<I>Applicazione</I>\<I>Numero versione applicazione</I></B>.<BR><BR></LI>
+
+	<LI class=LPROC>Creare una sottochiave denominata <B>\Jet\4.0\Engines</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Per ciascuna impostazione del driver interno al sistema che si desidera venga ignorata, effettuare le seguenti operazioni:
+<P class=LT1>Aggiungere una sottochiave con un nome appropriato sotto la sottochiave creata nel passo 2, ad esempio, per ignorare le impostazioni di Jet Paradox aggiungere una sottochiave chiamata "Paradox".<P class=LT1>Aggiungere a questa sottochiave i valori di nome e tipo appropriato e quindi specificare le impostazioni.
+<UL>
+	<LI class=LB2>È possibile utilizzare come modello per le proprie sottochiavi e i propri valori quelli contenuti in \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines.
+</LI>
+</UL>
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Per determinare se l'applicazione ha caricato correttamente il profilo utente di Access, è possibile utilizzare l'argomento <B>acSysCmdProfile</B> del metodo <B>SysCmd</B>. Gli utenti potrebbero, ad esempio, aprire accidentalmente l'applicazione tramite Esplora risorse (Gestione risorse in Windows 95 o Windows NT 4.0) e ignorare l'opzione della riga di comando <B>/profile</B>. Per ulteriori informazioni, fare clic su <A HREF="acmthSysCmd.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>È anche possibile utilizzare il metodo <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">Data Access Object (DAO</A>), <B>DBEngine.SetOption</B>, per modificare dinamicamente i valori del registro di configurazione di Microsoft Jet all'esecuzione di una singola sessione, senza modificare in modo permanente i valori del registro di configurazione di Windows. Per ulteriori informazioni, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> è possibile avere lo stesso set di chiavi del registro di configurazione in tre modi differenti, ma è possibile utilizzare solo un valore. In questo caso, un profilo utente ha la precedenza su un'impostazione di un database o di un progetto di Microsoft Access, che a sua volta ha la precedenza su un'impostazione di Microsoft Jet. La seguente tabella mostra questo ordine di precedenza utilizzando l'impostazione ODBC <B>ConnectionTimeout</B> come esempio.
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=7%>Ordine</TH>
+<TH width=15%>Posizione</TH>
+<TH width=78%>Impostazione del registro sotto \HKEY_LOCAL_MACHINE\SOFTWARE...</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=7%>1</TD>
+<TD class=TT width=15%>profilo utente</TD>
+<TD class=TT width=78%><B>\<I>Società</I>\<I>Applicazione</I>\<I>Numero versione applicazione</I>\ODBC\ConnectionTimeout=100</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=7%>2</TD>
+<TD class=TT width=15%>Microsoft Access</TD>
+<TD class=TT width=78%><B>\Microsoft\Office\9.0\Access\Jet\4.0\Engines<BR> \ODBC\ConnectionTimeout=300</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=7%>3</TD>
+<TD class=TT width=15%>Microsoft Jet</TD>
+<TD class=TT width=78%><B>\Microsoft\Jet\4.0\Engines<BR> \ODBC\ConnectionTimeout=600</B></TD>
+</TR>
+</TABLE><BR>
+
+<P class=LBR2>Se si avvia l'applicazione utilizzando una riga di comando che specifica il profilo utente, verrà utilizzato il valore di <B>ConnectionTimeout</B> 100. Se invece si avvia l'applicazione senza utilizzare il profilo utente, verrà utilizzato il valore di <B>ConnectionTimeout</B> 300.
+</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateUserProfileSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

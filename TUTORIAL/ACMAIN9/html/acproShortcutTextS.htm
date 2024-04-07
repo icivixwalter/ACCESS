@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproShortcutTextS'
+Feature='acpro'
+Handoff='1'
+SourceFile='acocmdbsp_1a.doc'
+Tnum='234536'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà ShortcutText</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acproshortcuttexts"></A>Proprietà ShortcutText</H1>
+
+
+
+<P class=T>In Microsoft Access 2000 per impostare il testo di scelta rapida visualizzato a destra di un controllo di tipo pulsante incorporato di un <A HREF="javascript:HelpPopup('actip9.hlp','defMenu');" class="pop">menu</A>, un <A HREF="javascript:HelpPopup('actip9.hlp','defSubmenu');" class="pop">sottomenu</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defShortCutMenus');" class="pop">menu di scelta rapida</A>, è possibile utilizzare la finestra di dialogo <B>Proprietà dei controlli</B> <I>Barra degli strumenti</I> per i controlli della<A HREF="javascript:HelpPopup('actip9.hlp','defCommandBar');" class="pop"> barra dei comandi</A>. Visualizzare la finestra di dialogo <B>Personalizza</B> scegliendo <B>Barre degli strumenti</B> dal menu <B>Visualizza</B> e facendo clic su <B>Personalizza</B>. Per i controlli della <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBar');" class="pop">barra dei menu</A> e della <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A>, visualizzare la barra dei menu o quella degli strumenti, quindi fare clic con il pulsante destro del mouse sul controllo di tipo pulsante di cui si desidera impostare la proprietà <B>ShortcutText</B>. Per i controlli dei menu di scelta rapida, selezionare la casella di controllo <B>Menu di scelta rapida</B> nella scheda <B>Barre degli strumenti</B> della finestra di dialogo <B>Personalizza</B>, quindi trovare il controllo del menu di scelta rapida desiderato nella barra dei menu visualizzata e fare clic col pulsante destro del mouse sul controllo. Fare clic sul comando <B>Proprietà</B> e, nella casella <B>Scelta rapida</B>, immettere il testo di scelta rapida desiderato. È possibile impostare tale proprietà per tutti i controlli di tipo pulsante incorporati in Microsoft Access, ma non per quelli personalizzati.</P>
+
+<P class=T>Se si imposta tale proprietà in Microsoft Access, si visualizza il testo di scelta rapida accanto al controllo. Se si modifica il testo di scelta rapida o se ne aggiunge uno nuovo nel controllo incorporato, digitando tale tasto o combinazione di tasti di scelta rapida, non viene eseguito il comando associato al controllo. Per eseguire tale comando, è necessario assegnare un tasto o combinazione di tasti di scelta rapida ad una macro AutoKeys. Nella macro AutoKeys, assegnare il tasto o la combinazione di tasti a una macro che utilizza l'azione EseguiComando.</P>
+
+<P class=T>Per i comandi personalizzati, non è possibile visualizzare il testo di scelta rapida accanto al controllo, ma è possibile utilizzare la macro AutoKeys per assegnare un tasto o combinazione di tasti di scelta rapida che eseguano lo stesso set di azioni della macro o della funzione che costituiscono l'impostazione della proprietà <B>OnAction</B> del controllo. Assegnare il tasto o la combinazione di tasti al set desiderato di azioni della macro oppure utilizzare l'azione EseguiMacro o EseguiCodice per eseguire la macro o la funzione che si desidera far eseguire dal tasto o dalla combinazione di tasti.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

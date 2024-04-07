@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctNZX'
+Feature='acfct'
+Handoff='1'
+SourceFile='afctv3_1a.doc'
+Tnum='186552'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Nz</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctnzx"></A>Esempio di funzione Nz</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si scorre il controllo di una maschera e viene restituita una delle due stringhe in base al valore del controllo. Se il valore del controllo è <B>Null</B>, la routine utilizza la funzione <B>Nz</B> per convertire un valore <B>Null</B> in una stringa a lunghezza zero.</P>
+
+<PRE class=CT><CODE>Sub VerificaValore()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, ctl As Control
+&nbsp;&nbsp;&nbsp; Dim varRisultato As Variant
+
+&nbsp;&nbsp;&nbsp; ' Restituisce la variabile di oggetto Form che punta alla maschera Ordini.
+&nbsp;&nbsp;&nbsp; Set frm = Forms!Ordini
+&nbsp;&nbsp;&nbsp; ' Restituisce la variabile di oggetto Control che punta a ZonaDestinatario.
+&nbsp;&nbsp;&nbsp; Set ctl = frm!ZonaDestinatario
+&nbsp;&nbsp;&nbsp; ' Sceglie il risultato in base al valore del controllo.
+&nbsp;&nbsp;&nbsp; varRisultato = IIf(<B>Nz(</B>ctl.Value<B>)</B> = "", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Nessun valore", "Il valore è " &amp; ctl.Value)
+&nbsp;&nbsp;&nbsp; ' Visualizza il risultato.
+&nbsp;&nbsp;&nbsp; MsgBox varRisultato 
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

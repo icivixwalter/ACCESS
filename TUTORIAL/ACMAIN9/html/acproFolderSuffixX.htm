@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFolderSuffixX'
+Feature='acpro'
+Handoff='2'
+SourceFile='acproV9.doc'
+Tnum='270174'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà FolderSuffix</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprofoldersuffixx"></A>Esempio di proprietà FolderSuffix</B></P>
+
+
+
+<P class=T>Questo esempio restituisce il suffisso di cartella utilizzato dalla pagina di accesso ai dati ("Inventario"). Il suffisso viene restituito nella variabile stringa <CODE>strFolderSuffix</CODE>.</P>
+
+<PRE class=CT><CODE>strFolderSuffix = DataAccessPages("Inventario").WebOptions.<B>FolderSuffix</B></CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

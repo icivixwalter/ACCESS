@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproAssistantX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproadd1.rtf'
+Tnum='187016'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Assistant</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproassistantx"></A>Esempio di proprietà Assistant</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito, la proprietà <B>Assistant</B> dell'oggetto <B>Application</B> viene utilizzata per manipolare varie proprietà e metodi dell'oggetto <B>Assistant</B>. Per eseguire questo esempio, incollare il codice riportato di seguito nella sezione Dichiarazioni di un modulo standard. Creare un riferimento a Microsoft Office 9.0 Object Library utilizzando la finestra di dialogo <B>Riferimenti</B> che viene visualizzata scegliendo <B>Riferimenti</B> dal menu <B>Strumenti</B>. Fare clic in un punto qualsiasi della routine e premere F5 per eseguirla.</P>
+
+<PRE class=CT><CODE>Sub AnimazioneAssistante()
+&nbsp;&nbsp;&nbsp; Dim blnStato As Boolean
+&nbsp;&nbsp;&nbsp; With <B>Assistant</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Salva lo stato visibile dell'oggetto Assistant.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; blnStato =.Visible
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Rende visibile l'oggetto Assistant.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If blnStato = False Then.Visible = True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Anima l'oggetto Assistant.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Animation = msoAnimationAppear
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Visualizza le proprietà Item e FileName dell'oggetto Assistant.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Salve, mi chiamo " &amp;.Item &amp; ". Vivo a " &amp;.FileName, "Informazioni Assistant:"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Ripristina l'impostazione originale dello stato visibile di Assistant.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Visible = blnStato
+&nbsp;&nbsp;&nbsp; End With
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

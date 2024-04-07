@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCustomizeOleLinkSettingsS'
+Feature='Miscellaneous: Registry'
+Handoff='3'
+SourceFile='CMSCNEW.RTF'
+Tnum='187475'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Specificare se i collegamenti OLE vengono salvati in formato OLE versione 2.x o 1.x</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcustomizeolelinksettingss"></A>Specificare se i collegamenti OLE vengono salvati in formato OLE versione 2.<I>x</I> o 1.<I>x</I></H1>
+
+<P class=T>È possibile specificare se i <A HREF="javascript:HelpPopup('actip9.hlp','defLink');" class="pop">collegamenti OLE</A> vengono salvati in formato OLE versione 2.<I>x</I> per salvare riferimenti relativi e assoluti all'origine del collegamento oppure nella versione 1.<I>x</I> per salvare solo i riferimenti assoluti. Un riferimento assoluto consente di recuperare dati da un oggetto che è stato memorizzato sotto forma di file. Un riferimento relativo consente di recuperare dati da un oggetto che potrebbe essere stato incorporato all'interno di un documento. In un ambiente in cui vengono utilizzate le versioni di Microsoft Access 2000 e 1.<I>x</I>, impostare questa opzione a 1 in modo da assicurare la coerenza delle operazioni di collegamento OLE nei database di Microsoft Access 1.<I>x</I>.
+
+<OL>
+	<LI class=LPROC>Avviare l'Editor del registro di configurazione.
+<P class=LBR2><A HREF="achowUseTheRegistryEditorS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Spostarsi alla sottochiave \HKEY_LOCAL_MACHINE<B><BR> </B>\SOFTWARE\Microsoft\Office\9.0\Access.<BR><BR></LI>
+
+	<LI class=LPROC>Fare doppio clic sulla sottochiave \Options. Se <B>AllowOLE1LinkFormat</B> è già presente nell'elenco della colonna <B>Nome</B> all'interno del riquadro destro dell'Editor del registro di configurazione, continuare con il passo 6.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Nuovo</B> dal menu <B>Modifica</B>, quindi scegliere <B>Valore DWORD</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Digitare <B>AllowOLE1LinkFormat</B> e premere INVIO.<BR><BR></LI>
+
+	<LI class=LPROC>Fare doppio clic su <B>AllowOLE1LinkFormat</B>, quindi immettere <B>1</B> nella casella <B>Valore</B> per salvare il collegamento in formato OLE 1.<I>x</I> oppure <B>0</B> per salvare in formato OLE 2.<I>x</I>.<BR><BR></LI>
+
+	<LI class=LPROC>Uscire dall'Editor del registro di configurazione.<BR><BR></LI>
+
+	<LI class=LPROC>Uscire e riavviare Microsoft Access per utilizzare le nuove impostazioni.</LI>
+</OL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCustomizeOleLinkSettingsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

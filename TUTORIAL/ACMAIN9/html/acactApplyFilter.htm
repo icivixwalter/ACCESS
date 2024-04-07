@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactApplyFilter'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187008'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione ApplicaFiltro</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactApplyFilter">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactapplyfilter"></A>Azione ApplicaFiltro</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactApplyFilterC;dasqlWhere">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactApplyFilterX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione ApplicaFiltro applica un <A HREF="javascript:HelpPopup('actip9.hlp','defFilter');" class="pop">filtro</A>, una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defWhereClause');" class="pop">proposizione SQL WHERE</A> a una <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabella</A>, una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A> in modo da limitare o ordinare i record contenuti nella tabella oppure i record della tabella o della query sottostante alla maschera o al report. Per i report è possibile utilizzare tale azione solo in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> specificata dalla <A HREF="acproEventProperties.htm">proprietà di evento</A> <B>Su apertura</B> del report.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile utilizzare l'azione ApplicaFiltro solo per applicare una proposizione SQL WHERE quando si applica un filtro su server. Non è possibile applicare un filtro su server all'origine record di una stored procedure.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione ApplicaFiltro utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomenti azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome filtro</TD>
+<TD class=TT width=75%>Il nome di un filtro o di una query che limita o ordina i record contenuti nella tabella, nella maschera o nel report. È possibile immettere il nome di una query esistente o di un filtro salvato come query nella casella <B>Nome filtro</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%><B>Nota</B>&nbsp;&nbsp; Quando si utilizza questa azione per applicare un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefServerFilterByForm');" class="pop">filtro su server</A>, la casella Nome filtro deve essere lasciata vuota.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Condizione WHERE</TD>
+<TD class=TT width=75%>Una proposizione SQL WHERE valida, cioè priva della parola WHERE, o un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> che limita i record contenuti nella tabella nella maschera o nel report.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp; </TD>
+<TD class=TT width=75%><B>Nota</B>&nbsp;&nbsp; Nell'espressione dell'argomento Condizione WHERE la parte sinistra dell'espressione contiene in genere un nome di campo della tabella o della query sottostante alla maschera o al report. La parte destra dell'espressione contiene in genere i <A HREF="javascript:HelpPopup('actip9.hlp','defCriteria');" class="pop">criteri</A> che si desidera applicare al campo in modo da limitare o ordinare i record. È possibile ad esempio che i criteri siano costituiti dal nome di un controllo di un'altra maschera contenente il valore a cui si desidera che corrispondano i record contenuti nella prima maschera. Il nome del controllo deve essere completo, ad esempio:
+<P class=TSYN><B>Forms</B>!<I>nomemaschera</I>!<I>nomecontrollo</I>.</P>
+
+<P class=T>I nomi di campo devono essere racchiusi tra virgolette doppie e le variabili letterali tra virgolette singole.</P>
+
+
+
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>La lunghezza massima dell'argomento Condizione WHERE è di 256 caratteri. Se si rende necessario immettere una proposizione SQL WHERE più lunga, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>ApplyFilter</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A> in Visual Basic. È possibile immettere istruzioni proposizione SQL WHERE contenenti fino a 32.768 caratteri in Visual Basic.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Tipo filtro</TD>
+<TD class=TT width=75%>Specifica se la ricerca comprende dati formattati. Selezionando <B>Normale</B> Microsoft Access ricerca i dati nel modo in cui sono stati formattati e visualizzati nel campo, mentre selezionando <B>Server</B> Microsoft Access ricerca i dati nel modo in cui sono stati memorizzati nel database, che non sempre corrisponde al modo in cui sono visualizzati. L'impostazione predefinita è Normale.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile utilizzare l'argomento Nome filtro se è già stato definito un filtro che fornisce i dati appropriati. È possibile utilizzare l'argomento Condizione WHERE per immettere direttamente i criteri di limitazione. Se si utilizzano entrambi gli argomenti, Microsoft Access applica la proposizione WHERE ai risultati del filtro. È necessario utilizzare uno o entrambi gli argomenti. </P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile applicare un filtro o una query a una maschera in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A>.</P>
+
+<P class=T>Il filtro e la condizione WHERE applicati sono i valori dell'impostazione della proprietà <A HREF="acproFilter.htm"><B>Filtro</B></A> o <A HREF="acproServerFilter.htm"><B>Filtro su server</B></A> della maschera o del report.</P>
+
+<P class=T>Per tabelle e maschere l'azione ApplicaFiltro equivale a scegliere <B>Applica filtro/ordina</B> o <B>Applica filtro su server</B> dal menu <B>Record</B> o a fare clic sul pulsante <B>Applica filtro</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrFilterOnOffQ');" class="pop"><IMG SRC="images/filter.bmp" BORDER=0></A> o <B>Applica filtro su server</B> <U><IMG SRC="images/servfilt.bmp" BORDER=0></U> della <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A>. Il comando del menu o il pulsante applica il filtro appena creato alla tabella o alla maschera, mentre l'azione ApplicaFiltro applica un determinato filtro o una query.</P>
+
+<P class=T>Se nel <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB) si sceglie <B>Filtro</B> dal menu <B>Record</B>, quindi <B>Ordinamento/filtro avanzato</B> dopo aver eseguito l'azione ApplicaFiltro, la <A HREF="javascript:HelpPopup('actip9.hlp','defAdvancedFilterSort');" class="pop">finestra Ordinamento/filtro avanzato</A> visualizzerà i criteri dei filtri selezionati tramite tale azione.</P>
+
+<P class=T>Per rimuovere un filtro e visualizzare tutti i record di una tabella o di una maschera di Access, è possibile utilizzare l'azione <A HREF="acactShowAllRecords.htm">MostraOgniRecord</A>, il comando <B>Rimuovi filtro/ordina</B> del menu <B>Record</B> o il pulsante <B>Rimuovi filtro</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrFilterOnOffQ');" class="pop"><IMG SRC="images/filter.bmp" BORDER=0></A> della barra degli strumenti. Per rimuovere un filtro da un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (ADP), è possibile tornare alla finestra Filtro su server in base a maschera, rimuovere tutti i criteri del filtro e quindi scegliere <B>Applica filtro su server</B> dal menu Record oppure fare clic sul pulsante Applica filtro su server della barra degli strumenti o ancora impostare la proprietà <A HREF="acproServerFilterByForm.htm"><B>Filtro su server da maschera</B></A> a <B>Falso</B> (0).</P>
+
+<P class=T>Quando si salva una tabella o una maschera, Microsoft Access salva qualsiasi filtro correntemente definito nell'oggetto, ma non applica automaticamente il filtro alla successiva apertura dell'oggetto, sebbene applichi automaticamente qualsiasi ordinamento relativo all'oggetto prima che venisse salvato. Se si desidera applicare automaticamente un filtro la prima volta che viene aperta una maschera, specificare una macro contenente l'azione ApplicaFiltro o una routine evento contenente il metodo <B>ApplyFilter</B> dell'oggetto <B>DoCmd</B> come impostazione della proprietà di evento <B>Su apertura</B> della maschera. È inoltre possibile applicare un filtro utilizzando l'azione <A HREF="acactOpenForm.htm">ApriMaschera</A> o <A HREF="acactOpenReport.htm">ApriReport</A> oppure i metodi corrispondenti. Per applicare automaticamente un filtro la prima volta che viene aperta una tabella, è possibile aprire la tabella utilizzando una macro contenente l'azione <A HREF="acactOpenTable.htm">ApriTabella</A>, quindi eseguire l'azione ApplicaFiltro.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

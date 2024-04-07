@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproStartupFormX'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew.doc'
+Tnum='188116'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Startup</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprostartupformx"></A>Esempio di proprietà Startup</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene illustrata una routine chiamata ImpostaProprietàAvvio che passa il nome della proprietà da impostare, il relativo tipo di dati e l'impostazione desiderata. La routine generica ModificaProprietà tenta di impostare la proprietà di avvio e se non la trova utilizza il metodo <B>CreateProperty</B> per accodarla all'insieme <B>Properties</B>. Ciò è necessario perché queste proprietà non appaiono nell'insieme <B>Properties</B> finché non sono state impostate o modificate almeno una volta.</P>
+
+<PRE class=CT><CODE>Sub SetStartupProperties()
+Const DB_Text As Long = 10
+Const DB_Boolean As Long = 1
+    ChangeProperty "<B>StartupForm</B>", DB_Text, "Customers"
+    ChangeProperty "<B>StartupShowDBWindow</B>", DB_Boolean, False
+    ChangeProperty "<B>StartupShowStatusBar</B>", DB_Boolean, False
+    ChangeProperty "<B>AllowBuiltinToolbars</B>", DB_Boolean, False
+    ChangeProperty "<B>AllowFullMenus</B>", DB_Boolean, True
+    ChangeProperty "<B>AllowBreakIntoCode</B>", DB_Boolean, False
+    ChangeProperty "<B>AllowSpecialKeys</B>", DB_Boolean, True
+    ChangeProperty "<B>AllowBypassKey</B>", DB_Boolean, True
+End Sub
+
+Function ChangeProperty(strPropName As String, varPropType As Variant, varPropValue As Variant) As Integer
+    Dim dbs As Object, prp As Variant
+    Const conPropNotFoundError = 3270
+
+    Set dbs = CurrentDb
+    On Error GoTo Change_Err
+    dbs.Properties(strPropName) = varPropValue
+    ChangeProperty = True
+
+Change_Bye:
+    Exit Function
+
+Change_Err:
+    If Err = conPropNotFoundError Then    ' Property not found.
+        Set prp = dbs.CreateProperty(strPropName, _
+            varPropType, varPropValue)
+        dbs.Properties.Append prp
+        Resume Next
+    Else
+        ' Unknown error.
+        ChangeProperty = False
+        Resume Change_Bye
+    End If
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

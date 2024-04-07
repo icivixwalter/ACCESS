@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproColumnX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprocmb1_1a.rtf'
+Tnum='187073'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Column e ColumnCount</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocolumnx"></A>Esempio di proprietà Column e ColumnCount</B></P>
+
+
+
+<P class=T>Negli esempi riportati di seguito viene indicato come utilizzare le proprietà <B>Column</B> e <B>ColumnCount</B> per stampare i valori selezionati in una casella di riepilogo.</P>
+
+<PRE class=CT><CODE>Sub Leggi_ListBox()
+&nbsp;&nbsp;&nbsp; Dim intNumColonne As Integer, inti As Integer
+&nbsp;&nbsp;&nbsp; Dim frmClienti As Form
+
+&nbsp;&nbsp;&nbsp; Set frmClienti = Forms!frmClienti
+&nbsp;&nbsp;&nbsp; If frmClienti!lstNomiClienti.ItemsSelected.Count &gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Qualsiasi selezione?
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intNumColonne = frmClienti!lstNomiClienti.<B>ColumnCount</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "La casella di riepilogo contiene"; intNumColonne; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IIf(intNumColonne = 1, " colonna", " colonne"); _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " di dati."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "La selezione corrente contiene:"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For inti = 0 To intNumColonne - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Print column data.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print frmClienti!lstNomiClienti.<B>Column</B>(inti)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next inti
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Non è stato selezionato un elemento " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp;"della casella di riepilogo."
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

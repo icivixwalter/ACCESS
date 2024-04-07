@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWhenToUpsizeMDBtoSQLServer'
+Feature='Access Project: Upsizing'
+Handoff='3'
+SourceFile='ccsupwiz.rtf'
+Tnum='273109'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Quando eseguire l'upsize di un database di Microsoft Access in Microsoft SQL Server</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwhentoupsizemdbtosqlserver"></A>Quando eseguire l'upsize di un database di Microsoft Access in Microsoft SQL Server</H1>
+
+<P class=T>Con il passare del tempo quasi tutte le applicazioni di database diventano più grandi e complesse e richiedono il supporto per più utenti. È opportuno considerare pertanto la possibilità di eseguire l'upsize del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> in Microsoft SQL Server per ottimizzare le prestazioni, la scalabilità, la protezione, l'affidabilità, il recupero e la disponibilità di database e applicazioni. In questo argomento verranno fornite informazioni di riferimento sui motivi principali per l'esecuzione dell'upsize in un database di SQL Server.</P>
+
+<P class=LBR1><A HREF="#acconwhentoupsizemdbtosqlserver_2">Scalabilità e prestazioni elevate</A></P>
+
+<P class=LBR1><A HREF="#acconwhentoupsizemdbtosqlserver_3">Maggiore disponibilità</A></P>
+
+<P class=LBR1><A HREF="#acconwhentoupsizemdbtosqlserver_1">Protezione ottimale</A></P>
+
+<P class=LBR1><A HREF="#acconwhentoupsizemdbtosqlserver_4">Recupero immediato</A></P>
+
+<P class=LBR1><A HREF="#acconwhentoupsizemdbtosqlserver_5">Dati distribuiti e transazioni affidabili</A></P>
+
+<P class=LBR1><A HREF="#acconwhentoupsizemdbtosqlserver_6">Elaborazione basata sul server</A></P>
+
+<H2><A NAME="acconwhentoupsizemdbtosqlserver_2"></A>Scalabilità e prestazioni elevate</H2>
+
+<P class=T>In molti casi Microsoft SQL Server offre prestazioni avanzate rispetto a un database di Access. SQL Server fornisce inoltre il supporto per database di grandi dimensioni, fino a un terabyte, superando di molto il limite corrente per un database di Access, ossia due gigabyte. SQL Server infine funziona in modo ottimale su Microsoft Windows NT elaborando query in parallelo (utilizzando più thread nativi in un unico processo per gestire le richieste degli utenti) e riducendo al minimo i requisiti di memoria aggiuntiva quando si aggiungono altri utenti. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhentoupsizemdbtosqlserver">inizio</A></P>
+
+<H2><A NAME="acconwhentoupsizemdbtosqlserver_3"></A>Maggiore disponibilità</H2>
+
+<P class=T>L'utilizzo di Microsoft SQL Server consente di eseguire backup dinamici, incrementali o completi, del database in uso. Non è pertanto necessario forzare gli utenti a uscire dal database per eseguire il backup e il database può rimanere in esecuzione 24 ore su 24, sette giorni su sette.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhentoupsizemdbtosqlserver">inizio</A></P>
+
+<H2><A NAME="acconwhentoupsizemdbtosqlserver_1"></A>Protezione ottimale</H2>
+
+<P class=T>Microsoft SQL Server può integrarsi con la protezione del sistema operativo Windows NT per fornire un accesso singolo alla rete e al database. Ciò facilita notevolmente l'amministrazione di schemi di protezione complessi. Un database di SQL Server su un server è più protetto perché gli utenti non autorizzati non possono accedere al file di database direttamente, ma devono prima accedere al server. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhentoupsizemdbtosqlserver">inizio</A></P>
+
+<H2><A NAME="acconwhentoupsizemdbtosqlserver_4"></A>Recupero immediato</H2>
+
+<P class=T>Se si verifica un errore di sistema, come un arresto del sistema operativo o un'interruzione dell'alimentazione, Microsoft SQL Server dispone di un meccanismo di recupero automatico in grado di recuperare un database allo stato in cui si trovava in pochi minuti, senza alcun intervento dell'amministratore del database. In questo modo le applicazioni importanti possono essere rieseguite in breve tempo.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhentoupsizemdbtosqlserver">inizio</A></P>
+
+<H2><A NAME="acconwhentoupsizemdbtosqlserver_5"></A>Dati distribuiti e transazioni affidabili</H2>
+
+<P class=T>L'elaborazione delle transazioni è un requisito essenziale per un sistema strutturato per supportare applicazioni importanti, quali le transazioni bancarie e l'immissione di ordini in linea. Microsoft SQL Server supporta le transazioni atomiche con registrazione in modo che tutte le modifiche apportate in una transazione siano confermate o annullate.</P>
+
+<P class=T>La coerenza e il recupero di una transazione di database sono garantiti anche nel caso di un errore di sistema e durante l'esecuzione di aggiornamenti complessi da parte di più utenti. SQL Server considera tutte le modifiche di database all'interno di una transazione come un'unica unità di lavoro. In base all'impostazione predefinita, possono verificarsi solo due condizioni: una transazione intera viene completata in modo sicuro e tutte le modifiche risultanti vengono applicate al database oppure la transazione viene annullata così come tutte le modifiche apportate al database.</P>
+
+<P class=T>L'utilizzo di un protocollo di esecuzione forzata in due fasi consente a SQL Server di supportare anche le transazioni sincronizzate che occupano più di un server, garantendo così il mantenimento dello stato di coerenza per tutti i server sulla rete.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhentoupsizemdbtosqlserver">inizio</A></P>
+
+<H2><A NAME="acconwhentoupsizemdbtosqlserver_6"></A>Elaborazione basata sul server</H2>
+
+<P class=T>Microsoft SQL Server è stato progettato come database <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgClientserver');" class="pop">client/server</A>. I dati e gli indici risiedono su un solo server al quale in molti casi accedono più client sulla rete. SQL Server riduce il traffico di rete elaborando le query di database sul server prima di inviare i risultati al client. In tal modo l'applicazione client/server può eseguire le elaborazioni nella posizione migliore, ossia sul server. </P>
+
+<P class=T>L'applicazione può anche utilizzare le <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgStoredProcedure');" class="pop">stored procedure</A> e i <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgTrigger');" class="pop">trigger</A> per centralizzare e condividere la logica applicativa, le regole e le strategie aziendali, le query complesse, nonché il codice di convalida dei dati e di integrità referenziale sul server, piuttosto che sul client.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhentoupsizemdbtosqlserver">inizio</A></P>
+
+<H2></H2>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWhenToUpsizeMDBtoSQLServerW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactSendObject'
+Feature='acmth'
+Handoff='2'
+SourceFile='amthact.doc'
+Tnum='186513'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo SendObject</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthactsendobject"></A>Metodo SendObject</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactSendObjectC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactSendObjectX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactSendObjectA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>SendObject</B> esegue l'azione <A HREF="acactSendObject.htm">InviaOggetto</A> in Visual Basic. Per ulteriori informazioni sul funzionamento dell'azione e dei relativi argomenti, vedere l'argomento della Guida in linea relativo all'azione.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DoCmd.SendObject</B> [<I>tipooggetto</I>][, <I>nomeoggetto</I>][, <I>formatooutput</I>][, <I>a</I>][, <I>cc</I>][, <I>ccn</I>][, <I>oggetto</I>][, <I>testomessaggio</I>][, <I>modificamessaggio</I>][, <I>filemodello</I>]</P>
+
+
+
+<P class=T>Il metodo <B>SendObject</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=DELETE colspan=2 width=100%>  </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>tipooggetto</I></TD>
+<TD class=TT width=75%>Una delle seguenti <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%><B>acSendDataAccessPage<BR>
+acSendForm</B><BR>
+<B>acSendModule</B><BR>
+<B>acSendNoObject</B> (impostazione predefinita)<BR>
+<B>acSendQuery</B><BR>
+<B>acSendReport</B><BR>
+<B>acSendTable</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>nomeoggetto</I></TD>
+<TD class=TT width=75%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che è il nome valido di un oggetto del tipo selezionato tramite l'argomento <I>tipooggetto</I>. Se si desidera includere l'oggetto attivo nel messaggio postale, specificare il tipo di oggetto con l'argomento <I>tipooggetto</I> e omettere questo argomento. Se si omettono entrambi gli argomenti <I>tipooggetto</I> e <I>nomeoggetto</I> (per l'argomento <I>tipooggetto</I> viene utilizzata la costante predefinita <B>acSendNoObject)</B>, Microsoft Access invia all'applicazione di posta elettronica un messaggio privo di un oggetto di database.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si esegue del codice di Visual Basic contenente il metodo <B>SendObject</B> in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, Microsoft Access cerca l'oggetto con questo nome prima nel database di libreria, quindi nel database corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>formatooutput</I></TD>
+<TD class=TT width=75%>Una delle seguenti costanti intrinseche:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%><B>acFormatDAP<BR>
+acFormatHTML</B><BR>
+<B>acFormatRTF</B><BR>
+<B>acFormatTXT</B><BR>
+<B>acFormatXLS</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si omette questo argomento, Microsoft Access richiede il formato del file di output.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>a</I></TD>
+<TD class=TT width=75%>Espressione stringa che elenca i nomi dei destinatari che si desidera includere nella riga 'A' del messaggio postale.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Separare i nomi dei destinatari specificati in questo argomento e negli argomenti <I>cc</I> e <I>ccn</I> con il punto e virgola (;) o con il <A HREF="javascript:HelpPopup('actip9.hlp','defSeparator');" class="pop">separatore</A> di elenco impostato nella scheda <B>Numeri</B> della finestra di dialogo <B>Proprietà - Impostazioni internazionali</B> nel Pannello di controllo di Windows. Se l'applicazione di posta elettronica non riesce ad identificare i nomi dei destinatari non invia il messaggio e si verifica un errore.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si omette questo argomento, Microsoft Access richiede i nomi dei destinatari.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>cc</I></TD>
+<TD class=TT width=75%>Espressione stringa che elenca i nomi dei destinatari che si desidera includere nella riga 'Cc' del messaggio postale. Se si omette questo argomento, la riga 'Cc' del messaggio postale rimane vuota.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>ccn</I></TD>
+<TD class=TT width=75%>Espressione stringa che elenca i nomi dei destinatari che si desidera includere nella riga 'Ccn' del messaggio postale. Se si omette questo argomento, la riga 'Ccn' del messaggio postale rimane vuota.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>oggetto</I></TD>
+<TD class=TT width=75%>Espressione stringa contenente il testo che si desidera collocare nella riga 'Oggetto' del messaggio postale. Se si omette questo argomento, la riga 'Oggetto' del messaggio postale rimane vuota.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>testomessaggio</I></TD>
+<TD class=TT width=75%>Espressione stringa contenente il testo che si desidera includere nel corpo del messaggio postale dopo l'oggetto. Se si omette questo argomento, il corpo del messaggio postale include soltanto l'oggetto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>modificamessaggio</I></TD>
+<TD class=TT width=75%>Utilizzare <B>True</B> (-1) per aprire subito l'applicazione di posta elettronica con il messaggio caricato, in modo da poterlo modificare. Utilizzare <B>False</B> (0) per inviare il messaggio senza modificarlo. Se si omette questo argomento, viene utilizzata l'impostazione predefinita (<B>True</B>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>filemodello</I></TD>
+<TD class=TT width=75%>Espressione stringa che è il nome completo, compreso il percorso, del file che si desidera utilizzare come modello per un file <A HREF="javascript:HelpPopup('actip9.hlp','defHTML');" class="pop">HTML</A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>I moduli possono essere inviati soltanto in formato testo MS-DOS, di conseguenza se si specifica <B>acSendModule</B> per l'argomento <I>tipooggetto</I>, è necessario specificare <B>acFormatTXT</B> per l'argomento <I>formatooutput</I>.</P>
+
+<P class=T>È possibile omettere un argomento facoltativo all'interno della sintassi, ma è necessario includere la virgola dell'argomento stesso. Se si omette un argomento finale, non utilizzare la virgola dopo l'ultimo argomento specificato.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

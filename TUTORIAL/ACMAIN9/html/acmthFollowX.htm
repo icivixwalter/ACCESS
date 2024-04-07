@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthFollowX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186842'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Follow</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthfollowx"></A>Esempio di metodo Follow</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come impostare la proprietà <B>HyperlinkAddress</B> di un pulsante di comando e quindi aprire il collegamento ipertestuale quando la maschera viene caricata.</P>
+
+<P class=T>Per provare tale esempio, creare una maschera e aggiungere un pulsante di comando chiamato Comando0. Incollare il codice riportato di seguito nel modulo della maschera e passare alla visualizzazione Maschera:</P>
+
+<PRE class=CT><CODE>Private Sub Carica_Modulo()
+&nbsp;&nbsp;&nbsp; Dim ctl As CommandButton
+
+&nbsp;&nbsp;&nbsp; Set ctl = Me!Comando0
+&nbsp;&nbsp;&nbsp; With ctl
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Visible = False
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .HyperlinkAddress = "http://www.microsoft.com/"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Hyperlink.<B>Follow</B>
+&nbsp;&nbsp;&nbsp; End With
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

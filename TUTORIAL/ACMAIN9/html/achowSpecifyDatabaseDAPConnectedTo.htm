@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSpecifyDatabaseDAPConnectedTo'
+Feature='Page: Advanced'
+Handoff='3'
+SourceFile='cdapprop.rtf'
+Tnum='270199'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Connettere una pagina di accesso ai dati o altra pagina Web a un database</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowspecifydatabasedapconnectedto"></A>Connettere una pagina di accesso ai dati o altra pagina Web a un database</H1>
+
+<P class=T>Se non è aperto alcun database quando si crea una pagina di accesso ai dati o si apre in Microsoft Access una pagina Web creata all'esterno di Access, verrà richiesto di fornire le informazioni per la connessione. Se alla richiesta non vengono fornite le informazioni, sarà necessario fornirle dopo avere aperto la pagina. In caso contrario, non sarà possibile associare i dati del database alla pagina. Se inoltre si modifica il percorso di un database dopo aver creato una pagina di accesso ai dati nella cui proprietà <B>ConnectionString</B> è memorizzato il percorso originale, sarà necessario modificare le informazioni per la connessione di quella pagina.
+
+<OL>
+	<LI class=LPROC>In <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura</A> di una pagina di accesso ai dati <A HREF="achowOpenCloseFieldListFormReportS.htm">visualizzare l'elenco dei campi</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic con il pulsante destro del mouse sull'icona del database nella parte superiore dell'elenco.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Connessione</B> dal menu di scelta rapida.<BR><BR></LI>
+
+	<LI class=LPROC>Inserire le informazioni per la connessione relative al database da utilizzare per la pagina di accesso ai dati.
+<P class=LT1>Per informazioni sulla scheda <B>Connessione</B>, scegliere il pulsante <B>?</B> nella parte inferiore della scheda.
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Se è già aperto un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> quando si crea una pagina di accesso ai dati o si apre una pagina Web creata all'esterno di Microsoft Access, la pagina verrà connessa automaticamente al database aperto e le informazioni sulla connessione verranno memorizzate nella relativa proprietà <B>ConnectionString</B>.<BR><BR></LI>
+
+	<LI class=NLB>È anche possibile modificare direttamente la proprietà <b>ConnectionString</b> nella finestra delle proprietà della pagina di accesso ai dati.<BR><BR></LI>
+
+	<LI class=NLB>Un elenco di tabella pivot della pagina di accesso ai dati può avere una stringa di connessione separata se visualizza dati provenienti da un'origine esterna. È possibile <A HREF="achowChangeConnectionForPTL.htm">modificare le informazioni di connessione dell'elenco di tabella pivot</A> all'interno di Access tramite Editor connessioni nella sezione <B>Origine dati</B> della <B>Casella della proprietà Tabella pivot</B>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowSpecifyDatabaseDAPConnectedToW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

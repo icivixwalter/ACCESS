@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPrtDevModeX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproprt2_1a.rtf'
+Tnum='187914'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà PrtDevMode</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproprtdevmodex"></A>Esempio di proprietà PrtDevMode</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>PrtDevMode</B> viene utilizzata per controllare le dimensioni della pagina definite dall'utente per un report.</P>
+
+<PRE class=CT><CODE>Type str_DEVMODE
+&nbsp;&nbsp;&nbsp; RGB As String * 94
+End Type
+
+Type type_DEVMODE
+&nbsp;&nbsp;&nbsp; strNomeDispositivo As String * 16
+&nbsp;&nbsp;&nbsp; intVersioneSpec As Integer
+&nbsp;&nbsp;&nbsp; intVersioneDriver As Integer
+&nbsp;&nbsp;&nbsp; intDimensione As Integer
+&nbsp;&nbsp;&nbsp; intDriverExtra As Integer
+&nbsp;&nbsp;&nbsp; lngCampi As Long
+&nbsp;&nbsp;&nbsp; intOrientamento As Integer
+&nbsp;&nbsp;&nbsp; intDimensFoglio As Integer
+&nbsp;&nbsp;&nbsp; intLunghezzaFoglio As Integer
+&nbsp;&nbsp;&nbsp; intLarghezzaFoglio As Integer
+&nbsp;&nbsp;&nbsp; intScala As Integer
+&nbsp;&nbsp;&nbsp; intCopie As Integer
+&nbsp;&nbsp;&nbsp; intOriginePredef As Integer
+&nbsp;&nbsp;&nbsp; intQualitàStampa As Integer
+&nbsp;&nbsp;&nbsp; intColore As Integer
+&nbsp;&nbsp;&nbsp; intDuplex As Integer
+&nbsp;&nbsp;&nbsp; intRisoluzione As Integer
+&nbsp;&nbsp;&nbsp; intOpzioneTT As Integer
+&nbsp;&nbsp;&nbsp; intFascicola As Integer
+&nbsp;&nbsp;&nbsp; strNomeMaschera As String * 16
+&nbsp;&nbsp;&nbsp; lngTitolo As Long
+&nbsp;&nbsp;&nbsp; lngBit As Long
+&nbsp;&nbsp;&nbsp; lngPW As Long
+&nbsp;&nbsp;&nbsp; lngPH As Long
+&nbsp;&nbsp;&nbsp; lngDFI As Long
+&nbsp;&nbsp;&nbsp; lngDFr As Long
+End Type
+
+Sub ControllaPaginaPersonalizzata(rptNome As String)
+&nbsp;&nbsp;&nbsp; Dim StringaPer As str_DEVMODE
+&nbsp;&nbsp;&nbsp; Dim DM As type_DEVMODE
+&nbsp;&nbsp;&nbsp; Dim strModalitàExtraPer As String
+&nbsp;&nbsp;&nbsp; Dim rpt As Report
+&nbsp;&nbsp;&nbsp; Dim intRisposta As Integer
+&nbsp;&nbsp;&nbsp; ' Apre il report in visualizzazione Struttura.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenReport rptNome, acDesign
+&nbsp;&nbsp;&nbsp; Set rpt = Reports(rptNome)
+&nbsp;&nbsp;&nbsp; If Not IsNull(rpt.<B>PrtDevMode</B>) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strModalitàExtraPer = rpt.<B>PrtDevMode</B>&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Fornisce struttura DEVMODE corrente.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StringaPer.RGB = strModalitàExtraPer
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LSet DM = StringaPer
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If DM.intDimensFoglio = 256 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Visualizza dimensioni definite da utente.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intRisposta = MsgBox("Le dimensioni personalizzate correnti della pagina sono " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; DM.intLarghezzaFoglio / 254 &amp; " cm di larghezza per " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; DM.intLunghezzaFoglio / 254 &amp; " cm di lunghezza. Si desidera " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "modificare le impostazioni?", 4)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Correntemente non definito da utente.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intRisposta = MsgBox("Il report non ha le dimensioni di pagina personalizzate. " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Si desidera definirle?", 4)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If intRisposta = 6 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Utente desidera modificare impostazioni.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inizializza campi.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DM.lngCampi = DM.lngCampi Or DM.intDimensFoglio Or DM.intLunghezzaFoglio _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Or DM.intLarghezzaFoglio
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DM.intDimensFoglio = 256&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta pagina personalizzata.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Richiede lunghezza e larghezza.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DM.intLunghezzaFoglio = InputBox("Immettere la lunghezza della pagina " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "in cm.") * 254
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DM.intLarghezzaFoglio = InputBox("Immettere la larghezza della pagina " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "in cm.") * 254
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LSet StringaPer = DM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiorna la proprietà.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mid(strModalitàExtraPer, 1, 94) = StringaPer.RGB
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpt.<B>PrtDevMode</B> = strModalitàExtraPer
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come modificare l'orientamento del report. In questo esempio viene modificato l'orientamento da verticale a orizzontale o viceversa, a seconda dell'orientamento corrente del report.</P>
+
+<PRE class=CT><CODE>Sub ModificaOrient(strNome As String)
+&nbsp;&nbsp;&nbsp; Const DM_PORTRAIT = 1
+&nbsp;&nbsp;&nbsp; Const DM_LANDSCAPE = 2
+&nbsp;&nbsp;&nbsp; Dim StringaPer As str_DEVMODE
+&nbsp;&nbsp;&nbsp; Dim DM As type_DEVMODE
+&nbsp;&nbsp;&nbsp; Dim strModalitàExtraPer As String
+&nbsp;&nbsp;&nbsp; Dim rpt As Report
+&nbsp;&nbsp;&nbsp; DoCmd.OpenReport strNome, acDesign
+&nbsp;&nbsp;&nbsp; ' Apre il report in visualizzazione Struttura.
+&nbsp;&nbsp;&nbsp; Set rpt = Reports(strNome)
+&nbsp;&nbsp;&nbsp; If Not IsNull(rpt.<B>PrtDevMode</B>) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strModalitàExtraPer = rpt.<B>PrtDevMode</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StringaPer.RGB = strModalitàExtraPer
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LSet DM = StringaPer
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DM.lngCampi = DM.lngCampi Or _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DM.intOrientamento&nbsp;&nbsp;&nbsp; ' Inizializza campi.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If DM.intOrientamento = DM_PORTRAIT Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DM.intOrientamento = DM_LANDSCAPE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DM.intOrientamento = DM_PORTRAIT
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LSet StringaPer = DM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiorna la proprietà.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mid(strModalitàExtraPer, 1, 94) = StringaPer.RGB
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpt.<B>PrtDevMode</B> = strModalitàExtraPer
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

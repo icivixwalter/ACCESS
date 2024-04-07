@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconBitmapOrMetafileS'
+Feature='Forms: Controls'
+Handoff='3'
+SourceFile='CFRMOLE.RTF'
+Tnum='188629'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare una bitmap, un metafile o un altro file grafico per visualizzare un'immagine</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconbitmapormetafiles"></A>Utilizzare una bitmap, un metafile o un altro file grafico per visualizzare un'immagine</H1>
+
+<P class=T>È possibile utilizzare dei file <A HREF="javascript:HelpPopup('actip9.hlp','defBitmap');" class="pop">bitmap</A> (con estensione bmp o dib), dei <A HREF="javascript:HelpPopup('actip9.hlp','defMetafile');" class="pop">metafile</A> (con estensione wmf o emf) o altri file grafici, come <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefGIF(GraphicsInterchangeFormat)');" class="pop">GIF</A> e <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefJPEG(JointPhotographicExpertsGroup)');" class="pop">JPEG</A>, per visualizzare le immagini di sfondo o le immagini contenute in <A HREF="javascript:HelpPopup('actip9.hlp','defBoundObjectFrame');" class="pop">cornici di oggetto associato</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defUnboundObjectFrame');" class="pop">cornici di oggetto non associato</A> oppure in <A HREF="javascript:HelpPopup('actip9.hlp','defImageFrame');" class="pop">controlli Immagine</A>.</P>
+
+<H2>Utilizzo dei metafile</H2>
+
+<UL>
+	<LI class=LB1>Se è necessario modificare le dimensioni dell'immagine, è preferibile utilizzare un metafile. I metafile modificano le dimensioni in modo migliore delle bitmap, in quanto sono costituiti da insiemi di righe piuttosto che da motivi di singoli punti.<BR><BR></LI>
+
+	<LI class=LB1>I metafile sono in genere di dimensioni più ridotte delle bitmap; pertanto è meglio utilizzare un metafile se è necessario risparmiare spazio su disco.</LI>
+</UL>
+
+<P class=T>Molti programmi di grafica consentono di salvare i file come metafile. Per ulteriori informazioni, consultare la documentazione fornita con i programmi di grafica. È necessario tenere presente che se una bitmap viene incollata a un programma di grafica e salvata come metafile, rimarrà sempre una bitmap e sarà semplicemente incorporata nel metafile. È necessario creare il grafico nel programma di grafica e salvarlo come metafile.</P>
+
+<H2>Utilizzo delle bitmap</H2>
+
+<UL>
+	<LI class=LB1>Se la modifica delle dimensioni e lo spazio su disco non costituiscono un problema o se non si ha accesso a uno strumento che crea dei metafile, utilizzare una bitmap. <BR><BR></LI>
+
+	<LI class=LB1>Se si desidera creare un'immagine di sfondo affiancata, una bitmap sarà adatta allo scopo in quanto le dimensioni non verranno modificate.<BR><BR></LI>
+
+	<LI class=LB1>Se si desidera apportare piccole modifiche all'immagine, utilizzare una bitmap. Con le bitmap è possibile avere il controllo a livello di pixel, in modo da poter apportare modifiche anche minime all'immagine.</LI>
+</UL>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=LB1>Se si desidera modificare le dimensioni di un'immagine nelle maschere o nei report, impostare a <B>Zoom</B> la proprietà <B>Modalità Ridimens. immagine</B> (immagini di sfondo) o la proprietà <B>Modalità Ridimensionamento</B> (cornici di oggetto associato, cornici di oggetto non associato e controlli Immagine). Quando la proprietà <B>Modalità Ridimens. immagine</B> o <B>Modalità Ridimensionamento</B> viene impostata a <B>Zoom</B>, vengono mantenute le proporzioni dell'immagine quando si ridimensiona la maschera o il controllo.<BR><BR></LI>
+
+	<LI class=LB1>In una pagina di accesso ai dati utilizzare le proprietà <B>Height</B> e <B>Width</B> per regolare le dimensioni di un'immagine. Nelle caselle delle proprietà <B>Height</B> e <B>Width</B> immettere i valori in <A HREF="javascript:HelpPopup('actip9.hlp','defPixel');" class="pop">pixel</A> (px), <A HREF="javascript:HelpPopup('actip9.hlp','defPoint');" class="pop">punti</A> (pt), centimetri (cm) o pollici (in). Se ad esempio si digita 25px nella casella della proprietà <B>Height</B>, l'immagine sarà alta 25 pixel. <BR><BR></LI>
+
+	<LI class=LB1>Per ulteriori informazioni, vedere l'argomento relativo agli <A HREF="worefListFilesOfTypeInsertmenuPicture.htm">altri formati di file grafici utilizzabili con Microsoft Access</A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconBitmapOrMetafileSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

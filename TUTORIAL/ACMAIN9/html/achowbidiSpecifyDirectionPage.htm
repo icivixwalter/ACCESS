@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowbidiSpecifyDirectionPage'
+Feature='International'
+Handoff='3'
+SourceFile='bidi.doc'
+Tnum='257957'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Specificare la direzione di una pagina di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowbidispecifydirectionpage"></A>Specify the direction of a data access page</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A>
+
+<UL>
+	<LI class=LB1>Do one of the following:
+<P class=LT1>Before creating a new data access page, set the <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiDirection');" class="pop">direction</A>, either <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiLeftToRight');" class="pop">left-to-right</A> or right-to-left, under <B>Default direction</B> on the <B>Right-to-Left</B> tab in the <B>Options</B> dialog box (<B>Tools</B> menu). That direction will appear as the setting of the <B>Dir</B> property of the new data access page.
+
+<P class=LT1>For an existing data access page:
+
+<OL>
+	<LI class=LPROC>From the Database window, open the data access page in Design view.<BR><BR></LI>
+
+	<LI class=LPROC>Select the page by clicking the page title bar.<BR><BR></LI>
+
+	<LI class=LPROC>Click <B>Properties</B> <IMG SRC="images/property.bmp"  BORDER=0> on the toolbar, click the <B>All</B> tab, and change the <B>Dir</B> property setting to the page <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiDirection');" class="pop">direction</A> you want: <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiRightToLeft');" class="pop"><B>Right-to-left</B></A> or <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiLeftToRight');" class="pop"><B>Left-to-right</B></A>.</LI>
+</OL>
+
+<P class=TPT><B>Tip&nbsp;&nbsp;</B> To edit directly in HTML, click <B>HTML Source</B> from the <B>View</B> menu and modify the &lt;HTML&gt; element to &lt;HTML DIR=RTL&gt; for a right-to-left page direction or &lt;HTML DIR=LTR&gt; for a left-to-right page direction.
+</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowbidiSpecifyDirectionPageW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

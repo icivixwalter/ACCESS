@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproProjectName'
+Feature='acpro'
+Handoff='1'
+SourceFile='apronew8_1a.rtf'
+Tnum='187904'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà ProjectName</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjApplication">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthSetOption">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproprojectname"></A>Proprietà ProjectName</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproProjectNameC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproProjectNameX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproProjectNameA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>ProjectName</B> per specificare o determinare il nome dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>Application</B></A> di Microsoft Access.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>ProjectName</B> è un'<A HREF="javascript:HelpPopup('actip9.hlp','defstringexpression');" class="pop">espressione stringa</A> che corrisponde al nome dell'oggetto <B>Application</B> di Microsoft Access. Non è possibile impostare la proprietà <B>ProjectName</B> al nome di una classe esistente di oggetti, ad esempio "applicazione", "maschera" o "report". Se si converte un database con un nome uguale a quello di una classe esistente di oggetti, Microsoft Access accoderà un carattere di sottolineatura al nome per evitare che si verifichino conflitti. Ad esempio, se il database da convertire si chiama "Applicazione", il database avrà come nome di progetto "Applicazione_" in Microsoft Access 2000.</P>
+
+<P class=T>È possibile impostare la proprietà <B>ProjectName</B> nella scheda <B>Avanzate</B> della finestra di dialogo <B>Opzioni</B>, disponibile scegliendo <B>Opzioni dal menu Strumenti</B>, o utilizzando il metodo <A HREF="JavaScript:hhobj_5.Click()"><B>SetOption</B></A> in <A HREF="JavaScript:hhobj_6.Click()">Visual Basic</A>. Ad esempio:</P>
+
+<PRE class=CT><CODE>Application.SetOption "Nome progetto", "MioProgettoAccess"</CODE></PRE>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando si crea un nuovo database, Microsoft Access imposta la proprietà <B>ProjectName</B> al nome del file di database senza l'estensione "mdb". La modifica del nome del file di database non ha alcun effetto sull'impostazione esistente della proprietà <B>ProjectName</B>.</P>
+
+<P class=T>Quando si imposta la proprietà <B>ProjectName</B>, viene visualizzato il nome dell'oggetto <B>Application</B> nella finestra di dialogo <B>Riferimenti</B>, disponibile nella finestra Modulo, se si sceglie <B>Riferimenti</B> dal menu <B>Strumenti</B>.</P>
+
+<P class=T>Quando si modifica l'impostazione della proprietà <B>Nome Progetto</B>, il progetto non si troverà più in forma compilata. Per ricompilare il progetto, è necessario chiudere e riaprire il database, quindi scegliere <B>Compila e salva tutti i moduli</B> dal menu <B>Debug</B>.</P>
+
+<P class=T>È possibile utilizzare il nome del progetto da un'altra applicazione, ad esempio Microsoft Excel, come parte del nome completo di un elemento in un progetto di Microsoft Access, utilizzando la sintassi <I>nomeprogetto</I><B>.Application.Forms</B>!<I>nomemaschera</I>. Per fare riferimento, ad esempio, al campo Cognome della maschera Impiegati nel database di esempio Northwind, impostare un riferimento da Microsoft Excel per il database Northwind, quindi utilizzare il riferimento riportato di seguito:</P>
+
+<PRE class=CT><CODE>Dim strCognome As String
+strCognome = Northwind.Application.Forms!Impiegati!Cognome</CODE></PRE>
+
+
+
+<P class=T>È possibile creare un riferimento per un database di Microsoft Access, scegliendo il nome di progetto, l'oggetto <B>Application</B>, nella finestra di dialogo <B>Riferimenti</B>, disponibile nella finestra Modulo se si sceglie <B>Riferimenti</B> dal menu <B>Strumenti</B>. Dopo aver selezionato il nome di progetto, esso viene visualizzato anche nell'elenco <B>Progetto/libreria</B> nel <A HREF="javascript:HelpPopup('actip9.hlp','defObjectBrowser');" class="pop">Visualizzatore oggetti</A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

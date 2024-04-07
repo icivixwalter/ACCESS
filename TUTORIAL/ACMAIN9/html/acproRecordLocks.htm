@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRecordLocks'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproedt1_1a.rtf'
+Tnum='187929'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà RecordLocks (Blocco record)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprorecordlocks"></A>Proprietà RecordLocks (Blocco record)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproRecordLocksC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproRecordLocksX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproRecordLocksA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>RecordLocks</B> per determinare come i record sono bloccati e quel che succede quando due utenti cercano di modificare un file allo stesso momento. Durante la modifica un record può essere automaticamente bloccato, in modo da impedirne la modifica prima del termine da parte di altri utenti.
+
+<UL>
+	<LI class=LB1>Maschere - Specifica il modo in cui i <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> vengono <A HREF="javascript:HelpPopup('actip9.hlp','defLocked');" class="pop">bloccati</A> nella tabella o nella query sottostante durante l'aggiornamento di dati contenuti in un <A HREF="javascript:HelpPopup('actip9.hlp','defMultiUserDatabase');" class="pop">database multiutente</A>.<BR><BR></LI>
+
+	<LI class=LB1>Report - Specifica se i record contenuti in una tabella o in una query sottostante sono bloccati mentre un report viene visualizzato in anteprima o viene stampato.<BR><BR></LI>
+
+	<LI class=LB1>Query - Specifica se i record contenuti in una query, in genere una <A HREF="javascript:HelpPopup('actip9.hlp','defActionQuery');" class="pop">query di comando</A> in un database multiutente, sono bloccati durante l'esecuzione della query stessa.
+<P class=4>
+</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>RecordLocks</B> si applica soltanto alle maschere, ai report o alle query di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database Microsoft Access</A> (mdb).</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>RecordLocks</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=22%>Impostazione</TH>
+<TH width=20%>Visual Basic</TH>
+<TH width=58%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Nessun blocco</TD>
+<TD class=TT width=20%>0</TD>
+<TD class=TT width=58%>Impostazione predefinita. Nelle maschere due o più utenti possono modificare lo stesso record contemporaneamente. Questo procedimento viene anche detto blocco ottimistico. Se due utenti provano a salvare le modifiche relative allo stesso record, viene visualizzato un messaggio all'utente che prova a salvare il record per secondo. Sarà quindi possibile eliminare il record, copiarlo negli Appunti o sostituire le modifiche effettuate dall'altro utente. Tale impostazione viene in genere utilizzata in maschere di sola lettura o in database per utente singolo. L'impostazione viene inoltre utilizzata in database multiutente per consentire a più di un utente la possibilità di effettuare modifiche nello stesso record contemporaneamente.
+<P class=TT>Nei report, i record non vengono bloccati durante la visualizzazione in anteprima o la stampa del report.</P>
+
+<P class=TT>Nelle query i record non vengono bloccati durante l'esecuzione della query stessa.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Tutti i record</TD>
+<TD class=TT width=20%>1</TD>
+<TD class=TT width=58%>Tutti i record contenuti nella tabella o nella query sottostante sono bloccati mentre la maschera è aperta in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> o in<A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop"> visualizzazione Foglio dati</A>, durante la visualizzazione in anteprima o la stampa del report o durante l'esecuzione della query. Pur essendo possibile la lettura dei record, non è possibile modificare, aggiungere o eliminare alcun record fino a quando la maschera viene chiusa, il report è stampato completamente o la query ha terminato l'esecuzione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>Record modificato</TD>
+<TD class=TT width=20%>2</TD>
+<TD class=TT width=58%>Solo maschere e query. Una <A HREF="javascript:HelpPopup('actip9.hlp','defPage');" class="pop">pagina</A> di record viene bloccata non appena un qualsiasi utente comincia a modificare un campo del record e rimane bloccata fino a quando l'utente si sposta su un altro record. Un record può essere quindi modificato da un solo utente alla volta. Questo procedimento viene detto anche blocco pessimistico.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare la proprietà utilizzando la <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> di una maschera, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; La modifica della proprietà <B>RecordLocks</B> di un report o di una maschera aperta ricrea automaticamente il set di record.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare l'impostazione Nessun blocco per le maschere se una sola persona utilizza le tabelle o le query sottostanti o effettua tutte le modifiche ai dati.</P>
+
+<P class=T>In un database multiutente è possibile utilizzare l'impostazione Nessun blocco se si desidera utilizzare il blocco ottimistico e avvisare gli utenti che provano a modificare lo stesso record di una maschera. È possibile utilizzare l'impostazione Record modificato se si desidera impedire a due o più utenti di modificare i dati allo stesso momento.</P>
+
+<P class=T>È possibile utilizzare l'impostazione Tutti i record quando è necessario assicurare che nessuna modifica sia stata apportata ai dati dopo l'inizio dell'anteprima di stampa o della stampa di un report o dell'esecuzione di una query di <A HREF="javascript:HelpPopup('actip9.hlp','defAppendQuery');" class="pop">accodamento</A>, di <A HREF="javascript:HelpPopup('actip9.hlp','defDeleteQuery');" class="pop">eliminazione</A>, di <A HREF="javascript:HelpPopup('actip9.hlp','defMakeTableQuery');" class="pop">creazione tabella</A> o di <A HREF="javascript:HelpPopup('actip9.hlp','defUpdateQuery');" class="pop">aggiornamento</A>.</P>
+
+<P class=T>In visualizzazione Maschera o in visualizzazione Foglio dati, ciascun record bloccato è contraddistinto dall'indicatore di blocco <A HREF="javascript:HelpPopup('actip9.hlp','defLocked');" class="pop"><IMG SRC="images/lockrec.bmp" BORDER=0></A> nel relativo selettore di record.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Per modificare l'impostazione predefinita della proprietà <B>RecordLocks</B> per le maschere, scegliere <B>Opzioni</B> dal menu <B>Strumenti</B>, fare clic sulla scheda <B>Avanzate</B> nella finestra di dialogo <B>Opzioni</B> e selezionare l'opzione desiderata sotto <B>Blocco record predefinito</B>.</P>
+
+
+
+<P class=T>I dati contenuti in una maschera, in un report o in una query di un database <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC (Open Database Connectivity</A>) vengono trattati come se fosse stata scelta l'impostazione Nessun record senza considerare l'impostazione della proprietà <B>RecordLocks</B>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

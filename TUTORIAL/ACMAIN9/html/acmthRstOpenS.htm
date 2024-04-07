@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRstOpenS'
+Feature='acmth'
+Handoff='3'
+SourceFile='ACAMETH9.doc'
+Tnum='257204'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Open (Recordset)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthrstopens"></A>Metodo Open (Recordset)</H1>
+
+
+
+<P class=T>In Microsoft Access, usare la proprietà <B>Connection</B> dell'oggetto <B>CurrentProject</B> per fare riferimento al collegamento aperto del database corrente, come indicato nell'esempio riportato di seguito.</P>
+
+<PRE class=CT><CODE>Dim rsCurrent As ADODB.Recordset
+rsCurrent.Open "Select * From Dipendenti", _
+    CurrentProject.Connection</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

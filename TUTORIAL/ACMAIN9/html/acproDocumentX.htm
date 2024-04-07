@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDocumentX'
+Feature='acpro'
+Handoff='3'
+SourceFile='acproV9c.doc'
+Tnum='274168'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà CurrentProject Object, Document, IsLoaded</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodocumentx"></A>Esempio di proprietà CurrentProject Object, Document, IsLoaded</B></P>
+
+<P class=T>Questa procedura descrive come utilizzare il codice VBA per aggiungere testo a una pagina di accesso ai dati. Negli argomenti di questa procedura vengono fornite le seguenti informazioni:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TD class=T width=22%>strPageName</TD>
+<TD class=T width=78%>Il nome di una pagina di accesso ai dati esistente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=T width=22%>strID</TD>
+<TD class=T width=78%>La proprietà ID (attributo) del tag contenente il testo da utilizzare.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=T width=22%>strText</TD>
+<TD class=T width=78%>Il testo da inserire.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=T width=22%>blnReplace</TD>
+<TD class=T width=78%>Se il testo esistente nel tag debba essere sostituito o meno.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<PRE class=CT><CODE>Function DAPInsertText(strPageName As String, _
+  strID As Variant, strText As String, _
+  Optional blnReplace As Boolean = True) As Boolean
+
+  Dim blnWasLoaded As Boolean
+
+  On Error GoTo DAPInsertText_Err
+
+  ' Determina se la pagina esiste e se è
+  ' attualmente aperta. Se non lo è, la apre in
+  ' visualizzazione struttura.
+  If DAPExists(strPageName) = True Then
+    If <B>CurrentProject</B>.AllDataAccessPages(strPageName) _
+     .<B>IsLoaded</B> = False Then
+      blnWasLoaded = False
+      With DoCmd
+       .Echo False
+       .OpenDataAccessPage strPageName, _
+          acDataAccessPageDesign
+      End With
+    Else
+      blnWasLoaded = True
+    End If
+  Else
+    DAPInsertText = False
+    Exit Function
+  End If
+
+  ' Aggiungi il nuovo testo al tag specificato.
+  With DataAccessPages(strPageName)<B>.Document</B>
+    If blnReplace = True Then
+     .All(strID).innerText = strText
+    Else
+     .All(strID).innerText =.All(strID).innerText &amp; strText
+    End If
+    ' Verifica che il testo sia visibile.
+    With.All(strID).Style
+      If.display = "none" Then.display = ""
+    End With
+  End With
+
+  ' Elimina testo.
+  With DoCmd
+    If blnWasLoaded = True Then
+   .Save
+  Else
+   .Close acDataAccessPage, strPageName, acSaveYes
+    End If
+  End With
+  DAPInsertText = True
+DAPInsertText_End:
+  DoCmd.Echo True
+  Exit Function
+DAPInsertText_Err:
+  MsgBox "Errore #" &amp; Err.Number &amp; ": " &amp; Err.Description
+  DAPInsertText = False
+  Resume DAPInsertText_End
+End Function</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

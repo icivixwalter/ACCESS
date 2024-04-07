@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproSnapshotSendOutputSSX'
+Feature='acpro'
+Handoff='2'
+SourceFile='snapshot_mth.doc'
+Tnum='262424'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di metodi OutputTo e SendObject, tipo oggetto Snapshot</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprosnapshotsendoutputssx"></A>Esempi di metodi OutputTo e SendObject, tipo oggetto Snapshot</B></P>
+
+
+
+<P class=T>Nell'esempio che segue, un file snapshot viene inviato su disco o incorporato in un messaggio di posta elettronica a seconda del valore fornito nell'argomento <CODE>intOutputTO</CODE>. La sezione delle dichiarazioni del modulo contiene due costanti globali, utilizzate per specificare il tipo di output desiderato. Se l'argomento <CODE>intOutputTO</CODE> contiene la costante conSaveSnapshotToDisk, il file viene salvato utilizzando la posizione e il nome file indicati nell'argomento <CODE>strPath</CODE>. Se l'argomento <CODE>intOutputTO</CODE> contiene la costante conSaveSnapshotToMail, il file viene incorporato in un messaggio di posta indirizzato al destinatario indicato nell'argomento <CODE>strRecipName</CODE>. L'argomento <CODE>strName</CODE> è il nome di un oggetto Report nel database corrente. L'argomento <CODE>strPath</CODE> è il percorso completo e il nome file che rappresenta il file snapshot da salvare su disco. </P>
+
+<PRE class=CT><CODE>Const conSaveSnapshotToDisk As Integer = 1
+Const conSaveSnapshotToMail As Integer = 2
+
+Sub OutputSnapshotFile(intOutputTO As Integer, _
+    strName As String, Optional strPath As String, _
+    Optional strRecipName As String)
+
+    Dim strOutputFormat As String
+    DoCmd.Hourglass True
+    strOutputFormat = "Formato snapshot"
+
+    Select Case intOutputTO
+        Case conSaveSnapshotToDisk
+            If Len(strPath) &gt; 0 Then
+                DoCmd.<B>OutputTo</B> acOutputReport, _
+                    strName, strOutputFormat, strPath
+            Else
+                DoCmd.Hourglass False
+                Exit Sub
+            End If
+        Case conSaveSnapshotToMail
+            If Len(strRecipName) &gt; 0 Then
+                DoCmd.<B>SendObject</B> acSendReport, _
+                    strName, strOutputFormat, strRecipName
+            Else
+                DoCmd.Hourglass False
+                Exit Sub
+            End If
+        Case Else
+    End Select
+    DoCmd.Hourglass False
+End Sub 
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

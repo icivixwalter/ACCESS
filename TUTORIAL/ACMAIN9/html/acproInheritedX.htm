@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproInheritedX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234456'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Inherited (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproinheritedx"></A>Esempio di proprietà Inherited (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea un oggetto <B>Property</B> nell'insieme <B>Properties</B> di un oggetto <B>TableDef</B>, quindi si crea un nuovo oggetto <B>QueryDef</B> in base alla stessa tabella. L'oggetto <B>Property</B> è presente automaticamente nell'insieme <B>Properties</B> del nuovo oggetto <B>QueryDef</B>. La routine verifica inoltre la proprietà <B>Inherited</B> degli oggetti <B>Property</B> negli insiemi <B>Properties</B> degli oggetti <B>TableDef</B> e <B>QueryDef</B>.</P>
+
+<P class=T>In questo esempio la proprietà <B>DatasheetFontItalic</B> di Microsoft Access viene creata e accodata all'insieme <B>Properties</B> dell'oggetto <B>TableDef</B>. La proprietà <B>DatasheetFontItalic</B> viene definita da Microsoft Access anziché dal modulo di gestione di database Microsoft Jet; essa, tuttavia, viene applicata agli oggetti DAO. Per impostarla con il codice Visual Basic, è necessario prima creare un oggetto <B>Property</B> corrispondente a tale proprietà e accodarlo all'insieme <B>Properties</B> dell'oggetto DAO. È necessario creare la proprietà solo la prima volta che viene impostata.</P>
+
+<PRE class=CT><CODE>Sub VerificaEreditata()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef, qdf As QueryDef
+&nbsp;&nbsp;&nbsp; Dim strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento alla tabella Ordini.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs!Ordini
+&nbsp;&nbsp;&nbsp; ' Richiama la funzione ImpostaProprietàAccesso.
+&nbsp;&nbsp;&nbsp; If ImpostaProprietàAccesso(tdf, "DatasheetFontItalic", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbBoolean, True) = True Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea oggetto QueryDef in base alla tabella Ordini.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strSQL = "SELECT * FROM Ordini WHERE PaeseDestinatario = 'USA';"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set qdf = dbs.CreateQueryDef("OrdiniUSA", strSQL)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Restituisce oggetto Property che punta alla proprietà.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Valore di Inherited, oggetto TableDef:", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tdf.Properties!DatasheetFontItalic.<B>Inherited</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print " Valore di Inherited, oggetto QueryDef:", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; qdf.Properties!DatasheetFontItalic.<B>Inherited</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EsciVerificaEreditata
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Proprietà non impostata."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EsciVerificaEreditata
+&nbsp;&nbsp;&nbsp; End If
+
+EsciVerificaEreditata:
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+&nbsp;&nbsp;&nbsp; Exit Sub
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Questa routine richiama la seguente funzione, che imposta la proprietà creandola se necessario nell'insieme <B>Properties</B>:</P>
+
+<PRE class=CT><CODE>Function ImpostaProprietàAccesso(obj As Object, strNome As String, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intTipo As Integer, varImpostazione As Variant) As Boolean
+&nbsp;&nbsp;&nbsp; Dim prp As Property
+&nbsp;&nbsp;&nbsp; Const conPropNonTrovata As Integer = 3270
+
+&nbsp;&nbsp;&nbsp; On Error GoTo ErroreImpostaProprietàAccesso
+&nbsp;&nbsp;&nbsp; ' Fa riferimento all'insieme Properties in modo esplicito.
+&nbsp;&nbsp;&nbsp; obj.Properties(strNome) = varImpostazione
+&nbsp;&nbsp;&nbsp; obj.Properties.Refresh
+&nbsp;&nbsp;&nbsp; ImpostaProprietàAccesso = True
+
+EsciImpostaProprietàAccesso:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+ErroreImpostaProprietàAccesso:
+&nbsp;&nbsp;&nbsp; If Err = conPropNonTrovata Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea la proprietà, specifica il tipo e imposta il valore iniziale.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set prp = obj.CreateProperty(strNome, intTipo, varImpostazione)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Accoda l'oggetto Property all'insieme Properties.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.Properties.Append prp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.Properties.Refresh
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ImpostaProprietàAccesso = True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume EsciImpostaProprietàAccesso
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; vbCrLf &amp; Err.Description
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ImpostaProprietàAccesso = False
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume EsciImpostaProprietàAccesso
+&nbsp;&nbsp;&nbsp; End If
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthSizeToFitX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv3_1a.rtf'
+Tnum='186549'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo SizeToFit</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthsizetofitx"></A>Esempio di metodo SizeToFit</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono creati una nuova maschera e un nuovo pulsante di comando nella maschera. La routine imposta, quindi, la proprietà <B>Caption</B> del controllo e ridimensiona il controllo a seconda della dimensione dell'etichetta.</P>
+
+<PRE class=CT><CODE>Sub RidimensionaNuovoControllo ()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, ctl As Control
+
+&nbsp;&nbsp;&nbsp; ' Crea una nuova maschera.
+&nbsp;&nbsp;&nbsp; Set frm = CreateForm
+&nbsp;&nbsp;&nbsp; ' Crea un nuovo pulsante di comando.
+&nbsp;&nbsp;&nbsp; Set ctl = CreateControl(frm.Name, acCommandButton, , , , 500, 500)
+&nbsp;&nbsp;&nbsp; ' Ripristina la maschera.
+&nbsp;&nbsp;&nbsp; DoCmd.Restore
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà Caption del controllo.
+&nbsp;&nbsp;&nbsp; ctl.Caption = "Etichetta del controllo troppo lunga"
+&nbsp;&nbsp;&nbsp; ' Ridimensiona il controllo a seconda della dimensione di etichetta.
+&nbsp;&nbsp;&nbsp; ctl.SizeToFit
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

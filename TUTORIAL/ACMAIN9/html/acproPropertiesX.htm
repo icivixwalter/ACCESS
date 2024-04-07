@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPropertiesX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproadd1.rtf'
+Tnum='187908'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Properties</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpropropertiesx"></A>Esempio di proprietà Properties</B></P>
+
+
+
+<P class=T>Nella routine riportata di seguito la proprietà <B>Properties</B> viene utilizzata per stampare tutte le proprietà associate ai controlli di una maschera nella finestra Debug. Per eseguire questo codice, inserire un pulsante di comando chiamato cmdElencaProprietà in una maschera e incollare il codice riportato di seguito nella sezione Dichiarazioni della maschera. Fare clic sul pulsante di comando per stampare l'elenco delle proprietà nella finestra Debug.</P>
+
+<PRE class=CT><CODE>Sub cmdElencaProprietà_Click()
+&nbsp;&nbsp;&nbsp; ElencaPropControlli Me
+End Sub
+
+Sub ElencaPropControlli(frm As Form)
+&nbsp;&nbsp;&nbsp; Dim ctl As Control, prp As Property
+
+&nbsp;&nbsp;&nbsp; On Error GoTo prop_err
+&nbsp;&nbsp;&nbsp; For Each ctl In frm.Controls
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print ctl.<B>Properties</B>("Nome")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For Each prp In ctl.<B>Properties</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print vbTab &amp; prp.Name &amp; " = " &amp; prp.Value
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next prp
+&nbsp;&nbsp;&nbsp; Next ctl
+
+prop_bye:
+&nbsp;&nbsp;&nbsp; Exit Sub
+
+prop_err:
+&nbsp;&nbsp;&nbsp; If Err = 2187 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print vbTab &amp; prp.Name &amp; " = Disponibile solo " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "in fase di strutturazione."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume Next
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print vbTab &amp; prp.Name &amp; " = Si è " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "verificato un errore: " &amp; Err
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume Next
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

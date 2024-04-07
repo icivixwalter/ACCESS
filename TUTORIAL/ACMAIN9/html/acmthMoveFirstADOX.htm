@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthMoveFirstADOX'
+Feature='acmth'
+Handoff='2'
+SourceFile='ACAMETHX9.doc'
+Tnum='261122'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi MoveFirst, MoveLast, MoveNext, MovePrevious</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthmovefirstadox"></A>Esempio di metodi MoveFirst, MoveLast, MoveNext, MovePrevious</B></P>
+
+
+
+<P class=T>Nell'esempio seguente il metodo <B>MoveLast</B> viene utilizzato per richiamare i dati dell'oggetto <B>Recordset</B> in modo che sia possibile contare il numero di record presenti. Il metodo <B>MoveFirst</B> sposta quindi il puntatore del record corrente al primo record dell'oggetto <B>Recordset</B>. La routine richiede all'utente di immettere un numero, quindi sposta in avanti i record di tante posizioni quante sono quelle indicate dal numero.</P>
+
+<PRE class=CT><CODE>Sub SpostaTraRecord()
+    Dim rst As New ADODB.Recordset, intI As Integer
+    Dim intNumber As Integer
+    
+    rst.Open "Prodotti", CurrentProject.Connection, adOpenKeyset, adLockOptimistic
+    ' Richiama oggetto Recordset.
+    rst.<B>MoveLast</B>
+    ' Ritorna al primo record.
+    rst.<B>MoveFirst</B>
+    ' Ottiene un numero inferiore al numero di record.
+    intNumber = InputBox("Immettere un numero inferiore a " _
+        &amp; rst.RecordCount &amp; ".")
+    ' Passa al numero specificato di record.
+    For intI = 1 To intNumber
+        rst.<B>MoveNext</B>
+    Next intI
+    Debug.Print rst!NomeProdotto
+    rst.Close
+
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

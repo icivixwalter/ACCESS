@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactGoToControl'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187279'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione VaiAControllo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactGoToControl">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthSetFocus">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactgotocontrol"></A>Azione VaiAControllo</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactGoToControlC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactGoTOControlX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione VaiAControllo sposta lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A> nel <A HREF="javascript:HelpPopup('actip9.hlp','defField');" class="pop">campo</A> o nel <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> specificati nel <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> corrente della <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A>, del <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> della maschera, della tabella o della query aperti. È possibile utilizzare l'azione se si desidera che un determinato campo o controllo abbia lo stato attivo da utilizzare per confronti o per azioni <A HREF="acactFindRecord.htm">TrovaRecord</A>. È inoltre possibile utilizzare l'azione per spostarsi all'interno di una maschera secondo determinate condizioni. Se ad esempio l'utente immette No nel controllo Coniugato di una maschera relativa all'assicurazione sanitaria, lo stato attivo è in grado di saltare automaticamente il controllo Nome del coniuge e passare al controllo successivo.</P>
+
+<p class=NT><b>Nota</b> &nbsp;&nbsp;Questa azione non è disponibile per le pagine di accesso ai dati.</p>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione VaiAControllo utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome controllo</TD>
+<TD class=TT width=75%>Il nome del campo o del controllo in cui si desidera avere lo stato attivo. Immettere il nome del campo o del controllo nella casella <B>Nome controllo</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. L'argomento è richiesto.
+<P class=TT><B>Nota</B>&nbsp;&nbsp; Immettere solo il nome del campo o del controllo in questa casella e non l'identificatore completo, come Forms!Prodotti![ID Prodotto].</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Non è possibile utilizzare l'azione VaiAControllo per spostare lo stato attivo in un controllo contenuto in una maschera nascosta.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile utilizzare l'azione <A HREF="acactGotoRecord.htm">VaiARecord</A> per spostarsi in una <A HREF="javascript:HelpPopup('actip9.hlp','defSubform');" class="pop">sottomaschera</A>, che rappresenta un tipo di controllo, nonché in un determinato record della sottomaschera. È inoltre possibile spostarsi su un controllo di una <A HREF="javascript:HelpPopup('actip9.hlp','defSubform');" class="pop">sottomaschera</A> utilizzando l'azione VaiAControllo per passare innanzitutto alla sottomaschera e quindi al controllo nella sottomaschera.</P>
+
+
+
+<P class=T>Per eseguire l'azione VaiAControllo in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>GoToControl</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>. È inoltre possibile utilizzare il metodo <A HREF="JavaScript:hhobj_5.Click()"><B>SetFocus</B></A> per spostare lo stato attivo su un controllo di una maschera o di una qualsiasi delle relative sottomaschere oppure su un campo del foglio dati di una tabella, una query o una maschera aperta.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

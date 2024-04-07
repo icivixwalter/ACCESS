@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproIsVisibleX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apronew8_1a.rtf'
+Tnum='187358'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà IsVisible</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproisvisiblex"></A>Esempio di proprietà IsVisible</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzata la proprietà <B>IsVisible</B> di una casella di testo per controllare la visualizzazione di un controllo di linea in un report. Il report si riferisce a una tabella Prodotti e utilizza tre controlli con le proprietà riportate di seguito:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=28%>Proprietà</TH>
+<TH width=24%>Controllo Linea</TH>
+<TH width=23%>Casella di testo #1</TH>
+<TH width=25%>Casella di testo #2</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>Name</B></TD>
+<TD class=TT width=24%>Linea0</TD>
+<TD class=TT width=23%>IDCategoria</TD>
+<TD class=TT width=25%>NomeProdotto</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>ControlSource</B></TD>
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=23%>IDCategoria </TD>
+<TD class=TT width=25%>NomeProdotto </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>HideDuplicates</B></TD>
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=23%>Sì</TD>
+<TD class=TT width=25%>No</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>Left</B></TD>
+<TD class=TT width=24%>0</TD>
+<TD class=TT width=23%>0</TD>
+<TD class=TT width=25%>2.0</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>Top</B></TD>
+<TD class=TT width=24%>0</TD>
+<TD class=TT width=23%>.1</TD>
+<TD class=TT width=25%>.1</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><B>Width</B></TD>
+<TD class=TT width=24%>4.0</TD>
+<TD class=TT width=23%>1.0</TD>
+<TD class=TT width=25%>1.0</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Incollare il codice riportato di seguito nella sezione Dichiarazioni del modulo del report, quindi visualizzare il report per vedere come la proprietà <B>IsVisible</B> controlla la formattazione della linea.</P>
+
+<PRE class=CT><CODE>Private Sub Dettaglio_Print(Cancel As Integer, PrintCount As Integer)
+&nbsp;&nbsp;&nbsp; If Me!IDCategoria.<B>IsVisible</B> Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!Line0.Visible = True
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!Line0.Visible = False
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

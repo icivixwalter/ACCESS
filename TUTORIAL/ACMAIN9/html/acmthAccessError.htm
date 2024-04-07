@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthAccessError'
+Feature='acmth'
+Handoff='3'
+SourceFile='replconf2.doc'
+Tnum='186967'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo AccessError</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vamthRaise">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaproDescription">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaobjErr">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthaccesserror"></A>Metodo AccessError</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthAccessErrorC;mdobjError;vaobjErr">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthAccessErrorX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthAccessErrorA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare il metodo <B>AccessError</B> per restituire la stringa descrittiva associata ad un errore Microsoft Access o ad un errore ADO.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN>[<I>applicazione</I>.]<B>AccessError(</B><I>numeroerrore</I><B>)</B></P>
+
+
+
+<P class=T>Il metodo <B>AccessError</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=19%>Argomento</TH>
+<TH width=81%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>applicazione</I></TD>
+<TD class=TT width=81%>Facoltativo. L'oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>numeroerrore</I></TD>
+<TD class=TT width=81%>Il numero dell'errore per il quale si desidera restituire una stringa descrittiva.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare il metodo <B>AccessError</B> per restituire la stringa descrittiva associata a un errore Microsoft Access o un errore ADO quando l'errore non si è verificato effettivamente.</P>
+
+<P class=T>È possibile utilizzare il metodo <A HREF="JavaScript:hhobj_4.Click()"><B>Raise</B></A> di Visual Basic per provocare un errore Visual Basic. È possibile quindi determinare la relativa stringa descrittiva associata leggendo la proprietà <A HREF="JavaScript:hhobj_5.Click()"><B>Description</B></A> dell'oggetto <A HREF="JavaScript:hhobj_6.Click()"><B>Err</B></A>.</P>
+
+<P class=T>Non è possibile utilizzare il metodo <B>Raise</B> per provocare un errore Microsoft Access o un errore ADO. È possibile utilizzare, tuttavia, il metodo <B>AccessError</B> per restituire la stringa descrittiva associata a tali errori, senza dover generare l'errore.</P>
+
+<P class=T>È possibile utilizzare il metodo <B>AccessError</B> per restituire una stringa descrittiva dall'interno dell'evento Errore di una maschera.</P>
+
+<P class=T>Se si è verificato l'errore Microsoft Access, è possibile restituire la stringa descrittiva utilizzando il metodo <B>AccessError</B> o la proprietà <B>Description</B> dell'oggetto <B>Err</B> di Visual Basic.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

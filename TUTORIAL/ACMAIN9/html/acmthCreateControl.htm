@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateControl'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186366'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodi CreateControl, CreateReportControl</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acctlRectangleControl">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acctlLineControl">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjPage">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acctlPageBreakControl">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproValidationRule">
+</OBJECT>
+<OBJECT ID="hhobj_8" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acstmDeleteControl">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthcreatecontrol"></A>Metodi CreateControl, CreateReportControl</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateControlC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateControlX">
+</OBJECT></P>
+
+<P class=SANSR>
+
+<UL>
+	<LI class=LB1>Il metodo <B>CreateControl</B> crea un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> in una determinata maschera aperta.<BR><BR></LI>
+
+	<LI class=LB1>Il metodo <B>CreateReportControl</B> crea un controllo in un determinato report aperto.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Si supponga, ad esempio, di predisporre una Creazione guidata personalizzata che consenta agli utenti di costruire con facilità una determinata maschera. È possibile utilizzare il metodo <B>CreateControl</B> nella Creazione guidata per aggiungere alla maschera i controlli appropriati.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>CreateControl(</B><I>nomemaschera</I>, <I>tipocontrollo</I>[, <I>sezione</I>[, <I>principale</I>[, <I>nomecolonna</I>[, <I>sinistra</I>[, <I>alto</I>[, <I>larghezza</I>[, <I>altezza</I>]]]]]]]<B>)</B></P>
+
+<P class=SYN><B>CreateReportControl(</B><I>nomereport</I>, <I>tipocontrollo</I>[, <I>sezione</I>[, <I>principale</I>[, <I>nomecolonna</I>[, <I>sinistra</I>[, <I>alto</I>[, <I>larghezza</I>[, <I>altezza</I>]]]]]]]<B>)</B></P>
+
+
+
+<P class=T>I metodi <B>CreateControl</B> e <B>CreateReportControl</B> utilizzano gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=19%>Argomento</TH>
+<TH colspan=2 width=81%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>nomemaschera</I>, <I>nomereport</I></TD>
+<TD class=TT colspan=2 width=81%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che identifica il nome della maschera o del report aperti nei quali si desidera creare il controllo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>tipocontrollo</I></TD>
+<TD class=TT colspan=2 width=81%>Una delle <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A> riportate di seguito che identificano il tipo di controllo che si desidera creare. Per visualizzare tali costanti e incollarle al codice dal Visualizzatore oggetti, fare clic su <B>Visualizzatore oggetti</B>  <A HREF="javascript:HelpPopup('actip9.hlp','actbrObjectBrowserQ');" class="pop"><IMG SRC="images/objbrws.bmp" BORDER=0></A>  sulla <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> <B>Visual Basic</B>, quindi fare clic su <B>Access</B> nella casella <B>Progetto/libreria</B> e scegliere <B>AcControlType</B> nella casella <B>Classi</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TH width=31%>Costante</TH>
+<TH width=50%>Controllo</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acLabel</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defLabel');" class="pop">Etichetta</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acRectangle</B></TD>
+<TD class=TT width=50%><A HREF="JavaScript:hhobj_3.Click()">Rettangolo</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acLine</B></TD>
+<TD class=TT width=50%><A HREF="JavaScript:hhobj_4.Click()">Linea</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acImage</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defImageFrame');" class="pop">Immagine</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acCommandButton</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defCommandButton');" class="pop">Pulsante di comando</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acOptionButton</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defOptionButton');" class="pop">Pulsante di opzione</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acCheckBox</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defCheckBox');" class="pop">Casella di controllo</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acOptionGroup</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defOptionGroup');" class="pop">Gruppo di opzioni</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acBoundObjectFrame</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defBoundObjectFrame');" class="pop">Cornice oggetto associato</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acTextBox</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">Casella di testo</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acListBox</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defListBox');" class="pop">Casella di riepilogo</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acComboBox</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">Casella combinata</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acSubform</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defSubform');" class="pop">Sottomaschera</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acObjectFrame</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defUnboundObjectFrame');" class="pop">Cornice oggetto non associato</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acPage</B></TD>
+<TD class=TT width=50%><A HREF="JavaScript:hhobj_5.Click()">Pagina</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acPageBreak</B></TD>
+<TD class=TT width=50%><A HREF="JavaScript:hhobj_6.Click()">Interruzione di pagina</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acCustomControl</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defCustomControl');" class="pop">Controllo ActiveX</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acToggleButton</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defToggleButton');" class="pop">Interruttore</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acTabCtl</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','defTabControl');" class="pop">Controllo Struttura a schede</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>sezione</I></TD>
+<TD class=TT colspan=2 width=81%>Una delle costanti intrinseche riportate di seguito che identifica la sezione contenente il controllo. Per visualizzare queste costanti e incollarle nel codice dal Visualizzatore oggetti, fare clic sul pulsante <B>Visualizzatore oggetti</B>  <A HREF="javascript:HelpPopup('actip9.hlp','actbrObjectBrowserQ');" class="pop"><IMG SRC="images/objbrws.bmp" BORDER=0></A>  sulla <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> di <B>Visual Basic</B>, quindi selezionare <B>Access</B> nella casella <B>Progetto/libreria</B> e scegliere <B>AcSection</B> nella casella <B>Classi</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TH width=31%>Costante</TH>
+<TH width=50%>Sezione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=DELETE colspan=3 width=100%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acDetail</B></TD>
+<TD class=TT width=50%>Impostazione predefinita. <A HREF="javascript:HelpPopup('actip9.hlp','acrgnDetailSectionQ');" class="pop">Sezione Corpo</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acHeader</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','acrgnFormHeaderSectionQ');" class="pop">Intestazione di maschera</A> o di <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportHeaderSectionQ');" class="pop">report</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acFooter</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','acrgnFormFooterSectionQ');" class="pop">Piè di pagina di maschera</A>  o di <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportFooterSectionQ');" class="pop">report</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acPageHeader</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','acrgnPageHeaderSectionQ');" class="pop">Intestazione di pagina</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acPageFooter</B></TD>
+<TD class=TT width=50%><A HREF="javascript:HelpPopup('actip9.hlp','acrgnPageFooterSectionQ');" class="pop">Piè di pagina della pagina</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acGroupLevel1Header</B></TD>
+<TD class=TT width=50%>Intestazione <A HREF="javascript:HelpPopup('actip9.hlp','defGroupLevel');" class="pop">livello di gruppo</A> 1 (solo report)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acGroupLevel1Footer</B></TD>
+<TD class=TT width=50%>Piè di pagina livello di gruppo 1 (solo report)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acGroupLevel2Header</B></TD>
+<TD class=TT width=50%>Intestazione livello di gruppo 2 (solo report)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT width=31%><B>acGroupLevel2Footer</B></TD>
+<TD class=TT width=50%>Piè di pagina livello di gruppo 2 (solo report)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT colspan=2 width=81%>Se un report dispone di livelli di gruppo aggiuntivi, le coppie intestazione/piè di pagina vengono numerate consecutivamente a partire dal numero 9.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>principale</I></TD>
+<TD class=TT colspan=2 width=81%>Espressione stringa che identifica il nome del controllo principale relativo a un controllo aggiuntivo. Per i controlli che non dispongono di un controllo principale, utilizzare per il presente argomento una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A>, oppure ometterlo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>nomecolonna</I></TD>
+<TD class=TT colspan=2 width=81%>Nome del campo al quale viene associato il controllo, se tale controllo è associato a dati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&nbsp;</TD>
+<TD class=TT colspan=2 width=81%>Se si crea un controllo non associato a un campo, utilizzare per questo argomento una stringa a lunghezza zero.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>sinistra</I>, <I>alto</I></TD>
+<TD class=TT colspan=2 width=81%><A HREF="javascript:HelpPopup('actip9.hlp','defNumericExpression');" class="pop">Espressioni numeriche</A> definite in <A HREF="javascript:HelpPopup('actip9.hlp','defTwip');" class="pop">twip</A> che indicano le coordinate relative all'angolo superiore sinistro del controllo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%><I>larghezza</I>, <I>altezza</I></TD>
+<TD class=TT colspan=2 width=81%>Espressioni numeriche definite in twip che indicano la larghezza e l'altezza del controllo.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Utilizzare i metodi <B>CreateControl</B> e <B>CreateReportControl</B> in una Creazione guidata personalizzata per creare controlli in una maschera o in un report. Entrambi i metodi restituiscono un oggetto <A HREF="acobjControl.htm"><B>Control</B></A>.</P>
+
+<P class=T>È possibile utilizzare i metodi <B>CreateControl</B> e <B>CreateReportControl</B> rispettivamente solo nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura maschera</A>  o nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura report</A>.</P>
+
+<P class=T>L'argomento <I>principale</I> viene utilizzato per identificare la relazione tra un controllo principale e un controllo subordinato. Se, ad esempio, una casella di testo ha un'etichetta associata, la casella di testo è il controllo principale e l'etichetta è il controllo subordinato o secondario. Quando si crea un'etichetta, impostare l'argomento <I>principale</I> a una stringa che identifica il nome del controllo principale. Quando si crea la casella di testo, impostare l'argomento <I>principale</I> a una stringa a lunghezza zero.</P>
+
+<P class=T>L'argomento <I>principale</I> viene inoltre impostato quando si creano caselle di controllo, pulsanti di opzione o interruttori. Un gruppo di opzioni costituisce il controllo principale di qualsiasi casella di controllo, pulsante di comando o interruttore in esso contenuti. Solo un'etichetta, una casella di controllo, un pulsante di opzione o un interruttore possono disporre di un controllo principale. È inoltre possibile creare tali controlli in modo indipendente, senza disporre di un controllo principale.</P>
+
+<P class=T>Impostare l'argomento <I>nomecolonna</I> a seconda del tipo di controllo creato e se tale controllo viene <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">associato</A> a un campo di una tabella. I controlli che è possibile associare a un campo comprendono caselle di testo, caselle di riepilogo, caselle combinate, gruppi di opzioni e cornici oggetto associato. È inoltre possibile associare a un campo gli interruttori, i pulsanti di opzione e le caselle di controllo, se non fanno parte di un gruppo di opzioni.</P>
+
+<P class=T>Se si specifica il nome di un campo per l'argomento <I>nomecolonna</I>, creare un controllo associato a tale campo. Tutte le proprietà del controllo vengono, quindi, automaticamente impostate secondo le corrispondenti proprietà del campo. Il valore della proprietà del controllo<A HREF="JavaScript:hhobj_7.Click()"><B>ValidationRule</B></A> sarà uguale al valore di tale proprietà per il campo.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se la Creazione guidata crea controlli in una maschera o in un report esistenti o nuovi, è necessario innanzitutto che apra la maschera o il report in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A>.</P>
+
+
+
+<P class=T>Per rimuovere un controllo da una maschera o da un report, utilizzare le istruzioni <A HREF="JavaScript:hhobj_8.Click()"><B>DeleteControl</B> e <B>DeleteReportControl</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

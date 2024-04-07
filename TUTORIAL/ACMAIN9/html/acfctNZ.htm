@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctNZ'
+Feature='acfct'
+Handoff='1'
+SourceFile='afctv3_1a.doc'
+Tnum='186465'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzione Nz</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctIIf">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acfctnz"></A>Funzione Nz</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctNzC;vafctIsEmpty;vafctIsNull;vaoprIs">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctNzX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>Nz</B> per restituire zero, una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A> (" ") o un altro valore specificato quando un valore di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defVariant');" class="pop"><B>Variante</B></A> è <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>. È possibile ad esempio utilizzare questa funzione per convertire un valore <B>Null</B> in un altro valore ed evitare che si propaghi in un'espressione.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>Nz(</B><I>variante</I>[,<I>valoresenull</I>]<B>)</B></P>
+
+
+
+<P class=T>La funzione <B>Nz</B> dispone degli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>variante</I></TD>
+<TD class=TT width=75%>Variabile di <A HREF="javascript:HelpPopup('actip9.hlp','defDataType');" class="pop">dati di tipo</A> <B>Variante</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>valoresenull</I></TD>
+<TD class=TT width=75%>Opzionale, se non utilizzato in una query. Una <B>Variante</B> che fornisce un valore da restituire se l'argomento <I>variante</I> è <B>Null</B>. Questo argomento consente la restituzione un valore diverso da zero o una stringa a lunghezza zero.<P class=TT><B>Nota</B>&nbsp;&nbsp; Se si utilizza la funzione <B>Nz</B> in un'espressione di una query senza utilizzare l'argomento <I>valoresenull</I>, nei campi che contengono valori null risulterà una stringa a lunghezza zero.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Se il valore dell'argomento <I>variante</I> è <B>Null</B>, la funzione <B>Nz</B> restituisce il numero zero o una stringa a lunghezza zero, a seconda che il contesto che indica il valore sia numerico o sia una stringa (se utilizzata nell'espressione di una query, restituisce sempre una stringa a lunghezza zero). Se si include l'argomento opzionale <I>valoresenull</I>, la funzione <B>Nz</B> restituisce il valore specificato da tale argomento se l'argomento <I>variante</I> è <B>Null</B>. Se viene utilizzata nell'espressione di una query, la funzione <B>NZ</B> dovrebbe includere sempre l'argomento <I>valoresenull</I>.</P>
+
+<P class=T>Se il valore dell'argomento <I>variante</I> non è <B>Null</B>, la funzione <B>Nz</B> restituisce il valore di <I>variante</I>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>La funzione <B>Nz</B> risulta utile per le espressioni che includono valori <B>Null</B>. Per forzare un'espressione in modo che corrisponda a un valore diverso da <B>Null</B> anche quando contiene un valore <B>Null</B>, utilizzare la funzione <B>Nz</B> per restituire uno zero, una stringa a lunghezza zero o un valore restituito personalizzato.</P>
+
+<P class=T>L'espressione <CODE>2 + varX</CODE> ad esempio restituisce sempre un valore <B>Null</B> quando la<B> </B>Variante <CODE>varX</CODE> è <B>Null</B>. <CODE>2 + Nz(varX)</CODE> restituisce tuttavia 2.</P>
+
+<P class=T>È spesso possibile utilizzare la funzione <B>Nz</B> come alternativa alla funzione <A HREF="JavaScript:hhobj_3.Click()"><B>IIf</B></A>. Nel codice riportato di seguito ad esempio per restituire il risultato desiderato, sono necessarie due espressioni che includono la funzione <B>IIf</B>. La prima espressione include la funzione <B>IIf</B> e viene utilizzata per verificare il valore di una variabile e convertire tale variabile a zero se è <B>Null</B>.</P>
+
+<PRE class=CT><CODE>varTemp = IIf(IsNull(varSpeseTrasporto), 0, varSpeseTrasporto)
+varRisultato = IIf(varTemp &gt; 50, "Alta", "Bassa")</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo, la funzione <B>Nz</B> offre la stessa funzionalità della prima espressione e il risultato desiderato si ottiene con un solo passaggio invece di due.</P>
+
+<PRE class=CT><CODE>varRisultato = IIf(Nz(varSpeseTrasporto) &gt; 50, "Alta", "Bassa")</CODE></PRE>
+
+
+
+<P class=T>Se si fornisce un valore per l'argomento opzionale <I>valoresenull</I>, tale valore viene restituito quando l'argomento <I>variante</I> è <B>Null</B>. Includendo tale argomento opzionale, è possibile evitare l'utilizzo di un'espressione contenente la funzione <B>IIf</B>. L'espressione riportata di seguito ad esempio utilizza la funzione <B>IIf</B> per restituire una stringa se il valore di <CODE>varSpeseTrasporto</CODE> è <B>Null</B>.</P>
+
+<PRE class=CT><CODE>varRisultato = IIf(IsNull(varSpeseTrasporto), _
+&nbsp;&nbsp;&nbsp; "Non ci sono spese di trasporto", varSpeseTrasporto)</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo, l'argomento opzionale fornito alla funzione <B>Nz</B> dà la stringa da restituire nel caso <CODE>varSpeseTrasporto</CODE> sia <B>Null</B>.</P>
+
+<PRE class=CT><CODE>varRisultato = Nz(varSpeseTrasporto, "Non ci sono spese di trasporto")</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

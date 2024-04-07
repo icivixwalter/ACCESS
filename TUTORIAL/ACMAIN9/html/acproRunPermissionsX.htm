@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRunPermissionsX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproqry1.doc'
+Tnum='188013'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà RunPermissions</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorunpermissionsx"></A>Esempio di proprietà RunPermissions</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene presentata una query di selezione basata sulla tabella Categorie, che consente a tutti gli utenti di disporre delle autorizzazioni del proprietario per la query. Immettere questa istruzione SQL in visualizzazione SQL della finestra di query.</P>
+
+<PRE class=CT><CODE>SELECT Categorie.IDCategoria, Categorie.NomeCategoria, Categorie.Descrizione
+FROM Categorie WITH OWNERACCESS OPTION; </CODE></PRE>
+
+
+
+</BODY>
+</HTML>

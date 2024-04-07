@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactSynchronizingFormsUsingMacroX'
+Feature='acact'
+Handoff='1'
+SourceFile='macroex8_2.doc'
+Tnum='186844'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Sincronizzare le maschere mediante una macro - Esempio</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acactsynchronizingformsusingmacrox"></A>Sincronizzare le maschere mediante una macro - Esempio</B></P>
+
+
+
+<P class=T>La macro riportata di seguito apre la maschera Elenco prodotti situata nell'angolo inferiore destro della maschera Fornitori, nella quale vengono visualizzati i prodotti del fornitore corrente. La macro illustra l'utilizzo delle azioni EcoSchermo, FinestraMessaggio, VaiAControllo, ArrestaMacro, ApriMaschera e SpostaRidimensiona, nonché l'utilizzo di un'espressione condizionale con le azioni FinestraMessaggio, VaiAControllo e ArrestaMacro.</P>
+
+<P class=T>Per visualizzare gli argomenti relativi a ciascuna azione, fare clic sul nome dell'azione.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=29%>Condizione</TH>
+<TH width=24%>Azione</TH>
+<TH width=47%>Commento</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=47%>Associata al pulsante Visualizza prodotti nella maschera Fornitori.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>&nbsp;</TD>
+<TD class=TT width=24%><A HREF="acactStop1X.htm">EcoSchermo</A></TD>
+<TD class=TT width=47%>Arresta l'aggiornamento a schermo mentre la macro è in esecuzione (l'eco è disattivata).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>IsNull([ID Fornitore])</TD>
+<TD class=TT width=24%><A HREF="acactStop2X.htm">FinestraMessaggio</A></TD>
+<TD class=TT width=47%>Se nella maschera Fornitori non è presente alcun fornitore corrente, visualizza un messaggio...</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>&nbsp;</TD>
+<TD class=TT width=24%><A HREF="acactStop2AX.htm">VaiAControllo</A></TD>
+<TD class=TT width=47%>Sposta lo stato attivo sul controllo NomeSocietà.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>&nbsp;</TD>
+<TD class=TT width=24%><A HREF="acactStop3X.htm">ArrestaMacro</A></TD>
+<TD class=TT width=47%>... e arresta l'esecuzione della macro.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>&nbsp;</TD>
+<TD class=TT width=24%><A HREF="acactStop4X.htm">ApriMaschera</A></TD>
+<TD class=TT width=47%>Apre la maschera Elenco prodotti e mostra i prodotti del fornitore corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>&nbsp;</TD>
+<TD class=TT width=24%><A HREF="acactStop5X.htm">SpostaRidimensiona</A></TD>
+<TD class=TT width=47%>Colloca la maschera Elenco prodotti nella parte inferiore destra della maschera Fornitori.</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

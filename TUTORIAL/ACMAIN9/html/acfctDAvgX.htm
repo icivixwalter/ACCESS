@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDAvgX'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187150'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di funzione DAvg</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdavgx"></A>Esempi di funzione DAvg</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono restituite le spese medie di trasporto per ordini spediti nel Regno Unito il 1 gennaio 1996 o successivamente. Il dominio è una tabella Ordini. L'argomento <I>criteri</I> limita il set di record risultante ai record in cui PaeseDestinatario corrisponde a UK e DataSpedizione è maggiore o uguale a 01/01/96. Si noti che viene inclusa nella stringa la parola chiave <B>AND</B> per separare più campi presenti nell'argomento <I>criteri</I>. Tutti i record inclusi nel calcolo della funzione <B>DAvg</B> dispongono di entrambi i criteri.</P>
+
+<PRE class=CT><CODE>Dim dblX As Double
+dblX = <B>DAvg(</B>"[SpeseTrasporto]", "Ordini", _
+&nbsp;&nbsp;&nbsp; "[PaeseDestinatario] = 'UK' AND [DataSpedizione] &gt;= #01/01/96#"<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si calcola una media utilizzando una variabile, <CODE>strPaese</CODE>, nell'argomento <I>criteri</I>. Si noti che nelle espressioni stringa vengono inclusi gli apici ('), in modo che, quando le stringhe sono tutte concatenate, la variabile <CODE>UK</CODE> viene racchiusa tra apici. Nell'esempio riportato di seguito si utilizza la parola chiave <B>OR</B> per separare più campi e vengono restituiti tutti i record che hanno uno dei due criteri o entrambi i criteri.</P>
+
+<PRE class=CT><CODE>Dim dblX As Double, strPaese As String
+strPaese = "UK"
+dblX = <B>DAvg(</B>"[SpeseTrasporto]", "Ordini", _
+&nbsp;&nbsp;&nbsp; "[PaeseDestinatario] = '" &amp; strPaese &amp; "'OR _
+&nbsp;&nbsp;&nbsp; [DataSpedizione] &gt;= #01/01/96#"<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

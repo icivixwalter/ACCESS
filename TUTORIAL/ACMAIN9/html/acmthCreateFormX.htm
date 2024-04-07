@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateFormX'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186372'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di metodi CreateForm e CreateReport</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreateformx"></A>Esempi di metodi CreateForm e CreateReport</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un report nel database corrente utilizzando il modello specificato dall'impostazione <B>Modello report</B> nella scheda <B>Maschere/Report</B> della finestra di dialogo <B>Opzioni</B>.</P>
+
+<PRE class=CT><CODE>Sub ReportNormale()
+&nbsp;&nbsp;&nbsp; Dim rpt As Report
+
+&nbsp;&nbsp;&nbsp; Set rpt = <B>CreateReport</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea un report ridotto a icona.
+&nbsp;&nbsp;&nbsp; DoCmd.Restore&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Ripristina il report.
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo viene creata una nuova maschera nel database di esempio di Northwind basata sulla maschera Clienti e impostata la proprietà <B>RecordSource</B> della maschera alla tabella Clienti. Questo codice può essere eseguito dal database di esempio di Northwind.</P>
+
+<PRE class=CT><CODE>Sub NuovaMaschera()
+&nbsp;&nbsp;&nbsp; Dim frm As Form
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Crea una maschera basata sulla maschera Clienti.
+&nbsp;&nbsp;&nbsp; Set frm = <B>CreateForm(</B> , "Clienti"<B>)</B>
+&nbsp;&nbsp;&nbsp; DoCmd.Restore
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà RecordSource alla tabella Clienti.
+&nbsp;&nbsp;&nbsp; frm.RecordSource = "Clienti"
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

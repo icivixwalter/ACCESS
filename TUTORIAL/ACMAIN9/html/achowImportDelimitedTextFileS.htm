@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowImportDelimitedTextFileS'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='187628'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Importare o collegare un file di testo delimitato o a larghezza fissa</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowimportdelimitedtextfiles"></A>Importare o collegare un file di testo delimitato o a larghezza fissa</H1>
+
+<P class=NT><B>Nota&nbsp;&nbsp;</B> È possibile <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegare</A> una tabella solo in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessdatabase');" class="pop">database di Microsoft Access</A>, non in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>.</P>
+
+<P class=T><B>Importante&nbsp;&nbsp;</B> Prima di <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importare</A> o collegare dati da un <A HREF="javascript:HelpPopup('actip9.hlp','defDelimitedText');" class="pop">file di testo delimitato</A> o da un <A HREF="javascript:HelpPopup('actip9.hlp','defFixedWidthText');" class="pop">file di testo a larghezza fissa</A>, assicurarsi che il file abbia lo stesso tipo di dati in ciascun campo e gli stessi campi in ciascuna riga. 
+
+<OL>
+	<LI class=LPROC>Aprire un database oppure passare alla <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> aperto.<BR><BR></LI>
+
+	<LI class=LPROC>Per importare dei dati, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Importa</B>.
+<P class=LT1>Per collegare dei dati, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Collega tabelle</B>.
+
+</LI>
+
+	<LI class=LPROC>Selezionare <B>File di testo (*.txt;*.csv;*.tab;*.asc)</B> dalla casella <B>Tipo file</B> della finestra di dialogo <B>Importa</B> o <B>Collega</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sulla freccia alla destra della casella <B>Cerca in</B>, selezionare l'unità e la cartella in cui è memorizzato il file, quindi fare doppio clic sulla relativa icona.
+<P class=LT1><B>Importante&nbsp;&nbsp;</B> Se ci si collega a un file in una rete locale, assicurarsi di utilizzare un percorso <A HREF="javascript:HelpPopup('actip9.hlp','defUNC');" class="pop">UNC (Universal Naming Convention)</A> invece di utilizzare la lettera identificativa di un'unità di rete mappata in Esplora risorse di Windows (Gestione risorse in Windows 95 e Windows NT 4.0). La lettera di un'unità può variare da computer a computer o non essere definita, mentre un percorso UNC è un modo affidabile e coerente per individuare l'origine dati che contiene la tabella collegata. 
+</LI>
+
+	<LI class=LPROC>Seguire le istruzioni nelle finestre di dialogo dell'<B>Importazione guidata testo</B>. Scegliere il pulsante <B>Avanzate</B> per <A HREF="acconAboutSpecsSchemaFiles.htm">creare o utilizzare una specifica di importazione e/o esportazione</A>.</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=LB1>Sebbene generalmente si crei una tabella di dati nuova in Microsoft Access, è possibile accodare i dati a una tabella esistente, purché la prima riga del file di testo contenga nomi di campi corrispondenti.<BR><BR></LI>
+
+	<LI class=LB1>L'eccessiva durata della procedura di importazione di un foglio dati potrebbe dipendere dal verificarsi di molti errori. Per annullare l'importazione, premere CTRL+INTERR.<BR><BR></LI>
+
+	<LI class=LB1>In un file di testo a larghezza fissa è possibile ignorare quei campi alla fine di un record, che non contengono dati. L'ultimo campo del record contenente dei dati inoltre può essere inferiore alla massima larghezza consentita.<BR><BR></LI>
+
+	<LI class=LB1>Se tutti i record di un file di testo a larghezza fissa sono della stessa lunghezza, è possibile inserire un separatore di righe incorporato a metà del record, come ad esempio un ritorno a capo e un avanzamento riga. Se non tutti i record sono della stessa lunghezza, non si devono utilizzare dei separatori di riga incorporati, poiché verranno considerati come fine del record.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowImportDelimitedTextFileSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

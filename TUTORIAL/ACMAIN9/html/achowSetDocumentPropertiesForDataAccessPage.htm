@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSetDocumentPropertiesForDataAccessPage'
+Feature='Page: Design'
+Handoff='3'
+SourceFile='cDAPDsgn.doc'
+Tnum='262171'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostare le proprietà del documento, come titolo, oggetto e autore, in una pagina di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowsetdocumentpropertiesfordataaccesspage"></A>Impostare le proprietà del documento, come titolo, oggetto e autore, in una pagina di accesso ai dati</H1>
+
+<OL>
+	<LI class=LPROC>Aprire la pagina di accesso ai dati in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPageView');" class="pop">visualizzazione Pagina</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Proprietà pagina</B> dal menu <B>File</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Impostare i valori desiderati per le proprietà nelle seguenti schede:
+<UL>
+	<LI class=LB2><B>Generale</B>&nbsp;&nbsp; In questa scheda sono contenute le stesse informazioni visualizzate quando si fa clic con il pulsante destro del mouse sul nome di un file in Esplora risorse di Microsoft Windows (Gestione risorse in Windows 95 e Windows NT 4.0) e quando si sceglie <B>Proprietà</B> dal menu di scelta rapida. Come unica differenza, quando si visualizzano queste proprietà in Microsoft Access, le impostazioni dell'area <B>Attributi</B> sono di sola lettura.<BR><BR></LI>
+
+	<LI class=LB2><B>Riepilogo</B>&nbsp;&nbsp; Le informazioni immesse in questa scheda si aggiungono all'oggetto <B>Document</B> di SummaryInfo nell'insieme <B>Documents</B>. Queste informazioni sono simili a quelle fornite dai riepiloghi di altre applicazioni di Microsoft Office. Le informazioni di riepilogo consentono di identificare meglio una pagina dall'interno di Microsoft Access e in altri modi, ad esempio mediante il comando Trova del menu Avvio di Microsoft Windows. L'impostazione <B>Base del collegamento ipertestuale</B> nella scheda <B>Riepilogo</B> viene utilizzata per creare il percorso del collegamento ipertestuale di base inserito all'inizio delle impostazioni della proprietà <B>HyperlinkAddress</B>.<BR><BR></LI>
+
+	<LI class=LB2><B>Statistiche</B>&nbsp;&nbsp; Queste informazioni includono la data e l'ora in cui è stata creata la pagina attiva, la data e l'ora dell'ultima modifica, l'autore delle modifiche, il numero di volte che è stata revisionata la pagina e il tempo totale di modifica.<BR><BR></LI>
+
+	<LI class=LB2><B>Contenuto</B>&nbsp;&nbsp; Queste informazioni includono il titolo e la stringa di connessione.<BR><BR></LI>
+
+	<LI class=LB2><B>Personalizza</B>&nbsp;&nbsp; Le proprietà personalizzate immesse diventano le proprietà dell'oggetto <B>Document</B> di tipo UserDefined nell'insieme <B>Documents</B>.</LI>
+</UL>
+</LI>
+</OL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowSetDocumentPropertiesForDataAccessPageW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

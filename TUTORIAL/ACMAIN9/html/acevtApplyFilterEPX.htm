@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtApplyFilterEPX'
+Feature='acevt'
+Handoff='2'
+SourceFile='aevtv3.doc'
+Tnum='187011'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento ApplicazioneFiltro - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtapplyfilterepx"></A>Evento ApplicazioneFiltro - Esempio di routine evento</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito mostra come nascondere i controlli ImportoDovuto, Imposte e TotaleDovuto su una maschera Ordini quando il filtro applicato limita i record soltanto agli ordini saldati.</P>
+
+<P class=T>Per eseguire questo esempio, aggiungere la seguente routine evento a una maschera Ordini che contiene i controlli ImportoDovuto, Imposte e TotaleDovuto. Eseguire un filtro che elenca soltanto gli ordini saldati.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>ApplyFilter(</B>Cancel As Integer, ApplyType As Integer<B>)</B>
+    If Not IsNull(Me.Filter) And (InStr(Me.Filter, "Ordini.Saldati = -1")&gt;0 _
+            Or InStr(Me.Filter, "Ordini.Saldati = True")&gt;0)Then
+        If ApplyType = acApplyFilter Then
+            Forms!Ordini!ImportoDovuto.Visible = False
+            Forms!Ordini!Imposte.Visible = False
+            Forms!Ordini!TotaleDovuto.Visible = False
+        ElseIf ApplyType = acShowAllRecords Then
+            Forms!Ordini!ImportoDovuto.Visible = True
+            Forms!Ordini!Imposte.Visible = True
+            Forms!Ordini!TotaleDovuto.Visible = True
+        End If
+    End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

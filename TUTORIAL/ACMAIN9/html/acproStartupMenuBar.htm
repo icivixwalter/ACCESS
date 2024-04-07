@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproStartupMenuBar'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew.doc'
+Tnum='188120'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà StartupMenuBar</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthCreateProperty">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dacolProperty">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjDatabase">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprostartupmenubar"></A>Proprietà StartupMenuBar</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproStartupMenuBarC;dacolProperty;damthCreateProperty">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproStartupMenuBarX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproStartupMenuBarA;daobjDatabase">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>StartupMenuBar</B> per specificare una <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBar');" class="pop">barra dei menu</A> personalizzata da utilizzare come <A HREF="javascript:HelpPopup('actip9.hlp','defGlobalMenuBar');" class="pop">barra dei menu globale</A> per l'applicazione. È possibile, ad esempio, utilizzare la proprietà <B>StartupMenuBar</B> per visualizzare una barra dei menu personalizzata che non contiene il menu <B>Protezione</B>, in modo da impedire l'accesso ai comandi di tale menu<B> </B>dalla barra dei menu. È inoltre possibile specificare una <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBarScript');" class="pop">macro per la creazione di barre dei menu</A> che visualizza la barra dei menu personalizzata che si desidera utilizzare come barra dei menu globale.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>StartupMenuBar</B> è un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che rappresenta il nome di una barra dei menu personalizzata o una macro per la creazione di barre dei menu contenuta nel database corrente.</P>
+
+<P class=T>Il modo più semplice per impostare questa proprietà consiste nell'utilizzare l'opzione <B>Barra dei menu</B> della finestra <B>Avvio</B>, disponibile scegliendo <B>Avvio</B> dal menu <B>Strumenti</B>. In alternativa, è possibile utilizzare una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=T>Per impostare la proprietà <B>StartupMenuBar</B> utilizzando una macro o Visual Basic, è necessario prima impostarla una volta nella finestra <B>Avvio</B> oppure crearla come segue:<UL>
+	<LI class=LB1>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB) è possibile aggiungerla utilizzando il metodo <A HREF="JavaScript:hhobj_4.Click()"><B>CreateProperty</B></A> e accodarla all'insieme <A HREF="JavaScript:hhobj_5.Click()"><B>Properties</B></A> dell'oggetto <A HREF="JavaScript:hhobj_6.Click()"><B>Database</B></A>.<BR><BR></LI>
+
+	<LI class=LB1>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (ADP) è possibile aggiungerla all'insieme <A HREF="accolAccessObjectProperties.htm"><B>AccessObjectProperties</B></A> dell'oggetto <A HREF="acobjCurrentProject.htm"><B>CurrentProject</B></A> utilizzando il metodo <A HREF="acmthAddAOP.htm"><B>Add</B></A>.</LI>
+</UL>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Durante l'impostazione della proprietà <B>StartupMenuBar</B>, non è consigliabile utilizzare un'azione <A HREF="acactSetValue.htm">ImpostaValore</A> nella <A HREF="achowRunMacroWhenMyDatabaseFirstOpensS.htm">macro AutoExec</A> per impostare la proprietà <A HREF="acproMenuBar.htm"><B>MenuBar</B></A> per l'oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>. Poiché la macro AutoExec viene eseguita dopo che sono state analizzate le proprietà di avvio, la barra dei menu globale impostata in tale macro sostituirebbe quella impostata con la proprietà <B>StartupMenuBar</B>.</P>
+
+<P class=T>Per creare barre dei menu personalizzate è anche possibile utilizzare la proprietà <B>MenuBar</B> per <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschere</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>. Tali barre dei menu vengono visualizzate quando si apre una determinata maschera o un report e sostituiscono in questi casi la barra dei menu globale.</P>
+
+<P class=T>Se per la proprietà <B>StartupMenuBar</B> non è specificata alcuna impostazione, come per impostazione predefinita, viene visualizzata la barra dei menu incorporata. Se invece questa proprietà è impostata al nome di una barra dei menu personalizzata, l'impostazione della proprietà <A HREF="acproAllowFullMenus.htm"><B>AllowFullMenus</B></A> non ha alcun effetto e i menu completi incorporati vengono sostituiti dalla barra dei menu globale.</P>
+
+<P class=T>L'impostazione di questa proprietà corrisponde all'impostazione della proprietà <B>MenuBar</B> dell'oggetto <B>Application</B>, tranne per il fatto che la proprietà <B>MenuBar</B> ha effetto immediato.</P>
+
+<P class=T>Se la casella di controllo <B>Usa tasti speciali Access</B> è selezionata nella finestra <B>Avvio</B> oppure la proprietà <A HREF="acproAllowSpecialKeys.htm"><B>AllowSpecialKeys</B></A> è impostata a <B>True</B> (–1), è comunque possibile alternare tra la barra dei menu globale e quella incorporata premendo CTRL+F11.</P>
+
+<P class=T>L'impostazione di questa proprietà non ha effetto fino alla successiva apertura del database.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

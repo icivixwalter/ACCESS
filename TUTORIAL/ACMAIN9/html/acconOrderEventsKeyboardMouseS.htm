@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOrderEventsKeyboardMouseS'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmacevt.rtf'
+Tnum='186830'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Ordine degli eventi per i tasti e le selezioni con il mouse</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vamscANSITable">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vamscANSITable2">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconordereventskeyboardmouses"></A>Ordine degli eventi per i tasti e le selezioni con il mouse</H1>
+
+<P class=T>Gli <A HREF="javascript:HelpPopup('actip9.hlp','defEvent');" class="pop">eventi</A> di tastiera per maschere e <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A> si verificano quando vengono premuti o inviati dei tasti mentre la maschera o il controllo hanno lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A>. Gli eventi di mouse si verificano per maschere, sezioni di maschere e controlli sulle maschere quando si premono i pulsanti del mouse mentre il puntatore si trova su una maschera, su una sezione o su un controllo oppure quando viene spostato su di essi.</P>
+
+<H2>Eventi di tastiera</H2>
+
+<P class=T>Quando viene premuto e rilasciato un tasto mentre un controllo su una maschera ha lo stato attivo oppure viene utilizzata l'azione InviaTasti o l'istruzione SendKeys per inviare un tasto, si verifica la sequenza di eventi riportata di seguito:</P>
+
+<P class=IND>TastoGiù <font face="Symbol">Þ</FONT> 
+Pressione <font face="Symbol">Þ</FONT>
+TastoSu</P>
+
+<P class=T>Quando un tasto viene premuto e rilasciato oppure viene inviata una sequenza di tasti nel <A HREF="javascript:HelpPopup('actip9.hlp','defANSI');" class="pop">set di caratteri ANSI</A>, si verificano tutti gli eventi TastoGiù, Pressione e TastoSu. Se si tiene premuto un tasto ANSI, gli eventi TastoGiù e Pressione si alternano più volte (TastoGiù, Pressione, TastoGiù, Pressione e così via) fino a che il tasto non viene rilasciato e quindi si verifica l'evento TastoSu. Per gli elenchi di caratteri nel set di caratteri ANSI, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A> e su <A HREF="JavaScript:hhobj_2.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Se viene premuto e rilasciato un tasto non ANSI, si verificano gli eventi TastoGiù e TastoSu. Se si tiene premuto un tasto non ANSI, si verifica più volte l'evento TastoGiù fino a che il tasto non viene rilasciato, quindi si verifica l'evento TastoSu.</P>
+
+<P class=T>Se la pressione di un tasto attiva un altro evento per un controllo, l'altro evento si verifica dopo l'evento Pressione ma prima dell'evento TastoSu. Se ad esempio una sequenza di tasti modifica il testo in una casella di testo, attivando un evento Modifica, si verifica la sequenza di eventi riportata di seguito:</P>
+
+<P class=IND>TastoGiù <font face="Symbol">Þ</FONT>
+Pressione <font face="Symbol">Þ</FONT>
+Modifica <font face="Symbol">Þ</FONT>
+TastoSu</P>
+
+<P class=T>Se una sequenza di tasti provoca lo spostamento dello stato attivo da un controllo all'altro, si verifica l'evento TastoGiù per il primo controllo mentre gli eventi Pressione e TastoSu si verificano per il secondo controllo. Se ad esempio vengono modificati i dati in un controllo e quindi si preme TAB per spostarsi sul controllo successivo, si verifica la sequenza di eventi riportata di seguito:
+
+<UL>
+	<LI class=LB1>Primo controllo:
+<P class=LT1>TastoGiù <font face="Symbol">Þ</FONT>
+PrimaDiAggiornare <font face="Symbol">Þ</FONT>
+DopoAggiornamento <font face="Symbol">Þ</FONT>
+Uscita <font face="Symbol">Þ</FONT>
+Disattivato
+</LI>
+
+	<LI class=LB1>Secondo controllo:
+<P class=LT1>Invio <font face="Symbol">Þ</FONT>
+ Attivato <font face="Symbol">Þ</FONT>
+Pressione <font face="Symbol">Þ</FONT>
+TastoSu
+</LI>
+</UL>
+
+<H2>Eventi di mouse</H2>
+
+<P class=T>Quando viene premuto e rilasciato un pulsante del mouse mentre il puntatore si trova su un controllo di una maschera, per il controllo si verifica la sequenza di eventi riportata di seguito:</P>
+
+<P class=IND>PulsanteMouseGiù <font face="Symbol">Þ</FONT>
+PulsanteMouseSu <font face="Symbol">Þ</FONT>
+Clic</P>
+
+<P class=T>Se un controllo ha lo stato attivo e si fa clic su un altro controllo sul quale spostare lo stato attivo, si verifica la sequenza di eventi riportata di seguito:
+
+<UL>
+	<LI class=LB1>Primo controllo:
+<P class=LT1>Uscita <font face="Symbol">Þ</FONT>
+Disattivato
+</LI>
+
+	<LI class=LB1>Secondo controllo:
+<P class=LT1>Invio <font face="Symbol">Þ</FONT>
+Attivato <font face="Symbol">Þ</FONT>
+PulsanteMouseGiù <font face="Symbol">Þ</FONT>
+PulsanteMouseSu <font face="Symbol">Þ</FONT>
+Clic
+</LI>
+</UL>
+
+<P class=T>Se ci si sposta su un altro record e si fa clic su un controllo, anche l'evento Corrente per la maschera si verifica prima dell'evento Invio per il controllo.</P>
+
+<P class=T>Fare doppio clic su un controllo provoca il verificarsi degli eventi DoppioClic e Clic. Quando ad esempio si fa doppio clic su un controllo che non è un pulsante di comando, per il controllo si verifica la sequenza di eventi riportata di seguito:</P>
+
+<P class=IND>PulsanteMouseGiù <font face="Symbol">Þ</FONT>
+PulsanteMouseSu <font face="Symbol">Þ</FONT>
+Clic <font face="Symbol">Þ</FONT>
+DoppioClic <font face="Symbol">Þ</FONT>
+PulsanteMouseSu</P>
+
+<P class=T>Quando si fa doppio clic su un pulsante di comando, si verificano questi eventi seguiti da un secondo evento Clic.</P>
+
+<P class=T>L'evento MouseSpostato per una maschera, per una sezione o per un controllo si verifica quando si sposta il puntatore del mouse sulla maschera, sulla sezione o sul controllo. Questo evento è indipendente dagli altri eventi di mouse.</P>
+
+<P class=T>Per ulteriori informazioni sugli eventi di tastiera, fare clic su <A HREF="acidxKeyboardEvents.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sugli eventi di mouse, fare clic su <A HREF="acidxMouseEvents.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOrderEventsKeyboardMouseSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

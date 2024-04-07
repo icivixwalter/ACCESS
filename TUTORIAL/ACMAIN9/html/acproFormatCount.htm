@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFormatCount'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproprt2_1a.rtf'
+Tnum='187270'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà FormatCount</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproformatcount"></A>Proprietà FormatCount</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFormatCountC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFormatCountX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFormatCountA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>FormatCount</B> per determinare il numero di volte che la proprietà <A HREF="acproEventProperties.htm"><B>OnFormat</B></A> è stata valutata per la sezione corrente di un report.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>È possibile utilizzare questa proprietà solo in una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o in una <A HREF="JavaScript:hhobj_4.Click()">routine evento di Visual Basic</A> specificata dall'impostazione della proprietà <B>OnFormat</B> di una sezione.</P>
+
+<P class=T>L'impostazione della proprietà <B>FormatCount</B> è un valore del tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defLongDataType');" class="pop"><B>Intero lungo</B></A>.</P>
+
+<P class=T>Questa proprietà non è disponibile in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura del report</A> ed è di sola lettura in altre visualizzazioni.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Microsoft Access incrementa la proprietà <B>FormatCount</B> ogni volta che viene valutata l'impostazione della proprietà <B>OnFormat</B> per la sezione corrente. Appena la sezione successiva viene formattata, Microsoft Access reimposta a 1 la proprietà <B>FormatCount</B>.</P>
+
+<P class=T>In alcuni casi, Microsoft Access formatta una sezione più di una volta. È possibile, ad esempio, creare un report in cui la proprietà <A HREF="acproKeepTogetherSections.htm"><B>KeepTogether</B></A> per la sezione Corpo è impostata a Sì. Quando Microsoft Access raggiunge il termine della pagina, la sezione Corpo corrente viene formattata una volta per controllare se le dimensioni corrisponderanno alla grandezza della pagina. In caso contrario, Microsoft Access passa alla pagina successiva e formatta di nuovo la sezione Corpo. In tal caso, l'impostazione della proprietà <B>FormatCount</B> per la sezione Corpo è 2, poiché è stata formattata due volte prima di essere stampata.</P>
+
+<P class=T>È possibile utilizzare la proprietà <B>FormatCount</B> per garantire che un'operazione riguardante la formattazione venga eseguita solo una volta per una sezione. Nell'esempio riportato di seguito, la funzione <A HREF="acfctDLookup.htm"><B>DLookup</B></A> viene valutata solo quando la proprietà <B>FormatCount</B> è impostata a 1.</P>
+
+<PRE class=CT><CODE>Private Sub Dettaglio_Format(Cancel As Integer, _
+&nbsp;&nbsp;&nbsp;&nbsp; FormatCount As Integer)
+&nbsp;&nbsp;&nbsp; Const conGrassetto = 700
+&nbsp;&nbsp;&nbsp; Const conNormale = 400
+&nbsp;&nbsp;&nbsp; If FormatCount = 1 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If DLookup("NomeSocietà", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Clienti", "IDCliente = Reports!" _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "[Etichette Cliente]!IDCliente") _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Like "B*" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RigaNomeSocietà.FontWeight = conGrassetto
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RigaNomeSocietà.FontWeight = conNormale
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

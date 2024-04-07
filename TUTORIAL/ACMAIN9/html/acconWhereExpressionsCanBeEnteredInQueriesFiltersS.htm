@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWhereExpressionsCanBeEnteredInQueriesFiltersS'
+Feature='Queries: Expressions'
+Handoff='1'
+SourceFile='CQRYEXP.RTF'
+Tnum='188012'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Immettere espressioni in query e filtri</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwhereexpressionscanbeenteredinqueriesfilterss"></A>Immettere espressioni in query e filtri</H1>
+
+<P class=T>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> di una query, nella <A HREF="javascript:HelpPopup('actip9.hlp','defAdvancedFilterSort');" class="pop">finestra di ordinamento/filtro avanzato</A>, in un'istruzione SQL in <A HREF="javascript:HelpPopup('actip9.hlp','defSQLView');" class="pop">visualizzazione SQL</A> di una query o nella finestra di <A HREF="javascript:HelpPopup('actip9.hlp','defFilterByForm');" class="pop">filtro in base a maschera</A>, è possibile utilizzare delle <A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressioni</A>, per specificare dei criteri che identificano i record con i quali si desidera lavorare. Nelle query è inoltre possibile utilizzare delle espressioni per aggiornare dei valori in un gruppo di record o per creare dei campi calcolati.</P>
+
+<P class=T>Nella griglia di struttura, immettere l'espressione in punti diversi a seconda dell'operazione che si desidera eseguire. La tabella seguente mostra i punti in cui è possibile immettere delle espressioni. Dopo aver digitato un'espressione nella griglia di struttura e aver premuto INVIO, Microsoft Access visualizza l'espressione utilizzando una sintassi riconosciuta. Se nell'espressione non viene incluso un <A HREF="javascript:HelpPopup('actip9.hlp','defOperator');" class="pop">operatore</A>, si suppone che si voglia indicare l'operatore<B> </B>uguale a (=). Se si digita ad esempio <B>Danimarca</B> quale criterio in un campo Nazione, l'espressione "Danimarca" viene interpretata come Nazione="Danimarca". Se nell'espressione si includono dei riferimenti a nomi di campo, i campi devono trovarsi in una delle tabelle aggiunte alla query, a meno che non si stia utilizzando la funzione <B>DLookup</B> o una sottoquery. Non è possibile tuttavia trascinare i campi all'espressione nella griglia di struttura.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Per</TH>
+<TH width=52%>Digitare l'espressione in</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Specificare dei criteri per una query di selezione, a campi incrociati o di comando oppure per un filtro avanzato</TD>
+<TD class=TT width=52%>Una cella <B>Criteri</B> della griglia di struttura di una query o di un filtro avanzato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Creare un campo calcolato</TD>
+<TD class=TT width=52%>Una cella <B>Campo</B> della griglia di struttura di una query o di un filtro avanzato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Solo per le query di aggiornamento. Aggiornare dei record in base ai risultati dell'espressione</TD>
+<TD class=TT width=52%>Una cella <B>Aggiorna a</B> della griglia di struttura di una query di aggiornamento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Specificare i record con cui si desidera lavorare, il modo in cui sono raggruppati, i criteri di raggruppamento o il modo in cui sono ordinati</TD>
+<TD class=TT width=52%>Un'istruzione SQL in visualizzazione SQL.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Specificare dei criteri quando si utilizza il filtro in base a maschera</TD>
+<TD class=TT width=52%>Un campo della finestra di filtro in base a maschera per un espressione personalizzata o selezionare un'espressione dall'elenco nel campo.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile vedere come in Microsoft Access vengono valutate le espressioni della query passando alla visualizzazione SQL di una query per vedere le istruzioni SQL sottostanti. Per vedere una query in visualizzazione SQL, fare clic sulla freccia vicina al <A HREF="javascript:HelpPopup('actip9.hlp','defViewButton');" class="pop"><B>pulsante Visualizza</B></A> sulla barra degli strumenti, quindi scegliere <B>Visualizzazione SQL</B>. Se la query include tabelle collegate, i valori specificati nei criteri relativi ai campi delle tabelle collegate sono sensibili alla distinzione tra <A HREF="javascript:HelpPopup('actip9.hlp','defCaseSensitive');" class="pop">maiuscole e minuscole</A>, di conseguenza, nella tabella sottostante, le maiuscole e minuscole dei valori devono corrispondere esattamente.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWhereExpressionsCanBeEnteredInQueriesFiltersSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

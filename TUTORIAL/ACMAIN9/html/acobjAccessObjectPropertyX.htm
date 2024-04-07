@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjAccessObjectPropertyX'
+Feature='acobj'
+Handoff='2'
+SourceFile='aobjV9.doc'
+Tnum='274597'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto AccessObjectProperty, insieme AccessObjectProperties</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjaccessobjectpropertyx"></A>Esempio di oggetto AccessObjectProperty, insieme AccessObjectProperties</B> </P>
+
+
+
+<P class=T>In questo esempio viene illustrato come aggiungere proprietà personalizzate a una maschera utilizzando l'insieme AccessObjectProperties e il metodo Add.</P>
+
+<PRE class=CT><CODE>Sub AddCustomFormProperty(strFormName As String, _
+                                  strPropName As String, _
+                                  varPropValue As Variant)
+    ' Aggiunge proprietà personalizzate a insieme AccessObjectProperties
+    ' associato a oggetto AccessObject.
+    
+    With CurrentProject.AllForms(strFormName).Properties
+        .Add strPropName, varPropValue
+    End With
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

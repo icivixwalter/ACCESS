@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDAONameX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234484'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Name (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodaonamex"></A>Esempio di proprietà Name (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si creano due oggetti <B>TableDef</B> e vi si assegna un nome. Il nome del primo oggetto <B>TableDef</B> è incluso come argomento nel metodo <B>CreateTableDef</B>. Il nome del secondo oggetto <B>TableDef</B> viene impostato mediante la proprietà <B>Name</B>, dopo la creazione dell'oggetto <B>TableDef</B>.</P>
+
+<P class=T>Si noti che è necessario definire i campi nella tabella prima di accodare l'oggetto <B>TableDef</B> all'insieme <B>TableDefs</B>.</P>
+
+<PRE class=CT><CODE>Sub NomeNuoveTabelle()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database
+&nbsp;&nbsp;&nbsp; Dim tdfDefinizioni As TableDef, tdfSinonimi As TableDef
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea un nuovo oggetto TableDef.
+&nbsp;&nbsp;&nbsp; Set tdfDefinizioni = dbs.CreateTableDef("Definizioni")
+&nbsp;&nbsp;&nbsp; ' Crea un secondo oggetto TableDef.
+&nbsp;&nbsp;&nbsp; Set tdfSinonimi = dbs.CreateTableDef("")
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà Name per il secondo oggetto TableDef.
+&nbsp;&nbsp;&nbsp; tdfSinonimi.<B>Name</B> = "Sinonimi"
+&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea i campi.
+&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp; dbs.TableDefs.Append tdfDefinizioni
+&nbsp;&nbsp;&nbsp; dbs.TableDefs.Append tdfSinonimi
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

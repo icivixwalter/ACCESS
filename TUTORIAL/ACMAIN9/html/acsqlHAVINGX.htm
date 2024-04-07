@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlHAVINGX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234440'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proposizione HAVING (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlhavingx"></A>Esempio di proposizione HAVING (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si individuano i fornitori i cui prodotti hanno un prezzo unitario medio superiore a L. 50.000:</P>
+
+<PRE class=CT><CODE>SELECT IDFornitore, Media(PrezzoUnitario) AS PrezzoUnitarioMedio
+FROM Prodotti GROUP BY IDFornitore
+<B>HAVING</B> (Media(PrezzoUnitario)&gt;50000);</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si selezionano gli impiegati che hanno ricevuto più di 100 ordini:</P>
+
+<PRE class=CT><CODE>SELECT IDImpiegato, Conteggio(IDOrdine) AS ConteggioIDOrdine
+FROM Ordini GROUP BY IDImpiegato
+<B>HAVING</B> Conteggio(IDOrdine) &gt; 100;</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

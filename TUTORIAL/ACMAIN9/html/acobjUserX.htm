@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjUserX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234580'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto User e insieme Users (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjuserx"></A>Esempio di oggetto User e insieme Users (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un nuovo oggetto <B>User</B> e  accodato all'insieme <B>Users</B> di un oggetto <B>Workspace</B>. Viene creato quindi un nuovo oggetto <B>Group</B> e accodato all'insieme <B>Groups</B> dell'oggetto <B>Workspace</B>. Anche il nuovo oggetto <B>User</B> viene accodato all'insieme <B>Users</B> dell'oggetto <B>Group</B>. Infine, vengono concesse al nuovo utente le autorizzazioni alla lettura dei dati delle tabelle.</P>
+
+<P class=T>Si noti che per assegnare utenti ai gruppi, è necessario accodare un oggetto <B>User</B> all'insieme <B>Users</B> di un oggetto <B>Group</B> oppure accodare un oggetto <B>Group</B> all'insieme <B>Groups</B> di un oggetto <B>User</B>. L'opzione scelta non è rilevante, poiché in entrambi i casi l'utente viene incluso nel gruppo specificato.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Nella programmazione della protezione, evitare di includere nel codice la password e le informazioni relative al PID. Il seguente esempio viene riportato solo a scopo dimostrativo.</P>
+
+
+
+<PRE class=CT><CODE>Sub NuovoUtenteTabelle()
+&nbsp;&nbsp;&nbsp; Dim wsp As Workspace, dbs As Database
+&nbsp;&nbsp;&nbsp; Dim usr As <B>User</B>, grp As Group, usrMember As <B>User</B>
+&nbsp;&nbsp;&nbsp; Dim ctr As Container, doc As Document
+
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento ad area di lavoro predefinita.
+&nbsp;&nbsp;&nbsp; Set wsp = DBEngine.Workspaces(0)
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea oggetto User e accoda a insieme Users
+&nbsp;&nbsp;&nbsp; ' di oggetto Workspace.
+&nbsp;&nbsp;&nbsp; Set usr = wsp.CreateUser("Sergio Cioni", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "123abc456DEF", "Password")
+&nbsp;&nbsp;&nbsp; wsp.<B>Users</B>.Append usr
+&nbsp;&nbsp;&nbsp; ' Crea oggetto Group e accoda a insieme Groups 
+&nbsp;&nbsp;&nbsp; ' di oggetto Workspace.
+&nbsp;&nbsp;&nbsp; Set grp = wsp.CreateGroup("Marketing", "321xyz654EFD")
+&nbsp;&nbsp;&nbsp; wsp.Groups.Append grp
+&nbsp;&nbsp;&nbsp; ' Accoda nuovo oggetto User a insieme Users di
+&nbsp;&nbsp;&nbsp; ' nuovo oggetto Group.
+&nbsp;&nbsp;&nbsp; Set usrMember = grp.CreateUser("Sergio Cioni")
+&nbsp;&nbsp;&nbsp; grp.Users.Append usrMember
+&nbsp;&nbsp;&nbsp; ' Aggiorna insieme Users di oggetto Group.
+&nbsp;&nbsp;&nbsp; grp.Users.Refresh
+&nbsp;&nbsp;&nbsp; ' Restituisce oggetto Container.
+&nbsp;&nbsp;&nbsp; Set ctr = dbs.Containers!Tables
+&nbsp;&nbsp;&nbsp; ' Imposta proprietà UserName di oggetto Container.
+&nbsp;&nbsp;&nbsp; ctr.UserName = usrMember.Name
+&nbsp;&nbsp;&nbsp; ' Aggiunge autorizzazioni di richiamo per nuovo utente su tutte le tabelle.
+&nbsp;&nbsp;&nbsp; ctr.Permissions = ctr.Permissions Or dbSecRetrieveData
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+&nbsp;&nbsp;&nbsp; Set wsp = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

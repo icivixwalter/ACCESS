@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthDAOCloseX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234349'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Close (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthdaoclosex"></A>Esempio di metodo Close (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un oggetto <B>Database</B> che punta al database corrente e aperto un oggetto <B>Recordset</B> di tipo tabella in base a una tabella Clienti del database. La routine utilizza il metodo <B>Close</B> sulla variabile di oggetto <B>Recordset</B> per liberare le risorse di memoria utilizzate da tale variabile. Viene utilizzata l'istruzione <B>Set</B> con la parola chiave <B>Nothing</B> per liberare le risorse utilizzate dalla variabile di oggetto <B>Database</B>.</P>
+
+<P class=T>È anche possibile utilizzare il metodo <B>Close</B> dell'oggetto <B>Database</B> per chiuderlo e liberare memoria. Il metodo <B>Close</B> dell'oggetto <B>Database</B> non chiude effettivamente il database aperto in Microsoft Access, ma libera solo le risorse utilizzate dalla variabile di oggetto <B>Database</B>.</P>
+
+<P class=T>L'utilizzo del metodo <B>Close</B> di un oggetto e l'impostazione della variabile di oggetto a <B>Nothing</B> sono metodi equivalenti per liberare memoria.</P>
+
+<PRE class=CT><CODE>Sub UtilizzaClose()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea un oggetto Recordset di tipo tabella.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("Clienti")
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; ' Chiude il set di record per liberare memoria.
+&nbsp;&nbsp;&nbsp; rst.<B>Close</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Libera la memoria utilizzata dalla variabile di oggetto.
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

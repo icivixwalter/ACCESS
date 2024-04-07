@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOverviewPrintingReportMacroS'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmactsk.rtf'
+Tnum='186839'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Stampare un report da una maschera</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenReport">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactPrint">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconoverviewprintingreportmacros"></A>Stampare un report da una maschera</H1>
+
+<P class=T>È possibile automatizzare la stampa di un report eseguendo le azioni ApriReport e Stampa in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> o in una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A>. È possibile ad esempio stampare un report facendo clic su un pulsante di una maschera, scegliendo un comando da un menu personalizzato oppure premendo una combinazione di tasti.</P>
+
+<P class=T>Utilizzare l'azione ApriReport se si desidera limitare i record da stampare o se si desidera aprire un report in Anteprima di stampa. Quando si utilizza l'azione ApriReport per stampare un report, questo viene stampato utilizzando le impostazioni predefinite della finestra di dialogo <B>Stampa</B>.</P>
+
+<P class=T>Utilizzare l'azione Stampa per impostare le opzioni di stampa prima di stampare il report. L'azione Stampa include argomenti per ogni opzione della finestra di dialogo <B>Stampa</B>.</P>
+
+<H2>Per saperne di più</H2>
+
+<P class=LBR1><A HREF="achowCreateCommandButtonThatFS.htm">Creare un pulsante di comando che consente di stampare un report</A></P>
+
+<P class=LBR1><A HREF="achowAddActionMacroS.htm">Aggiungere a una macro l'azione ApriReport o l'azione Stampa</A></P>
+
+<P class=LBR1><A HREF="achowRunActionsVBS.htm">Eseguire l'azione ApriReport o l'azione Stampa in una routine Visual Basic</A></P>
+
+<P class=LBR1><A HREF="JavaScript:hhobj_1.Click()">Informazioni sull'azione ApriReport</A></P>
+
+<P class=LBR1><A HREF="JavaScript:hhobj_2.Click()">Informazioni sull'azione Stampa</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOverviewPrintingReportMacroSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

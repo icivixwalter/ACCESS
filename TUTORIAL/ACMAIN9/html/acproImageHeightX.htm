@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproImageHeightX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproimg3_1a.rtf'
+Tnum='187331'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ImageHeight, ImageWidth</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproimageheightx"></A>Esempio di proprietà ImageHeight, ImageWidth</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si richiede di immettere il nome di una bitmap e di assegnare quindi tale bitmap alla proprietà <B>Picture</B> del controllo Immagine chiamato Immagine1. Le proprietà <B>ImageHeight</B> e <B>ImageWidth</B> si utilizzano per ridimensionare il controllo Immagine in modo che corrisponda alle dimensioni della bitmap.</P>
+
+<PRE class=CT><CODE>Sub NuovaImmagine(frm As Form)
+&nbsp;&nbsp;&nbsp; Dim ctlImmagine As Control
+&nbsp;&nbsp;&nbsp; Set ctlImmagine = frm!Immagine1
+&nbsp;&nbsp;&nbsp; ctlImmagine.Picture = InputBox("Immettere percorso e nomefile per la nuova bitmap")
+&nbsp;&nbsp;&nbsp; ctlImmagine.Height = ctlImmagine.<B>ImageHeight</B>
+&nbsp;&nbsp;&nbsp; ctlImmagine.Width = ctlImmagine.<B>ImageWidth</B>
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthTextHeightX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186542'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi TextHeight, TextWidth</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthtextheightx"></A>Esempio di metodi TextHeight, TextWidth</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare i metodi <B>TextHeight</B> e <B>TextWidth</B> per determinare la quantità di spazio verticale e orizzontale richiesta per stampare una stringa di testo nel carattere corrente del report.</P>
+
+<P class=T>Per provare tale esempio in Microsoft Access, creare un nuovo report. Impostare a [Routine evento] la proprietà <B>SuStampa</B> della sezione Corpo. Immettere il codice riportato di seguito nel modulo di report, passare quindi all'Anteprima di stampa.</P>
+
+<PRE class=CT><CODE>Private Sub Stampa_Dettaglio(Cancel As Integer, _
+&nbsp;&nbsp;&nbsp; PrintCount As Integer)
+&nbsp;&nbsp;&nbsp; ' Imposta unità di misura a twip (scala predefinita).
+&nbsp;&nbsp;&nbsp; Me.Scalemode = 1
+&nbsp;&nbsp;&nbsp; ' Stampa nome dimensione del tipo di carattere del report.
+&nbsp;&nbsp;&nbsp; Debug.Print "Tipo di carattere report: "; Me.FontName
+&nbsp;&nbsp;&nbsp; Debug.Print "Dimensione carattere report: "; Me.FontSize
+&nbsp;&nbsp;&nbsp; ' Stampa altezza e larghezza richieste per la stringa di testo.
+&nbsp;&nbsp;&nbsp; Debug.Print "Altezza del testo (in twip): "; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me.<B>TextHeight(</B>"Report del prodotto"<B>)</B>
+&nbsp;&nbsp;&nbsp; Debug.Print "Larghezza del testo (in twip): "; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me.<B>TextWidth(</B>"Report del prodotto"<B>)</B>
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

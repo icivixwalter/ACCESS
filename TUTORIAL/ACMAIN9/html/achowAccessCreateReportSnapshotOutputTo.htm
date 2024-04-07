@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowAccessCreateReportSnapshotOutputTo'
+Feature='Reports: Report Snapshots'
+Handoff='3'
+SourceFile='Snapshot.rtf'
+Tnum='261217'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare lo snapshot di un report utilizzando l'azione OutputSu e pubblicarlo sul Web</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowaccesscreatereportsnapshotoutputto"></A>Creare lo snapshot di un report utilizzando l'azione OutputSu e pubblicarlo sul Web</H1>
+
+<OL>
+	<LI class=LPROC>Creare una macro con una o più azioni OutputSu, una per ciascun report di cui si desidera ottenere l'output in formato snapshot. Ad esempio:
+
+
+<H2>Macro Crea snapshot</H2>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=14%>Azione</TH>
+<TH width=20%>Argomento</TH>
+<TH width=66%>Valore</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=14%>OutputSu</TD>
+<TD class=TT width=20%>Tipo oggetto</TD>
+<TD class=TT width=66%>Report</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=14%>&nbsp;</TD>
+<TD class=TT width=20%>Nome oggetto</TD>
+<TD class=TT width=66%>Catalogo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=14%>&nbsp;</TD>
+<TD class=TT width=20%>Formato output</TD>
+<TD class=TT width=66%>Formato snapshot</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=14%>&nbsp;</TD>
+<TD class=TT width=20%>File di output</TD>
+<TD class=TT width=66%>\\Website\Inetpub\wwwroot\Webreports\Catalog.snp *</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=14%>&nbsp;</TD>
+<TD class=TT width=20%>Avvio automatico</TD>
+<TD class=TT width=66%>No</TD>
+</TR>
+</TABLE><BR>
+
+<P class=IND>* Output salvato direttamente nella cartella del server World Wide Web.<br><br></LI>
+
+
+	<LI class=LPROC>Nella home page del sito Web effettuare una delle seguenti operazioni: 
+<UL>
+	<LI class=LB2>creare un collegamento a ciascun <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefReportSnapshot');" class="pop">snapshot di report</A> utilizzando un tag HTML di ancoraggio. Ad esempio:
+<PRE class=LCT2><CODE>&lt;A HREF="http://SitoWeb/ReportWeb/catalogo.snp"&gt;report Catalogo&lt;/A&gt;
+</CODE></PRE>
+</LI>
+
+	<LI class=LB2>Incorporare il controllo Snapshot Viewer in un tag HTML Object mediante l'applicazione Microsoft ActiveX Control Pad e impostare i parametri di controllo con Control Pad Object Editor, metodo che può essere utilizzato solo con Microsoft Internet Explorer 3.0 e versioni successive. Ad esempio:
+<PRE class=LCT2><CODE>&lt;OBJECT ID="SnapshotViewer" WIDTH=640 HEIGHT=480
+ CLASSID="CLSID:F0E42D60-368C-11D0-AD81-00A0C90DC8D9"&gt;
+&nbsp;&nbsp;&nbsp; &lt;PARAM NAME="_ExtentX" VALUE="16722"&gt;
+&nbsp;&nbsp;&nbsp; &lt;PARAM NAME="_ExtentY" VALUE="11774"&gt;
+&nbsp;&nbsp;&nbsp; &lt;PARAM NAME="_Version" VALUE="65536"&gt;
+&nbsp;&nbsp;&nbsp; &lt;PARAM NAME="SnapshotPath"
+ VALUE="http://SitoWeb/ReportWeb/catalogo.snp"&gt;
+&nbsp;&nbsp;&nbsp; &lt;PARAM NAME="Zoom" VALUE="0"&gt;
+&nbsp;&nbsp;&nbsp; &lt;PARAM NAME="AllowContextMenu" VALUE="-1"&gt;
+&nbsp;&nbsp;&nbsp; &lt;PARAM NAME="ShowNavigationButtons" VALUE="-1"&gt;
+&lt;/OBJECT&gt;
+</CODE></PRE>
+</LI>
+</UL>
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+<UL>
+	<LI class=NLB>Se il report si basa su una query con parametri, sarà necessario modificare la macro per l'esecuzione in un file batch. È possibile utilizzare l'azione InviaTasti per passare le informazioni sui parametri oppure è possibile modificare il report rimuovendo la query con parametri e utilizzando criteri specifici.<BR><BR></LI>
+
+	<LI class=NLB>È anche possibile <A HREF="acmthSendObjectAndOutputToSS.htm">creare un programma di Visual Basic, Applications Edition che svolga la stessa operazione</A>.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowAccessCreateReportSnapshotOutputToW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowIdentifiersExpressionsS'
+Feature='Forms: Expressions'
+Handoff='3'
+SourceFile='cexpbas.rtf'
+Tnum='186852'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Fare riferimento a un oggetto o alle relative proprietà nelle espressioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowidentifiersexpressionss"></A>Fare riferimento a un oggetto o alle relative proprietà nelle espressioni</H1>
+
+<P class=T>È possibile utilizzare un <A HREF="javascript:HelpPopup('actip9.hlp','defIdentifier');" class="pop">identificatore</A> in un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> per fare riferimento a un oggetto o alle relative proprietà. È possibile fare riferimento ad esempio a una maschera o a un report aperto, a un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di una maschera o di un report aperto o a una proprietà qualsiasi della maschera, del report o del controllo. L'identificatore riportato di seguito fa riferimento alla proprietà <B>Visibile</B> di un controllo:</P>
+
+<P class=T>Reports![Fattura]![Destinatario].Visible</P>
+
+<P class=T>L'identificatore completo di un oggetto o di una proprietà mostra la relazione fra gli elementi dell'identificatore. In questo identificatore:
+
+<UL>
+	<LI class=LB1>Reports fa riferimento all'<A HREF="javascript:HelpPopup('actip9.hlp','defCollection');" class="pop">insieme</A> dei report aperti del database. Vengono creati automaticamente gli insiemi <B>Forms</B> e <B>Reports</B> per ciascun database. L'insieme <B>Forms</B> è costituito da tutte le maschere aperte, l'insieme <B>Reports</B> da tutti i report aperti.<BR><BR></LI>
+
+	<LI class=LB1>[Fattura] fa riferimento al report Fattura dell'insieme <B>Reports</B>.<BR><BR></LI>
+
+	<LI class=LB1>[Destinatario] fa riferimento al controllo del report Fattura.<BR><BR></LI>
+
+	<LI class=LB1>Visible fa riferimento alla proprietà <B>Visibile</B> del controllo Destinatario.</LI>
+</UL>
+
+<P class=T>Spesso è utile fare riferimento a un oggetto o a una proprietà utilizzando il relativo identificatore completo, che in taluni casi viene richiesto in modo esplicito. Per fare riferimento ad esempio al controllo di una maschera o di un report che non sia la maschera o il report corrente, è necessario digitare il relativo identificatore completo. L'espressione riportata di seguito consente di visualizzare la somma dei valori contenuti nei controlli Subtotale e Trasporto della maschera Ordini in un controllo di una maschera diversa:</P>
+
+<P class=T>= Forms![Ordini]![Subtotale] + Forms![Ordini]![Trasporto]</P>
+
+<P class=T>In alcune circostanze è possibile tuttavia fare riferimento a un controllo o alle relative proprietà senza specificare l'identificatore completo:
+
+<UL>
+	<LI class=LB1>Se si sta facendo riferimento al controllo di una maschera o di un report corrente, non è necessario specificare l'identificatore completo della maschera o del report. Per visualizzare ad esempio la somma dei valori contenuti nei controlli Subtotale e Trasporto in un altro controllo della stessa maschera, impostare la proprietà <B>Origine controllo</B> del controllo a:
+<P class=LT1>= [Subtotale] + [Trasporto]
+</LI>
+
+	<LI class=LB1>Se si sta facendo riferimento al controllo di una sottomaschera o di un sottoreport, non è necessario specificare l'identificatore completo della maschera o del report, utilizzando la proprietà <B>Form</B> o <B>Report</B>. Ad esempio, è possibile utilizzare l'identificatore riportato di seguito per fare riferimento al controllo Quantità della Sottomaschera Ordini:
+<P class=LT1>Forms![Ordini]![Sottomaschera Ordini]![Quantità]
+
+<P class=LT1>L'identificatore completo del controllo Quantità sarebbe:
+
+<P class=LT1>Forms![Ordini]![Sottomaschera Ordini].Form![Quantità]
+</LI>
+
+	<LI class=LB1>In un argomento della macro o dell'azione non è necessario specificare l'identificatore della maschera o del report da cui la macro è eseguita. Se si imposta ad esempio una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProperty');" class="pop">proprietà di evento</A> di una maschera al nome di una macro, è possibile fare riferimento ai controlli della maschera nella colonna <B>Condizione</B> o nell'argomento dell'azione della macro, senza specificare l'identificatore della maschera.<BR><BR></LI>
+
+	<LI class=LB1>In una routine di Visual Basic, Applications Edition è possibile utilizzare la parola chiave <B>Me</B>, piuttosto che l'identificatore completo, per fare riferimento a un controllo della maschera o del report corrente. Per assegnare ad esempio la somma dei valori dei controlli Subtotale e Trasporto di una maschera alla variabile TotaleOrdine in una delle routine evento della maschera, aggiungere l'istruzione riportata di seguito alla routine evento:
+<PRE class=LCT1><CODE>TotaleOrdine = Me![Subtotale] + Me![Trasporto]</CODE></PRE>
+
+<P class=4>
+</LI>
+</UL>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>Quando si esegue una macro o del codice Visual Basic, Applications Edition contenente un'espressione che fa riferimento a una maschera o un report, la maschera o il report devono essere aperti.<BR><BR></LI>
+
+	<LI class=NLB>In una routine di Visual Basic è possibile fare riferimento a un oggetto racchiudendo il suo nome fra parentesi tonde e fra virgolette ("), invece di utilizzare l'operatore punto esclamativo (!). La sintassi a parentesi tonde è necessaria se si desidera utilizzare una variabile in un identificatore. Gli identificatori riportati di seguito ad esempio sono equivalenti:
+<PRE class=LCT1><CODE>Forms![Ordini]![DataOrdine]
+Forms("Ordini")("DataOrdine")</CODE></PRE>
+
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni sull'uso degli operatori punto esclamativo (!) e punto (.) nelle espressioni, fare clic su <A HREF="acconUsingBangDotInExpressionsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sul riferimento a una maschera, un report, una sottomaschera o un sottoreport in un'espressione, fare clic su <A HREF="achowReferFormReportS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sul riferimento al valore di un controllo o di una proprietà in un'espressione, fare clic su <A HREF="achowReferValueFieldControlPropS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowIdentifiersExpressionsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

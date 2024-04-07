@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproTagX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprofrd2.rtf'
+Tnum='188161'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Tag</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprotagx"></A>Esempio di proprietà Tag</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la proprietà <B>Tag</B> per visualizzare messaggi personalizzati relativi a controlli di una maschera. Se un controllo ha lo stato attivo, viene visualizzato un testo descrittivo in un controllo etichetta chiamato <CODE>lblMessaggio</CODE>. Specificare il testo del messaggio impostando a una stringa di testo breve la proprietà <B>Tag</B> per ciascun controllo. Quando un controllo riceve lo stato attivo, la relativa proprietà <B>Tag</B> viene assegnata alla proprietà <B>Tag</B> del controllo etichetta. In questo esempio viene visualizzato il testo descrittivo di una casella di testo denominata <CODE>txtDescrizione</CODE> e di un pulsante di comando denominato <CODE>cmdPulsante </CODE>di una maschera.</P>
+
+<PRE class=CT><CODE>Sub Form_Load()
+&nbsp;&nbsp;&nbsp; Dim frmMascheraMessaggio As Form
+&nbsp;&nbsp;&nbsp; Set frmMascheraMessaggio = Forms!Maschera1
+&nbsp;&nbsp;&nbsp; frmMascheraMessaggio!lblMessaggio.Caption = ""&nbsp;&nbsp;&nbsp; ' Elimina il testo.
+&nbsp;&nbsp;&nbsp; frmMascheraMessaggio!txtDescrizione.<B>Tag</B> = "Testo della Guida per la casella di testo."
+&nbsp;&nbsp;&nbsp; frmMascheraMessaggio!cmdPulsante.<B>Tag</B> = "Testo della Guida per il pulsante di comando."
+End Sub
+
+Sub txtDescrizione_GotFocus()
+&nbsp;&nbsp;&nbsp; Me!lblMessaggio.Caption = Me!txtDescrizione.<B>Tag</B>&nbsp;&nbsp;&nbsp; 'Impostazione della proprietà Tag come etichetta.
+End Sub
+
+Sub txtDescrizione_LostFocus()
+&nbsp;&nbsp;&nbsp; Me!lblMessaggio.Caption = ""
+End Sub
+
+Sub cmdPulsante_GotFocus()
+&nbsp;&nbsp;&nbsp; Me!lblMessaggio.Caption = Me!cmdPulsante.<B>Tag</B>&nbsp;&nbsp;&nbsp; ' Impostazione della proprietà Tag come etichetta.
+End Sub
+
+Sub cmdPulsante_LostFocus()
+&nbsp;&nbsp;&nbsp; Me.lblMessaggio.Caption = " "
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

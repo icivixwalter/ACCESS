@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactQuit'
+Feature='acact'
+Handoff='1'
+SourceFile='act_q-z_1a.rtf'
+Tnum='187925'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione Esci</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactQuit">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactquit"></A>Azione Esci</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactQuitC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactQuitX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione Esci per uscire da Microsoft Access. Tale azione può inoltre specificare una delle diverse opzioni per salvare <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetti di database</A> prima di uscire da Microsoft Access.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione Esci utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Opzioni</TD>
+<TD class=TT width=75%>Specifica ciò che accade agli oggetti non salvati al momento dell'uscita da Microsoft Access. Nella casella <B>Opzioni</B> della sezione <B>Argomenti azione</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A> selezionare <B>Prompt</B> per visualizzare finestre di dialogo che richiedono se salvare tutti gli oggetti, <B>Salva tutto</B> per salvare tutti gli oggetti senza che venga richiesta la conferma o <B>Esci</B> per uscire senza salvare alcun oggetto. L'impostazione predefinita è Salva tutto.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Microsoft Access non esegue alcuna azione che in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> segue l'azione Esci.</P>
+
+<P class=T>È possibile utilizzare tale azione, per uscire da Microsoft Access senza che vengano richieste conferme tramite le finestre di dialogo <B>Salva</B>, per mezzo di un comando di menu personalizzato o di un pulsante di una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A>. È possibile ad esempio che si abbia una maschera master utilizzata per visualizzare gli oggetti contenuti nella propria area di lavoro personalizzata. Tale maschera potrebbe avere un pulsante <B>Esci</B> che serve a eseguire una macro contenente l'azione Esci con l'argomento Opzioni impostato a Salva tutto.</P>
+
+<P class=T>L'effetto di tale azione equivale a quello del comando <B>Esci</B> del menu <B>File</B>. Se non è stato salvato alcun oggetto quando si sceglie tale comando, le finestre di dialogo visualizzate sono le stesse che appaiono quando si utilizza Prompt come argomento Opzioni dell'azione Esci.</P>
+
+<P class=T>È possibile utilizzare l'azione <A HREF="acactSave.htm">Salva</A> in una macro per salvare un determinato oggetto senza dover uscire da Microsoft Access o chiudere l'oggetto.</P>
+
+<P class=T>Per eseguire l'azione Esci in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>Quit</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

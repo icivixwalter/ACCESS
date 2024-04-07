@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctInputBoxS'
+Feature='acfct'
+Handoff='1'
+SourceFile='acob2fct.rtf'
+Tnum='234458'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzione InputBox</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acfctinputboxs"></A>Funzione InputBox</H1>
+
+
+
+<P class=T>Non è possibile aprire un file della Guida da una finestra di dialogo creata tramite la funzione <B>InputBox</B> in Microsoft Access. Se si specificano valori per gli argomenti <I>fileguida</I> e <I>contesto</I>, questi vengono ignorati e nella casella di input non viene visualizzato il pulsante della <B>Guida</B>. Microsoft Access comunque non genera un errore.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

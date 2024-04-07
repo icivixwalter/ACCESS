@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDateAddX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acobdatx_1a.rtf'
+Tnum='234389'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione DateAdd</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdateaddx"></A>Esempio di funzione DateAdd</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si indica come creare un controllo calcolato utilizzando la funzione <B>DateAdd</B> per visualizzare la data entro la quale deve essere spedito un determinato ordine, in questo caso 30 giorni dopo DataOrdine. Se si dispone di una maschera basata su una tabella Ordini contenente un campo chiamato DataOrdine, è possibile creare nella maschera un'altra casella di testo per visualizzare la data di spedizione impostando la proprietà <B>Origine controllo</B> della casella di testo come nell'esempio riportato di seguito:</P>
+
+<PRE class=CT><CODE>= <B>DateAdd(</B>"d", 30, [DataOrdine]<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

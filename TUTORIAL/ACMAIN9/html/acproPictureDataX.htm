@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPictureDataX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprowmk3_1a.rtf'
+Tnum='187867'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà PictureData</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpropicturedatax"></A>Esempio di proprietà PictureData</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizzano tre controlli Immagine per animare l'immagine di una farfalla in una maschera. Il controllo Immagine Nascosto1 contiene l'immagine di una farfalla con le ali alzate e il controllo Immagine Nascosto2 contiene l'immagine della stessa farfalla con le ali abbassate. Entrambi i controlli Immagine hanno la proprietà <B>Visible</B> impostata a <B>False</B> (0). La proprietà <B>TimerInterval</B> viene impostata a 200. Ogni volta che si verifica l'evento Timer, l'immagine contenuta nel controllo Immagine Visibile1 viene modificata utilizzando la proprietà <B>PictureData</B> dei controlli Immagine nascosta e il controllo Immagine visibile viene spostato di 200 twip verso destra. Il controllo Immagine visibile viene spostato indietro verso il lato sinistro della maschera quando il relativo valore della proprietà <B>Left</B> è maggiore della larghezza della maschera memorizzata nella variabile pubblica <CODE>gfrmLarghezza</CODE>. Il valore di <CODE>gfrmLarghezza</CODE> viene impostato a <CODE>Me.Width</CODE> nell'evento Apertura della maschera.</P>
+
+<PRE class=CT><CODE>Private Sub Form_Timer()
+&nbsp;&nbsp;&nbsp; Static intImm As Integer
+&nbsp;&nbsp;&nbsp; Select Case intImm
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case Is = 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!Visibile1.<B>PictureData</B> = Me!Hidden1.<B>PictureData</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case Is = 2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!Visibile1.<B>PictureData</B> = Me!Hidden2.<B>PictureData</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case Else
+&nbsp;&nbsp;&nbsp; End Select
+&nbsp;&nbsp;&nbsp; If intImm = 2 Then intImm = 0
+&nbsp;&nbsp;&nbsp; intImm = intImm + 1
+&nbsp;&nbsp;&nbsp; If (Me!Visibile1.Left &gt; gfrmLarghezza) Then Me!Visibile1.Left = 0
+&nbsp;&nbsp;&nbsp; Me!Visibile1.Left = Me!Visibile1.Left + 200
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

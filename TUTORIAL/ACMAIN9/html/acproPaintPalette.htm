@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPaintPalette'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprofrd2_1a.rtf'
+Tnum='187850'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà PaintPalette</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acpropaintpalette"></A>Proprietà PaintPalette</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPaintPaletteC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPaintPaletteX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPaintPaletteA">
+</OBJECT></P>
+
+
+
+<P class=T>Utilizzare la proprietà <B>PaintPalette</B> per specificare una tavolozza che può essere utilizzata da una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> o da un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>È possibile impostare la proprietà <B>PaintPalette</B> utilizzando una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>. L'impostazione della proprietà deve essere un tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defStringDataType');" class="pop"><B>Stringa</B></A> che contiene le informazioni relative alla tavolozza.</P>
+
+<P class=T>È possibile impostare la proprietà <B>PaintPalette</B> assegnandole il valore della proprietà <A HREF="acproObjectPalette.htm"><B>ObjectPalette</B></A> in una macro o Visual Basic, impostando la proprietà <A HREF="acproPaletteSource.htm"><B>PaletteSource</B></A>, (in tal caso la proprietà <B>PaintPalette</B> viene automaticamente reimpostata al valore di quest'ultima), oppure impostando la proprietà <B>PaintPalette</B> di una maschera o report alla proprietà <B>PaintPalette</B> di un'altra maschera o report.</P>
+
+<P class=T>Per una maschera, è possibile impostare la proprietà <B>PaintPalette</B> in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura della maschera</A> e in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A>.</P>
+
+<P class=T>Per un report è possibile impostare la proprietà <B>PaintPalette</B> solo in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura del report</A>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando si imposta la proprietà <B>PaintPalette</B>, viene effettuata una copia della tavolozza specificata. La copia viene salvata con la maschera o il report. La tavolozza è quindi disponibile in caso di modifica di tale maschera o report.</P>
+
+<P class=T>Le modifiche apportate alla tavolozza specificata al momento dell'impostazione della proprietà <B>PaintPalette</B> non influiscono sulla copia della tavolozza memorizzata con la maschera o il report. Se si desidera aggiornare la copia della tavolozza memorizzata con la maschera o con il report, è necessario eseguire di nuovo il codice o la macro che imposta la proprietà <B>PaintPalette</B> oppure reimpostare la proprietà <B>PaletteSource</B> al momento dell'apertura della maschera o del report.</P>
+
+<P class=T>Quando si imposta la proprietà <B>PaintPalette</B> di una maschera o di un report, viene automaticamente aggiornata la relativa proprietà <B>PaletteSource</B>. Quando si imposta la proprietà <B>PaletteSource</B> di una maschera o di un report, analogamente, viene aggiornata anche la proprietà <B>PaintPalette</B>. Se ad esempio viene specificata una tavolozza personalizzata utilizzando la proprietà <B>PaintPalette</B>, l'impostazione della proprietà <B>PaletteSource</B> viene modificata a Personalizzata. La proprietà <B>PaintPalette</B>, disponibile solo in una macro o Visual Basic, viene utilizzata per impostare la tavolozza per la maschera o il report. La proprietà <B>PaletteSource</B> consente di impostare la tavolozza per la maschera o il report nella finestra delle proprietà utilizzando un file di grafica esistente.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Windows consente di disporre di una sola tavolozza di colori attiva alla volta. Microsoft Access consente la presenza di più elementi grafici in una maschera, ciascuno dei quali può utilizzare una tavolozza di colori diversa. Le proprietà <B>PaintPalette</B> e <B>PaletteSource</B> consentono di specificare quale tavolozza di colori utilizzare in una maschera per la visualizzazione di elementi grafici.</P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>ObjectPalette</B> per rendere disponibile alla proprietà <B>PaintPalette</B> la tavolozza di un'applicazione associata a un <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObject');" class="pop">oggetto OLE</A>, una <A HREF="javascript:HelpPopup('actip9.hlp','defBitmap');" class="pop">bitmap</A> o un altro elemento grafico contenuto in un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di una maschera o report. Per rendere disponibile ad esempio la tavolozza utilizzata in Microsoft Graph quando si crea la struttura di una maschera in Microsoft Access, impostare la proprietà <B>PaintPalette</B> al valore <B>ObjectPalette</B> di un controllo di grafico esistente.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

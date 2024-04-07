@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acidxPrintEvents'
+Feature='acidx'
+Handoff='2'
+SourceFile='aidxlan_1a.doc'
+Tnum='187892'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi di stampa</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acidxprintevents"></A>Eventi di stampa</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxPrintEventsC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxPrintEventsX">
+</OBJECT></P>
+
+
+
+<P class=T>Gli eventi di stampa si verificano quando un report viene stampato o viene formattato per la stampa.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=22%>Evento</TH>
+<TH width=27%>Proprietà di evento</TH>
+<TH width=51%>Quando si verifica</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtFormat.htm">Formattazione</A></TD>
+<TD class=LMC width=27%><A HREF="acproEventProperties.htm"><B>OnFormat</B></A> (report)</TD>
+<TD class=LMC width=51%>Quando vengono determinati i dati da inserire in una sezione di report, ma prima che la sezione venga formattata per l'anteprima di stampa o la stampa. È possibile utilizzare nella macro o nella routine di evento i dati del record corrente per apportare modifiche al layout di pagina.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtNoData.htm">ReportVuoto</A></TD>
+<TD class=LMC width=27%><A HREF="acproEventProperties.htm"><B>OnNoData</B></A> (report)</TD>
+<TD class=LMC width=51%>Dopo che un report privo di dati, associato a un recordset vuoto, è stato formattato per la stampa, ma prima che venga stampato. È possibile utilizzare questo evento per annullare la stampa di un report vuoto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtPage.htm">Pagina</A></TD>
+<TD class=LMC width=27%><A HREF="acproEventProperties.htm"><B>OnPage</B></A> (report)</TD>
+<TD class=LMC width=51%>Dopo che una pagina è stata formattata per la stampa, ma prima che venga stampata.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtPrint.htm">Stampa</A></TD>
+<TD class=LMC width=27%><A HREF="acproEventProperties.htm"><B>OnPrint</B></A> (report)</TD>
+<TD class=LMC width=51%>Dopo che sono stati formattati i dati di una sezione del report, ma prima che la sezione venga stampata.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtRetreat.htm">Riesame</A></TD>
+<TD class=LMC width=27%><A HREF="acproEventProperties.htm"><B>OnRetreat</B></A> (report)</TD>
+<TD class=LMC width=51%>Quando si deve tornare indietro di una o più sezioni in una pagina per eseguire più passaggi di formattazione. Si verifica dopo l'evento Formattazione della sezione, ma prima dell'evento Stampa. L'evento Riesame di ogni sezione si verifica quando viene superata la sezione, consentendo di annullare le eventuali modifiche apportate durante l'evento Formattazione della sezione.</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconbidiLearnAboutRTLBehaviorFormsAndReports'
+Feature='International'
+Handoff='3'
+SourceFile='bidi.doc'
+Tnum='257940'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla direzionalità da destra a sinistra nelle maschere e nei report</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconbidilearnaboutrtlbehaviorformsandreports"></A>About right-to-left behavior in forms and reports</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>To <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiEnabledLanguage');" class="pop">enable</A> the <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiRightToLeft');" class="pop">right-to-left</A> features in Microsoft Access 2000, you must be running a 32-bit Microsoft Windows operating system that has right-to-left support&nbsp;— for example, the Arabic version of Microsoft Windows 95. Learn about <A HREF="mk:@MSITStore:ofmain9.chm::/html/ofhowSystemReqsForAsianBidirectionalLanguages.htm">system or special requirements for right-to-left languages</A>.</P>
+
+<P class=T>Right-to-left characteristics for forms and reports are summarized as follows:</P>
+
+<H2>Default direction</H2>
+
+<P class=T>The default <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiDirection');" class="pop">direction</A> that was set on the <B>Right-To-Left</B> tab in the <B>Options</B> dialog box (<B>Tools</B> menu) determines whether your form has a <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiLeftToRight');" class="pop">left-to-right</A> or right-to-left layout. If you have not changed the default, new controls added to the form are displayed with a right-to-left direction.</P>
+
+<H2>Ruler and grid</H2>
+
+<P class=T>Whether a form or report is in a right-to-left or left-to-right direction, the ruler retains its origin in the upper-left corner of the design window. The same concept applies to the grid. This provision does not cause any problems when creating a right-to-left-oriented form. By dragging the right grid boundary to the right, controls on the grid move to the right in proportion to the distance the boundary is moved and the grid is extended from the left boundary.</P>
+
+<H2>Set control defaults</H2>
+
+<P class=T>The <B>Set Control Defaults</B> command on the <B>Format</B> menu recognizes all right-to-left properties in Microsoft Access 2000. When you select this command, Access applies all right-to-left properties.</P>
+
+<H2>Change To</H2>
+
+<P class=T>When you change a control's type (for example, from a text box to a list box) by using the <B>Change To</B> command, Access transfers any relevant right-to-left properties from the original control to the new one.</P>
+
+<H2>Snap To Grid and Align To Grid</H2>
+
+<P class=T>These <B>Format</B> menu commands behave according to the direction of the current form or report.</P>
+
+<P class=T><B>Snap To Grid</B>&nbsp;&nbsp; When you place a new control on a left-to-right form or report, the upper-left corner of the control is aligned to the nearest point on the grid. When you place a new control on a right-to-left form or report, the upper-right corner aligns to the nearest point.</P>
+
+<P class=T><B>Align To Grid</B>&nbsp;&nbsp; In a left-to-right form or report, the upper-left corners of selected controls align to the nearest point in the grid. In a right-to-left form or report, upper-right corners of selected controls align to the nearest grid point.</P>
+
+<H2>Form Datasheet view</H2>
+
+<P class=T>Datasheet view in forms is the way to present tables with the most sophisticated right-to-left behavior. In addition to displaying the underlying data in the column and row layout generally associated with tables, each field in Datasheet view has the right-to-left properties of the associated Form view control.</P>
+
+<P class=T>For example, if you set the <B>KeyboardLanguage</B> property to Arabic for a text box control bound to a Text field named Company, then the <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiKeyboardLanguage');" class="pop">keyboard language</A> will automatically switch to Arabic whenever you click in the Company field in Datasheet view. This feature is useful for volume data-entry applications because it reduces the need to make keyboard language changes when moving from one field to the next.</P>
+
+<H2>Form and report Design view</H2>
+
+<P class=T>A hierarchy of control governs the orientation, overall appearance, and basic parameters of forms and reports.</P>
+
+<H2>Print Preview and Layout Preview in reports</H2>
+
+<P class=T>Microsoft Access 2000 <A HREF="acconbidiSeeExamplesPrintingOrders.htm">displays the report in the direction in which it was designed</A>, left-to-right or right-to-left.</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconbidiLearnAboutRTLBehaviorFormsAndReportsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthOpenRecordsetX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234491'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo OpenRecordset (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthopenrecordsetx"></A>Esempio di metodo OpenRecordset (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene aperto un oggetto <B>Recordset</B> di tipo dynaset e stampato il numero di record contenuti nell'oggetto <B>Recordset</B>.</P>
+
+<PRE class=CT><CODE>Sub OrdiniIT()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; strSQL = "SELECT * FROM Ordini WHERE [PaeseDestinatario] = 'IT'"
+&nbsp;&nbsp;&nbsp; Set rst = dbs.<B>OpenRecordset</B>(strSQL)
+&nbsp;&nbsp;&nbsp; rst.MoveLast
+&nbsp;&nbsp;&nbsp; Debug.Print rst.RecordCount
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

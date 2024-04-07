@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconDesignDatabase'
+Feature='Databases: General'
+Handoff='3'
+SourceFile='CDBDSIGN.RTF'
+Tnum='189136'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla strutturazione di un database</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="accondesigndatabase"></A>Informazioni sulla strutturazione di un database</H1>
+
+<P class=T>Prima di utilizzare Microsoft Access per la creazione delle tabelle, delle maschere e degli altri oggetti che andranno a costituire il database, è importante dedicare del tempo alla strutturazione di quest'ultimo. Sia che si utilizzi un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>, una struttura efficiente è fondamentale per la creazione di un database efficiente, accurato e funzionale.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo a <A HREF="achowDatabasesWhatTheyAreHowTheyWork.htm">definizione e funzionamento dei database di Access</A>.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo ai <A HREF="acconAboutMicrosoftAccessProject.htm">progetti di Microsoft Access</A>.</P>
+
+<H2>Istruzioni per la strutturazione di un database</H2>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative alle operazioni fondamentali per la progettazione di un database:
+
+<OL>
+	<LI class=LPROC><A HREF="#accondesigndatabase_1">Determinare lo scopo del database</A><BR><BR></LI>
+
+	<LI class=LPROC><A HREF="#accondesigndatabase_2">Determinare le tabelle necessarie nel database</A><BR><BR></LI>
+
+	<LI class=LPROC><A HREF="#accondesigndatabase_3">Determinare i campi necessari nelle tabelle</A><BR><BR></LI>
+
+	<LI class=LPROC><A HREF="#accondesigndatabase_4">Identificare i campi con valori univoci in ciascun record</A><BR><BR></LI>
+
+	<LI class=LPROC><A HREF="#accondesigndatabase_5">Determinare le relazioni tra le tabelle</A><BR><BR></LI>
+
+	<LI class=LPROC><A HREF="#accondesigndatabase_6">Perfezionare la struttura</A><BR><BR></LI>
+
+	<LI class=LPROC><A HREF="#accondesigndatabase_7">Aggiungere dati e creare altri oggetti di database</A><BR><BR></LI>
+
+	<LI class=LPROC><A HREF="#accondesigndatabase_8">Utilizzare gli strumenti di analisi di Microsoft Access</A></LI>
+</OL>
+
+
+
+<H2>1&nbsp;&nbsp;<A NAME="accondesigndatabase_1"></A>Determinare lo scopo del database</H2>
+
+<P class=T>Il primo passo per la strutturazione di un database consiste nel determinarne lo scopo e l'utilizzo. È necessario stabilire quali informazioni si desidera ottenere dal database, in modo da poter determinare gli argomenti per cui si desidera memorizzare i dati (le tabelle) e i dati che si desidera memorizzare per ciascun argomento (i campi delle tabelle).</P>
+
+<P class=T>Consultare gli utenti che utilizzeranno il database per individuare le domande alle quali il database dovrà rispondere. Abbozzare i report che si desidera produrre. Raccogliere le maschere correntemente utilizzate per registrare i dati. Esaminare altri database ben strutturati e simili a quello che si intende strutturare.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondesigndatabase">inizio</A></P>
+
+<H2>2&nbsp;&nbsp;<A NAME="accondesigndatabase_2"></A>Determinare le tabelle necessarie nel database</H2>
+
+<P class=T>La determinazione delle <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabelle</A> può rappresentare il passo più importante di tutto il processo di strutturazione del database in quanto i risultati desiderati, ossia i report da stampare, le maschere da utilizzare, le domande a cui si richiede una risposta, non forniscono necessariamente le indicazioni sulla struttura delle tabelle che dovranno produrli.</P>
+
+<P class=T>Non è necessario strutturare le tabelle con Microsoft Access. In realtà può risultare più efficace abbozzare ed elaborare la struttura prima su carta. Durante questa operazione è consigliabile suddividere le informazioni tenendo presente i principi di strutturazione fondamentali riportati di seguito.
+
+<UL>
+	<LI class=LB1>Una tabella non dovrebbe contenere informazioni duplicate e le stesse informazioni non dovrebbero comparire in più tabelle. È questa la differenza tra una tabella di un <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefRelationalDatabase');" class="pop">database relazionale</A> e una tabella di un'applicazione non relazionale, come un foglio di calcolo.
+<P class=LT1>Se ogni informazione è memorizzata in una sola tabella, è possibile aggiornarla in un'unica posizione. Ciò risulta più funzionale e inoltre impedisce che voci duplicate contengano informazioni diverse. È preferibile ad esempio memorizzare l'indirizzo e il numero telefonico di ciascun cliente una sola volta e in un'unica tabella.
+</LI>
+
+	<LI class=LB1>Ciascuna tabella deve contenere informazioni relative a un solo argomento.
+<P class=LT1>Se ciascuna tabella contiene dati relativi a un solo argomento, è possibile conservare le informazioni relative a un argomento separatamente da quelle degli altri. Se ad esempio gli indirizzi dei clienti sono memorizzati in una tabella diversa rispetto agli ordini, è possibile eliminare un ordine ma continuare a conservare le informazioni sul cliente.
+</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni, vedere gli argomenti relativi a <A HREF="achowTablesWhatTheyAreHowTheyWork.htm">definizione e funzionamento delle tabelle dei database di Microsoft Access</A> e 
+<A HREF="acrefOptimizeGeneralTablePerformanceS.htm">ottimizzazione delle prestazioni delle tabelle in un database di Access</A>.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="acconOptimizeADPPerformance.htm">ottimizzazione delle prestazioni di un progetto di Microsoft Access</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondesigndatabase">inizio</A></P>
+
+<H2>3&nbsp;&nbsp;<A NAME="accondesigndatabase_3"></A>Determinare i campi necessari nelle tabelle</H2>
+
+<P class=T>Se ogni tabella contiene informazioni relative allo stesso argomento, ciascun <A HREF="javascript:HelpPopup('actip9.hlp','defField');" class="pop">campo</A> di una tabella contiene singoli dati relativi all'argomento della tabella. Una tabella di clienti ad esempio può comprendere i campi per il nome della società, l'indirizzo, la città, lo stato e il numero telefonico. Durante la progettazione dei campi per ciascuna tabella, considerare i seguenti suggerimenti:
+
+<UL>
+	<LI class=LB1>Correlare ciascun campo direttamente all'argomento della tabella.<BR><BR></LI>
+
+	<LI class=LB1>Non includere dati derivati o calcolati (dati che siano il risultato di un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A>).<BR><BR></LI>
+
+	<LI class=LB1>Includere tutte le informazioni necessarie.<BR><BR></LI>
+
+	<LI class=LB1>Memorizzare le informazioni specificando le componenti logiche minime (ad esempio Nome e Cognome, piuttosto che solo Nome).</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo ai <A HREF="acrefWhatDataTypeShouldUseMyFieldS.htm">tipi di dati di campi disponibili in un database di Access</A>.</P>
+
+<P class=T>Confrontare i <A HREF="acrefComparingAccesstSQLServerDatatypes.htm">tipi di dati di campi di un database di Access con quelli di un progetto di Access</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondesigndatabase">inizio</A></P>
+
+<H2>4&nbsp;&nbsp;<A NAME="accondesigndatabase_4"></A>Identificare i campi con valori univoci in ciascun record</H2>
+
+<P class=T>Per fare in modo che le informazioni memorizzate in diverse tabelle vengano collegate, ad esempio per collegare un cliente a tutti i suoi ordini, è necessario che ciascuna tabella del database comprenda un campo o un set di campi che identifichi in modo univoco ogni singolo record della tabella. Tale campo o set di campi viene definito <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A>.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="acconWhatKindPrimaryKeyDoINeedS.htm">chiavi primarie in un database di Access</A>.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="mk:@MSITStore:acadp9.chm::/html/dvovrPrimaryKeyConstraints.htm">chiavi primarie in un database di Microsoft SQL Server</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondesigndatabase">inizio</A></P>
+
+<H2>5&nbsp;&nbsp;<A NAME="accondesigndatabase_5"></A>Determinare le relazioni tra le tabelle</H2>
+
+<P class=T>Dopo avere suddiviso le informazioni nelle tabelle e avere identificato i campi chiave primaria, è necessario indicare a Microsoft Access in che modo riunire le informazioni correlate in maniera significativa. A tale scopo è necessario <A HREF="acconDetermineRelationshipsForDatabaseS.htm">definire le relazioni tra le tabelle in un database di Microsoft Access</A>.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="mk:@MSITStore:acadp9.chm::/html/dvconTableRelationships.htm">relazioni in un database di Microsoft SQL Server</A>.</P>
+
+<P class=T>Può risultare utile visualizzare le relazioni in un database esistente con ottima strutturazione. Ad esempio <A HREF="acconNorthwind.htm">aprire il database di esempio Northwind</A> e scegliere <B>Relazioni</B> nel menu <B>Strumenti</B> per vedere le relazioni tra le tabelle. È anche possibile visualizzare le relazioni nel <A HREF="mk:@MSITStore:acadp9.chm::/html/acconAboutADPNorthwind.htm">progetto di Access di esempio Northwind e nel database di Microsoft SQL Server</A>.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="acconWhatIsReferentialIntegrityS.htm">integrità referenziale</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondesigndatabase">inizio</A></P>
+
+<H2>6&nbsp;&nbsp;<A NAME="accondesigndatabase_6"></A>Perfezionare la struttura</H2>
+
+<P class=T>Dopo aver strutturato le tabelle, i campi e le relazioni necessarie, esaminare la struttura e individuare le eventuali imperfezioni rimaste. È più semplice modificare la struttura del database in questa fase, piuttosto che dopo aver inserito i dati nelle tabelle.</P>
+
+<P class=T>Utilizzare Microsoft Access per creare tabelle, specificare le relazioni tra queste ultime e aggiungervi dati di esempi sufficienti che consentano di verificare la struttura. Per verificare le relazioni nel database, controllare se è possibile creare delle <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> per ottenere le risposte desiderate. Creare bozze delle <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschere</A> e dei <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A> e verificare se visualizzano i dati desiderati. Ricercare eventuali dati ripetuti ed eliminarli. Se si rilevano dei problemi, perfezionare la struttura.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo a <A HREF="achowQueriesWhatTheyAreHowTheyWork.htm">definizione e funzionamento delle query nei database di Microsoft Access</A>.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="mk:@MSITStore:acadp9.chm::/html/dvhowWorkingWithDatabaseViewsInDataView.htm">utilizzo delle visualizzazioni in un database di Microsoft SQL Server</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondesigndatabase">inizio</A></P>
+
+<H2>7&nbsp;&nbsp;<A NAME="accondesigndatabase_7"></A>Aggiungere dati e creare altri oggetti di database</H2>
+
+<P class=T>Una volta constatato che la struttura della tabella risponde ai principi illustrati, è necessario procedere all'aggiunta di tutti i dati esistenti nelle tabelle. È possibile creare tutte le <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A>, le <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschere</A>, i <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>, le <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagine di accesso ai dati</A>, le <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> e i <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">moduli</A> desiderati.</P>
+
+<P class=T>Vedere un confronto tra gli <A HREF="acconComparingtAccessSQLSDatabaseObjects.htm">oggetti di database di un progetto di Microsoft Access e gli oggetti di database di un database di Access</A>.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="acdecImportingAttachingDataS.htm">importazione dei dati in un database di Access</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondesigndatabase">inizio</A></P>
+
+<H2>8&nbsp;&nbsp;<A NAME="accondesigndatabase_8"></A>Utilizzare gli strumenti di analisi di Microsoft Access</H2>
+
+<P class=T>In Microsoft Access sono disponibili due strumenti che consentono di perfezionare la struttura del database di Microsoft Access. La Creazione guidata Analizzatore tabelle è in grado di analizzare una tabella alla volta, di proporre nuove strutture o relazioni, se appropriate, e di dividere una tabella in nuove tabelle correlate, se opportuno. Per informazioni sull'esecuzione della Creazione guidata Analizzatore tabelle, fare clic su <A HREF="achowNormalizerTopicsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>L'Analizzatore di prestazioni è in grado di analizzare l'intero database e di fornire consigli e suggerimenti per migliorarlo, consigli e suggerimenti che in seguito possono essere anche implementati dalla creazione guidata. Per informazioni sull'utilizzo dell'Analizzatore di prestazioni, fare clic su <A HREF="achowAnalyzerTopicsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni e suggerimenti sulla strutturazione di un database di Microsoft Access, esaminare la struttura del database di esempio Northwind o uno dei database che è possibile creare con la Creazione guidata Database. Per informazioni sull'utilizzo della Creazione guidata Database, fare clic su <A HREF="achowCreateDatabaseApplicationApplicationWizardS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni su come analizzare il database di Microsoft SQL Server per migliorarne le prestazioni, vedere l'argomento relativo alla <A HREF="acconAboutMicrosoftSQLServerDocumentation.htm">documentazione di Microsoft SQL Server</A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconDesignDatabaseW">
+</OBJECT>
+</P>
+<P class=rtt>Torna all'<A HREF="#accondesigndatabase">inizio</A></P>
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

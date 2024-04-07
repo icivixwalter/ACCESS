@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowImportAttachMSFoxproDbaseFilesS'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='187618'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Importare o collegare file di dBASE</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowimportattachmsfoxprodbasefiless"></A>Importare o collegare file di dBASE</H1>
+
+<P class=NT><B>Nota&nbsp;&nbsp;</B> È possibile <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegare</A> una tabella solo in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessdatabase');" class="pop">database di Microsoft Access</A>, non in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>.
+
+<OL>
+	<LI class=LPROC>Aprire un database oppure passare alla <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> aperta.<BR><BR></LI>
+
+	<LI class=LPROC>Per <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importare</A> i file, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Importa</B>.
+<P class=LBR2>Per collegare i file, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Collega tabelle</B>.
+</LI>
+
+	<LI class=LPROC>Dalla casella <B>Tipo file</B> della finestra di dialogo <B>Importa</B> o <B>Collega</B> selezionare uno dei tipi di file di dBASE.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sulla freccia alla destra della casella <B>Cerca in</B>, selezionare l'unità e la cartella in cui è posizionato file con estensione dbf, quindi fare doppio clic sulla relativa icona.
+<P class=LT1><B>Importante&nbsp;&nbsp;</B> Se ci si collega a un file in una rete locale, assicurarsi di utilizzare un percorso <A HREF="javascript:HelpPopup('actip9.hlp','defUNC');" class="pop">UNC (Universal Naming Convention)</A> invece di utilizzare la lettera identificativa di un'unità di rete mappata in Esplora risorse di Windows (Gestione risorse in Windows 95 o Windows NT 4.0). La lettera di un'unità può variare da computer a computer o non essere definita, mentre un percorso UNC è un modo affidabile e coerente per individuare l'origine dati che contiene la tabella collegata.
+
+<UL>
+	<LI class=LB2>Durante l'importazione viene creata una tabella con il nome del file selezionato e vengono importati i dati del file con estensione dbf. Andare al passaggio 7.<BR><BR></LI>
+
+	<LI class=LB2>Durante il collegamento viene visualizzata una finestra di dialogo in cui è possibile associare dei file indice di dBASE. Andare al passaggio 5.</LI>
+</UL>
+</LI>
+
+	<LI class=LPROC>Fare doppio clic su ciascun indice dBASE (ndx o mdx) che si desidera utilizzare, quindi scegliere il pulsante <B>Chiudi</B>. Se non ci sono indici, scegliere <B>Annulla</B> per continuare.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Seleziona identificatore record univoco</B> selezionare un indice che identifichi ciascun record in modo univoco. Questo indice non deve contenere dei valori duplicati, altrimenti è impossibile il corretto aggiornamento di dati all'interno di query con join.<BR><BR></LI>
+
+	<LI class=LPROC>Se si desidera importare o collegare un altro file di dBASE, ripetere i passaggi da 4 a 6.</LI>
+</OL>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=LB1>Per collegare (in lettura/scrittura) una tabella dBASE 7, è necessario avere installato nel proprio computer Borland Database Engine (BDE) 4.<I>x</I> o versioni successive. Se non si dispone di BDE 4.<I>x</I> o versioni successive, è possibile averlo installando dBASE 7 o Delphi. Se si dispone di una versione precedente di BDE che non supporta il formato file dBASE 7, aggiornare la versione dal sito <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefWorldWideWeb');" class="pop">World Wide Web</A> di Borland. In alternativa, se BDE non è installato nel proprio computer, collegarsi a un formato file dBASE III, IV e 5.0.<BR><BR></LI>
+
+	<LI class=LB1>Dopo aver importato o collegato un file con estensione dbf o dbc, si possono impostare delle proprietà di campo della tabella. Se si importa un file con estensione dbf o dbc, è possibile impostare una chiave primaria per la tabella. Per ulteriori informazioni, fare clic su <A HREF="acrefSettingPropertiesAttachedTablesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Se si collega un file con estensione dbf e si associa un file indice con estensione ndx o mdx, sarà necessario il file indice per aprire la tabella collegata. Se si eliminano o si spostano dei file indice di dBASE o il file di informazioni con estensione inf creato da Microsoft Access, non sarà possibile aprire la tabella collegata.<BR><BR></LI>
+
+	<LI class=LB1>Quando si utilizza Microsoft Access per aggiornare i dati del file con estensione dbf, i file indice vengono aggiornati in modo da riflettere le modifiche apportate. Se si utilizza dBASE per aggiornare dei dati, è necessario aggiornare anche gli indici associati di questo programma. In Microsoft Access non è possibile utilizzare una tabella collegata se gli indici specificati non sono correnti.<BR><BR></LI>
+
+	<LI class=LB1>Se le tabelle di dBASE sono memorizzate su un'unità o un CD-ROM di sola lettura, in Microsoft Access non è possibile creare un file con estensione inf nella stessa cartella dei file con estensione dbf. Per collegare una tabella contenuta in un'unità di sola lettura, collocare i file con estensione inf su una unità di lettura/scrittura. È possibile specificare il percorso del file con estensione inf nel registro di configurazione di Windows. Per ulteriori informazioni, fare clic su <A HREF="achowCustomizeFoxproDbaseSettingsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowImportAttachMSFoxproDbaseFilesSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

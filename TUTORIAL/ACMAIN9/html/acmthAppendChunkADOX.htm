@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthAppendChunkADOX'
+Feature='acmth'
+Handoff='2'
+SourceFile='ACAMETHX9.doc'
+Tnum='261110'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi AppendChunk e GetChunk</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthappendchunkadox"></A>Esempio di metodi AppendChunk e GetChunk</B></P>
+
+
+
+<P class=T>Nell'esempio seguente vengono accodati dei dati al campo Note di ogni record della tabella Dipendenti. Il campo Note contiene dati di tipo Memo. La routine restituisce il contenuto del campo utilizzando il metodo <B>GetChunk</B>, aggiunge i dati, quindi riaccoda i dati alterati al campo Note utilizzando il metodo <B>AppendChunk</B>.</P>
+
+<PRE class=CT><CODE>Sub AggiungiAMemo()
+Dim cnn As ADODB.Connection, rst As New ADODB.Recordset
+Dim fldFirstName As ADODB.Field
+Dim fldLastName As ADODB.Field
+Dim fldNotes As ADODB.Field
+Dim lngSize As Long, strChunk As String
+
+Set cnn = CurrentProject.Connection
+rst.Open "Dipendenti", cnn, adOpenKeyset, adLockOptimistic
+With rst
+Set fldNotes = !Note
+Set fldFirstName = !Nome
+Set fldLastName = !Cognome
+Do Until .EOF
+If IsNull(fldNotes.Value) Then
+strChunk = fldFirstName &amp; " " &amp; fldLastName &amp; " è un dipendente eccellente."
+!Note = strChunk
+.MoveNext
+Else
+lngSize = Len(fldNotes)
+strChunk = fldNotes.<B>GetChunk</B>(lngSize)
+strChunk = strChunk &amp; " " &amp; fldFirstName &amp; " " &amp; fldLastName &amp; " è un dipendente eccellente."
+!Note = " "
+!Notes.<B>AppendChunk</B> strChunk
+.MoveNext
+End If
+Loop
+End With
+rst.Close
+cnn.Close
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

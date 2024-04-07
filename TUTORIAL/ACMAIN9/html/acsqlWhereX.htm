@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlWhereX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234590'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proposizione WHERE (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlwherex"></A>Esempio di proposizione WHERE (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si selezionano i campi Cognome e Nome di ogni record il cui cognome è Rossi:</P>
+
+<PRE class=CT><CODE>SELECT Cognome, Nome FROM Impiegati
+<B>WHERE</B> Cognome = 'Rossi';</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si selezionano i campi Cognome e Nome per gli impiegati il cui cognome inizia con la lettera S:</P>
+
+<PRE class=CT><CODE>SELECT Cognome, Nome FROM Impiegati
+<B>WHERE</B> Cognome Like 'S*';</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si selezionano i prodotti i cui prezzi unitari sono compresi tra L. 40.000 e L. 60.000:</P>
+
+<PRE class=CT><CODE>SELECT NomeProdotto, PrezzoUnitario FROM Prodotti
+<B>WHERE</B> (PrezzoUnitario &gt;=40000 And PrezzoUnitario &lt;= 60000);</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si selezionano tutti i prodotti i cui nomi sono compresi tra "Cha" e "Out". "Outback Lager" non viene selezionato in quanto segue "Out", quindi non è compreso nell'intervallo specificato.</P>
+
+<PRE class=CT><CODE>SELECT NomeProdotto, PrezzoUnitario FROM Prodotti
+<B>WHERE</B> NomeProdotto Tra 'Cha' And 'Out';</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si selezionano gli ordini effettuati nei primi sei mesi del 1995:</P>
+
+<PRE class=CT><CODE>SELECT IDOrdine, DataOrdine FROM Ordini
+<B>WHERE</B> DataOrdine Between #1-1-95# And #6-30-95#;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si selezionano gli ordini spediti in Francia, Grecia o Belgio:</P>
+
+<PRE class=CT><CODE>SELECT IDOrdine, ZonaDestinatario FROM Ordini
+<B>WHERE</B> ZonaDestinatario In ('Francia', 'Grecia', 'Belgio');</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

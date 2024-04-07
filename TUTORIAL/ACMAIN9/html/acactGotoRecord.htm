@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactGotoRecord'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187281'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione VaiARecord</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactGoToRecord">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactgotorecord"></A>Azione VaiARecord</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactGotoRecordC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactGotoRecordX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione VaiARecord rende <A HREF="javascript:HelpPopup('actip9.hlp','defCurrentRecord');" class="pop">corrente</A> il <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> specificato in una tabella, una maschera o un <A HREF="javascript:HelpPopup('actip9.hlp','defDynaset');" class="pop">set di risultati</A> di una query aperti.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione VaiARecord utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomenti azione</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Tipo oggetto</TD>
+<TD class=TT width=76%>Il tipo di <A HREF="javascript:HelpPopup('actip9.hlp','defObject');" class="pop">oggetto</A> contenente il record che si desidera rendere corrente. È possibile selezionare <B>Tabella</B>, <B>Query</B>, <B>Maschera</B>, <B>Visualizzazione server</B> o <B>Stored procedure</B> nella casella <B>Tipo oggetto</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. Per selezionare l'oggetto attivo, lasciare vuota questa casella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Nome oggetto</TD>
+<TD class=TT width=76%>Il nome dell'oggetto contenente il record che si desidera rendere corrente. La casella <B>Nome oggetto</B> visualizza tutti gli oggetti del tipo selezionato dall'argomento Tipo oggetto, contenuti nel database corrente. Se non si immette alcun argomento nella casella Tipo oggetto, non immettere alcun valore anche in questa casella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Record</TD>
+<TD class=TT width=76%>Il record da rendere corrente. È possibile selezionare <B>Precedente</B>, <B>Successivo</B>, <B>Primo</B>, <B>Ultimo</B>, <B>Vai a</B> o <B>Nuovo</B> nella casella <B>Record</B>. L'impostazione predefinita è Successivo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Offset</TD>
+<TD class=TT width=76%>Un numero intero o un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A>, preceduta da un segno di uguale (=), che corrisponde a un numero intero. L'argomento specifica il record da rendere corrente ed è possibile utilizzarlo in due modi:
+<UL>
+	<LI class=TLB>Quando l'argomento Record è Successivo o Precedente, Microsoft Access sposta il numero di record avanti o indietro secondo quanto specificato nell'argomento Offset.<BR><BR></LI>
+
+	<LI class=TLB>Quando l'argomento Record è Vai a, Microsoft Access si sposta al record con il numero uguale all'argomento Offset. Il numero del record viene visualizzato nella <A HREF="javascript:HelpPopup('actip9.hlp','defRecordNumberBox');" class="pop">casella del numero record</A> nella parte inferiore della finestra.
+<P class=4>
+</LI>
+</UL>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=76%><B>Nota</B>&nbsp;&nbsp; Se si utilizza l'impostazione Primo, Ultimo o Nuovo per l'argomento Record, Microsoft Access ignora l'argomento Offset. Se si immette un valore corrispondente a un numero troppo alto per l'argomento Offset, Microsoft Access visualizza un messaggio di errore. Non è possibile immettere numeri di Offset negativi.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Se lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A> è in un determinato controllo di un record, l'azione lo lascia nello stesso controllo per il nuovo record.</P>
+
+<P class=T>È possibile utilizzare l'impostazione Nuovo per l'argomento Record per spostarsi al record vuoto posizionato alla fine della maschera o della tabella, in modo da potere immettere nuovi dati.</P>
+
+<P class=T>L'azione VaiARecord equivale a scegliere il comando <B>Vai a</B> dal menu <B>Modifica</B>. I sottocomandi <B>Primo</B>, <B>Ultimo</B>, <B>Successivo</B>, <B>Precedente</B> e <B>Nuovo record</B> del comando <B>Vai a</B> hanno sull'oggetto selezionato lo stesso effetto delle impostazioni Primo, Ultimo, Successivo, Precedente e Nuovo dell'argomento Record. È inoltre possibile spostarsi tra i record utilizzando i <A HREF="javascript:HelpPopup('actip9.hlp','defNavigationButtons');" class="pop">pulsanti di spostamento</A> posti nella parte inferiore della finestra.</P>
+
+<P class=T>È possibile utilizzare l'azione VaiARecord per rendere corrente il record di una maschera nascosta, specificando la maschera nascosta negli argomenti Tipo oggetto e Nome oggetto.</P>
+
+<P class=T>Per eseguire l'azione VaiARecord in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>GoToRecord</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

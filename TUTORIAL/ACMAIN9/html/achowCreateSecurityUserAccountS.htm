@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateSecurityUserAccountS'
+Feature='Security: Accounts/Permissions'
+Handoff='3'
+SourceFile='csecusr.rtf'
+Tnum='188260'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare un account utente di protezione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreatesecurityuseraccounts"></A>Creare un account utente di protezione</H1>
+
+<P class=T>Per completare questa procedura, è necessario essere collegati come membro del <A HREF="javascript:HelpPopup('actip9.hlp','defAdminsGroup');" class="pop">gruppo Amministratori</A>.
+
+<OL>
+	<LI class=LPROC>Avviare Microsoft Access utilizzando il gruppo di lavoro nel quale si desidera utilizzare l'account.
+<P class=LT1><B>Importante&nbsp;&nbsp;</B> È necessario memorizzare gli account creati per gli utenti nel <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> che verrà utilizzato da quegli utenti. Se si sta utilizzando un gruppo di lavoro diverso per creare il database, cambiare il gruppo di lavoro prima di creare gli account.
+
+<P class=LT1>Per ulteriori informazioni sull'entrata in un gruppo di lavoro esistente, fare clic su <A HREF="achowJoinMSAccessWorkgroupS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>. Per ulteriori informazioni sulla creazione di un nuovo file di informazioni sul gruppo di lavoro, fare clic su <A HREF="achowCreateNewMSAccessWorkgroupS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LPROC>Aprire un database.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Protezione</B> dal menu <B>Strumenti</B>, quindi scegliere <B>Account utenti e gruppi</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella scheda <B>Utenti</B> scegliere <B>Nuovo</B>. <BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Nuovo utente o gruppo</B> digitare il nome del nuovo account e un <A HREF="javascript:HelpPopup('actip9.hlp','defPin');" class="pop">identificatore personale (PID</A>), quindi scegliere <B>OK</B> per creare il nuovo account. Questo viene aggiunto automaticamente al <A HREF="javascript:HelpPopup('actip9.hlp.','defUsersGroup');" class="pop">gruppo Utenti</A>.
+<P class=LT1>I nomi degli utenti possono essere costituiti da 1 a 20 caratteri e possono includere caratteri alfabetici, caratteri accentati, numeri, spazi e simboli, con le eccezioni riportate di seguito:
+
+<UL>
+	<LI class=LB2>I caratteri " \ [ ] : | &lt; &gt; + = ; , . ? *<BR><BR></LI>
+
+	<LI class=LB2>Gli spazi iniziali<BR><BR></LI>
+
+	<LI class=LB2>I caratteri di controllo ASCII da 10 fino a 31
+</LI>
+</UL>
+
+<P class=LT1><B>Attenzione&nbsp;&nbsp;</B> Assicurarsi di aver scritto il nome dell'account e l'identificatore personale esatti e di aver fatto distinzione tra maiuscole e minuscole, quindi conservarli in un posto sicuro. Nel caso in cui sia necessario creare di nuovo un account eliminato o creato in un gruppo di lavoro diverso, è necessario fornire lo stesso nome e lo stesso identificatore personale. Se queste voci vengono dimenticate o perdute, non sarà possibile recuperarle.
+</LI>
+</OL>
+
+<P class=NT><B>Note</B><UL>
+	<LI class=LB1>L'identificatore personale immesso nel passo 5 non è una password. L'identificatore personale e il nome utente vengono utilizzati come inizio di un algoritmo di crittografia per la generazione di un identificatore protetto per l'account utente. Per ulteriori informazioni sulla creazione di password, fare clic su <A HREF="achowCreateChangeYourSecurityAccountPasswordS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+
+</LI>
+
+	<LI class=LB1>In genere, è più semplice gestire la protezione se gli utenti vengono organizzati in gruppi e quindi si assegnano le autorizzazioni ai gruppi invece che a utenti singoli.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateSecurityUserAccountSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

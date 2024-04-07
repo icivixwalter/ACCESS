@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthBeginTransADOX'
+Feature='acmth'
+Handoff='2'
+SourceFile='ACAMETHX9.doc'
+Tnum='261111'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi BeginTrans, CommitTrans, Rollback</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthbegintransadox"></A>Esempio di metodi BeginTrans, CommitTrans, Rollback</B></P>
+
+
+
+<P class=T>Nell'esempio seguente viene modificato il tipo di categoria del record corrente nella maschera Categorie; all'utente viene quindi richiesto di confermare la modifica prima di utilizzare il metodo <B>CommitTrans</B> per salvare la modifica. </P>
+
+<P class=T>Questo esempio richiede che la maschera Categorie sia aperta.</P>
+
+<PRE class=CT><CODE>Sub cmdSalva_OnClick()
+    Dim rs as ADODB.Recordset
+    Dim Response As Integer
+
+    Set rs = Forms("Categorie").Recordset
+    With rs
+        rs.ActiveConnection.BeginTrans
+        !NomeCategoria = "Bevande"
+        .Update
+        Response = Msgbox "Si è certi di voler modificare il valore corrente in " &amp; !NomeCategoria &amp; "?", vbYesNo
+        If Response = vbNo Then
+            rs.ActiveConnection.RollbackTrans
+        Else
+            rs.ActiveConnection.CommitTrans
+        End If
+    End With
+End Sub
+</CODE></PRE>
+
+<P class=T>Nell'esempio riportato di seguito viene modificato il titolo di tutti i rappresentanti delle vendite in una tabella Dipendenti. Una volta che il metodo <B>BeginTrans</B> ha avviato una transazione che isola tutte le modifiche apportate alla tabella Dipendenti, il metodo <B>CommitTrans</B> salva le modifiche. Si noti che è possibile utilizzare il metodo <B>Rollback</B> per annullare le modifiche salvate con il metodo <B>Update</B>. Nell'esempio viene inoltre indicato come mantenere un flag per gestire correttamente gli eventuali errori che potrebbero verificarsi durante una transazione.</P>
+
+<P class=T>Una o più pagine della tabella rimangono bloccate mentre si decide di accettare le modifiche. Di conseguenza, questa tecnica non è consigliata, ma viene mostrata solo come esempio.</P>
+
+<PRE class=CT><CODE>Sub ModificaTitolo()
+&nbsp;&nbsp;&nbsp; Dim cnn As ADODB.Connection, rst As New ADODB.Recordset
+&nbsp;&nbsp;&nbsp; Dim strName As String, strMessage As String, strPrompt As String
+&nbsp;&nbsp;&nbsp; Dim fInTrans As Boolean
+
+&nbsp;&nbsp;&nbsp; On Error GoTo ChangeTitleErr
+
+&nbsp;&nbsp;&nbsp; fInTrans = False
+&nbsp;&nbsp;&nbsp; strPrompt = "Modificare mansione in Responsabile di filiale?"
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set cnn = CurrentProject.Connection
+&nbsp;&nbsp;&nbsp; ' Crea un oggetto Recordset di tipo tabella.
+&nbsp;&nbsp;&nbsp; rst.Open "Dipendenti", cnn, adOpenKeyset, adLockOptimistic, adCmdTableDirect
+&nbsp;&nbsp;&nbsp; ' Inizio della transazione.
+&nbsp;&nbsp;&nbsp; cnn.BeginTrans
+&nbsp;&nbsp;&nbsp; fInTrans = True
+    With rst
+&nbsp;&nbsp;&nbsp; .MoveFirst
+&nbsp;&nbsp;&nbsp; Do Until rst.EOF
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If !Titolo = "Rappresentante delle vendite" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strName = !Cognome &amp; ", " &amp; !Nome
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMessage = "Dipendente: " &amp; strName &amp; vbCrLf &amp; vbCrLf
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If MsgBox(strMessage &amp; strPrompt, vbQuestion + _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vbYesNo, "Modifica mansione") = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !Titolo = "Responsabile di filiale"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Passa al record successivo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .MoveNext
+&nbsp;&nbsp;&nbsp; Loop
+&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; If MsgBox("Salvare tutte le modifiche?", vbQuestion + vbYesNo, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " Salva le modifiche") = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cnn.CommitTrans&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Esegue le modifiche.
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cnn.RollbackTrans&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Annulla le modifiche.
+&nbsp;&nbsp;&nbsp; End If
+ChangeTitleExit:
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Exit Sub
+ChangeTitleErr:
+&nbsp;&nbsp;&nbsp; MsgBox Err.Number &amp; " " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; If fInTrans Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cnn.RollbackTrans
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Resume ChangeTitleExit
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

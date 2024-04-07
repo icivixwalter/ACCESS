@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactTransferSpreadsheet'
+Feature='acact'
+Handoff='2'
+SourceFile='act_q-z.doc'
+Tnum='188199'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione TrasferisciFoglioCalcolo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acacttransferspreadsheet"></A>Azione TrasferisciFoglioCalcolo</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactTransferSpreadsheetC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactTransferSpreadsheetX">
+</OBJECT></P>
+
+
+
+<P class=T>Utilizzare l'azione TrasferisciFoglioCalcolo per importare o esportare dati tra il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB) o il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (ADP) corrente e un file di foglio di calcolo. È inoltre possibile <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegare</A> i dati di un foglio di calcolo di Microsoft Excel al database corrente di Microsoft Access. È possibile visualizzare e modificare da Microsoft Access i dati contenuti in un foglio di calcolo collegato e nello stesso tempo accedere a tali dati da Microsoft Excel. È anche possibile collegarsi ai dati di un file di foglio di calcolo di Lotus 1-2-3, ma tali dati sono disponibili in sola lettura in Microsoft Access.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione TrasferisciFoglioCalcolo utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Tipo trasferimento</TD>
+<TD class=TT width=75%>Il tipo di trasferimento che si desidera effettuare. Selezionare <B>Importa</B>, <B>Esporta</B> o <B>Collega</B> nella casella <B>Tipo trasferimento</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. L'impostazione predefinita è <B>Importa</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%><B>Nota&nbsp;&nbsp;</B> Il tipo di trasferimento <B>Collega</B> non è supportato nei progetti di Microsoft Access (ADP).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Tipo foglio calcolo</TD>
+<TD class=TT width=75%>Il tipo di foglio di calcolo da cui importare, in cui esportare o a cui collegarsi. È possibile selezionare un tipo di foglio di calcolo tra quelli riportati nella casella. Il tipo predefinito è Microsoft Excel 8.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%><B>Nota&nbsp;&nbsp;</B> È possibile importare e collegare (sola lettura) i dati dei file WK4 di Lotus ma non è possibile esportare i dati di Microsoft Access in questo formato di foglio di calcolo. In Microsoft Access inoltre non è più supportato l'utilizzo di questa azione per l'importazione, l'esportazione o il collegamento dei dati di fogli elettronici WKS di Lotus o della versione 2.0 di Microsoft Excel. Se si desidera importare o collegare dati di foglio di calcolo da questi formati in Microsoft Access, è necessario prima convertire tali dati in una versione successiva alla 2.0 di Microsoft Excel o al formato WKS di Lotus.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome tabella</TD>
+<TD class=TT width=75%>Il nome della tabella di Microsoft Access in cui importare, da cui esportare o a cui collegare i dati foglio di calcolo. È anche possibile digitare il nome della <A HREF="javascript:HelpPopup('actip9.hlp','defSelectQuery');" class="pop">query di selezione</A> di Microsoft Access dalla quale si desidera esportare i dati. Questo argomento è richiesto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si seleziona <B>Importa</B> nell'argomento Tipo trasferimento e la tabella esiste già, i dati del foglio di calcolo vengono accodati a questa tabella. Altrimenti, viene creata una nuova tabella contenente i dati del foglio di calcolo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>In Microsoft Access 2000 non è possibile utilizzare un'<A HREF="javascript:HelpPopup('actip9.hlp','defSQLString');" class="pop">istruzione SQL</A> per specificare i dati da esportare quando si utilizza l'azione TrasferisciFoglioCalcolo ma è necessario prima creare una query e quindi specificarne il nome nell'argomento Nome tabella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome file</TD>
+<TD class=TT width=75%>Il nome del file di foglio di calcolo da cui importare, in cui esportare o a cui collegarsi. Includere il percorso completo. Questo argomento è richiesto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Quando si esportano dati da Microsoft Access, viene creato un nuovo foglio di calcolo. Se il nome del file è uguale a quello di un foglio di calcolo esistente, quest'ultimo viene sostituito, a meno che non si stia esportando in una cartella di lavoro di Microsoft Excel versione 5.0, 7.0, 8.0 oppure di Excel 2000. In tal caso, i dati esportati vengono copiati nel successivo foglio di lavoro disponibile nella cartella di lavoro.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se viene importato o collegato un foglio di calcolo di Microsoft Excel versione 5.0, 7.0, 8.0 oppure di Excel 2000, è possibile specificare un determinato foglio di lavoro utilizzando l'argomento Intervallo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nomi campo</TD>
+<TD class=TT width=75%>Specifica se la prima riga del foglio di calcolo contiene i nomi dei campi. Se si seleziona <B>Sì</B>, i nomi di questa riga vengono utilizzati come nomi dei campi della tabella di Microsoft Access quando vengono importati o collegati i dati del foglio di calcolo. Se si seleziona <B>No</B>, la prima riga viene considerata come una normale riga di dati. L'impostazione predefinita è No.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Quando si esporta una tabella o una query di selezione di Microsoft Access in un foglio di calcolo, in nomi dei campi vengono inseriti nella prima riga del foglio di calcolo, indipendentemente dalla selezione effettuata per questo argomento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Intervallo</TD>
+<TD class=TT width=75%>L'intervallo di celle da importare o collegare. Lasciare vuoto questo argomento per importare o collegare l'intero foglio di calcolo. È possibile digitare il nome di un intervallo nel foglio di calcolo oppure specificare l'intervallo di celle da importare o collegare, ad esempio A1:E25 (notare che la sintassi A1..E25 non è valida in Microsoft Access 97 o in Microsoft Access 2000). Se viene importato o collegato un foglio di lavoro di Microsoft Excel versione 5.0, 7.0, 8.0 oppure di Excel 2000, è possibile far precedere l'intervallo dal nome del foglio di lavoro e da un punto esclamativo, ad esempio Budget!A1:C7.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%><B>Nota</B>&nbsp;&nbsp; Quando si esportano dati in un foglio di calcolo, è necessario lasciare vuoto questo argomento. Se si immette un intervallo, l'esportazione non riesce.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile esportare i dati delle query di selezione di Microsoft Access in fogli di calcolo. Il <A HREF="javascript:HelpPopup('actip9.hlp','defDynaset');" class="pop">set di risultati</A> della query viene esportato come se fosse una tabella.</P>
+
+<P class=T>I dati del foglio di calcolo accodati a una tabella esistente di Microsoft Access devono essere compatibili con la struttura della tabella. 
+
+<UL>
+	<LI class=LB1>Ogni campo del foglio di calcolo deve essere dello stesso <A HREF="javascript:HelpPopup('actip9.hlp','defFieldDataType');" class="pop">tipo di dati</A> del campo corrispondente della tabella.<BR><BR></LI>
+
+	<LI class=LB1>I campi devono essere nello stesso ordine, a meno che l'argomento Nomi campo non sia stato impostato a Sì, nel qual caso i nomi dei campi del foglio di calcolo devono corrispondere a quelli della tabella.<P class=4>
+</LI>
+</UL>
+
+<P class=T>Questa azione equivale a scegliere <B>Carica dati esterni</B> o <B>Esporta</B> dal menu <B>File</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> e quindi <B>Importa</B> o <B>Collega tabelle</B>. È possibile utilizzare questi comandi per selezionare un'origine dati, ad esempio Microsoft Access oppure un tipo di database, di foglio di calcolo o di file di testo. Se si seleziona un foglio di calcolo, vengono visualizzate alcune finestre di dialogo oppure viene eseguita una creazione guidata di Microsoft Access nella quale è possibile selezionare il nome del foglio di calcolo e altre opzioni. Gli argomenti dell'azione TrasferisciFoglioCalcolo riflettono le opzioni presenti in queste finestre di dialogo o nelle creazioni guidate.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si esegue una query o si applica un filtro al foglio di calcolo collegato, la query o il filtro distinguono tra maiuscole e minuscole.</P>
+
+
+
+<P class=T>Se ci si collega a un foglio di calcolo di Excel aperto in modalità Modifica, il collegamento non viene completato finché non si esce da tale modalità. Non si verifica alcun timeout.</P>
+
+<P class=T>Per eseguire l'azione TrasferisciFoglioCalcolo in Visual Basic, utilizzare il metodo <A HREF="acmthactTransferSpreadsheet.htm"><B>TransferSpreadsheet</B></A> dell'oggetto <A HREF="acobjDoCmd.htm"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCalendarX'
+Feature='acpro'
+Handoff='3'
+SourceFile='bidiprop.doc'
+Tnum='267420'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Calendar</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RL><B><A NAME="acprocalendarx"></A>Calendar Property Example</B></P>
+
+<P class=T>The following example creates a function to convert dates strings between the supported calendar systems. The example code that follows uses the function to convert a Gregorian date string to the equivalent Hijri string in long date format.</P>
+
+<PRE class=CT><CODE>Function ConvertDateString ( _
+    ByRef StringIn As String, _
+    ByVal OldCalendar As Integer, _
+    ByVal NewCalendar As Integer, _
+    ByRef NewFormat As String) As String
+  Dim SavedCal As Integer
+  Dim d As Date
+  Dim s As String
+
+  ' Save Access calendar to restore when finished
+  SavedCal = <B>Calendar</B>
+
+  ' Convert date to new calendar and format
+  <B>Calendar</B> = OldCalendar  ' Change to StringIn calendar
+  d = Cdate (StringIn)    ' Convert from String to Date
+  <B>Calendar</B> = NewCalendar  ' Change to calendar of new string
+  s = CStr(d)      ' Convert to short format String
+  ConvertDateString = Format (s, NewFormat)  'Reformat
+  <B>Calendar</B> = SavedCal
+End Function
+</CODE></PRE>
+
+<P class=T>Call ConvertDateString function from a procedure to perform conversion…</P>
+
+<PRE class=CT><CODE>Sub MySub
+  Dim GregorianDate As String
+  Dim HijriDate As String
+  Dim GregorianCalendar As Integer
+  Dim HijriCalendar As Integer
+  Dim HijriFormat As String
+  GregorianDate = #12/31/93#
+  GregorianCalendar = 0
+  HijriCalendar = 1
+  HijriFormat = "Long Date"
+  ' Returns 7/18/1414
+  HijriDate = ConvertDateString (GregorianDate, _
+    GregorianCalendar, HijriCalendar, HijriFormat) 
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

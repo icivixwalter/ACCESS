@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFrozenColumnsX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosht2_1a.rtf'
+Tnum='187272'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà FrozenColumns</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprofrozencolumnsx"></A>Esempio di proprietà FrozenColumns</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>FrozenColumns</B> viene utilizzata per determinare il numero di colonne bloccate in una tabella in visualizzazione Foglio dati. Se sono bloccate più di tre colonne, le dimensioni della tabella vengono ingrandite in modo da visualizzare il maggior numero possibile di colonne non bloccate.</P>
+
+<PRE class=CT><CODE>Sub ControllaColBloccate(strNomeTabella As String)
+&nbsp;&nbsp;&nbsp; Dim dbs As Object
+&nbsp;&nbsp;&nbsp; Dim tdf As Object
+&nbsp;&nbsp;&nbsp; Dim prp As Variant
+&nbsp;&nbsp;&nbsp; Const DB Integer As Integer = 3
+&nbsp;&nbsp;&nbsp; Const conProprietàNonTrovata = 3270 ' Errore Impossibile trovare la proprietà.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Ottiene il database corrente.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs(strNomeTabella)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Ottiene oggetto per la tabella.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenTable strNomeTabella, acNormal ' Apre la tabella.
+&nbsp;&nbsp;&nbsp; tdf.Properties.Refresh
+&nbsp;&nbsp;&nbsp; On Error GoTo Bloccate_Err
+&nbsp;&nbsp;&nbsp; If tdf.Properties("<B>FrozenColumns</B>") &gt; 3 Then&nbsp;&nbsp; ' Controlla la proprietà.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.Maximize
+&nbsp;&nbsp;&nbsp; End If
+Bloccate_Bye:
+&nbsp;&nbsp;&nbsp; Exit Sub
+Bloccate_Err:
+&nbsp;&nbsp;&nbsp; If Err = conProprietàNonTrovata Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' La proprietà non è contenuta nell'insieme.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set prp = tdf.CreateProperty("<B>FrozenColumns</B>", dbInteger, 1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tdf.Properties.Append prp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume Bloccate_Bye
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

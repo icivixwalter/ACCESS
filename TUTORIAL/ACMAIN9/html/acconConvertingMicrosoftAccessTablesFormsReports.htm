@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconConvertingMicrosoftAccessTablesFormsReports'
+Feature='accon'
+Handoff='3'
+SourceFile='acconnew1.doc'
+Tnum='187104'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convertire le tabelle, le maschere e i report di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acconconvertingmicrosoftaccesstablesformsreports"></A>Convertire le tabelle, le maschere e i report di Microsoft Access</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconConvertingMicrosoftAccessTablesFormsReportsC">
+</OBJECT></P>
+
+
+
+<P class=T>Numerose modifiche introdotte da Microsoft Access 2000 potrebbero influire sul funzionamento delle applicazioni nelle versioni 1.<I>x</I> o 2.0. Nelle sezioni che seguono vengono fornite ulteriori informazioni su tali modifiche.</P>
+
+<P class=RL><B>Indici e relazioni</B></P>
+
+<P class=T>Una tabella di Microsoft Access può contenere fino a un massimo di 32 <A HREF="javascript:HelpPopup('actip9.hlp','defIndex');" class="pop">indici</A>. Le tabelle molto complesse che fanno parte di più <A HREF="javascript:HelpPopup('actip9.hlp','defRelationship');" class="pop">relazioni</A> possono eccedere questo limite e il database che contiene tali tabelle non può essere convertito. La versione 3.5 del <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A> crea indici per entrambi i lati della relazione tra le tabelle. Se la conversione del database non riesce, eliminare alcune relazioni e tentare di nuovo l'operazione.</P>
+
+<P class=RL><B>Proprietà Solo in elenco delle caselle combinate</B></P>
+
+<P class=T>In Microsoft Access 2000 le <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">caselle combinate</A> accettano valori di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A> quando la proprietà <A HREF="acproLimitToList.htm"><B>Solo in elenco</B></A> è impostata a <B>Vero</B> (-1), sia che l'elenco contenga valori di tipo <B>Null</B> o meno. Nella versione 2.0 una casella combinata con la proprietà <B>Solo in elenco</B> impostata a <B>Vero</B> non accetta un valore di tipo <B>Null</B> a meno che l'elenco non contenga un valore di questo<B> </B>tipo. Per impedire che gli utenti immettano un valore di tipo <B>Null</B> utilizzando una casella combinata è necessario impostare a <B>Sì</B> la proprietà <A HREF="acproRequired.htm"><B>Richiesto</B></A> nel campo della tabella.</P>
+
+<P class=RL><B>Menu e attivazione diretta di oggetti OLE</B></P>
+
+<P class=T>Per disporre di una maggiore funzionalità durante l'attivazione diretta di <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObject');" class="pop">oggetti OLE</A>, è possibile che alcuni comandi di menu siano stati spostati in un menu che non viene sostituito quando si attiva un <A HREF="javascript:HelpPopup('actip9.hlp','defObjectApplication');" class="pop">server OLE</A>.</P>
+
+<P class=T>Quando viene attivato un componente, le modifiche apportate non influenzano le macro dell'applicazione convertita che utilizzano l'azione EseguiVoceMenu per eseguire un comando di menu della versione 2.0. I comandi della versione 2.0 vengono associati ai comandi equivalenti in Microsoft Access 2000.</P>
+
+<P class=RL><B>Creazione di un riferimento a un controllo in una maschera di sola lettura</B></P>
+
+<P class=T>In Microsoft Access 2000 non è possibile utilizzare un'espressione per fare riferimento al valore di un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> contenuto in una maschera di sola lettura associata a un'origine record vuota. Nelle versioni precedenti l'espressione restituisce un valore di tipo <B>Null</B>. Prima di creare un riferimento a un controllo in una maschera di sola lettura è necessario assicurarsi che l'origine record della maschera contenga dei record.</P>
+
+<P class=RL><B>Campi di tipo Data e immissione dati</B></P>
+
+<P class=T>Se in un campo di tipo Data in un <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> di una maschera o di una tabella si immette <B>3/3</B>, Microsoft Access 2000 immette automaticamente l'anno corrente. Se tuttavia nello stesso campo si immette <B>3/3/</B>, Microsoft Access visualizza un messaggio di errore. Se si omette l'ultimo separatore di data, viene eseguita la conversione della data nel formato appropriato.</P>
+
+<P class=RL><B>Pulsanti creati con la Creazione guidata Pulsante di comando</B></P>
+
+<P class=T>Mentre nelle versioni 2.0 o 7.0 di Microsoft Access si utilizza la Creazione guidata Pulsante di comando per generare il codice che chiama un'altra applicazione, in Microsoft Access 2000 è necessario prima eliminare il pulsante, quindi crearlo di nuovo mediante l'apposita creazione guidata.</P>
+
+<P class=RL><B>Moduli di classe di maschere e report</B></P>
+
+<P class=T>Nelle versioni precedenti di Microsoft Access agli oggetti <B>Form</B> e <B>Report</B> sono associati <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">moduli di classe</A> anche se dietro l'oggetto non esiste un codice. In Microsoft Access 2000 è possibile impostare a <B>Falso</B> la proprietà <A HREF="acproHasModule.htm"><B>Possiede modulo</B></A> di una maschera o di un report. Dopo aver impostato a <B>Falso</B> tale<B> </B>proprietà, la maschera o il report occuperanno meno spazio su disco e verranno caricati più velocemente poiché a essi non sarà più associato un modulo di classe.</P>
+
+<P class=RL><B>Differenza di margini dei report della versione 2.0 convertiti</B></P>
+
+<P class=T>In Microsoft Access 2000 la stampa o l'<A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">anteprima</A> di un report convertito da Microsoft Access 2.0 potrebbe presentare dei problemi se alcuni valori relativi ai margini sono impostati a 0. Quando si esegue la conversione di un report da Microsoft Access 2.0, i valori dei margini non sono impostati a 0, ma sul valore minimo valido per la stampante predefinita. Ciò impedisce che alcuni dati del report fuoriescano dall'area di stampa della stampante.</P>
+
+<P class=T>Per risolvere questo problema, ridurre la larghezza, la spaziatura o il numero delle colonne contenute nel report di modo che la somma della larghezza delle colonne e quella dei margini predefiniti sia inferiore o uguale alla larghezza del foglio.</P>
+
+<P class=RL><B>Impossibilità di utilizzare la proprietà Formato per distinguere i valori di tipo Null e le stringhe a lunghezza zero</B></P>
+
+<P class=T>Nelle versioni 1.<I>x</I> e 2.0 è possibile utilizzare la proprietà <A HREF="acproFormat.htm"><B>Formato</B></A> di un controllo per visualizzare valori differenti per valori di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A> e <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringhe a lunghezza zero</A> (" "). In Microsoft Access 2000 per fare distinzione tra i valori di tipo <B>Null</B> e le stringhe a lunghezza zero in un controllo contenuto in una maschera, è necessario impostare la proprietà <A HREF="acproControlSource.htm"><B>Origine controllo</B></A> a un'espressione che ricerchi eventuali valori di tipo <B>Null</B>. Per visualizzare ad esempio "Null" o "ZLS" in un controllo, impostare la relativa proprietà <B>ControlSource</B> all'espressione riportata di seguito.</P>
+
+<P class=T>=IIf(IsNull([MioControllo]), "Null", Format([MioControllo], "@;ZLS"))</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconConvertingMicrosoftAccessTablesFormsReportsW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

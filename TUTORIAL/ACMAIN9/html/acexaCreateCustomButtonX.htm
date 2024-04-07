@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acexaCreateCustomButtonX'
+Feature='acexa'
+Handoff='1'
+SourceFile='acocmdbs_1a.doc'
+Tnum='261500'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di creazione di un pulsante di comando personalizzato</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acexacreatecustombuttonx"></A>Esempio di creazione di un pulsante di comando personalizzato</B></P>
+
+
+
+<P class=T>Nell'esempio che segue viene creato un pulsante di comando personalizzato su una barra dei comandi specificata. Immettere il nome della barra dei comandi nella quale si desidera aggiungere il nuovo pulsante di comando e il nome del nuovo pulsante nella routine SpecificaBarraComandiEPulsante. Questa routine richiama la funzione generale CreateCustomButton, che utilizza i nomi immessi per aggiungere il pulsante di comando personalizzato nella barra dei comandi.</P>
+
+<PRE class=CT><CODE>Sub SpecificaBarraComandiEPulsante()
+&nbsp;&nbsp;&nbsp; CreateCustomButton "Barra dei menu", "Pulsante personalizzato"
+End Sub
+
+Function CreateCustomButton(strNomeBarra As String, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNome As String) As Integer
+&nbsp;&nbsp;&nbsp; Dim cmdBar As CommandBar, cmdBarCustomButton As _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CommandBarButton
+
+&nbsp;&nbsp;&nbsp; Set cmdBar = CommandBars(strNomeBarra)
+&nbsp;&nbsp;&nbsp; ' Mostra la barra dei comandi se non è già visibile.
+&nbsp;&nbsp;&nbsp; If cmdBar.Visible = False Then cmdBar.Visible = True
+
+&nbsp;&nbsp;&nbsp; On Error Resume Next
+
+&nbsp;&nbsp;&nbsp; Set cmdBarCustomButton = cmdBar.Controls(strNome)
+&nbsp;&nbsp;&nbsp; If Err &lt;&gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Il pulsante personalizzato non esiste. Crearlo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set cmdBarCustomButton = cmdBar.Controls _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Add(msoControlButton, , , , True)
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; With cmdBarCustomButton
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Caption = strNome
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .BeginGroup = True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .OnAction = "=msgbox(""Salve a tutti"")"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Esegue qui la macro o la funzione personalizzata.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Style = msoButtonCaption
+&nbsp;&nbsp;&nbsp; End With
+End Function
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

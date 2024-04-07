@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlVarPS'
+Feature='acfct'
+Handoff='1'
+SourceFile='acdsql04_1.rtf'
+Tnum='234586'
+Piece='1039'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzioni Var, VarP</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acsqlvarps"></A>Funzioni Var, VarP</H1>
+
+
+
+<P class=T>In Microsoft Access è possibile utilizzare le funzioni <B>Var</B> e <B>VarP</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura della query</A>, in un'istruzione <A HREF="javascript:HelpPopup('actip9.hlp','defSQL');" class="pop">SQL</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defSQLView');" class="pop">visualizzazione SQL</A> della <A HREF="javascript:HelpPopup('actip9.hlp','defQueryWindow');" class="pop">finestra della query</A> o in un'istruzione SQL all'interno del codice di Visual Basic. È anche possibile utilizzare le funzioni <B>Var</B> e <B>VarP</B> in un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> di una maschera o di un report.</P>
+
+<P class=T>Le funzioni <B>Var</B> e <B>VarP</B> risultano particolarmente utili nelle <A HREF="javascript:HelpPopup('actip9.hlp','defTotalsQuery');" class="pop">query Totali</A> e nelle <A HREF="javascript:HelpPopup('actip9.hlp','defCrosstabQuery');" class="pop">query a campi incrociati</A>. Le funzioni agiscono nello stesso modo sia che la query venga creata nella griglia di struttura di query o come un'istruzione SQL in visualizzazione SQL.</P>
+
+<P class=T>Nella griglia di struttura della query, è possibile creare una nuova query Totali facendo clic sul pulsante <B>Totali</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrTotalsQ');" class="pop"><IMG SRC="images/totals.bmp" BORDER=0></A>  sulla <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> <B>Struttura query</B>. La riga <B>Formula</B> viene quindi inserita nella griglia. È possibile impostare alla funzione di aggregazione la cella <B>Formula</B> sottostante un campo in modo che venga eseguita sui dati di tale campo.</P>
+
+<P class=T>Si supponga, ad esempio, di disporre di una tabella Ordini contenente sia un campo Trasporto che un campo CittàDestinatario. È possibile creare una query che visualizzi la varianza del costo di trasporto relativo ad ordini inviati in ciascuna città. Creare una nuova query Totali e trascinare il campo CittàDestinatario sulla griglia di struttura della query. Si consiglia di impostare a Raggruppamento la cella <B>Formula</B> sottostante il campo CittàDestinatario. Trascinare il campo Trasporto sulla griglia di struttura della query ed impostare a Var la cella <B>Formula</B> sottostante il campo. Quando si esegue la query, viene visualizzata la varianza del costo di trasporto relativo ad ordini inviati in ciascuna città.</P>
+
+<P class=T>È possibile visualizzare l'istruzione SQL relativa a tale query passando alla visualizzazione SQL. Nell'esempio riportato di seguito si crea la seguente istruzione SQL:</P>
+
+<PRE class=CT><CODE>SELECT CittàDestinatario, <B>Var(</B>Trasporto<B>)</B> AS VarTrasporto
+FROM Ordini GROUP BY CittàDestinatario;</CODE></PRE>
+
+
+
+<P class=T>È inoltre possibile utilizzare un'istruzione SQL all'interno del codice di Visual Basic. Il codice riportato di seguito, ad esempio, crea un oggetto <B>Recordset</B> di tipo dynaset dalla precedente istruzione SQL:</P>
+
+<PRE class=CT><CODE>Sub VarTrasporto()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset, strSQL _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As String
+
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; strSQL = "SELECT CittàDestinatario, <B>Var(</B>Trasporto<B>)</B>  _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AS VarTrasporto FROM Ordini" _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "GROUP BY CittàDestinatario;"
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset(strSQL)
+&nbsp;&nbsp;&nbsp; rst.MoveLast
+&nbsp;&nbsp;&nbsp; Debug.Print rst.RecordCount
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Per utilizzare le funzioni <B>Var</B> e <B>VarP</B> in un controllo calcolato, impostare la proprietà <B>Origine controllo</B> del controllo a un'espressione contenente una delle due funzioni. Per visualizzare, ad esempio, la varianza dei costi di trasporto contenuti in una casella di testo, immettere nella proprietà <B>Origine controllo</B> della casella di testo l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>=<B>Var(</B>[Trasporto]<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Se si utilizza la funzione <B>Var</B> o <B>VarP</B> in un controllo calcolato, è possibile limitare il set di record rispetto al quale viene eseguita la funzione, impostando la proprietà <B>Filtro</B> della maschera.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthLineX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186540'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Line</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthlinex"></A>Esempio di metodo Line</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare il metodo <B>Line</B> per disegnare un rettangolo rosso di cinque pixel all'interno del bordo di un report chiamato ReportDipendenti. Viene utilizzata la funzione <B>RGB</B> per colorare di rosso la linea.</P>
+
+<P class=T>Per provare questo esempio in Microsoft Access, creare un nuovo report. Incollare il codice riportato di seguito nella sezione Dichiarazioni del modulo di report, passare quindi all'Anteprima di stampa.</P>
+
+<PRE class=CT><CODE>Private Sub Stampa_Dettagli(Cancel As Integer, PrintCount As Integer)
+&nbsp;&nbsp;&nbsp; ' Richiama la procedura di disegno delle linee
+&nbsp;&nbsp;&nbsp; TracciaLinea
+End Sub
+
+Sub TracciaLinea()
+&nbsp;&nbsp;&nbsp; Dim rpt As Report, lngColor As Long
+&nbsp;&nbsp;&nbsp; Dim sngTop As Single, sngLeft As Single
+&nbsp;&nbsp;&nbsp; Dim sngWidth As Single, sngHeight As Single
+
+&nbsp;&nbsp;&nbsp; Set rpt = Reports!ReportDipendenti
+&nbsp;&nbsp;&nbsp; ' Imposta la scala in pixel.
+&nbsp;&nbsp;&nbsp; rpt.ScaleMode = 3
+&nbsp;&nbsp;&nbsp; ' Bordo superiore interno.
+&nbsp;&nbsp;&nbsp; sngTop = rpt.ScaleTop + 5
+&nbsp;&nbsp;&nbsp; ' Bordo sinistro interno.
+&nbsp;&nbsp;&nbsp; sngLeft = rpt.ScaleLeft + 5
+&nbsp;&nbsp;&nbsp; ' Profondità bordo interna.
+&nbsp;&nbsp;&nbsp; sngWidth = rpt.ScaleWidth - 10
+&nbsp;&nbsp;&nbsp; ' Altezza bordo interna.
+&nbsp;&nbsp;&nbsp; sngHeight = rpt.ScaleHeight - 10
+&nbsp;&nbsp;&nbsp; ' Colora in rosso.
+&nbsp;&nbsp;&nbsp; lngColor = RGB(255,0,0)
+&nbsp;&nbsp;&nbsp; ' Traccia un rettangolo.
+&nbsp;&nbsp;&nbsp; rpt.<B>Line(</B>sngTop, sngLeft<B>)</B> - <B>(</B>sngWidth, sngHeight<B>)</B>, lngColor, B
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

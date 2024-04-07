@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproMenuBarX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprofrd1_1a.rtf'
+Tnum='187459'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà MenuBar</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpromenubarx"></A>Esempio di proprietà MenuBar</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene impostata la proprietà <B>MenuBar</B> a una barra dei menu chiamata MenuClienti.</P>
+
+<PRE class=CT><CODE>Forms!Clienti.<B>MenuBar</B> = "MenuClienti"</CODE></PRE>
+
+
+
+<P class=T>Per visualizzare la barra dei menu incorporata per la maschera o la barra dei menu globale dell'applicazione, impostare la proprietà <B>MenuBar</B> a una stringa a lunghezza zero ("").</P>
+
+<PRE class=CT><CODE>Forms!Clienti.<B>MenuBar</B> = ""</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

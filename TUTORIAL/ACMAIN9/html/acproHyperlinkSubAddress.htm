@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproHyperlinkSubAddress'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew8.doc'
+Tnum='187323'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà HyperlinkSubAddress (Sottoindirizzo colleg. ipertest.)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprohyperlinksubaddress"></A>Proprietà HyperlinkSubAddress (Sottoindirizzo colleg. ipertest.)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproHyperlinkSubAddressC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproHyperlinkSubAddressX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproHyperlinkSubAddressA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>HyperlinkSubAddress</B> per specificare o determinare una posizione all'interno del documento di destinazione specificato nella proprietà <A HREF="acproHyperlinkAddress.htm"><B>HyperlinkAddress</B></A>. La proprietà <B>HyperlinkSubAddress</B> può corrispondere a un oggetto all'interno di un database di Microsoft Access, un segnalibro all'interno di un documento Microsoft Word, un determinato intervallo all'interno di un foglio di calcolo di Microsoft Excel, una diapositiva all'interno di una presentazione Microsoft PowerPoint o una posizione all'interno di un documento HTML.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>HyperlinkSubAddress</B> è un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che rappresenta una determinata posizione all'interno del documento di destinazione specificato dalla proprietà <B>HyperlinkAddress</B>.</P>
+
+<P class=T>È possibile impostare la proprietà <B>HyperlinkSubAddress</B> utilizzando la <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> di un controllo, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=T>È inoltre possibile utilizzare la finestra di dialogo <B>Inserisci collegamento ipertestuale</B> per impostare questa proprietà scegliendo il pulsante dei generatori <A HREF="javascript:HelpPopup('actip9.hlp','defBuildButton');" class="pop"><IMG SRC="images/buildbut.bmp" BORDER=0></A> a destra della casella della proprietà nella <A HREF="javascript:HelpPopup('actip9.hlp','defPropertySheet');" class="pop">finestra delle proprietà</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Quando si crea un <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlink');" class="pop">collegamento ipertestuale</A> utilizzando la finestra di dialogo <B>Inserisci collegamento ipertestuale</B>, Microsoft Access imposta automaticamente la proprietà <B>HyperlinkAddress</B> e HyperlinkSubAddress alla posizione specificata nella casella <B>Digitare il nome del file o della pagina Web</B>. La proprietà <B>HyperlinkSubAddress</B> viene impostata alla posizione specificata nella casella <B>Selezionare un oggetto nel database</B>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando si punta il cursore su un <A HREF="javascript:HelpPopup('actip9.hlp','defCommandButton');" class="pop">pulsante di comando</A>, un <A HREF="javascript:HelpPopup('actip9.hlp','defImageFrame');" class="pop">controllo immagine</A> o un'<A HREF="javascript:HelpPopup('actip9.hlp','defLabel');" class="pop">etichetta</A> la cui proprietà <B>HyperlinkSubAddress</B> è impostata, il cursore si trasforma in un'icona a forma di indice. Se si fa clic sul controllo, viene visualizzato l'oggetto o la pagina di Web specificata dal collegamento.</P>
+
+<P class=T>Per aprire un oggetto nel database corrente, non inserire alcun valore nella proprietà <B>HyperlinkAddress</B> e specificare il tipo e il nome dell'oggetto che si desidera aprire nella proprietà <B>HyperlinkSubAddress</B> nel formato "<I>tipooggetto nomeoggetto</I>". Per creare, ad esempio, un collegamento ipertestuale per un pulsante di comando che apra la Maschera Impiegati, si potrebbe impostare la proprietà del controllo <B>HyperlinkSubAddress</B> a "Maschera Impiegati". Se si desidera aprire un oggetto contenuto in un altro database di Microsoft Access, immettere il nome del file e del percorso del database nella proprietà <B>HyperlinkAddress</B> e specificare l'oggetto di database da aprire utilizzando la proprietà <B>HyperlinkSubAddress</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Quando si utilizza un collegamento ipertestuale per un altro oggetto di database di Microsoft Access, vengono applicate le proprietà del database di avvio. Se nel database di destinazione, ad esempio, è impostata la maschera Visualizza, tale maschera viene visualizzata all'apertura del database.</P>
+
+
+
+<P class=T>La tabella riportata di seguito illustra degli esempi di impostazioni delle proprietà <B>HyperlinkAddress</B> e <B>HyperlinkSubAddress</B>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=38%>HyperlinkAddress</TH>
+<TH width=31%>HyperlinkSubAddress</TH>
+<TH width=31%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>http://www.microsoft.com/</TD>
+<TD class=TT width=31%>&nbsp;</TD>
+<TD class=TT width=31%><I>Home Page Microsoft</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>C:\Programmi\Microsoft Office\Office\Esempi\Cajun.htm</TD>
+<TD class=TT width=31%>&nbsp;</TD>
+<TD class=TT width=31%>Pagina Cajun Delights nella sottodirectory delle applicazioni di esempio di Access.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>C:\Programmi\Microsoft Office\Office\Esempi\Cajun.htm</TD>
+<TD class=TT width=31%>NuoviProdotti</TD>
+<TD class=TT width=31%>Nome del tag "NuoviProdotti " nella pagina Cajun Delights.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>C:\Documenti\Miocurr.doc</TD>
+<TD class=TT width=31%>Riferimenti</TD>
+<TD class=TT width=31%>Segnalibro chiamato "Riferimenti" nel documento "Miocurr.doc" di Microsoft Word.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>C:\Finanze\Primo trimestre.xls</TD>
+<TD class=TT width=31%>Foglio1!TotaliVendite</TD>
+<TD class=TT width=31%>Intervallo chiamato "TotaliVendite" nel foglio di calcolo "Primo trimestre.xls" di Microsoft Excel.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>C:\Presentazione\NuoviPiani.ppt</TD>
+<TD class=TT width=31%>10</TD>
+<TD class=TT width=31%>Decima diapositiva nel documento "NuoviPiani.ppt" di Microsoft PowerPoint.</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

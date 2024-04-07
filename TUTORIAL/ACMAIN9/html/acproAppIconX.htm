@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproAppIconX'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew.doc'
+Tnum='187005'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà AppIcon, AppTitle</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproappiconx"></A>Esempio di proprietà AppIcon, AppTitle</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si indica come modificare le proprietà <B>AppIcon</B> e <B>AppTitle</B> in un database di Microsoft Access (MDB). Se le proprietà non sono state ancora impostate o create, è necessario crearle ed accodarle all'insieme <B>Properties</B> utilizzando il metodo <B>CreateProperty</B>.</P>
+
+<PRE class=CT><CODE>Sub cmdAddProp_Click()
+  Dim intX As Integer
+  Const DB_Text As Long = 10
+  intX = AddAppProperty("<B>AppTitle</B>", DB_Text, "Mia applicazione personalizzata")
+  intX = AddAppProperty("<B>AppIcon</B>", DB_Text, "C:\Windows\Cars.bmp")
+  Application.RefreshTitleBar
+End Sub
+
+Function AddAppProperty(strName As String, varType As Variant, varValue As Variant) As Integer
+  Dim dbs As Object, prp As Variant
+  Const conPropNotFoundError = 3270
+
+  Set dbs = CurrentDb
+  On Error GoTo AddProp_Err
+  dbs.Properties(strName) = varValue
+  AddAppProperty = True
+
+AddProp_Bye:
+  Exit Function
+
+AddProp_Err:
+  If Err = conPropNotFoundError Then
+    Set prp = dbs.CreateProperty(strName, varType, varValue)
+    dbs.Properties.Append prp
+    Resume
+  Else
+    AddAppProperty = False
+    Resume AddProp_Bye
+  End If
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

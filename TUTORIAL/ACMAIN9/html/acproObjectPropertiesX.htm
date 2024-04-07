@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproObjectPropertiesX'
+Feature='acpro'
+Handoff='2'
+SourceFile='apromsc3.doc'
+Tnum='187735'
+Piece='1042'
+Recycle='Y'
+>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Object</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproobjectpropertiesx"></A>Esempio di proprietà Object</B></P>
+
+
+
+<P class=T>Nell'esempio seguente viene utilizzata la subroutine PrintObjectProperties per visualizzare i valori delle proprietà <B>Object</B> per un oggetto nella finestra Debug. La subroutine richiede come argomenti il tipo oggetto ed il nome oggetto.</P>
+
+<PRE class=CT><CODE>Dim strTipoOggetto As String
+Dim strNomeOggetto As String
+Dim strMsg As String
+
+strMsg = "Immettere Tipo oggetto (ad es. Forms, Scripts, " _
+  &amp; "Modules, Reports, Tables)."
+' Ottiene tipo oggetto.
+strTipoOggetto = InputBox(strMsg)
+strMsg = "Immettere il nome di una maschera, macro, modulo, " _
+  &amp; "query, report, o finestra."
+' Ottiene nome oggetto da utente.
+StrNomeOggetto = InputBox(strMsg)
+' Passa tipo oggetto e nome oggetto a
+' subroutine PrintObjectProperties.
+PrintObjectProperties strTipoOggetto, strNomeOggetto
+
+Sub PrintObjectProperties(strTipoOggetto As String, strNomeOggetto _
+  As String)
+Dim dbs As Database, ctr As Container, doc As Document
+Dim intI As Integer
+Dim strCarTab As String
+Dim prp As Property
+
+Set dbs = CurrentDb
+strCarTab = vbTab
+' Imposta variabile oggetto Container.
+Set ctr = dbs.Containers(strTipoOggetto)
+' Imposta variabile oggetto Document.
+Set doc = ctr.Documents(strNomeOggetto)
+doc.Properties.Refresh
+' Visualizza nome oggetto nella finestra Debug.
+Debug.Print doc.Name
+' Visualizza ogni proprietà di oggetto nella finestra Debug.
+For Each prp in doc.Properties
+&nbsp;&nbsp;&nbsp; Debug.Print strCarTab &amp; prp.Name &amp; " = " &amp; prp.Value
+Next
+End Sub</CODE></PRE>
+
+
+
+
+
+</BODY>
+</HTML>

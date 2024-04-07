@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjModuleX'
+Feature='acobj'
+Handoff='1'
+SourceFile='aobjv8.rtf'
+Tnum='186687'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Module e insieme Modules</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjmodulex"></A>Esempio di oggetto Module e insieme Modules</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene restituito un riferimento a un oggetto <B>Module</B> nell'insieme <B>Modules</B> e viene stampato il numero di righe di codice nel modulo.</P>
+
+<PRE class=CT><CODE>Function LinesInModule(strModuleName As String) As Long
+&nbsp;&nbsp;&nbsp; Dim mdl As <B>Module</B>
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_LinesInModule
+&nbsp;&nbsp;&nbsp; ' Apre modulo.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenModule strModuleName
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a oggetto Module.
+&nbsp;&nbsp;&nbsp; Set mdl = <B>Modules</B>(strModuleName)
+&nbsp;&nbsp;&nbsp; ' Restituisce numero di righe nel modulo.
+&nbsp;&nbsp;&nbsp; LinesInModule = mdl.CountOfLines
+
+Exit_LinesInModule:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_LinesInModule:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; ' Se la funzione è errata, restituire -1.
+&nbsp;&nbsp;&nbsp; LinesInModule = -1
+&nbsp;&nbsp;&nbsp; Resume Exit_LinesInModule
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

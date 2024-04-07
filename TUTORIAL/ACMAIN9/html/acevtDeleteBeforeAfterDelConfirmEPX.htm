@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtDeleteBeforeAfterDelConfirmEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2a_1a.rtf'
+Tnum='187166'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Eliminazione, PrimaDiConfermaEliminazione, DopoConfermaEliminazione - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtdeletebeforeafterdelconfirmepx"></A>Eventi Eliminazione, PrimaDiConfermaEliminazione, DopoConfermaEliminazione - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si illustra come è possibile impedire l'eliminazione di record da una tabella.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera basata su una tabella. Passare alla visualizzazione Foglio dati della maschera e provare l'eliminazione del record.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Delete</B>(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; Cancel = True
+&nbsp;&nbsp;&nbsp; MsgBox "Impossibile eliminare il record."
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si illustra come è possibile utilizzare la routine evento PrimaDiConfermaEliminazione per eliminare la finestra di dialogo <B>Conferma eliminazione</B> e visualizzare una finestra di dialogo personalizzata quando viene eliminato un record. Si illustra inoltre come è possibile utilizzare la routine evento DopoConfermaEliminazione per visualizzare un messaggio che indica se l'eliminazione è avvenuta nel modo consueto oppure se l'eliminazione è stata annullata in Visual Basic o dall'utente.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera basata su una tabella o su una query:</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>BeforeDelConfirm</B>(Cancel As Integer, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Response As Integer)
+&nbsp;&nbsp;&nbsp; ' Non visualizza la finestra di dialogo predefinita Conferma eliminazione.
+&nbsp;&nbsp;&nbsp; Response = acDataErrContinue
+&nbsp;&nbsp;&nbsp; ' Visualizza la finestra di dialogo personalizzata.
+&nbsp;&nbsp;&nbsp; If MsgBox("Eliminare il record?", vbOKCancel) = vbCancel Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cancel = True
+&nbsp;&nbsp;&nbsp; End If
+End Sub
+
+Private Sub Form_<B>AfterDelConfirm</B>(Status As Integer)
+&nbsp;&nbsp;&nbsp; Select Case Status
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case acDeleteOK
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Eliminazione avvenuta normalmente."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case acDeleteCancel
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Il programmatore ha annullato l'eliminazione."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case acDeleteUserCancel
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "L'utente ha annullato l'eliminazione."
+&nbsp;&nbsp;&nbsp; End Select
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

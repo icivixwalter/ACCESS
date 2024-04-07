@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowMicrosoftAccessRunTimeOptionSettingsS'
+Feature='Miscellaneous: User Profiles'
+Handoff='3'
+SourceFile='cmscnew_3.rtf'
+Tnum='188981'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostare le opzioni di run-time di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowmicrosoftaccessruntimeoptionsettingss"></A>Impostare le opzioni di run-time di Microsoft Access</H1>
+
+<OL>
+	<LI class=LPROC>Creare un profilo utente di Microsoft Access.
+<P class=LBR2><A HREF="achowCreateUserProfileS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Sotto la sottochiave del profilo utente di Access creare una sottochiave denominata <B>\Run-Time Options</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Sotto la sottochiave <B>\Run-Time Options</B> creare sottochiavi che specifichino le seguenti impostazioni per l'applicazione.
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=43%>Impostazione del registro di Windows</TH>
+<TH width=57%>Caratteristica</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=43%><B>AppTitleBar</B></TD>
+<TD class=TT width=57%>Testo visualizzato nella barra del titolo della finestra principale dell'applicazione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=43%><B>AppIcon</B></TD>
+<TD class=TT width=57%>Icona visualizzata nella barra del titolo dell'applicazione quando l'applicazione viene ridotta a icona.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=43%><B>AppHelpFile</B></TD>
+<TD class=TT width=57%>File della Guida predefinito, utilizzato quando un utente richiama la Guida la prima volta.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=43%><B>AppStartupScreen</B></TD>
+<TD class=TT width=57%>File bitmap dello schermo iniziale visualizzato all'avvio dell'applicazione.</TD>
+</TR>
+</TABLE>
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Utilizzare le impostazioni <B>AppTitleBar</B> e <B>AppIcon</B> per sostituire la barra del titolo e l'icona di Access con quelle specifiche dell'applicazione. Le impostazioni <B>AppTitleBar</B> e <B>AppIcon</B> corrispondono alle proprietà di avvio Titolo applicazione e Icona applicazione. Per ulteriori informazioni sull'impostazione delle proprietà di avvio, fare clic su <A HREF="achowControllingHowApplicationStarts.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>Utilizzare l'impostazione <B>AppHelpFile</B> per specificare un file della Guida specifico dell'applicazione.<BR><BR></LI>
+
+	<LI class=NLB>Utilizzare l'impostazione <B>AppStartupScreen</B> per visualizzare uno schermo iniziale che identifica in modo univoco l'applicazione e che viene visualizzato al momento dell'avvio. Uno schermo iniziale è diverso da una maschera di avvio e viene visualizzato prima di qualsiasi maschera di avvio specificata nella finestra di dialogo <B>Avvio</B>. <BR><BR></LI>
+
+	<LI class=NLB>Per creare uno schermo iniziale, è anche possibile utilizzare un'immagine bitmap con lo stesso nome dell'applicazione, assegnarle un'estensione BMP e inserirla nella cartella dell'applicazione. Quindi, utilizzando Esplora risorse (Gestione risorse in Windows 95 e Windows NT 4.0), creare un collegamento all'applicazione che specifichi il nome della bitmap sulla riga di comando e specificarlo nella casella <B>Destinazione</B> della scheda <B>Collegamento</B> nella finestra <B>Proprietà</B> del collegamento stesso. Ad esempio:
+<P class=LT1><B>"C:\Programmi\Microsoft Office\Office\MSAccess.exe C:\File\Imposte.mdb"</B>
+
+<P class=LT1>Quando si apre l'applicazione, viene ricercato un file di questo tipo e, se trovato, viene utilizzato come schermo iniziale. L'opzione di run-time, <B>AppStartupScreen</B>, ha la precedenza su uno schermo iniziale definito in questo modo.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowMicrosoftAccessRunTimeOptionSettingsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

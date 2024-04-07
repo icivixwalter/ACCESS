@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefConsequencesChangingFieldsDataTypeS'
+Feature='Tables'
+Handoff='2'
+SourceFile='ctblnew_1.rtf'
+Tnum='187523'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Conseguenze della modifica del tipo di dati di un campo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefconsequenceschangingfieldsdatatypes"></A>Conseguenze della modifica del tipo di dati di un campo</H1>
+
+<P class=T>È possibile che sia necessario modificare i tipi di dati per i campi che già contengono dati. Potrebbe verificarsi, ad esempio, che per i dati importati non sia stato impostato il tipo di dati desiderato o che il tipo di dati precedentemente impostato per un campo non sia più appropriato.</P>
+
+<P class=T>Prima di convertire un tipo di dati in un altro, considerare le conseguenze delle modifiche sull'intero database. Se vi sono query, maschere e report che utilizzano il campo che viene convertito, potrebbe essere necessario modificare le <A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressioni</A> che dipendono dal campo modificato.</P>
+
+<P class=T>Le modifiche più comuni dei tipi di dati rientrano nelle quattro categorie seguenti: conversione da altri tipi di dati in Testo; conversione da Testo in Numerico, Valuta, Data/ora o Sì/No; conversione tra Valuta e Numerico o tra Testo e Memo; modifica dell'impostazione della proprietà <B>FieldSize</B> per i campi di tipo Numerico.</P>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acrefconsequenceschangingfieldsdatatypes_1">Conversione da altri tipi di dati in Testo</A></P>
+
+<P class=LBR1><A HREF="#acrefconsequenceschangingfieldsdatatypes_2">Conversione da Testo in Numerico, Valuta, Data/ora o Sì/No</A></P>
+
+<P class=LBR1><A HREF="#acrefconsequenceschangingfieldsdatatypes_3">Conversione tra Valuta e Numerico o tra Testo e Memo</A></P>
+
+<P class=LBR1><A HREF="#acrefconsequenceschangingfieldsdatatypes_4">Modifica dell'impostazione della proprietà FieldSize per i campi di tipo Numerico</A></P>
+
+
+
+<H2><A NAME="acrefconsequenceschangingfieldsdatatypes_1"></A>Conversione da altri tipi di dati in Testo</H2>
+
+<P class=T>I numeri da utilizzare per i calcoli vanno normalmente memorizzati in un campo Numerico o Valuta, ma è possibile che un campo contenente inizialmente solo numeri richieda in seguito l'utilizzo di lettere e di altri caratteri non numerici. Si supponga, ad esempio, di avere un campo Numerico che memorizza numeri di codice. Se successivamente occorre includere lettere, trattini, parentesi o altri caratteri non numerici come parte del codice, sarà necessario cambiare il tipo di dati del campo in Testo.</P>
+
+<P class=T>I valori numerici vengono convertiti in testo utilizzando un formato Numerico generico ed i valori di tipo Data vengono convertiti in Testo utilizzando un formato Data generico. I valori convertiti non includeranno simboli di valuta o altri caratteri di formattazione speciali che siano stati impostati per il campo.</P>
+
+<P class=rtt>Torna all'<A HREF="#acrefconsequenceschangingfieldsdatatypes">inizio</A></P>
+
+<H2><A NAME="acrefconsequenceschangingfieldsdatatypes_2"></A>Conversione da Testo in Numerico, Valuta, Data/ora o Sì/No</H2>
+
+<P class=T>Se sono stati memorizzati dei dati in un campo Testo e si desidera convertire il campo in un altro tipo di dati, è possibile convertire i valori che sono appropriati per il nuovo tipo di dati. Se, ad esempio, si desidera eseguire dei calcoli matematici sui dati, è necessario convertire tale campo nel tipo di dati Numerico o Valuta. Purché tutti i dati memorizzati nel campo siano composti solo da numeri, è possibile modificare il tipo senza perdere i dati.</P>
+
+<P class=T>Per le conversioni da tipo di dati Testo in Numerico, i separatori decimali e delle migliaia vengono interpretati in modo appropriato. I simboli di valuta vengono interpretati secondo le Impostazioni internazionali specificate nel Pannello di controllo di Windows.</P>
+
+<P class=T>Per le conversioni da Testo in Data/ora, la maggior parte dei formati di data e ora vengono convertiti correttamente. I formati di data e ora vengono interpretati secondo le Impostazioni internazionali specificate nel Pannello di controllo di Windows.</P>
+
+<P class=T>Per le conversioni da Testo in Sì/No, le parole Sì, Vero oppure On vengono convertite in un valore Sì, mentre le parole No, Falso oppure Off vengono convertite in No. Per visualizzare Sì oppure No, è necessario scegliere la scheda <B>Ricerca</B> nella visualizzazione Struttura della tabella ed impostare la proprietà <B>Visualizza controllo</B> a <B>Casella di testo</B>. È anche possibile la conversione dal tipo di dati Numerico in Sì/No: zero o i valori <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A> saranno convertiti in No, mentre i valori diversi da zero saranno convertiti in Sì.</P>
+
+<P class=rtt>Torna all'<A HREF="#acrefconsequenceschangingfieldsdatatypes">inizio</A></P>
+
+<H2><A NAME="acrefconsequenceschangingfieldsdatatypes_3"></A>Conversione tra Valuta e Numerico o tra Testo e Memo</H2>
+
+<P class=T>È sempre possibile la conversione tra i tipi di dati Valuta e Numerico. I valori monetari vengono sempre memorizzati utilizzando il tipo di dati Valuta per assicurarsi che i calcoli siano corretti. Va inoltre utilizzato il tipo di dati Valuta se si prevede di eseguire molti calcoli in un campo che contiene dati con un numero di posizioni decimali compreso tra uno e quattro. I campi di tipo Valuta utilizzano un metodo di calcolo a virgola fissa che evita errori di arrotondamento. È sempre possibile la conversione tra i tipi di dati Testo e Memo. Se, ad esempio, si desidera memorizzare valori di tipo Testo più lunghi di quanto inizialmente previsto, è possibile convertire un campo nel tipo di dati Memo. Se, tuttavia, in un campo non devono essere memorizzati più di 255 caratteri, è consigliabile utilizzare il tipo di dati Testo.</P>
+
+<P class=rtt>Torna all'<A HREF="#acrefconsequenceschangingfieldsdatatypes">inizio</A></P>
+
+<H2><A NAME="acrefconsequenceschangingfieldsdatatypes_4"></A>Modifica dell'impostazione della proprietà FieldSize per i campi di tipo Numerico</H2>
+
+<P class=T>Per i campi contenenti il tipo di dati Numerico, l'impostazione della proprietà <B>FieldSize</B> determina il tipo di numero specifico: <B>Byte</B>, <B>Intero</B>, <B>Intero lungo</B>, <B>Precisione semplice</B>, <B>Precisione doppia</B>, <B>Decimale</B> o <B>ID replica</B> (GUID). Se un campo viene convertito nel tipo di dati Numerico, considerare se sia necessario modificare l'impostazione della proprietà <B>FieldSize</B> per i valori memorizzati nel campo. Se si modifica l'impostazione di <B>FieldSize</B> da una dimensione maggiore, quale <B>Precisione doppia</B>, in un valore minore, quale <B>Intero</B>, è necessario assicurarsi che i valori memorizzati nel campo siano appropriati per le nuove dimensioni del campo. Se la nuova impostazione della proprietà <B>FieldSize</B> non consente l'inserimento del numero di posizioni decimali incluso nei valori correnti, i numeri verranno arrotondati. Se, ad esempio, un campo viene modificato da <B>Precisione doppia</B> in <B>Intero lungo</B>, i numeri decimali verranno arrotondati al numero intero più vicino. Se i valori, inoltre, sono troppo grandi per essere memorizzati nella nuova dimensione, saranno eliminati e sostituiti con valori <B>Null</B>.</P>
+
+<P class=T>Per visualizzare un riepilogo dei risultati della conversione dei tipi di dati, fare clic su <A HREF="acrefDataTypeConversionResultsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per informazioni sull'intervallo di valori che è possibile memorizzare in ogni campo, fare clic su <A HREF="acrefWhatDataTypeShouldUseMyFieldS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+
+<P class=rtt>Torna all'<A HREF="#acrefconsequenceschangingfieldsdatatypes">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefConsequencesChangingFieldsDataTypeSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

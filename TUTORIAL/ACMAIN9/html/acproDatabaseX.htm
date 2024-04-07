@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDatabaseX'
+Feature='acpro'
+Handoff='2'
+SourceFile='apromsc3.doc'
+Tnum='187131'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Database</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodatabasex"></A>Esempio di proprietà Database</B></P>
+
+
+
+<P class=T>Nell'esempio seguente viene illustrato come impostare o creare una proprietà personalizzata definita dall'utente che apparirà nella scheda <B>Personalizza</B> della finestra di dialogo <B>Proprietà</B> <I>Nomedatabase</I>. È possibile ad esempio chiamare la funzione ImpostaProprietàPersonalizzata per aggiungere una nuova proprietà chiamata LastUserName all'oggetto <B>Document</B> UserDefined nel database. Gli argomenti passati alla funzione ImpostaProprietàPersonalizzata sono quelli richiesti per eseguire il metodo <B>CreateProperty</B>.</P>
+
+<PRE class=CT><CODE>Dim strNome As String, strValore As String
+
+' Imposta variabile nome proprietà.
+strNome = "LastUserName"
+' Imposta variabile valore proprietà.
+strValore = InputBox("Immettere il nome completo")
+If ImpostaProprietàPersonalizzata(strNome, dbText, strValore) &lt;&gt; True Then
+  ' Si è verificato un errore nella impostazione della proprietà.
+  MsgBox "Si è verificato un errore nella impostazione della proprietà."
+End If
+
+Function ImpostaProprietàPersonalizzata(strNomeProp As String, intTipoProp _
+  As Integer, strValoreProp As String) As Integer
+
+  Dim dbs As Database, cnt As Container
+  Dim doc As Document, prp As Property
+
+  Const conProprietàNonTrovata = 3270&nbsp;&nbsp;&nbsp; ' Errore di proprietà non trovata.
+  Set dbs = CurrentDb          ' Definisci oggetto Database.
+  Set cnt = dbs.Containers!Databases  ' Definisci oggetto Container.
+  Set doc = cnt.Documents!UserDefined  ' Definisci oggetto Document.
+  On Error GoTo SetCustom_Err
+  doc.Properties.Refresh
+  ' Imposta nome proprietà personalizzata. Se si verifica un errore significa che
+  ' la proprietà non esiste e deve essere creata e accodata
+  ' all'insieme Properties dell'oggetto Document.
+  Set prp = doc.Properties(strNomeProp)
+  prp = strValoreProp          ' Imposta valore proprietà personalizzata.
+  ImpostaProprietàPersonalizzata = True
+
+SetCustom_Bye:
+  Exit Function
+
+SetCustom_Err:
+  If Err = conProprietàNonTrovata Then
+    Set prp = doc.CreateProperty(strNomeProp, intTipoProp, strValoreProp)
+    doc.Properties.Append prp    ' Accoda a insieme.
+    Resume Next
+  Else                    ' Errore sconosciuto.
+    ImpostaProprietàPersonalizzata = False
+    Resume SetCustom_Bye
+  End If
+End Function</CODE></PRE>
+
+
+
+<P class=T>L'esempio successivo illustra come visualizzare le informazioni della scheda <B>Riepilogo</B> della finestra di dialogo <B>Proprietà</B> <I>Nomedatabase</I>. Il titolo, l'oggetto e l'autore dell'applicazione vengono visualizzati nei controlli casella di testo di una maschera. Se la proprietà non è stata ancora impostata, la routine restituisce "Nessuna". Se si verifica un errore sconosciuto, viene restituita una stringa a lunghezza zero (" ").</P>
+
+<PRE class=CT><CODE>Private Sub Form_Open(Cancel As Integer)
+  Dim strTitolo As String, strSoggetto As String, strAutore As String
+
+  strTitolo = "Titolo"
+  strSoggetto = "Soggetto"
+  strAutore = "Autore"
+
+  Me!txtTitolo = GetSummaryInfo(strTitolo)
+  Me!txtSoggetto = GetSummaryInfo(strSoggetto)
+  Me!txtAutore = GetSummaryInfo(strAutore)
+End Sub
+
+Function GetSummaryInfo(strNomeProp As String) As String
+  Dim dbs As Database, cnt As Container
+  Dim doc As Document, prp As Property
+
+  ' Errore di proprietà non trovata.
+  Const conProprietàNonTrovata = 3270
+  On Error GoTo GetSummary_Err
+  Set dbs = CurrentDb
+  Set cnt = dbs.Containers!Databases
+  Set doc = cnt.Documents!SummaryInfo
+  doc.Properties.Refresh
+  GetSummaryInfo = doc.Properties(strNomeProp)
+
+GetSummary_Bye:
+  Exit Function
+
+GetSummary_Err:
+  If Err = conProprietàNonTrovata Then
+    Set prp = doc.CreateProperty(strNomeProp, dbText, "Nessuna")
+    ' Accoda a insieme.
+    doc.Properties.Append prp
+    Resume
+  Else
+    ' Errore sconosciuto.
+    GetSummaryInfo = ""
+    Resume GetSummary_Bye
+  End If
+End Function</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

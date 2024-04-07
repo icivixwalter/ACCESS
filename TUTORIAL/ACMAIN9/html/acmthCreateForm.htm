@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateForm'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186370'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodi CreateForm e CreateReport</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconExamplesTemplatesFormsReportsS">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproHasModule">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthcreateform"></A>Metodi CreateForm e CreateReport</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateFormC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateFormX">
+</OBJECT></P>
+
+<P class=SANSR>
+
+<UL>
+	<LI class=LB1>Il metodo <B>CreateForm</B> crea una maschera e restituisce un oggetto <A HREF="acobjForm.htm"><B>Form</B></A>.<BR><BR></LI>
+
+	<LI class=LB1>Il metodo <B>CreateReport</B> crea un report e restituisce un oggetto <A HREF="acobjReport.htm"><B>Report</B></A>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Si supponga, ad esempio, di strutturare una Creazione guidata personalizzata per creare un report delle vendite. È possibile utilizzare il metodo <B>CreateReport</B> nella Creazione guidata per creare un nuovo report basato su un determinato <A HREF="JavaScript:hhobj_3.Click()">modello</A> di report.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>CreateForm(</B>[<I>database</I>[, <I>modellomaschera</I>]]<B>)</B></P>
+
+<P class=SYN><B>CreateReport(</B>[<I>database</I>[, <I>modelloreport</I>]]<B>)</B></P>
+
+
+
+<P class=T>I metodi <B>CreateForm</B> e <B>CreateReport</B> utilizzano gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=26%>Argomento</TH>
+<TH width=74%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>database</I></TD>
+<TD class=TT width=74%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che identifica il nome del database contenente il modello della maschera o del report che si desidera utilizzare per la creazione di una maschera o di un report. Se si desidera il database corrente, omettere questo argomento. Se si desidera utilizzare un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A> aperto, specificare il database di libreria con questo argomento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%><I>modellomaschera</I>, <I>modelloreport</I></TD>
+<TD class=TT width=74%>Espressione stringa che identifica il nome della maschera o del report che si desidera utilizzare come modello per la creazione di una nuova maschera o di un nuovo report. Se si omette tale argomento, la nuova maschera o il nuovo report si basano sul modello specificato dalla scheda <B>Maschere/Report</B> della finestra di dialogo <B>Opzioni</B>, disponibile scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Utilizzare i metodi <B>CreateForm</B> e <B>CreateReport</B> per progettare una Creazione guidata che crei una nuova maschera o un nuovo report.</P>
+
+<P class=T>I metodi <B>CreateForm</B> e <B>CreateReport</B> aprono una nuova maschera o un nuovo report ridotti a icona rispettivamente nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura maschera</A> o nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura report</A>.</P>
+
+<P class=T>La maschera o il report specificati per <I>modellomaschera</I> o <I>modelloreport</I> possono essere una maschera o un report creati appositamente per essere utilizzati come modelli oppure qualsiasi altra maschera o report contenuti nel database identificato dall'argomento <I>database</I>. Notare che se il database specificato dall'argomento <I>database</I> non è quello corrente, esso deve essere aperto come un database di libreria. Per ulteriori informazioni sui database di libreria, vedere il capitolo relativo alle API Windows e alle altre librerie DLL nel <I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I>. Per informazioni su come ottenere il <I>Manuale del programmatore</I>, fare clic su <A HREF="JavaScript:hhobj_4.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se è stato creato un modello di maschera o di report in un altro database che si desidera utilizzare come modello, è possibile importare semplicemente tale modello nel database corrente piuttosto che caricare un database di libreria. Accertarsi, quindi, che il nome appropriato di maschera o di report sia elencato nelle caselle <B>Modello maschera</B> o <B>Modello report</B> nella scheda <B>Maschere/Report</B> della finestra di dialogo <B>Opzioni</B>. Le maschere e i report creati conseguentemente con i metodi <B>CreateForm</B> o <B>CreateReport</B> si basano su tale modello.</P>
+
+
+
+<P class=T>Se il nome utilizzato per l'argomento <I>modellomaschera</I> o <I>modelloreport</I> non è valido, Visual Basic utilizza il modello di maschera o report specificato dalle impostazioni <B>Modello maschera</B> o <B>Modello report</B> nella scheda <B>Maschere/Report</B> della finestra di dialogo <B>Opzioni</B>.</P>
+
+<P class=T>Quando si crea una maschera o un report con i metodi <B>CreateForm</B> o <B>CreateReport</B>, la proprietà <A HREF="JavaScript:hhobj_5.Click()"><B>HasModule</B></A> della maschera o del report è impostata a <B>False</B> (0). Se si desidera che la nuova maschera o il nuovo report abbiano un modulo di classi, è possibile impostare tale proprietà a <B>True</B> (-1).</P>
+
+<P class=T>I metodi <B>CreateForm</B> e <B>CreateReport</B> creano maschere e report ridotti a icona.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

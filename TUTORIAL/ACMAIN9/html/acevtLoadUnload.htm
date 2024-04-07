@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtLoadUnload'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187428'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Caricamento, Scaricamento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEventProperties">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenForm">
+</OBJECT>
+<OBJECT ID="hhobj_8" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactClose">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acevtloadunload"></A>Eventi Caricamento, Scaricamento</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtLoadUnloadC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtLoadUnloadX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Macro">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtLoadUnloadMO">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Routine evento">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtLoadUnloadEP">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtLoadUnloadA">
+</OBJECT></P>
+
+<P class=SANSR>
+
+<UL>
+	<LI class=LB1>L'evento Caricamento si verifica quando una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> viene aperta e ne vengono visualizzati i relativi record.<BR><BR></LI>
+
+	<LI class=LB1>L'evento Scaricamento si verifica quando si chiude una maschera ma prima di rimuoverla dallo schermo. Quando si carica di nuovo la maschera, Microsoft Access visualizza nuovamente la stessa maschera e reinizializza il contenuto di tutti i relativi <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Per eseguire una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> quando si verificano tali eventi, impostare la proprietà <A HREF="JavaScript:hhobj_6.Click()"><B>Su caricamento</B> o <B>Su scaricamento</B></A> al nome della macro o a [Routine evento].</P>
+
+<P class=T>L'evento Caricamento è provocato dalle azioni degli utenti, come ad esempio:
+
+<UL>
+	<LI class=LB1>L'avvio di un'applicazione.<BR><BR></LI>
+
+	<LI class=LB1>L'apertura di una maschera scegliendo <B>Apri</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A>.<BR><BR></LI>
+
+	<LI class=LB1>L'esecuzione dell'azione <A HREF="JavaScript:hhobj_7.Click()">ApriMaschera</A> in una macro.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>L'evento Scaricamento è provocato dalle azioni degli utenti, come ad esempio:
+
+<UL>
+	<LI class=LB1>La scelta del pulsante <B>Chiudi</B> nella finestra della maschera o la scelta di <B>Chiudi</B> dal menu <B>File</B> o di un <A HREF="javascript:HelpPopup('actip9.hlp','defControlMenu');" class="pop">menu di controllo</A><B> </B>della maschera.<BR><BR></LI>
+
+	<LI class=LB1>L'esecuzione dell'azione <A HREF="JavaScript:hhobj_8.Click()">Chiudi</A> in una macro.<BR><BR></LI>
+
+	<LI class=LB1>La chiusura di un'applicazione facendo clic con il pulsante destro del mouse sul pulsante della relativa barra delle applicazioni, quindi scegliendo <B>Chiudi</B>.<BR><BR></LI>
+
+	<LI class=LB1>La chiusura di Windows con un'applicazione in esecuzione.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Eseguendo una macro o una routine evento quando si verifica l'evento Caricamento di una maschera, è possibile specificare le impostazioni predefinite per i controlli o visualizzare i dati calcolati dipendenti dai dati presenti nei record della maschera.</P>
+
+<P class=T>Eseguendo una macro o una routine evento quando si verifica l'evento Scaricamento di una maschera, è possibile verificare se è opportuno scaricare la maschera o specificare azioni da eseguire quando si scarica la maschera. È inoltre possibile aprire un'altra maschera o visualizzare una finestra di dialogo che richiede il nome dell'utente per registrare un'immissione che indica chi ha utilizzato la maschera.</P>
+
+<P class=T>Quando si apre una maschera per la prima volta, gli eventi riportati di seguito si verificano nell'ordine indicato:</P>
+
+<P class=T>Apertura <font face="Symbol">Þ</FONT>
+Caricamento <font face="Symbol">Þ</FONT>
+Ridimensionamento <font face="Symbol">Þ</FONT>
+Attivazione <font face="Symbol">Þ</FONT>
+Corrente</P>
+
+<P class=T>Se si è in dubbio sull'utilizzo dell'evento Apertura o Caricamento per la macro o la routine evento, una differenza significativa sta nel fatto che è possibile annullare l'evento Apertura, ma non l'evento Caricamento. Se ad esempio si costruisce dinamicamente un'origine record per una maschera in una routine evento per l'evento Apertura della maschera, è possibile annullare l'apertura della maschera se non ci sono record da visualizzare.</P>
+
+<P class=T>Quando si chiude una maschera, gli eventi riportati di seguito si verificano nell'ordine indicato:</P>
+
+<P class=T>Scaricamento <font face="Symbol">Þ</FONT>
+Disattivazione <font face="Symbol">Þ</FONT>
+Chiusura</P>
+
+<P class=T>L'evento Scaricamento si verifica prima dell'evento <A HREF="acevtOpenClose.htm">Chiusura</A>. È possibile annullare l'evento Scaricamento, ma non l'evento Chiusura.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Quando si creano macro o routine evento per eventi correlati all'evento Caricamento, come ad esempio <A HREF="acevtActivateDeactivate.htm">Attivazione</A> e <A HREF="acevtGotLostFocus.htm">Attivato</A>, assicurarsi che non vi siano conflitti, ad esempio che non si provochi nulla che in una macro o routine annulli qualcosa in un'altra macro, e che non si provochino <A HREF="javascript:HelpPopup('actip9.hlp','defCascadingEvent');" class="pop">eventi a catena</A>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

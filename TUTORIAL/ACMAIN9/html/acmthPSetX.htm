@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthPSetX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186541'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo PSet</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthpsetx"></A>Esempio di metodo PSet</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare il metodo <B>PSet</B> per disegnare una linea lungo l'asse orizzontale di un report.</P>
+
+<P class=T>Per provare tale esempio in Microsoft Access, creare un nuovo report. Impostare a [Routine evento] la proprietà <B>SuStampa</B> della sezione Corpo. Immettere il codice riportato di seguito nel modulo di report, passare quindi all'Anteprima di stampa.</P>
+
+<PRE class=CT><CODE>Sub Stampa_Dettagli(Cancel As Integer, PrintCount As Integer)
+&nbsp;&nbsp;&nbsp; Dim sngMidPt As Single, intI As Integer
+&nbsp;&nbsp;&nbsp; ' Imposta la scala in pixel.
+&nbsp;&nbsp;&nbsp; Me.ScaleMode = 3
+&nbsp;&nbsp;&nbsp; ' Calcola il punto centrale.
+&nbsp;&nbsp;&nbsp; sngMidPt = Me.ScaleHeight / 2
+&nbsp;&nbsp;&nbsp; ' Continua a disegnare una linea lungo l'asse orizzontale pixel per pixel.
+&nbsp;&nbsp;&nbsp; For intI = 1 To Me.ScaleWidth
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me.<B>PSet(</B>intI, sngMidPt<B>)</B>
+&nbsp;&nbsp;&nbsp; Next intI
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

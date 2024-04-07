@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDAOFilterX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234425'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Filter (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodaofilterx"></A>Esempio di proprietà Filter (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene chiesto di immettere il nome di un Paese in base al quale applicare il filtro, quindi di impostare la proprietà <B>Filter</B> di un oggetto <B>Recordset</B> di tipo dynaset. Se ad esempio si immette "Italia", il set di record filtrato includerà solo i record nei quali il campo PaeseDestinatario contiene la stringa "Italia".</P>
+
+<P class=T>Si noti che innanzitutto venga creato un oggetto <B>Recordset</B> di tipo dynaset e impostata la relativa proprietà <B>Filter</B>, quindi venga aperto un secondo oggetto <B>Recordset</B> di tipo dynaset in base al primo. Dal momento che l'impostazione della proprietà <B>Filter</B> del primo oggetto <B>Recordset</B> non interessa i record in esso contenuti, viene creato un secondo oggetto <B>Recordset</B> per vedere gli effetti del filtro.</P>
+
+<PRE class=CT><CODE>Sub ImpostaFiltroRecordset()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, strInput As String
+&nbsp;&nbsp;&nbsp; Dim rstOrdini As Recordset, rstFiltrato As Recordset
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Richiede il valore in base al quale applicare il filtro.
+&nbsp;&nbsp;&nbsp; strInput = InputBox("Immettere il nome del Paese "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "in base al quale applicare il filtro.")
+&nbsp;&nbsp;&nbsp; ' Crea un oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rstOrdini = dbs.OpenRecordset("Ordini", dbOpenDynaset)
+&nbsp;&nbsp;&nbsp; ' Imposta le condizioni del filtro.
+&nbsp;&nbsp;&nbsp; rstOrdini.<B>Filter</B> = "PaeseDestinatario = '" &amp; strInput &amp; "'"
+&nbsp;&nbsp;&nbsp; ' Crea oggetto Recordset di tipo dynaset filtrato.
+&nbsp;&nbsp;&nbsp; Set rstFiltrato = rstOrdini.OpenRecordset
+&nbsp;&nbsp;&nbsp; rstOrdini.Close
+&nbsp;&nbsp;&nbsp; rstFiltrato.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; In molti casi è più efficace creare il secondo oggetto <B>Recordset</B> con le condizioni desiderate in un unico passo. Se si conoscono i dati che si desidera selezionare, è in genere più efficace creare un set di record mediante un'istruzione SQL. L'esempio riportato di seguito mostra come è possibile creare un solo set di record e ottenere gli stessi risultati dell'esempio precedente.</P>
+
+<PRE class=NCT><CODE>Sub CreaSetDiRecordMedianteSQL()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim strInput As String
+
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; strInput = InputBox("Immettere il nome del Paese in base al quale applicare il filtro.")
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("SELECT * FROM " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Ordini WHERE PaeseDestinatario = '" &amp; strInput _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "';")
+&nbsp;&nbsp;&nbsp; rst.MoveLast
+&nbsp;&nbsp;&nbsp; MsgBox "Il set di record contiene " &amp; rst.RecordCount &amp; " record."
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

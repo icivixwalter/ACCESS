@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconbidiImportExportLinkRTLTablesTextFormat'
+Feature='International'
+Handoff='3'
+SourceFile='bidi.doc'
+Tnum='257929'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Importare, esportare e collegare le tabelle da destra a sinistra nei formati di testo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconbidiimportexportlinkrtltablestextformat"></A>Import, export, and link right-to-left tables in text formats</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>To <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiEnabledLanguage');" class="pop">enable</A> the <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiRightToLeft');" class="pop">right-to-left</A> features in Microsoft Access 2000, you must be running a 32-bit Microsoft Windows operating system that has right-to-left support&nbsp;— for example, the Arabic version of Microsoft Windows 95. Learn about <A HREF="mk:@MSITStore:ofmain9.chm::/html/ofhowSystemReqsForAsianBidirectionalLanguages.htm">system or special requirements for right-to-left languages</A>.</P>
+
+<P class=T>Microsoft Access 2000 provides code page conversion of tables and worksheets with right-to-left characteristics for text files stored in <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiLogical');" class="pop">logical</A> text layout, with one of the following right-to-left code pages:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=15%>Language</TH>
+<TH width=85%>Code page</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Arabic</TD>
+<TD class=TT width=85%>UTF-8 (default)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>&nbsp;</TD>
+<TD class=TT width=85%>ISO 8859-6</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>&nbsp;</TD>
+<TD class=TT width=85%>DOS-720</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>&nbsp;</TD>
+<TD class=TT width=85%>ASMO-708</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Hebrew</TD>
+<TD class=TT width=85%>UTF-8 (default)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>&nbsp;</TD>
+<TD class=TT width=85%>ISO 8859-8</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>&nbsp;</TD>
+<TD class=TT width=85%>DOS-862</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>To import, export, or link text files that are not recognized by Microsoft Access 2000, use ConvText, a stand-alone text-file conversion utility that provides both logical and <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiVisual');" class="pop">visual</A> text layout options and an expanded list of supported <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiBidirectional');" class="pop">bidirectional</A> code pages.</P>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; A table/worksheet in Lotus, dBASE, Microsoft FoxPro, Paradox, or ODBC database format that requires code page and/or text layout conversion can still be imported into Access 2000 by saving the table/worksheet in text file format prior to importing it. The ability to save a table/worksheet in text file format is a standard feature of most database/spreadsheet products. When Access 2000 imports the text file, all field names and records from the original table/worksheet will be fully recreated in a new Access table.</P>
+
+<H2>What do you want to do?</H2>
+
+<P class=LBR1><A HREF="achowbidiConvTextToAnsi.htm">Convert bidirectional text files to ANSI</A></P>
+
+<P class=LBR1><A HREF="achowbidiConvTextFromAnsi.htm">Convert bidirectional text files from ANSI</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconbidiImportExportLinkRTLTablesTextFormatW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

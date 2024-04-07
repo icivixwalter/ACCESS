@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAccessAutomationController'
+Feature='accon'
+Handoff='2'
+SourceFile='acvbanew1.doc'
+Tnum='187021'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Automazione con Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctCreateObject">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctGetObject">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vakeyNew">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acconaccessautomationcontroller"></A>Automazione con Microsoft Access</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconAccessAutomationControllerC;vaconUnderstandingOleAutomation;vaconWorkingAcrossApps">
+</OBJECT></P>
+
+
+
+<P class=T>Microsoft Access è un <A HREF="javascript:HelpPopup('actip9.hlp','defActiveXComponent');" class="pop">componente COM</A> che supporta l'<A HREF="javascript:HelpPopup('actip9.hlp','defOLEAutomation');" class="pop">automazione</A>, conosciuta in precedenza come automazione OLE. In Microsoft Access l'automazione viene supportata in due modi: è possibile utilizzare oggetti forniti da un altro componente o fornire oggetti ad altri componenti COM.</P>
+
+<P class=T>Nelle versioni precedenti di Microsoft Access era possibile utilizzare la funzione <A HREF="JavaScript:hhobj_2.Click()"><B>CreateObject</B></A> o <A HREF="JavaScript:hhobj_3.Click()"><B>GetObject</B></A> per correlare una variabile a un'istanza di un componente. In Microsoft Access 97 e Access 2000 è anche possibile utilizzare la parola chiave <A HREF="JavaScript:hhobj_4.Click()"><B>New</B></A> per creare una nuova istanza di alcuni componenti. Per informazioni relative alla sintassi supportata, consultare la documentazione del componente.</P>
+
+<P class=T>In Microsoft Access è possibile impostare un riferimento alla <A HREF="javascript:HelpPopup('actip9.hlp','defTypeLibrary');" class="pop">libreria dei tipi</A> di un componente per migliorarne la prestazione quando si utilizza tale componente mediante l'automazione. Microsoft Access comprende inoltre il <A HREF="javascript:HelpPopup('actip9.hlp','defObjectBrowser');" class="pop">Visualizzatore oggetti</A>, uno strumento che consente di visualizzare gli oggetti e i relativi metodi e proprietà nella libreria dei tipi di un altro componente.</P>
+
+<P class=T>Nella libreria dei tipi di Microsoft Access vengono fornite informazioni sugli <A HREF="javascript:HelpPopup('actip9.hlp','defMSAccessObject');" class="pop">oggetti di Microsoft Access</A> ad altri componenti. È possibile <A HREF="acconSettingReferences.htm">impostare un riferimento</A> alla libreria dei tipi di Microsoft Access da un componente e visualizzarne gli oggetti nel Visualizzatore oggetti.</P>
+
+<P class=T>Per utilizzare gli oggetti di Microsoft Access mediante l'automazione, è necessario creare un'istanza dell'oggetto <A HREF="acobjApplication.htm"><B>Application</B></A> di Microsoft Access. Si supponga ad esempio di voler visualizzare dei dati di Microsoft Excel in una maschera o in un report di Microsoft Access. Per lanciare Microsoft Access da Microsoft Excel, è possibile utilizzare la parola chiave <B>New</B> al fine di creare un'istanza dell'oggetto <B>Application</B> di Microsoft Access utilizzare la funzione <B>CreateObject</B> per creare una nuova istanza dell'oggetto <B>Application</B> di Microsoft Access oppure utilizzare la funzione <B>GetObject</B> per indicare una variabile di oggetto a una istanza esistente di Microsoft Access. Per determinare la sintassi supportata, consultare la documentazione del componente.</P>
+
+<P class=T>Una volta avviata un'istanza di Microsoft Access, se si desidera controllarne gli oggetti, è necessario aprire un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database</A> (mdb) o un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto</A> (adp) nella finestra del programma utilizzando il metodo <A HREF="acmthOpenCurrentDatabase.htm"><B>OpenCurrentDatabase</B></A> o <A HREF="acmthNewCurrentDatabase.htm"><B>NewCurrentDatabase</B></A> per un database oppure il metodo <A HREF="acmthOpenAccessProject.htm"><B>OpenAccessProject</B></A> o <A HREF="acmthNewAccessProject.htm"><B>NewAccessProject</B></A> per un progetto.</P>
+
+<P class=T> Se è stato aperto Microsoft Access solo come mezzo per utilizzare gli <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti DAO</A> forniti da Microsoft DAO, non è necessario aprire un database nella finestra del programma. Per accedere agli oggetti della libreria di oggetti Microsoft DAO 3.6 durante l'automazione, è possibile utilizzare la proprietà <A HREF="acproDBEngine.htm"><B>DBEngine</B></A> dell'oggetto <B>Application</B> di Microsoft Access.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

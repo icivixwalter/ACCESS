@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthAppendX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234327'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Append (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthappendx"></A>Esempio di metodo Append (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene definito un nuovo oggetto <B>Field</B> e accodato all'insieme <B>Fields</B> di un oggetto <B>TableDef</B>:</P>
+
+<PRE class=CT><CODE>Sub NuovoCampo()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef, fld As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs!Dipendenti
+&nbsp;&nbsp;&nbsp; ' Crea un nuovo campo nella tabella Dipendenti.
+&nbsp;&nbsp;&nbsp; Set fld = tdf.CreateField("NumPrevidenzaSociale", dbText, 11)
+&nbsp;&nbsp;&nbsp; ' Accoda il campo e aggiorna l'insieme.
+&nbsp;&nbsp;&nbsp; tdf.Fields.<B>Append</B> fld
+&nbsp;&nbsp;&nbsp; tdf.Fields.Refresh
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

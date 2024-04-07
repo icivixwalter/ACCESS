@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjTableDefX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234560'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto TableDef e insieme TableDefs (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjtabledefx"></A>Esempio di oggetto TableDef e insieme TableDefs (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un nuovo oggetto <B>TableDef</B>, viene definito un campo all'interno di tale oggetto e accodato quest'ultimo all'insieme <B>TableDefs</B> del database corrente:</P>
+
+<PRE class=CT><CODE>Sub NuovaTabella()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As <B>TableDef</B>, fld As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea il nuovo oggetto TableDef.
+Set tdf = dbs.CreateTableDef("Contatti")
+&nbsp;&nbsp;&nbsp; ' Crea il nuovo oggetto Field.
+&nbsp;&nbsp;&nbsp; Set fld = tdf.CreateField("NomeContatto", dbText, 30)
+&nbsp;&nbsp;&nbsp; ' Accoda i nuovi oggetti.
+&nbsp;&nbsp;&nbsp; tdf.Fields.Append fld
+&nbsp;&nbsp;&nbsp; dbs.<B>TableDefs</B>.Append tdf
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

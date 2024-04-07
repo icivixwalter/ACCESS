@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutUserlevelSecuritySpecificDatabase'
+Feature='Security: User-level'
+Handoff='3'
+SourceFile='csecbas_mdb.rtf'
+Tnum='258540'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'impostazione della protezione a livello utente per un database di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutuserlevelsecurityspecificdatabase"></A>Informazioni sull'impostazione della protezione a livello utente per un database di Microsoft Access</H1>
+
+<P class=T>Quando gli utenti <A HREF="achowJoinMSAccessWorkgroupS.htm">aderiscono a un gruppo di lavoro di Microsoft Access utilizzando l'Amministratore gruppi di lavoro</A>, la posizione del file di informazioni sul gruppo di lavoro viene indicata nel registro di configurazione di Windows. Ciò significa che in molti casi tutti i database di Access sul computer dell'utente utilizzeranno la protezione a livello utente in base a quel file di informazioni sul gruppo di lavoro.</P>
+
+<P class=T>È però possibile impostare questo tipo di protezione solo su un determinato database, non su tutti. A tal fine, è necessario che gli utenti non aderiscano a un gruppo di lavoro tramite l'Amministratore gruppi di lavoro. Attenersi invece alla seguente procedura:
+
+<OL>
+	<LI class=LPROC><A HREF="achowCreateNewMSAccessWorkgroupS.htm">Creare un file di informazioni sul gruppo di lavoro</A> e memorizzarlo in un percorso accessibile a tutti gli utenti di quel database. <BR><BR></LI>
+
+	<LI class=LPROC>Creare un collegamento per avviare il database <A HREF="acdecDecideStartMSAccessCommandLineOptionsS.htm">utilizzando l'opzione della riga di comando /wrkgrp</A> per specificare la posizione del file di informazioni sul gruppo di lavoro. Ad esempio:
+<P class=LT1><B>"C:\Programmi\Microsoft Office\Office\MSACCESS.EXE \\SalesSystem\DBFiles\SalesS.mdb /wrkgrp \\SalesSystem\DBFiles\SalesS.mdw"</B>
+
+<P class=LT1>Per ulteriori informazioni sulla creazione di collegamenti, vedere la Guida di Windows.
+</LI>
+</OL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutUserlevelSecuritySpecificDatabaseW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

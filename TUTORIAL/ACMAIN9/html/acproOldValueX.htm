@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproOldValueX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproedt2_1a.rtf'
+Tnum='187769'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà OldValue</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprooldvaluex"></A>Esempio di proprietà OldValue</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene verificato se i nuovi dati immessi in un campo sono compresi nel 10 per cento del valore dei dati originali. Se la variazione è superiore al 10 per cento, viene utilizzata la proprietà <B>OldValue</B> per ripristinare il valore originale. Questa routine può essere richiamata dall'evento PrimaDiAggiornare del controllo che contiene i dati che si desidera convalidare.</P>
+
+<PRE class=CT><CODE>Sub Convalida_Field()
+&nbsp;&nbsp;&nbsp; Dim curNuovoValore As Currency
+&nbsp;&nbsp;&nbsp; Dim curValoreOriginale As Currency
+&nbsp;&nbsp;&nbsp; Dim curCambio As Currency, strMsg As String
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; curNuovoValore = Forms!Prodotti!PrezzoUnitario
+&nbsp;&nbsp;&nbsp; curValoreOriginale = Forms!Prodotti!PrezzoUnitario.<B>OldValue</B>
+&nbsp;&nbsp;&nbsp; curCambio = Abs(curNuovoValore - curValoreOriginale)
+&nbsp;&nbsp;&nbsp; If curCambio &gt; (curValoreOriginale *.1) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = "La modifica supera il 10% del valore originale. " _ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Ripristino del prezzo unitario originale."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox strMsg, vbExclamation, "Modifica non valida"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forms!Prodotti!PrezzoUnitario = curValoreOriginale
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthEditX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234413'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Edit (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmtheditx"></A>Esempio di metodo Edit (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene aperto un oggetto <B>Recordset</B> e viene individuato ogni record che soddisfa i criteri di ricerca per il campo Posizione. La routine utilizza quindi il metodo <B>Edit</B> per preparare il record a successive modifiche, modifica la posizione professionale e salva la modifica.</P>
+
+<PRE class=CT><CODE>Sub ModificaPosizioneProf()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim strCriteria As String, strNewTitle As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Imposta i criteri di ricerca.
+&nbsp;&nbsp;&nbsp; strCriteria = "Posizione professionale = 'Rappresentante di vendita"
+&nbsp;&nbsp;&nbsp; strNewTitle = "Direttore di vendita"
+&nbsp;&nbsp;&nbsp; ' Crea oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("Dipendenti", dbOpenDynaset)
+&nbsp;&nbsp;&nbsp; ' Trova la prima ricorrenza.
+&nbsp;&nbsp;&nbsp; rst.FindFirst strCriteria
+&nbsp;&nbsp;&nbsp; ' Continua finché non vi sono più record corrispondenti.
+&nbsp;&nbsp;&nbsp; Do Until rst.NoMatch
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With rst
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<B>Edit</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Abilita la modifica.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !Titolo = strNewTitle&nbsp;&nbsp;&nbsp; ' Modifica la posizione professionale.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Update&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Salva le modifiche.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .FindNext strCriteria&nbsp;&nbsp;&nbsp; ' Trova ricorrenza successiva.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; Loop
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Per modificare i dati in modo più efficace, utilizzare una query di aggiornamento. Per ottenere gli stessi risultati, è possibile, ad esempio, utilizzare il codice riportato di seguito:</P>
+
+<PRE class=NCT><CODE>Sub ModificaPosizioneSQL()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database
+&nbsp;&nbsp;&nbsp; Dim strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea stringa SQL.
+&nbsp;&nbsp;&nbsp; strSQL = "UPDATE Dipendenti SET Posizione = 'Direttore' " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "WHERE Posizione = 'Rappresentante' "
+&nbsp;&nbsp;&nbsp; ' Esegue la query di comando.
+&nbsp;&nbsp;&nbsp; dbs.Execute strSQL
+&nbsp;&nbsp;&nbsp; ' Restituisce il numero di record aggiornati.
+&nbsp;&nbsp;&nbsp; Debug.Print dbs.RecordsAffected
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

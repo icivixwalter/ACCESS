@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowConvertWorkgroupFileS'
+Feature='Security: Conversion'
+Handoff='3'
+SourceFile='csecnew.rtf'
+Tnum='188780'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convertire un file di informazioni sul gruppo di lavoro da una versione precedente di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowconvertworkgroupfiles"></A>Convertire un file di informazioni sul gruppo di lavoro da una versione precedente di Microsoft Access</H1>
+
+<P class=T>Per trarre il massimo vantaggio dalla protezione e dai miglioramenti delle prestazioni, è necessario creare di nuovo il <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> nel modo riportato di seguito.
+
+<OL>
+	<LI class=LPROC>Creare un nuovo file di informazioni sul gruppo di lavoro assicurandosi che vengano inserite le stesse voci relative al nome, al nome della società e all'<A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupID');" class="pop">ID gruppo di lavoro</A>, con distinzione tra maiuscole e minuscole, che sono state utilizzate per creare il file originale. Se le voci inserite non sono esattamente quelle utilizzate per il file originale, verrà creato un <A HREF="javascript:HelpPopup('actip9.hlp','defAdminsGroup');" class="pop">gruppo Amministratori</A> non valido.
+<P class=LBR2><A HREF="achowCreateNewMSAccessWorkgroupS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Ricreare gli account gruppo, assicurandosi che per ciascun gruppo vengano inserite le stesse voci relative al nome del gruppo e all'<A HREF="javascript:HelpPopup('actip9.hlp','defPin');" class="pop">ID personale (PID</A>) con distinzione tra maiuscole e minuscole.
+<P class=LBR2><A HREF="achowCreateSecurityGroupAccountS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Ricreare ciascun account utente, assicurandosi che per ciascun utente vengano inserite le voci relative al nome dell'utente e al PID con distinzione tra maiuscole e minuscole.
+<P class=LBR2><A HREF="achowCreateSecurityUserAccountS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Informare gli altri utenti del gruppo di lavoro che usano Microsoft Access 2000 che è necessario utilizzare l'Amministratore gruppi di lavoro per associare il nuovo file di informazioni sul gruppo di lavoro.</LI>
+</OL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowConvertWorkgroupFileSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

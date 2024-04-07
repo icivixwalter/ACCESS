@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSetArgumentsVBS'
+Feature='Modules: Basics'
+Handoff='3'
+SourceFile='cmodbas.rtf'
+Tnum='186895'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Specificare argomenti quando viene utilizzata una routine, un'istruzione o un metodo nel codice Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaconUnderstandingNamedOptionalArgs">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowsetargumentsvbs"></A>Specificare argomenti quando viene utilizzata una routine, un'istruzione o un metodo nel codice Visual Basic</H1>
+
+<UL>
+	<LI class=LPROCS>Specificare gli <A HREF="javascript:HelpPopup('actip9.hlp','defArgument');" class="pop">argomenti</A> subito dopo il nome della <A HREF="javascript:HelpPopup('actip9.hlp','defProcedure');" class="pop">routine</A>, dell'<A HREF="javascript:HelpPopup('actip9.hlp','defStatement');" class="pop">istruzione</A> o del <A HREF="javascript:HelpPopup('actip9.hlp','defMethod');" class="pop">metodo</A>. Per una routine <B>Function</B> o un metodo che restituisce un valore, racchiudere gli argomenti tra parentesi tonde. Se vengono specificati più argomenti, separarli con la virgola.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Il seguente metodo <B>Close</B> dell'oggetto <B>DoCmd</B> ad esempio chiude la maschera Aggiungi prodotti. Accetta due argomenti: <CODE>acForm</CODE> e <CODE>"Aggiungi prodotti"</CODE>:</P>
+
+<PRE class=CT><CODE>DoCmd.Close acForm, "Aggiungi prodotti"
+</CODE></PRE>
+
+<P class=T>Dato che il metodo <B>Close</B> non restituisce un valore, gli argomenti non sono racchiusi tra parentesi tonde.</P>
+
+<P class=TPT><B>Suggerimento</B> Per incollare nel codice <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasic');" class="pop">Visual Basic</A> la sintassi di metodo o proprietà, compresi gli argomenti, è possibile utilizzare il <A HREF="javascript:HelpPopup('actip9.hlp','defObjectBrowser');" class="pop">Visualizzatore oggetti</A>, che incolla argomenti indicati che possono essere specificati in qualsiasi ordine. È possibile utilizzare gli argomenti indicati oppure sostituirli con argomenti standard. Per ulteriori informazioni sull'utilizzo del Visualizzatore oggetti, fare clic su <A HREF="achowUserObjectBrowserS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>. Per ulteriori informazioni sull'utilizzo degli argomenti indicati, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowSetArgumentsVBSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

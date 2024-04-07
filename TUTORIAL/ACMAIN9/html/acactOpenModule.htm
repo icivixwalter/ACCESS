@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactOpenModule'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187799'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione ApriModulo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactOpenModule">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactopenmodule"></A>Azione ApriModulo</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenModuleC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenModuleX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione ApriModulo per aprire un determinato <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">modulo</A> di Visual Basic alla <A HREF="javascript:HelpPopup('actip9.hlp','defProcedure');" class="pop">routine</A> specificata, che può essere una <A HREF="javascript:HelpPopup('actip9.hlp','defSubProcedure');" class="pop">routine <B>Sub</B></A>, una <A HREF="javascript:HelpPopup('actip9.hlp','defFunctionProcedure');" class="pop">routine <B>Function</B></A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione ApriModulo utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome modulo</TD>
+<TD class=TT width=75%>Il nome del modulo che si desidera aprire. È possibile lasciare vuoto questo argomento se si desidera ricercare la routine in tutti i <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">moduli standard</A> del database e aprire il modulo appropriato in corrispondenza di tale routine.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si esegue una macro contenente l'azione ApriModulo in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, il modulo con questo nome viene ricercato prima nel database di libreria, quindi nel database corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome routine</TD>
+<TD class=TT width=75%>Il nome della routine in corrispondenza della quale si desidera aprire il modulo. Se si lascia vuoto questo argomento, il modulo si apre alla <A HREF="javascript:HelpPopup('actip9.hlp','defDeclarationsSection');" class="pop">sezione Dichiarazioni</A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È necessario immettere un nome valido nell'argomento Nome modulo o Nome routine.</P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare questa azione per aprire una routine evento specificando l'argomento Nome modulo e l'argomento Nome routine. Per aprire ad esempio la routine evento Clic del pulsante Stampa fattura della maschera Ordini, impostare l'argomento Nome modulo a Form.Ordini e l'argomento Nome routine a StampaFattura_Click. Per visualizzare la routine evento relativa a una maschera o a un report, è necessario che la maschera o il report sia aperto.</P>
+
+<P class=T>Analogamente, per aprire una routine in un <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">modulo di classe</A>, è necessario specificare il nome del modulo anche se il modulo di classe non deve necessariamente essere aperto.</P>
+
+<P class=T>Per aprire una <A HREF="javascript:HelpPopup('actip9.hlp','defPrivateProcedure');" class="pop">routine privata</A>, è necessario che il modulo che la contiene sia aperto.</P>
+
+<P class=T>Questa azione equivale a selezionare il modulo nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> e a fare clic sul pulsante <B>Struttura</B>. Consente inoltre di specificare un nome di routine e di ricercare le routine nei moduli standard di un database.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile selezionare un modulo nella finestra del database e trascinarlo sulla <A HREF="javascript:HelpPopup('actip9.hlp','defActionRow');" class="pop">riga di azione</A> di una macro. In questo modo si crea automaticamente un'azione ApriModulo che apre il modulo alla sezione Dichiarazioni.</P>
+
+
+
+<P class=T>Per eseguire l'azione ApriModulo in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>OpenModule</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

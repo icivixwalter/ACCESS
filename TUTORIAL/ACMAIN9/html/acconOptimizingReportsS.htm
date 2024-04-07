@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOptimizingReportsS'
+Feature='Reports: Advanced'
+Handoff='1'
+SourceFile='CRPTADV2.RTF'
+Tnum='188606'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Suggerimenti per ottimizzare le prestazioni di report e di sottoreport</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconoptimizingreportss"></A>Suggerimenti per ottimizzare le prestazioni di report e di sottoreport</H1>
+
+<P class=T>È possibile effettuare diverse operazioni per velocizzare la stampa dei report. Oltre ai suggerimenti elencati di seguito, è possibile utilizzare l'Analizzatore prestazioni per analizzare report specifici nel database. Per informazioni sull'utilizzo dell'Analizzatore prestazioni, fare clic su <A HREF="achowAnalyzerTopicsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<H2>Suggerimenti</H2>
+
+<UL>
+	<LI class=LB1>Evitare di sovrapporre i controlli.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare bitmap e altri oggetti grafici solo se necessario.<BR><BR></LI>
+
+	<LI class=LB1>Convertire cornici di oggetto non associato che visualizzano grafica in controlli Immagine.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare bitmap in bianco e nero piuttosto che a colori.<BR><BR></LI>
+
+	<LI class=LB1>Evitare l'ordinamento e il raggruppamento sulle espressioni.<BR><BR></LI>
+
+	<LI class=LB1>Indicizzare i campi sui quali si effettua l'ordinamento o il raggruppamento.<BR><BR></LI>
+
+	<LI class=LB1>Basare i sottoreport sulle query piuttosto che sulle tabelle e includere dall'origine record soltanto i campi assolutamente necessari. I campi aggiuntivi possono ridurre le prestazioni di sottoreport.<BR><BR></LI>
+
+	<LI class=LB1>Indicizzare tutti i campi nel sottoreport che sono collegati al report principale.<BR><BR></LI>
+
+	<LI class=LB1>Indicizzare qualsiasi campo del sottoreport utilizzato come criterio. <BR><BR></LI>
+
+	<LI class=LB1>Evitare di utilizzare funzioni di aggregazione sui domini. Includere il campo nella query sottostante il report oppure utilizzare un sottoreport. <BR><BR></LI>
+
+	<LI class=LB1>Accertarsi che la query sottostante il report sia ottimizzata. <BR><BR></LI>
+
+	<LI class=LB1>Utilizzare la proprietà <B>HasData</B> o l'evento ReportVuoto per determinare se un report è associato a un oggetto recordset vuoto.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOptimizingReportsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

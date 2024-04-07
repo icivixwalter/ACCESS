@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactSetMenuItem'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthact_1b.rtf'
+Tnum='186514'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo SetMenuItem</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactSetMenuItem">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="ofobjCommandBars">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthactsetmenuitem"></A>Metodo SetMenuItem</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactSetMenuItemC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactSetMenuItemX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactSetMenuItemA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>SetMenuItem</B> esegue l'azione <A HREF="JavaScript:hhobj_4.Click()">ImpostaVoceMenu</A> in Visual Basic. Per ulteriori informazioni sul funzionamento dell'azione e dei relativi argomenti, vedere l'argomento della Guida in linea relativo all'azione.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Il metodo <B>SetMenuItem</B> opera solo con le <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBar');" class="pop">barre dei menu</A> e le <A HREF="javascript:HelpPopup('actip9.hlp','defGlobalMenuBar');" class="pop">barre dei menu globali</A> create utilizzando <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBarScript');" class="pop">macro per la creazione di barre dei menu</A>. Il metodo <B>SetMenuItem</B> è incluso in questa versione di Microsoft Access per ragioni di compatibilità con le versioni precedenti a Microsoft Access 97 e non opera con le nuove <A HREF="javascript:HelpPopup('actip9.hlp','defCommandBar');" class="pop">barre dei comandi</A>. In Microsoft Access 2000 è necessario utilizzare le proprietà e i metodi dell'oggetto dell'insieme <A HREF="JavaScript:hhobj_5.Click()"><B>CommandBars</B></A> per attivare e disattivare le voci di menu principali.</P>
+
+
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DoCmd.SetMenuItem</B> <I>indicemenu</I>[, <I>indicecomando</I>][, <I>indicesottocomando</I>][, <I>flag</I>]</P>
+
+
+
+<P class=T>Il metodo <B>SetMenuItem</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>indicemenu</I></TD>
+<TD class=TT width=75%>Numero intero assegnato a partire da zero alla prima voce. Questo numero intero è l'indice valido di un menu sulla barra di menu personalizzata o sulla barra di menu globale per la finestra attiva, definita nella macro per la creazione di barre dei menu per la barra di menu personalizzata o per la barra di menu globale.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si seleziona un menu con questo argomento e si omettono gli argomenti <I>indicecomando</I> e <I>indicesottocomando</I>  o se si impostano a -1, è possibile attivare o disattivare il nome del menu stesso. Non è tuttavia possibile selezionare o deselezionare un nome di menu: Microsoft Access ignora le impostazioni <B>acMenuCheck</B> e <B>acMenuUncheck</B> dell'argomento <I>flag</I> per i nomi dei menu.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>indicecomando</I></TD>
+<TD class=TT width=75%>Numero intero assegnato a partire da zero alla prima voce. Questo numero intero è l'indice valido di un comando del menu selezionato tramite l'argomento <I>indicecomando</I> definito nel <A HREF="javascript:HelpPopup('actip9.hlp','defMacroGroup');" class="pop">gruppo di macro</A> che definisce il menu selezionato per la barra di menu personalizzata o per la barra di menu globale per la finestra attiva.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>indicesottocomando</I></TD>
+<TD class=TT width=75%>Numero intero, assegnato a partire da zero, che rappresenta  l'indice valido di un sottocomando del sottomenu selezionato tramite l'argomento <I>indicecomando</I>, definito nel gruppo di macro relative al sottomenu selezionato per la barra di menu personalizzata o per la barra di menu globale della finestra attiva.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>flag</I></TD>
+<TD class=TT width=75%>Una delle seguenti <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%><B>acMenuCheck</B><BR>
+<B>acMenuGray</B><BR>
+<B>acMenuUncheck</B><BR>
+<B>acMenuUngray</B> (impostazione predefinita)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp; </TD>
+<TD class=TT width=75%>Se si omette questo argomento, viene utilizzata la costante predefinita (<B>acMenuUngray)</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile omettere un argomento facoltativo all'interno della sintassi, ma è necessario includere la virgola dell'argomento stesso. Se si omette un argomento finale, non utilizzare la virgola dopo l'ultimo argomento specificato.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

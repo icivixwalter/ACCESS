@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproLoginTimeoutX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234472'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà LoginTimeout (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprologintimeoutx"></A>Esempio di proprietà LoginTimeout (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si imposta la proprietà <B>LoginTimeout</B> a 120 secondi, quindi si crea una query e la si esegue in un database su un server ODBC.</P>
+
+<PRE class=CT><CODE>Sub Connessione()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database
+&nbsp;&nbsp;&nbsp; Dim qdf As QueryDef, rst As Recordset
+
+&nbsp;&nbsp;&nbsp; ' Imposta il timeout a 120 secondi.
+&nbsp;&nbsp;&nbsp; DBEngine.<B>LoginTimeout</B> = 120
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea nuovo oggetto QueryDef.
+&nbsp;&nbsp;&nbsp; Set qdf = dbs.CreateQueryDef("Tutti gli impiegati", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "SELECT * FROM Impiegati;")
+&nbsp;&nbsp;&nbsp; qdf.Connect = "ODBC;DSN=Risorse umane; " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Database=HRSRVR; UID=Rossi; PWD=Sesamo"
+&nbsp;&nbsp;&nbsp; ' Si connette al server ed esegue la query.
+&nbsp;&nbsp;&nbsp; Set rst = qdf.OpenRecordset()
+&nbsp;&nbsp;&nbsp; ' Esegue le operazioni relative al set di record.
+&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

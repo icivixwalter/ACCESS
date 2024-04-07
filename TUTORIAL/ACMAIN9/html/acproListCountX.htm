@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproListCountX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprocmb2_1a.rtf'
+Tnum='187420'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ListCount e ListRows</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprolistcountx"></A>Esempio di proprietà ListCount e ListRows</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare la proprietà <B>ListCount</B> per trovare il numero di righe presenti nella parte casella di riepilogo della casella combinata ElencoClienti di una maschera Clienti. Viene quindi impostata la proprietà <B>ListRows</B> per visualizzare un determinato numero di righe nell'elenco.</P>
+
+<PRE class=CT><CODE>Sub DimensioniElencoClienti()
+&nbsp;&nbsp;&nbsp; Dim ControlloElenco As Control
+
+&nbsp;&nbsp;&nbsp; Set ControlloElenco = Forms!Clienti!ElencoClienti
+&nbsp;&nbsp;&nbsp; With ControlloElenco
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If.<B>ListCount</B> &lt; 8 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<B>ListRows</B> =.<B>ListCount</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<B>ListRows</B> = 8
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End With
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

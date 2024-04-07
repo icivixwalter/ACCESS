@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthFindADOX'
+Feature='acmth'
+Handoff='2'
+SourceFile='ACAMETHX9.doc'
+Tnum='261124'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Find</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthfindadox"></A>Esempio di metodo Find</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un oggetto <B>Recordset</B> di tipo dynaset, quindi viene utilizzato il metodo <B>Find</B> per individuare il primo record che soddisfa i criteri specificati. La routine ricerca quindi i record restanti che soddisfano tali criteri.</P>
+
+<PRE class=CT><CODE>Sub TrovaRecord()
+    Dim rst As New ADODB.Recordset
+    Dim strCriteria As String
+    
+    ' Definisce i criteri di ricerca.
+    strCriteria = "[PaeseDestinatario] = 'IT'"
+    ' Crea un oggetto Recordset di tipo dynaset basato su una tabella Ordini.
+    rst.Open "Ordini", CurrenProject.Connection, adOpenKeyset, adLockOptimistic)
+    ' Rileva il primo record corrispondente.
+    rst.<B>Find</B> strCriteria
+    ' Verifica se è stato trovato il record.
+    If rst.EOF Then
+        MsgBox "Nessun record trovato."
+    Else
+        ' Rileva altri record corrispondenti.
+        Do Until rst.EOF
+            Debug.Print rst!PaeseDestinatario; "&nbsp;&nbsp; "; rst!OrderDate
+            rst.<B>Find</B> strCriteria
+        Loop
+    End If
+    rst.Close
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

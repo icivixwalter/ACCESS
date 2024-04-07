@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='KorOffAutoIME'
+Feature='International'
+Handoff='3'
+SourceFile='fekorea.doc'
+Tnum='250823'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni su Correct Keyboard Setting</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="koroffautoime"></A>About Correct Keyboard Setting</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>Correct Keyboard Setting is a feature that automatically corrects words entered in English mode that were meant to be entered in hangul mode, and vice versa. For example, if you enter <B>eogksalsrnr</B> in English mode, it will be changed to <IMG SRC="images/fek012.bmp" ALT="tae" BORDER=0><IMG SRC="images/fek013.bmp" ALT="han" BORDER=0><IMG SRC="images/fek014.bmp" ALT="min" BORDER=0><IMG SRC="images/fek015.bmp" ALT="kuk" BORDER=0>; and if you enter <IMG SRC="images/fek016.bmp" ALT="yo" BORDER=0><IMG SRC="images/fek017.bmp" ALT="u" BORDER=0><IMG SRC="images/fek018.bmp" ALT="ya" BORDER=0><IMG SRC="images/fek019.bmp" ALT="p" BORDER=0><IMG SRC="images/fek020.bmp" ALT="d" BORDER=0><IMG SRC="images/fek021.bmp" ALT="gya" BORDER=0><IMG SRC="images/fek022.bmp" ALT="nya" BORDER=0><IMG SRC="images/fek023.bmp" ALT="syo" BORDER=0> in hangul mode, it will be changed to <B>university</B>. Also, <A HREF="javascript:HelpPopup('oftip9.hlp','ofdefInputMethodEditor');" class="pop">IME</A> mode is changed automatically.</P>
+
+<P class=T>Correct Keyboard Setting also automatically corrects English words that have a hangul ending entered in English mode, and vice versa. For example, if you enter <B>optiondmf</B> in English mode, it is automatically changed to <B>option</B><IMG SRC="images/fek024.bmp" ALT="ul" BORDER=0>.</P>
+
+<P class=T>Correct Keyboard Setting works even when hangul and English are mixed. For example, if you enter <B>rntjddnjs</B><IMG SRC="images/fek025.bmp" ALT="ppyo" BORDER=0><IMG SRC="images/fek026.bmp" ALT="mi" BORDER=0><IMG SRC="images/fek018.bmp" ALT="ya" BORDER=0><IMG SRC="images/fek023.bmp" ALT="syo" BORDER=0>, it is automatically changed to <IMG SRC="images/fek027.bmp" ALT="ku" BORDER=0><IMG SRC="images/fek028.bmp" ALT="song" BORDER=0><IMG SRC="images/fek029.bmp" ALT="won" BORDER=0><B>quality</B>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDStDev'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187193'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzioni DStDev, DStDevP</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daidxAggregateFunctions">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlStDevP">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaidxConversion">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthUpdate">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acfctdstdev"></A>Funzioni DStDev, DStDevP</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDStDevC;dasqlDStDevP">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDStDevX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare le funzioni <B>DStDev</B> e <B>DStDevP</B> per stimare la deviazione standard relativa a un set di valori di un determinato set di record, un <A HREF="javascript:HelpPopup('actip9.hlp','defDomain');" class="pop">dominio</A>. Utilizzare le funzioni <B>DStDev</B> e <B>DStDevP</B> in Visual Basic, in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>, in un'espressione nella query o in un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> di una maschera o di un report.</P>
+
+<P class=T>Utilizzare la funzione <B>DStDevP</B> per valutare una popolazione intera e la funzione <B>DStDev</B> per valutare un campione di popolazione.</P>
+
+<P class=T>È possibile ad esempio utilizzare la funzione <B>DStDev</B> in un modulo per calcolare la deviazione standard relativa a un set di votazioni riportate da studenti nei compiti in classe.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DStDev(</B><I>espr</I>, <I>dominio</I>[, <I>criteri</I>]<B>)</B></P>
+
+<P class=SYN><B>DStDevP(</B><I>espr</I>, <I>dominio</I>[, <I>criteri</I>]<B>)</B></P>
+
+
+
+<P class=T>Le funzioni <B>DStDev</B> e <B>DStDevP</B> dispongono degli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>espr</I></TD>
+<TD class=TT width=75%>Un'espressione che identifica il campo numerico in cui si desidera trovare la deviazione standard. È possibile che si tratti di un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che identifica un campo in una tabella o in una query oppure un'espressione che esegue <A HREF="achowFieldCalcDomain.htm">un calcolo dei campi</A>. In <I>espr</I> è possibile includere il nome di un campo in una tabella, un controllo in una maschera, una costante o una funzione. Se <I>espr</I> include una funzione, è possibile che sia incorporata o definita dall'utente, ma non è possibile che si tratti di un'altra funzione di aggregazione sui domini o di <A HREF="JavaScript:hhobj_3.Click()">aggregazione SQL</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>dominio</I></TD>
+<TD class=TT width=75%>Un'espressione stringa che identifica il set di record che costituisce il dominio. È possibile che sia un nome di tabella o di query.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>criteri</I></TD>
+<TD class=TT width=75%>Una stringa opzionale utilizzata per limitare l'intervallo di dati sui cui viene eseguita la funzione <B>DStDev</B> o <B>DStDevP</B>. L'argomento <I>criteri</I> ad esempio equivale spesso alla proposizione WHERE priva della parola WHERE in un'espressione SQL. Se si omette l'argomento <I>criteri</I>, le funzioni <B>DStDev</B> e <B>DStDevP</B> valutano <I>espr</I> confrontandolo con l'intero dominio. È necessario che qualsiasi campo incluso in <I>criteri</I> appartenga anche all'argomento <I>dominio</I>. In caso contrario, le funzioni <B>DStDev</B> e <B>DStDevP</B> restituiscono il valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Se <I>dominio</I> fa riferimento a meno di due record o se meno di due record soddisfano <I>criteri</I>, le funzioni <B>DStDev</B> e <B>DStDevP</B> restituiranno un valore <B>Null</B>, indicando che non è possibile calcolare una deviazione standard.</P>
+
+<P class=T>Sia che la funzione <B>DStDev</B> o <B>DStDevP</B> venga utilizzata in una macro, in un modulo, in un'espressione nella query o in un controllo calcolato, è necessario creare l'argomento <I>criteri</I> con attenzione per assicurarsi che venga valutato correttamente.</P>
+
+<P class=T>È possibile utilizzare le funzioni <B>DStDev</B> e <B>DStDevP</B> per specificare i criteri nella riga Criteri di una query di selezione. È possibile ad esempio creare una query in una tabella Ordini e in una tabella Prodotti per visualizzare tutti i prodotti per cui le spese di trasporto si collocano attorno alla media aggiungendo la deviazione standard relativa alle spese di trasporto. La riga Criteri sottostante al campo Spese trasporto contiene la seguente espressione:</P>
+
+<PRE class=CT><CODE>&gt;(DStDev("[SpeseTrasporto]", "Ordini") + DAvg_("[SpeseTrasporto]", "Ordini"))</CODE></PRE>
+
+
+
+<P class=T>È possibile utilizzare le funzioni <B>DStDev</B> e <B>DStDevP</B> all'interno di un'espressione di campo calcolato in una query o nella riga <B>Aggiorna a</B> di una <A HREF="javascript:HelpPopup('actip9.hlp','defUpdateQuery');" class="pop">query di aggiornamento</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile utilizzare le funzioni <B>DStDev</B> e <B>DStDevP</B> o le funzioni <A HREF="JavaScript:hhobj_4.Click()"><B>StDev</B> e <B>StDevP</B></A> in un'espressione di campo calcolato di una <A HREF="javascript:HelpPopup('actip9.hlp','defTotalsQuery');" class="pop">query di totalizzazione</A>. Se si utilizza la funzione <B>DStDev</B> o <B>DStDevP</B>, i valori vengono calcolati prima del raggruppamento dei dati. Se si utilizza la funzione <B>DevSt</B> o <B>StDevP</B>, i dati vengono raggruppati prima che vengano valutati i valori contenuti nell'espressione di campo.</P>
+
+
+
+<P class=T>Utilizzare le funzioni <B>DStDev</B> e <B>DStDevP</B> in un controllo calcolato quando si rende necessario specificare <I>criteri</I> per limitare l'intervallo di dati su cui viene eseguita la funzione. Per visualizzare ad esempio la deviazione standard relativa agli ordini da inoltrare in California, impostare la proprietà <A HREF="acproControlSource.htm"><B>Origine controllo</B></A> di una casella di testo alla seguente espressione:</P>
+
+<PRE class=CT><CODE>=DStDev("[SpeseTrasporto]", "Ordini", "[ZonaDestinatario] = 'CA'")</CODE></PRE>
+
+
+
+<P class=T>Se si desidera semplicemente trovare la deviazione standard in tutti i record contenuti in <I>dominio</I>, utilizzare la funzione <B>DevSt</B> o <B>StDevP</B>.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Se il tipo di dati del campo da cui deriva <I>espr</I> è un numero, le funzioni <B>DStDev</B> e <B>DStDevP</B> restituiranno un tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defDoubleDataType');" class="pop"><B>Precisione doppia</B></A>. Se si utilizza la funzione <B>DStDev</B> o <B>DStDevP</B> in un controllo calcolato, includere una <A HREF="JavaScript:hhobj_5.Click()">funzione di conversione tra tipi di dati</A> nell'espressione per migliorare le prestazioni.</P>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Le modifiche ai record che non vengono salvate in <I>dominio</I> non vengono incluse quando si utilizzano queste funzioni. Se si desidera che la funzione <B>DStDev</B> o <B>DStDevP</B> sia basata sui valori modificati, è necessario prima salvare le modifiche scegliendo il comando <B>Salva record</B> dal menu <B>File</B>, spostando lo stato attivo su un altro record oppure utilizzando il metodo <A HREF="JavaScript:hhobj_6.Click()"><B>Update</B></A>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

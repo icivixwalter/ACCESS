@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactSendObjectX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthact_1b.rtf'
+Tnum='186592'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo SendObject</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthactsendobjectx"></A>Esempio di metodo SendObject</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come includere la tabella Impiegati in un messaggio postale in formato di Microsoft Excel, specificando le righe 'A', 'Cc' e 'Oggetto'. Il messaggio postale viene inviato subito, senza modifiche.</P>
+
+<PRE class=CT><CODE>DoCmd.<B>SendObject</B> acSendTable, "Impiegati", acFormatXLS, _
+&nbsp;&nbsp;&nbsp; "Nancy Davolio; Andrew Fuller", "Joan Weber", , _
+&nbsp;&nbsp;&nbsp; "Foglio di lavoro corrente degli impiegati", , False</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

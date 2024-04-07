@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPermissionsX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234508'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Permissions e UserName (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpropermissionsx"></A>Esempio di proprietà Permissions e UserName (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si aggiunge un nuovo account utente creando un oggetto <B>User</B> e accodandolo all'insieme <B>Users</B> dell'area di lavoro predefinita. Si impostano quindi le autorizzazioni del nuovo utente per tutte le tabelle del database. La routine imposta la proprietà <B>UserName</B> di un oggetto <B>Container</B> di tipo Tables in base al nome del nuovo utente e, in un secondo momento, imposta le autorizzazioni apppropriate per la proprietà <B>Permissions</B>.</P>
+
+<P class=T>Si noti che l'operatore <B>And</B> esegue un confronto su singoli bit per determinare se un attributo è correntemente impostato.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Nella programmazione della protezione, evitare di includere nel codice la password effettiva e le informazioni relative al PID. L'esempio che segue viene riportato solo a scopo dimostrativo.</P>
+
+
+
+<PRE class=CT><CODE>Function ImpostaAutorizzazioni(strNome As String, strPID As String, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strPassword As String) As Boolean
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, ctrTabelle As Container
+&nbsp;&nbsp;&nbsp; Dim wspPredefinita As Workspace, usrNuovo As User
+
+&nbsp;&nbsp;&nbsp; On Error GoTo ErroreImpostaAutorizzazioni
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento all'area di lavoro predefinita.
+&nbsp;&nbsp;&nbsp; Set wspPredefinita = DBEngine.Workspaces(0)
+&nbsp;&nbsp;&nbsp; ' Crea un oggetto User, specificando il nome, il valore PID e la password.
+&nbsp;&nbsp;&nbsp; Set usrNuovo = wspPredefinita.CreateUser(strNome, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strPID, strPassword)
+&nbsp;&nbsp;&nbsp; ' Accoda insieme Users all'area di lavoro predefinita.
+&nbsp;&nbsp;&nbsp; wspPredefinita.Users.Append usrNuovo
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al contenitore Tables.
+&nbsp;&nbsp;&nbsp; Set ctrTabelle = dbs.Containers!Tables
+&nbsp;&nbsp;&nbsp; ctrTabelle.<B>UserName</B> = usrNuovo.Name
+&nbsp;&nbsp;&nbsp; ' Imposta le autorizzazioni del nuovo utente per le tabelle.
+&nbsp;&nbsp;&nbsp; ctrTabelle.<B>Permissions</B> = dbSecInsertData _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And dbSecReplaceData And dbSecDeleteData
+&nbsp;&nbsp;&nbsp; ImpostaAutorizzazioni = True
+
+EsciImpostaAutorizzazioni
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+&nbsp;&nbsp;&nbsp; Exit Function
+
+ErroreImpostaAutorizzazioni
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; ImpostaAutorizzazioni = False
+&nbsp;&nbsp;&nbsp; Resume EsciImpostaAutorizzazioni
+End Function</CODE></PRE>
+
+
+
+<P class=T>La routine che segue richiede l'immissione del nome e della password dell'utente e crea un valore PID:</P>
+
+<PRE class=CT><CODE>Sub PromptNuovoUtente()
+&nbsp;&nbsp;&nbsp; Dim strNome As String, strPassword As String
+&nbsp;&nbsp;&nbsp; Dim intR As Integer, strPID As String
+&nbsp;&nbsp;&nbsp; Dim blnRestituito As Boolean
+
+&nbsp;&nbsp;&nbsp; ' Richiede il nome e la password dell'utente.
+&nbsp;&nbsp;&nbsp; strNome = InputBox("Immettere il nome.")
+&nbsp;&nbsp;&nbsp; strPassword = InputBox("Immettere la password " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "con un massimo di 14 caratteri.")
+&nbsp;&nbsp;&nbsp; ' Avvia il generatore di numeri casuali.
+&nbsp;&nbsp;&nbsp; Randomize
+&nbsp;&nbsp;&nbsp; ' Genera stringa PID.
+&nbsp;&nbsp;&nbsp; For intR = 0 To 19
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strPID = strPID &amp; Chr$(Int(256 * Rnd))
+&nbsp;&nbsp;&nbsp; Next intR
+&nbsp;&nbsp;&nbsp; ' Richiama la funzione ImpostaAutorizzazioni.
+&nbsp;&nbsp;&nbsp; blnRestituito = ImpostaAutorizzazioni(strNome, strPID, strPassword)
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

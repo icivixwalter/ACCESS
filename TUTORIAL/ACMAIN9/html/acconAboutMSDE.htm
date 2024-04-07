@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutMSDE'
+Feature='Access Project: Basic'
+Handoff='3'
+SourceFile='ccsbas.rtf'
+Tnum='273175'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni su Microsoft Data Engine (MSDE)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconAboutSQLSUtilitiesFromAccess">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowCreateAccessProjectBasedOnNewMicrosoftSQLServerDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowConnectExistingAccessProjectToMicrosoftSQLServerDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconAboutSQLSUtilitiesFromAccess">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconaboutmsde"></A>Informazioni su Microsoft Data Engine (MSDE)</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a Microsoft Data Engine (MSDE):</P>
+
+<P class=LBR1><A HREF="#acconaboutmsde_1">Definizione di MSDE</A></P>
+
+<P class=LBR1><A HREF="#acconaboutmsde_2">Quando utilizzare MSDE</A></P>
+
+<P class=LBR1><A HREF="#acconaboutmsde_3">Installazione di MSDE</A></P>
+
+<P class=LBR1><A HREF="#acconaboutmsde_4">Ulteriori informazioni</A></P>
+
+<H2><A NAME="acconaboutmsde_1"></A>Definizione di MSDE</H2>
+
+<P class=T>MSDE è una nuova tecnologia che fornisce un sistema di memorizzazione locale dei dati compatibile con Microsoft SQL Server 7.0. È anche possibile utilizzare MSDE come soluzione per la memorizzazione remota dei dati. Si pensi a MSDE come a un modulo di gestione dati <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgClientserver');" class="pop">client/server</A> alternativo al <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A>. MSDE è eseguibile in Microsoft Windows NT 4.0 o versioni successive e in Windows 95 o versioni successive ed è stato progettato e ottimizzato per l'utilizzo su piccoli sistemi, ad esempio un computer per un singolo utente o un server di un gruppo di lavoro di piccole dimensioni. </P>
+
+<P class=T>Poiché MSDE è basato sullo stesso modulo di gestione dati di SQL Server, la maggior parte dei <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetti di Microsoft Access</A> o delle applicazioni client/server può essere eseguita su entrambe le versioni. A differenza di SQL Server 7.0, MSDE però limita le dimensioni del database a 2&nbsp;GB, non supporta Symmetrical Multiprocessing (SMP) in Windows 95 o versioni successive e non può essere utilizzato come editore di repliche (ma solo come sottoscrittore di repliche) con la replica transazionale.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutmsde">inizio</A></P>
+
+<H2><A NAME="acconaboutmsde_2"></A>Quando utilizzare MSDE</H2>
+
+<P class=T>MSDE può essere considerato come un database desktop alternativo al <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> con le seguenti modalità:
+
+<UL>
+	<LI class=LB1>Come database di server per gruppi di lavoro di piccole dimensioni. Le applicazioni vengono sviluppate utilizzando un progetto di Access connesso a MSDE. È possibile prevedere che il gruppo di lavoro e le relative necessità si sviluppino nel tempo fino a richiedere le funzionalità complete di SQL Server 7.0 in esecuzione su un server di rete di maggiori dimensioni.<BR><BR></LI>
+
+	<LI class=LB1>Come sottoscrittore di repliche in un ambiente di database replicato di SQL Server. È possibile ad esempio avere dipendenti che lavorano in modalità remota lontano dall'ufficio principale e che accedono e aggiornano MSDE su laptop o computer non connessi per poi connettersi periodicamente al database master di SQL Server per sincronizzare le modifiche.<BR><BR></LI>
+
+	<LI class=LB1>Per sviluppare e verificare con facilità un progetto di Access o un'applicazione client/server su un personal computer o una workstation, quindi modificare le informazioni di connessione del progetto per connettersi a un database di SQL Server su un server remoto per la verifica e la produzione finale.</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutmsde">inizio</A></P>
+
+<H2><A NAME="acconaboutmsde_3"></A>Installazione di MSDE</H2>
+
+<P class=T>Sebbene MSDE non sia incluso nell'installazione di Microsoft Office 2000 o Microsoft Access 2000 su computer autonomi, è possibile installare MSDE dal CD-ROM eseguendo il file Setupsql.exe contenuto nella cartella <B>\Sql\x86\Setup</B>. </P>
+
+<P class=T>La versione Microsoft Office 2000 di MSDE contiene inoltre nella cartella <B>\Windows\Help</B> dei file della Guida aggiuntivi, SQL Server Enterprise Manager Help (entmgr.chm) e Replication Wizard Help (replwiz.chm), che è possibile <A HREF="JavaScript:hhobj_1.Click()">utilizzare con le utilità di database SQL Server</A> accessibili dal menu <B>Strumenti</B> di Access.</P>
+
+<P class=T>Dopo avere installato MSDE nel computer, in Microsoft Windows 95 o versioni successive, può essere necessario avviare SQL Server Service Manager (fare doppio clic sull'icona <B>MSSQLServer</B> sulla barra delle applicazioni e scegliere <B>Start/Continue</B>). MSDE si avvia automaticamente in Windows NT 4.0 o versioni successivi. Per avviare automaticamente MSDE in Windows 95 o versioni successive, è necessario selezionare la casella di controllo <B>Auto-start service when OS starts</B> nella finestra di SQL Server Service Manager.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutmsde">inizio</A></P>
+
+<H2><A NAME="acconaboutmsde_4"></A>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="JavaScript:hhobj_2.Click()">Creare un progetto di Access utilizzando la Creazione guidata Database</A></P>
+
+<P class=LBR1><A HREF="JavaScript:hhobj_3.Click()">Connettere un progetto di Access a un database di SQL Server</A></P>
+
+<P class=LBR1><A HREF="acconAboutReplicationInMicrosoftAccessProject.htm">Informazioni sulla replica in un progetto di Microsoft Access</A></P>
+
+<P class=LBR1><A HREF="JavaScript:hhobj_4.Click()">Informazioni sull'utilizzo delle utilità di database di Microsoft SQL Server da Microsoft Access</A></P>
+
+<P class=LBR1><A HREF="acconAboutMicrosoftSQLServerDocumentation.htm">Informazioni sulla documentazione di Microsoft SQL Server</A></P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutmsde">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutMSDEW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

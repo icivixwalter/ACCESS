@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbReferToValueOnSubformS'
+Feature='Forms: Troubleshooting'
+Handoff='1'
+SourceFile='cfrmtrb2.doc'
+Tnum='188671'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Viene visualizzato il messaggio #Errore? o #Nome? quando si tenta di visualizzare i dati della sottomaschera nella maschera principale</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="aclsaUsingExpressionBuilder">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="actrbrefertovalueonsubforms"></A>Viene visualizzato il messaggio #Errore? o #Nome? quando si tenta di visualizzare i dati della sottomaschera nella maschera principale</H1>
+
+<P class=T>Per visualizzare un valore da una sottomaschera in una maschera principale, creare un controllo calcolato che fa riferimento al controllo della sottomaschera utilizzando la seguente sintassi: </P>
+
+<P class=T>=Forms![<I>nomemaschera</I>]![<I>nomesottomaschera</I>]![<I>nomecontrollo</I>]</P>
+
+<P class=T>Si supponga ad esempio di avere una maschera Ordini ed una sottomaschera Ordini. Nel piè di pagina maschera della sottomaschera vi è una casella di testo denominata TotaleParzialeOrdini che somma i record contenuti nella sottomaschera. Per visualizzare il valore di questo controllo sulla maschera principale, utilizzare la seguente espressione: </P>
+
+<P class=T>=Forms![Ordini]![SottomascheraOrdini]![TotaleParzialeOrdini]</P>
+
+<P class=T>Per ulteriori informazioni sul calcolo di un totale di un gruppo di record su una maschera, fare clic su <A HREF="achowCalculateTotalGroupRecordsFormS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Se si sta già utilizzando questa sintassi e si ottiene ancora un errore, assicurarsi che i nomi della maschera, della sottomaschera e del controllo siano corretti. Assicurarsi che i nomi a cui si sta facendo riferimento siano i nomi specificati nella proprietà <B>Nome elemento</B> di ogni oggetto e che si stia includendo il punto esclamativo nei punti corretti.</P>
+
+<P class=T>Per fare riferimento ad altri controlli, è anche possibile utilizzare il <A HREF="javascript:HelpPopup('actip9.hlp','defExpressionBuilder');" class="pop">Generatore di espressioni</A>. Per informazioni sull'utilizzo del Generatore di espressioni, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbReferToValueOnSubformSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

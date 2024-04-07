@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreatePropertyX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234377'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CreateProperty (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreatepropertyx"></A>Esempio di metodo CreateProperty (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la prima routine, la funzione SetAccessProperty, è una funzione generica che è possibile utilizzare per impostare una proprietà. Se la proprietà da impostare ha già un oggetto <B>Property</B> corrispondente nell'insieme <B>Properties</B>, la funzione si limita ad impostare il valore desiderato per la proprietà. Se la proprietà non ha un oggetto <B>Property</B> corrispondente nell'insieme <B>Properties</B>, la funzione crea l'oggetto <B>Property</B> e lo accoda all'insieme <B>Properties</B>.</P>
+
+<P class=T>Con la seconda routine viene impostata la proprietà <B>Subject</B> tramite la funzione SetAccessProperty. La proprietà <B>Subject</B> è una proprietà relativa al database che è anche possibile impostare nella scheda <B>Riepilogo</B> della finestra di dialogo <B>Proprietà database</B>, disponibile scegliendo <B>Proprietà database</B> dal menu <B>File</B>.</P>
+
+<P class=T>La proprietà <B>Subject</B> è applicata a un oggetto DAO:<font face="Symbol">—</FONT>l'oggetto <B>Document</B> SummaryInfo, definito da Microsoft Access. Se la proprietà Subject non è presente nell'insieme  <B>Properties</B>  per l'oggetto <B>Document</B> SummaryInfo, la funzione SetAccessProperty la aggiunge.</P>
+
+<PRE class=CT><CODE>Function SetAccessProperty(obj As Object, strName As String, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intType As Integer, varSetting As Variant) As Boolean
+&nbsp;&nbsp;&nbsp; Dim prp As Property
+&nbsp;&nbsp;&nbsp; Const conPropNotFound As Integer = 3270
+
+&nbsp;&nbsp;&nbsp; On Error GoTo ErrorSetAccessProperty
+&nbsp;&nbsp;&nbsp; ' Riferimento esplicito a insieme Properties.
+&nbsp;&nbsp;&nbsp; obj.Properties(strName) = varSetting
+&nbsp;&nbsp;&nbsp; obj.Properties.Refresh
+&nbsp;&nbsp;&nbsp; SetAccessProperty = True
+&nbsp;&nbsp;&nbsp; 
+ExitSetAccessProperty:
+&nbsp;&nbsp;&nbsp; Exit Function
+&nbsp;&nbsp;&nbsp; 
+ErrorSetAccessProperty:
+&nbsp;&nbsp;&nbsp; If Err = conPropNotFound Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea la proprietà, denota il tipo e imposta il valore iniziale.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set prp = obj.<B>CreateProperty</B>(strName, intType, varSetting)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Accoda oggetto Property a insieme Properties.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.Properties.Append prp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.Properties.Refresh
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetAccessProperty = True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume ExitSetAccessProperty
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; vbCrLf &amp; Err.Description
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetAccessProperty = False
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume ExitSetAccessProperty
+&nbsp;&nbsp;&nbsp; End If
+End Function</CODE></PRE>
+
+
+
+<P class=T>La routine riportata di seguito chiama la funzione SetAccessProperty per impostare la proprietà <B>Subject</B>.</P>
+
+<PRE class=CT><CODE>Sub ChiamaImpostazioneProprietà()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, ctr As Container, doc As Document
+&nbsp;&nbsp;&nbsp; Dim blnReturn As Boolean
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al container Databases.
+&nbsp;&nbsp;&nbsp; Set ctr = dbs.Containers!Databases
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al documento SummaryInfo.
+&nbsp;&nbsp;&nbsp; Set doc = ctr.Documents!SummaryInfo
+&nbsp;&nbsp;&nbsp; blnReturn = SetAccessProperty(doc, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Soggetto", dbText, "Contatti di lavoro")
+&nbsp;&nbsp;&nbsp; ' Valuta il valore restituito.
+&nbsp;&nbsp;&nbsp; If blnReturn = True Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Impostazione proprietà riuscita."
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Impostazione proprietà non riuscita."
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

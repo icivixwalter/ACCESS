@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFilter'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproflt3.doc'
+Tnum='187235'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Filter (Filtro)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproFilter">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprofilter"></A>Proprietà Filter (Filtro)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFilterC;daproFilter">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFilterX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFilterA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>Filter</B> per specificare un sottoinsieme di record da visualizzare quando si applica un filtro a una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A>, a un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>, a una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> o a una <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabella</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si desidera specificare un filtro di server in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (ADP) per i dati che si trovano in un server, utilizzare la proprietà <A HREF="acproServerFilter.htm"><B>ServerFilter</B></A>. </P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>Filter</B> è un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> composta da una proposizione <A HREF="javascript:HelpPopup('actip9.hlp','defWhereClause');" class="pop">WHERE</A> priva della parola chiave WHERE. Nel codice di Visual Basic riportato di seguito, ad esempio, si definisce ed applica un filtro per visualizzare solo i clienti degli USA.</P>
+
+<PRE class=CT><CODE>Me.Filter = "Stato = 'USA'"
+Me.FilterOn = True</CODE></PRE>
+
+
+
+<P class=T>È possibile impostare la proprietà utilizzando una <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> di tabella o di maschera, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> oppure <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=T>È inoltre possibile impostare la proprietà in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> scegliendo <B>Filtro</B> dal menu <B>Record</B> e scegliendo uno dei comandi dal sottomenu.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'impostazione della proprietà <B>Filter</B> non ha effetto sulla proprietà ADO <A HREF="JavaScript:hhobj_5.Click()"><B>Filter</B></A>.</P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare la proprietà <B>Filter</B> per salvare un filtro e applicarlo successivamente. I filtri vengono salvati con gli oggetti in cui sono stati creati. I filtri vengono caricati automaticamente all'apertura dell'oggetto, ma non vengono automaticamente applicati.</P>
+
+<P class=T>Quando si crea un nuovo oggetto, questo eredita le proprietà <A HREF="acproRecordSource.htm"><B>RecordSource</B></A>, <B>Filter</B>, <A HREF="acproOrderBy.htm"><B>OrderBy</B></A> e <A HREF="acproOrderByOn.htm"><B>OrderByOn</B></A> della tabella o della query da cui è stato creato.</P>
+
+<P class=T>Per applicare un filtro salvato a una maschera, a una query o a una tabella, è possibile fare clic sul pulsante <B>Applica filtro</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrFilterOnOffQ');" class="pop"><img src="images/filter.bmp" alt="Oggetto Filter" BORDER=0></A> sulla <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A>, scegliere <B>Applica filtro/ordinamento</B> dal menu <B>Record</B> oppure utilizzare una macro o Visual Basic per impostare la proprietà <A HREF="acproFilterOn.htm"><B>FilterOn</B></A> a <B>True</B> (-1). Per i report, è possibile applicare un filtro, impostando la proprietà <B>FilterOn</B> a Sì nella finestra delle proprietà del report.</P>
+
+<P class=T>Il pulsante <B>Applica filtro</B> indica lo stato delle proprietà <B>Filter</B> e <B>FilterOn</B>. Il pulsante rimane disattivato fino a quando è presente un filtro da applicare. Se è attualmente applicato un filtro esistente, il pulsante <B>Applica filtro</B> viene visualizzato incassato.</P>
+
+<P class=T>Per applicare automaticamente un filtro all'apertura di una maschera, specificare nell'impostazione della proprietà di evento <B>SuApertura</B> della maschera una macro che utilizza l'azione ApplicaFiltro o una routine evento che utilizza il metodo <A HREF="acmthactApplyFilter.htm"><B>ApplyFilter</B></A> dell'oggetto <B>DoCmd</B>.</P>
+
+<P class=T>È possibile rimuovere un filtro facendo clic sul pulsante incassato <B>Applica filtro</B>, scegliendo <B>Rimuovi filtro/ordinamento</B> dal menu <B>Record</B> oppure utilizzando Visual Basic per impostare la proprietà <B>FilterOn</B> a <B>False</B> (0).</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile salvare un filtro come una query, scegliendo <B>Salva come query</B> dal menu <B>File</B> quando ci si trova nella finestra <A HREF="javascript:HelpPopup('actip9.hlp','defFilterByForm');" class="pop">Filtro in base a maschera</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defAdvancedFilterSort');" class="pop">Ordinamento/filtro avanzato</A>.</P>
+
+
+
+<P class=T>Quando la proprietà <B>Filter</B> viene impostata in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura della maschera</A>, Microsoft Access non compie un tentativo di convalidare l'espressione SQL. Se l'espressione SQL non è valida, si verifica un errore quando si applica il filtro.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

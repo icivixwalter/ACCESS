@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRefreshTitleBarX'
+Feature='acmth'
+Handoff='2'
+SourceFile='amthv3.doc'
+Tnum='186550'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo RefreshTitleBar</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthrefreshtitlebarx"></A>Esempio di metodo RefreshTitleBar</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene impostata la proprietà <B>AppTitle</B> del database corrente e applicato il metodo <B>RefreshTitleBar</B> per aggiornare la barra del titolo.</P>
+
+<PRE class=CT><CODE>Sub ModificaTitolo()
+    Dim obj As Object
+    Const conPropNotFoundError = 3270
+    
+    On Error GoTo ErrorHandler
+    ' Restituisce la variabile di oggetto Database che punta al
+    ' database corrente.
+    Set dbs = CurrentDb
+    ' Modifica la barra del titolo.
+    dbs.Properties!AppTitle = "Database contatti"
+    ' Aggiorna la barra del titolo su schermo.
+    Application.<B>RefreshTitleBar</B>
+    Exit Sub
+    
+ErrorHandler:
+    If Err.Number = conPropNotFoundError Then
+        Set obj = dbs.CreateProperty("TitoloApp", dbText, "Database contatti")
+        dbs.Properties.Append obj
+    Else
+        MsgBox "Errore: " &amp; Err.Number &amp; vbCrLf &amp; Err.Description
+    End If
+    Resume Next
+End Sub
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

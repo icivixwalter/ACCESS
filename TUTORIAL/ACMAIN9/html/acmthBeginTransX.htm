@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthBeginTransX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acdmetx1_1a.rtf'
+Tnum='234335'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi BeginTrans, CommitTrans e Rollback (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthbegintransx"></A>Esempio di metodi BeginTrans, CommitTrans e Rollback (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene modificata la posizione professionale di tutti i rappresentanti presenti in una tabella Dipendenti. Una volta che il metodo <B>BeginTrans</B> ha avviato una transazione che isola tutte le modifiche apportate alla tabella Dipendenti, il metodo <B>CommitTrans</B> salva tali modifiche. Si noti che è possibile utilizzare il metodo <B>Rollback</B> per annullare le modifiche salvate tramite il metodo <B>Update</B>. Nell'esempio è indicato anche come utilizzare un flag per gestire correttamente gli errori che possono verificarsi durante una transazione.</P>
+
+<P class=T>Una o più pagine della tabella rimangono bloccate mentre si decide se accettare le modifiche. Tale modalità non è quindi consigliata, ma viene mostrata solo come esempio.</P>
+
+<PRE class=CT><CODE>Sub CambiaPosizione()
+&nbsp;&nbsp;&nbsp; Dim wsp As Workspace, dbs As Database, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim strName As String, strMessage As String, strPrompt As String
+&nbsp;&nbsp;&nbsp; Dim fInTrans As Boolean
+
+&nbsp;&nbsp;&nbsp; On Error GoTo ChangeTitleErr
+
+&nbsp;&nbsp;&nbsp; fInTrans = False
+&nbsp;&nbsp;&nbsp; strPrompt = "Modificare la mansione in Direttore?"
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento a un oggetto Area di lavoro predefinito.
+&nbsp;&nbsp;&nbsp; Set wsp = DBEngine.Workspaces(0)
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea oggetto Recordset di tipo tabella.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("Dipendenti", dbOpenTable)
+&nbsp;&nbsp;&nbsp; ' Inizio della transazione.
+&nbsp;&nbsp;&nbsp; wsp.<B>BeginTrans</B>
+&nbsp;&nbsp;&nbsp; fInTrans = True
+&nbsp;&nbsp;&nbsp; rst.MoveFirst
+&nbsp;&nbsp;&nbsp; Do Until rst.EOF
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If rst!Posizione = "Rappresentante" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNome = rst!Cognome &amp; ", " &amp; rst!Nome
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMessage = "Dipendente: " &amp; strName &amp; vbCrLf &amp; vbCrLf
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If MsgBox(strMessage &amp; strPrompt, vbQuestion + vbYesNo, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Modifica posizione professionale") = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Consente la modifica.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.Edit
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst!Posizione = "Direttore"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Salva le modifiche.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.Update
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Passa al record successivo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.MoveNext
+&nbsp;&nbsp;&nbsp; Loop
+&nbsp;&nbsp;&nbsp; If MsgBox("Salvare tutte le modifiche?", vbQuestion + vbYesNo, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " Salva le modifiche") = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wsp.<B>CommitTrans</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Conferma le modifiche.
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wsp.<B>Rollback</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Annulla le modifiche.
+&nbsp;&nbsp;&nbsp; End If
+ChangeTitleExit:
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+&nbsp;&nbsp;&nbsp; Set wsp = Nothing
+&nbsp;&nbsp;&nbsp; Exit Sub
+ChangeTitleErr:
+&nbsp;&nbsp;&nbsp; MsgBox "Errore"
+&nbsp;&nbsp;&nbsp; If fInTrans Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wsp.Rollback
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Resume ChangeTitleExit
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

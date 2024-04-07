@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproLabelXYS'
+Feature='acpro'
+Handoff='3'
+SourceFile='bidiprop.doc'
+Tnum='264850'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà LabelX e LabelY</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprolabelxys"></A>LabelX, LabelY Properties</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>Microsoft Access 2000 has modified the <B>LabelX</B> and <B>LabelY</B> property behavior for right-to-left controls.</P>
+
+<P class=RL><B>Remarks</B></P>
+
+<P class=T>The <B>LabelX</B> and <B>LabelY</B> properties specify the placement of the label for a new control. If the orientation is left to right for a form or report, <B>LabelX</B> and <B>LabelY</B> behavior matches standard Microsoft Access left-to-right orientation. For more information about orientation, see the <A HREF="acproOrientation.htm"><B>Orientation</B></A> property.</P>
+
+<P class=T>If orientation is right to left, the origin of the coordinate system for <B>LabelX</B> and <B>LabelY</B> is the upper right corner of the attached control. A negative number for <B>LabelX</B> places the label to the right of the control. A negative number for <B>LabelY</B> places the label above the control.</P>
+
+<P class=T>For General and Right alignment when orientation is RTL, <B>LabelX</B> and <B>LabelY</B> specify the location of the upper-right corner of the label relative to the upper-right corner of the label’s attached control. For Left and Center alignment, <B>LabelX</B> and <B>LabelY</B> specify the location of the upper-left corner and top center, respectively, of the label relative to the upper-right corner of the label’s attached control.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

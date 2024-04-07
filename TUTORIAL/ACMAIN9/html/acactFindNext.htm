@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactFindNext'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187239'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione TrovaSuccessivo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactFindNext">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactfindnext"></A>Azione TrovaSuccessivo</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactFindNextC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactFindNextX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione TrovaSuccessivo trova il <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> successivo corrispondente ai <A HREF="javascript:HelpPopup('actip9.hlp','defCriteria');" class="pop">criteri</A> specificati dalla precedente azione <A HREF="acactFindRecord.htm">TrovaRecord</A> oppure dalla finestra di dialogo <B>Trova nel campo</B>, disponibile scegliendo <B>Trova</B> dal menu <B>Modifica</B>. È possibile cercare i record più volte, utilizzando l'azione TrovaSuccessivo. È possibile ad esempio spostarsi attraverso tutti i record relativi a un determinato cliente.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione TrovaRecord non utilizza alcun argomento. Tale azione trova il record successivo corrispondente ai criteri impostati tramite l'azione TrovaRecord o la finestra di dialogo <B>Trova nel campo</B>. Gli argomenti relativi a tale azione sono quelli contenuti nelle opzioni della finestra di dialogo <B>Trova nel campo</B>.</P>
+
+<P class=T>Per impostare i criteri di ricerca, utilizzare l'azione TrovaRecord. Un'azione TrovaRecord viene in genere immessa in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>, quindi viene utilizzata l'azione TrovaSuccessivo per trovare i record successivi corrispondenti agli stessi criteri. Per la ricerca di record che soddisfano solo una determinata condizione, è possibile immettere un'<A HREF="javascript:HelpPopup('actip9.hlp','defConditionalExpression');" class="pop">espressione condizionale</A> nella colonna <B>Condizione</B> della riga di azione relativa all'azione TrovaSuccessivo.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>L'utilizzo di questa azione equivale all'utilizzo del pulsante <B>Trova successivo</B> della finestra di dialogo <B>Trova nel campo</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'azione TrovaRecord equivale al comando <B>Trova</B> del menu <B>Modifica</B> per <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabelle</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschere</A>, ma non equivale al comando <B>Trova</B> del menu <B>Modifica</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defModuleWindow');" class="pop">finestra del modulo</A>. Non è possibile utilizzare l'azione TrovaRecord o TrovaSuccessivo per cercare testo contenuto nei moduli.</P>
+
+
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Se l'argomento Solo campo corrente dell'azione TrovaRecord è stato impostato a Sì, è possibile utilizzare l'azione <A HREF="acactGoToControl.htm">VaiAControllo</A> per spostare lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A> sul <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> contenente i dati ricercati prima di utilizzare l'azione TrovaSuccessivo.</P>
+
+
+
+<P class=T>Se il testo correntemente selezionato è uguale al testo da ricercare quando si esegue l'azione di macro TrovaSuccessivo, la ricerca inizia immediatamente dopo la selezione nello stesso record e nello stesso campo della selezione. Negli altri casi la ricerca comincia all'inizio del record corrente. In questo modo è possibile trovare più occorrenze dello stesso criterio di ricerca in un singolo record.</P>
+
+<P class=T>Notare tuttavia che, se per eseguire una macro che contiene l'azione TrovaSuccessivo si utilizza un pulsante di comando, la prima occorrenza del criterio di ricerca verrà trovata più volte per lo stesso record, poiché fare clic su tale pulsante modifica lo stato attivo del campo che contiene il valore corrispondente e, di conseguenza, l'azione TrovaSuccessivo comincerà la ricerca a partire dall'inizio del record. Per evitare il problema, eseguire la macro utilizzando una tecnica che non prevede la modifica dello stato attivo, come un pulsante di una barra degli strumenti personalizzata o una combinazione di tasti definita in una macro <A HREF="achowAssignMacroKeyS.htm">AutoKeys</A> oppure impostare lo stato attivo nella macro per il campo che contiene i criteri di ricerca prima dell'esecuzione dell'azione TrovaSuccessivo.</P>
+
+<P class=T>Se si utilizza un pulsante di comando per eseguire una macro che contiene l'azione Trova Record con l'argomento Trova primo impostato a No, si ottiene lo stesso comportamento.</P>
+
+<P class=T>Per eseguire l'azione TrovaSuccessivo in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>FindNext</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

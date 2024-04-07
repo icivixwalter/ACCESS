@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFillColorX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproapp2_1a.doc'
+Tnum='187228'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà FillColor e FillStyle</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprofillcolorx"></A>Esempio di proprietà FillColor e FillStyle</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza il metodo <B>Circle</B> per disegnare un cerchio e creare uno spicchio di torta al suo interno. Si utilizzano quindi le proprietà <B>FillColor</B> e <B>FillStyle</B> per colorare di rosso lo spicchio di torta. Si traccia quindi una linea dal bordo superiore sinistro al centro del cerchio.</P>
+
+<P class=T>Per provare tale esempio in Microsoft Access, creare un nuovo report. Impostare la proprietà <B>OnPrint</B> della sezione Corpo a [Routine evento]. Immettere il codice riportato di seguito nel modulo del report, passare quindi ad Anteprima di stampa.</P>
+
+<PRE class=CT><CODE>Private Sub Dettaglio_Print(Cancel As Integer, PrintCount As Integer)
+&nbsp;&nbsp;&nbsp; Const conPI = 3.14159265359
+
+&nbsp;&nbsp;&nbsp; Dim sngCtrO As Single, sngCtrV As Single, sngRaggio As Single
+&nbsp;&nbsp;&nbsp; Dim sngInizio As Single, sngFine As Single
+
+&nbsp;&nbsp;&nbsp; sngCtrO = Me.ScaleWidth / 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Centro orizzontale.
+&nbsp;&nbsp;&nbsp; sngCtrV = Me.ScaleHeight / 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Centro verticale.
+&nbsp;&nbsp;&nbsp; sngRaggio = Me.ScaleHeight / 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Raggio del cerchio.
+&nbsp;&nbsp;&nbsp; Me.Circle(sngCtrO, sngCtrV), sngRaggio&nbsp;&nbsp;&nbsp; ' Disegna il cerchio.
+&nbsp;&nbsp;&nbsp; sngInizio = -0.00000001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inizio dello spicchio di torta.
+
+sngFine = -2 * conPI / 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Fine dello spicchio di torta.
+&nbsp;&nbsp;&nbsp; Me.<B>FillColor</B> = RGB(255,0,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Colora lo spicchio di torta di rosso.
+&nbsp;&nbsp;&nbsp; Me.<B>FillStyle</B> = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Riempie lo spicchio di torta.
+&nbsp;&nbsp;&nbsp; ' Disegna lo spicchio di torta dentro al cerchio
+&nbsp;&nbsp;&nbsp; Me.Circle(sngCtrO, sngCtrV), sngRaggio, sngInizio, sngFine
+
+&nbsp;&nbsp;&nbsp; ' Traccia una linea al centro del cerchio.
+&nbsp;&nbsp;&nbsp; Dim intColora As Integer
+&nbsp;&nbsp;&nbsp; Dim sngSuperiore As Single, sngSinistro As Single
+&nbsp;&nbsp;&nbsp; Dim sngLarghezza As Single, sngAltezza As Single
+
+&nbsp;&nbsp;&nbsp; Me.ScaleMode = 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta la scala a pixel.
+&nbsp;&nbsp;&nbsp; sngSuperiore = Me.ScaleTop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Bordo interno superiore.
+&nbsp;&nbsp;&nbsp; sngSinistro = Me.ScaleLeft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Bordo interno sinistro.
+&nbsp;&nbsp;&nbsp; sngLarghezza = Me.ScaleWidth / 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Larghezza del cerchio.
+&nbsp;&nbsp;&nbsp; sngAltezza = Me.ScaleHeight / 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Altezza del cerchio.
+&nbsp;&nbsp;&nbsp; intColora = RGB(255, 0, 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Colora di rosso.
+
+&nbsp;&nbsp;&nbsp; ' Traccia una linea.
+&nbsp;&nbsp;&nbsp; Me.Line (sngSuperiore, sngSinistro)-(sngLarghezza, sngAltezza), intColora
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

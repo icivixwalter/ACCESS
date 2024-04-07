@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlSELECTS'
+Feature='acsql'
+Handoff='1'
+SourceFile='acdsql02_1a.rtf'
+Tnum='234533'
+Piece='1040'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Istruzione SELECT</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acsqlselects"></A>Istruzione SELECT</H1>
+
+
+
+<P class=T>In Microsoft Access se si lavora in <A HREF="javascript:HelpPopup('actip9.hlp','defSQLView');" class="pop">visualizzazione SQL</A> nella <A HREF="javascript:HelpPopup('actip9.hlp','defQueryWindow');" class="pop">finestra della query</A>, i nomi di campo (<I>campo1, campo2</I>) vengono utilizzati come intestazioni di colonna in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A>. Per visualizzare una diversa intestazione per una colonna del foglio dati, utilizzare la parola riservata AS. In tal modo, gli argomenti <I>alias1, alias2</I> forniranno i nomi delle colonne da utilizzare per visualizzare i dati recuperati in visualizzazione Foglio dati. L'utilizzo della proposizione AS equivale a impostare la proprietà <B>Alias</B> nella finestra delle proprietà dell'elenco dei campi in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura della query</A>.</P>
+
+<P class=T>Nell'esempio riportato di seguito si utilizza il titolo "Compleanno" come intestazione di colonna nel foglio dati risultante:</P>
+
+<PRE class=CT><CODE>SELECT [Data di nascita] AS Compleanno FROM Impiegati;</CODE></PRE>
+
+
+
+
+
+<P class=T>Quando si utilizzano <A HREF="javascript:HelpPopup('actip9.hlp','defAggregateFunction');" class="pop">funzioni di aggregazione</A> o query che restituiscono nomi di campo ambigui o duplicati, è necessario utilizzare anche la proposizione AS per fornire un nome alternativo per il campo. Nell'esempio riportato di seguito si crea l'intestazione di colonna "Conteggio Intestazione" in visualizzazione Foglio dati:</P>
+
+<PRE class=CT><CODE>SELECT CONTEGGIO([IDImpiegato])
+AS [Conteggio Intestazione] FROM Impiegati;</CODE></PRE>
+
+
+
+<P class=T>Se si utilizzano <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti DAO</A> nel codice di Visual Basic, agli oggetti <B>Field</B> contenuti nell'oggetto <B>Recordset</B> restituito dalla query viene assegnato un nome mediante gli argomenti <I>campo1, campo2</I>. Se si include la parola riservata AS, gli argomenti <I>alias1, alias2</I> forniscono le intestazioni di colonna da restituire come nomi di oggetto <B>Field</B> nell'oggetto <B>Recordset</B> risultante.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

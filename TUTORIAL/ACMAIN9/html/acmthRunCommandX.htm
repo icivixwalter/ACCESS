@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRunCommandX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8_1a.rtf'
+Tnum='186807'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo RunCommand</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthruncommandx"></A>Esempio di metodo RunCommand</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare il metodo <B>RunCommand</B> per aprire la finestra di dialogo <B>Opzioni</B> disponibile scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B>.</P>
+
+<PRE class=CT><CODE>Function ApriFinestraOpzioni() As Boolean
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_ApriFinestraOpzioni
+&nbsp;&nbsp;&nbsp; DoCmd.<B>RunCommand</B> acCmdOptions
+&nbsp;&nbsp;&nbsp; ApriFinestraOpzioni = True
+
+Exit_ApriFinestraOpzioni:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_ApriFinestraOpzioni:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; ApriFinestraOpzioni = False
+&nbsp;&nbsp;&nbsp; Resume Exit_ApriFinestraOpzioni
+End Function</CODE></PRE>
+
+
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

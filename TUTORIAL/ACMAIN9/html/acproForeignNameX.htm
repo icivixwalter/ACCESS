@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproForeignNameX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234431'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ForeignName, ForeignTable e Table (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproforeignnamex"></A>Esempio di proprietà ForeignName, ForeignTable e Table (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si illustra come utilizzare le proprietà <B>ForeignName</B>, <B>ForeignTable</B> e <B>Table</B> quando si crea una relazione tra due tabelle esistenti, in questo caso la tabella primaria Impiegati e la tabella esterna Ordini del database corrente. IDImpiegato è la chiave primaria della tabella Impiegati ed è anche una chiave esterna della tabella Ordini. La relazione è uno-a-molti e viene applicata l'integrità referenziale.</P>
+
+<P class=T>Si noti che l'operatore <B>And</B> esegue un confronto su singoli bit per determinare quali autorizzazioni sono impostate correntemente.</P>
+
+<PRE class=CT><CODE>Sub NuovaRelazione()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database
+&nbsp;&nbsp;&nbsp; Dim fld As Field, rel As Relation
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Ricerca la relazione esistente tra Impiegati e Ordini
+&nbsp;&nbsp;&nbsp; For Each rel In dbs.Relations
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If rel.<B>Table</B> = "Impiegati" _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And rel.<B>ForeignTable</B> = "Ordini" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Richiede conferma all'utente prima di eliminare la relazione.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If MsgBox(rel.Name &amp; " esiste già. " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; "Questa relazione verrà " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "eliminata e ricreata.", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vbOK) = vbOK 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbs.Relations.Delete rel.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Se l'utente sceglie Annulla, si esce dalla routine.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Next rel
+&nbsp;&nbsp;&nbsp; ' Crea la nuova relazione e imposta le relative proprietà.
+&nbsp;&nbsp;&nbsp; Set rel = dbs.CreateRelation("ImpiegatiOrdini")
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà Table.
+&nbsp;&nbsp;&nbsp; rel.<B>Table</B> = "Impiegati"
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà <B>ForeignTable</B>.
+&nbsp;&nbsp;&nbsp; rel.<B>ForeignTable</B> = "Ordini"
+&nbsp;&nbsp;&nbsp; ' Imposta attributi dell'oggetto Relation per
+&nbsp;&nbsp;&nbsp; ' applicare l'integrità referenziale.
+&nbsp;&nbsp;&nbsp; rel.Attributes = dbRelationDeleteCascade And _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbRelationUpdateCascade
+&nbsp;&nbsp;&nbsp; ' Crea campo nell'insieme Fields di Relation.
+&nbsp;&nbsp;&nbsp; Set fld = rel.CreateField("IDImpiegato")
+&nbsp;&nbsp;&nbsp; ' Fornisce il nome del campo della chiave esterna.
+&nbsp;&nbsp;&nbsp; fld.<B>ForeignName</B> = "IDImpiegato"
+&nbsp;&nbsp;&nbsp; ' Accoda il campo a Relation e accoda Relation al database.
+&nbsp;&nbsp;&nbsp; rel.Fields.Append fld
+&nbsp;&nbsp;&nbsp; dbs.Relations.Append rel
+&nbsp;&nbsp;&nbsp; MsgBox "Relazione '" &amp; rel.Name &amp; "' creata."
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

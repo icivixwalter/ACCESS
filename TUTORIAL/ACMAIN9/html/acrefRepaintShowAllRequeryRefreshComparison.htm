@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefRepaintShowAllRequeryRefreshComparison'
+Feature='acref'
+Handoff='2'
+SourceFile='act_q-z.doc'
+Tnum='257635'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Confronto fra le azioni AggiornaOggetto, MostraOgniRecord e RieseguiQuery e i metodi RepaintObject, ShowAllRecords, Requery e Refresh</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acrefrepaintshowallrequeryrefreshcomparison"></A>Confronto fra le azioni AggiornaOggetto, MostraOgniRecord e RieseguiQuery e i metodi RepaintObject, ShowAllRecords, Requery e Refresh</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acrefRepaintShowAllRequeryRefreshComparison_C">
+</OBJECT></P>
+
+
+
+<P class=T>Nella tabella riportata di seguito viene fornito un breve confronto tra l'azione AggiornaOggetto e i metodi <B>RepaintObject</B> e <B>Repaint</B>, tra l'azione MostraOgniRecord e il metodo <B>ShowAllRecords</B>, tra l'azione RieseguiQuery e i metodi <B>DoCmd.Requery</B>, <B>Refresh</B> e <B>Requery</B>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=34%>Azione o metodo</TH>
+<TH width=66%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=34%>Azione <A HREF="acactRepaintObject.htm">AggiornaOggetto</A>,<BR>
+metodi <B>DoCmd</B>.<A HREF="acmthactRepaintObject.htm"><B>RepaintObject</B></A>, <A HREF="acmthRepaint.htm"><B>Repaint</B></A></TD>
+<TD class=TT width=66%>Utilizzare l'azione AggiornaOggetto, il metodo <B>RepaintObject</B> o il metodo <B>Repaint</B> per <A HREF="javascript:HelpPopup('actip9.hlp','defRepaint');" class="pop">aggiornare</A> i controlli dell'oggetto specificato. Questi non ripetono la query del database e non visualizzano nuovi record.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=34%>Azione <A HREF="acactShowAllRecords.htm">MostraOgniRecord</A>,<BR> metodo 
+<A HREF="acmthactShowAllRecords.htm"><B>ShowAllRecords</B></A>
+
+</TD>
+<TD class=TT width=66%>Utilizzare l'azione MostraOgniRecord per ripetere la query, visualizzare i record più recenti e rimuovere i <A HREF="javascript:HelpPopup('actip9.hlp','defFilter');" class="pop">filtri</A> applicati, operazione che l'azione RieseguiQuery non effettua.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=34%>Azione <A HREF="acactRequery.htm">RieseguiQuery</A><BR>
+ metodo <B>DoCmd.<A HREF="acmthactRequery.htm">Requery</A></B></TD>
+<TD class=TT width=66%>Utilizzare l'azione RieseguiQuery o il metodo Requery per ripetere la query sull'origine dell'oggetto o su uno dei suoi controlli. Con tale azione o con tale metodo viene effettuata una delle seguenti operazioni:
+<P class=TT>Viene ripetuta la query su cui si basa il controllo o l'oggetto.</P>
+
+<P class=TT>Vengono visualizzati i record nuovi o modificati e i record eliminati vengono rimossi dalla <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabella</A> su cui si basa il controllo o l'oggetto.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=34%>Metodo <A HREF="acmthRefresh.htm"><B>Refresh</B></A></TD>
+<TD class=TT width=66%>Utilizzare il metodo <B>Refresh</B> per aggiornare immediatamente i record dell'origine record sottostante per una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> specifico, in modo da riflettere le modifiche apportate ai dati dagli utenti in un ambiente multiutente. Il metodo <B>Refresh</B> mostra solo le modifiche apportate al set di record corrente, senza riflettere i record nuovi o eliminati dall'origine record.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=34%>Metodo <A HREF="acmthRequery.htm"><B>Requery</B></A></TD>
+<TD width=66%>
+<UL>
+	<LI class=NLB>Utilizzare il metodo <B>Requery</B> per aggiornare i dati sottostanti una maschera o un controllo per riflettere i record nuovi o eliminati dall'origine record dall'ultima esecuzione della query.
+<P class=TT>Se si desidera rieseguire la query su un controllo che non è sull'oggetto attivo, occorre utilizzare questo metodo e non l'azione RieseguiQuery o il corrispondente metodo <B>DoCmd.Requery</B>.
+</LI>
+</UL>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

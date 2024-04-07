@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtKeyPressEP'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187382'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Pressione - Routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEventProperties">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproKeyPreview">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acevtkeypressep"></A>Evento Pressione - Routine evento</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtKeyPressEPC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtKeyPressEPX">
+</OBJECT></P>
+
+
+
+<P class=T>Per creare una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> che venga eseguita quando si verifica l'evento <A HREF="acevtKeyPress.htm">Pressione</A>, impostare la proprietà <A HREF="JavaScript:hhobj_3.Click()"><B>Su pressione</B></A> a [Routine evento] e fare clic sul pulsante dei<B> </B>generatori <A HREF="javascript:HelpPopup('actip9.hlp','defBuildButton');" class="pop"><IMG SRC="images/buildbut.bmp" BORDER=0></A>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>Private Sub Form_KeyPress(</B>KeyAscii <B>As Integer)</B></P>
+
+<P class=SYN><B>Private Sub</B> <I>nomecontrollo</I><B>_KeyPress(</B>KeyAscii <B>As Integer)</B></P>
+
+
+
+<P class=T>L'evento Pressione utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>nomecontrollo</I></TD>
+<TD class=TT width=75%>Il nome del <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> a cui viene applicata la routine evento Pressione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>KeyAscii</TD>
+<TD class=TT width=75%>Restituisce un codice di tasto numerico <A HREF="javascript:HelpPopup('actip9.hlp','defANSI');" class="pop">ANSI</A>. L'argomento KeyAscii viene passato come riferimento; la modifica di tale argomento invia un carattere diverso all'oggetto. L'impostazione dell'argomento KeyAscii a zero annulla il tasto, in modo che l'oggetto non riconosca l'avvenuta pressione di un tasto.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Una routine evento Pressione risulta utile per intercettare tasti immessi in una <A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">casella di testo</A> o in una <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">casella combinata</A>. Tale routine evento consente di provare la validità dei tasti o di formattare i caratteri mentre vengono digitati. La modifica del valore dell'argomento KeyAscii cambia il carattere visualizzato.</P>
+
+<P class=T>È possibile convertire l'argomento KeyAscii in un carattere utilizzando l'espressione riportata di seguito.</P>
+
+<P class=SYN><B>Chr(</B>KeyAscii<B>)</B></P>
+
+
+
+<P class=T>È quindi possibile eseguire operazioni su stringhe e riportare il carattere a un numero ANSI che il controllo è in grado di riconoscere, utilizzando la sintassi riportata di seguito.</P>
+
+<P class=SYN>KeyAscii <B>= Asc(</B><I>carattere</I><B>)</B></P>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Il numero ANSI per la combinazione da tastiera CTRL+@ è zero. Poiché Microsoft Access riconosce un valore KeyAscii uguale a zero come <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A> (" "), si consiglia di evitare l'utilizzo di CTRL+@ nelle applicazioni.</P>
+
+
+
+<P class=T>È possibile rispondere a determinati tasti premuti mentre una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> è aperta, indipendentemente dal controllo che ha lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A>. È possibile ad esempio che si desideri che la combinazione CTRL+X esegua sempre la stessa azione su una maschera. Per assicurarsi che una maschera riceva tutti gli eventi di tastiera, compresi quelli che si verificano per i controlli e prima che si verifichino per i controlli stessi, impostare a Sì la proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>Anteprima tasti</B></A> della maschera. Con tale impostazione, tutti gli eventi di tastiera si verificano prima per la maschera e quindi per il controllo che ha lo stato attivo. È possibile rispondere a determinati tasti negli eventi <A HREF="acevtKeyDownUp.htm">TastoGiù</A>, Pressione e <A HREF="acevtKeyDownUp.htm">TastoSu</A> È possibile evitare che un controllo riceva tasti a cui si è risposto e che gli eventi di tastiera si verifichino per il controllo, impostando a zero l'argomento KeyCode per entrambi gli eventi TastoGiù e TastoSu e impostando a zero l'argomento KeyAscii per l'evento Pressione. È necessario impostare tutti e tre gli argomenti a zero se si non desidera che il controllo riceva i tasti.</P>
+
+<P class=T>È possibile utilizzare gli argomenti per gli eventi TastoGiù, Pressione e TastoSu, insieme agli argomenti degli eventi <A HREF="acevtMouseDownUp.htm">PulsanteMouseGiù</A>, <A HREF="acevtMouseDownUp.htm">PulsanteMouseSu</A> e <A HREF="acevtMouseMove.htm">MouseSpostato</A> per fare in modo che l'applicazione sia più efficiente con l'utilizzo sia della tastiera sia del mouse.</P>
+
+<P class=T>Non è possibile annullare l'evento Pressione in una routine evento, ma è possibile annullarlo in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

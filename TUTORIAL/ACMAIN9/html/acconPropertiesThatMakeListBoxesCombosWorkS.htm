@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconPropertiesThatMakeListBoxesCombosWorkS'
+Feature='Forms: Controls'
+Handoff='3'
+SourceFile='cfrmlst_1.rtf'
+Tnum='188491'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà utilizzabili per creare o modificare caselle di riepilogo e caselle combinate in una maschera</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconpropertiesthatmakelistboxescombosworks"></A>Proprietà utilizzabili per creare o modificare caselle di riepilogo e caselle combinate in una maschera</H1>
+
+<P class=T>Quando si utilizza una creazione guidata per creare una casella di riepilogo o una casella combinata, in Microsoft Access vengono impostate determinate proprietà per il <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A>. È possibile lavorare direttamente con queste proprietà se non si desidera utilizzare una creazione guidata per creare il controllo oppure è possibile utilizzare una creazione guidata per creare il controllo e quindi modificare tali proprietà per far funzionare il controllo nel modo desiderato. Per ulteriori informazioni su una qualsiasi delle seguenti proprietà, fare clic sulla proprietà nella finestra delle proprietà e premere F1.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si intende utilizzare una casella di riepilogo o una casella combinata associata in più maschere di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Access (mdb)</A>, è possibile impostare la maggior parte di queste proprietà in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura della tabella</A> anziché utilizzare la finestra delle proprietà del controllo. In tal modo è possibile specificare le proprietà soltanto una volta. Quando si aggiunge il campo a una maschera, il controllo viene automaticamente creato in base alle proprietà specificate.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=38%>Proprietà</TH>
+<TH width=62%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Tipo origine riga</B></TD>
+<TD class=TT width=62%>Funziona insieme alla proprietà <B>Origine riga</B>. Specificare il tipo di origine riga (tabella/query, elenco valori, elenco campi o funzione di Visual Basic) utilizzando questa proprietà, quindi specificare l'origine riga effettiva nella proprietà <B>Origine riga</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Origine riga</B></TD>
+<TD class=TT width=62%>Specifica il nome della tabella, della query o dell'istruzione SQL se la proprietà <B>Tipo origine riga</B> è impostata a <B>Tabella/Query</B>. Specifica le voci contenute nell'elenco, separate da punti e virgola se la proprietà <B>Tipo origine riga</B> è impostata a <B>Elenco valori</B>. Specifica il nome della tabella o della query se la proprietà <B>Tipo origine riga</B> è impostata a <B>Elenco campi</B>. È vuota se la proprietà <B>Tipo origine riga</B> è impostata al nome di una funzione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Colonna associata</B></TD>
+<TD class=TT width=62%>In una casella di riepilogo o in una casella combinata a più colonne <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">associata</A> specifica quale colonna è associata al campo sottostante specificato nella proprietà <B>Origine controllo</B>. I dati contenuti in quella colonna verranno memorizzati nel campo quando viene selezionata quella voce nell'elenco. Tali dati possono essere diversi da quelli visualizzati nell'elenco se la colonna viene nascosta.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Numero colonne</B></TD>
+<TD class=TT width=62%>Specifica il numero di colonne in una casella di riepilogo o in una casella combinata. È possibile includere una colonna ma non visualizzarla in un elenco impostando la proprietà <B>Larghezza colonne</B>. È possibile che si desideri effettuare tale operazione se si ha un elenco che ricerca valori da una tabella o da una query. È possibile includere un ID campo e nasconderlo nell'elenco. In una casella combinata la prima colonna visibile dell'elenco viene visualizzata nella parte di testo della casella combinata.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Larghezza colonne</B></TD>
+<TD class=TT width=62%>Specifica le larghezze di tutte le colonne, separate da punti e virgola. Immettere <B>0</B> per nascondere una colonna. Immettere un punto e virgola senza una misura per utilizzare quella predefinita (circa 1 pollice o 2,5 cm, a seconda dell'unità di misura impostata nel Pannello di controllo di Windows). In una casella combinata la prima colonna visibile compare nella parte casella di testo del controllo. Il tipo di dati di qualsiasi valore digitato nella casella combinata deve essere uguale o compatibile al tipo di dati della prima colonna visibile.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Intestazioni colonne</B></TD>
+<TD class=TT width=62%>Determina se i nomi dei campi dell'origine riga sottostante per una casella combinata o una casella di riepilogo vengono utilizzati come intestazioni delle colonne nella casella combinata o nella casella di riepilogo. Le intestazioni vengono visualizzate nelle caselle combinate soltanto quando si apre l'elenco.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Larghezza elenco</B></TD>
+<TD class=TT width=62%>Specifica la larghezza della parte casella di riepilogo di una casella combinata.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Righe in elenco</B></TD>
+<TD class=TT width=62%>Specifica il numero massimo di righe da visualizzare nella parte casella di riepilogo di una casella combinata.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Solo in elenco</B></TD>
+<TD class=TT width=62%>Determina se una casella combinata accetta qualsiasi tipo di testo immesso oppure solo quello che corrisponde a uno dei valori contenuti nell'elenco. Se si desidera che un nuovo valore immesso da un utente venga aggiunto all'elenco, impostare la proprietà a <B>No</B> e allegare una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> alla proprietà <B>Su non in elenco</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Su non in elenco</B></TD>
+<TD class=TT width=62%>Esegue la routine evento allegata quando si verifica l'evento NonInElenco. È possibile utilizzare questa proprietà per aggiungere automaticamente un nuovo valore a un elenco. Questa proprietà non è disponibile sulla scheda <B>Ricerca</B> nella visualizzazione Struttura della tabella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Espansione automatica</B></TD>
+<TD class=TT width=62%>Specifica se in Microsoft Access viene automaticamente inserito un valore che corrisponde ai caratteri digitati in una casella combinata. Questa proprietà non è disponibile sulla scheda <B>Ricerca</B> nella visualizzazione Struttura della tabella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%><B>Visualizza controllo</B></TD>
+<TD class=TT width=62%>Specifica il tipo di controllo (casella combinata o casella di riepilogo) creato da Microsoft Access per impostazione predefinita quando a una maschera viene aggiunto un <A HREF="javascript:HelpPopup('actip9.hlp','defLookupField');" class="pop">campo di ricerca</A>. Questa proprietà è disponibile solo nella scheda <B>Ricerca</B> nella visualizzazione Struttura della tabella.</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconPropertiesThatMakeListBoxesCombosWorkSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproBorderColorX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproapp1_1a.rtf'
+Tnum='187041'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio delle proprietà BorderColor, BackColor, ForeColor</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprobordercolorx"></A>Esempio delle proprietà BorderColor, BackColor, ForeColor</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito utilizza la funzione <B>RGB</B> per impostare le proprietà <B>BorderColor</B>, <B>BackColor</B> e <B>ForeColor</B> a seconda del valore presente nella casella di testo <CODE>txtScaduto.</CODE> Per impostare queste proprietà è anche possibile utilizzare la funzione <B>QBColor</B>. L'immissione del codice riportato di seguito all'interno dell'evento Form_Current( ) imposta le caratteristiche di visualizzazione del controllo non appena l'utente apre una maschera o si sposta in un nuovo record.</P>
+
+<PRE class=CT><CODE>Sub Form_Current()
+&nbsp;&nbsp;&nbsp; Dim curImportoDovuto As Currency, lngNero As Long
+&nbsp;&nbsp;&nbsp; Dim lngRosso As Long, lngGiallo As Long, lngBianco As Long
+
+&nbsp;&nbsp;&nbsp; If Not IsNull(Me!txtScaduto.Value) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curImportoDovuto = Me!txtScaduto.Value
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; lngRosso = RGB(255, 0, 0)
+&nbsp;&nbsp;&nbsp; lngNero = RGB(0, 0, 0)
+&nbsp;&nbsp;&nbsp; lngGiallo = RGB(255, 255, 0)
+&nbsp;&nbsp;&nbsp; lngBianco = RGB(255, 255, 255)
+&nbsp;&nbsp;&nbsp; If curImportoDovuto &gt; 100 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!txtScaduto.<B>BorderColor</B> = lngRosso
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!txtScaduto.<B>ForeColor</B> = lngRosso
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!txtScaduto.<B>BackColor</B> = lngGiallo
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!txtScaduto.<B>BorderColor</B> = lngNero
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!txtScaduto.<B>ForeColor</B> = lngNero
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!txtScaduto.<B>BackColor</B> = lngBianco
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

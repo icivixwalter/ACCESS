@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutCreatingCustomHelpForFormReportOrControl'
+Feature='Forms: Advanced'
+Handoff='3'
+SourceFile='CFRMADV2.rtf'
+Tnum='274780'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla creazione di una Guida personalizzata per una maschera, report o controllo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconaboutcreatingcustomhelpforformreportorcontrol"></A>Informazioni sulla creazione di una Guida personalizzata per una maschera, report o controllo</H1>
+
+<P class=T>Vi sono diversi modi per aggiungere una Guida a una maschera, un report o un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di Microsoft Access. Per visualizzare delle descrizioni quando si posiziona il puntatore del mouse sui controlli a cui sono associati, è possibile utilizzare la proprietà <B>Testo descrizione controllo</B>. In alternativa, è possibile utilizzare la proprietà <B>Testo barra stato</B> per visualizzare informazioni su una maschera o un controllo nella barra di stato. È anche possibile creare delle descrizioni per i pulsanti personalizzati che si inseriscono nelle barre degli strumenti.</P>
+
+<P class=T>Se si desidera visualizzare la Guida per un controllo solo quando si fa clic sul pulsante <B>Guida rapida</B> <A HREF="javascript:HelpPopup('actip9.hlp','defWhatsThisButton');" class="pop"><IMG SRC="images/help1.bmp"  BORDER=0></A> e poi sul controllo, è possibile utilizzare un editor di testi o un programma di elaborazione testi per creare un file della Guida. Il programma utilizzato deve essere in grado di salvare i documenti in formato Rich Text Format (RTF). Dopodiché è possibile compilare il file creato con Microsoft Help Workshop e associarlo a un controllo utilizzando le proprietà <B>File Guida</B> e <B>ID argomento Guida</B>.</P>
+
+<P class=T>Per le maschere e i report è possibile creare una Guida più estesa da visualizzare premendo F1 mediante le proprietà <B>File Guida</B> e <B>ID argomento Guida</B> della maschera o del report. Per creare un file della Guida di questo tipo è possibile utilizzare Microsoft Help Workshop o Microsoft HTML Help Workshop.</P>
+
+<P class=NT><B>Note&nbsp;&nbsp;</B> 
+
+<UL>
+	<LI class=NLB>È possibile scaricare Microsoft Help Workshop dal sito Web del Servizio Supporto tecnico Microsoft.<BR><BR></LI>
+
+	<LI class=NLB>Microsoft HTML Help Workshop viene fornito con Microsoft Office 2000 Developer.<BR><BR></LI>
+
+	<LI class=NLB>Per ulteriori informazioni sulla creazione di una Guida personalizzata, consultare il <I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I>. Per ulteriori informazioni, vedere <A HREF="JavaScript:hhobj_1.Click()">come ottenere una copia di questo manuale</A>. </LI>
+</UL>
+
+
+
+<P class=T>Torna a <A HREF="acdecCreateCustomHelpOrClickTip.htm">Creare una Guida personalizzata per una maschera, un report o un controllo</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutCreatingCustomHelpForFormReportOrControlW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

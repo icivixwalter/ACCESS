@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtItemAddedEP'
+Feature='acevt'
+Handoff='1'
+SourceFile='aevtv8_1a.rtf'
+Tnum='186903'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento AggiuntaElemento - Routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vakeyWithEvents">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acevtitemaddedep"></A>Evento AggiuntaElemento - Routine evento</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtItemAddedEPC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtItemAddedEPX">
+</OBJECT></P>
+
+
+
+<P class=T>Per creare una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> che viene eseguita quando si verifica l'evento AggiuntaElemento, seguire la procedura inclusa nella sezione Osservazioni di questo argomento.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>Private Sub</B> <I>evtRiferimenti</I><B>_ItemAdded(</B><I>riferimento</I><B>)</B></P>
+
+
+
+<P class=T>La routine evento AggiuntaElemento utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>evtRiferimenti</I></TD>
+<TD class=TT width=75%>Una variabile di oggetto che rappresenta l'insieme <A HREF="accolReferences.htm"><B>References</B></A>. È necessario dichiarare questa variabile di oggetto in un <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">modulo di classe</A> utilizzando la parola chiave <A HREF="JavaScript:hhobj_3.Click()"><B>WithEvents</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>riferimento</I></TD>
+<TD class=TT width=75%>L'oggetto <A HREF="acobjReference.htm"><B>Reference</B></A> che è stato aggiunto all'insieme <B>References</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>La routine evento AggiuntaElemento può contenere il codice che si desidera eseguire quando al progetto viene aggiunto un riferimento a una <A HREF="javascript:HelpPopup('actip9.hlp','defTypeLibrary');" class="pop">libreria tipi</A>. È possibile aggiungere un riferimento da Visual Basic utilizzando il metodo <A HREF="acmthCreateFromFile.htm"><B>AddFromFile</B></A> o <A HREF="acmthCreateFromGUID.htm"><B>AddFromGUID</B></A> per aggiungere un oggetto <B>Reference</B> all'insieme <B>References</B>.</P>
+
+<P class=T>Per creare la routine evento AggiuntaElemento:
+
+<OL>
+	<LI class=LS>Utilizzando la parola chiave <B>WithEvents</B>, dichiarare una variabile di oggetto di tipo <B>References</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defDeclarationsSection');" class="pop">sezione Dichiarazioni</A> di un modulo di classe. Microsoft Access utilizza questa variabile di oggetto per definire la routine evento per l'evento AggiuntaElemento. La riga di codice seguente mostra una tipica dichiarazione <B>WithEvents</B>:
+<PRE class=LCT1><CODE>Public WithEvents evtRiferimenti As References</CODE></PRE>
+</LI>
+
+	<LI class=LS>Creare una definizione di routine evento all'interno del modulo di classe selezionando il nome della variabile di oggetto <B>References</B> dalla casella <B>Oggetto</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defModuleWindow');" class="pop">finestra del modulo</A>. Se ad esempio si utilizza la dichiarazione mostrata nel passaggio precedente, nella casella a discesa <B>Oggetto</B> verrà visualizzato <CODE>evtRiferimenti.</CODE> Selezionare quindi l'evento AggiuntaElemento nella casella <B>Routine</B>.<BR><BR></LI>
+
+	<LI class=LS>Aggiungere il codice da eseguire quando si verifica l'evento. Se ad esempio si desidera visualizzare una finestra di messaggio che indica che al progetto è stato aggiunto un riferimento, aggiungere tale codice alla routine evento.<BR><BR></LI>
+
+	<LI class=LS>Assegnare l'insieme <B>References</B> alla variabile di oggetto <B>References</B> dichiarata con la parola chiave <B>WithEvents</B>. Tale istruzione di assegnazione deve trovarsi all'interno di una routine che viene eseguita prima che si verifichi l'evento AggiuntaElemento.
+<P class=LT1>Si potrebbe ad esempio includere tale istruzione nell'evento Inizializzazione del modulo di classe in cui è stata dichiarata la variabile di oggetto. Quando si crea quindi un'istanza della classe, la variabile di oggetto viene inizializzata automaticamente. Se si sta utilizzando la variabile di oggetto <CODE>evtRiferimenti, </CODE>questa routine evento risulta come riportato di seguito:
+
+<PRE class=LCT1><CODE>Private Sub Class_Initialize()
+&nbsp;&nbsp;&nbsp; Set evtRiferimenti = Application.References
+End Sub</CODE></PRE>
+</LI>
+</OL>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se per creare una routine evento per l'evento <A HREF="acevtItemRemoved.htm">RimozioneElemento</A>, è già stata eseguita la procedura precedente non è necessario ripeterla per l'evento AggiuntaElemento. Per entrambi, è possibile utilizzare la stessa variabile di oggetto <B>References</B>.</P>
+
+
+
+<P class=T>Per attivare l'evento AggiuntaElemento, è necessario creare il nuovo riferimento utilizzando la variabile di oggetto <B>References</B> dichiarata con la parola chiave <B>WithEvents</B>.</P>
+
+<P class=T>Per aggiungere un riferimento e attivare l'evento:
+
+<OL>
+	<LI class=LS>All'interno di un <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">modulo standard</A>, creare una nuova <A HREF="javascript:HelpPopup('actip9.hlp','defInstance');" class="pop">istanza</A> della classe in cui è stata dichiarata la variabile di oggetto <B>References</B>. Se ad esempio il nome della classe è RefEvents, è possibile creare una nuova istanza della classe e assegnarla a una variabile di oggetto con l'istruzione di dichiarazione riportata di seguito. Tale istruzione può esistere a livello di modulo o all'interno di una routine.
+<PRE class=LCT1><CODE>Dim objEventiRif As New RefEvents</CODE></PRE>
+</LI>
+
+	<LI class=LS>In una routine <A HREF="javascript:HelpPopup('actip9.hlp','defSubProcedure');" class="pop"><B>Sub</B></A> o <A HREF="javascript:HelpPopup('actip9.hlp','defFunctionProcedure');" class="pop"><B>Function</B></A>, creare un nuovo oggetto <B>Reference</B> utilizzando il metodo <B>AddFromFile</B> o <B>AddFromGUID</B> della variabile di oggetto che rappresenta l'insieme <B>References</B> (<CODE>evtRiferimenti</CODE>). Poiché l'evento AggiuntaElemento nel modulo di classe è definito in associazione a una determinata variabile di oggetto <B>References</B>, è necessario creare il nuovo oggetto <B>Reference</B> utilizzando tale variabile. In caso contrario, l'evento non si verifica.
+<P class=4>
+</LI>
+</OL>
+
+<P class=T>Tenere presente che è necessario qualificare la variabile di oggetto <B>References</B> con il nome della classe in cui è dichiarata.</P>
+
+<P class=T>Dopo aver completato i passaggi riportati in precedenza, è possibile aggiungere un nuovo riferimento con una routine quale quella riportata di seguito:</P>
+
+<PRE class=CT><CODE>Function AggiungiRiferimento(strNomeFile As String)
+&nbsp;&nbsp;&nbsp; Dim ref As Reference
+&nbsp;&nbsp;&nbsp; ' Crea una nuova istanza della classe RefEvents.
+&nbsp;&nbsp;&nbsp; Dim objEventiRif As New RefEvents
+
+&nbsp;&nbsp;&nbsp; ' Crea un riferimento sulla variabile dell'insieme References
+&nbsp;&nbsp;&nbsp; ' definita nella classe RefEvents.
+&nbsp;&nbsp;&nbsp; Set ref = objEventiRif.evtRiferimenti.AddFromFile(strNomeFile)
+End Function</CODE></PRE>
+
+
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>La routine che inizializza la variabile di oggetto <B>References</B> deve avere la stessa area di validità della dichiarazione della variabile di oggetto. Se ad esempio la variabile di oggetto <B>References</B> è stata dichiarata come <B>Private</B> all'interno di un modulo di classe, è necessario inizializzare la variabile in una routine all'interno dello stesso modulo di classe.<BR><BR></LI>
+
+	<LI class=NLB>È possibile includere la routine evento AggiuntaElemento solo in un modulo di classe.<BR><BR></LI>
+
+	<LI class=NLB>Una volta dichiarata una <A HREF="javascript:HelpPopup('actip9.hlp','defModuleLevelVariable');" class="pop">variabile a livello di modulo</A> per rappresentare l'insieme <B>References</B>, è possibile utilizzare tale variabile per creare definizioni di routine evento per entrambi gli eventi AggiuntaElemento e RimozioneElemento.<BR><BR></LI>
+
+	<LI class=NLB>Se all'interno di un singolo progetto sono presenti più routine evento AggiuntaElemento, queste verranno eseguite tutte quando si verifica l'evento, seguendo un ordine non definito. È consigliabile quindi creare in un progetto un'unica routine evento AggiuntaElemento e includere tutto il codice da eseguire quando l'evento si verifica in tale routine.<BR><BR></LI>
+
+	<LI class=NLB>L'evento AggiuntaElemento si verifica dopo che il riferimento è stato aggiunto al progetto.</LI>
+</UL>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthAddS'
+Feature='acmth'
+Handoff='3'
+SourceFile='acob2mth_1a.doc'
+Tnum='234317'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Add</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthadds"></A>Metodo Add</H1>
+
+
+
+<P class=T>Gli elementi aggiunti ad un <A HREF="javascript:HelpPopup('actip9.hlp','defUserDefinedCollection');" class="pop">insieme definito dall'utente</A> vengono indicizzati automaticamente. Tramite l'indice è possibile fare riferimento ad un singolo elemento. Se si dispone, ad esempio, di un insieme <CODE>colThings</CODE> contenente quattro oggetti, è possibile fare riferimento al terzo elemento presente nell'insieme utilizzando l'espressione <CODE>colThings(3)</CODE>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Quando si aggiungono elementi ad un oggetto <B>Collection</B>, tali elementi vengono indicizzati automaticamente a partire dal numero uno. Quando si elenca, quindi, un oggetto <B>Collection</B>, ricordare che l'indice inizia dal numero uno. Gli insiemi incorporati, al contrario, vengono in genere indicizzati a partire dallo zero.</P>
+
+
+
+<P class=T>Quando si aggiunge un oggetto ad un insieme definito dall'utente, oltre all'indice automatico è possibile specificare per tale oggetto anche un tasto personalizzato. Nei successivi riferimenti all'oggetto, è possibile fare riferimento al tasto personalizzato. È possibile, ad esempio, aggiungere un oggetto <CODE>objMio</CODE> con il seguente tasto:</P>
+
+<PRE class=CT><CODE>colThings.Add Item := objMio, key := ("A")</CODE></PRE>
+
+
+
+<P class=T>È possibile, in seguito, fare riferimento a tale oggetto nell'insieme come <CODE>colThings(A)</CODE> o in base al relativo indice numerico.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

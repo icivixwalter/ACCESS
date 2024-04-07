@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthAddPagesX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8_1a.rtf'
+Tnum='186836'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi Add, Remove (insieme Pages)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthaddpagesx"></A>Esempio di metodi Add, Remove (insieme Pages)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come aggiungere una pagina a un controllo Struttura a schede di una maschera che si trova in visualizzazione Struttura. Per provare tale esempio, creare una nuova maschera chiamata Maschera1 con un controllo Struttura a schede chiamato CtlScheda0. Incollare il codice riportato di seguito in un modulo standard ed eseguirlo:</P>
+
+<PRE class=CT><CODE>Function AddPage() As Boolean
+&nbsp;&nbsp;&nbsp; Dim frm As Form
+&nbsp;&nbsp;&nbsp; Dim tbc As TabControl, pge As Page
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_AddPage
+&nbsp;&nbsp;&nbsp; Set frm = Forms!Maschera1
+&nbsp;&nbsp;&nbsp; Set tbc = frm!CtlScheda0
+&nbsp;&nbsp;&nbsp; tbc.Pages.<B>Add</B>
+&nbsp;&nbsp;&nbsp; AddPage = True
+
+Exit_AddPage:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_AddPage:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; AddPage = False
+&nbsp;&nbsp;&nbsp; Resume Exit_AddPage
+End Function</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo vengono rimosse delle pagine dal controllo Struttura a schede:</P>
+
+<PRE class=CT><CODE>Function RemovePage() As Boolean
+&nbsp;&nbsp;&nbsp; Dim frm As Form
+&nbsp;&nbsp;&nbsp; Dim tbc As TabControl, pge As Page
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_RemovePage
+&nbsp;&nbsp;&nbsp; Set frm = Forms!Maschera1
+&nbsp;&nbsp;&nbsp; Set tbc = frm!CtlScheda0
+&nbsp;&nbsp;&nbsp; tbc.Pages.<B>Remove</B>
+&nbsp;&nbsp;&nbsp; RemovePage = True
+
+Exit_RemovePage:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_RemovePage:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; RemovePage = False
+&nbsp;&nbsp;&nbsp; Resume Exit_RemovePage
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='3' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbTheQueryReturnsTooManyRecordsS'
+Feature='Queries: Troubleshooting'
+Handoff='1'
+SourceFile='CQRYTRB.RTF'
+Tnum='188678'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>I record recuperati sono troppi</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrbthequeryreturnstoomanyrecordss"></A>I record recuperati sono troppi</H1>
+
+<UL>
+	<LI class=LB1>Se la query include più di una tabella o query, collegarle con una linea di <A HREF="javascript:HelpPopup('actip9.hlp','defJoin');" class="pop">join</A> se non sono state ancora collegate. Per ulteriori informazioni, fare clic su  <A HREF="achowJoinMultipleTablesInQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+<P class=T>Se le tabelle o le query sono già collegate, controllare le proprietà join di ogni linea di join per vedere quale tipo di join è attivo. Le proprietà join determinano se una tabella o una query fornisce tutti i record o solo quelli che corrispondono ai record contenuti nell'altra tabella.
+</P>
+<A HREF="achowJoinTypesHowTheyAffectQueryResults.htm">Esempi di tipi di join, loro modifiche e relativa influenza sui risultati delle query</A>
+
+
+<UL>
+	<LI class=LB1>Aggiungere dei <A HREF="javascript:HelpPopup('actip9.hlp','defCriteria');" class="pop">criteri</A> per limitare i record recuperati dalla query. Vengono recuperati solo i record che soddisfano i criteri definiti. Per ulteriori informazioni sulla specifica dei criteri, fare clic su  <A HREF="acconCriteriaInQueriesRetrieveCertainRecordsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+<UL>
+	<LI class=LB1>Se sono già stati specificati dei criteri, è possibile che si desideri specificare criteri aggiuntivi per lo stesso campo utilizzando l'operatore <B>And</B> o per altri campi. Verificare inoltre che i criteri esistenti siano stati immessi correttamente. Controllare errori di ortografia, spazi non necessari o caratteri aggiuntivi. Verificare che siano stati impostati i criteri per il campo appropriato e che siano i criteri che i record devono soddisfare. Se si stanno utilizzando criteri alternativi nella riga <B>Oppure</B> nella griglia di struttura della query o nelle espressioni criterio che utilizzano l'operatore <B>OR</B>, è possibile che si desideri rimuoverli. Per vedere esempi relativi alla specifica di più criteri, fare clic su  <A HREF="aclrgWaysToSpecifyMultipleCriteriaInQuery.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Controllare i dati che si desidera trovare. Se i dati contengono spazi aggiuntivi o altri caratteri speciali, i criteri devono tenerne conto. È possibile utilizzare caratteri jolly nei criteri se non si è sicuri o non si desidera specificare i valori di campo esatti. Se si stanno già utilizzando dei caratteri jolly ma non si ottengono i record desiderati, è possibile che si stiano utilizzando i caratteri jolly sul tipo di dati errato. Per ulteriori informazioni sui caratteri jolly, fare clic su  <A HREF="acconWildcardCharactersS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>In una query di selezione, di accodamento o di creazione tabella, se si sta utilizzando <B>Primi valori</B>  <A HREF="javascript:HelpPopup('actip9.hlp','actbrTopValuesQ');" class="pop"><IMG SRC="images/topvalue.bmp" BORDER=0></A>  sulla barra degli strumenti in visualizzazione Struttura della query o se si sta impostando la proprietà <B>Primi valori</B> nella finestra delle proprietà della query per restituire un numero specificato di valori più alti o più bassi in un campo, la query potrebbe restituire un numero di record maggiore di quello specificato. Ciò si verifica perché vengono restituiti anche tutti i record che corrispondono all'ultimo record. Una query, pertanto, restituirebbe tutti e tre i record riportati di seguito anche se è stato richiesto di vedere gli impiegati con i due totali di vendite maggiori, poiché non fa distinzione tra i due totali di vendite ammontanti a 50.000.
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=57%>IDImpiegato</TH>
+<TH width=43%>Vendite</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=57%>1</TD>
+<TD class=TT width=43%>60.000</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=57%>2</TD>
+<TD class=TT width=43%>50.000</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=57%>3</TD>
+<TD class=TT width=43%>50.000</TD>
+</TR>
+</TABLE><BR>
+
+<P class=LT1>Se non si desidera duplicare i valori che devono essere restituiti, impostare a <B>Sì</B> la proprietà <B>Valori univoci</B> nella finestra delle proprietà della query. 
+</LI>
+</UL>Per ulteriori informazioni, fare clic su <A HREF="achowDisplayDuplicateValuesOnceInQuerysResultsUniqS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>
+</LI>
+</UL>
+
+<P class=6>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbTheQueryReturnsTooManyRecordsSW">
+</OBJECT>
+</P>
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjErrorX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acdobjx.doc'
+Tnum='234416'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Error e insieme Errors (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjerrorx"></A>Esempio di oggetto Error e insieme Errors (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene generato un errore nel tentativo di aprire un oggetto <B>Recordset</B> in una tabella Studenti non esistente. Le informazioni relative a tale errore vengono memorizzate sia nell'oggetto DAO <B>Error</B> che nell'oggetto Visual Basic <B>Err</B>. La routine stampa il valore delle proprietà <B>Description</B>, <B>Source</B> e <B>Number</B> dell'oggetto <B>Error</B>. Si stampano, quindi, i valori delle proprietà corrispondenti dell'oggetto <B>Err</B>.</P>
+
+<P class=T>Si noti che l'ultimo oggetto <B>Error</B> nell'insieme <B>Errors</B> dovrebbe sempre fare riferimento allo stesso errore come oggetto <B>Err</B>. Il valore di <B>Err.Number</B> dovrebbe quindi essere equivalente a quello di <B>Errors.Count</B> – 1. Se questi due valori non sono equivalenti, è possibile che le informazioni contenute nell'insieme <B>Errors</B> non siano aggiornate. Utilizzare il metodo <B>Refresh</B> per assicurarsi che l'insieme <B>Errors</B> comprenda le informazioni più aggiornate relative all'errore.</P>
+
+<PRE class=CT><CODE>Sub VerificaErrori()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef, rst As Recordset
+&nbsp;&nbsp;&nbsp; ' Dichiarare variabile oggetto Error per enumerazione
+&nbsp;&nbsp;&nbsp; ' insieme Errors.
+&nbsp;&nbsp;&nbsp; Dim errX As <B>Error</B>
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Ignora gli errori.
+&nbsp;&nbsp;&nbsp; On Error Resume Next
+&nbsp;&nbsp;&nbsp; ' Elimina errore in oggetto Err.
+&nbsp;&nbsp;&nbsp; Err.Clear
+&nbsp;&nbsp;&nbsp; ' Aggiorna insieme Errors.
+&nbsp;&nbsp;&nbsp; <B>Errors</B>.Refresh
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Prova ad aprire oggetto Recordset su tabella non esistente.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("Studenti")
+&nbsp;&nbsp;&nbsp; Debug.Print "Oggetto Error DAO:"
+&nbsp;&nbsp;&nbsp; ' Stampa numero di errori in insieme Errors.
+&nbsp;&nbsp;&nbsp; Debug.Print "&gt;&gt;&gt;Numero di errori: "; <B>Errors</B>.Count
+&nbsp;&nbsp;&nbsp; ' Enumera insieme Errors e proprietà della chiave.
+&nbsp;&nbsp;&nbsp; For Each errX In DBEngine.<B>Errors</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print errX.Description
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print errX.Source
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print errX.Number
+&nbsp;&nbsp;&nbsp; Next errX
+&nbsp;&nbsp;&nbsp; Debug.Print
+&nbsp;&nbsp;&nbsp; Debug.Print "Oggetto Err VBA:"
+&nbsp;&nbsp;&nbsp; ' Visualizza proprietà corrispondenti di oggetto Err.
+&nbsp;&nbsp;&nbsp; Debug.Print Err.Description
+&nbsp;&nbsp;&nbsp; Debug.Print Err.Source
+&nbsp;&nbsp;&nbsp; Debug.Print Err.Number
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

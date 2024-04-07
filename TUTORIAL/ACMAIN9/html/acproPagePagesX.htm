@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPagePagesX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproprt1_1a.rtf'
+Tnum='187838'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Page e Pages</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpropagepagesx"></A>Esempio di proprietà Page e Pages</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si mostra come visualizzare un messaggio che indica il numero delle pagine contenute nel report. Per fare in modo che questa procedura funzioni, il report deve includere una casella di testo con la proprietà <B>ControlSource</B> impostata all'espressione <CODE>=Pages</CODE>. Per eseguire la verifica di questo esempio, incollare il codice riportato di seguito nell'evento Pagina della maschera Elenco alfabetico prodotti.</P>
+
+<PRE class=CT><CODE>Dim intTotalePagine As Integer, strMsg As String
+intTotalePagine = Me.Pages
+strMsg = "Questo report contiene " &amp; intTotalePagine &amp; " pagine."
+MsgBox strMsg</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

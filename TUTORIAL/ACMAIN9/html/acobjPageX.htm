@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjPageX'
+Feature='acobj'
+Handoff='1'
+SourceFile='aobjv8.rtf'
+Tnum='186791'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Page e insieme Pages</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjpagex"></A>Esempio di oggetto Page e insieme Pages</B> </P>
+
+
+
+<P class=T>La routine evento riportata di seguito scorre tutti i controlli di ogni pagina di un controllo Struttura a schede quando l'utente seleziona tale pagina.</P>
+
+<P class=T>Per provare questo esempio, creare una nuova maschera con un controllo Struttura a schede denominato CtlTab0 e imposta la relativa proprietà <B>Su modifica</B> a [Routine evento]. Incollare il codice riportato di seguito nel modulo della maschera. Passare in visualizzazione Maschera e fare clic sulle diverse schede per scorrere i relativi controlli.</P>
+
+<PRE class=CT><CODE>Private Sub Modifica_TabCtl0()
+&nbsp;&nbsp;&nbsp; Dim tbc As Control, pge As <B>Page</B>
+&nbsp;&nbsp;&nbsp; Dim ctl As Control
+
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a controllo struttura a scheda.
+&nbsp;&nbsp;&nbsp; Set tbc = Me!TabCtl0
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a pagina correntemente selezionata.
+&nbsp;&nbsp;&nbsp; Set pge = tbc.<B>Pages(</B>tbc.Value<B>)</B>
+&nbsp;&nbsp;&nbsp; ' Enumera i controlli sulla pagina correntemente selezionata.
+&nbsp;&nbsp;&nbsp; Debug.Print pge.Name &amp; " Controlli:"
+&nbsp;&nbsp;&nbsp; For Each ctl In pge.Controls
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print ctl.Name
+&nbsp;&nbsp;&nbsp; Next ctl
+&nbsp;&nbsp;&nbsp; Debug.Print
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

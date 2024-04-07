@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproTimerIntervalX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apromsc1_1a.rtf'
+Tnum='188186'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà TimerInterval</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprotimerintervalx"></A>Esempio di proprietà TimerInterval</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene spiegato come creare un pulsante intermittente in una maschera, visualizzando e nascondendo un'icona nel pulsante. La routine evento Caricamento della maschera imposta la proprietà <B>TimerInterval</B> della maschera a 1000 in modo che la visualizzazione dell'icona sia attivata una volta al secondo.</P>
+
+<PRE class=CT><CODE>Sub Form_Load()
+&nbsp;&nbsp;&nbsp; Me.<B>TimerInterval</B> = 1000
+End Sub
+
+Sub Form_Timer()
+&nbsp;&nbsp;&nbsp; Static intMostraImmagine As Integer
+&nbsp;&nbsp;&nbsp; If intMostraImmagine Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Mostra icona.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!btnImmagine.Picture = "C:\Icone\Flash.ico"
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Non mostra icona.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!btnImmagine.Picture = ""
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; intMostraImmagine = Not intMostraImmagine
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

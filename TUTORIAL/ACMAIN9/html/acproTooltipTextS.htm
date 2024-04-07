@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproTooltipTextS'
+Feature='acpro'
+Handoff='1'
+SourceFile='acocmdbsp_1a.doc'
+Tnum='234565'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà TooltipText</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprotooltiptexts"></A>Proprietà TooltipText</H1>
+
+
+
+<P class=T>In Microsoft Access 2000 per impostare la <A HREF="javascript:HelpPopup('actip9.hlp','defToolTips');" class="pop">descrizione comandi</A> per un controllo di una barra dei comandi, è possibile utilizzare la finestra di dialogo <B>Proprietà dei controlli</B> <I>Barra degli strumenti</I> per i controlli della<A HREF="javascript:HelpPopup('actip9.hlp','defCommandBar');" class="pop"> barra dei comandi</A>. Visualizzare la finestra di dialogo <B>Personalizza</B>, scegliendo <B>Barre degli strumenti</B> dal menu <B>Visualizza</B>, quindi <B>Personalizza</B>. Per i controlli della <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBar');" class="pop">barra dei menu</A> e della <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A>, visualizzare la barra dei menu o quella degli strumenti, quindi fare clic con il pulsante destro del mouse sul controllo di cui si desidera impostare la proprietà <B>TooltipText</B>. Per i controlli dei <A HREF="javascript:HelpPopup('actip9.hlp','defShortCutMenus');" class="pop">menu di scelta rapida</A>, selezionare la casella di controllo <B>Menu di scelta rapida</B> nella scheda <B>Barre degli strumenti</B> della finestra di dialogo <B>Personalizza</B>, quindi trovare il controllo del menu di scelta rapida desiderato nella barra dei menu visualizzata e fare clic sul controllo col pulsante destro del mouse. Fare clic sul comando <B>Proprietà</B> e nella casella <B>Descrizione comandi</B> immettere il testo desiderato.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

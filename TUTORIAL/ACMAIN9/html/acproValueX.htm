@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproValueX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproedt1.doc'
+Tnum='188247'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Value</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprovaluex"></A>Esempio di proprietà Value</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito mostra come è possibile richiamare una o due routine a seconda che la casella di controllo Credito della maschera Clienti sia selezionata o deselezionata.</P>
+
+<PRE class=CT><CODE>Sub TipoPagamento()
+ If Forms!Clienti!Credito.Value = False Then
+ ProcessContanti
+ ElseIf Forms!Clienti!Credito.Value = True Then
+ ProcessCredito
+ End If
+End Sub</CODE></PRE>
+
+
+
+
+
+</BODY>
+</HTML>

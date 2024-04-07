@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjPropertyX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acdobjx.doc'
+Tnum='234517'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Property e insieme Properties (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjpropertyx"></A>Esempio di oggetto Property e insieme Properties (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creata una proprietà definita da Microsoft Access, ma applicabile a oggetti DAO. Poiché il modulo di gestione di database Microsoft Jet non è in grado di riconoscere le proprietà definite da Microsoft Access, è necessario creare un nuovo oggetto <B>Property</B> e accodarlo all'insieme <B>Properties</B> nel caso si imposti la proprietà per la prima volta.</P>
+
+<P class=T>È possibile utilizzare la stessa funzione per impostare una proprietà definita dall'utente su un oggetto Microsoft Access o DAO.</P>
+
+<P class=T>Si noti che, quando si crea la proprietà, è necessario specificare la costante corretta per l'argomento <I>tipo</I>. Se non si è sicuri del tipo di dati da utilizzare, cercare la singola proprietà nell'indice della Guida.</P>
+
+<PRE class=CT><CODE>Function ImpostaProprietàAccess(obj As Object, strNome As String, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intTipo As Integer, varImpostazione As Variant) As Boolean
+&nbsp;&nbsp;&nbsp; Dim prp As Property
+&nbsp;&nbsp;&nbsp; Const conPropNonTrovata As Integer = 3270
+
+&nbsp;&nbsp;&nbsp; On Error GoTo ErroreImpostaProprietàAccess
+&nbsp;&nbsp;&nbsp; ' Si riferisce esplicitamente a insieme Properties.
+&nbsp;&nbsp;&nbsp; obj.<B>Properties</B>(strNome) = varImpostazione
+&nbsp;&nbsp;&nbsp; obj.<B>Properties</B>.Refresh
+&nbsp;&nbsp;&nbsp; ImpostaProprietàAccess = True
+&nbsp;&nbsp;&nbsp; 
+EsciImpostaProprietàAccess:
+&nbsp;&nbsp;&nbsp; Exit Function
+&nbsp;&nbsp;&nbsp; 
+ErroreImpostaProprietàAccess:
+&nbsp;&nbsp;&nbsp; If Err = conPropNonTrovata Then
+&nbsp;&nbsp;&nbsp; ' Crea la proprietà, ne definisce il tipo e ne imposta il valore iniziale.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set prp = obj.CreateProperty(strNome, intTipo, varImpostazione)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Accoda oggetto Property a insieme Properties.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.<B>Properties</B>.Append prp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; obj.<B>Properties</B>.Refresh
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ImpostaProprietàAccess = True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume EsciImpostaProprietàAccess
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; vbCrLf &amp; Err.Description
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ImpostaProprietàAccess = False
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume EsciImpostaProprietàAccess
+&nbsp;&nbsp;&nbsp; End If
+End Function</CODE></PRE>
+
+
+
+<P class=T>È possibile chiamare la funzione precedente con una routine simile a quella riportata di seguito:</P>
+
+<PRE class=CT><CODE>Sub RichiamaProprietàImpostata()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef
+&nbsp;&nbsp;&nbsp; Dim blnRitorno As Boolean
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento alla tabella Impiegati.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs!Impiegati
+&nbsp;&nbsp;&nbsp; ' Richiama la funzione ImpostaProprietàAccess.
+&nbsp;&nbsp;&nbsp; blnReturn = ImpostaProprietàAccess(tdf, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "DatasheetFontItalic", dbBoolean, True)
+&nbsp;&nbsp;&nbsp; ' Valuta il valore restituito.
+&nbsp;&nbsp;&nbsp; If blnRitorno = True Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Proprietà impostata correttamente."
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Proprietà non impostata correttamente."
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

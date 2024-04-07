@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRunCommand'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8_1a.rtf'
+Tnum='186668'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo RunCommand</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthruncommand"></A>Metodo RunCommand</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRunCommandC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRunCommandX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRunCommandA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>RunCommand</B> esegue un comando della barra degli strumenti incorporata o del menu incorporato.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN>[<I>oggetto</I>.]<B>RunCommand</B> <I>comando</I></P>
+
+
+
+<P class=T>Il metodo <B>RunCommand</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>oggetto</I></TD>
+<TD class=TT width=75%>Facoltativo. Oggetto <A HREF="acobjApplication.htm"><B>Application</B></A> oppure oggetto <A HREF="acobjDoCmd.htm"><B>DoCmd</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>comando</I></TD>
+<TD class=TT width=75%>Costante intrinseca che specifica quale comando della barra degli strumenti incorporata o del menu incorporato deve essere eseguito.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>A ogni comando di menu e della barra degli strumenti è associata in Microsoft Access una costante che può essere utilizzata con il metodo <B>RunCommand</B> per eseguire quel comando da Visual Basic.</P>
+
+<P class=T>Per un elenco delle possibili costanti relative all'argomento <I>comando</I>, vedere <A HREF="accstRunMethodConstants.htm">Costanti del metodo RunCommand</A>. È inoltre possibile visualizzare queste costanti nel Visualizzatore oggetti. Nella casella <B>Progetto/libreria</B> selezionare <B>Access</B>, quindi nell'elenco <B>Classi</B> selezionare <B>AcCommand</B>. Le costanti vengono visualizzate nell'elenco <B>Membri di</B>.</P>
+
+<P class=T>Non è possibile utilizzare il metodo <B>RunCommand</B> per eseguire un comando su una barra degli strumenti personalizzata o un menu personalizzato, ma solo su barre degli strumenti e menu incorporati.</P>
+
+<P class=T>Il metodo <B>RunCommand</B> sostituisce il metodo <A HREF="acmthactDoMenuItem.htm"><B>DoMenuItem</B></A> dell'oggetto <B>DoCmd</B>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

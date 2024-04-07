@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOLEAutomationS'
+Feature='accon'
+Handoff='1'
+SourceFile='acobcons.rtf'
+Tnum='234571'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'automazione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acconoleautomations"></A>Informazioni sull'automazione</H1>
+
+
+
+<P class=T>In Microsoft Access è possibile creare un oggetto di <A HREF="javascript:HelpPopup('actip9.hlp','defOLEAutomation');" class="pop">automazione</A> (in precedenza definita come Automazione OLE) utilizzando la parola chiave <B>New</B> per dichiarare una variabile di oggetto oppure utilizzando la funzione <B>CreateObject</B> o <B>GetObject</B>.</P>
+
+<P class=T>L'automazione viene supportata in due modi diversi. Microsoft Access è un <A HREF="javascript:HelpPopup('actip9.hlp','defActiveXComponent');" class="pop">componente COM</A>, il che significa che è possibile accedere agli oggetti esposti da altre applicazioni e manipolarli da Microsoft Access oppure manipolare gli oggetti di Microsoft Access da un'altra applicazione che supporta l'automazione (in precedenza definita come Automazione OLE).</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp;&nbsp; Prima di utilizzare Microsoft Access o un'altra applicazione come componente, è necessario impostare un riferimento alla libreria di oggetti dell'applicazione. Per ulteriori informazioni sull'impostazione dei riferimenti, ricercare l'argomento relativo all'impostazione dei riferimenti nell'indice della Guida in linea.</P>
+
+<P class=T>Se ad esempio si utilizza Microsoft Access come componente, è possibile utilizzare gli oggetti di Microsoft Excel creando un nuovo oggetto di Microsoft Excel da Microsoft Access e facendo in modo che una variabile di oggetto punti a tale oggetto. A questo punto, è possibile impostarne le proprietà e chiamarne i metodi seguendo le stesse procedure utilizzate per qualsiasi oggetto. È possibile creare una nuova istanza della classe <B>Application</B> di Microsoft Excel in uno dei modi indicati di seguito:</P>
+
+<PRE class=CT><CODE>Dim appXL As New Excel.Application</CODE></PRE>
+
+
+
+<PRE class=CT><CODE>' Oppure</CODE></PRE>
+
+
+
+<PRE class=CT><CODE>Dim appXL As Excel.Application
+Set appXL = CreateObject("Excel.Application")</CODE></PRE>
+
+
+
+<P class=T>Se Microsoft Excel è già in esecuzione, utilizzare la funzione <B>GetObject</B> per fare in modo che una variabile di oggetto punti all'<A HREF="javascript:HelpPopup('actip9.hlp','defInstance');" class="pop">istanza</A> corrente della classe <B>Application</B> di Microsoft Excel.</P>
+
+<PRE class=CT><CODE>Dim appXL As Excel.Application
+Set appXL = GetObject( , "Excel.Application")</CODE></PRE>
+
+
+
+<P class=T>Per ulteriori informazioni sull'oggetto <B>Application</B>, ricercare "<B>Application</B> - oggetto" nell'indice della Guida in linea.</P>
+
+<P class=T>Se Microsoft Access viene utilizzato come componente, è possibile manipolare gli oggetti di Microsoft Access da un'altra applicazione. È possibile ad esempio aprire una maschera di Microsoft Access da Microsoft Excel e utilizzarla per visualizzare i dati in una cartella di lavoro di Microsoft Excel. Nell'esempio riportato di seguito si crea un nuovo oggetto di Microsoft Access da Microsoft Excel:</P>
+
+<PRE class=CT><CODE>Dim appAccess As New Access.Application</CODE></PRE>
+
+
+
+<P class=T>Se Microsoft Access è già in esecuzione, utilizzare la funzione <B>GetObject</B> per fare in modo che una variabile di oggetto punti all'istanza corrente della classe <B>Application</B> di Microsoft Access.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

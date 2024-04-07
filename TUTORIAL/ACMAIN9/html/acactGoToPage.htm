@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactGoToPage'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187280'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione VaiAPagina</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactGoToPage">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactgotopage"></A>Azione VaiAPagina</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactGoToPageC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactGoToPageX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione VaiAPagina sposta lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A> della <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> attiva nel primo <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di una determinata pagina. È possibile utilizzare l'azione se è stata <A HREF="achowAddPageBreakCreateMultiplescreenFormS.htm">creata una maschera con interruzioni di pagina</A> contenente gruppi di informazioni correlate. Nel caso in cui si abbia ad esempio la maschera Impiegati contenente informazioni personali in una pagina, informazioni relative all'ufficio in un'altra pagina e informazioni relative alle vendite in una terza pagina, è possibile utilizzare l'azione VaiAPagina per spostarsi alla pagina desiderata. È inoltre possibile presentare più pagine relative alle informazioni in una singola maschera utilizzando i <A HREF="javascript:HelpPopup('actip9.hlp','defTabControl');" class="pop">controlli Struttura a schede</A>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione VaiAPagina utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomenti azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Numero pagina</TD>
+<TD class=TT width=75%>Il numero della pagina su cui si desidera spostare lo stato attivo. Immettere il numero della pagina nella casella <B>Numero pagina</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. Se si lascia vuota questa casella, lo stato attivo rimane sulla pagina corrente. È possibile utilizzare gli argomenti A destra e Giù per visualizzare la parte della pagina desiderata.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>A destra</TD>
+<TD class=TT width=75%>La coordinata orizzontale del punto nella pagina, misurato a partire dall'angolo sinistro della finestra che lo contiene. Il punto appare nel bordo sinistro della finestra. L'argomento è richiesto nel caso in cui venga specificato un argomento Giù.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Giù</TD>
+<TD class=TT width=75%>La coordinata verticale del punto sulla pagina, misurato a partire dal bordo superiore della finestra che lo contiene. Il punto appare nel bordo superiore della finestra. L'argomento è richiesto nel caso in cui venga specificato un argomento A destra.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp; Le misure relative agli argomenti A destra e Giù sono in pollici o centimetri, a seconda dell'unità di misura impostata in <B>Sistema di misura</B> della scheda <B>Numeri</B> nella finestra di dialogo <B>Proprietà - Impostazioni internazionali</B> nel Pannello di controllo di Microsoft Windows.</P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare l'azione per selezionare il primo controllo, definito dall'<A HREF="javascript:HelpPopup('actip9.hlp','defTabOrder');" class="pop">ordine di tabulazione</A> della maschera, nella pagina specificata. Utilizzare l'azione <A HREF="acactGoToControl.htm">VaiAControllo</A> per spostarsi su un determinato controllo della maschera.</P>
+
+<P class=T>È possibile utilizzare gli argomenti A destra e Giù per maschere contenenti pagine che superano le dimensioni della finestra di Microsoft Access. Utilizzare l'argomento Numero pagina per spostarsi alla pagina prescelta, quindi gli argomenti A destra e Giù per visualizzare la parte desiderata. Microsoft Access visualizza la parte della pagina in base alla distanza specificata dall'angolo superiore sinistro della pagina.</P>
+
+<P class=T>Non è possibile utilizzare l'azione VaiAPagina nei seguenti casi:
+
+<UL>
+	<LI class=LB1>Per spostare lo stato attivo su una pagina di una maschera nascosta.<BR><BR></LI>
+
+	<LI class=LB1>Per spostare lo stato attivo da una pagina all'altra all'interno dei controlli Struttura a schede.</LI>
+</UL>
+
+
+
+<P class=T>Per eseguire l'azione VaiAPagina in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>GoToPage</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

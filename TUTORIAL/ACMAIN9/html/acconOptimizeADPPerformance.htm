@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOptimizeADPPerformance'
+Feature='Access Project: Basic'
+Handoff='3'
+SourceFile='ccsbas.rtf'
+Tnum='274237'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Ottimizzare le prestazioni dei progetti di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dvconWorkingWithStoredProcedures">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dvconWorkingWithTriggers">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconWaysToSortRecordsInTableQueryFormOrReport">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowControlRecordsFromSQLSDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acDecCreateFilterInDatasheetOrForm">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowOptimizePerformanceInFilterByFormOrServerFilterByFormWindow">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconoptimizeadpperformance"></A>Ottimizzare le prestazioni dei progetti di Microsoft Access</H1>
+
+<P class=T>In un'applicazione <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgClientserver');" class="pop">client/server</A> è opportuno tenere presenti alcune regole pratiche generali per ridurre il traffico di rete e ottimizzare le prestazioni dell'applicazione, ossia eseguire l'elaborazione dei dati sul server, minimizzare i collegamenti al server per accedere ai dati e limitare i dati recuperati dal server. In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconoptimizeadpperformance_1">Descrizione di OLE DB e dell'ambiente client/server</A></P>
+
+<P class=LBR1><A HREF="#acconoptimizeadpperformance_2">Elaborazione dei dati sul server</A></P>
+
+<P class=LBR1><A HREF="#acconoptimizeadpperformance_3">Limitazione dei dati recuperati dal server</A></P>
+
+<P class=LBR1><A HREF="#acconoptimizeadpperformance_4">Ottimizzazione del database di Microsoft SQL Server</A></P>
+
+<P class=LBR1><A HREF="#acconoptimizeadpperformance_5">Ottimizzazione delle maschere</A></P>
+
+<P class=LBR1><A HREF="#acconoptimizeadpperformance_6">Ottimizzazione dei report</A></P>
+
+<P class=LBR1><A HREF="#acconoptimizeadpperformance_7">Ulteriori informazioni</A></P>
+
+<H2><A NAME="acconoptimizeadpperformance_1"></A>Descrizione di OLE DB e dell'ambiente client/server</H2>
+
+<P class=T>Un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> utilizza OLE DB per connettersi e comunicare con un database di SQL Server. L'<A HREF="acconAboutOLEDBDataLinks.htm">architettura OLE DB</A> è stata progettata da Microsoft per funzionare in modo ottimale in un ambiente client/server. </P>
+
+<P class=T>Quando si accede ai dati tramite una maschera o un foglio dati, OLE DB recupera un <A HREF="javascript:HelpPopup('actip9.hlp','defRecordset');" class="pop">set di record</A> di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefUpdatableSnapshot');" class="pop">snapshot aggiornabile</A> dal database di SQL server fino al <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefMaximumRecordLimit');" class="pop">limite massimo di record</A> e memorizza i dati nella cache sul client&nbsp;effettuando un collegamento al server. Access recupera i dati in modo asincrono, consentendo così l'interazione con l'applicazione durante il caricamento dei dati. Quando si eseguono operazioni di esplorazione, filtraggio, ordinamento, ricerca e aggiornamento dei dati sulla maschera o sul foglio dati, i dati utilizzati sono quelli memorizzati nella cache sul client. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconoptimizeadpperformance">inizio</A></P>
+
+<H2><A NAME="acconoptimizeadpperformance_2"></A>Elaborazione dei dati sul server</H2>
+
+<P class=T>Per elaborare i dati sul server, è possibile utilizzare le stored procedure e i trigger. I dati sul server possono essere ordinati prima del recupero. </P>
+
+<P class=T>Le <B>stored procedure</B> sono un insieme precompilato costituito da una o più istruzioni SQL e istruzioni facoltative per il controllo del flusso in grado di accettare i parametri ed elaborate come un'unica unità da Microsoft SQL Server. Le stored procedure risiedono nel database di SQL Server. Poiché vengono compilate sul server al momento della creazione, vengono eseguite più rapidamente delle singole istruzioni SQL. Poiché inoltre vengono eseguite sul server, possono usufruire delle maggiori potenzialità di elaborazione del server. Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="JavaScript:hhobj_1.Click()">utilizzo delle stored procedure</A>.</P>
+
+<P class=T>I <B>trigger</B> sono un tipo particolare di stored procedure eseguito automaticamente al momento dell'aggiornamento, dell'inserimento o dell'eliminazione dei dati. L'utilizzo dei trigger consente di applicare le regole e le restrizioni aziendali più complesse di quelle definite dai <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgCheckConstraint');" class="pop">vincoli di controllo</A>. A differenza di questi, i trigger possono fare riferimento alle colonne di altre tabelle. Un trigger ad esempio può annullare gli aggiornamenti che tentano di applicare uno sconto (memorizzato in una tabella Sconti) ai libri (memorizzati in una tabella Libri) con un prezzo inferiore a 18.000 lire. Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="JavaScript:hhobj_2.Click()">utilizzo dei trigger</A>.</P>
+
+<P class=T>Per <B>ordinare i record</B> sul server è necessario utilizzare una stored procedure o un'istruzione SQL memorizzata nella proprietà <B>Origine record</B> di una maschera o di un report eseguito sul server. L'ordinamento dei record sul server consente di usufruire delle maggiori potenzialità di elaborazione del server. Per ulteriori informazioni, vedere l'argomento relativo ai <A HREF="JavaScript:hhobj_3.Click()">metodi di ordinamento</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconoptimizeadpperformance">inizio</A></P>
+
+<H2><A NAME="acconoptimizeadpperformance_3"></A>Limitazione dei dati recuperati dal server</H2>
+
+<P class=T>Si consiglia di limitare il più possibile i dati che l'applicazione recupera dal database di SQL Server. Utilizzare <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgView');" class="pop">visualizzazioni</A>, stored procedure, filtri sul server e proposizioni WHERE delle istruzioni SQL per visualizzare in una maschera o in un foglio dati esclusivamente i dati necessari. È generalmente consigliabile evitare di strutturare applicazioni che consentano agli utenti di sfogliare il database senza alcuna limitazione. </P>
+
+<P class=T>È opportuno utilizzare il pulsante del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefMaximumRecordLimit');" class="pop">limite massimo di record</A> o la proprietà <B>Num. massimo record</B> per <A HREF="JavaScript:hhobj_4.Click()">limitare i dati da visualizzare in una maschera o in un foglio dati</A>.</P>
+
+<P class=T>È anche possibile utilizzare i filtri su server per limitare i record prima che vengano recuperati dal database sul server e altri filtri per limitare ulteriormente i record sul client. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="JavaScript:hhobj_5.Click()">creazione dei filtri</A>. È possibile definire un filtro nella proprietà <B>Filtro su server</B> di una maschera o di un report. È possibile inoltre ottimizzare le prestazioni degli elenchi di valori nelle finestre <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefServerFilterByForm');" class="pop">Filtro su server in base a maschera</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defFilterByForm');" class="pop">Filtro in base a maschera</A> modificando la proprietà <B>Ricerca con filtro</B> per controllare il numero di valori visualizzati a seconda che vengano recuperati dal server o dal client. Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="JavaScript:hhobj_6.Click()">ottimizzazione delle prestazioni dei filtri</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconoptimizeadpperformance">inizio</A></P>
+
+<H2><A NAME="acconoptimizeadpperformance_4"></A>Ottimizzazione del database di Microsoft SQL Server</H2>
+
+<P class=T>Vengono fornite di seguito indicazioni generali per l'ottimizzazione delle prestazioni del database di SQL Server. Per informazioni dettagliate su come migliorare le prestazioni dei database di SQL Server, vedere la <A HREF="acconAboutMicrosoftSQLServerDocumentation.htm">documentazione di SQL Server</A>. 
+
+<UL>
+	<LI class=LB1><A HREF="acconDesignDatabase.htm">Strutturare le tabelle senza dati ridondanti</A>. Un database strutturato correttamente è un requisito essenziale per recuperare e aggiornare i dati con rapidità. <BR><BR></LI>
+
+	<LI class=LB1>Applicare l'<A HREF="javascript:HelpPopup('actip9.hlp','defReferentialIntegrity');" class="pop">integrità referenziale</A>, che conserva le relazioni definite tra le tabelle quando vengono aggiunte, aggiornate o eliminate righe mediante la definizione dei vincoli per le chiavi primarie ed esterne nelle tabelle correlate.<BR><BR></LI>
+
+	<LI class=LB1><A HREF="acrefComparingAccesstSQLServerDatatypes.htm">Scegliere un tipo di dati appropriato per i campi</A>. È possibile risparmiare spazio nel database e migliorare le operazioni di <A HREF="javascript:HelpPopup('actip9.hlp','defJoin');" class="pop">join</A>. Quando si definisce un campo, scegliere il tipo di dati o le dimensioni di campo minime appropriate per i dati del campo. <BR><BR></LI>
+
+	<LI class=LB1>Creare indici per i campi da ordinare, per cui eseguire il join o per i quali impostare criteri. La velocità di una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> può essere notevolmente aumentata indicizzando i campi su entrambi i lati dei join e i campi utilizzati per impostare i criteri della query. Gli indici però possono rallentare l'inserimento, l'aggiornamento e l'eliminazione dei record.<BR><BR></LI>
+
+	<LI class=LB1>Aggiungere un campo data e ora nelle tabelle per migliorare le prestazioni delle operazioni di eliminazione e aggiornamento dei record, in particolare se la tabella contiene molti campi. SQL Server utilizza un campo data e ora per indicare che un record è stato modificato, ma non quando è stata apportata la modifica, creando un campo con valore univoco e aggiornandolo ogni volta che si aggiorna il record. SQL Server utilizza il valore dei campi data e ora per determinare se un record è stato modificato prima di aggiornarlo. Un campo data e ora offre generalmente prestazioni e affidabilità elevate, soprattutto in un ambiente multiutente. Se non è presente un campo di questo tipo, SQL Server deve controllare tutti i campi del record per determinare se quest'ultimo è stato modificato e questa operazione può rallentare le prestazioni.<BR><BR></LI>
+
+	<LI class=LB1>Compattare periodicamente il database di SQL Server per risparmiare spazio su disco e riorganizzare gli indici e i dati per un accesso più rapido.</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconoptimizeadpperformance">inizio</A></P>
+
+<H2><A NAME="acconoptimizeadpperformance_5"></A>Ottimizzazione delle maschere</H2>
+
+<P class=T>Quando si struttura una maschera, è generalmente consigliabile determinare i dati e le funzionalità necessarie, senza richiedere tali informazioni al server prima che vengano richieste dall'utente. È possibile ad esempio creare una maschera in modo che non sia necessario recuperare i dati dal server durante il processo di apertura aggiungendo un <A HREF="javascript:HelpPopup('actip9.hlp','defCommandButton');" class="pop">pulsante di comando</A> alla maschera per caricare i dati sulla maschera stessa. </P>
+
+<P class=T>Visualizzare i campi che impiegano molto tempo per recuperare i dati dal server, come i campi di tipo <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefText(memo)DataType');" class="pop">Text</A> e <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefImage(OLEObject)DataType');" class="pop">Image</A>, solo quando è necessario. È possibile utilizzare le seguenti tecniche:
+
+<UL>
+	<LI class=LB1>Posizionare i campi di testo e immagine su una sottomaschera che utilizza la stessa <A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A>. Verranno estratti solo i valori di testo e immagine per il record corrente.<BR><BR></LI>
+
+	<LI class=LB1>Visualizzare i campi più importanti su una maschera principale e fornire un pulsante denominato "Ulteriori informazioni" che consente di aprire un'altra maschera contenente altri campi. La seconda maschera avrà come base una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> con parametri basati sul campo della chiave primaria della maschera principale. <BR><BR></LI>
+
+	<LI class=LB1>Se l'applicazione richiede numerose immissioni di dati, come nel caso di un sistema di immissione di ordini, è opportuno creare una maschera specifica per l'aggiunta di record con la proprietà <B>Immissione dati</B> impostata a Sì. Quando si apre la maschera per immettere nuovi dati, non viene visualizzato alcun record esistente. Ciò consente di risparmiare tempo dato che non devono essere recuperati tutti i record dal server.<BR><BR></LI>
+
+	<LI class=LB1>Nel caso di una maschera o un report basato su una stored procedure con parametri, utilizzare la proprietà <B>Parametri di input</B> per fornire i valori dei parametri.</LI>
+</UL>
+
+<P class=T>Utilizzare le istruzioni SQL UPDATE e DELETE con la proposizione WHERE appropriata per aggiornare o eliminare più record che soddisfano gli stessi criteri. Questa operazione è più efficiente dell'apertura di un <A HREF="javascript:HelpPopup('actip9.hlp','defRecordset');" class="pop">set di record</A> e dell'esecuzione di aggiornamenti o eliminazioni di un record per volta.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconoptimizeadpperformance">inizio</A></P>
+
+<H2><A NAME="acconoptimizeadpperformance_6"></A>Ottimizzazione dei report</H2>
+
+<P class=T>Invece di stampare un lungo report, è consigliabile suddividere i report in sottoinsiemi di dati di dimensioni inferiori utilizzando visualizzazioni, stored procedure e istruzioni SQL come <A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A> oppure utilizzando i filtri. </P>
+
+<P class=T><A HREF="acdecPreviewAReport.htm">Utilizzare l'anteprima di layout piuttosto che quella di stampa</A> nel corso della strutturazione dei report. In questo modo è possibile verificare rapidamente il layout in quanto viene visualizzato solo un campione dei dati. Al termine delle operazioni eseguite sul layout del report, controllare i dati aprendo il report in anteprima di stampa. </P>
+
+<P class=T>I report in genere vengono creati e distribuiti in base a un programma legato ai cicli aziendali, come i rapporti settimanali sulle scorte di magazzino, i rapporti mensili sulle vendite o i resoconti finanziari trimestrali. <A HREF="acrefAccessAboutReportSnapshots.htm">Creare e distribuire questi report</A> come <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefReportSnapshot');" class="pop">snapshot di report</A> in un file batch. Gli utenti possono utilizzare <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefSnapshotViewer');" class="pop">Snapshot Viewer</A> per visualizzare e stampare i report. Per i rapporti aggiornati al minuto, <A HREF="acdecGroupRecordsOnDataAccessPage.htm">utilizzare le pagine di accesso ai dati con gruppi</A>. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconoptimizeadpperformance">inizio</A></P>
+
+<H2><A NAME="acconoptimizeadpperformance_7"></A>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="acconTipsForOptimizingDataAccessPagePerformance.htm">Suggerimenti per ottimizzare le prestazioni delle pagine di accesso ai dati</A></P>
+
+<P class=LBR1><A HREF="acconOptimizingVBS.htm">Ottimizzazione delle prestazioni del codice Visual Basic</A></P>
+
+<P class=rtt>Torna all'<A HREF="#acconoptimizeadpperformance">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOptimizeADPPerformanceW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

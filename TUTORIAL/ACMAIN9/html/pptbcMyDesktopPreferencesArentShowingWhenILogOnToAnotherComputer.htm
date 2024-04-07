@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='pptbcMyDesktopPreferencesArentShowingWhenILogOnToAnotherComputer'
+Feature='Miscellaneous: Roaming Users (CORE)'
+Handoff='3'
+SourceFile='cofroam.rtf'
+Tnum='261907'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostazioni personali non disponibili all'accesso</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="pptbcmydesktoppreferencesarentshowingwhenilogontoanothercomputer."></A>Impostazioni personali non disponibili all'accesso</H1>
+
+<P class=T><B>Il profilo utente può non essere valido per il sistema operativo</B>&nbsp;&nbsp; Un <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefUserProfile');" class="pop">profilo utente</A> è valido solo per il sistema operativo per il quale è stato creato. Ad esempio, un profilo utente per Windows NT non può essere utilizzato in un computer in cui è in esecuzione Windows 95. Se il profilo utente viene creato in Windows 95 e si accede a un computer con sistema operativo Windows NT non sarà possibile vedere le proprie impostazioni. Assicurarsi di accedere a un computer che utilizzi lo stesso sistema operativo in cui è stato creato il proprio profilo utente.</P>
+
+<P class=T><B>Il computer può non essere configurato per più utenti</B>&nbsp;&nbsp; Se si accede a un computer in cui è in esecuzione Windows 95, il computer potrebbe non essere configurato per consentire impostazioni per più utenti. Per permettere che più utenti possano personalizzare le impostazioni in un computer in cui è in esecuzione Windows 95, effettuare le seguenti operazioni:
+
+<OL>
+	<LI class=LPROC>Nel menu <B>Start</B> di  Windows (Avvio in Windows 95 e Windows NT 4.0) scegliere <B>Impostazioni</B>, quindi <B>Pannello di controllo</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare doppio clic sull'icona <B>Password</B>  <IMG SRC="images/pass.bmp" ALT="Mazzo di chiavi" BORDER=0>  e fare clic sulla scheda <B>Profili utente</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Gli utenti possono personalizzare le impostazione del desktop. Windows utilizzerà le impostazioni personalizzate per l'utente che ha eseguito l'accesso</B>.</LI>
+</OL>
+
+<P class=T><B>L'account utente può non essere attivato</B>&nbsp;&nbsp; L'amministratore del sistema può non aver configurato l'account dell'utente sulla rete in modo che possa utilizzare <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefRoamingUserProfile');" class="pop">profili utenti personali</A>. Se non sono disponibili le proprie impostazioni quando si accede a un computer, rivolgersi all'amministrazione del sistema.</P>
+
+<P class=T><B>Alcune differenze negli accessi multipli con sistemi operativi diversi</B>&nbsp;&nbsp; Se si è connessi a più di un computer contemporaneamente, le modifiche apportate alle impostazioni su un computer possono o meno essere disponibili immediatamente su un altro computer, a seconda dei sistemi operativi utilizzati. Nei computer con Windows 95 e Windows NT 4.0, le impostazioni modificate nell'ultimo computer da cui ci si è disconnessi vengono copiate nel proprio <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefUserProfile');" class="pop">profilo utente</A> e utilizzate al successivo accesso. Nei computer in cui è in esecuzione Windows 2000, le modifiche apportate alle impostazioni saranno immediatamente visibili perché il profilo utente viene copiato sul server a intervalli regolari.</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="pptbcMyDesktopPreferencesArentShowingWhenILogOnToAnotherComputerW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

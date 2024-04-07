@@ -1,0 +1,728 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowConvertingJetCode'
+Feature='achow'
+Handoff='3'
+SourceFile='acdattyp_1a.doc'
+Tnum='186572'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di conversione di codice DAO</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dacolDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjDatabase">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowconvertingjetcode"></A>Esempi di conversione di codice DAO</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowConvertingJetCodeC">
+</OBJECT></P>
+
+
+
+<P class=T>Microsoft Access include la versione 4.0 del <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A> e la libreria di oggetti DAO 3.6. Le versioni precedenti degli oggetti DAO non sono più supportate in Microsoft Access 2000. Gli esempi che seguono mostrano come convertire dei blocchi di codice di database di Microsoft Access creati con versioni precedenti del modulo di gestione di database Jet e delle librerie di oggetti DAO.</P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Le informazioni riportate di seguito vengono fornite a titolo esemplificativo. Il codice DAO in versioni precedenti la 3.6 non è più supportato in Access 2000. Si consiglia di utilizzare i metodi ADO per l'accesso ai dati del database corrente per tutte le applicazioni nuove e per mantenere la compatibilità con le versioni future.</P>
+
+<P class=RL><B>Impostazione di un riferimento al database corrente</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=18%>Versione</TH>
+<TH width=82%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=18%>1.<I>x</I></TD>
+<TD width=82%> <PRE class=TCT><CODE>Dim dbs As Database</CODE></PRE> <PRE class=TCT><CODE>Set dbs = CurrentDb</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=18%>2.<I>x</I></TD>
+<TD width=82%> <PRE class=TCT><CODE>Dim dbs As Database</CODE></PRE> <PRE class=TCT><CODE>Set dbs = DBEngine.Workspaces(0).Databases(0)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=18%>o</TD>
+<TD width=82%> <PRE class=TCT><CODE>Dim dbs As Database</CODE></PRE> <PRE class=TCT><CODE>Set dbs = DBEngine(0)(0)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=18%>7.0 o successiva </TD>
+<TD width=82%> <PRE class=TCT><CODE>Dim dbs As DAO.Database</CODE></PRE> <PRE class=TCT><CODE>Set dbs = CurrentDb</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=18%>9.0
+<P class=TT>(consigliata)</P>
+</TD>
+<TD width=82%> <PRE class=TCT><CODE>Dim cnn As ADODB.Connection</CODE></PRE> <PRE class=TCT><CODE>Set cnn = CurrentProject.Connection</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; In Microsoft Access il database corrente costituisce il database predefinito dell'insieme <A HREF="JavaScript:hhobj_2.Click()"><B>Database</B></A> in modo che sia ancora possibile utilizzare la sintassi <CODE>DBEngine(0)(0)</CODE> per restituire una variabile di oggetto <A HREF="JavaScript:hhobj_3.Click()"><B>Database</B></A> che fa riferimento al database corrente. Tuttavia, se si usa DAO, il metodo <A HREF="acmthCurrentDb.htm"><B>CurrentDb</B></A> costituisce il modo ottimale per restituire questa variabile di oggetto in quanto consente di creare più di una variabile oggetto <B>Database</B> che faccia riferimento al database corrente.</P>
+
+
+
+<P class=RL><B>Apertura di un database e impostazione di un riferimento</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Set dbs = OpenDatabase("Contatti.mdb")</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I> e successive </TD>
+<TD width=80%> <PRE class=TCT><CODE>Set dbs = DBEngine.Workspaces(0).OpenDatabase("Contatti.mdb")</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Set dbs = Workspaces(0).OpenDatabase("Contatti.mdb")</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Set dbs = OpenDatabase("Contatti.mdb")</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.x (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><CODE>cnn.Open "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Contatti.mdb"</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Apertura di un recordset di tipo tabella</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim tbl As Table</CODE></PRE> <PRE class=TCT><CODE>Set tbl = dbs.OpenTable("Ordini")</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs.OpenRecordset("Ordini", DB_OPEN_TABLE)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs!Ordini.OpenRecordset</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As DAO.Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs.OpenRecordset("Ordini", dbOpenTable)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As DAO.Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs!Ordini.OpenRecordset</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0 (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As New ADODB.Recordset</CODE></PRE> <PRE class=TCT><CODE>rst.Open "Ordini",cnn,adOpenKeyset,adLockOptimistic,adCmdTableDirect</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Apertura di un recordset di tipo tabella in modalità esclusiva</B>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim tbl As Table</CODE></PRE> <PRE class=TCT><CODE>Set tbl = dbs.OpenTable("Ordini", DB_DENY_READ)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs.OpenRecordset("Ordini", DB_OPEN_TABLE, DB_DENY_READ)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs!Ordini.OpenRecordset(DB_OPEN_TABLE, DB_DENY_READ)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As DAO.Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs.OpenRecordset("Ordini", dbOpenTable, dbDenyRead)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As DAO.Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs!Ordini.OpenRecordset(dbOpenTable, dbDenyRead)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0 (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><B><CODE>S/A (non disponibile tramite ADO)</CODE></B></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Apertura di un recordset di tipo dynaset</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim dyn As Dynaset</CODE></PRE> <PRE class=TCT><CODE>Set dyn = dbs.CreateDynaset("Ordini")</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs.OpenRecordset("Ordini", DB_OPEN_DYNASET)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Set rst = dbs!Ordini.OpenRecordset(dbOpenDynaset)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs.OpenRecordset("Ordini", dbOpenDynaset)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Set rst = dbs!Ordini.OpenRecordset(dbOpenDynaset)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0 (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As New ADODB.Recordset</CODE></PRE> <PRE class=TCT><CODE>rst.Open "Ordini", cnn, adOpenKeyset, adLockOptimistic</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Apertura di un recordset di tipo snapshot</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim snp As Snapshot</CODE></PRE> <PRE class=TCT><CODE>Set snp = dbs.CreateSnapshot("Ordini")</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs.OpenRecordset("Ordini", DB_OPEN_SNAPSHOT)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Set rst = dbs!Ordini.OpenRecordset(DB_OPEN_SNAPSHOT)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As Recordset</CODE></PRE> <PRE class=TCT><CODE>Set rst = dbs.OpenRecordset("Ordini", dbOpenSnapshot)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>o</TD>
+<TD width=80%> <PRE class=TCT><CODE>Set rst = dbs!Ordini.OpenRecordset(dbOpenSnapshot)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0 (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><CODE>Dim rst As New ADODB.Recordset</CODE></PRE> <PRE class=TCT><CODE>rst.Open "Ordini", cnn, adOpenStatic, adLockReadOnly</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+<P class=RL><B>Elenco dei campi</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Table tbl aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim snp As Snapshot
+Set snp = tbl.ListFields()
+While Not snp.EOF
+&nbsp;&nbsp; Debug.Print snp!Name, snp!Type
+&nbsp;&nbsp; snp.MoveNext
+Wend
+snp.Close</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.x</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto TableDef tdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim intI As Integer, fld As Field
+For intI = 0 To tdf.Fields.Count - 1
+&nbsp;&nbsp; Set fld = tdf.Fields(intI)
+&nbsp;&nbsp; Debug.Print fld.Name, fld.Type
+Next intI</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto TableDef tdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim fld As Field
+For Each fld in tdf.Fields
+&nbsp;&nbsp; Debug.Print fld.Name, fld.Type
+Next fld</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0 (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Table tbl aperto</CODE></PRE> <PRE class=TCT><CODE>Dim col as ADOX.column
+For Each col in tbl.Columns
+&nbsp;&nbsp; Debug.Print col.Name, col.Type
+Next col</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+<P class=RL><B>Elenco delle tabelle di un database</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Database dbs aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim snp As Snapshot
+Set snp = dbs.ListTables()
+While Not snp.EOF
+&nbsp;&nbsp; Debug.Print snp!Name
+&nbsp;&nbsp; snp.MoveNext
+Wend snp.Close</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Database dbs aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim intJ As Integer, tdf As TableDef
+For intJ = 0 To dbs.TableDefs.Count - 1
+&nbsp;&nbsp; Set tdf = dbs.TableDefs(intJ)
+&nbsp;&nbsp; Debug.Print tdf.Name
+Next intJ</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Database dbs aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim tdf As TableDef
+For Each tdf in dbs.TableDefs
+&nbsp;&nbsp; Debug.Print tdf.Name
+Next tdf</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0 (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Catalog cat aperto</CODE></PRE> <PRE class=TCT><CODE>Dim tbl As ADOX.Table
+For Each tbl in cat.Tables
+&nbsp;&nbsp; Debug.Print tbl.Name
+Next tbl</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Elenco degli indici di una tabella</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Table tbl aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim snp As Snapshot
+Set snp = tbl.ListIndexes()
+While Not snp.EOF
+&nbsp;&nbsp; Debug.Print snp!Name
+&nbsp;&nbsp; snp.MoveNext
+Wend
+snp.Close</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto TableDef tdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim intI As Integer, idx As Index
+For intI = 0 To tdf.Indexes.Count - 1
+&nbsp;&nbsp; Set idx = tdf.Indexes(intI)
+&nbsp;&nbsp; Debug.Print idx.Name
+Next intI</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto TableDef tdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim idx As DAO.Index
+For Each idx in tdf.Indexes
+&nbsp;&nbsp; Debug.Print idx.Name
+Next idx</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0
+<P class=TT>(consigliata)</P>
+</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Table tbl aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim idx As ADOX.Index
+For Each idx in tbl.Indexes
+&nbsp;&nbsp; Debug.Print idx.Name
+Next idx</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Elenco dei parametri di una query</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto QueryDef qdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim snp As Snapshot
+Set snp = qdf.ListParameters()
+While Not snp.EOF
+&nbsp;&nbsp; Debug.Print snp!Name
+&nbsp;&nbsp; snp.MoveNext
+Wend
+snp.Close</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto QueryDef qdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim intI As Integer, prm As Parameter
+For intI = 0 to qdf.Parameters.Count - 1
+&nbsp;&nbsp; Set prm = qdf.Parameters(i)
+&nbsp;&nbsp; Debug.Print prm.Name
+Next intI</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto QueryDef qdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim prm As Parameter
+For Each prm in qdf.Parameters
+&nbsp;&nbsp; Debug.Print prm.Name
+Next prm</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0 (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Procedure prc aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim prm As ADODB.Parameter
+For Each prm in prc.Parameters
+&nbsp;&nbsp; Debug.Print prm.Name
+Next prm</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Impostazione dinamica dei parametri di una query</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Versione</TH>
+<TH width=80%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>1.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Database dbs aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim qdf As QueryDef, dyn As Dynaset
+Set qdf = dbs.OpenQueryDef("QueryOrdini")
+qdf.ParameterName = "[Data iniziale]"
+Set dyn = qdf.CreateDynaset()</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>2.<I>x</I></TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto QueryDef qdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim intI As Integer, prm As Parameter, rst As Recordset
+For intI = 0 To qdf.Parameters.Count - 1
+&nbsp;&nbsp; Set prm = qdf.Parameters(intI)
+&nbsp;&nbsp; prm.Value = InputBox("Valore per " &amp; prm.Name)
+Next intI
+Set rst = qdf.OpenRecordset</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>7.0 o successiva</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto QueryDef qdf aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim prm As Parameter, rst As Recordset
+For Each prm in qdf.Parameters
+&nbsp;&nbsp; prm.Value = InputBox("Valore per " &amp; prm.Name)
+Next prm
+Set rst = qdf.OpenRecordset</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>9.0 (consigliata)</TD>
+<TD width=80%> <PRE class=TCT><CODE>' Dato l'oggetto Procedure prc aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim prm As ADODB.Parameter, rst As ADODB.Recordset
+For Each prm in prc.Command.Parameters
+&nbsp;&nbsp; prm.Value = InputBox("Valore per " &amp; prm.Name)
+Next prm
+rst.Open prc.Command,,adOpenKeyset, adLockOptimistic</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Esecuzione di una query di tipo pass-through</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=15%>Versione</TH>
+<TH width=85%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>1.<I>x</I></TD>
+<TD width=85%> <PRE class=TCT><CODE>' Dato l'oggetto Database dbs aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim lngRows As Long
+' Esegui una stored procedure sul server.
+lngRows = dbs.ExecuteSQL("EXECUTE SP_StoredProc")</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>o</TD>
+<TD width=85%> <PRE class=TCT><CODE>Dim snp As Snapshot</CODE></PRE> <PRE class=TCT><CODE>Set snp = dbs.CreateSnapshot("EXECUTE SP_StoredProc", DB_SQLPassThrough)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>2.<I>x</I> e successive</TD>
+<TD width=85%> <PRE class=TCT><CODE>' Dato l'oggetto Database dbs aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim qdf As QueryDef, rst As Recordset
+Set qdf = dbs.CreateQueryDef("ODBCQuery")
+qdf.Connect = "ODBC;" &amp; "DSN=MioServer;" _
+&nbsp;&nbsp; &amp; "UID=sa;" &amp; "PWD=salve;" &amp; "DATABASE=pubs"
+qdf.SQL = "EXECUTE SP_StoredProc"
+qdf.ReturnsRecords = True
+.
+.
+.
+Set rst = qdf.OpenRecordset</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>9.0 e successive</TD>
+<TD width=85%> <PRE class=TCT><CODE>' Dato Catalog Object aperto con Activeconnection impostato, oggetto cat.</CODE></PRE> <PRE class=TCT><CODE>Dim rst As Recordset, cmdPassthru As New ADODB.Command
+Set cmdPassthru.ActiveConnection = Currentproject.connection
+cmdPassthru("Jet OLEDB:Stringa di connessione query pass-through")= _
+&nbsp;&nbsp; "ODBC;DSN=MioServer;UID=sa;PWD=salve;DATABASE=pubs"
+cmdPassthru.CommandText = "EXECUTE SP_StoredProc"
+cat.Procedures.Append "ODBCQuery", cmdPassthru
+
+Set rst = cmd.Execute</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Creazione di una query temporanea</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=15%>Versione</TH>
+<TH width=85%>Esempio</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>1.<I>x</I></TD>
+<TD width=85%> <PRE class=TCT><CODE>' Dato l'oggetto Database dbs aperto.</CODE></PRE> <PRE class=TCT><CODE>Dim qdf As QueryDef, strTemp As String
+strTemp = "TMP:" &amp; User() &amp; Time()
+qdf = dbs.CreateQueryDef(strTemp)
+qdf.SQL = "UPDATE Table1 SET Table1.Field1 = Field1 * 1.1;"
+.
+.
+.
+qdf.Execute
+qdf.Close
+.
+.
+dbs.DeleteQueryDef(strTemp)</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>2.<I>x</I> e successive</TD>
+<TD width=85%> <PRE class=TCT><CODE>qdf = dbs.CreateQueryDef("")</CODE></PRE> <PRE class=TCT><CODE>qdf.Execute
+qdf.Close</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>9.0 e successive</TD>
+<TD width=85%> <PRE class=TCT><CODE>cmd.CommandText = "UPDATE Table1 SET Table1.Field1 = Field1 * 1.1;" cmd.Execute</CODE></PRE> <PRE class=TCT><CODE>set cmd = Nothing</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowConvertingJetCodeW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

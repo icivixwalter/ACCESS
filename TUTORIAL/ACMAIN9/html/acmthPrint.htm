@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthPrint'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186720'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Print</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEventProperties">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproCurrentXY">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthprint"></A>Metodo Print</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthPrintC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthPrintX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthPrintA;vaobjDebug">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>Print</B> consente di stampare il testo su un oggetto <A HREF="acobjReport.htm"><B>Report</B></A> utilizzando il colore e il carattere corrente.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I><B>.Print</B> [{<B>Spc(</B><I>n</I><B>)</B> | <B>Tab(</B><I>n</I><B>)</B>}][<I>elencoespressioni</I>][{;|,}]</P>
+
+
+
+<P class=T>Il metodo <B>Print</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=DELETE colspan=2 width=100%> </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>oggetto</I></TD>
+<TD class=TT width=76%>Oggetto <B>Report</B> su cui il testo deve essere stampato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>Spc</B>(<I>n</I>)</TD>
+<TD class=TT width=76%>Funzione di Visual Basic utilizzata per inserire <I>n</I> spazi nell'output stampato. Può essere utilizzata più volte.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>Tab</B>(<I>n</I>)</TD>
+<TD class=TT width=76%>Funzione di Visual Basic utilizzata per spostare il punto di inserimento sull'area di stampa <I>ennesima</I> prima della stampa dell'argomento <I>elencoespressioni</I>. Le aree di stampa iniziano ogni 14 colonne. La larghezza di ogni colonna è una media della larghezza di tutti i caratteri nella dimensione del carattere selezionato. Può essere utilizzata più volte.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>elencoespressioni</I></TD>
+<TD class=TT width=76%>Espressioni stringa o numeriche da stampare. Se questo argomento viene omesso, il metodo <B>Print</B> stampa una riga vuota. Espressioni multiple possono essere separate mediante uno spazio, un punto e virgola (;) o una virgola. Lo spazio ha la stessa funzione di un punto e virgola. Per separare ogni coppia di espressioni, è anche possibile utilizzare le funzioni <B>Spc</B> e <B>Tab</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>{;|,}</TD>
+<TD class=TT width=76%>Determina la posizione del punto di inserimento del successivo carattere stampato. Il punto e virgola indica che il punto di inserimento verrà posizionato immediatamente dopo l'ultimo carattere stampato; mentre una virgola indica che verrà posizionato all'inizio dell'area di stampa successiva.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare questo metodo solo in una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> o in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> specificate dall'impostazione della <A HREF="JavaScript:hhobj_4.Click()">proprietà evento</A> <B>SuStampa</B> di una sezione.</P>
+
+<P class=T>Le espressioni specificate dall'argomento <I>elencoespressioni</I> vengono stampate sull'oggetto a partire dalla posizione indicata dalle impostazioni delle proprietà  <A HREF="JavaScript:hhobj_5.Click()"><B>CurrentX</B> e <B>CurrentY</B></A>.</P>
+
+<P class=T>Quando l'argomento <I>elencoespressioni</I> viene stampato, di solito viene accodato un ritorno a capo, in modo che il successivo metodo <B>Print</B> inizi la stampa sulla riga successiva. Quando si verifica un ritorno a capo, l'impostazione della proprietà <B>CurrentY</B> viene aumentata dell'altezza dell'argomento <I>elencoespressioni</I> (uguale al valore restituito dal metodo <A HREF="acmthTextHeight.htm"><B>TextHeight</B></A>) e la proprietà <B>CurrentX</B> viene impostata a 0.</P>
+
+<P class=T>Quando l'argomento <I>elencoespressioni</I> viene seguito da un punto e virgola, non viene accodato alcun ritorno a capo e il metodo <B>Print</B> successivo inizia la stampa sulla stessa riga utilizzata dal metodo <B>Print</B> corrente. Le proprietà <B>CurrentX</B> e <B>CurrentY</B> vengono impostate immediatamente dopo l'ultimo carattere stampato. Se l'argomento <I>elencoespressioni</I> già contiene ritorni a capo, ciascuno di essi imposta le proprietà <B>CurrentX</B> e <B>CurrentY</B> come descritto per il metodo <B>Print</B> senza punto e virgola.</P>
+
+<P class=T>Quando l'argomento <I>elencoespressioni</I> viene seguito da una virgola, le proprietà <B>CurrentX</B> e <B>CurrentY</B> vengono impostate sulla successiva area di stampa della stessa riga.</P>
+
+<P class=T>Quando l'argomento <I>elencoespressioni</I> viene stampato su un oggetto <B>Report</B>, le righe che non rientrano nella posizione specificata non scorrono. Il testo viene "ritagliato" in modo da adattarsi all'oggetto.</P>
+
+<P class=T>Dal momento che il metodo <B>Print</B> viene in genere utilizzato per la scrittura di caratteri a spaziatura proporzionale, è importante ricordare che non esiste alcuna relazione tra il numero di caratteri stampati e il numero di colonne a larghezza fissa occupate da tali caratteri. Una lettera ampia, come la "M", ad esempio, occuperà più di una colonna a larghezza fissa, mentre una lettera più stretta, come la "i", occuperà una quantità di spazio minore. Assicurarsi che le colonne tabellari siano distanti l'una dall'altra abbastanza da contenere il testo che si desidera stampare. Altrimenti, è possibile utilizzare per la stampa un carattere a spaziatura fissa, quale il Courier, in modo che ciascun carattere utilizzi una sola colonna.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

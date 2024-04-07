@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlUnionX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234574'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di operazione UNION (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlunionx"></A>Esempio di operazione UNION (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si recuperano i nomi e le città di tutti i fornitori e i clienti in Brasile:</P>
+
+<PRE class=CT><CODE>SELECT NomeSocietà, Città FROM Fornitori
+WHERE Paese = 'Brasile'
+<B>UNION</B> SELECT NomeSocietà, Città FROM Clienti
+WHERE Paese = 'Brasile';</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si recuperano i nomi e le città di tutti i fornitori e i clienti residenti in Brasile:</P>
+
+<PRE class=CT><CODE>SELECT NomeSocietà, Città, 'Fornitore' AS Origine
+FROM Fornitori
+WHERE Paese = 'Brasile' <B>UNION</B> SELECT NomeSocietà, Città, 'Cliente'
+FROM Clienti
+WHERE Paese = 'Brasile'
+ORDER BY Città, Origine;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si recuperano i nomi e gli ID di tutti i fornitori e i clienti. Tale unione presuppone che ogni tabella contenga lo stesso numero di colonne.</P>
+
+<PRE class=CT><CODE>TABLE Clienti <B>UNION</B> TABLE Fornitori;</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

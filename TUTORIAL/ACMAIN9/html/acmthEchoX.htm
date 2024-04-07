@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthEchoX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186529'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Echo (oggetto Application)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthechox"></A>Esempio di metodo Echo (oggetto Application)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare il metodo <B>Echo</B> per impedire che lo schermo venga aggiornato mentre sono in corso determinate operazioni. Mentre la routine apre una maschera e la riduce a icona, viene visualizzata l'icona con la clessidra per indicare che l'operazione è in corso e lo schermo non viene aggiornato. Completata tale attività, la clessidra si trasforma nuovamente in puntatore e l'aggiornamento dello schermo viene riattivato.</P>
+
+<PRE class=CT><CODE>Sub DisattivaAggiornamento()
+&nbsp;&nbsp;&nbsp; Application.<B>Echo</B> False
+&nbsp;&nbsp;&nbsp; DoCmd.Hourglass True
+&nbsp;&nbsp;&nbsp; DoCmd.OpenForm "Dipendenti", acNormal
+&nbsp;&nbsp;&nbsp; DoCmd.Minimize
+&nbsp;&nbsp;&nbsp; Application.<B>Echo</B> True
+&nbsp;&nbsp;&nbsp; DoCmd.Hourglass False
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

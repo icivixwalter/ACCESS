@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutODBCDataSources'
+Feature='External: ODBC'
+Handoff='1'
+SourceFile='CODBC.RTF'
+Tnum='241666'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulle origini dati ODBC</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutodbcdatasources"></A>Informazioni sulle origini dati ODBC</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=T><A HREF="#acconaboutodbcdatasources_1">Definizione di origine dati</A></P>
+
+<P class=T><A HREF="#acconaboutodbcdatasources_2">Origini dati su macchina</A></P>
+
+<P class=T><A HREF="#acconaboutodbcdatasources_3">Origini dati su file</A></P>
+
+<P class=T><A HREF="#acconaboutodbcdatasources_4">Stringhe di connessione</A></P>
+
+<H2></H2>
+
+<H2><A NAME="acconaboutodbcdatasources_1"></A>Definizione di origine dati</H2>
+
+<P class=T>Un'origine dati è costituita dalla fonte dei dati e dalle informazioni sulla connessione necessarie per accedere a tali dati. Esempi di origini dati sono Microsoft Access, Microsoft SQL Server, Oracle RDBMS, un foglio di calcolo e un file di testo. Esempi di informazioni di connessione sono il percorso del server, il nome del database, l'ID di accesso, la password e varie opzioni di driver <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC</A> che definiscono la modalità di connessione all'origine dati.</P>
+
+<P class=T>Nell'architettura ODBC un'applicazione, quale Microsoft Access o un programma di Microsoft Visual Basic, si connette al Driver Manager ODBC che a sua volta utilizza un particolare driver ODBC, ad esempio il driver Microsoft SQL ODBC, per connettersi a un'origine dati, in questo caso un database di SQL Server. In Microsoft Access le origini dati ODBC vengono utilizzate per connettersi a dati esterni a Microsoft Access che non dispongono di driver incorporati.</P>
+
+<P class=T>Per connettersi a queste origini dati, attenersi alla seguente procedura:
+
+<UL>
+	<LI class=LB1>Installare il driver ODBC appropriato nel computer contenente l'origine dati.<BR><BR></LI>
+
+	<LI class=LB1>Definire un nome origine dati (DSN) utilizzando l'<B>Amministratore origine dati ODBC</B> per memorizzare le informazioni di connessione nel registro di configurazione di Windows o in un file DSN oppure una stringa di connessione in codice Visual Basic per passare le informazioni di connessione direttamente al Driver Manager ODBC.</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutodbcdatasources">inizio</A></P>
+
+<H2><A NAME="acconaboutodbcdatasources_2"></A>Origini dati su macchina</H2>
+
+<P class=T>Le origini dati su macchina memorizzano le informazioni di connessione nel registro di configurazione di Windows di un determinato computer con un nome definito dall'utente. È possibile utilizzare le origini dati su macchina soltanto sul computer sul quale sono state definite. Le origini dati su macchina sono di due tipi: utente e di sistema. Le origini dati utente possono essere utilizzate soltanto dall'utente corrente e sono visibili soltanto a quell'utente. Le origini dati di sistema possono essere utilizzate da tutti gli utenti di un computer e sono visibili a tutti gli utenti del computer e dei servizi a livello di sistema, quali i servizi di Microsoft Windows NT. Un'origine dati su macchina risulta particolarmente utile per elevare il livello di protezione poiché solo gli utenti connessi possono vederla e non può essere copiata da un utente remoto su un altro computer.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutodbcdatasources">inizio</A></P>
+
+<H2><A NAME="acconaboutodbcdatasources_3"></A>Origini dati su file</H2>
+
+<P class=T>Le origini dati su file, chiamate anche DSN su file o file DSN, memorizzano le informazioni di connessione in un file di testo, non nel registro di configurazione di Windows, e sono generalmente più flessibili da utilizzare rispetto alle origini dati su macchina. È possibile ad esempio copiare un'origine dati su file su qualsiasi computer con il driver ODBC appropriato in modo che l'applicazione possa usufruire di informazioni di connessione precise e coerenti su tutti i computer che utilizza. In alternativa, è possibile collocare l'origine dati su file su un singolo server e condividerla con più computer in rete e gestire facilmente le informazioni di connessione da un'unica postazione.</P>
+
+<P class=T>Un'origine dati su file può anche non essere condivisibile. In tal caso, l'origine dati risiede su un singolo computer e punta a un'origine dati su macchina. È possibile utilizzare origini dati su file non condivisibili per accedere a origini dati su macchina esistenti da origini dati su file.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutodbcdatasources">inizio</A></P>
+
+<H2><A NAME="acconaboutodbcdatasources_4"></A>Stringhe di connessione</H2>
+
+<P class=T>I programmatori possono definire una stringa di connessione formattata in codice Visual Basic che specifichi le informazioni sulla connessione. Utilizzando una stringa di connessione si evita di definire un'origine dati su macchina o su file e le informazioni sulla connessione vengono passate direttamente al Driver Manager ODBC. Ciò è particolarmente utile ad esempio se si desidera evitare che gli amministratori del sistema o gli utenti prima debbano creare un DSN oppure per semplificare l'installazione di un'applicazione.</P>
+
+<P class=T>Per ulteriori informazioni sulla programmazione ODBC, consultare <I>ODBC 3.0 Programmer's Reference Manual</I>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutodbcdatasources">inizio</A></P>
+
+<H2>Per ulteriori informazioni</H2>
+
+<P class=T><A HREF="achowStartODBCManager.htm">Impostare le origini dati ODBC</A></P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutodbcdatasources">inizio</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutODBCDataSourcesW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

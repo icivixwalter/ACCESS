@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateControlX'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186369'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di metodi CreateControl e CreateReportControl</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreatecontrolx"></A>Esempi di metodi CreateControl e CreateReportControl</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creata dapprima una nuova maschera basata su una tabella Ordini. Quindi viene utilizzato il metodo <B>CreateControl</B> per creare un controllo di una casella di testo e un controllo di etichetta associato sulla maschera.</P>
+
+<PRE class=CT><CODE>Sub NuoviControlli()
+&nbsp;&nbsp;&nbsp; Dim frm As Form
+&nbsp;&nbsp;&nbsp; Dim ctlLabel As Control, ctlText As Control
+&nbsp;&nbsp;&nbsp; Dim intDataX As Integer, intDataY As Integer
+&nbsp;&nbsp;&nbsp; Dim intLabelX As Integer, intLabelY As Integer
+
+&nbsp;&nbsp;&nbsp; ' Crea una nuova maschera con la tabella Ordini come origine dei record.
+&nbsp;&nbsp;&nbsp; Set frm = CreateForm
+&nbsp;&nbsp;&nbsp; frm.RecordSource = "Ordini"
+&nbsp;&nbsp;&nbsp; ' Imposta i valori di posizione dei nuovi controlli.
+&nbsp;&nbsp;&nbsp; intLabelX = 100
+&nbsp;&nbsp;&nbsp; intLabelY = 100
+&nbsp;&nbsp;&nbsp; intDataX = 1000
+&nbsp;&nbsp;&nbsp; intDataY = 100
+&nbsp;&nbsp;&nbsp; ' Crea una casella di testo non associata di dimensione predefinita nella sezione dettagli.
+&nbsp;&nbsp;&nbsp; Set ctlText = <B>CreateControl(</B>frm.Name, acTextBox, , "", "", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intDataX, intDataY<B>)</B>
+&nbsp;&nbsp;&nbsp; ' Crea un controllo etichetta secondaria per la casella di testo.
+&nbsp;&nbsp;&nbsp; Set ctlLabel = <B>CreateControl(</B>frm.Name, acLabel, , _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctlText.Name, "NuovaEtichetta", intLabelX, intLabelY<B>)</B>
+&nbsp;&nbsp;&nbsp; ' Ripristina la maschera.
+&nbsp;&nbsp;&nbsp; DoCmd.Restore
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactTransferDatabaseX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthact_1b.rtf'
+Tnum='186596'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo TransferDatabase</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthacttransferdatabasex"></A>Esempio di metodo TransferDatabase</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come importare il report Northwind - Vendite di aprile dal database NWVendit.mdb di Microsoft Access nel report Vendite aziendali di aprile nel database corrente.</P>
+
+<PRE class=CT><CODE>DoCmd.<B>TransferDatabase</B> acImport, "Microsoft Access", _
+&nbsp;&nbsp;&nbsp; "C:\DBS\NWVendit.mdb", acReport, "NW Vendite di aprile", _
+&nbsp;&nbsp;&nbsp; "Vendite aziendali di aprile"</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come collegare la tabella Autori del database ODBC al database corrente.</P>
+
+<PRE class=CT><CODE>DoCmd.<B>TransferDatabase</B> acLink, "Database ODBC", _
+&nbsp;&nbsp;&nbsp; "ODBC;DSN=OrigineDati1;UID=Utente2;PWD=www;LANGUAGE=italiano;" _
+&nbsp;&nbsp;&nbsp; &amp; "DATABASE=pub", acTable, "Autori", "dboAutori"</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

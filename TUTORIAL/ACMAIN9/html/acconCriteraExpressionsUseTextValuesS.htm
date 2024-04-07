@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCriteraExpressionsUseTextValuesS'
+Feature='Queries: Expressions'
+Handoff='1'
+SourceFile='CQRYEXP.RTF'
+Tnum='188524'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di espressioni criterio che utilizzano come criteri valori di testo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaoprOr">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlBetween">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlInOper">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaoprNot">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctRight">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctLen">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctVal">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconcriteraexpressionsusetextvaluess"></A>Esempi di espressioni criterio che utilizzano come criteri valori di testo</H1>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=25%>Campo</TH>
+<TH width=36%>Espressione</TH>
+<TH width=39%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>CittàDestinatario</TD>
+<TD class=TT width=36%>"Londra"</TD>
+<TD class=TT width=39%>Visualizza ordini spediti a Londra.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>CittàDestinatario</TD>
+<TD class=TT width=36%>"Londra" Or "Hedge End"</TD>
+<TD class=TT width=39%>Utilizza l'operatore <A HREF="JavaScript:hhobj_1.Click()">Or</A> per visualizzare ordini spediti a Londra o a Hedge End.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>DataSpedizione</TD>
+<TD class=TT width=36%>Between #5-Gen-95# And #10-Gen-95#</TD>
+<TD class=TT width=39%>Utilizza l'operatore <A HREF="JavaScript:hhobj_2.Click()">Between...<B>And</B></A> per visualizzare ordini spediti non prima del 5-Gen-95 e non più tardi del 10-Gen-95.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>DataSpedizione</TD>
+<TD class=TT width=36%>=#2/2/95#</TD>
+<TD class=TT width=39%>Visualizza ordini spediti il 2-Feb-95.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>PaeseDestinatario</TD>
+<TD class=TT width=36%>In("Canada", "Regno Unito")</TD>
+<TD class=TT width=39%>Utilizza l'operatore<A HREF="JavaScript:hhobj_3.Click()"> <B>In</B></A> per visualizzare ordini spediti in Canada o nel Regno Unito.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>PaeseDestinatario</TD>
+<TD class=TT width=36%>Not "USA"</TD>
+<TD class=TT width=39%>Utilizza l'operatore <A HREF="JavaScript:hhobj_4.Click()"><B>Not</B></A> per visualizzare ordini spediti a nazioni diverse dagli USA.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Destinatario</TD>
+<TD class=TT width=36%>Like "S"</TD>
+<TD class=TT width=39%>Ordini spediti a clienti i cui nomi iniziano con la lettera S.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>NomeSocietà</TD>
+<TD class=TT width=36%>&gt;="N"</TD>
+<TD class=TT width=39%>Visualizza ordini spediti a società i cui nomi iniziano con le lettere dalla N alla Z.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>IDOrdine</TD>
+<TD class=TT width=36%>Right([IDOrdine], 2)="99"</TD>
+<TD class=TT width=39%>Utilizza la funzione <A HREF="JavaScript:hhobj_5.Click()"><B>Right</B></A> per visualizzare ordini con valori IDOrdine che terminano con 99.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>NomeSocietà</TD>
+<TD class=TT width=36%>Len([NomeSocietà])&gt;Val(30)</TD>
+<TD class=TT width=39%>Utilizza le funzioni <A HREF="JavaScript:hhobj_6.Click()"><B>Len</B></A> e <A HREF="JavaScript:hhobj_7.Click()"><B>Val</B></A> per visualizzare ordini per società il cui nome è costituito da più di 30 caratteri.</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconCriteraExpressionsUseTextValuesSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

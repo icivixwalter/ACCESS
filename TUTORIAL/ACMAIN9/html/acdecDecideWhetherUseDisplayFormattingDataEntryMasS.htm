@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acdecDecideWhetherUseDisplayFormattingDataEntryMasS'
+Feature='Tables'
+Handoff='1'
+SourceFile='CTBLPRO.RTF'
+Tnum='187548'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare un formato di visualizzazione dati o una maschera di input</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acdecdecidewhetherusedisplayformattingdataentrymass"></A>Utilizzare un formato di visualizzazione dati o una maschera di input</H1>
+
+<P class=T>In Microsoft Access esistono due proprietà che producono risultati simili: la proprietà <B>Formato</B> e la proprietà <B>Maschera di input</B>.</P>
+
+<P class=T>Utilizzare la proprietà <B>Formato</B> per visualizzare i dati in formato congruente. Se ad esempio viene impostata la proprietà <B>Formato</B> di un campo Data/ora al formato <B>Data breve</B>, tutte le date immesse verranno visualizzate in questo formato: 12-gen-96. Se un utente del database immette una data nel formato 01/12/96 (o qualsiasi altro formato data valido), la data verrà visualizzata nel formato <B>Data breve</B> quando viene salvato il record.</P>
+
+<P class=T>La proprietà <B>Formato</B> influisce solo sulla modalità di visualizzazione di un valore, non sulla modalità di memorizzazione del valore stesso nella tabella. Un formato inoltre non viene applicato fino a quando i dati immessi non vengono salvati: nel campo non viene visualizzato alcun elemento che suggerisca o controlli il formato in cui vengono immessi i dati. Se si desidera controllare la modalità di immissione dei dati, utilizzare una maschera di input in aggiunta o invece di un formato di visualizzazione dei dati. Se si desidera che i dati vengano visualizzati esattamente nello stesso modo in cui sono stati immessi, non impostare la proprietà <B>Formato</B>.</P>
+
+<P class=T>Per i campi di tipo Numerico, Valuta, Data/ora, Contatore e Sì/No sono disponibili formati di visualizzazione predefiniti e possono essere definiti anche formati personalizzati. Non esistono formati predefiniti per i campi di tipo Testo, Memo o Collegamento ipertestuale, ma è possibile definire formati personalizzati. Non è possibile definire un formato di visualizzazione per i campi di tipo Oggetto OLE.</P>
+
+<P class=T>Utilizzare la proprietà <B>Maschera di input</B> per visualizzare caratteri letterali nel campo con spazi da riempire. Se ad esempio tutti i numeri di telefono immessi in un campo hanno lo stesso formato, è possibile creare una maschera di input come riportato nella seguente figura.</P>
+
+<P class=ART><IMG SRC="images/ctblpro1.bmp" ALT="Le maschere di input forniscono spazi da riempire" BORDER=0></P>
+
+<P class=T>Con una maschera di input i dati si adatteranno al formato definito ed è possibile specificare il tipo di valori che possono esser immessi in ciascuno spazio vuoto. Con la precedente maschera di input ad esempio viene richiesto che tutte le voci immesse contengano esattamente un numero di cifre sufficiente a formare un prefisso e un numero di telefono statunitense e che in ciascuno spazio possono essere immesse solo le cifre.</P>
+
+<P class=T>Se per un campo vengono definiti sia un formato di visualizzazione che una maschera di input, la maschera di input viene utilizzata durante l'aggiunta o la modifica dei dati, mentre con l'impostazione della proprietà <B>Formato</B> viene determinata la modalità di visualizzazione dei dati quando viene salvato il record. Quando si utilizzano sia la proprietà <B>Formato</B> che la proprietà <B>Maschera di input</B>, i risultati corrispondenti non devono essere in conflitto.</P>
+
+<P class=T><B>Ulteriori informazioni</B></P>
+
+<P class=T><A HREF="acdecDefineDataDisplayFormatFieldControl.htm">Utilizzare la proprietà <B>Formato</B> per impostare i formati di visualizzazione</A></P>
+
+<P class=T><A HREF="acdecCreateInputMaskFieldControl.htm">Utilizzare la proprietà <B>Maschera di input</B> per definire la modalità di immissione dei dati</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acdecDecideWhetherUseDisplayFormattingDataEntryMasSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

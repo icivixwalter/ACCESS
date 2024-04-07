@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtOpenCloseEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv1_1a.rtf'
+Tnum='187789'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Open, Close - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtopencloseepx"></A>Eventi Open, Close - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si illustra come annullare l'apertura di una maschera quando si sceglie il pulsante No. Viene visualizzata una finestra di messaggio in cui viene chiesto di immettere i dettagli relativi agli ordini. Se si sceglie No, la maschera Dettagli ordini non viene aperta.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la seguente routine evento a una maschera.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Open</B>(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; Dim intRestituito As Integer
+&nbsp;&nbsp;&nbsp; intRestituito = MsgBox("Immettere i dettagli degli ordini?", vbYesNo)
+&nbsp;&nbsp;&nbsp; Select Case intRestituito
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case vbYes
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Apre la maschera Dettagli ordini.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.OpenForm "Dettagli ordini"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case vbNo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Immettere i dettagli degli ordini entro le 17:00."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Annulla = True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Annulla l'evento Open.
+&nbsp;&nbsp;&nbsp; End Select
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

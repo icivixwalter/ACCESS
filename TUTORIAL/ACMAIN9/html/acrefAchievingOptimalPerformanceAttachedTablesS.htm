@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefAchievingOptimalPerformanceAttachedTablesS'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='187625'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Ottenere prestazioni ottimali con le tabelle collegate in un database di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefachievingoptimalperformanceattachedtabless"></A>Ottenere prestazioni ottimali con le tabelle collegate in un database di Microsoft Access</H1>
+
+<P class=NT><B>Nota&nbsp;&nbsp;</B> È possibile <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegare</A> una tabella solo in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessdatabase');" class="pop">database di Microsoft Access</A> e non in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>.</P>
+
+<P class=T>Sebbene sia possibile utilizzare delle tabelle collegate come delle normali tabelle di Microsoft Access, si noti che queste non si trovano realmente nel database in uso. Ogni volta che si visualizzano dei dati di una tabella collegata, vengono recuperati dei record da un altro file. L'operazione può richiedere del tempo, soprattutto se la tabella collegata si trova su una rete o in un <A HREF="javascript:HelpPopup('actip9.hlp','defSQLDatabaseODBC');" class="pop">database SQL</A>.</P>
+
+<P class=T>Se si sta utilizzando una tabella collegata su una rete o in un database SQL, seguire le istruzioni riportate di seguito:
+
+<UL>
+	<LI class=LB1>È possibile migliorare notevolmente le prestazioni quando si aprono il database principale e le tabelle e le maschere forzando il database collegato in modo che rimanga aperto. A tal fine, creare una tabella vuota nel database collegato e collegarla al database principale, quindi utilizzare il metodo <B>OpenRecordset</B> per aprire la tabella collegata. Ciò impedisce che il modulo di gestione di database Microsoft Jet apra e chiuda più volte il database collegato e crei e distrugga il file con estensione ldb associato.<BR><BR></LI>
+
+	<LI class=LB1>Visualizzare esclusivamente i dati necessari. Non spostare verso l'alto o verso il basso la pagina del foglio dati se non è necessario. Evitare di andare all'ultimo record di una tabella di grandi dimensioni. Se si vogliono aggiungere dei nuovi record ad una tabella di grandi dimensioni, utilizzare il comando <B>Immissione dati</B> del menu <B>Record</B>, per evitare il caricamento in memoria dei record esistenti.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare dei filtri o delle query per limitare il numero di record visualizzati in una maschera o in un foglio dati. Un numero inferiore di dati verrà trasferito in rete.<BR><BR></LI>
+
+	<LI class=LB1>Nelle query che comprendono delle tabelle collegate, evitare l'utilizzo di funzioni nei criteri della query. Non utilizzare, in particolare, le <A HREF="javascript:HelpPopup('actip9.hlp','defDomainFunction');" class="pop">funzioni di aggregazione sui domini</A> come, ad esempio, <B>Dsum</B>. Quando si utilizza una funzione di aggregazione sui domini, per eseguire la query vengono recuperati tutti i dati della tabella collegata.<BR><BR></LI>
+
+	<LI class=LB1>Se le aggiunte di record a una tabella collegata sono frequenti, creare una maschera per l'aggiunta di record impostando la proprietà <B>Immissione dati</B> a <B>Sì</B>. Quando si apre la maschera per immettere dei nuovi dati, nessuno dei record esistenti viene visualizzato. Questa impostazione di proprietà consente un risparmio di tempo, poiché non è necessario recuperare tutti i record della tabella collegata.<BR><BR></LI>
+
+	<LI class=LB1>È bene tener presente che più utenti contemporaneamente possono tentare di utilizzare una tabella esterna, Occorre, quindi, evitare di bloccare dei record più del tempo necessario.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefAchievingOptimalPerformanceAttachedTablesSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconBoundUnboundCalculatedControls'
+Feature='Forms: Controls'
+Handoff='3'
+SourceFile='CFRMCTL1.RTF'
+Tnum='188805'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Definizione e funzionamento dei controlli</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconboundunboundcalculatedcontrols"></A>Definizione e funzionamento dei controlli</H1>
+
+<P class=T>Tutte le informazioni su una maschera o un report sono contenute nei controlli. Nelle <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagine di accesso ai dati</A> le informazioni sono contenute nei controlli così come avviene nelle maschere o nei report. È tuttavia possibile digitare le informazioni direttamente nella pagina di accesso ai dati. I controlli sono oggetti di una maschera, di un report o di una pagina di accesso ai dati che consentono di visualizzare i dati, di eseguire operazioni o di decorare le maschere o i report. È possibile ad esempio utilizzare una casella di testo in una maschera, in un report o in una pagina di accesso ai dati per visualizzare i dati, un pulsante di comando in una maschera per aprire un'altra maschera o report oppure una linea o un rettangolo per separare e raggruppare i controlli rendendoli più leggibili.</P>
+
+<P class=T>In Microsoft Access sono disponibili i seguenti tipi di controllo, tutti accessibili utilizzando la <A HREF="javascript:HelpPopup('actip9.hlp','defToolbox');" class="pop">casella degli strumenti</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura della maschera</A>, in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura del report</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura della pagina di accesso ai dati</A>: Casella di testo, Etichetta, Gruppo di opzioni, Casella di controllo, Casella di riepilogo, Pulsante di comando, Immagine, Linea, Rettangolo e i controlli personalizzati ActiveX. Le maschere e i report dispongono dei seguenti controlli aggiuntivi: Interruttore, Casella combinata, Cornice oggetto associato, Cornice oggetto non associato, Sottomaschera/sottoreport e Interruzione di pagina. Le pagine di accesso ai dati includono infine anche i controlli Casella di riepilogo a discesa, Collegamento ipertestuale, Testo a scorrimento e componenti come Tabella pivot, Foglio di calcolo e Grafico.</P>
+
+<P class=T>I controlli possono essere associati, non associati o calcolati. Un <I>controllo associato</I> è legato a un campo in una tabella o <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> sottostante. Utilizzare i controlli associati per visualizzare, immettere e aggiornare i valori dai campi nel database. Un <I>controllo non associato</I> non dispone di un'origine dati. È possibile utilizzare i controlli non associati per visualizzare informazioni, linee, rettangoli e immagini. Nella figura sotto riportata sono illustrati alcuni esempi di controlli associati, non associati e calcolati. Un <I>controllo calcolato</I> utilizza un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> come origine dati. Un'espressione può utilizzare i dati di un campo in una tabella sottostante o nella query di una maschera o di un report oppure i dati di un altro controllo nella maschera o nel report.</P>
+
+<P class=ART><IMG SRC="images/cfrmbas4.bmp" ALT="Controlli associati, non associati e calcolati" BORDER=0></P>
+
+<P class=T>Ulteriori informazioni sui <A HREF="achowMicrosoftAccessControls.htm">controlli di Microsoft Access</A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconBoundUnboundCalculatedControlsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

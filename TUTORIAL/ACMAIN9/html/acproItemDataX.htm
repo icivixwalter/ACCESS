@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproItemDataX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproapp2_1a.doc'
+Tnum='186533'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ItemData</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproitemdatax"></A>Esempio di proprietà ItemData</B></P>
+
+
+
+<P class=T>Il seguente esempio consente di stampare il valore della colonna associata per ogni riga selezionata nella casella di riepilogo ElencoImpiegati della maschera Impiegati. La proprietà <B>MultiSelect</B> della casella di riepilogo deve essere impostata a Semplice o a Estesa.</P>
+
+<PRE class=CT><CODE>Sub RowsSelected()
+&nbsp;&nbsp;&nbsp; Dim ctlList As Control, varItem As Variant
+
+&nbsp;&nbsp;&nbsp; ' Restituisce la variabile dell'oggetto Control che punta alla casella di riepilogo.
+&nbsp;&nbsp;&nbsp; Set ctlList = Forms!Impiegati!ElencoImpiegati
+&nbsp;&nbsp;&nbsp; ' Enumera le voci selezionate.
+&nbsp;&nbsp;&nbsp; For Each varItem in ctlList.ItemsSelected
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stampa il valore della colonna associata.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print ctlList.<B>ItemData(</B>varItem<B>)</B>
+&nbsp;&nbsp;&nbsp; Next varItem
+End Sub</CODE></PRE>
+
+
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

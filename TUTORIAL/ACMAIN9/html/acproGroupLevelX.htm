@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproGroupLevelX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprogrp1_1a.rtf'
+Tnum='187285'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà del tipo Group</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprogrouplevelx"></A>Esempio di proprietà del tipo Group</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito imposta la proprietà <B>SortOrder</B> e le proprietà di raggruppamento relative al primo livello di gruppo del report Prodotti per categoria in modo da creare un elenco alfabetico dei prodotti.</P>
+
+<PRE class=CT><CODE>Private Sub Report_Open(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà CriterioOrdinamento in ordine crescente.
+&nbsp;&nbsp;&nbsp; Me.<B>GroupLevel(</B>0<B>)</B>.<B>SortOrder</B> = False
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà RaggruppaSecondo.
+&nbsp;&nbsp;&nbsp; Me.<B>GroupLevel(</B>0<B>)</B>.<B>GroupOn</B> = 1
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà IntervalloRaggruppamento a 1.
+&nbsp;&nbsp;&nbsp; Me.<B>GroupLevel(</B>0<B>)</B>.<B>GroupInterval</B> = 1
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà StampaSezioneUnita a Con primo corpo.
+&nbsp;&nbsp;&nbsp; Me.<B>GroupLevel(</B>0<B>)</B>.<B>KeepTogether</B> = 2
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

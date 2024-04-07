@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRunX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186410'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Run</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthrunx"></A>Esempio di metodo Run</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene eseguita una routine <B>Sub</B> definita dall'utente in un modulo di un database di Microsoft Access da un'altra applicazione che funziona come componente ActiveX.</P>
+
+<P class=T>Per provare tale esempio, creare un nuovo database chiamato CodiceWiz.mdb e impostarne la proprietà <B>ProjectName</B> a CodiceWiz. Aprire un nuovo modulo nel database e immettere il codice riportato di seguito. Salvare quindi il modulo e chiudere il database.</P>
+
+<PRE class=CT><CODE>Sub Saluti(strNome As String)
+&nbsp;&nbsp;&nbsp; MsgBox("Ciao, " &amp; strNome)
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Una volta completato tale passo, eseguire il codice riportato di seguito da Microsoft Excel o da Microsoft Visual Basic. Assicurarsi di aver aggiunto un riferimento alla libreria dei tipi di Microsoft Access scegliendo <B>Riferimenti</B> dal menu <B>Strumenti</B> e selezionando <B>Microsoft Access 9.0 Object Library</B> nella finestra di dialogo <B>Riferimenti</B>.</P>
+
+<PRE class=CT><CODE>' Includere questo codice nella sezione Dichiarazioni del modulo.
+Dim appAccess As Access.Application
+
+Sub EseguiSubAccess()
+&nbsp;&nbsp;&nbsp; ' Crea istanza di un oggetto Application di Access.
+&nbsp;&nbsp;&nbsp; Set appAccess = _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CreateObject("Application.Access.9")
+&nbsp;&nbsp;&nbsp; ' Apre il database CodiceWiz in Microsoft Access.
+&nbsp;&nbsp;&nbsp; appAccess.OpenCurrentDatabase "C:\Documenti\CodiceWiz.mdb", False
+&nbsp;&nbsp;&nbsp; ' Esegue routine Sub.
+&nbsp;&nbsp;&nbsp; appAccess.<B>Run</B> "Saluti", "Ugo"
+&nbsp;&nbsp;&nbsp; Set appAccess = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefUseTheImportErrorsTableS'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='188433'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Messaggi riguardanti la tabella relativa agli errori di importazione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefusetheimporterrorstables"></A>Messaggi riguardanti la tabella relativa agli errori di importazione</H1>
+
+<P class=T>Nella tabella relativa agli errori di importazione viene descritta la maggior parte degli errori incontrati durante l'importazione di un file di testo o di un foglio di calcolo in un <A HREF="javascript:HelpPopup('actip9.hlp','IDC_acdefAccessDatabase');" class="pop">database di Microsoft Access</A>. La tabella comprende nomi di campo e numeri di riga che indicano quali dati abbiano provocato gli errori.</P>
+
+<P class=T><B>Nota&nbsp;&nbsp;</B> Nei <A HREF="javascript:HelpPopup('actip9.hlp','IDC_acdefAccessProject');" class="pop">progetti di Microsoft Access</A> non viene creata alcuna tabella relativa agli errori di importazione. È consigliabile l'utilizzo di DTS (Data Transformation Services), un metodo più rapido e flessibile per l'importazione e la trasformazione dei dati. Per ulteriori informazioni, <A HREF="acconAboutMicrosoftSQLServerDocumentation.htm">consultare la documentazione di Microsoft SQL Server</A>.</P>
+
+<P class=T>Se vengono riportati degli errori, aprire la tabella relativa agli errori di importazione per determinare la causa della mancata <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importazione</A> di tutti i record. Nella seguente tabella vengono elencati possibili errori di importazione e ne viene descritta la causa.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=40%>Errore</TH>
+<TH width=60%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=40%>Troncamento di campo</TD>
+<TD class=TT width=60%>Un valore nel file è troppo grande per l'impostazione della proprietà <B>Dimensione campo</B> per questo campo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=40%>Errore di conversione del tipo</TD>
+<TD class=TT width=60%>Un valore nel file di testo o nel foglio di calcolo rappresenta il tipo di dati errato per questo campo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=40%>Violazione di chiave</TD>
+<TD class=TT width=60%>Il valore di chiave primaria di questo record è un duplicato, cioè esiste già nella tabella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=40%>Errore di regola di convalida</TD>
+<TD class=TT width=60%>Un valore infrange la regola impostata utilizzando la proprietà <B>Valido se</B> per questo campo o per la tabella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=40%>Valori Null nel campo richiesto</TD>
+<TD class=TT width=60%>Un valore <B>Null</B> non è accettato in questo campo, perché la proprietà <B>Richiesto</B> è impostata a <B>Sì</B> per questo campo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=40%>Valore Null nel campo Contatore</TD>
+<TD class=TT width=60%>I dati importati contengono un valore Null che si sta tentando di accodare a un campo Contatore.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=40%>Record non analizzabile</TD>
+<TD class=TT width=60%>Un valore di testo contiene il carattere di delimitazione di testo, generalmente delle virgolette doppie. Ogni volta che un valore contiene il carattere di delimitazione, questo deve essere ripetuto due volte nel file di testo, ad esempio:
+<P class=TT>"10 - 3 1/2"" dischi/casella"</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Se si ritiene che il problema sia causato dai dati, modificare il file di testo o il foglio di calcolo. Se si stanno accodando dei record ad una tabella esistente, potrebbe essere necessario modificare la stessa tabella, ad esempio, riordinando i campi o cambiando i tipi di dati. Una volta risolto il problema, effettuare nuovamente l'importazione dei dati.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefUseTheImportErrorsTableSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

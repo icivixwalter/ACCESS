@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCustomizeParadoxSettingsS'
+Feature='Miscellaneous: Registry'
+Handoff='3'
+SourceFile='CMSCNEW.RTF'
+Tnum='187469'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Personalizzare le impostazioni dei driver per Paradox</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dahowChangingParadox">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthSetOption">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowcustomizeparadoxsettingss"></A>Personalizzare le impostazioni dei driver per Paradox</H1>
+
+<OL>
+	<LI class=LPROC>Avviare l'Editor del registro di configurazione.
+<P class=LBR2><A HREF="achowUseTheRegistryEditorS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Spostarsi alla sottochiave \HKEY_LOCAL_MACHINE<B><BR> </B>\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox e apportare le modifiche desiderate.
+<P class=LT1>Per ulteriori informazioni sulle impostazioni dei driver per Paradox, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LPROC>Uscire dall'Editor del registro di configurazione.<BR><BR></LI>
+
+	<LI class=LPROC>Uscire e riavviare Microsoft Access per utilizzare le nuove impostazioni.</LI>
+</OL>
+
+<P class=T><B>Importante</B> Le modifiche apportate alle impostazioni in queste sottochiavi influiranno su tutti i programmi installati sul computer che utilizzano il <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A> per accedere ai dati di Paradox. Oltre a Microsoft Access 2000, sono inclusi Microsoft Excel 2000, Microsoft Visual Basic 6.0 o versione successiva ed eventualmente altri. Per apportare modifiche che siano valide solo per Microsoft Access 2000, spostarsi alla sottochiave \HKEY_LOCAL_MACHINE\SOFTWARE<B><BR> </B>\Microsoft\Office\9.0\Access\Jet\4.0\Engines<B><BR> </B>\Paradox e modificare i valori. Se la sottochiave \Paradox non esiste, crearla e aggiungere i valori.</P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; È anche possibile utilizzare il metodo <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">Data Access Object (DAO</A>), <B>Application.DBEngine.SetOption</B>, per modificare dinamicamente i valori del registro di configurazione di Microsoft Jet all'esecuzione di una singola sessione, senza modificare in modo permanente i valori del registro di configurazione di Microsoft Windows. Per ulteriori informazioni, fare clic su <A HREF="JavaScript:hhobj_2.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCustomizeParadoxSettingsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconDataAccessPagesWhatTheyAreHowTheyWorkDT'
+Feature='Page: Basics'
+Handoff='3'
+SourceFile='cdapdtim.doc'
+Tnum='279637'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Definizione e funzionamento delle pagine di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="accondataaccesspageswhattheyarehowtheyworkdt"></A>Definizione e funzionamento delle pagine di accesso ai dati</H1>
+
+<P class=T>Una pagina di accesso ai dati è un tipo speciale di pagina Web progettata per la visualizzazione e la gestione di dati provenienti da Internet o da una rete Intranet, ossia i dati memorizzati in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o di Microsoft SQL Server. Nella pagina di accesso ai dati possono anche essere inclusi i dati provenienti da altre origini, ad esempio Microsoft Excel. </P>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#designingdifferenttypesofpages">Progettazione di tipi diversi di pagine di accesso ai dati</A></P>
+
+<P class=LBR1><A HREF="#usingpagesininternetexplorer">Utilizzo di pagine di accesso ai dati in Internet Explorer</A></P>
+
+<P class=LBR1><A HREF="#usingpagesinmicrosoftaccess">Utilizzo di pagine di accesso ai dati in Microsoft Access</A></P>
+
+<H2><A NAME="designingdifferenttypesofpages"></A>Progettazione di tipi diversi di pagine di accesso ai dati</H2>
+
+<P class=T>Le pagine di accesso ai dati vengono progettate in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura della pagina</A> di Microsoft Access. La pagina è un file separato memorizzato all'esterno di Microsoft Access. Quando però si crea il file, nella finestra del database viene aggiunto automaticamente un collegamento al file. La progettazione di una pagina di accesso ai dati è molto simile alla progettazione di maschere e report: si utilizza un elenco di campi, la casella degli strumenti, i controlli, la finestra di dialogo <B>Ordinamento e raggruppamento</B>, e così via. Esistono tuttavia alcune differenze significative nelle modalità di progettazione e interazione con le pagine di accesso ai dati rispetto alle maschere e ai report. La modalità di progettazione della pagina dipende dall'utilizzo della pagina.
+
+<UL>
+	<LI class=LB1><B>Report interattivi</B>&nbsp;&nbsp; Questo tipo di pagina di accesso ai dati viene spesso utilizzato per consolidare e raggruppare le informazioni memorizzate nel database e infine pubblicare riepiloghi dei dati. Con una pagina ad esempio è possibile pubblicare le vendite realizzate per ogni regione in cui si esercita un'attività. Grazie agli <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefExpandIndicator');" class="pop">indicatori di espansione</A>, è possibile passare da un riepilogo generale delle informazioni, ad esempio un elenco di tutte le regioni con il totale delle vendite combinate, a dettagli specifici sulle singole vendite realizzate in ciascuna regione. Benché nelle pagine di accesso ai dati siano disponibili pulsanti della barra degli strumenti per ordinare e <A HREF="javascript:HelpPopup('actip9.hlp','defFilter');" class="pop">filtrare</A> i dati, non è consentito modificare i dati. Per un esempio e per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="acconAboutGroupingRecordsOnDataAccessPage.htm">pagine di accesso ai dati che raggruppano i record per i report interattivi</A>. <BR><BR></LI>
+
+	<LI class=LB1><B>Immissione dati</B>&nbsp;&nbsp; Questo tipo di pagina di accesso ai dati viene utilizzato per visualizzare, aggiungere e modificare record. Per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="acconAboutCreatingDataAccessPageThatsUsedForDataEntry.htm">pagine di accesso ai dati utilizzate per l'immissione di dati</A>.<BR><BR></LI>
+
+	<LI class=LB1><B>Analisi dei dati</B>&nbsp;&nbsp; Questo tipo di pagina di accesso ai dati può includere un <A HREF="achowCreatePivotTableList.htm">elenco di tabella pivot</A>, ossia un elenco simile a una maschera di tabella pivot di Microsoft Access o a un rapporto di tabella pivot di Microsoft Excel che consente di riorganizzare i dati per analizzarli in modi diversi. Nella pagina è possibile includere inoltre un <A HREF="achowCreateChartOnDataAccessPage.htm">grafico</A> per analizzare le tendenze, rilevare i modelli e confrontare i dati del database oppure un <A HREF="achowAddSpreadsheetToDataAccessPage.htm">foglio di calcolo</A> in cui immettere e modificare dati ed eseguire calcoli mediante formule come in Microsoft Excel. Vedere un <A HREF="mk:@MSITStore:msowcrdp.chm::/html/acconExampleOfDataAccessPageForDataAnalysis.htm">esempio di pagina di accesso ai dati utilizzata per l'analisi dei dati<A>. </LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#accondataaccesspageswhattheyarehowtheyworkdt">inizio</A></P>
+
+<H2><A NAME="usingpagesininternetexplorer"></A>Utilizzo di pagine di accesso ai dati in Internet Explorer</H2>
+
+<P class=T>Una pagina di accesso ai dati è direttamente connessa a un database. Quando gli utenti visualizzano la pagina di accesso ai dati in Microsoft Internet Explorer, visualizzano la propria copia della pagina. Tutte le modifiche apportate alla visualizzazione dei dati, quali le operazioni di filtraggio, di ordinamento e di altro genere, comprese le modifiche apportate all'interno di un elenco di tabella pivot o di un foglio di calcolo, influiscono solo sulla propria copia della pagina di accesso ai dati. Le modifiche apportate ai dati veri e propri, ad esempio la modifica dei valori e l'aggiunta o l'eliminazione di dati, vengono memorizzate tuttavia nel database sottostante, diventando così disponibili a qualsiasi utente che visualizza la pagina di accesso ai dati.</P>
+
+<P class=T>Per le informazioni della Guida sulle modalità di gestione della pagina in Internet Explorer, fare clic sul pulsante <IMG SRC="images/0984.bmp"  BORDER=0> nella barra di spostamento tra record. Il file della Guida che viene visualizzato viene incluso automaticamente nelle pagine di accesso ai dati pubblicate con una barra degli strumenti di spostamento tra record. Se si elimina questa barra degli strumenti o si disattiva il pulsante <B>?</B> in essa contenuto, è opportuno fornire istruzioni a coloro che intendono utilizzare la pagina.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per visualizzare e utilizzare la pagina di accesso ai dati su Internet o una rete Intranet è necessario disporre di Microsoft Internet Explorer 5 e di una licenza per Microsoft Office 2000. </P>
+
+<P class=rtt>Torna all'<A HREF="#accondataaccesspageswhattheyarehowtheyworkdt">inizio</A></P>
+
+<H2><A NAME="usingpagesinmicrosoftaccess"></A>Utilizzo di pagine di accesso ai dati in Microsoft Access</H2>
+
+<P class=T>Una pagina di accesso ai dati può anche essere utilizzata in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPageView');" class="pop">visualizzazione Pagina</A> in Microsoft Access. Le pagine di accesso ai dati costituiscono un complemento alle maschere e ai report utilizzati nell'applicazione di database. Prima di <A HREF="acconShouldIUseFormReportOrDataAccessPage.htm">decidere se progettare una pagina di accesso ai dati, una maschera o un report</A>, è opportuno prendere in considerazione le operazioni che si desidera eseguire.</P>
+
+<P class=T>Per le informazioni della Guida in linea sulla gestione della pagina di accesso ai dati in visualizzazione Pagina, fare clic sul pulsante <B>?</B> sulla barra degli strumenti <B>Visualizzazione Pagina </B> per visualizzare la Guida di Access. Se si fa clic sul pulsante <B>?</B> sulla barra degli strumenti di spostamento tra record della pagina, vengono visualizzate le informazioni della Guida sulla gestione della pagina in Internet Explorer. Come affermato in precedenza, questo file della Guida viene automaticamente incluso in qualsiasi pagina pubblicata con una barra degli strumenti di spostamento tra record. È possibile eliminare il pulsante della Guida nelle pagine che verranno utilizzate solo in Access oppure modificarlo affinché venga visualizzata una Guida in linea personalizzata.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondataaccesspageswhattheyarehowtheyworkdt">inizio</A></P>
+
+<H2>Ulteriori informazioni</H2>
+
+<P class=T><A HREF="acdecCreateDataAccessPageS.htm">Creare una pagina di accesso ai dati</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconDataAccessPagesWhatTheyAreHowTheyWorkDTW">
+</OBJECT>
+</P>
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowAddToToolbarCustomButtonThatPerformsVisualBasicFunction'
+Feature='Command Bars'
+Handoff='1'
+SourceFile='ccmdbraw_1.rtf'
+Tnum='188999'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Aggiungere un pulsante personalizzato che esegue una funzione Visual Basic a una barra degli strumenti</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowWriteUDFS">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowaddtotoolbarcustombuttonthatperformsvisualbasicfunction"></A>Aggiungere un pulsante personalizzato che esegue una funzione Visual Basic a una barra degli strumenti</H1>
+
+<OL>
+	<LI class=LPROC>Creare la funzione che si desidera venga eseguita dal comando.
+<P class=LBR2><A HREF="JavaScript:hhobj_1.Click()">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Scegliere <B>Barre degli strumenti</B> dal menu <B>Visualizza</B>, quindi <B>Personalizza</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Visualizzare la barra degli strumenti a cui si desidera aggiungere il pulsante.
+<P class=LBR2><A HREF="ofhowShowOrHideCommandBar.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Fare clic sulla scheda <B>Comandi</B> nella finestra di dialogo <B>Personalizza</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella <B>Categorie</B>, scegliere <B>File</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Trascinare il comando <B>Personalizza</B> dalla casella <B>Comandi</B> sulla barra degli strumenti visualizzata.<BR><BR></LI>
+
+	<LI class=LPROC>Con la finestra di dialogo <B>Personalizza</B> aperta, fare clic con il pulsante destro del mouse sul pulsante dalla barra degli strumenti, quindi digitarne il nome nella casella <B>Nome</B> del menu di scelta rapida. <BR><BR></LI>
+
+	<LI class=LPROC>Dallo stesso menu di scelta rapida scegliere <B>Proprietà</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella <B>Azione</B> digitare il nome della funzione che si desidera eseguire nel formato =<I>nomefunzione</I>(). Per una funzione personalizzata chiamata SetCaption() ad esempio digitare <B>=SetCaption()</B>. Per una funzione incorporata, immettere il nome della funzione e tutti gli argomenti richiesti, ad esempio <B>=MsgBox(IIf(Instr(Time(), "PM"), "Buon pomeriggio", "Buon giorno"))</B>.<BR><BR></LI>
+
+	<LI class=LPROC2>Specificare le altre proprietà per il pulsante.</LI>
+</OL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowAddToToolbarCustomButtonThatPerformsVisualBasicFunctionW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconbidiLearnDifferentCalendars'
+Feature='International'
+Handoff='3'
+SourceFile='bidi.doc'
+Tnum='257922'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'utilizzo di calendari diversi</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconbidilearndifferentcalendars"></A>About using different calendars</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>If you open an existing database with date references and you have selected the wrong calendar setting, the program might report a variety of errors or other unexpected behaviors. For example, if you have checked the <B>Hijri Calendar</B> setting, Microsoft Access 2000 will display a syntax error message if a report makes reference to <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiGregorian');" class="pop">Gregorian</A> dates that are invalid as <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiHijri');" class="pop">Hijri</A> dates (for example, the date 12/31/99 will produce a syntax error because no Hijri month has 31 days).</P>
+
+<P class=T>To avoid problems of this sort, all date references in a database must be based on the same calendar.</P>
+
+<P class=TPT><B>Important</B>&nbsp;&nbsp; It is recommended that you choose the database calendar when you first create your database, and then never change it.</P>
+
+<H2>Other considerations when the database calendar is set to Hijri</H2>
+
+<UL>
+	<LI class=LB1>To ensure Hijri dates strings are evaluated correctly in expressions and Visual Basic for Applications statements, use the <B>CDate</B> function to evaluate the strings instead of declaring the strings as constants.
+<P class=LT1>For example, type <B>CDate("1/25/20")</B> instead of <B>#1/25/20#</B>.
+
+<P class=LT1>The <B>CDate</B> function will always return a value based on the active database calendar, whereas date constants are always evaluated by using the Gregorian calendar.
+</LI>
+
+	<LI class=LB1>For reliable behavior, enter and display dates in an unambiguous format. For example, dates in short date format might be misinterpreted in queries if the year or the day of the month are 12 or less (for example, 3/11/10). Dates in medium date format display only the first few characters of the month name, which can create ambiguity or an undesirable appearance. Use long date format whenever possible. You can alter the way a date is displayed in long format (for example, excluding the day of the month) by using <B>Regional Settings</B> in Windows Control Panel.<BR><BR></LI>
+
+	<LI class=LB1>Dates entered in the <B>ValidationRule</B> property of a Date/Time field in a table (in table Design view) must be Hijri. However, to have the <B>ValidationRule</B> date appear as a Hijri date in validation messages, the validation rule must use the <B>CDate</B> function (for example, 'CDate ("1/25/1420")'.<BR><BR></LI>
+
+	<LI class=LB1>Sample Access 2000 applications, such as the Northwind database, are not localized and expect the database calendar to be Gregorian. Because the sample applications contain hard-coded date constants that are not valid Hijri dates, running the sample applications with the database calendar set to Hijri is not recommended.<BR><BR></LI>
+
+	<LI class=LB1>All Hijri years will be displayed as four-digit year values (for example, 1420) unless the <B>Format()</B> function is explicitly used.<BR><BR></LI>
+
+	<LI class=LB1>The Visual Basic <B>Date</B> function, used to set the system date for your computer, will not accept Hijri dates. If the database calendar is set to Hijri, set the calendar to Gregorian before setting system date with the <B>Date</B> function.<BR><BR></LI>
+
+	<LI class=LB1>Dates in tables exported as text files are always stored as Gregorian values. If the database calendar is set to Hijri, automatic Hijri to Gregorian conversion is performed during the export process. Similarly, dates in tables imported from text files are assumed to be Gregorian dates and will be converted to Hijri values during the import process if the database calendar setting is Hijri.<BR><BR></LI>
+
+	<LI class=LB1>You can't set the database calendar programmatically by using Visual Basic for Applications.</LI>
+</UL>
+
+<H2>More information</H2>
+
+<P class=LBR1><A HREF="acconbidiImportExportLinkRTLTablesTextFormat.htm">Import, export, and link right-to-left tables in text formats</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconbidiLearnDifferentCalendarsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctTimerX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acobdatx_1a.rtf'
+Tnum='234564'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Timer</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfcttimerx"></A>Esempio di funzione Timer</B></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>Timer</B> per stabilire la durata delle operazioni e degli eventi nell'applicazione Microsoft Access. Inserire la funzione <B>Timer</B> subito prima e dopo l'operazione nel codice di cui si desidera stabilire la durata. Nell'esempio riportato di seguito si utilizza il nome di una query come argomento, quindi si calcola il tempo necessario per l'esecuzione della query.</P>
+
+<PRE class=CT><CODE>Sub TimerQuery (strNomeQuery As String)
+&nbsp;&nbsp;&nbsp; Dim sngInizio As Single, sngFine As Single
+&nbsp;&nbsp;&nbsp; Dim sngTrascorso As Single
+
+&nbsp;&nbsp;&nbsp; sngInizio = <B>Timer</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Ottiene ora di inizio.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenQuery strNomeQuery, acNormal&nbsp;&nbsp;&nbsp; ' Esegue query.
+&nbsp;&nbsp;&nbsp; sngFine = <B>Timer</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Ottiene ora di fine.
+&nbsp;&nbsp;&nbsp; sngTrascorso = Format(sngFine - sngInizio, "Fisso")
+&nbsp;&nbsp;&nbsp; ' Tempo trascorso.
+&nbsp;&nbsp;&nbsp; MsgBox ("La query " &amp; strNomeQuery &amp; " ha impiegato " &amp; sngTrascorso _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; " secondi per essere eseguita.")
+End Sub
+</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

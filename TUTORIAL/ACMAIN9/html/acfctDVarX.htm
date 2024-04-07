@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDVarX'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187198'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di funzioni DVar, DVarP</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdvarx"></A>Esempi di funzioni DVar, DVarP</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si restituiscono le stime della varianza relative a una popolazione intera e a un campione di popolazione per gli ordini spediti nel Regno Unito. Il dominio è la tabella Ordini. L'argomento <I>criteri</I> limita il set di record risultante ai record per cui PaeseDestinatario è UK.</P>
+
+<PRE class=CT><CODE>Dim dblX As Double, dblY As Double
+' Stima del campione.
+dblX = <B>DVar(</B>"[SpeseTrasporto]", "Ordini", "[PaeseDestinatario] = 'UK'"<B>)</B>
+' Stima della popolazione.
+dblY = <B>DVarP(</B>"[SpeseTrasporto]", "Ordini", "[PaeseDestinatario] = 'UK'"<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si restituiscono stime utilizzando una variabile, <CODE>strPaese,</CODE> nell'argomento <I>criteri</I>. Si noti che nell'espressione stringa vengono inclusi gli apici ('), in modo che, quando le stringhe verranno concatenate, la variabile letterale <CODE>UK</CODE> viene racchiusa tra gli apici.</P>
+
+<PRE class=CT><CODE>Dim strPaese As String, dblX As Double
+strPaese = "UK"
+dblX = <B>DVar(</B>"[SpeseTrasporto]", "Ordini", "[PaeseDestinatario] = '" _
+&nbsp;&nbsp;&nbsp; &amp; strPaese &amp; "'"<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

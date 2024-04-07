@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCriteriaExpressionsDomainAggregateFunctionsS'
+Feature='Queries: Expressions'
+Handoff='1'
+SourceFile='CQRYEXP.RTF'
+Tnum='188530'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di espressioni che utilizzano come criterio il risultato di una funzione di aggregazione sui domini</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDAvg">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDStDev">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxDomainRef">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconcriteriaexpressionsdomainaggregatefunctionss"></A>Esempi di espressioni che utilizzano come criterio il risultato di una funzione di aggregazione sui domini</H1>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=16%>Campo</TH>
+<TH width=43%>Espressione</TH>
+<TH width=41%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>Trasporto</TD>
+<TD class=TT width=43%>&gt;(DAvg("[Trasporto]", "Ordini") + DstDev("[Trasporto]", "Ordini") +)</TD>
+<TD class=TT width=41%>Utilizza le funzioni <A HREF="JavaScript:hhobj_1.Click()"><B>DAvg</B></A> e <A HREF="JavaScript:hhobj_2.Click()"><B>DStDev</B></A> per visualizzare tutti gli ordini le cui spese di trasporto superano la media delle spese di trasporto più la deviazione standard relativa al costo del trasporto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>Quantità</TD>
+<TD class=TT width=43%>&gt;DAvg("[Quantità]", "Dettagli ordini")</TD>
+<TD class=TT width=41%>Utilizza la funzione <B>DAvg</B> per visualizzare prodotti ordinati in quantità al di sopra della media delle quantità ordinate.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Per ulteriori informazioni sull'utilizzo delle funzioni di aggregazione sui domini, fare clic su <A HREF="JavaScript:hhobj_3.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconCriteriaExpressionsDomainAggregateFunctionsSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

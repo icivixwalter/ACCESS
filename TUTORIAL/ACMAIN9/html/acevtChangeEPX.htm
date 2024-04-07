@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtChangeEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187055'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Modifica - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtchangeepx"></A>Evento Modifica - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come contare il numero di caratteri immessi in una casella di testo. Se sono stati immessi più di tre caratteri, viene visualizzato un messaggio e il conteggio viene reimpostato a zero.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera chiamata Ordini contenente una casella di testo chiamata ZonaDestinatario.</P>
+
+<PRE class=CT><CODE>Private Sub ZonaDestinatario_<B>Change</B>()
+&nbsp;&nbsp;&nbsp; ' Dichiara una variabile come statica per conservare il valore tra chiamate.
+&nbsp;&nbsp;&nbsp; Static intLettera As Integer
+
+&nbsp;&nbsp;&nbsp; ' Verifica quante lettere sono state immesse.
+&nbsp;&nbsp;&nbsp; ' Se le lettere sono più di tre, reimposta il valore della casella di testo.
+&nbsp;&nbsp;&nbsp; If intLettera &lt; 3 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intLettera = intLettera + 1
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Sono consentiti solo tre caratteri."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intLettera = 0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forms!Ordini!ZonaDestinatario.Undo
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

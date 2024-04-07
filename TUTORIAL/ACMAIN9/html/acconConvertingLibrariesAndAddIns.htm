@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconConvertingLibrariesAndAddIns'
+Feature='accon'
+Handoff='3'
+SourceFile='acconnew1.doc'
+Tnum='187103'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convertire database di libreria e componenti aggiuntivi</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acconconvertinglibrariesandaddins"></A>Convertire database di libreria e componenti aggiuntivi</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconConvertingLibrariesAndAddInsC">
+</OBJECT></P>
+
+
+
+<P class=T>Se si utilizzano <A HREF="javascript:HelpPopup('actip9.hlp','defAddIn');" class="pop">componenti aggiuntivi</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A> creati in una versione precedente di Microsoft Access, è necessario convertirli nel formato di Microsoft Access 2000 (versione 9.0) prima di utilizzarli con applicazioni create in Microsoft Access 2000.</P>
+
+<P class=T>Può essere inoltre necessario apportare alcune modifiche a oggetti, macro e routine dei database di libreria e dei componenti aggiuntivi per assicurarne il corretto funzionamento.</P>
+
+<P class=T>Per ulteriori informazioni sui database di libreria, consultare il capitolo 10 sull'API di Windows e su altre librerie a collegamento dinamico nel <I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I> oppure vedere <A HREF="acconSettingReferences.htm">Impostazione dei riferimenti per le librerie dei tipi</A>. Per informazioni su come come ottenere il <I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I>, fare clic su <A HREF="JavaScript:hhobj_2.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+<P class=RL><B>Creazione dei riferimenti e caricamento dei database di libreria</B></P>
+
+<P class=T>Prima di utilizzare una libreria in Microsoft Access 2000 è necessario stabilire un riferimento al database di libreria in tutte le applicazioni che lo utilizzano. Per eseguire questa operazione, scegliere <B>Riferimenti</B> dal menu <B>Strumenti</B> in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A> del modulo. Un <A HREF="javascript:HelpPopup('actip9.hlp','defReferencedDatabase');" class="pop">database con riferimento</A> deve essere nel formato Microsoft Access 2000.</P>
+
+<P class=T>Un database di libreria deve contenere solo il codice Visual Basic, che può essere chiamato da qualsiasi applicazione che mantiene un riferimento a tale libreria. Nelle versioni 1.<I>x</I> e 2.0 di Microsoft Access un database di libreria viene caricato all'avvio creando una voce nella sezione Libraries del file ini. Quasi tutte le informazioni che nelle versioni 1.<I>x</I> e 2.0 sono memorizzate in un file ini, nelle versioni successive sono memorizzate nel registro di configurazione di Windows. Per utilizzare un database di libreria tuttavia non è necessario creare una chiave del registro di configurazione di Windows.</P>
+
+<P class=RL><B>Riferimenti circolari tra librerie</B></P>
+
+<P class=T>Nelle versioni 1.<I>x</I> e 2.0 di Microsoft Access è possibile creare riferimenti circolari tra librerie. Le versioni successive di Microsoft Access tuttavia non consentono tali riferimenti. In altri termini, una volta creato un riferimento dalla Libreria A alla Libreria B, non è possibile creare un riferimento dalla Libreria B alla Libreria A.</P>
+
+<P class=RL><B>Funzionamento del menu Componenti aggiuntivi personalizzato</B></P>
+
+<P class=T>Nelle versioni 1.<I>x</I> e 2.0 di Microsoft Access i componenti aggiuntivi vengono visualizzati automaticamente nel sottomenu <B>Aggiunte</B> del menu <B>File</B>, mentre nelle versioni successive di Microsoft Access il sottomenu <B>Componenti aggiuntivi</B> è accessibile dal menu <B>Strumenti</B>. In Microsoft Access 2000 è possibile fare riferimento ai componenti aggiuntivi anche da qualsiasi menu o barra degli strumenti.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconConvertingLibrariesAndAddInsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

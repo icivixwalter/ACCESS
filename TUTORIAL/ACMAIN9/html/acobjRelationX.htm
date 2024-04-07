@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjRelationX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234529'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Relation e insieme Relations (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjrelationx"></A>Esempio di oggetto Relation e insieme Relations (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene rimossa la relazione esistente tra una tabella Impiegati e una tabella Ordini, quindi viene creata di nuovo tale relazione mediante la creazione di un nuovo oggetto <B>Relation</B>.</P>
+
+<PRE class=CT><CODE>Sub NuovaRelazione()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database
+&nbsp;&nbsp;&nbsp; Dim fld As Field, rel As <B>Relation</B>
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Trova relazione esistente ImpiegatiOrdini.
+&nbsp;&nbsp;&nbsp; For Each rel In dbs.<B>Relations</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If rel.TABLE = "Impiegati" And _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rel.ForeignTable = "Ordini"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Interroga utente prima di eliminare la relazione.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If MsgBox(rel.Name &amp; " già esiste. " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Questa relazione verrà eliminata e " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "ricreata.", vbOK) = vbOK 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbs.<B>Relations</B>.Delete rel.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Se la scelta è Annulla, esce dalla routine.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Next rel
+&nbsp;&nbsp;&nbsp; ' Crea nuova relazione e ne imposta le proprietà.
+&nbsp;&nbsp;&nbsp; Set rel = dbs.CreateRelation("ImpiegatiOrdini", "Impiegati", "Ordini")
+&nbsp;&nbsp;&nbsp; ' Imposta attributi oggetto Relation per rafforzare
+&nbsp;&nbsp;&nbsp; ' integrità dei riferimenti.
+&nbsp;&nbsp;&nbsp; rel.Attributes = dbRelationDeleteCascade + _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbRelationUpdateCascade
+&nbsp;&nbsp;&nbsp; ' Crea campo in insieme Fields di oggetto Relation.
+&nbsp;&nbsp;&nbsp; Set fld = rel.CreateField("IDImpiegato")
+&nbsp;&nbsp;&nbsp; ' Fornisce nome di campo chiave esterna.
+&nbsp;&nbsp;&nbsp; fld.ForeignName = "IDImpiegato"
+&nbsp;&nbsp;&nbsp; ' Accoda campo a oggetto Relation e
+&nbsp;&nbsp;&nbsp; ' oggetto Relation al database.
+&nbsp;&nbsp;&nbsp; rel.Fields.Append fld
+&nbsp;&nbsp;&nbsp; dbs.Relations.Append rel
+&nbsp;&nbsp;&nbsp; MsgBox "Relazione '" &amp; rel.Name &amp; "' creata."
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

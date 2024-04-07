@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlInnerJoinX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234457'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di operazione INNER JOIN (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlinnerjoinx"></A>Esempio di operazione INNER JOIN (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire l'esempio riportato di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare l'esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si creano due equi-join: uno tra le tabelle Dettagli ordini e Ordini e l'altro tra le tabelle Ordini ed Impiegati. Entrambi i join sono necessari in quanto la tabella Impiegati non contiene i dati relativi alle vendite e la tabella Dettagli ordini non contiene i dati relativi agli impiegati. La query produce un elenco degli impiegati e delle relative vendite totali.</P>
+
+<PRE class=CT><CODE>SELECT DISTINCTROW Somma(PrezzoUnitario * Quantità)
+    AS Vendite, Nome &amp; " " &amp; Cognome
+    AS Nome FROM Impiegati
+    <B>INNER JOIN</B>(Ordini INNER JOIN [Dettagli ordini]
+    ON Ordini.IDOrdine = [Dettagli ordini].IDOrdine)
+    ON Impiegati.IDImpiegato = Ordini.IDImpiegato
+    GROUP BY Nome &amp; " " &amp; Cognome;</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

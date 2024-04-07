@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWhatIsOptionGroupS'
+Feature='Forms: Controls'
+Handoff='3'
+SourceFile='cfrmctl2_1.rtf'
+Tnum='187747'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Definizione di gruppo di opzioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwhatisoptiongroups"></A>Definizione di gruppo di opzioni</H1>
+
+<P class=T>È possibile utilizzare un gruppo di opzioni in una maschera, in un report o in una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> per visualizzare un set limitato di alternative. Un gruppo di opzioni facilita la selezione di un valore dal momento che è sufficiente fare clic sul valore desiderato. In un gruppo di opzioni può essere selezionata solo un'opzione alla volta.</P>
+
+<P class=T>In una maschera o in un report un gruppo di opzioni è costituito da una cornice di gruppo e da un set di caselle di controllo, pulsanti di opzioni e interruttori. In una pagina di accesso ai dati è costituito da una cornice di gruppo e da un set di pulsanti di opzioni.</P>
+
+<P class=ART><img src="images/cfrmct7.bmp" alt="Gruppo di opzioni" BORDER=0></P>
+
+<P class=T>Se un gruppo di opzioni è associato a un campo, solo la cornice del gruppo è associata al campo, non le caselle di controllo, gli interruttori o i pulsanti di opzione all'interno della cornice. Invece di impostare la proprietà <B>Origine controllo</B> per ogni <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> del gruppo di opzioni, impostare la proprietà <B>Valore opzione</B> (maschera o report) o <B>Value</B> (pagina di accesso ai dati) di ogni casella di controllo, interruttore o pulsante di opzione a un numero valido per il campo a cui è associata la cornice del gruppo. In una pagina di accesso ai dati impostare la proprietà del controllo a un numero o testo significativo per il campo associato alla cornice del gruppo. Quando si seleziona un'opzione in un gruppo di opzioni, il valore del campo a cui è associato il gruppo di opzioni verrà impostato sul valore della proprietà <B>Valore opzione</B> o <B>Value</B> dell'opzione selezionata.</P>
+
+<P class=ART><img src="images/cfrmct8.bmp" alt="Opzione selezionata in un gruppo di opzioni" BORDER=0></P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>La proprietà <B>Valore opzione</B> o <B>Value</B> è impostata a un numero perché il valore di un gruppo di opzioni può essere solo un numero, non testo. Questo numero viene memorizzato nella tabella sottostante. In questo esempio, se nella tabella Ordini del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Access</A> si desidera visualizzare il nome del corriere invece di un numero, è possibile creare una tabella separata denominata Corrieri che memorizza i nomi dei corrieri, quindi impostare il campo Corriere della tabella Ordini come campo di ricerca dei dati nella tabella Corrieri. Per ulteriori informazioni sulla creazione di un campo di ricerca, fare clic su <A HREF="acdecCreatingLookupAndListFieldsInTablesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>In una maschera o in un report un gruppo di opzioni può essere anche impostato su un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A>. In una maschera, in un report o in una pagina di accesso ai dati può essere non associato. È possibile utilizzare un gruppo di opzioni non associato in una <A HREF="javascript:HelpPopup('actip9.hlp','defCustomDialogBox');" class="pop">finestra di dialogo personalizzata</A> per accettare l'input dell'utente ed eseguire un'azione basata su quell'input.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWhatIsOptionGroupSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

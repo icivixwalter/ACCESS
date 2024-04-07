@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproProcOfLineX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprov8_1a.rtf'
+Tnum='186788'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ProcOfLine</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproprocoflinex"></A>Esempio di proprietà ProcOfLine</B></P>
+
+
+
+<P class=T>La routine di funzione riportata di seguito fornisce un elenco dei nomi di tutte le routine di un modulo specifico.</P>
+
+<PRE class=CT><CODE>Function TutteRoutine(strNomeModulo As String)
+&nbsp;&nbsp;&nbsp; Dim mdl As Module
+&nbsp;&nbsp;&nbsp; Dim lngConteggio As Long, lngConteggioDichiarazione As Long, lngI As Long
+&nbsp;&nbsp;&nbsp; Dim strNomeRoutine As String, astrNomiRoutine() As String
+&nbsp;&nbsp;&nbsp; Dim intI As Integer, strMsg As String
+&nbsp;&nbsp;&nbsp; Dim lngR As Long
+
+&nbsp;&nbsp;&nbsp; ' Apre un oggetto Module specifico.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenModule strNomeModulo
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento all'oggetto Module.
+&nbsp;&nbsp;&nbsp; Set mdl = Modules(strNomeModulo)
+&nbsp;&nbsp;&nbsp; ' Conta le righe del modulo.
+&nbsp;&nbsp;&nbsp; lngConteggio = mdl.CountOfLines
+&nbsp;&nbsp;&nbsp; ' Conta le righe della sezione Dichiarazione contenuta nel modulo.
+&nbsp;&nbsp;&nbsp; lngConteggioDichiarazione = mdl.CountOfDeclarationLines
+&nbsp;&nbsp;&nbsp; ' Determina il nome della prima routine.
+&nbsp;&nbsp;&nbsp; strNomeRoutine = mdl.<B>ProcOfLine</B>(lngConteggioDichiarazione + 1, lngR)
+&nbsp;&nbsp;&nbsp; ' Inizializza una variabile contatore.
+&nbsp;&nbsp;&nbsp; intI = 0
+&nbsp;&nbsp;&nbsp; ' Ridimensiona la matrice.
+&nbsp;&nbsp;&nbsp; ReDim Preserve astrNomiRoutine(intI)
+&nbsp;&nbsp;&nbsp; ' Memorizza il nome della prima routine della matrice.
+&nbsp;&nbsp;&nbsp; astrNomiRoutine(intI) = strNomeRoutine
+&nbsp;&nbsp;&nbsp; ' Determina il nome della routine per ciascuna riga successiva alle dichiarazioni.
+&nbsp;&nbsp;&nbsp; For lngI = lngConteggioDichiarazione + 1 To lngConteggio
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Confronta il nome della routine con il valore della proprietà ProcOfLine.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If strNomeRoutine &lt;&gt; mdl.<B>ProcOfLine</B>(lngI, lngR) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Incrementa il contatore.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intI = intI + 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNomeRoutine = mdl.<B>ProcOfLine</B>(lngI, lngR)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReDim Preserve astrNomiRoutine(intI)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Assegna nomi di routine univoci alla matrice.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; astrNomiRoutine(intI) = strNomeRoutine
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Next lngI
+&nbsp;&nbsp;&nbsp; strMsg = "Routine nel modulo '" &amp; strNomeModulo &amp; "': " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; vbCrLf
+&nbsp;&nbsp;&nbsp; For intI = 0 To UBound(astrNomiRoutine)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = strMsg &amp; astrNomiRoutine(intI) &amp; vbCrLf
+&nbsp;&nbsp;&nbsp; Next intI
+&nbsp;&nbsp;&nbsp; ' Finestra di dialogo che elenca tutte le routine del modulo.
+&nbsp;&nbsp;&nbsp; MsgBox strMsg
+End Function</CODE></PRE>
+
+
+
+<P class=T>È possibile richiamare questa funzione utilizzando una routine simile a quella riportata di seguito.</P>
+
+<PRE class=CT><CODE>Sub OttieniTutteRoutine()
+&nbsp;&nbsp;&nbsp; AllProcs "Funzioni di utilità"
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconDeterminingWhenCanUpdateDataQueryS'
+Feature='Queries: Multiple tables'
+Handoff='1'
+SourceFile='CQRYMUL.RTF'
+Tnum='188001'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Quando aggiornare dati da una query</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="accondeterminingwhencanupdatedataquerys"></A>Quando aggiornare dati da una query</H1>
+
+<P class=T>In alcuni casi è possibile modificare i dati in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> della query per modificare i dati nella tabella sottostante. In altri casi non è possibile. Nella tabella riportata di seguito si indica se è possibile o meno aggiornare i risultati di una query e, per i casi in cui non è possibile, si suggerisce una possibile alternativa.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=41%>Query o campo della query </TH>
+<TH width=18%>Aggiornabile</TH>
+<TH width=41%>Soluzione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query basata su una tabella</TD>
+<TD class=TT width=18%>Sì</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query basata su tabelle con una <A HREF="javascript:HelpPopup('actip9.hlp','defOneToOne');" class="pop">relazione uno-a-uno</A></TD>
+<TD class=TT width=18%>Sì</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query basata su tabelle con una <A HREF="javascript:HelpPopup('actip9.hlp','defOneToMany');" class="pop">relazione uno-a-molti</A></TD>
+<TD class=TT width=18%>Di solito</TD>
+<TD class=TT width=41%>Per ulteriori informazioni, fare clic su <A HREF="acconWhenCanUpdateDataInQueryWhoseTablesHaveOnetomS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query basata su tre o più tabelle in cui esiste una relazione molti-a-uno-a-molti.</TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>Anche se non è possibile aggiornare direttamente i dati nella query, è possibile aggiornarli in una maschera o in una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> basata sulla query se la proprietà <B>Tipo Recordset</B> della maschera è impostata a <B>Dynaset (aggiornamenti non coerenti)</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query a campi incrociati</TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query SQL di tipo pass-through</TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query che calcola una somma, una media, un conteggio o altri tipi di formule sui valori di un campo oppure una query di aggiornamento che fa riferimento a un campo contenuto nella riga <B>Aggiorna a</B> da una query a campi incrociati, da una query di selezione o da una sottoquery che contiene formule o funzioni di aggregazione</TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>Utilizzando una <A HREF="javascript:HelpPopup('actip9.hlp','defDomainFunction');" class="pop">funzione di aggregazione sui domini</A> nella riga <B>Aggiorna a</B> di una query di aggiornamento, è possibile fare riferimento a campi da una query a campi incrociati, da una query di selezione o da una sottoquery che contiene formule o funzioni di aggregazione. Per ulteriori informazioni, fare clic su <A HREF="actrbOperationMustUseUpdatableQuery.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query di unione</TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query di cui la proprietà <B>Valori univoci</B> è impostata a <B>Sì</B></TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query che include una tabella collegata <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC</A> senza <A HREF="javascript:HelpPopup('actip9.hlp','defUniqueIndex');" class="pop">indice univoco</A> oppure una tabella di Paradox senza una <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A></TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query o tabella sottostante per cui non è assegnata un'<A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazione</A> Aggiornamento dati</TD>
+<TD class=TT width=18%>È possibile eliminare ma non aggiornare</TD>
+<TD class=TT width=41%>Per modificare i dati, devono essere assegnate le autorizzazioni. Per ulteriori informazioni, fare clic su <A HREF="achowAssignPermissionsSecurityAccountsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query o tabella sottostante per la quale non è assegnata un'autorizzazione Eliminazione dati</TD>
+<TD class=TT width=18%>È possibile aggiornare ma non eliminare</TD>
+<TD class=TT width=41%>Per eliminare i dati, devono essere assegnate le autorizzazioni. Per ulteriori informazioni, fare clic su <A HREF="achowAssignPermissionsSecurityAccountsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Query che include più di una tabella o query e le tabelle o query che non sono collegate da una linea di join in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura</A></TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>È necessario collegare correttamente con join le tabelle per poterle aggiornare. Per ulteriori informazioni, fare clic su <A HREF="achowJoinMultipleTablesInQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%><A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedField');" class="pop">Campo calcolato</A></TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Il campo è di sola lettura; il database è stato aperto in sola lettura o si trova su un'unita disco di sola lettura</TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%>Campo contenuto in un record eliminato oppure <A HREF="javascript:HelpPopup('actip9.hlp','defLocked');" class="pop">bloccato</A> da un altro utente</TD>
+<TD class=TT width=18%>No</TD>
+<TD class=TT width=41%>Un record bloccato dovrebbe essere aggiornabile non appena viene sbloccato</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=41%><A HREF="javascript:HelpPopup('actip9.hlp','defMemoDataType');" class="pop">Memo</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlink');" class="pop">collegamento ipertestuale</A> oppure <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObjectDataType');" class="pop">oggetto OLE</A> nei risultati della query</TD>
+<TD class=TT width=18%>Sì</TD>
+<TD class=TT width=41%>&nbsp;</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconDeterminingWhenCanUpdateDataQuerySW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

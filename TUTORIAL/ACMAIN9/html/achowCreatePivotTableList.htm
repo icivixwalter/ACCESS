@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreatePivotTableList'
+Feature='Page: Design'
+Handoff='3'
+SourceFile='cdapowcs.rtf'
+Tnum='270187'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare un elenco di tabella pivot in una pagina di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreatepivottablelist"></A>Creare un elenco di tabella pivot in una pagina di accesso ai dati</H1>
+
+<P class=T>Anche se è possibile ridisporre il layout di un elenco di tabella pivot di una pagina di accesso ai dati e impostare le proprietà in modo da determinarne l'aspetto e il funzionamento, non è comunque possibile aggiungere, eliminare o modificare i valori memorizzati nell'elenco di tabella pivot.
+
+<OL>
+	<LI class=LPROC>Nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura</A> di una pagina di accesso ai dati <A HREF="achowOpenCloseToolboxS.htm">visualizzare la casella degli strumenti</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sullo strumento <B>Tabella pivot di Office</B> <B></B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrOfficePivotTableQ');" class="pop"><img src="images/offpvlst.bmp" alt="Controllo Tabella pivot di Office" BORDER=0></A> nella casella degli strumenti.<BR><BR></LI>
+
+	<LI class=LPROC>Nella pagina di accesso ai dati fare clic sulla posizione in cui si desidera collocare l'angolo superiore sinistro del controllo. <BR><BR></LI>
+
+	<LI class=LPROC>Per scegliere l'origine dati per l'elenco di tabella pivot, effettuare una delle seguenti operazioni:
+<UL>
+	<LI class=LB2>Per utilizzare il database di Microsoft Access o Microsoft SQL Server corrente come origine dei dati,<A HREF="achowOpenCloseFieldListFormReportS.htm"> visualizzare l'elenco dei campi della pagina di accesso ai dati</A> e trascinare sul controllo elenco Tabella pivot la tabella o la <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> da utilizzare per l'elenco. È possibile inoltre trascinare i file da queste origini singolarmente. Quando si crea un elenco di tabella pivot trascinando i campi dall'elenco, l'opzione <B>Controllo</B> <B>origine dati</B> della <B>Casella delle proprietà Tabella pivot</B> viene impostata automaticamente a <B>MSODSC</B>, indicando che in Microsoft Access verrà utilizzato lo stesso <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataSourceControl');" class="pop">controllo origine dati</A> sia per l'elenco di tabella pivot che per la pagina stessa. Anche la casella della proprietà <B>Membro dati</B> viene impostata automaticamente al nome della tabella o query su cui si basa l'elenco di tabella pivot. Andare al passo 6.<BR><BR></LI>
+
+	<LI class=LB2>Per utilizzare un'origine dati esterna, <A HREF="mk:@MSITStore:msowcdpl.chm::/html/drefUsePropertiesToolbox.htm">visualizzare la <B>Casella delle proprietà Tabella pivot</B></A>, fare clic sulla barra <B>Origine dati</B>, fare clic sull'opzione <B>Connessione</B>, quindi fare clic su <B>Editor connessioni</B>. Fare clic sulla scheda <B>Provider</B> e selezionare il provider OLE DB da utilizzare per recuperare i dati. Fare clic sulla scheda <B>Connessione</B> e inserire le informazioni sul collegamento relative ai dati da utilizzare nell'elenco di tabella pivot. Per informazioni sulla finestra di dialogo <B>Proprietà di Data Link</B>, fare clic sul pulsante <B>?</B> nella parte inferiore della finestra di dialogo.</LI>
+</UL>
+</LI>
+
+	<LI class=LPROC>Nella sezione <B>Origine dati</B> della <B>Casella delle proprietà Tabella pivot</B>, sotto <B>Usa dati da</B>, effettuare una delle seguenti operazioni:
+<UL>
+	<LI class=LB2>Per utilizzare i dati di un'origine dati specifica all'interno del database esterno, fare clic su <B>Membro dati</B> e selezionare l'elemento desiderato dall'elenco.<BR><BR></LI>
+
+	<LI class=LB2>Per utilizzare una query o un comando, ad esempio un'istruzione SQL, per selezionare i dati, fare clic su <B>Testo comando</B> e digitare la query o il comando nella casella. Per informazioni sulla sintassi delle query, vedere la documentazione relativa all'origine dati esterna.</LI>
+</UL>
+</LI>
+
+	<LI class=LPROC>Completare l'elenco di tabella pivot disponendo il layout e utilizzando la barra degli strumenti dell'elenco e la <B>Casella delle proprietà Tabella pivot</B> per aggiungere totali, impostare le proprietà ed eseguire altre operazioni fino a ottenere il controllo desiderato. Informazioni su <A HREF="mk:@MSITStore:msowcdpl.chm::/html/dconWhatIsPL.htm">definizione e funzionamento di un elenco di tabella pivot</A>.</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Per creare un elenco di tabella pivot che utilizza i dati di un foglio di lavoro di Microsoft Excel, è necessario pubblicare i dati in una pagina Web da Microsoft Excel. Per trasformare la pagina Web in una pagina di accesso ai dati, aprirla in Microsoft Access e aggiungere i controlli associati ai dati del database di Microsoft Access o Microsoft SQL Server.<BR><BR></LI>
+
+	<LI class=NLB>Quando si ha un controllo Componente Web associato a un'origine dati esterna nella stessa pagina di accesso ai dati contenente i controlli associati al database di Microsoft Access o di Microsoft SQL Server, il controllo componente utilizzerà un'origine dati diversa rispetto al resto della pagina.<BR><BR></LI>
+
+	<LI class=NLB>È possibile <A HREF="mk:@MSITStore:msowcdch.chm::/html/wxconAboutCreatingUsingChartComponentAssociatedWithPivotTableList.htm">creare un grafico collegato all'elenco di tabella pivot</A> in modo che se si modifica l'elenco di tabella pivot, il grafico verrà aggiornato automaticamente in base alle modifiche.<BR><BR></LI>
+
+	<LI class=NLB>Se si aggiunge un elenco di tabella pivot a una <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefGroupedDataAccessPage');" class="pop">pagina di accesso a dati con gruppi</A>, verrà visualizzato un elenco di tabella pivot per ogni singolo gruppo ed esso conterrà solo i record per quel gruppo. Ad esempio, in una pagina raggruppata per anno con un elenco di tabella pivot contenente i dati sulle vendite dei dipendenti, sarà creato un elenco di tabella pivot per ogni anno contenente solo i dati sulle vendite di quell'anno. Non è possibile visualizzare l'elenco di tabella pivot per più di un gruppo alla volta. <BR><BR></LI>
+
+	<LI class=NLB>Se si <A HREF="achowSetPropertiesForDataAccessPageSectionOrControl.htm">apre la finestra delle proprietà della pagina di accesso ai dati</A> verranno visualizzate le proprietà specifiche associate a tutte le impostazioni della <B>Casella delle proprietà Tabella pivot</B>, assieme ad altre proprietà non disponibili nella casella delle proprietà. </LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreatePivotTableListW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

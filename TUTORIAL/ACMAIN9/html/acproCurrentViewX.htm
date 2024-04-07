@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCurrentViewX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apromsc1.rtf'
+Tnum='187123'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà CurrentView</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocurrentviewx"></A>Esempio di proprietà CurrentView</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la subroutine VisualizzazioneCorrente per determinare se una maschera è in visualizzazione Maschera o Foglio dati. Se è in visualizzazione Maschera, viene visualizzato un messaggio in una casella di testo della maschera. Se la maschera è in visualizzazione Foglio dati, lo stesso messaggio viene visualizzato in una casella di messaggio.</P>
+
+<PRE class=CT><CODE>VisualizzazioneCorrente Me, "Contattare amministratore di sistema."
+
+Sub VisualizzazioneCorrente(frm As Form, strVisualizzaMsg As String)
+&nbsp;&nbsp;&nbsp; Const conVisualMaschera = 1
+&nbsp;&nbsp;&nbsp; Const conFoglioDati = 2
+&nbsp;&nbsp;&nbsp; Dim intVisualizzazione As Integer
+&nbsp;&nbsp;&nbsp; intVisualizzazione = frm.<B>CurrentView</B>
+&nbsp;&nbsp;&nbsp; Select Case intVisualizzazione
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case conVisualMaschera
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frm!MessaggioCasellaTesto.SetFocus
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Visualizza messaggio in casella di testo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frm!MessaggioCasellaTesto = strVisualizzaMsg
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case conFoglioDati
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Visualizza messaggio in casella di testo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox strVisualizzaMsg
+&nbsp;&nbsp;&nbsp; End Select
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactDoMenuItem'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthact_1b.rtf'
+Tnum='186487'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo DoMenuItem</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthactdomenuitem"></A>Metodo DoMenuItem</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactDoMenuItemC;vastmSendKeys">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactDoMenuItemX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactDoMenuItemA">
+</OBJECT></P>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; In Microsoft Access 97 il metodo <B>DoMenuItem</B> era stato sostituito con il metodo <A HREF="acmthRunCommand.htm"><B>RunCommand</B></A>. Il metodo <B>DoMenuItem</B> è incluso in questa versione di Microsoft Access solo per compatibilità con le versioni precedenti. Quando viene eseguito un codice Visual Basic esistente che contiene il metodo <B>DoMenuItem</B>, Microsoft Access visualizza il comando del <A HREF="javascript:HelpPopup('actip9.hlp','defMenu');" class="pop">menu</A> o della <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> appropriato per Microsoft Access 2000. Diversamente dall'azione EseguiVoceMenu in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>, tuttavia, il metodo <B>DoMenuItem</B> nel codice di Visual Basic non viene convertito nel metodo <B>RunCommand</B> quando viene convertito un database creato con una versione precedente di Microsoft Access.</P>
+
+<P class=NT>Alcuni comandi delle versioni precedenti di Microsoft Access non sono disponibili in Microsoft Access 2000 e i metodi <B>DoMenuItem</B> che eseguono questi comandi causano un errore quando vengono eseguiti in Visual Basic. È necessario modificare il codice di Visual Basic per sostituire o eliminare le occorrenze di questi metodi <B>DoMenuItem</B>.</P>
+
+
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DoCmd.DoMenuItem</B> <I>barramenu</I>, <I>nomemenu</I>, <I>comando</I>[, <I>sottocomando</I>][, <I>versione</I>]</P>
+
+
+
+<P class=T>Il metodo <B>DoMenuItem</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Argomento</TH>
+<TH width=80%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><I>barramenu</I></TD>
+<TD class=TT width=80%>Utilizzare la <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costante intrinseca</A> <B>acFormBar</B> per la <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBar');" class="pop">barra dei menu</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%>Per le altre visualizzazioni, come indicato nella finestra delle macro delle versioni precedenti di Microsoft Access, utilizzare il numero di visualizzazione presente nell'elenco dell'argomento Barra dei menu; l'elenco ha una numerazione progressiva a partire da zero.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><I>nomemenu</I></TD>
+<TD class=TT width=80%>È possibile utilizzare una delle seguenti costanti intrinseche:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%><B>acFile</B><BR>
+<B>acEditMenu</B><BR>
+<B>acRecordsMenu</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%>È possibile utilizzare <B>acRecordsMenu</B> solo per la barra dei menu in visualizzazione Maschera nei database di Microsoft Access 2.0 e di Microsoft Access per Windows 95.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%>Per gli altri menu, come indicato nella finestra delle macro delle versioni precedenti di Microsoft Access, utilizzare il numero di menu presente nell'elenco dell'argomento Nome menu; l'elenco ha una numerazione progressiva a partire da zero.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><I>comando</I></TD>
+<TD class=TT width=80%>È possibile utilizzare una delle seguenti costanti intrinseche:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%><B>acNew</B><BR>
+<B>acSaveForm</B><BR>
+<B>acSaveFormAs</B><BR>
+<B>acSaveRecord</B><BR>
+<B>acUndo</B><BR>
+<B>acCut</B><BR>
+<B>acCopy</B><BR>
+<B>acPaste</B><BR>
+<B>acDelete</B><BR>
+<B>acSelectRecord</B><BR>
+<B>acSelectAllRecords</B><BR>
+<B>acObject</B><BR>
+<B>acRefresh</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%>Per gli altri comandi, passare alla finestra delle macro delle versioni precedenti di Microsoft Access ed utilizzare il numero relativo al comando nell'elenco di argomenti Comando, scorrendo l'elenco ed assegnando alla prima voce il numero zero, alla seconda il numero uno e così via.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><I>sottocomando</I></TD>
+<TD class=TT width=80%>È possibile utilizzare una delle seguenti costanti intrinseche:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%><B>acObjectVerb</B><BR>
+<B>acObjectUpdate</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%>La costante <B>acObjectVerb</B> rappresenta il primo comando del <A HREF="javascript:HelpPopup('actip9.hlp','defSubmenu');" class="pop">sottomenu</A> del comando <B>Oggetto</B> del menu <B>Modifica</B>. Il tipo di oggetto determina il primo comando del sottomenu. Questo comando, ad esempio, è <B>Modifica</B> per un oggetto Paintbrush modificabile.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%>Per gli altri comandi dei sottomenu, passare alla finestra delle macro delle versioni precedenti di Microsoft Access ed utilizzare il numero del sottocomando nell'elenco di argomenti Sottocomando, scorrendo l'elenco ed assegnando alla prima voce il numero zero, alla seconda il numero uno e così via.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><I>versione</I></TD>
+<TD class=TT width=80%>Utilizzare la costante intrinseca <B>acMenuVer70</B> per il codice scritto per database di Microsoft Access 95, la costante intrinseca <B>acMenuVer20</B> per il codice scritto per database di Microsoft Access 2.0 e la costante intrinseca <B>acMenuVer1X</B> per il codice scritto per database di Microsoft Access versione 1.x. Questo argomento è disponibile solo in Visual Basic.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%><B>Nota</B>&nbsp;&nbsp; L'impostazione predefinita per questo argomento è <B>acMenuVer1X</B>, di conseguenza il codice scritto per i database di Microsoft Access versione 1.x viene eseguito senza modifiche. Se si scrive del codice per un database di Microsoft Access 95 o versione 2.0 e si desidera utilizzare i comandi di menu di Microsoft Access 95 o di Microsoft Access 2.0 con il metodo <B>DoMenuItem</B>, è necessario impostare questo argomento ad <B>acMenuVer70</B> oppure ad <B>acMenuVer20</B>.
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%>Inoltre quando si scorrono gli elenchi degli argomenti delle azioni relative a Barra menu, Nome menu, Comando e Sottocomando nella finestra delle macro per ricavare i numeri da utilizzare per gli argomenti del metodo <B>DoMenuItem</B>, è necessario utilizzare gli elenchi di Microsoft Access 95 se l'argomento versione è <B>acMenuVer70</B>, gli elenchi di Microsoft Access 2.0 se l'argomento versione è <B>acMenuVer20</B> e gli elenchi di Microsoft Access 1.x se l'argomento versione è <B>acMenuVer1X</B> o se viene omesso.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%><B>Nota</B>&nbsp;&nbsp; Per questo argomento non esiste alcuna impostazione di <B>acMenuVer80</B>. Non è possibile utilizzare il metodo <B>DoMenuItem</B> per visualizzare i comandi di Microsoft Access 97 o Microsoft Access 2000, sebbene i metodi <B>DoMenuItem</B> esistenti nel codice di Visual Basic continuino a funzionare. Utilizzare al suo posto il metodo <B>RunCommand</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Le selezioni negli elenchi degli argomenti delle azioni relative a Nome menu, Comando e Sottocomando nella finestra della macro dipendono dalle selezioni effettuate per gli argomenti precedenti. È necessario utilizzare numeri o costanti intrinseche appropriate per ogni argomento <I>barramenu</I>, <I>nomemenu</I>, <I>comando</I> e <I>sottocomando</I>.</P>
+
+<P class=T>Se si omette l'argomento <I>sottocomando</I> ma si specifica l'argomento <I>versione</I>, è necessario includere la virgola dell'argomento <I>sottocomando</I>. Se si omettono gli argomenti <I>sottocomando</I> e <I>versione</I>, non utilizzare la virgola dopo l'argomento <I>comando</I>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

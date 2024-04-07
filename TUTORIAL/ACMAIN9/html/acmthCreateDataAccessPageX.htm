@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateDataAccessPageX'
+Feature='acmth'
+Handoff='2'
+SourceFile='acmthV9.doc'
+Tnum='250687'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CreateDataAccessPage</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreatedataaccesspagex"></A>Esempio di metodo CreateDataAccessPage</B></P>
+
+
+
+<P class=T>Il seguente frammento di codice illustra come creare una nuova pagina di accesso ai dati, utilizzare il formato HTML della pagina, quindi creare un collegamento con tale pagina e salvarlo permanentemente su disco. La routine illustra anche un modo di utilizzare un sistema di intercettazione degli errori per gestire i file già esistenti:</P>
+
+<PRE class=CT><CODE>Function CreateDAP(strFileName As String) As Boolean
+    Dim dapNewPage As DataAccessPage
+    
+    Const DAP_EXISTS As Long = 2023
+    
+    On Error GoTo CreateDAP_Err
+    ' Crea la nuova pagina.
+    Set dapNewPage = Application.<B>CreateDataAccessPage</B>(strFileName, _
+        True)
+    ' Utilizza la proprietà del documento per restituire l'oggetto documento
+    ' Internet Explorer 5.0 e poi utilizzare tali oggetti con il codice HTML
+    ' nella pagina.
+    
+    With dapNewPage.Document
+        .All("TestoIntestazione").innerText = "Questa pagina è stata creata " _
+            &amp; "in modo programmatico!"
+        .All("TestoIntestazione").Style.display = ""
+        .All("PrimaTestoCorpo").innerText = "Quando si utilizzano " _
+            &amp; "codici HTML in una pagina di accesso dati, " _
+            &amp; "utilizzare la proprietà del documento della Pagina " _
+            &amp; "per ottenere il codice HTML. "
+            .All("PrimaTestoCorpo").Style.display = ""
+    End With
+
+    ' Chiude la pagina e salva tutte le modifiche.
+    DoCmd.Close acDataAccessPage, dapNewPage.Name, acSaveYes
+    CreateDAP = True
+CreateDAP_End:
+    Exit Function
+CreateDAP_Err:
+    If Err = DAP_EXISTS Then
+        ' Il file specificato in strFileName esiste già,
+        ' sostituirlo con questa nuova pagina.
+        If MsgBox("'" &amp; strFileName &amp; " esiste già. Si " _
+            &amp; "desidera sostituirlo con una nuova pagina vuota?", vbYesNo, _
+            "Sostituire pagina esistente?") = vbYes Then
+            Set dapNewPage = Application.CreateDataAccessPage(strFileName, False)
+            Resume Next
+        Else
+            CreateDAP = False
+            Resume CreateDAP_End
+        End If
+    Else
+        CreateDAP = False
+        Resume CreateDAP_End
+    End If
+End Function</CODE></PRE>
+
+
+
+<P class=T>Il seguente frammento di esempio illustra come utilizzare il metodo <B>CreateDataAccessPage</B> per creare più collegamenti ad una sola pagina su disco.</P>
+
+<PRE class=CT><CODE>Sub Foo()
+    Dim dapNewPage As DataAccessPage
+    Set dapNewPage = _
+        Application.CreateDataAccessPage("c:\footest.htm", True)
+    DoCmd.Close acDataAccessPage, dapNewPage.Name, acSaveYes
+    Set dapNewPage = _
+        Application.CreateDataAccessPage("c:\footest.htm", False)
+    DoCmd.Close acDataAccessPage, dapNewPage.Name, acSaveYes
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

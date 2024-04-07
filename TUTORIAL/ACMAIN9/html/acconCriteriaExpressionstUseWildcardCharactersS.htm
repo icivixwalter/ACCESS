@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCriteriaExpressionstUseWildcardCharactersS'
+Feature='Queries: Expressions'
+Handoff='1'
+SourceFile='CQRYEXP.RTF'
+Tnum='188527'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di espressioni che utilizzano come criteri parte del valore di un campo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconcriteriaexpressionstusewildcardcharacterss"></A>Esempi di espressioni che utilizzano come criteri parte del valore di un campo</H1>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=24%>Campo</TH>
+<TH width=26%>Espressione</TH>
+<TH width=50%>Visualizza</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Destinatario</TD>
+<TD class=TT width=26%>Like "S*"</TD>
+<TD class=TT width=50%>Ordini spediti a clienti i cui nomi iniziano con la lettera S.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Destinatario</TD>
+<TD class=TT width=26%>Like "*Importazioni"</TD>
+<TD class=TT width=50%>Ordini spediti a clienti i cui nomi terminano con la parola "Importazioni".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Destinatario</TD>
+<TD class=TT width=26%>Like "[A-D]*"</TD>
+<TD class=TT width=50%>Ordini spediti a clienti i cui nomi iniziano con le lettere dalla A alla D.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Destinatario</TD>
+<TD class=TT width=26%>Like "*ar*"</TD>
+<TD class=TT width=50%>Ordini spediti a clienti i cui nomi includono la sequenza di lettere "ar."</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Destinatario</TD>
+<TD class=TT width=26%>Like "Maison Dewe?"</TD>
+<TD class=TT width=50%>Ordini spediti al cliente con "Maison" nella prima parte del nome e con un cognome di 5 lettere in cui le prime 4 sono "Dewe" e l'ultima è sconosciuta.</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconCriteriaExpressionstUseWildcardCharactersSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

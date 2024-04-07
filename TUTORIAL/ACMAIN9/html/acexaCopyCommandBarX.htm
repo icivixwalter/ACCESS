@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acexaCopyCommandBarX'
+Feature='acexa'
+Handoff='1'
+SourceFile='acocmdbs_1a.doc'
+Tnum='261499'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di copia di una barra dei comandi</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acexacopycommandbarx"></A>Esempio di copia di una barra dei comandi</B></P>
+
+
+
+<P class=T>Nell'esempio che segue viene copiata una barra dei comandi con i relativi controlli su una nuova barra dei comandi. Immettere il nome della barra dei comandi che si desidera copiare e il nome della nuova barra dei comandi nella routine ImmissioneNuovoNome. La routine richiama la funzione generale CopyCommandBar, che utilizza i nomi immessi per creare la nuova barra dei comandi.</P>
+
+<PRE class=CT><CODE>Sub ImmissioneNuovoNome()
+&nbsp;&nbsp;&nbsp; CopyCommandBar "Barra dei menu", "Nuova barra dei menu"
+End Sub
+
+Function CopyCommandBar(strNomeBcOrig As String, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNomeBcNuova As String) As Boolean
+&nbsp;&nbsp;&nbsp; ' Questa routine copia la barra dei comandi definita
+&nbsp;&nbsp;&nbsp; ' nella variabile strNomeBcOrig sulla nuova barra dei comandi
+&nbsp;&nbsp;&nbsp; ' definita nella variabile strNomeBcNuova.
+&nbsp;&nbsp;&nbsp; Dim cbrOriginal As CommandBar, intContOrig As Integer
+&nbsp;&nbsp;&nbsp; Dim cbrCopy As CommandBar, cbrCtl As CommandBarControl
+
+&nbsp;&nbsp;&nbsp; On Error GoTo CBCopy_Err
+
+&nbsp;&nbsp;&nbsp; Set cbrOriginal = CommandBars(strNomeBcOrig)
+&nbsp;&nbsp;&nbsp; intContOrig = cbrOriginal.Controls.Count
+&nbsp;&nbsp;&nbsp; Set cbrCopy = CommandBars.Add(strNomeBcNuova)
+&nbsp;&nbsp;&nbsp; ' Assicura che la nuova barra dei comandi sia visibile.
+&nbsp;&nbsp;&nbsp; cbrCopy.Visible = True
+
+&nbsp;&nbsp;&nbsp; For Each cbrCtl In cbrOriginal.Controls
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cbrCtl.Copy cbrCopy
+&nbsp;&nbsp;&nbsp; Next cbrCtl
+Exit Function
+
+CBCopy_Err:
+&nbsp;&nbsp;&nbsp; MsgBox Err.Description
+&nbsp;&nbsp;&nbsp; Exit Function
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

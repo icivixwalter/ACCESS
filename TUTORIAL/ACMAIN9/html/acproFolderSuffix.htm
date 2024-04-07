@@ -1,0 +1,322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFolderSuffix'
+Feature='acpro'
+Handoff='2'
+SourceFile='acproV9.doc'
+Tnum='270173'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà FolderSuffix</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="ofproLanguageID">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprofoldersuffix"></A>Proprietà FolderSuffix</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFolderSuffixC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFolderSuffixX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFolderSuffixA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>FolderSuffix</B> per determinare il suffisso di cartella utilizzato da Microsoft Access quando si salva una pagina di accesso dati come una pagina Web, quando si utilizzano i nomi file lunghi e quando si sceglie di salvare i file di supporto in una cartella separata, ossia se le proprietà <A HREF="acproUseLongFileNames.htm"><B>UseLongFileNames</B></A> e <A HREF="acproOrganizeInFolder.htm"><B>OrganizeInFolder</B></A> sono impostate a <B>True</B>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>FolderSuffix</B> è un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che rappresenta il testo visualizzato come collegamento ipertestuale.</P>
+
+<P class=T>Questa proprietà è disponibile solo utilizzando <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Le pagine d'accesso ai dati di nuova creazione utilizzano il suffisso restituito dalla proprietà <B>FolderSuffix</B> dell'oggetto <B>DefaultWebOptions</B>. Il valore della proprietà <B>FolderSuffix</B> dell'oggetto <B>WebOptions</B> può differire da quello dell'oggetto <B>DefaultWebOptions</B> se la pagina di accesso ai dati è stata precedentemente modificata con una versione di Microsoft Access in un'altra lingua. È possibile utilizzare il metodo <A HREF="acmthUseDefaultFolderSuffix.htm"><B>UseDefaultFolderSuffix</B></A> per modificare il suffisso utilizzando quello della lingua attualmente utilizzata in Microsoft Office 2000.</P>
+
+<P class=T>In base all'impostazione predefinita, il nome della cartella di supporto è quello della pagina Web più il carattere di sottolineatura (_), il punto (.) o il trattino (-) e la parola "file", visualizzata nella lingua della versione di Microsoft Access 2000 in cui il file è stato salvato come pagina Web. Ad esempio, si supponga di utilizzare la versione di Access 2000 in lingua olandese per salvare come pagina Web un file denominato "Page1": il nome predefinito della cartella di supporto sarà Page1_bestanden.</P>
+
+<P class=T>Nella tabella seguente vengono elencate le versioni di Office 2000 nelle varie lingue, con il valore della proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>LanguageID</B></A> e il suffisso di cartella corrispondenti. Per le lingue non incluse nella tabella, viene utilizzato il suffisso ".files".</P>
+
+<P class=T><!--ALPHA SORTED LIST-->
+<B>Lingua</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=32%>Lingua</TH>
+<TH width=24%>LanguageID</TH>
+<TH width=44%>Suffisso cartella</TH>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Arabo</TD>
+<TD class=TT width=24%>1025</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Basco</TD>
+<TD class=TT width=24%>1069</TD>
+<TD class=TT width=44%>_fitxategiak</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Bulgaro</TD>
+<TD class=TT width=24%>1026</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Catalano</TD>
+<TD class=TT width=24%>1027</TD>
+<TD class=TT width=44%>_fitxers</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Ceco</TD>
+<TD class=TT width=24%>1029</TD>
+<TD class=TT width=44%>_soubory</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Cinese (semplificato)</TD>
+<TD class=TT width=24%>2052</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Cinese (tradizionale)</TD>
+<TD class=TT width=24%>1028</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Coreano</TD>
+<TD class=TT width=24%>1042</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Croato</TD>
+<TD class=TT width=24%>1050</TD>
+<TD class=TT width=44%>_datoteke</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Danese</TD>
+<TD class=TT width=24%>1030</TD>
+<TD class=TT width=44%>-filer</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Ebraico</TD>
+<TD class=TT width=24%>1037</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Estone</TD>
+<TD class=TT width=24%>1061</TD>
+<TD class=TT width=44%>_failid</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Finlandese</TD>
+<TD class=TT width=24%>1035</TD>
+<TD class=TT width=44%>_tiedostot</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Francese</TD>
+<TD class=TT width=24%>1036</TD>
+<TD class=TT width=44%>_fichiers</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Giapponese</TD>
+<TD class=TT width=24%>1041</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Greco</TD>
+<TD class=TT width=24%>1032</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Inglese</TD>
+<TD class=TT width=24%>1033</TD>
+<TD class=TT width=44%>_files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Italiano</TD>
+<TD class=TT width=24%>1040</TD>
+<TD class=TT width=44%>-file</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Lettone</TD>
+<TD class=TT width=24%>1062</TD>
+<TD class=TT width=44%>_fails</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Lituano</TD>
+<TD class=TT width=24%>1063</TD>
+<TD class=TT width=44%>_bylos</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Norvegese</TD>
+<TD class=TT width=24%>1044</TD>
+<TD class=TT width=44%>-filer</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Olandese</TD>
+<TD class=TT width=24%>1043</TD>
+<TD class=TT width=44%>_bestanden</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Polacco</TD>
+<TD class=TT width=24%>1045</TD>
+<TD class=TT width=44%>_pliki</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Portoghese (Brasile)</TD>
+<TD class=TT width=24%>1046</TD>
+<TD class=TT width=44%>_arquivos</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Portoghese (Standard)</TD>
+<TD class=TT width=24%>2070</TD>
+<TD class=TT width=44%>_ficheiros</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Rumeno</TD>
+<TD class=TT width=24%>1048</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Russo</TD>
+<TD class=TT width=24%>1049</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Serbo (caratteri cirillici)</TD>
+<TD class=TT width=24%>3098</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Serbo (caratteri latini)</TD>
+<TD class=TT width=24%>2074</TD>
+<TD class=TT width=44%>_fajlovi</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Slovacco</TD>
+<TD class=TT width=24%>1051</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Sloveno</TD>
+<TD class=TT width=24%>1060</TD>
+<TD class=TT width=44%>_datoteke</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Spagnolo</TD>
+<TD class=TT width=24%>3082</TD>
+<TD class=TT width=44%>_archivos</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Svedese</TD>
+<TD class=TT width=24%>1053</TD>
+<TD class=TT width=44%>-filer</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Tailandese</TD>
+<TD class=TT width=24%>1054</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Tedesco</TD>
+<TD class=TT width=24%>1031</TD>
+<TD class=TT width=44%>-Dateien</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Turco</TD>
+<TD class=TT width=24%>1055</TD>
+<TD class=TT width=44%>_dosyalar</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Ucraino</TD>
+<TD class=TT width=24%>1058</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Ungherese</TD>
+<TD class=TT width=24%>1038</TD>
+<TD class=TT width=44%>_elemei</TD>
+</TR>
+<TR VALIGN="top">
+<TD class=TT width=32%>Vietnamita</TD>
+<TD class=TT width=24%>1066</TD>
+<TD class=TT width=44%>.files</TD>
+</TR>
+
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acproFolderSuffixW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

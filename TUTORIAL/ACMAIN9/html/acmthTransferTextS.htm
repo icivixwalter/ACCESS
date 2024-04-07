@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthTransferTextS'
+Feature='acmth'
+Handoff='3'
+SourceFile='bidivba.doc'
+Tnum='264842'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo/azione TrasferisciTesto</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+
+<H1 class=RH1><A NAME="acmthtransfertexts"></A>TransferText Action/Method</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>When Microsoft Access is enabled for right-to-left functionality, it provides an additional argument for the <B>TransferText</B> method and action. The Code Page argument has been added to the to the text file description.</P>
+
+<P class=T><B>TransferText</B> method and action has the following additional argument.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=29%>Added Arguments</TH>
+<TH width=71%>Description</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Code Page</TD>
+<TD class=TT width=71%>The name of the code page to import from, export to, or link to. You can select one of the code page names from the drop-down list.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T><B>Syntax</B></P>
+
+<P class=SYN><B>DoCmd.TransferText</B> ([<I>TransferType</I>], [<I>SpecificationName</I>], [<I>TableName</I>], [<I>FileName</I>], [<I>HasFieldNames</I>], [<I>HTMLTableName</I>], [<I>CodePage</I>])</P>
+
+
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=21%>Argument</TH>
+<TH width=79%>Description</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>codepage</I></TD>
+<TD class=TT width=79%>Enter the numeric value associated with the desired code page. You can view the supported values in the <B>Code page</B> list box of the <B>TransferText</B> macro action.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

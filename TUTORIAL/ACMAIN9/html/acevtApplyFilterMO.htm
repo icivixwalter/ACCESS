@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtApplyFilterMO'
+Feature='acevt'
+Handoff='2'
+SourceFile='aevtv3.doc'
+Tnum='187012'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento ApplicazioneFiltro - Macro</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acevtapplyfiltermo"></A>Evento ApplicazioneFiltro - Macro</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtApplyFilterMOC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtApplyFilterMOX">
+</OBJECT></P>
+
+
+
+<P class=T>Per eseguire una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> quando si verifica l'evento <A HREF="acevtApplyFilter.htm">ApplicazioneFiltro</A>, impostare la proprietà <A HREF="acproEventProperties.htm"><B>Su applicazione filtro</B></A> al nome della macro.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile controllare un <A HREF="javascript:HelpPopup('actip9.hlp','defFilter');" class="pop">filtro</A> o addirittura modificare i criteri immessi dall'utente leggendo il valore della proprietà <A HREF="acproFilter.htm"><B>Filtro</B></A> o <A HREF="acproServerFilter.htm"><B>Filtro su server</B></A> in una condizione della macro o impostando il valore della proprietà tramite l'azione <A HREF="acactSetValue.htm">ImpostaValore</A> in una macro ApplicaFiltro.</P>
+
+<P class=T>In una macro ApplicaFiltro è possibile utilizzare l'azione <A HREF="acactCancelEvent.htm">AnnullaEvento</A> per annullare l'applicazione del filtro. È inoltre possibile utilizzare una condizione per verificare il valore di uno o più <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A> sulla maschera e applicare un filtro solo quando necessario. Se ad esempio è selezionata una <A HREF="javascript:HelpPopup('actip9.hlp','defCheckBox');" class="pop">casella di controllo</A> OrdiniInsoluti in una maschera Ordini, è possibile applicare un filtro per mostrare gli ordini insoluti nei record della maschera o annullare l'applicazione del filtro e visualizzare un messaggio che comunica che non esistono ordini insoluti da visualizzare.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

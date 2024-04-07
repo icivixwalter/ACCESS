@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtDeleteBeforeAfterDelConfirm'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2a_1a.rtf'
+Tnum='187164'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Eliminazione, PrimaDiConfermaEliminazione, DopoConfermaEliminazione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEventProperties">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acevtdeletebeforeafterdelconfirm"></A>Eventi Eliminazione, PrimaDiConfermaEliminazione, DopoConfermaEliminazione</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtDeleteBeforeAfterDelConfirmC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtDeleteBeforeAfterDelConfirmX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Macro">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtDeleteBeforeAfterDelConfirmMO">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Routine evento">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtDeleteBeforeAfterDelConfirmEP">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtDeleteBeforeAfterDelConfirmA">
+</OBJECT></P>
+
+<P class=6>
+
+<UL>
+	<LI class=LB1>L'evento Eliminazione si verifica quando si esegue qualche azione, come ad esempio la pressione di CANC per eliminare un <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A>, ma prima che il record venga effettivamente eliminato.<BR><BR></LI>
+
+	<LI class=LB1>L'evento PrimaDiConfermaEliminazione si verifica dopo l'eliminazione dal buffer di uno o più record, ma prima che venga visualizzata una finestra di dialogo che richiede la conferma delle eliminazioni.<BR><BR></LI>
+
+	<LI class=LB1>L'evento DopoConfermaEliminazione si verifica dopo la conferma delle eliminazioni e l'effettiva eliminazione dei record o quando le eliminazioni vengono annullate.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Per eseguire una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> quando si verificano questi eventi, impostare la proprietà <A HREF="JavaScript:hhobj_6.Click()"><B>Su eliminazione</B>, <B>Prima di conferma eliminazione</B> o <B>Dopo conferma eliminazione</B></A> al nome della macro o a [Routine evento].</P>
+
+<P class=T>Dopo l'eliminazione, un record viene memorizzato in un buffer temporaneo. L'evento PrimaDiConfermaEliminazione si verifica dopo l'evento Eliminazione oppure, se è stato eliminato più di un record, dopo l'eliminazione di tutti i record tramite un evento Eliminazione per ciascun record, ma prima che venga visualizzata la finestra di dialogo <B>Conferma eliminazione</B>. Annullando l'evento PrimaDiConfermaEliminazione si ripristina il record o i record dal buffer e si impedisce la visualizzazione della finestra di dialogo <B>Conferma eliminazione</B>.</P>
+
+<P class=T>L'evento DopoConfermaEliminazione si verifica dopo l'effettiva eliminazione di un record o dei record o dopo l'annullamento di un'eliminazione o delle eliminazioni. Se l'evento PrimaDiConfermaEliminazione non viene annullato, si verifica l'evento DopoConfermaEliminazione dopo la visualizzazione della finestra di dialogo <B>Conferma eliminazione</B>. L'evento DopoConfermaEliminazione si verifica anche se viene annullato l'evento PrimaDiConfermaEliminazione. La routine evento DopoConfermaEliminazione restituisce le informazioni riguardanti lo stato dell'eliminazione. È possibile ad esempio utilizzare una macro o una routine evento associata all'evento DopoConfermaEliminazione per ricalcolare i totali interessati dall'eliminazione dei record.</P>
+
+<P class=T>Se si annulla l'evento Eliminazione, non si verificano gli eventi PrimaDiConfermaEliminazione e DopoConfermaEliminazione e non viene visualizzata la finestra di dialogo <B>Conferma eliminazione</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Deselezionando la <A HREF="javascript:HelpPopup('actip9.hlp','defCheckBox');" class="pop">casella di controllo</A> <B>Modifiche record</B> nell'area <B>Conferma</B> nella scheda <B>Modifica/Trova</B> della finestra di dialogo <B>Opzioni</B>, disponibile scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B>, non si verificano gli eventi PrimaDiConfermaEliminazione e DopoConfermaEliminazione e la finestra di dialogo <B>Conferma eliminazione</B> non viene visualizzata.</P>
+
+
+
+<P class=T>Eseguendo una macro o una routine evento quando si verifica l'evento Eliminazione, è possibile evitare che un record venga eliminato oppure consentire l'eliminazione di un record solo a determinate condizioni. È inoltre possibile utilizzare un evento Eliminazione per visualizzare una finestra di dialogo che, prima dell'eliminazione, richiede se si desidera eliminare un record.</P>
+
+<P class=T>Per eliminare un record, è possibile scegliere <B>Elimina record</B> dal menu <B>Modifica</B>. Viene così eliminato il record corrente, cioè quello indicato dal <A HREF="javascript:HelpPopup('actip9.hlp','defRecordSelector');" class="pop">selettore di record</A>. È inoltre possibile fare clic sul selettore di record o scegliere <B>Seleziona record</B> dal menu <B>Modifica</B> per selezionare un record, quindi premere CANC per eliminarlo. Se si sceglie <B>Elimina record</B>, il selettore di record relativo al record corrente, o si sceglie <B>Seleziona record</B>, si verificano gli eventi <A HREF="acevtEnterExit.htm">Uscita</A> e <A HREF="acevtGotLostFocus.htm">Disattivato</A> per il controllo che ha lo stato attivo. Se si è modificato qualsiasi dato del record, gli eventi <A HREF="acevtBeforeAfterUpdate.htm">PrimaDiAggiornare e DopoAggiornamento</A> per il record si verificano prima degli eventi Uscita e Disattivato. Se si sceglie il selettore di record di un altro record, si verifica anche l'evento <A HREF="acevtCurrent.htm">Corrente</A> relativo a tale record.</P>
+
+<P class=T>Dopo l'eliminazione del record, lo stato attivo si sposta sul record successivo a quello eliminato e si verifica l'evento Corrente per tale record, seguito dagli eventi <A HREF="acevtEnterExit.htm">Invio</A> e <A HREF="acevtGotLostFocus.htm">Attivato</A> per il primo controllo di tale record.</P>
+
+<P class=T>Si verifica quindi l'evento PrimaDiConfermaEliminazione, poco prima che venga visualizzata la finestra di dialogo <B>Conferma eliminazione</B> che richiede la conferma dell'eliminazione. Dopo aver dato una risposta alla finestra di dialogo confermando oppure annullando l'eliminazione, si verifica l'evento DopoConfermaEliminazione.</P>
+
+<P class=T>È possibile eliminare uno o più record alla volta. L'evento Eliminazione si verifica dopo l'eliminazione di ciascun record. In tal modo si consente l'accesso ai dati di ciascun record prima dell'effettiva eliminazione e la conferma o l'annullamento selettivo di ogni eliminazione nella macro o nella routine evento Eliminazione. Quando si elimina più di un record, l'evento Corrente per il record successivo all'ultimo eliminato e gli eventi Invio e Attivato per il primo controllo di tale record non si verificano fino all'avvenuta eliminazione di tutti i record. Un evento Eliminazione, cioè, si verifica per ciascun record selezionato, ma non si verificano altri eventi fino all'avvenuta eliminazione di tutti i record selezionati. Gli eventi PrimaDiConfermaEliminazione e DopoConfermaEliminazione inoltre non si verificano fino all'avvenuta eliminazione di tutti i record selezionati.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

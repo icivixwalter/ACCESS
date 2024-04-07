@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRepaint'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186327'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Repaint</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthrepaint"></A>Metodo Repaint</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRepaintC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRepaintX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRepaintA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>Repaint</B> completa qualsiasi aggiornamento di schermo in sospeso relativo a una determinata <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A>. Quando si esegue tale metodo<B> </B>su una maschera, viene completato anche qualsiasi ricalcolo in sospeso dei <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A> della maschera.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>maschera</I><B>.Repaint</B></P>
+
+
+
+<P class=T>Il metodo <B>Repaint</B> utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>maschera</I></TD>
+<TD class=TT width=76%>Oggetto <A HREF="acobjForm.htm"><B>Form</B></A> che rappresenta la maschera da <A HREF="javascript:HelpPopup('actip9.hlp','defRepaint');" class="pop">aggiornare</A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Microsoft Access talvolta attende di aver completato altre attività prima di completare gli aggiornamenti degli schermi in sospeso. Con il metodo <B>Repaint</B> è possibile forzare l'aggiornamento immediato dei controlli contenuti nella maschera specificata. È possibile utilizzare il metodo <B>Repaint</B>:
+
+<UL>
+	<LI class=LB1>Quando si modificano valori in un determinato numero di campi. A meno che un aggiornamento non venga forzato, è possibile che Microsoft Access non visualizzi immediatamente le modifiche, in particolare se altri campi, come quelli contenuti in un'espressione di un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A>, dipendono da valori contenuti nei campi modificati.<BR><BR></LI>
+
+	<LI class=LB1>Quando si desidera assicurarsi che una maschera visualizzi i dati in tutti i propri campi. I campi contenenti <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObject');" class="pop">oggetti OLE</A>, ad esempio, spesso non visualizzano immediatamente i dati dopo l'apertura della maschera.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Questo metodo non provoca la <A HREF="javascript:HelpPopup('actip9.hlp','defRequery');" class="pop">riesecuzione di una query</A> del database, né mostra i record nuovi o quelli modificati nell'origine record sottostante della maschera. È possibile utilizzare il metodo <A HREF="acmthRequery.htm"><B>Requery</B></A> per rieseguire una query sull'origine dei dati relativa alla maschera o a uno dei relativi controlli.</P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Occorre prestare attenzione a non confondere il metodo <B>Repaint</B> con il metodo <A HREF="acmthRefresh.htm"><B>Refresh</B></A> oppure con il comando <B>Aggiorna</B> del menu <B>Record</B>. Il metodo <B>Refresh</B> e il comando <B>Aggiorna</B> mostrano le modifiche apportate all'origine record sottostante di qualsiasi record correntemente visualizzato nelle maschere e nei fogli dati. Il metodo <B>Repaint</B> si limita ad aggiornare lo schermo quando l'aggiornamento è stato ritardato mentre Microsoft Access completa altre attività.<BR><BR></LI>
+
+	<LI class=NLB>Il metodo <B>Repaint</B> si distingue dal metodo <A HREF="acmthEcho.htm"><B>Echo</B></A> perché<B> </B>forza un unico aggiornamento immediato, mentre il metodo <B>Echo</B> lo attiva o lo disattiva.</LI>
+</UL>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

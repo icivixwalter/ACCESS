@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acidxKeyboardEvents'
+Feature='acidx'
+Handoff='2'
+SourceFile='aidxlan_1a.doc'
+Tnum='187370'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi di tastiera</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acidxkeyboardevents"></A>Eventi di tastiera</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxKeyboardEventsC;vastmSendKeys;acproKeyPreview">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxKeyboardEventsX">
+</OBJECT></P>
+
+
+
+<P class=T>Gli eventi di tastiera si verificano quando si digita su una tastiera o quando viene inviata una sequenza di tasti utilizzando l'azione InviaTasti o l'istruzione <B>SendKeys</B>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=22%>Evento</TH>
+<TH width=30%>Proprietà di evento</TH>
+<TH width=48%>Quando si verifica</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtKeyDownUp.htm">TastoGiù</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnKeyDown</B></A> (maschere, controlli)</TD>
+<TD class=LMC width=48%>Quando si preme un tasto mentre un controllo o una maschera possiede lo stato attivo. Una maschera può possedere lo stato attivo solo se tutti i controlli visibili in essa contenuti sono disattivati o se non contiene alcun controllo.
+<P class=LMC>L'evento TastoGiù si verifica inoltre se si invia una sequenza di tasti a una maschera o a un controllo utilizzando l'azione InviaTasti in una macro o l'istruzione <B>SendKeys</B> in Visual Basic.</P>
+
+<P class=LMC>Impostando la proprietà <B>Anteprima tasti</B> della maschera a Sì, una maschera riceve anche tutti gli eventi TastoGiù, compresi quelli relativi ai controlli, prima che si verifichino.</P>
+
+<P class=LMC>Se si tiene premuto un tasto, si verifica ripetutamente l'evento TastoGiù.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtKeyPress.htm">Pressione</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnKeyPress</B></A> (maschere, controlli)</TD>
+<TD class=LMC width=48%>Quando si preme e si rilascia un tasto o una combinazione di tasti che genera un carattere ANSI standard mentre un controllo o una maschera possiede lo stato attivo. Una maschera può possedere lo stato attivo solo se tutti i controlli visibili in essa contenuti sono disattivati o se non contiene alcun controllo.
+<P class=LMC>È possibile ad esempio utilizzare l'evento Pressione per rispondere alla sequenza di tasti immessa in una casella di testo o in una casella combinata. Per i tasti non riconosciuti dall'evento Pressione, come i tasti funzione o i tasti di spostamento, utilizzare gli eventi TastoGiù e TastoSu.</P>
+
+<P class=LMC>L'evento Pressione si verifica inoltre se si invia una sequenza di tasti che genera un carattere ANSI standard a una maschera o a un controllo utilizzando l'azione InviaTasti in una macro o l'istruzione <B>SendKeys</B> in Visual Basic.</P>
+
+<P class=LMC>Impostando la proprietà <B>Anteprima tasti</B> della maschera a <B>Sì</B>, una maschera riceve tutti gli eventi Pressione, anche quelli relativi ai controlli, prima che si verifichino.</P>
+
+<P class=LMC>Se si tiene premuto un tasto, si verifica ripetutamente l'evento Pressione.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtKeyDownUp.htm">TastoSu</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnKeyUp</B></A> (maschere, controlli)</TD>
+<TD class=LMC width=48%>Quando si rilascia un tasto premuto mentre un controllo o una maschera possiede lo stato attivo. L'oggetto che possiede lo stato attivo riceve tutta la sequenza di tasti. Una maschera può possedere lo stato attivo solo se tutti i controlli visibili in essa contenuti sono disattivati o se non contiene alcun controllo.
+<P class=LMC>L'evento TastoSu si verifica inoltre se si invia una sequenza di tasti a una maschera o a un controllo utilizzando l'azione InviaTasti in una macro o l'istruzione <B>SendKeys</B> in Visual Basic.</P>
+
+<P class=LMC>Impostando la proprietà <B>Anteprima tasti</B> della maschera a Sì, una maschera riceve tutti gli eventi TastoSu, anche quelli relativi ai controlli, prima che si verifichino.</P>
+
+<P class=LMC>Se si tiene premuto un tasto, l'evento TastoSu si verifica dopo che si sono verificati tutti gli eventi TastoGiù e Pressione.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtActivateDeactivateEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='186973'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Attivazione, Disattivazione - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtactivatedeactivateepx"></A>Eventi Attivazione, Disattivazione - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si indica come visualizzare una barra degli strumenti personalizzata chiamata BarraStrumPers quando una maschera acquista lo stato attivo e come nascondere la stessa barra quando lo stato attivo si sposta su un'altra finestra.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera contenente una barra degli strumenti personalizzata chiamata BarraStrumPers.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Activate</B>()
+&nbsp;&nbsp;&nbsp; ' Visualizza la barra degli strumenti personalizzata.
+&nbsp;&nbsp;&nbsp; DoCmd.ShowToolbar "BarraStrumPers", acToolbarYes
+End Sub
+
+Private Sub Form_<B>Deactivate</B>()
+&nbsp;&nbsp;&nbsp; ' Nasconde la barra degli strumenti personalizzata.
+&nbsp;&nbsp;&nbsp; DoCmd.ShowToolbar "BarraStrumPers", acToolbarNo
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

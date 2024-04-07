@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproHyperlinkX'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew8.doc'
+Tnum='187318'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Hyperlink</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprohyperlinkx"></A>Esempio di proprietà Hyperlink</B> </P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la routine CreaCollegamentoIpertestuale imposta le proprietà di collegamento ipertestuale per un pulsante di comando, un'etichetta o un controllo di immagine ai valori di indirizzo e sottoindirizzo trasferiti nella routine. L'impostazione dell'indirizzo è un argomento opzionale, poiché un collegamento ipertestuale a un oggetto nel database corrente utilizza solo l'impostazione di sottoindirizzo. Per seguire questo esempio, creare una maschera con due controlli di casella di testo (<CODE>txtIndirizzo </CODE>e <CODE>txtSottoIndirizzo</CODE>) e un pulsante di comando (<CODE>cmdVisitaCollegamentoIpertestuale</CODE>), quindi incollare i seguenti nella sezione Dichiarazioni del modulo della maschera:</P>
+
+<PRE class=CT><CODE>Private Sub cmdVisitaCollegamentoIpetestuale_Click()
+  CreaCollegamentoIpertestuale Me!cmdVisitaCollegamentoIpertestuale, Me!txtSottoIndirizzo, _
+     Me!txtIndirizzo
+End Sub
+
+Sub CreaCollegamentoIpertestuale(ctlSelezionato As Control, _
+   strSottoIndirizzo As String, Optional strIndirizzo As String)
+  Dim hlk As Hyperlink
+  Select Case ctlSelezionato.ControlType
+    Case acLabel, acImage, acCommandButton
+      Set hlk = ctlSelezionato.<B>Hyperlink</B>
+      With hlk
+        If Not IsMissing(strIndirizzo) Then
+         .Address = strIndirizzo
+        Else
+         .Address = ""
+        End If
+       .SubAddress = strSottoIndirizzo
+       .Follow
+       .Address = ""
+       .SubAddress = ""
+      End With
+    Case Else
+      MsgBox "Il controllo '" &amp; ctlSelezionato.Name _
+         &amp; "' non supporta collegamenti ipertestuali."
+  End Select
+End Sub</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

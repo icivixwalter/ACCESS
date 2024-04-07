@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRowSourceRowSourceTypeX1'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosrc1_1a.rtf'
+Tnum='187993'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di proprietà RowSourceType e RowSource - Impostazioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorowsourcerowsourcetypex1"></A>Esempi di proprietà RowSourceType e RowSource - Impostazioni</B></P>
+
+
+
+<P class=T>Negli esempi riportati di seguito verranno elencate alcune impostazioni della proprietà <B>RowSource</B> per ogni impostazione della proprietà <B>RowSourceType</B>.</P>
+
+<P class=RL><B>Quando la proprietà RowSourceType è impostata a Elenco valori</B></P>
+
+<P class=T>Se la proprietà <B>RowSourceType</B> è impostata a Elenco valori, le impostazioni valide per le proprietà <B>RowSource</B> e <B>ColumnCount</B> e gli elenchi che ne risultano saranno:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=60%>Impostazione di RowSource</TH>
+<TH width=40%>Elenco</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>Lun;Mar;Mer
+<P class=TT>(<B>ColumnCount</B> = 1)</P>
+</TD>
+<TD class=TART width=40%><IMG SRC="images/days.bmp" BORDER=0>
+<P class=TT>Elenco a una colonna e tre righe</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>1;Lunedi;2;Martedi;3;Mercoledi;4;Giovedi
+<P class=TT>(<B>ColumnCount</B> = 2)</P>
+</TD>
+<TD class=TART width=40%><IMG SRC="images/days2.bmp" BORDER=0>
+<P class=TT>Elenco a due colonne e quattro righe</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>Paese;Capitale;Francia;Parigi;Brasile;Brasilia
+<P class=TT>(<B>ColumnCount</B> = 2, <B>ColumnHeads</B> = Sì)</P>
+</TD>
+<TD class=TART width=40%><IMG SRC="images/capital.bmp" BORDER=0>
+<P class=TT>Elenco a due colonne con una riga di intestazione colonne e due righe di dati</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Quando la proprietà RowSourceType è impostata a Tabella/query</B></P>
+
+<P class=T>Se la proprietà <B>RowSourceType</B> è impostata a Tabella/query, è possibile impostare la proprietà <B>RowSource</B> a un nome di tabella o di query,&nbsp; ad esempio, ElencoCategoria.</P>
+
+<P class=T>Di seguito è riportata un'istruzione SQL valida per un elenco a due colonne estratto dalla tabella Categorie:</P>
+
+<PRE class=CT><CODE>SELECT IDCategoria, NomeCategoria FROM Categorie _
+ ORDER BY NomeCategoria;</CODE></PRE>
+
+
+
+<P class=T>Se la query ElencoCategoria e l'istruzione SQL definiscono lo stesso set di record, l'elenco delle impostazioni corrisponderà a quello riportato nell'illustrazione seguente:</P>
+
+
+
+<P class=ART><IMG SRC="images/categ.bmp" BORDER=0></P>
+
+
+
+<P class=RL><B>Quando la proprietà RowSourceType è impostata a Elenco valori</B></P>
+
+<P class=T>Se la proprietà <B>RowSourceType</B> è impostata a Elenco valori e la proprietà <B>RowSource</B> a ElencoCategoria (la query descritta nel precedente esempio), l'elenco che ne risulta sarà simile a quello riportato nell'illustrazione seguente:</P>
+
+
+
+<P class=ART><IMG SRC="images/categ2.bmp" BORDER=0></P>
+
+
+
+<P class=RL><B>Quando la proprietà RowSourceType è impostata a una funzione definita dall'utente</B></P>
+
+<P class=T>Se la proprietà <B>RowSourceType</B> è impostata al nome di una funzione definita dall'utente, l'impostazione della proprietà <B>RowSource</B> può essere vuota. Ad esempio, una funzione definita dall'utente chiamata ElencoMDB che consente di riempire una casella combinata con i nomi di tutti i database che si trovano nella directory corrente viene immessa nella finestra delle proprietà come illustrato nell'esempio riportato nell'illustrazione seguente:</P>
+
+
+
+<P class=ART><IMG SRC="images/lstbxprp.bmp" BORDER=0></P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

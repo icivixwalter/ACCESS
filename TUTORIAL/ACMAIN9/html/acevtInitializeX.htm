@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtInitializeX'
+Feature='acevt'
+Handoff='1'
+SourceFile='aevtv8_1a.rtf'
+Tnum='186901'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di routine evento Inizializzazione, AggiuntaElemento, RimozioneElemento e Termine</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtinitializex"></A>Esempio di routine evento Inizializzazione, AggiuntaElemento, RimozioneElemento e Termine</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito è inclusa la routine evento relativa agli eventi AggiuntaElemento e RimozioneElemento. Per provare tale esempio, creare prima un nuovo modulo di classe scegliendo <B>Modulo di classe</B> dal menu <B>Inserisci</B>. Incollare il codice riportato di seguito nel modulo di classe e salvare il modulo come RefEvents.</P>
+
+<PRE class=CT><CODE>' Dichiara la variabile di oggetto per rappresentare l'insieme References.
+Public WithEvents evtRiferimenti As References
+
+' Una volta creata l'istanza di classe, inizializza la variabile evtRiferimenti.
+Private Sub Class_<B>Initialize()</B>
+&nbsp;&nbsp;&nbsp; Set evtRiferimenti = Application.References
+End Sub
+
+' Quando l'istanza viene rimossa, imposta evtRiferimenti a Nothing.
+Private Sub Class_<B>Terminate()</B>
+&nbsp;&nbsp;&nbsp; Set evtRiferimenti = Nothing
+End Sub
+
+' Visualizza un messaggio quando viene aggiunto un riferimento.
+Private Sub evtRiferimenti_<B>ItemAdded(</B>ByVal Reference As _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Access.Reference<B>)</B>
+&nbsp;&nbsp;&nbsp; MsgBox "Riferimento a " &amp; Reference.Name &amp; " aggiunto."
+End Sub
+
+' Visualizza un messaggio quando il riferimento viene rimosso.
+Private Sub evtRiferimenti_<B>ItemRemoved(</B>ByVal Reference As _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Access.Reference<B>)</B>
+&nbsp;&nbsp;&nbsp; MsgBox "Riferimento a " &amp; Reference.Name &amp; " rimosso."
+End Sub</CODE></PRE>
+
+
+
+<P class=T>La routine <B>Function</B> riportata di seguito aggiunge un riferimento specificato. Quando si aggiunge un riferimento, viene eseguita la routine evento AggiuntaElemento definita nella classe RefEvents.</P>
+
+<P class=T>Per impostare ad esempio un riferimento al controllo calendario, è possibile passare la stringa "C:\Windows\System\Mscal.ocx", se questo è il percorso corretto di tale controllo sul computer in uso.</P>
+
+<PRE class=CT><CODE>' Crea una nuova istanza della classe RefEvents.
+Dim objEventiRif As New RefEvents
+
+' Passa il nome file e il percorso della libreria dei tipi a questa routine.
+Function AggiungiRiferimento(strNomeFile As String) As Boolean
+&nbsp;&nbsp;&nbsp; Dim ref As Reference
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_AggiungiRiferimento
+&nbsp;&nbsp;&nbsp; ' Crea nuovo riferimento alla variabile di oggetto Riferimenti.
+&nbsp;&nbsp;&nbsp; Set ref = objEventiRif.evtRiferimenti.AddFromFile(strNomeFile)
+&nbsp;&nbsp;&nbsp; AggiungiRiferimento = True
+
+Exit_AggiungiRiferimento:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_AggiungiRiferimento:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; AggiungiRiferimento = False
+&nbsp;&nbsp;&nbsp; Resume Exit_AggiungiRiferimento
+End Function</CODE></PRE>
+
+
+
+<P class=T>La routine <B>Function</B> riportata di seguito rimuove un riferimento specificato. Quando viene rimosso un riferimento, viene eseguita la routine evento RimozioneElemento definita nella classe RefEvents.</P>
+
+<P class=T>Per rimuovere ad esempio un riferimento al controllo calendario, è possibile passare la stringa "MSACAL", che è il nome dell'oggetto <B>Reference</B> che rappresenta il controllo calendario.</P>
+
+<PRE class=CT><CODE>Function RimuoviRiferimento(strNomeRif As String) As Boolean
+&nbsp;&nbsp;&nbsp; Dim ref As Reference
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_RimuoviRiferimento
+&nbsp;&nbsp;&nbsp; ' Restituisce l'oggetto che rappresenta il riferimento esistente.
+&nbsp;&nbsp;&nbsp; Set ref = objEventiRif.evtRiferimenti(strNomeRif)
+&nbsp;&nbsp;&nbsp; ' Rimuove riferimento dall'insieme.
+&nbsp;&nbsp;&nbsp; objEventiRif.evtRiferimenti.Remove ref
+&nbsp;&nbsp;&nbsp; RimuoviRiferimento = True
+
+Exit_RimuoviRiferimento:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_RimuoviRiferimento:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; RimuoviRiferimento = False
+&nbsp;&nbsp;&nbsp; Resume Exit_RimuoviRiferimento
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

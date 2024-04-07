@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjContainerX'
+Feature='acobj'
+Handoff='3'
+SourceFile='ACDMisc.doc'
+Tnum='234362'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Container e insieme Containers</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjcontainerx"></A>Esempio di oggetto Container e insieme Containers</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene concesso ai programmatori l'accesso completo a tutti i moduli del database e a tutti gli altri utenti l'autorizzazione di sola lettura per i moduli:</P>
+
+<PRE class=CT><CODE>Sub ImpostaAutorizzazioniModulo()
+    Dim dbs As Database, wsp As Workspace, ctr As <B>Container</B>
+    Dim grp As Group
+
+    ' Restituisce il riferimento ad area di lavoro predefinito.
+    Set wsp = DBEngine.Workspaces(0)
+    ' Restituisce il riferimento al database corrente.
+    Set dbs = CurrentDb
+    ' Restituisce il riferimento al contenitore Moduli.
+    Set ctr = dbs.<B>Containers</B>!Moduli
+    wsp.Groups.Refresh
+    For Each grp In wsp.Groups
+        ctr.UserName = grp.Name
+        If ctr.UserName = "Programmatori" Then
+            ctr.Permissions = ctr.Permissions Or dbSecFullAccess
+        Else
+            ctr.Permissions = ctr.Permissions Or acSecModReadDef
+        End If
+    Next grp
+    Set dbs = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

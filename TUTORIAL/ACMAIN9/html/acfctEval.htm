@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctEval'
+Feature='acfct'
+Handoff='1'
+SourceFile='afctmisc_1a.doc'
+Tnum='186386'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzione Eval</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlBetween">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlIn">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acfcteval"></A>Funzione Eval</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctEvalC;vafctChoose;vafctIIf;vafctSwitch">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctEvalX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>Eval</B> per valutare un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> risultante in una stringa di testo o in un valore numerico.</P>
+
+<P class=T>È possibile ad esempio elaborare una stringa e passarla quindi alla funzione <B>Eval</B> come se la stringa fosse un'espressione vera e propria. La funzione <B>Eval</B> valuta l'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> e ne restituisce il valore. <CODE>Eval("1 + 1")</CODE> restituisce ad esempio 2.</P>
+
+<P class=T>Se alla funzione <B>Eval</B> viene passata una stringa contenente il nome di una funzione, la funzione <B>Eval</B> restituisce il valore restituito della funzione stessa. <CODE>Eval("Chr$(65)")</CODE> restituisce ad esempio "A".</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>Eval(</B><I>esprstring</I><B>)</B></P>
+
+
+
+<P class=T>L'argomento <I>esprstring</I> è un'espressione corrispondente a una stringa di testo alfanumerica. L'argomento <I>esprstring</I> può essere ad esempio una funzione che restituisce una stringa o un valore numerico o può essere un riferimento a un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> in una maschera. È necessario che l'argomento <I>esprstring</I> corrisponda a una stringa o a un valore numerico. Non è possibile che corrisponda a un <A HREF="javascript:HelpPopup('actip9.hlp','defMSAccessObject');" class="pop">oggetto di Microsoft Access</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se a una funzione <B>Eval</B> si sta passando il nome di una funzione, nell'argomento <I>esprstring</I> è necessario includere le parentesi dopo il nome della funzione. Ad esempio:</P>
+
+<PRE class=NCT><CODE>' MostraNomi è una funzione definita dall'utente.
+Debug.Print Eval("MostraNomi()")&nbsp;&nbsp;&nbsp; </CODE></PRE>
+
+
+
+<PRE class=NCT><CODE>Debug.Print Eval("StrComp(""Ugo"",""ugo"", 1)")</CODE></PRE>
+
+
+
+<PRE class=NCT><CODE>Debug.Print Eval("Data()")</CODE></PRE>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare la funzione <B>Eval</B> in un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> di una maschera, di un report, di una macro o di un modulo. La funzione <B>Eval</B> restituisce un valore di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defVariant');" class="pop"><B>Variante</B></A>, che è una stringa o un tipo numerico.</P>
+
+<P class=T>È necessario che l'argomento <I>esprstring</I> sia un'espressione memorizzata in una stringa. Se alla funzione <B>Eval</B> viene passata una stringa che non contiene un'espressione numerica o un nome di funzione, ma solo una semplice stringa di testo, si verifica un <A HREF="javascript:HelpPopup('actip9.hlp','defRunTimeError');" class="pop">errore di run-time</A>. <CODE>Eval("Rossi")</CODE> è ad esempio un errore.</P>
+
+<P class=T>È possibile utilizzare la funzione <B>Eval</B> per determinare il valore memorizzato nella proprietà <A HREF="acproValue.htm"><B>Valore</B></A> di un controllo. L'esempio riportato di seguito passa una stringa contenente un riferimento completo a un controllo alla funzione <B>Eval</B>. La funzione restituisce quindi il valore corrente di tale controllo in una finestra di dialogo.</P>
+
+<PRE class=CT><CODE>Dim ctl As Control, strCtl As String
+Set ctl = Forms!Impiegati!Cognome
+strCtl = "Forms!Impiegati!Cognome"
+MsgBox ("Il valore corrente di " &amp; ctl.Name &amp; " è " &amp; Eval(strCtl))</CODE></PRE>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>Eval</B> per avere accesso agli operatori di espressione non comunemente disponibili in Visual Basic. Non è possibile ad esempio utilizzare gli operatori SQL <A HREF="JavaScript:hhobj_3.Click()"><B>Between...And</B></A> o <A HREF="JavaScript:hhobj_4.Click()"><B>In</B></A> direttamente nel codice, ma è possibile utilizzare tali operatori in un'espressione passata alla funzione <B>Eval</B>.</P>
+
+<P class=T>L'esempio riportato di seguito determina se il valore di un controllo ZonaDestinatario di una maschera Ordini corrisponde a una delle abbreviazione specificate. Se il campo contiene una delle abbreviazioni, <CODE>intStato</CODE> è <B>True</B> (-1). Si noti che per includere una stringa in un'altra vengono utilizzati gli apici (').</P>
+
+<PRE class=CT><CODE>Dim intStato As Integer
+intStato = Eval("Forms!Ordini!ZonaDestinatario"_
+&nbsp;&nbsp;&nbsp; &amp; "('AK', 'CA', 'ID', 'WA', 'MT', 'NM', 'OR')")</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

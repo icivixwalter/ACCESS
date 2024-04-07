@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSpecifyCriteriaDomainAgg'
+Feature='achow'
+Handoff='2'
+SourceFile='criteria.doc'
+Tnum='187973'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Specificare dati in un sottoinsieme di record</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjODBRec">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowspecifycriteriadomainagg"></A>Specificare dati in un sottoinsieme di record</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSpecifyCriteriaDomainAggC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSpecifyCriteriaDomainAggX">
+</OBJECT></P>
+
+
+
+<P class=T>Quando si lavora con i record, è spesso necessario specificare dei criteri in modo da limitare i dati a un determinato set di record. Alcuni tipi di routine utilizzano un argomento <I>criteri</I> che consente di specificare quali dati devono essere restituiti. Specificare ad esempio l'argomento <I>criteri</I> per limitare i record che vengono restituiti quando si utilizzano le <A HREF="acidxDomainRef.htm">funzioni di aggregazione sui domini</A>. È inoltre possibile specificare dei criteri quando si utilizzano i metodi Find di un oggetto <A HREF="JavaScript:hhobj_3.Click()"><B>Recordset</B></A>, quando si imposta la proprietà <A HREF="acproFilter.htm"><B>Filtro</B></A> o <A HREF="acproServerFilter.htm"><B>Filtro su server</B></A> di una maschera o quando si costruisce un'<A HREF="achowSQLStringVBA.htm">istruzione SQL</A>. Sebbene tutte queste operazioni utilizzino una sintassi diversa, le espressioni criterio vengono costruite in modo simile.</P>
+
+<P class=T>È possibile ad esempio utilizzare la funzione <A HREF="acfctDSum.htm"><B>DSum</B></A>, una funzione di aggregazione sui domini, per ottenere la somma totale di tutte le spese di trasporto contenute nella tabella Ordini. È possibile creare un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> immettendo nella proprietà <A HREF="acproControlSource.htm"><B>Origine controllo</B></A> l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>=DSum("[SpeseTrasporto]", "Ordini")</CODE></PRE>
+
+
+
+<P class=T>Se viene specificato l'argomento opzionale <I>criteri</I>, la funzione <B>DSum</B> viene eseguita su un sottoinsieme di <I>dominio</I>. È possibile ad esempio ottenere la somma totale di tutte le spese di trasporto nella tabella Ordini solo per gli ordini inviati in California:</P>
+
+<PRE class=CT><CODE>=DSum("[SpeseTrasporto]", "Ordini", "[StatoDestinatario] = 'CA'")</CODE></PRE>
+
+
+
+<P class=T>Quando si fornisce un argomento <I>criteri</I>, viene valutata innanzitutto qualsiasi espressione compresa nell'argomento per formare un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A>. L'espressione stringa viene quindi passata alla funzione di dominio. L'espressione stringa equivale a una <A HREF="javascript:HelpPopup('actip9.hlp','defWhereClause');" class="pop">proposizione SQL WHERE</A>, senza la parola WHERE.</P>
+
+<P class=T>È possibile specificare criteri numerici, di testo e di data/ora. Indipendentemente dal tipo di criterio specificato, l'argomento <I>criteri</I> viene sempre convertito in una stringa prima di essere passato alla funzione aggregata sui domini. È necessario perciò assicurarsi che dopo la valutazione di una qualsiasi espressione, tutte le parti dell'argomento siano concatenate in una sola stringa racchiusa tra virgolette doppie (").</P>
+
+<P class=T>Per essere certi che la stringa venga concatenata in modo corretto, è necessario specificare i criteri per una funzione di dominio.</P>
+
+<P class=T>Nell'elenco riportato di seguito sono riportati i vari modi in cui è possibile specificare criteri.</P>
+
+<P class=CRT><A HREF="achowSpecifyNumericCriteria.htm">Espressioni criterio numerico</A></P>
+
+<P class=CRT><A HREF="achowSpecifyTextualCriteria.htm">Espressioni criterio di testo</A></P>
+
+<P class=CRT><A HREF="achowSpecifyDateTimeCriteria.htm">Espressioni criterio di data e ora</A></P>
+
+<P class=CRT><A HREF="achowSpecifyNumCriteriaControlForm.htm">Modificare i criteri numerici provenienti da un controllo in una maschera</A></P>
+
+<P class=CRT><A HREF="achowSpecifyTextCriteriaControlForm.htm">Modificare i criteri di testo provenienti da un controllo in una maschera</A></P>
+
+<P class=CRT><A HREF="achowSpecifyDateTimeCriteriaControlForm.htm">Modificare i criteri di data e ora provenienti da un controllo in una maschera</A></P>
+
+<P class=CRT><A HREF="achowSpecifyMultFieldsCriteria.htm">Campi multipli in espressioni criterio</A></P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

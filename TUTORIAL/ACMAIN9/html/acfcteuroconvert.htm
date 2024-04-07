@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctEuroConvert'
+Feature='acfct'
+Handoff='5'
+SourceFile='EUROFunct.doc'
+Tnum='292019'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzione EuroConvert</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acfcteuroconvert"></A>Funzione EuroConvert</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctEuroConvert_C">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctEuroConvert_X">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctEuroConvert_A">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>EuroConvert</B> per convertire in euro un valore espresso in una valuta facente parte dell'euro e viceversa. È anche possibile eseguire la conversione da una valuta facente parte dell'euro a un'altra valuta utilizzando l'euro come valore intermedio, effettuando pertanto una triangolazione. La funzione <B>EuroConvert</B> utilizza i tassi di conversione fissi stabiliti dall'Unione Europea.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>EuroConvert(</B><I>numero</I>, <I>valutaorigine</I>, <I>valutadestinazione</I>[, <I>precisionecompleta</I>, <I>precisionetriangolazione</I>]<B>)</B></P>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=6>
+
+<TR VALIGN="top">
+<TH width=28%>Argomento</TH>
+<TH colspan=5 width=72%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>numero</I></TD>
+<TD class=TT colspan=5 width=72%>Il valore che si desidera convertire oppure un riferimento a un campo contenente il valore da convertire.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>valutaorigine</I></TD>
+<TD class=TT colspan=5 width=72%>Un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A>, o un riferimento a un campo contenente un'espressione stringa, corrispondente al codice ISO per la valuta che si desidera convertire. Può contenere uno dei codici specificati nella tabella seguente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TH width=22%>Valuta</TH>
+<TH colspan=2 width=18%>Codice ISO</TH>
+<TH width=16%>Precisione di calcolo</TH>
+<TH width=16%>Precisione di visualizzazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Franco belga</TD>
+<TD class=TT colspan=2 width=18%>BEF</TD>
+<TD class=TT width=16%>0</TD>
+<TD class=TT width=16%>0</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Franco lussemburghese</TD>
+<TD class=TT colspan=2 width=18%>LUF</TD>
+<TD class=TT width=16%>0</TD>
+<TD class=TT width=16%>0</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Marco tedesco</TD>
+<TD class=TT colspan=2 width=18%>DEM</TD>
+<TD class=TT width=16%>2</TD>
+<TD class=TT width=16%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Peseta spagnola</TD>
+<TD class=TT colspan=2 width=18%>ESP</TD>
+<TD class=TT width=16%>0</TD>
+<TD class=TT width=16%>0</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Franco francese</TD>
+<TD class=TT colspan=2 width=18%>FRF</TD>
+<TD class=TT width=16%>2</TD>
+<TD class=TT width=16%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Sterlina irlandese</TD>
+<TD class=TT colspan=2 width=18%>IEP</TD>
+<TD class=TT width=16%>2</TD>
+<TD class=TT width=16%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Lira italiana</TD>
+<TD class=TT colspan=2 width=18%>ITL</TD>
+<TD class=TT width=16%>0</TD>
+<TD class=TT width=16%>0</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Fiorino olandese</TD>
+<TD class=TT colspan=2 width=18%>NLG</TD>
+<TD class=TT width=16%>2</TD>
+<TD class=TT width=16%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Scellino austriaco</TD>
+<TD class=TT colspan=2 width=18%>ATS</TD>
+<TD class=TT width=16%>2</TD>
+<TD class=TT width=16%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Scudo portoghese</TD>
+<TD class=TT colspan=2 width=18%>PTE</TD>
+<TD class=TT width=16%>1</TD>
+<TD class=TT width=16%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Markka finlandese</TD>
+<TD class=TT colspan=2 width=18%>FIM</TD>
+<TD class=TT width=16%>2</TD>
+<TD class=TT width=16%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=22%>Euro</TD>
+<TD class=TT colspan=2 width=18%>EUR</TD>
+<TD class=TT width=16%>2</TD>
+<TD class=TT width=16%>2</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT colspan=5 width=72%>La precisione di calcolo determina l'unità di valuta in base a cui viene arrotondato il risultato della conversione. Ad esempio, per la conversione in marchi tedeschi la precisione di calcolo è 2, pertanto il risultato verrà arrotondato al pfennig più prossimo (100 pfennig corrispondono a un marco). La precisione di visualizzazione determina il numero di cifre decimali visualizzate nel campo del risultato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT colspan=5 width=72%>Le ultime versioni della funzione <B>EuroConvert</B> sono in grado di supportare un numero superiore di valute. Per informazioni sulle nuove valute e sugli aggiornamenti della funzione <B>EuroConvert</B>, vedere <A HREF="mk:@MSITStore:acweb9.chm::/html/wdrefEuroCurrencySupportForMicrosoftWindows95NT40.htm">Supporto per la valuta euro per Windows 95 e Windows NT Workstation versione 4.0</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TH colspan=2 width=37%>Valuta</TH>
+<TH colspan=3 width=35%>Codice ISO</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT colspan=2 width=37%>Corona danese</TD>
+<TD class=TT colspan=3 width=35%>DKK</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT colspan=2 width=37%>Dracma</TD>
+<TD class=TT colspan=3 width=35%>GRD</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT colspan=2 width=37%>Corona svedese</TD>
+<TD class=TT colspan=3 width=35%>SEK</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT colspan=2 width=37%>Sterlina</TD>
+<TD class=TT colspan=3 width=35%>GBP</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>valutadestinazione</I></TD>
+<TD class=TT colspan=5 width=72%>Un'espressione stringa, o un riferimento a un campo contenente un'espressione stringa, corrispondente al codice ISO della valuta nella quale si desidera effettuare la conversione. Per l'elenco dei codici ISO, vedere la descrizione dell'argomento <I>valutaorigine</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>precisionecompleta</I></TD>
+<TD class=TT colspan=5 width=72%>Facoltativa. Un valore <A HREF="javascript:HelpPopup('actip9.hlp','defBoolean');" class="pop"><B>booleano</B></A>, dove il parametro <B>True</B> (1) consente di ignorare le regole di arrotondamento specifiche per la valuta corrente (denominate precisione di visualizzazione nella descrizione dell'argomento <I>valutaorigine</I>) e utilizzare il fattore di conversione a 6 cifre significative senza effettuare nessun ulteriore arrotondamento. Il parametro <B>False</B> (0) consente di utilizzare le regole di arrotondamento specifiche per la valuta corrente per visualizzare il risultato. Il parametro predefinito è <B>False</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>precisionetriangolazione</I></TD>
+<TD class=TT colspan=5 width=72%>Facoltativo. Un valore <A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>intero</B></A> maggiore o uguale a 3 che specifica il numero di cifre significative per la precisione di calcolo relativa al valore intermedio espresso in euro quando si esegue la conversione tra due valute nazionali.</TD>
+</TR>
+</TABLE><BR>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Gli zero non significativi vengono troncati e i parametri non validi restituiscono: #Errore.</P>
+
+<P class=T>Se il codice ISO di origine coincide con quello di destinazione, il valore originale del numero è attivo.</P>
+
+<P class=T>La funzione non prevede formati.</P>
+
+<P class=T>La funzione <B>EuroConvert</B> utilizza i tassi correnti stabiliti dall'Unione Europea. Qualora tali tassi dovessero essere modificati, verrà aggiornata di conseguenza anche la funzione di conversione. Per informazioni sulle regole e sui tassi correnti, consultare le pubblicazioni della Commissione Europea relative all'euro. Per informazioni su come ottenere tali pubblicazioni, vedere <A HREF="mk:@MSITStore:acweb9.chm::/html/wdrefEuroCurrencySupportForMicrosoftWindows95NT40.htm">Supporto per la valuta euro per Windows 95 e Windows NT Workstation versione 4.0</A>.</P>
+
+<P class=RL><B>Esempi</B></P>
+
+<P class=T>Nel primo esempio 1,20 marchi tedeschi vengono convertiti in un eurodollari (risultato = 0,61). Nel secondo esempio 1,47 franchi francesi vengono convertiti in marchi tedeschi (risultato = 0,44 DEM). Negli esempi vengono utilizzati i seguenti fattori di conversione: 1 euro =  6,55858 franchi francesi e 1 euro = 1,92974 marchi tedeschi. </P>
+
+<PRE class=CT><CODE>EuroConvert(1,20,"DEM","EUR")
+EuroConvert(1,47,"FRF","DEM",TRUE,3)</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione"
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

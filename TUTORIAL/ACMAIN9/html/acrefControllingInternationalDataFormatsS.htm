@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefControllingInternationalDataFormatsS'
+Feature='Tables'
+Handoff='1'
+SourceFile='ctblpro_1.rtf'
+Tnum='187546'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Controllo dei formati internazionali di visualizzazione dei dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefcontrollinginternationaldataformatss"></A>Controllo dei formati internazionali di visualizzazione dei dati</H1>
+
+<P class=LPROCT>In Microsoft Access è possibile visualizzare molti formati internazionali. Per assicurare la congruenza tra le applicazioni, vengono utilizzate le Impostazioni internazionali specificate facendo doppio clic sul Pannello di controllo di Windows per i formati numerici e data/ora predefiniti elencati nella tabella riportata di seguito:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=49%>Formato ottenuto</TH>
+<TH width=51%>Dalla scheda nella finestra di<BR>
+dialogo Proprietà - Impostazioni internazionali</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>Standard</B> (e altri formati numerici, tranne Valuta)</TD>
+<TD class=TT width=51%>Scheda <B>Numeri</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>Valuta</B></TD>
+<TD class=TT width=51%>Scheda <B>Valuta</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>Data in cifre</B></TD>
+<TD class=TT width=51%>Scheda <B>Data</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>Data estesa</B></TD>
+<TD class=TT width=51%>Scheda <B>Data</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>Ora estesa</B></TD>
+<TD class=TT width=51%>Scheda <B>Ora</B></TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=LPROCT>Se i dati non vengono visualizzati nel formato appropriato per il paese, modificare le Impostazioni internazionali specificate nel Pannello di controllo.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Il trasferimento di dati tra computer con impostazioni internazionali diverse può dare origine a data di tipo Valuta errati. Quando si utilizza il formato Valuta, ad esempio, il valore 5,47 kr trasferito da un computer con le impostazioni danesi diventerà $5.47 su un computer con le impostazioni statunitensi. Per evitare il verificarsi di errori di questo tipo, definire un formato personalizzato per la valuta, ad esempio #,## kr. Il formato personalizzato ha la precedenza sulle Impostazioni internazionali specificate nel Pannello di controllo di Windows. Problemi simili non si verificheranno durante il trasferimento di dati di tipo Numerico, Data o Ora standard tra computer con impostazioni internazionali diverse.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefControllingInternationalDataFormatsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

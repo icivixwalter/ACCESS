@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproSourceX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproqry1.doc'
+Tnum='188101'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Source</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprosourcex"></A>Esempio di proprietà Source</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>RowSource</B> per il controllo della casella di riepilogo Contatto1 viene impostata a un campo contenuto in una tabella di dBASE IV.</P>
+
+<PRE class=CT><CODE>Dim strGetSQL AS String
+strGetSQL = "SELECT Cliente.NomeSocietà, Cliente.Telefono FROM Cliente IN 'c:\dbdata'[dBASE IV;];"
+Me.Contatto1.RowSource = strGetSQL</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo, l'origine dei dati per la query è una tabella di dBASE IV chiamata Cliente contenuta nella cartella C:\Dbdata. È possibile immettere questa istruzione SQL in visualizzazione SQL di una finestra di query.</P>
+
+<PRE class=CT><CODE>SELECT Cliente.NomeSocietà, Cliente.Telefono 
+FROM Cliente IN 'c:\dbdata'[dBASE IV;];</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCycle'
+Feature='acpro'
+Handoff='1'
+SourceFile='apromsc3_1a.rtf'
+Tnum='187126'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Cycle (Sequenza)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprocycle"></A>Proprietà Cycle (Sequenza)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproCycleC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproCycleX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproCycleA">
+</OBJECT></P>
+
+
+
+<P class=T>La proprietà <B>Cycle</B> può essere utilizzata per specificare gli effetti che si desidera ottenere quando si preme TAB e l'ultimo <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di una maschera associata ha lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>Cycle</B> utilizza le impostazioni riportate di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=23%>Impostazione</TH>
+<TH width=21%>Visual Basic</TH>
+<TH width=56%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Tutti i record</TD>
+<TD class=TT width=21%>0</TD>
+<TD class=TT width=56%>Impostazione predefinita. Premendo TAB dall'ultimo controllo di una maschera, lo stato attivo viene spostato sul primo controllo nell'<A HREF="javascript:HelpPopup('actip9.hlp','deftaborder');" class="pop">ordine di tabulazione</A> del record successivo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Record corrente</TD>
+<TD class=TT width=21%>1</TD>
+<TD class=TT width=56%>Premendo TAB dall'ultimo controllo di un record, lo stato attivo viene spostato sul primo controllo nell'ordine di tabulazione dello stesso record.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>Pagina corrente</TD>
+<TD class=TT width=21%>2</TD>
+<TD class=TT width=56%>Premendo TAB dall'ultimo controllo di una pagina, il primo controllo nell'ordine di tabulazione della pagina riacquista lo stato attivo.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare la proprietà <B>Cycle</B> utilizzando la <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> della maschera, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=T>La proprietà <B>Cycle</B> può essere impostata in qualsiasi visualizzazione.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando si preme TAB in una maschera, lo stato attivo viene spostato da un controllo all'altro in base alla posizione dei controlli nell'ordine di tabulazione.</P>
+
+<P class=T>Per le maschere di immissione dati è possibile impostare la proprietà <B>Cycle</B> a Tutti i record. Ciò consente di spostarsi a un nuovo record premendo TAB.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>Cycle</B> controlla gli effetti del tasto TAB soltanto nelle maschere in cui è stata impostata. Se il controllo di una sottomaschera si trova nell'ordine di tabulazione e acquista lo stato attivo, gli effetti che si ottengono premendo TAB saranno determinati dall'impostazione della proprietà <B>Cycle</B> per la sottomaschera.</P>
+
+<P class=NT>Per spostare lo stato attivo all'esterno del controllo di una sottomaschera, premere CTRL+TAB.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

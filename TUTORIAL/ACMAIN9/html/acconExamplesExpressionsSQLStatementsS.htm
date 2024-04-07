@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconExamplesExpressionsSQLStatementsS'
+Feature='Queries: SQL'
+Handoff='1'
+SourceFile='CQRYSQL.RTF'
+Tnum='188616'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di espressioni nelle istruzioni SQL</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconexamplesexpressionssqlstatementss"></A>Esempi di espressioni nelle istruzioni SQL</H1>
+
+<P class=T>È possibile utilizzare un'espressione in molti punti di un'istruzione SQL, come viene mostrato negli esempi riportati di seguito. Le espressioni sono visualizzate in rosso.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=50%>Espressione</TH>
+<TH width=50%>Risultato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>SELECT [Nome],[Cognome] FROM [Impiegati] WHERE [Cognome]="Davolio";</TD>
+<TD class=TT width=50%>Visualizza i valori nei campi Nome e Cognome per gli impiegati il cui cognome è Davolio.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>SELECT [IDProdotto],[NomeProdotto] FROM [Prodotti] WHERE [IDCategoria]=Forms![Nuovi prodotti]![IDCategoria];</TD>
+<TD class=TT width=50%>Visualizza i valori nei campi IDProdotto e NomeProdotto nella tabella Prodotti per i record in cui il valore IDCategoria corrisponde al valore IDCategoria specificato in una maschera Nuovi prodotti aperta.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>SELECT Media([Prezzo complessivo]) AS [Prezzo complessivo medio] FROM [Dettagli ordini complessivi] WHERE [ImportoOrdine]&gt;1000;</TD>
+<TD class=TT width=50%>Calcola il prezzo complessivo medio per gli ordini il cui valore nel campo ImportoOrdine è maggiore di 1000 e lo visualizza in un campo denominato Prezzo complessivo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>SELECT [IDCategoria],Conteggio([IDProdotto]) FROM [Prodotti] GROUP BY [IDCategoria] HAVING Conteggio([IDProdotto])&gt;10;</TD>
+<TD class=TT width=50%>In un campo denominato ConteggioIDProdotto, visualizza il numero totale di prodotti per le categorie che includono più di 100 prodotti.</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconExamplesExpressionsSQLStatementsSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

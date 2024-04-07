@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproModuleX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproref2_1a.rtf'
+Tnum='187474'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Module</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpromodulex"></A>Esempio di proprietà Module</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzata la proprietà <B>Module</B> per inserire il metodo <B>Beep</B> nell'evento Apertura di una maschera.</P>
+
+<PRE class=CT><CODE>Dim strCodiceAperturaMaschera As String
+Dim mdl As Module
+
+Set mdl = Forms!MiaMaschera.<B>Module</B>
+strCodiceAperturaMaschera = "Sub Form_Open(Cancel As Integer)" _
+&nbsp;&nbsp;&nbsp; &amp; vbCrLf &amp; "Beep" &amp; vbCrLf &amp; "End Sub"
+&nbsp;&nbsp;&nbsp; With mdl
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.InsertText strCodiceAperturaMaschera
+&nbsp;&nbsp;&nbsp; End With</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

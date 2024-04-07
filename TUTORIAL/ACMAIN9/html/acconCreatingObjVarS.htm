@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCreatingObjVarS'
+Feature='accon'
+Handoff='2'
+SourceFile='acob2obj.rtf'
+Tnum='234383'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creazione di variabili di oggetto</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acconcreatingobjvars"></A>Creazione di variabili di oggetto</H1>
+
+
+
+<P class=T>In Microsoft Access è possibile dichiarare una variabile di oggetto come tipo di oggetto specifico, come <B>Oggetto</B> o come <B>Variante</B>. I tipi di oggetto specifici comprendono gli <A HREF="javascript:HelpPopup('actip9.hlp','defMSAccessObject');" class="pop">oggetti di Microsoft Access</A>, gli oggetti <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">DAO</A>, gli oggetti <B>Collection</B> di Visual Basic, le <A HREF="javascript:HelpPopup('actip9.hlp','defInstance');" class="pop">istanze</A> di <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">moduli di classe</A> o gli oggetti di <A HREF="javascript:HelpPopup('actip9.hlp','defOLEAutomation');" class="pop">automazione</A> (precedentemente noti come automazione OLE). Negli esempi riportati di seguito si indicano diversi tipi di oggetto specifici che è possibile utilizzare.</P>
+
+<PRE class=CT><CODE>Dim frmMascheraOrdine As Form 
+' Dichiara oggetto Form.</CODE></PRE>
+
+<UL></UL>
+
+<PRE class=CT><CODE>Dim tdfOrdini As Table 
+' Dichiara oggetto TableDef.</CODE></PRE>
+
+<UL></UL>
+
+<PRE class=CT><CODE>Dim colOggetti As New Collection
+' Nuovo oggetto Collection.</CODE></PRE>
+
+<UL></UL>
+
+<PRE class=CT><CODE>Dim obj As New Class1
+' Nuova istanza di un modulo di classe.</CODE></PRE>
+
+<UL></UL>
+
+<PRE class=CT><CODE>Dim appXL As Excel.Application
+' Oggetto di automazione.</CODE></PRE>
+
+<UL></UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si utilizza la parola chiave <B>New</B> in una dichiarazione di variabile di oggetto, viene creato un nuovo oggetto a cui la variabile punta automaticamente. In tal caso non è necessario utilizzare l'istruzione <B>Set</B>.<UL></UL>
+
+<P class=T>È possibile utilizzare la parola chiave <B>Me</B> in un <A HREF="javascript:HelpPopup('actip9.hlp','defFormModule');" class="pop">modulo di maschera</A> o in un <A HREF="javascript:HelpPopup('actip9.hlp','defReportModule');" class="pop">modulo di report</A> per fare riferimento alla maschera o al report associati al modulo. La parola chiave <B>Me</B> consente di fare riferimento alla maschera corrente senza doverne indicare il percorso completo.</P>
+
+<P class=T>È possibile ad esempio creare la routine riportata di seguito in un <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">modulo standard</A> per modificare il colore della sezione Corpo di una maschera.</P>
+
+<PRE class=CT><CODE>Sub ModificaColoreMaschera(frmCorrente As Form)
+frmCorrente.Section(acDetail).BackColor = RGB(Rnd * 256, _
+Rnd * 256, Rnd * 256)
+End Sub</CODE></PRE>
+
+
+
+<P class=T>È possibile chiamare tale routine dal modulo di una maschera e passare la parola chiave <B>Me</B> alla routine come argomento. La parola chiave <B>Me</B> rappresenta la maschera dalla quale viene chiamata la routine e sulla quale quest'ultima viene eseguita.</P>
+
+<P class=T>È possibile ad esempio chiamare la routine riportata di seguito dall'evento Clic di una sezione della maschera. Impostare la proprietà <B>Su clic</B> della sezione Corpo a [Routine evento] e creare nel modulo della maschera la routine <B>Sub</B> riportata di seguito:</P>
+
+<PRE class=CT><CODE>Private Sub Corpo_Click()
+ModificaColoreMaschera Me
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Se il nome della maschera fosse Ordini, sarebbe possibile chiamare la routine anche con l'istruzione riportata di seguito:</P>
+
+<PRE class=CT><CODE>ModificaColoreMaschera Forms!Ordini</CODE></PRE>
+
+
+
+<P class=T>La parola chiave <B>Me</B> consente di fare riferimento a una maschera anche se non se ne conosce il nome.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

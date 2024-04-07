@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRecordsetTypeX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproedt1_1a.rtf'
+Tnum='187939'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà RecordsetType</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorecordsettypex"></A>Esempio di proprietà RecordsetType</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito è possibile aggiornare i record solo se l'ID utente è ADMIN. Nell'esempio di codice si imposta la proprietà <B>RecordsetType</B> a Snapshot se il valore della variabile pubblica <CODE>gstrIDUtente</CODE> non è ADMIN.</P>
+
+<PRE class=CT><CODE>Sub Form_Open(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; Const conSnapshot = 2
+&nbsp;&nbsp;&nbsp; If gstrIDUtente &lt;&gt; "ADMIN" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forms!Impiegati.<B>RecordsetType</B> = conSnapshot
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

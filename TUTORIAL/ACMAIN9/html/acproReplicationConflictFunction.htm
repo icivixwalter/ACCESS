@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproReplicationConflictFunction'
+Feature='acpro'
+Handoff='3'
+SourceFile='replconf.rtf'
+Tnum='187955'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà ReplicationConflictFunction</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dacolProperty">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjDocument">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthCreateProperty">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproreplicationconflictfunction"></A>Proprietà ReplicationConflictFunction</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproReplicationConflictFunctionC;damthCreateProperty;daobjProperty">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproReplicationConflictFunctionX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproReplicationConflictFunctionA;daobjDocument">
+</OBJECT></P>
+
+
+
+<P class=T>La proprietà <B>ReplicationConflictFunction</B> consente di utilizzare del codice di risoluzione dei conflitti personalizzato per risolvere i conflitti di dati che si verificano fra <A HREF="javascript:HelpPopup('actip9.hlp','rpldefReplica');" class="pop">repliche</A> al momento della <A HREF="javascript:HelpPopup('actip9.hlp','rpldefSynchronization');" class="pop">sincronizzazione</A>. Quando si imposta tale proprietà, Microsoft Access chiama la funzione di risoluzione dei conflitti invece del Risolutore dei conflitti incorporato, quando l'utente richiede di risolvere tali conflitti.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>Impostare la proprietà <B>ReplicationConflictFunction</B> a una <A HREF="javascript:HelpPopup('actip9.hlp','defString');" class="pop">stringa</A> di testo che è il nome della <A HREF="javascript:HelpPopup('actip9.hlp','defFunctionProcedure');" class="pop">routine <B>Function</B></A> che si desidera chiamare. Tenere presente che l'impostazione deve essere il nome di una routine <B>Function</B>; non può essere il nome di una <A HREF="javascript:HelpPopup('actip9.hlp','defSubProcedure');" class="pop">routine <B>Sub</B></A>. A meno che questa proprietà non sia stata impostata, Microsoft Access chiama il Risolutore dei conflitti.</P>
+
+<P class=T>Per impostare il valore di questa proprietà per la prima volta da Visual Basic, è necessario creare la proprietà e accodarla all'insieme <A HREF="JavaScript:hhobj_4.Click()"><B>Properties</B></A> dell'oggetto <A HREF="JavaScript:hhobj_5.Click()"><B>Document</B></A> definito dall'utente. È necessario includere del codice di gestione degli errori nella routine da provare nel caso in cui la proprietà non esista ancora nell'insieme <B>Properties</B>. Per ulteriori informazioni, vedere il metodo <A HREF="JavaScript:hhobj_6.Click()"><B>CreateProperty</B></A>.</P>
+
+<P class=T>Quando si crea e si accoda la proprietà <B>ReplicationConflictFunction</B>, è necessario inoltre fornire un valore <B>True</B> (-1) per l'argomento <I>DDL</I> facoltativo del metodo <B>CreateProperty</B>. Tale argomento impedisce di modificare o eliminare il nuovo oggetto <B>Property</B> a meno che non si disponga delle autorizzazioni <B>dbSecWriteDef</B>. Nell'eventualità non venga fornito un valore <B>True</B> per questo argomento, il codice di risoluzione dei conflitti personalizzato non verrà richiamato.</P>
+
+<P class=T>Per restituire nuovamente il controllo al Risolutore dei conflitti incorporato, rimuovere tale proprietà dall'insieme <B>Properties</B>.</P>
+
+<P class=T>È possibile inoltre aggiungere o eliminare questa proprietà sulla scheda <B>Personalizza</B> della finestra di dialogo <B>Proprietà -</B> <I>NomeDatabase</I>, disponibile scegliendo <B>Proprietà database</B> del menu <B>File</B>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Se lo stesso record di un database replicato è stato modificato in una o più repliche, quando si sincronizza una replica con il set di repliche si verificano dei conflitti. Quando si sceglie di risolvere tali conflitti, Microsoft Access chiama il Risolutore dei conflitti incorporato. Tale procedura guidata mostra ciascun conflitto all'utente, il quale deve determinare manualmente quali record modificati contengono i dati corretti.</P>
+
+<P class=T>Se si preferisce rendere automatica la risoluzione dei conflitti per l'applicazione, è possibile scrivere routine personalizzate e quindi dare loro la precedenza sulla funzionalità incorporata impostando la proprietà <B>ReplicationConflictFunction</B>. È necessario creare una sola funzione che agisca come punto di immissione nel codice di risoluzione dei conflitti, quindi impostare la proprietà <B>ReplicationConflictFunction</B> al nome di tale funzione.</P>
+
+<P class=T>Se si scrive del codice di risoluzione dei conflitti personalizzato, è necessario che questo gestisca sia gli errori della struttura di replica sia gli errori dei dati di replica. Per un esempio, aprire il database Wzcnf80.mda della procedura guidata nella cartella Office ed esaminare il codice di origine.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

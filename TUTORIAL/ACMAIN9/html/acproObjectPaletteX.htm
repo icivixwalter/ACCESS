@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproObjectPaletteX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprofrd2.rtf'
+Tnum='191749'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ObjectPalette e PaintPalette</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproobjectpalettex"></A>Esempio di proprietà ObjectPalette e PaintPalette</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si imposta la proprietà <B>PaintPalette</B> della maschera PaesaggioMarino alla proprietà <B>ObjectPalette</B> del controllo Oceano della maschera VisualizzaImmagini. Il controllo Oceano può essere una cornice oggetto associato, un pulsante di comando, un grafico, un interruttore o una cornice oggetto non associato.</P>
+
+<PRE class=CT><CODE>Forms!PaesaggioMarino.<B>PaintPalette</B> = _
+&nbsp;&nbsp;&nbsp;&nbsp; Forms!VisualizzaImmagini!Oceano.<B>ObjectPalette</B></CODE></PRE>
+
+
+
+<P class=T>Le proprietà <B>ObjectPalette</B> e <B>PaintPalette</B> risultano utili in fase di programmazione per modificare la tavolozza di colori utilizzata da una maschera aperta al momento dell'esecuzione. Tali proprietà vengono in genere utilizzate per impostare la proprietà <B>PaintPalette</B> della maschera corrente alla tavolozza relativa ad un elemento grafico visualizzato in un controllo che ha lo stato attivo.</P>
+
+<P class=T>È possibile, ad esempio, disporre di una maschera contenente l'immagine di un oceano con molte tonalità di blu e quella di un tramonto con molte tonalità di rosso. Poiché Windows consente solo una tavolozza attiva alla volta, un'immagine viene visualizzata meglio dell'altra. Nell'esempio riportato di seguito si utilizza un evento Invio del controllo per impostare la proprietà <B>PaintPalette</B> della maschera alla proprietà <B>ObjectPalette</B> del controllo, in modo da ottimizzare l'aspetto dell'elemento grafico che ha lo stato attivo.</P>
+
+<PRE class=CT><CODE>Sub ImmagineOceano_Enter()
+&nbsp;&nbsp;&nbsp; Me.<B>PaintPalette</B> = Me!ImmagineOceano.<B>ObjectPalette</B>
+End Sub
+
+Sub ImmagineTramonto_Enter()
+&nbsp;&nbsp;&nbsp; Me.<B>PaintPalette</B> = Me!ImmagineTramonto.<B>ObjectPalette</B>
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtGotLostFocusEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187277'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Attivato, Disattivato - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtgotlostfocusepx"></A>Eventi Attivato, Disattivato - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene visualizzato un messaggio in un'etichetta quando lo stato attivo si sposta su un pulsante di opzione.</P>
+
+<P class=T>Per provare l'esempio, aggiungere le routine evento riportate di seguito a una maschera chiamata Contatti contenente un pulsante di opzione chiamato OpzioneSì e un'etichetta chiamata EtichettaSì.</P>
+
+<PRE class=CT><CODE>Private Sub OpzioneSì_<B>GotFocus</B>()
+&nbsp;&nbsp;&nbsp; Me!EtichettaSì.Caption = "Il pulsante di opzione 'Sì' ha lo stato attivo."
+End Sub
+
+Private Sub OpzioneSì_<B>LostFocus</B>()
+&nbsp;&nbsp;&nbsp; Me!EtichettaSì.Caption = ""&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Cancella etichetta.
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCalculateTotalGroupRecordsFormS'
+Feature='Forms: Expressions'
+Handoff='2'
+SourceFile='cfrmexp.rtf'
+Tnum='187909'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Calcolare il totale in una sottomaschera e visualizzarlo in una maschera</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dvhowUsingExpressionsInQuery">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowcalculatetotalgrouprecordsforms"></A>Calcolare il totale in una sottomaschera e visualizzarlo in una maschera</H1>
+
+<P class=T>Per calcolare il totale di un gruppo di record, è possibile utilizzare una maschera con una sottomaschera. La maschera principale e la sottomaschera sono basate su tabelle caratterizzate da una <A HREF="javascript:HelpPopup('actip9.hlp','defOnetoMany');" class="pop">relazione uno-a-molti</A>. La maschera principale mostra i record del lato "uno" della relazione e la sottomaschera mostra i record del lato "molti" della relazione. La seguente illustrazione mostra ad esempio una maschera Ordini che include una sottomaschera.</P>
+
+<P class=ART><IMG SRC="images/cfrmexp2.bmp" ALT="La maschera principale e la sottomaschera in visualizzazione Maschera" BORDER=0></P>
+
+<P class=T>Per calcolare il subtotale dell'ordine, aggiungere una casella di testo al piè di pagina maschera della sottomaschera e specificare un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> nella casella della proprietà <B>Origine controllo</B> relativa alla casella di testo. L'espressione utilizza la funzione <B>Somma</B>. Con la seguente espressione viene ad esempio calcolato l'importo totale di tutti i prodotti della maschera Ordini:</P>
+
+<P class=T>=Somma([Quantità]*[PrezzoUnitario]) </P>
+
+<P class=ART><IMG SRC="images/cfrmexp3.bmp" ALT="Nella visualizzazione Struttura della maschera il controllo calcolato è nel piè di pagina della maschera" BORDER=0></P>
+
+<P class=T>Per visualizzare nella maschera principale il subtotale dell'ordine, creare una casella di testo che utilizza un'espressione per fare riferimento al controllo della sottomaschera contenente il valore calcolato. È possibile ad esempio specificare la seguente espressione nella casella della proprietà <B>Origine controllo</B> relativa alla casella di testo della maschera principale:</P>
+
+<P class=ART><IMG SRC="images/cfrmexp4.bmp" ALT="Espressione in una maschera principale che fa riferimento a un controllo calcolato di una sottomaschera" BORDER=0></P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Se si desidera utilizzare il valore di un controllo calcolato quando si esegue il calcolo di un totale, non è possibile utilizzare il nome del controllo nella funzione <B>Somma</B>. Se ad esempio si utilizza un controllo per calcolare la quantità per il prezzo unitario, è necessario specificare nell'espressione la sintassi completa =Somma([Quantità]*[PrezzoUnitario]). Pertanto, quando si utilizza un'espressione che richiede una funzione di aggregazione del tipo <B>Somma</B>, è preferibile definire l'espressione nella <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> sottostante o nell'istruzione SQL della maschera. È possibile pertanto utilizzare il nome del campo calcolato nella funzione <B>Somma</B>. È possibile, ad esempio, definire un campo calcolato, quale PrezzoComplessivo: [Quantità]*[PrezzoUnitario] in una query sottostante, quindi utilizzare il nome del campo nell'espressione che calcola la somma: =Somma([PrezzoComplessivo]). Per informazioni sulla creazione di un campo calcolato in una query di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access (mdb)</A>, fare clic su <A HREF="acdecCalculateSumAverageOtherTotalInQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>. Per ulteriori informazioni sulla creazione di un campo calcolato in una query di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access (adp)</A>, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>La maschera Ordini del database di esempio Northwind contiene un esempio di sottomaschera che esegue il calcolo di un subtotale visualizzato nella maschera principale. Per visualizzare questa maschera, aprire il database Northwind nella sottocartella Esempi della cartella Office, quindi aprire la maschera Ordini in visualizzazione Struttura. Per informazioni sull'apertura di Northwind, fare clic su <A HREF="acconNorthwind.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCalculateTotalGroupRecordsFormSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

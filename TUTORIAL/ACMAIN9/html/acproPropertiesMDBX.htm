@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPropertiesMDBX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acprov9a.doc'
+Tnum='254928'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Properties (insieme Properties)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpropropertiesmdbx"></A>Esempio di proprietà Properties (insieme Properties)</B></P>
+
+
+
+<P class=T>L'esempio che segue descrive l'insieme <B>Properties</B> della maschera aperta Ordini e stampa il nome di ogni proprietà e il relativo valore.</P>
+
+<PRE class=CT><CODE>Sub CurrentPropSettings()
+&nbsp;&nbsp;&nbsp; Dim frm As Object, prp As Integer
+&nbsp;&nbsp;&nbsp; Set frm = Application.Forms("Ordini")
+&nbsp;&nbsp;&nbsp; ' Conta l'insieme Properties.
+&nbsp;&nbsp;&nbsp; For prp = 0 To frm.<B>Properties</B>.Count - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stampa il nome della proprietà e il relativo valore.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print frm.Properties(prp).Name &amp; " = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; frm.Properties(prp).Value
+&nbsp;&nbsp;&nbsp; Next prp
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

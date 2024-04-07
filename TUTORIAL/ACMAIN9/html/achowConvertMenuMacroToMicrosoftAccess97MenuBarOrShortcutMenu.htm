@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowConvertMenuMacroToMicrosoftAccess97MenuBarOrShortcutMenu'
+Feature='Command Bars'
+Handoff='1'
+SourceFile='CCMDBRAW.RTF'
+Tnum='188989'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+ CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convertire una macro per la creazione di menu della versione precedente in una barra dei menu o in un menu di scelta rapida</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowconvertmenumacrotomicrosoftaccess97menubarorshortcutmenu"></A>Convertire una macro per la creazione di menu della versione precedente in una barra dei menu o in un menu di scelta rapida</H1>
+
+<P class=T>Questa routine consente di creare il nuovo stile per le barre dei menu o menu di scelta rapida da macro create in una versione precedente di Microsoft Access. 
+
+<OL>
+	<LI class=LPROC>Nella finestra del database scegliere <B>Macro</B> <A HREF="javascript:HelpPopup('actip9.hlp','acrgnDatabaseMacroQ');" class="pop"><IMG SRC="images/dbcmac.bmp" BORDER=0></A> dall'elenco <B>Oggetti</B>, quindi scegliere il nome della macro per cui si desidera creare la barra dei menu o il menu di scelta rapida.
+<P class=LT1>Per creare il nuovo stile per le barre dei menu o menu di scelta rapida da macro utilizzate in precedenza per i menu personalizzati, selezionare soltanto la macro per la creazione della barra dei menu principale. Non è necessario selezionare il gruppo di macro per ciascun menu della barra.
+</LI>
+
+	<LI class=LPROC>Scegliere <B>Macro</B> dal menu <B>Strumenti</B>, quindi scegliere <B>Crea menu da macro</B> o <B>Crea menu di scelta rapida da macro</B>.</LI>
+</OL>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>È ora possibile personalizzare la barra dei menu o il menu di scelta rapida utilizzando la finestra di dialogo <B>Personalizza</B>, disponibile scegliendo <B>Barre degli strumenti</B> dal menu <B>Visualizza</B> e quindi <B>Personalizza</B>.<BR><BR></LI>
+
+	<LI class=NLB>Dopo aver creato la nuova barra dei menu o il nuovo menu di scelta rapida, la macro originale non verrà eliminata (o più macro, se si sta utilizzando una macro per la creazione di barre dei menu ed il gruppo di macro menu associato). La nuova barra dei menu dipende ancora dalla macro o dalle macro originali, a meno che non si tratti di macro che contengono solo azioni AggiungiMenu o EseguiComando (in precedenza denominate EseguiVoceMenu).</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowConvertMenuMacroToMicrosoftAccess97MenuBarOrShortcutMenuW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

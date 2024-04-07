@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctSwitchX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acob2fcx_1a.rtf'
+Tnum='234557'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Switch</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctswitchx"></A>Esempio di funzione Switch</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la funzione <B>Switch</B> per determinare la lingua parlata di una determinata città in base ai valori dei campi PaeseDestinatario e CittàDestinatario di una tabella Ordini. È possibile immettere l'espressione riportata di seguito in un controllo calcolato di una maschera o di un report. Tale espressione viene riportata su più righe, perché risulti più chiara, ma è anche possibile immetterla su un'unica riga.</P>
+
+<PRE class=CT><CODE>= <B>Switch(</B>[CittàDestinatario] = "Madrid", "Spagnolo", _
+&nbsp;&nbsp;&nbsp; [CittàDestinatario] = "Berlino", "Tedesco", _
+&nbsp;&nbsp;&nbsp; [CittàDestinatario] = "Torino", "Italiano", _
+&nbsp;&nbsp;&nbsp; [PaeseDestinatario] = "Francia", "Francese", _
+&nbsp;&nbsp;&nbsp; True, "Inglese"<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Se la città è Madrid, la funzione <B>Switch</B> restituisce "Spagnolo"; se è Berlino, restituisce "Tedesco", e così via. Se la città non è compresa nell'elenco, ma il Paese è la Francia, la funzione restituisce "Francese". Se il nome della città non è contenuto nell'elenco, la funzione <B>Switch</B> restituisce "Inglese".</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDDEFunc'
+Feature='acfct'
+Handoff='1'
+SourceFile='ddeexpr.rtf'
+Tnum='186352'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzione DDE</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaconUnderstandingOLEAutomation">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acfctddefunc"></A>Funzione DDE</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDDEFuncC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDDEFuncX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>DDE</B> per iniziare una conversazione <A HREF="javascript:HelpPopup('actip9.hlp','defDDE');" class="pop">DDE</A> (Dynamic Data Exchange) con un'altra applicazione, richiedere a tale applicazione un'informazione e visualizzarla nel controllo di una maschera o di un report.</P>
+
+<P class=T>È possibile ad esempio utilizzare la funzione <B>DDE</B> nella proprietà <A HREF="acproControlSource.htm"><B>Origine controllo</B></A> di una casella di testo per visualizzare i dati di una determinata cella di un foglio di calcolo di Microsoft Excel.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DDE(</B><I>applicazione</I>, <I>argomento</I>, <I>elemento</I><B>)</B></P>
+
+
+
+<P class=T>La funzione <B>DDE</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=21%>Argomento</TH>
+<TH width=79%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>applicazione</I></TD>
+<TD class=TT width=79%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che identifica un'applicazione che può effettuare una conversazione DDE. <I>applicazione</I> è in genere il nome di un file EXE di un'applicazione per Microsoft Windows privo dell'estensione, ad esempio Microsoft Excel. Per iniziare ad esempio una conversazione DDE con Microsoft Excel, digitare <B>"Excel"</B> per l'argomento <I>applicazione</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>argomento</I></TD>
+<TD class=TT width=79%>Espressione stringa corrispondente al nome di un <A HREF="javascript:HelpPopup('actip9.hlp','defTopic');" class="pop">argomento</A> riconosciuto da <I>applicazione</I>. <I>argomento</I> è in genere un documento o un file di dati. Consultare la documentazione relativa all'altra applicazione per un elenco degli argomenti disponibili.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>elemento</I></TD>
+<TD class=TT width=79%>Espressione stringa corrispondente al nome di un <A HREF="javascript:HelpPopup('actip9.hlp','defDataItem');" class="pop">dato</A> riconosciuto da <I>applicazione</I>. Consultare la documentazione relativa all'altra applicazione per un elenco degli elementi disponibili.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>La funzione <B>DDE</B> tenta di iniziare una conversazione DDE con l'<I>applicazione</I> e l'<I>argomento</I> specificati e richiede i dati contenuti in <I>elemento</I>. Se il tentativo riesce, la funzione <B>DDE</B> restituisce una stringa contenente le informazioni richieste.</P>
+
+<P class=T>Se sono stati richiesti dati di Microsoft Excel, è possibile che <I>elemento</I> sia costituito da un identificatore di riga e colonna, come <CODE>"R1C1"</CODE> o dal nome di un intervallo di celle. Nell'esempio riportato di seguito, la funzione <B>DDE</B> richiede informazioni dalla cella della riga 1, colonna 1 in un foglio di lavoro di Microsoft Excel. È possibile immettere la seguente espressione per un controllo Casella di testo nella casella della proprietà <B>Origine controllo</B> nella finestra delle proprietà del controllo:</P>
+
+<PRE class=CT><CODE>=DDE("Excel", "Foglio1", "R1C1")</CODE></PRE>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>DDE</B> solo nella proprietà <B>Origine controllo</B> di una casella di testo, di un gruppo di opzioni, di una casella di controllo o di una casella combinata. Non è possibile richiamare la funzione <B>DDE</B> da Visual Basic.</P>
+
+<P class=T>Quando si utilizza la funzione <B>DDE</B>, il controllo diventa di sola lettura in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> e in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A>. Se ad esempio si utilizza la funzione <B>DDE</B> in una casella di testo, non è possibile modificare il testo contenuto nella casella; è necessario modificarlo con l'altra applicazione. Poiché la proprietà <B>Origine controllo</B> è di sola lettura in visualizzazione Maschera e nell'Anteprima di stampa, è necessario effettuare le modifiche al controllo in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura</A>.</P>
+
+<P class=T>Il numero massimo di conversazioni DDE che possono essere aperte contemporaneamente è determinato da Microsoft Windows, la memoria e le risorse del computer. Se non è possibile iniziare la conversazione perché <I>applicazione</I> non è in esecuzione o non riconosce <I>argomento</I> o se è già stato raggiunto il numero massimo di conversazioni consentite, la funzione <B>DDE</B> restituisce il valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'altra applicazione potrebbe essere configurata in modo da ignorare la richiesta di conversazione DDE. In tal caso, la funzione <B>DDE</B> restituisce il valore <B>Null</B>. È possibile analogamente impostare Microsoft Access in modo da ignorare le richieste di altre applicazioni. Scegliere <B>Opzioni</B> dal menu <B>Strumenti</B> e sulla scheda <B>Avanzate</B> della finestra di dialogo <B>Opzioni</B>, nel riquadro <B>Operazioni DDE</B>, selezionare <B>Ignora richieste DDE</B>.</P>
+
+
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Se si rende necessario manipolare gli oggetti di un'altra applicazione da Microsoft Access, è possibile utilizzare l'<A HREF="JavaScript:hhobj_3.Click()">Automazione</A>.</P>
+
+
+
+<P class=T>Nella tabella riportata di seguito viene illustrato il comportamento della funzione <B>DDE</B> quando viene utilizzata con ciascun <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=21%>Controllo</TH>
+<TH width=79%>Osservazioni</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Casella di testo</TD>
+<TD class=TT width=79%>L'argomento <I>elemento</I> può fare riferimento a testo o a numeri. Se <I>elemento</I> fa riferimento a più informazioni, ad esempio a un intervallo denominato di un foglio di lavoro di Microsoft Excel contenente più celle, la funzione <B>DDE</B> restituisce la prima voce. È possibile utilizzare questa funzione con una casella di testo per visualizzare i dati contenuti in una cella del foglio di lavoro.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Casella combinata</TD>
+<TD class=TT width=79%>La funzione <B>DDE</B> immette nella casella combinata le informazioni a cui fa riferimento <I>elemento</I>. Non è possibile immettere dati nella sezione relativa al testo della casella. È possibile utilizzare la funzione <B>DDE</B> con una casella combinata per visualizzare un elenco di regioni o Paesi gestito in un foglio di lavoro di Microsoft Excel.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Gruppo di opzioni</TD>
+<TD class=TT width=79%>La proprietà <A HREF="acproOptionValue.htm"><B>Valore opzione</B></A> di ciascun pulsante di opzione in un gruppo di opzioni è impostata a un numero. Il valore del primo pulsante corrisponde in genere a 1, il secondo a 2, e così via. Il numero restituito dalla funzione <B>DDE</B> determina quale pulsante di opzione viene selezionato.
+<P class=TT>Se ad esempio la funzione <B>DDE</B> restituisce 2, viene selezionato il secondo pulsante. Se viene restituito un valore che non corrisponde ad alcuna delle impostazioni della proprietà <B>Valore opzione</B>, non viene selezionato alcun pulsante. Se <I>elemento</I> fa riferimento a più informazioni, ad esempio un intervallo denominato di un foglio di lavoro di Microsoft Excel contenente più celle, la funzione <B>DDE</B> restituisce la prima voce.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Casella di controllo</TD>
+<TD class=TT width=79%>Se la funzione <B>DDE</B> restituisce zero, la casella di controllo viene deselezionata, se invece restituisce un numero diverso da zero, ad esempio 1 o -1, la casella viene selezionata. Se <I>elemento</I> fa riferimento a testo o a più informazioni, ad esempio un intervallo denominato di un foglio di lavoro di Microsoft Excel contenente più celle, la casella di controllo non è disponibile.</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

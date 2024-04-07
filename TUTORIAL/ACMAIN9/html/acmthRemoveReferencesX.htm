@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthRemoveReferencesX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8_1a.rtf'
+Tnum='186838'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Remove (insieme References)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthremovereferencesx"></A>Esempio di metodo Remove (insieme References)</B></P>
+
+
+
+<P class=T>La prima delle due funzioni riportate di seguito aggiunge un riferimento al Controllo calendario nell'insieme <B>References</B>. La seconda funzione rimuove il riferimento al Controllo calendario.</P>
+
+<PRE class=CT><CODE>Function AggiungiRiferimento() As Boolean
+&nbsp;&nbsp;&nbsp; Dim ref As Reference, strFile As String
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_AggiungiRiferimento
+&nbsp;&nbsp;&nbsp; strFile = "C:\Windows\System\Mscal.ocx"
+&nbsp;&nbsp;&nbsp; ' Crea un riferimento al Controllo calendario.
+&nbsp;&nbsp;&nbsp; Set ref = References.AddFromFile(strFile)
+&nbsp;&nbsp;&nbsp; AggiungiRiferimento = True
+
+Exit_AggiungiRiferimento:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_AggiungiRiferimento:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; AggiungiRiferimento = False
+&nbsp;&nbsp;&nbsp; Resume Exit_AggiungiRiferimento
+End Function
+
+Function RimuoviRiferimento() As Boolean
+&nbsp;&nbsp;&nbsp; Dim ref As Reference
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_RimuoviRiferimento
+&nbsp;&nbsp;&nbsp; Set ref = References!MSACAL
+&nbsp;&nbsp;&nbsp; ' Rimuove il riferimento del Controllo calendario.
+&nbsp;&nbsp;&nbsp; References.<B>Remove</B> ref
+&nbsp;&nbsp;&nbsp; RimuoviRiferimento = True
+
+Exit_RimuoviRiferimento:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_RimuoviRiferimento:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; RimuoviRiferimento = False
+&nbsp;&nbsp;&nbsp; Resume Exit_RimuoviRiferimento
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

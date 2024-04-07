@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconExamplesMacroConditionsS'
+Feature='Macros: Basics'
+Handoff='1'
+SourceFile='cmacbas.rtf'
+Tnum='188429'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di condizioni di macro</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconexamplesmacroconditionss"></A>Esempi di condizioni di macro</H1>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=55%>Utilizzare l'espressione</TH>
+<TH width=45%>Per eseguire l'azione se</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>[Città]="Parigi"</TD>
+<TD class=TT width=45%>Parigi è il valore Città nel campo della maschera da cui è stata eseguita la macro</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>DCount("[IDOrdine]", "Ordini")&gt;35</TD>
+<TD class=TT width=45%>Il numero totale di voci nel campo ID ordine della tabella Ordini è maggiore di 35</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>DCount("*", "Dettagli ordini", "[IDOrdine]=Forms![Ordini]![IDOrdine]")&gt;3</TD>
+<TD class=TT width=45%>Il numero totale di voci nella tabella Dettagli ordini il cui campo ID ordine corrisponde al campo ID ordine della maschera Ordini è maggiore di tre</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>[DataSpedizione] Between #2-Feb-1995# And #2-Mar-1995#</TD>
+<TD class=TT width=45%>Il valore del campo Data spedizione della maschera da cui viene eseguita la macro non è precedente al 2-Feb-1995 né successivo al 2-Mar-1995</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>Forms![Prodotti]![Scorte]&lt;5</TD>
+<TD class=TT width=45%>Il valore del campo Scorte della maschera Prodotti è minore di cinque</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>IsNull([Nome])</TD>
+<TD class=TT width=45%>Il valore del campo Nome nella maschera da cui viene eseguita la macro è <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>, vale a dire che non contiene alcun valore. Questa espressione è equivalente a [Nome] Is <B>Null</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>[Paese]="UK" And Forms![TotaliVendite]![Numero ordini]&gt;100</TD>
+<TD class=TT width=45%>Il valore del campo Paese nella maschera da cui viene eseguita la macro è UK e il valore del campo Numero ordini della maschera Totali vendite è maggiore di 100</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>[Paese] In ("Francia"; "Italia"; "Spagna") And Len([CAP])&lt;&gt;5</TD>
+<TD class=TT width=45%>Il valore del campo Paese della maschera da cui viene eseguita la macro è Francia, Italia o Spagna e il codice postale non è costituito da cinque caratteri</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=55%>MsgBox("Confermare le modifiche?",1)=1</TD>
+<TD class=TT width=45%>Si sceglie <B>OK</B> in una finestra di dialogo che visualizza la funzione <B>MsgBox</B>. Scegliendo <B>Annulla</B>, l'azione verrà ignorata.</TD>
+</TR>
+</TABLE><BR>
+
+<P class=TPT><B>Suggerimento</B>&nbsp;&nbsp; Per ignorare temporaneamente un'azione, immettere False come condizione. Può essere utile ignorare temporaneamente un'azione quando si cerca di trovare problemi in una macro.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconExamplesMacroConditionsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

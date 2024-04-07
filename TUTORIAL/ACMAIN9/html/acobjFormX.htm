@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjFormX'
+Feature='acobj'
+Handoff='1'
+SourceFile='aobjv8.rtf'
+Tnum='186473'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Form e di insieme Forms</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjformx"></A>Esempio di oggetto Form e di insieme Forms</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come creare una nuova maschera e impostare determinate proprietà.</P>
+
+<PRE class=CT><CODE>Sub NuovaMaschera()
+&nbsp;&nbsp;&nbsp; Dim frm As <B>Form</B>
+
+&nbsp;&nbsp;&nbsp; ' Crea nuova maschera.
+&nbsp;&nbsp;&nbsp; Set frm = CreateForm
+&nbsp;&nbsp;&nbsp; ' Imposta proprietà della maschera.
+&nbsp;&nbsp;&nbsp; With frm
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .RecordSource = "Prodotti"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Caption = "Maschera Prodotti"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .ScrollBars = 0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .NavigationButtons = True
+&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; ' Ripristina maschera.
+&nbsp;&nbsp;&nbsp; DoCmd.Restore
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nel seguente esempio viene indicato<B> </B>come scorrere tutto l'insieme <B>Forms</B> e stampare il nome di ciascuna maschera dell'insieme. Quindi viene enumerato l'insieme <B>Controls</B> di ciascuna maschera e stampato il nome di ciascun controllo della maschera.</P>
+
+<PRE class=CT><CODE>Sub MaschereAperte()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, ctl As Control
+
+&nbsp;&nbsp;&nbsp; ' Enumera insieme Forms.
+&nbsp;&nbsp;&nbsp; For Each frm In Forms
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stampa nome della maschera.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print frm.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Enumera insieme Controls di ciascuna maschera.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For Each ctl In frm.Controls
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stampa nome di ciascun controllo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "&gt;&gt;&gt;"; ctl.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next ctl
+&nbsp;&nbsp;&nbsp; Next frm
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nel seguente esempio viene indicato come utilizzare l'insieme <B>Forms</B> in un'espressione. Si supponga di avere una maschera denominata Ordini con un controllo denominato PaeseDestinatario; è possibile utilizzare la funzione <B>IIf</B> per restituire un valore in base al valore corrente del controllo. Se il valore di PaeseDestinatario è <B>Null</B>, l'espressione restituisce una stringa a lunghezza zero; negli altri casi, viene restituito il contenuto del campo. Inserire la seguente espressione nella proprietà <B>Origine controllo</B> di una casella di testo di una maschera:</P>
+
+<PRE class=CT><CODE>= IIf(IsNull(Forms!Orders! PaeseDestinatario), "", _
+&nbsp;&nbsp;&nbsp;&nbsp; Forms!Ordini!PaeseDestinatario)</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

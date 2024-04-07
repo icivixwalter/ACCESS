@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCircleX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv2_1a.rtf'
+Tnum='186539'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Circle</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcirclex"></A>Esempio di metodo Circle</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare il metodo <B>Circle</B> per disegnare un cerchio, creare una sezione all'interno di esso e colorarlo di rosso.</P>
+
+<P class=T>Per provare tale esempio in Microsoft Access, creare un nuovo report. Impostare a [Routine evento] la proprietà <B>SuStampa</B> della sezione Detail. Immettere il codice riportato di seguito nel modulo di report, passare quindi ad Anteprima di stampa.</P>
+
+<PRE class=CT><CODE>Private Sub Detail_Print(Cancel As Integer, PrintCount As Integer)
+&nbsp;&nbsp;&nbsp; Const conPI = 3.14159265359
+&nbsp;&nbsp;&nbsp; Dim sngHCtr As Single, sngVCtr As Single
+&nbsp;&nbsp;&nbsp; Dim sngRadius As Single
+&nbsp;&nbsp;&nbsp; Dim sngStart As Single, sngEnd As Single
+
+&nbsp;&nbsp;&nbsp; sngHCtr = Me.ScaleWidth / 2&nbsp;&nbsp;&nbsp; ' Centro orizzontale.
+&nbsp;&nbsp;&nbsp; sngVCtr = Me.ScaleHeight / 2&nbsp;&nbsp;&nbsp; ' Centro verticale.
+&nbsp;&nbsp;&nbsp; sngRadius = Me.ScaleHeight / 3&nbsp;&nbsp;&nbsp; ' Raggio del cerchio.
+' Disegna il cerchio.
+&nbsp;&nbsp;&nbsp; Me.<B>Circle(</B>sngCtrO, sngCtrV<B>)</B>, sngRadius
+&nbsp;&nbsp;&nbsp; sngStart = -0.00000001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inizio della sezione. 
+&nbsp;&nbsp;&nbsp; sngEnd = -2 * conPI / 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Fine della sezione.
+&nbsp;&nbsp;&nbsp; Me.FillColor = RGB(255,0,0)&nbsp;&nbsp;&nbsp; ' Colora la sezione di rosso.
+&nbsp;&nbsp;&nbsp; Me.FillStyle = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Riempie la sezione. 
+&nbsp;&nbsp;&nbsp; ' Disegna la sezione dentro il cerchio.
+&nbsp;&nbsp;&nbsp; Me.<B>Circle(</B>sngHCtr, sngVCtr<B>)</B>, sngRadius, , sngStart, sngEnd
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

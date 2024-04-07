@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproTopValuesX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproqry1.doc'
+Tnum='188194'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà TopValues</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprotopvaluesx"></A>Esempio di proprietà TopValues</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene assegnata una stringa SQL che restituisce i primi dieci prodotti più costosi alla proprietà <B>RecordSource</B> per una maschera che visualizzerà i dieci prodotti più costosi.</P>
+
+<PRE class=CT><CODE>Dim strOttieniSQL As String
+strOttieniSQL = "SELECT TOP 10 Prodotti.[NomeProdotto] " _ &amp; "AS DieciProdottiPiùCostosi, Prodotti.PrezzoUnitario FROM Prodotti " _ &amp; "ORDER BY Prodotti.[PrezzoUnitario] DESC;"
+Me.RecordSource = strOttieniSQL </CODE></PRE>
+
+
+
+
+
+</BODY>
+</HTML>

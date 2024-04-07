@@ -1,0 +1,381 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowDAOToADOX'
+Feature='achow'
+Handoff='3'
+SourceFile='acaDAO_ADO9.doc'
+Tnum='267116'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Conversione di elementi DDL DAO in ADOX</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="achowdaotoadox"></A>Conversione di elementi DDL DAO in ADOX</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowDAOToADOX_C">
+</OBJECT></P>
+
+
+
+<P class=T>Microsoft Access comprende librerie aggiuntive da utilizzare per convertire le funzioni DDL (Data Definition Language) DAO nelle funzioni DDL degli oggetti ActiveX Data.</P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Come impostazione predefinita alle funzioni DDL degli oggetti ADO non è assegnato un riferimento in Microsoft Access 2000. È necessario prima creare un riferimento a MSADOX.DLL scegliendo <B>Riferimenti</B> dal menu <B>Strumenti</B>, quindi selezionando <B>Microsoft ADO Ext. 2.1 for DDL and Security</B>.</P>
+
+<P class=RL><B>Conversione oggetti da DAO ad ADO</B></P>
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=65%>DAO</TH>
+<TH width=35%>ADO(ADOX)</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=65%><B>DBEngine</B></TD>
+<TD class=TT width=35%><B>Nessuno</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=65%><B>Workspace</B></TD>
+<TD class=TT width=35%><B>Nessuno</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=65%><B>Database</B></TD>
+<TD class=TT width=35%><B>Catalog</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=65%><B>QueryDef</B>(Selezione)</TD>
+<TD class=TT width=35%><B>View</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=65%><B>QueryDef</B>(Azione/Parametrizzata)</TD>
+<TD class=TT width=35%><B>Procedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=65%><B>TableDef</B></TD>
+<TD class=TT width=35%><B>Table</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=65%><B>Parameter</B></TD>
+<TD class=TT width=35%><B>Parameter</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=65%><B>Field</B></TD>
+<TD class=TT width=35%><B>Column</B></TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Conversione costanti di protezione da DAO ad ADO</B></P>
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=22%>DAO</TH>
+<TH width=39%>ADO(ADOX)</TH>
+<TH width=39%>Nota</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecNoAccess</B></TD>
+<TD class=TT width=39%><B>adRightNone</B></TD>
+<TD class=TT width=39%>Nessun accesso al documento</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecFullAccess</B></TD>
+<TD class=TT width=39%><B>adRightFull</B></TD>
+<TD class=TT width=39%>Pieno accesso agli oggetti</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecDelete</B></TD>
+<TD class=TT width=39%><B>adRightDelete</B></TD>
+<TD class=TT width=39%>Impossibile eliminare oggetti</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecReadSec</B></TD>
+<TD class=TT width=39%><B>adRightReadDesign</B></TD>
+<TD class=TT width=39%>Possibile leggere informazioni relative alla protezione</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecWriteSec</B></TD>
+<TD class=TT width=39%><B>adRightWriteDesign</B></TD>
+<TD class=TT width=39%>Possibile cambiare accesso</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecWriteOwner</B></TD>
+<TD class=TT width=39%><B>adRightWriteOwner</B></TD>
+<TD class=TT width=39%>Possibile cambiare proprietario</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecCreate</B></TD>
+<TD class=TT width=39%><B>adRightCreate or adRightWithGrant</B></TD>
+<TD class=TT width=39%>Possibile creare nuovi documenti</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecReadDef</B></TD>
+<TD class=TT width=39%><B>adRightRead or adRightReadDesign</B></TD>
+<TD class=TT width=39%>Possibile leggere la definizione di una tabella o query</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecWriteDef</B></TD>
+<TD class=TT width=39%><B>adRightUpdate or adRightWriteDesign</B></TD>
+<TD class=TT width=39%>Possibile modificare la definizione di una tabella o query</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecRetrieveData</B></TD>
+<TD class=TT width=39%><B>adRightRead</B></TD>
+<TD class=TT width=39%>Possibile leggere i dati memorizzati in una tabella o query. Viene accordata implicitamente l'autorizzazione di lettura alla definizione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecInsertData</B></TD>
+<TD class=TT width=39%><B>adRightInsert</B></TD>
+<TD class=TT width=39%>Possibile inserire nuove righe in una tabella o query</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecReplaceData</B></TD>
+<TD class=TT width=39%><B>adRightUpdate</B></TD>
+<TD class=TT width=39%>Possibile modificare i dati della tabella o query</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>dbSecDeleteData</B></TD>
+<TD class=TT width=39%><B>adRightDelete or adRightWithGrant</B></TD>
+<TD class=TT width=39%>Possibile eliminare righe da una tabella o query</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=27%>Tipi di dati campo Jet</TH>
+<TH width=28%>Tipi di dati DAO </TH>
+<TH width=45%>Tipi di dati ADO </TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Sì/No</TD>
+<TD class=TT width=28%><B>dbBoolean</B></TD>
+<TD class=TT width=45%><B>adBoolean</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Numerico (<B>Dimensione campo</B> = Byte)</TD>
+<TD class=TT width=28%><B>dbByte</B></TD>
+<TD class=TT width=45%><B>adUnsignedTinyInt</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Contatore<BR> (<B>Dimensione campo</B> = Intero lungo)</TD>
+<TD class=TT width=28%><B>dbLong</B></TD>
+<TD class=TT width=45%><B>adInteger</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Valuta</TD>
+<TD class=TT width=28%><B>dbCurrency</B></TD>
+<TD class=TT width=45%><B>adCurrency</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Data/ora</TD>
+<TD class=TT width=28%><B>dbDate</B></TD>
+<TD class=TT width=45%><B>adDate</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Numerico<BR> (<B>Dimensione campo</B> = Doppio)</TD>
+<TD class=TT width=28%><B>dbDouble</B></TD>
+<TD class=TT width=45%><B>adDouble</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Numerico o Contatore<BR> (<B>Dimensione campo</B> = ID replica)</TD>
+<TD class=TT width=28%><B>dbGUID</B></TD>
+<TD class=TT width=45%><B>adGUID</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Numerico<BR> (<B>Dimensione campo</B> = Intero lungo)</TD>
+<TD class=TT width=28%><B>dbLong</B></TD>
+<TD class=TT width=45%><B>adInteger</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Oggetto OLE</TD>
+<TD class=TT width=28%><B>dbLongBinary</B></TD>
+<TD class=TT width=45%><B>adLongVarBinary</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Memo</TD>
+<TD class=TT width=28%><B>dbMemo</B></TD>
+<TD class=TT width=45%><B>adLongVarWChar</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Numerico<BR> (<B>Dimensione campo</B> = Singolo)</TD>
+<TD class=TT width=28%><B>dbSingle</B></TD>
+<TD class=TT width=45%><B>adSingle</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Numerico<BR> (<B>Dimensione campo</B> = Intero)</TD>
+<TD class=TT width=28%><B>dbInteger</B></TD>
+<TD class=TT width=45%><B>adSmallInt</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Testo</TD>
+<TD class=TT width=28%><B>dbText</B></TD>
+<TD class=TT width=45%><B>adVarWChar</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Collegamento ipertestuale</TD>
+<TD class=TT width=28%><B>dbMemo</B></TD>
+<TD class=TT width=45%><B>adLongVarWChar</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>Numerico (<B>Dimensione campo</B> = Decimale)</TD>
+<TD class=TT width=28%><B>dbDecimal</B></TD>
+<TD class=TT width=45%><B>adDecimal</B></TD>
+</TR>
+</TABLE><BR>
+
+
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TD width=46%>
+<OL start=4 type=A>
+	<LI class=TLS><B>DAO</B></LI>
+</OL>
+</TD>
+<TD width=54%>
+<OL type=A>
+	<LI class=TLS><B>ADO</B></LI>
+</OL>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=2 width=100%>Creazione di un <B>Database</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=46%> <PRE class=TCT><CODE>Dim wsp As Workspace, dbs As Database</CODE></PRE> <PRE class=TCT><CODE>Set wsp = DBEngine(0)
+Set dbs = wsp.CreaDatabase("Nuovodb.mdb")</CODE></PRE>
+</TD>
+<TD width=54%> <PRE class=TCT><CODE>Dim cat As New ADOX.Catalog</CODE></PRE> <PRE class=TCT><CODE>cat.Crea "Provider = Microsoft.Jet.OLEDB.4.0;" _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "Data Source = Nuovodb.mdb"</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=2 width=100%>Creazione di una <B>Tabella</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=46%> <PRE class=TCT><CODE>Dim dbs As Database </CODE></PRE> <PRE class=TCT><CODE>Dim tdf As TableDef, fld As Field
+
+Set dbs = CurrentDb
+Set tdf = dbs.CreaDEFTabella("NuovaTabella")
+Set fld = tdf.CreaCampo("NomeCampo", dbText, 50)
+tdf.Fields.Append fld
+dbs.TableDefs.Append tdf  </CODE></PRE>
+</TD>
+<TD width=54%> <PRE class=TCT><CODE>Dim cat As New ADOX.Catalog</CODE></PRE> <PRE class=TCT><CODE>Dim tbl As New ADOX.Table
+
+Set cat.ActiveConnection = CurrentProject.Connection
+tbl.Name = "NuovaTabella"
+tbl.Columns.Append "NomeCampo", adVarWChar, 50
+Cat.Tables.Append tbl</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=2 width=100%>Creazione di una <B>Query</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=46%> <PRE class=TCT><CODE>Dim dbs As Database </CODE></PRE> <PRE class=TCT><CODE>Dim qdf As QueryDef
+
+Set dbs = CurrentDb
+Set qdf = dbs.CreaDefQuery("NuovaQuery", _&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; "Select * From Impiegati")
+dbs.QueryDefs.Append qdf  </CODE></PRE>
+</TD>
+<TD width=54%> <PRE class=TCT><CODE>Dim cat As New ADOX.Catalog</CODE></PRE> <PRE class=TCT><CODE>Dim cmd As New ADODB.Command
+
+Set cat.ActiveConnection = CurrentProject.Connection
+cmd.CommandText "Select * From Impiegati"
+Cat.Views.Append "NuovaQuery", cmd</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowDAOToADOXW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

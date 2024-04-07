@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateDAPThatRecalculatesData'
+Feature='Page: Design'
+Handoff='3'
+SourceFile='cdapowcs1.rtf'
+Tnum='270194'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Calcolare il totale o altro valore di un record di una pagina di accesso ai dati utilizzata per l'inserimento dei dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreatedapthatrecalculatesdata"></A>Calcolare il totale o altro valore di un record di una pagina di accesso ai dati utilizzata per l'inserimento dei dati</H1>
+
+<OL>
+	<LI class=LPROC>Aprire la pagina di accesso ai dati in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Se non si trovano già nella pagina, è possibile <A HREF="achowCreateBoundTextBoxS.htm">aggiungere i controlli</A> che conterranno i dati da utilizzare nei calcoli.</LI>
+
+	<LI class=LPROC>Fare clic sullo strumento <B>Foglio di calcolo di Office</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrWebXLGridQ');" class="pop"><img src="images/offspdsh.bmp" alt="Controllo Foglio di calcolo di Office" BORDER=0></A> nella <A HREF="javascript:HelpPopup('actip9.hlp','defToolbox');" class="pop">casella degli strumenti</A> e rilasciare il pulsante del mouse nel punto della pagina di accesso ai dati in cui collocare l'angolo superiore sinistro del controllo foglio di calcolo.<BR><BR></LI>
+
+	<LI class=LPROC>In una cella del foglio di calcolo inserire una formula che utilizzi la funzione HTML <B>Document</B> per fare riferimento ai campi utilizzati nel calcolo nonché la specifica operazione che si desidera eseguire sui valori dei campi espressa con una combinazione di operatori, identificatori e valori.
+<P class=LT1><B>Esempio</B>&nbsp;&nbsp; Per moltiplicare il valore del campo Quantità per il valore del campo Prezzo unitario, digitare:
+
+<P class=LT1><B>=document.Quantità.value*document.PrezzoUnitario.value</B>
+
+<P class=LT1><B>Esempio</B>&nbsp;&nbsp; Per moltiplicare il valore del campo Prezzo unitario per il valore percentuale memorizzato nella cella C1 del foglio di calcolo, digitare:
+
+<P class=LT1><B>=$C$1*document.PrezzoUnitario.value</B>
+</LI>
+</OL>
+
+<P class=T><B>Note</B>
+
+<UL>
+	<LI class=NLB>Per visualizzare il nome di un foglio di calcolo, <A HREF="achowSelectDataAccessPageSectionControlOrOtherElement.htm">selezionarne il controllo</A> e <A HREF="achowSetPropertiesForDataAccessPageSectionOrControl.htm">visualizzare la pagina delle proprietà</A>. Sulla barra del titolo del foglio delle proprietà verrà visualizzato il nome del foglio di calcolo.<BR><BR></LI>
+
+	<LI class=NLB>Fare clic qui per <A HREF="acrefExamplesOfReferringToValuesOnDataAccessPages.htm">ulteriori esempi di formule che fanno riferimento a controlli di una pagina di accesso ai dati</A>.<BR><BR></LI>
+
+	<LI class=NLB>È possibile <A HREF="mk:@MSITStore:msowcfun.chm::/html/wxrefFuncCategories.htm">utilizzare le funzioni del foglio di calcolo<A> che, in Microsoft Access, sono disponibili solo in questo controllo.<BR><BR></LI>
+
+	<LI class=NLB>È probabile che risulti più utile visualizzare il valore calcolato in un'area con aspetto simile agli altri controlli della pagina di accesso ai dati. Per ottenere questo, è possibile <A HREF="achowModifySpreadsheetControlToLookLikeTextBoxControl.htm">modificare l'aspetto del controllo del foglio di calcolo in modo che venga visualizzato come un controllo casella di testo</A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateDAPThatRecalculatesDataW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

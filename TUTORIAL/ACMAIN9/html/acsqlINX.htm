@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlINX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234449'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proposizione IN (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlinx"></A>Esempio di proposizione IN (MDB)</B></P>
+
+
+
+<P class=T>Nella tabella riportata di seguito si indica come utilizzare la proposizione IN per recuperare i dati da un database esterno. In ogni esempio si presuppone che la tabella Clienti sia memorizzata in un database esterno.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; In SQL la proposizione IN differisce dall'operatore <B>In</B>, che viene utilizzato per determinare se il valore di un'espressione corrisponde a uno dei valori di un determinato elenco.</P>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=37%>Database esterno</TH>
+<TH width=63%>Istruzione SQL</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%>Modulo di gestione di database Microsoft Jet.
+<P class=TT>JetData.mdb è il nome del database Jet che contiene la tabella Clienti.</P>
+
+
+</TD>
+<TD class=TT width=63%><CODE>SELECT IDCliente<BR>
+FROM Clienti<BR>
+IN 'C:\Documenti\JetData.mdb'<BR>
+WHERE IDCliente Like 'A*';</CODE></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%>Cartella di lavoro Microsoft Excel (file xls).
+<P class=TT>XLData.xls è una cartella di lavoro Microsoft Excel che contiene un foglio di lavoro chiamato Clienti. IntervalloClienti è un intervallo definito all'interno di tale foglio. Per riconoscere il foglio di lavoro come la tabella, è necessario accodare un segno di dollaro ($) e racchiudere il nome tra parentesi.</P>
+
+
+</TD>
+<TD class=TT width=63%><CODE>SELECT IDCliente, NomeSocietà<BR>
+FROM [Clienti$]<BR>
+IN 'C:\Documenti\XLData.xls' 'EXCEL 5.0;'<BR>
+WHERE IDCliente Like 'A*';</CODE>
+
+
+<P class=TT>–&nbsp;oppure&nbsp;–</P>
+
+
+
+<P class=TT><CODE>SELECT IDCliente, NomeSocietà<BR>
+FROM IntervalloClienti<BR>
+IN 'C:\Documenti\XLData.xls' 'EXCEL 5.0;'<BR>
+WHERE IDCliente Like 'A*';</CODE></P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%>dBASE III o IV.
+<P class=TT>Per recuperare i dati da una tabella dBASE III, sostituire dBASE III a dBASE IV.</P>
+
+
+</TD>
+<TD class=TT width=63%><CODE>SELECT IDCliente<BR>
+FROM Clienti<BR>
+IN C:\DBASE\DATA\SALES dBASE IV;<BR>
+WHERE IDCliente Like A*;</CODE></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%>dBASE III o IV (utilizzando la sintassi DATABASE).
+<P class=TT>Per recuperare i dati da una tabella dBASE III, sostituire dBASE III a dBASE IV.</P>
+
+
+</TD>
+<TD class=TT width=63%><CODE>SELECT IDCliente<BR>
+FROM Clienti<BR>
+IN [dBASE IV;DATABASE=C:\DBASE\DATA\SALES;]<BR>
+WHERE IDCliente Like A*;</CODE></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%>Paradox 3.<I>x</I> o 4.<I>x</I>.
+<P class=TT>Per recuperare i dati da una tabella Paradox versione 3.<I>x</I>, sostituire Paradox 3.<I>x</I> a Paradox 4.<I>x</I>.</P>
+
+
+</TD>
+<TD class=TT width=63%><CODE>SELECT IDCliente<BR>
+FROM Clienti<BR>
+IN C:\PARADOX\DATA\SALES Paradox 4.x;<BR>
+WHERE IDCliente Like A*;</CODE></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=37%>Paradox 3.<I>x</I> o 4.<I>x</I> (utilizzando la sintassi DATABASE).
+<P class=TT>Per recuperare i dati da una tabella Paradox versione 3.<I>x</I>, sostituire Paradox 3.<I>x</I> a Paradox 4.<I>x</I>.</P>
+</TD>
+<TD class=TT width=63%><CODE>SELECT IDCliente<BR>
+FROM Clienti<BR>
+IN [Paradox 4.x;DATABASE=C:\PARADOX\DATA\SALES;]<BR>
+WHERE IDCliente Like A*;</CODE></TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

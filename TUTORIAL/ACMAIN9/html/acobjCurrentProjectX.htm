@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjCurrentProjectX'
+Feature='acobj'
+Handoff='2'
+SourceFile='aobjV9.doc'
+Tnum='258808'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto CurrentProject</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjcurrentprojectx"></A>Esempio di oggetto CurrentProject</B></P>
+
+
+
+<P class=T>Nell'esempio seguente vengono stampate alcune impostazioni delle proprietà correnti dell'oggetto <B>CurrentProject</B>, quindi viene impostata un'opzione per visualizzare gli oggetti nascosti all'interno dell'applicazione:</P>
+
+<PRE class=CT><CODE>Sub InformazioniApplicazione()
+    ' Stampa nome e tipo di oggetto corrente.
+    Debug.Print Application.<B>CurrentProject</B>.FullName
+    Debug.Print Application.<B>CurrentProject</B>.ProjectType
+    ' Imposta opzione Oggetti nascosti in Mostra nella scheda Visualizzazione
+    ' della finestra Opzioni.
+    Application.SetOption "Mostra oggetti nascosti", True
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene illustrato come utilizzare l'oggetto CurrentProject utilizzando l'Automazione da un'altra applicazione Office. Innanzitutto, creare nell'altra applicazione un riferimento a Microsoft Access scegliendo <B>Riferimenti</B> dal menu <B>Strumenti</B> nella finestra del modulo. Selezionare la casella di controllo accanto a <B>Microsoft Access 9.0 Object Library</B>, quindi immettere il seguente codice in un modulo di Visual Basic all'interno dell'applicazione in uso e chiamare la routine GetAccessData.</P>
+
+<P class=T>Nell'esempio, un nome di database e un nome di report vengono passati a una routine che crea una nuova istanza della classe <B>Application</B>, il database viene aperto e viene verificato che il report specificato esista utilizzando l'oggetto <B>CurrentProject</B> e l'insieme <B>AllReports</B>.</P>
+
+<PRE class=CT><CODE>Sub RichiamaDatiAccess()
+' Dichiarare variabile oggetto nella sezione Dichiarazioni di un modulo
+    Dim appAccess As Access.Application
+    Dim strDB As String
+    Dim strReportName As String
+
+    strDB = "C:\Program Files\Microsoft "_
+        &amp; "Office\Office\Esempi\Northwind.mdb"
+    strReportName = InputBox("Immettere il nome del report da verificare", _
+        "Verifica report")
+    VerificaReportAccess strDB, strReportName
+End Sub
+
+Sub VerificaReportAccess(strDB As String, _
+     strReportName As String)
+    ' Restituisce riferimento a oggetto Application
+    ' Di Microsoft Access.
+    Set appAccess = New Access.Application
+    ' Apre database in Microsoft Access.
+    appAccess.OpenCurrentDatabase strDB
+    ' Verifica esistenza del report.
+    On Error Goto ErrorHandler
+    appAccess.<B>CurrentProject</B>.AllReports(strReportName)
+    MsgBox "Il report " &amp; strReportName &amp; _
+        " è stato trovato nel database Northwind."
+    appAccess.CloseCurrentDatabase
+    Set appAccess = Nothing
+Exit Sub
+ErrorHandler:
+    MsgBox "Il report " &amp; strReportName &amp; _
+        " non esiste nel database Northwind."
+    appAccess.CloseCurrentDatabase
+    Set appAccess = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

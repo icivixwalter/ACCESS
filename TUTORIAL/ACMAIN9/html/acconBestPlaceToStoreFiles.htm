@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconBestPlaceToStoreFiles'
+Feature='Databases: File Open (CORE)'
+Handoff='2'
+SourceFile='cofopen_2.doc'
+Tnum='257890'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Percorsi di memorizzazione dei file</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconbestplacetostorefiles"></A>Percorsi di memorizzazione dei file</H1>
+
+<P class=T>La prima volta che si aprono le finestre di dialogo <B>Apri</B> e <B>Salva nuovo database</B> in Microsoft Access, la cartella di lavoro predefinita o attiva è Documenti. Per ulteriori informazioni, vedere relativo a come <A HREF="achowSetLocationDefaultDatabaseDirectoryS.htm">cambiare la cartella predefinita</A>.</P>
+
+<H2>Cartella Documenti</H2>
+
+<P class=T>La cartella Documenti è il percorso ideale per memorizzare i <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A>, i <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetti di Microsoft Access</A>, le <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagine di accesso ai dati</A> e gli altri file con cui si sta lavorando, ad esempio documenti, fogli di lavoro e presentazioni. Per accedere rapidamente ai file della cartella Documenti, scegliere <B>Documenti</B> <IMG SRC="images/mydoc.bmp"  BORDER=0> sulla <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_oftipPlacesBar');" class="pop">barra percorsi</A>.</P>
+
+<H2>Cartella Preferiti</H2>
+
+<P class=T>La cartella Preferiti è il percorso ideale per memorizzare i collegamenti ai file e alle cartelle utilizzati più di frequente, anche se presenti in percorsi remoti in rete. Il file o la cartella originale non si sposta, ma viene creato un collegamento all'elemento desiderato. Memorizzando collegamenti nella cartella Preferiti è possibile avere accesso rapido a qualsiasi file senza dover specificare ogni volta il percorso specifico. Per accedere velocemente ai file della cartella Preferiti, scegliere <B>Preferiti</B> <U><IMG SRC="images/fav.bmp"  BORDER=0></U> sulla barra percorsi. Per ulteriori informazioni, vedere l'argomento relativo all'<A HREF="achowCreateAShortcutToOpenAMicrosoftAccessDatabaseS.htm">aggiunta di un collegamento a un file o a una cartella nella cartella Preferiti</A>.</P>
+
+<H2>Cartelle Web</H2>
+
+<P class=T>Le cartelle Web sono il percorso ideale per salvare i file delle <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagine di accesso ai dati</A> da utilizzare su Internet o su una rete Intranet. Questi file vengono memorizzati su un <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_oftipServer');" class="pop">server Web</A> per essere accessibili a tutti. Per accedere rapidamente ai file memorizzati su un server Web, scegliere <B>Cartelle Web</B> sulla barra percorsi. Per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="ppconAboutWebFolders.htm">cartelle Web</A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconBestPlaceToStoreFilesW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbPictureColorsBadS'
+Feature='Forms: Controls'
+Handoff='3'
+SourceFile='cfrmctl4.doc'
+Tnum='188676'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>I colori dell'immagine o della maschera non vengono visualizzati correttamente</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrbpicturecolorsbads"></A>I colori dell'immagine o della maschera non vengono visualizzati correttamente</H1>
+
+<P class=T>Se l'immagine è stata creata su un computer con più colori di quelli previsti dal computer in cui viene visualizzata, i colori verranno sostituiti per farli corrispondere a quelli originali. Questo processo è conosciuto come retinatura. È possibile ad esempio che si tenti di visualizzare un'immagine creata con 256 colori su un computer che visualizza soltanto 16 colori (VGA standard). Se il computer è in grado di visualizzare più colori, è possibile utilizzare la proprietà <B>Origine tavolozza</B> della maschera o del report per specificare che in Microsoft Access venga utilizzata la tavolozza di colori utilizzata per creare l'immagine.</P>
+
+<P class=T>Se nelle maschere che dispongono di maschere popup si utilizzano immagini di sfondo, si consiglia di impostare allo stesso valore la proprietà <B>Origine tavolozza</B> di entrambe le maschere nel caso in cui l'immagine di sfondo sia contenuta solo nella maschera principale, solo nella maschera popup o in entrambe le maschere. Poiché in Windows è possibile utilizzare solo una tavolozza alla volta, impostando le proprietà <B>Origine tavolozza</B> allo stesso valore, i colori necessari per ciascuna maschera saranno disponibili quando si passa dalla maschera popup alla maschera principale e viceversa, rendendola attiva.</P>
+
+<P class=T>Per ulteriori informazioni sulla proprietà <B>Origine tavolozza</B>, fare clic su <A HREF="achowUseCustomColorsAnotherApplicationS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbPictureColorsBadSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

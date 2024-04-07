@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproControlSource'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosrc1_1a.rtf'
+Tnum='187095'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà ControlSource (Origine controllo)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprocontrolsource"></A>Proprietà ControlSource (Origine controllo)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproControlSourceC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproControlSourceX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproControlSourceA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>ControlSource</B> per specificare quali dati vengono visualizzati in un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A>. È possibile visualizzare e modificare dati <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">associati</A> ad un campo di una <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabella</A>, di una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> o di un'<A HREF="javascript:HelpPopup('actip9.hlp','defSQLString');" class="pop">istruzione SQL</A>. È anche possibile visualizzare il risultato di un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A>. Per un <A HREF="javascript:HelpPopup('actip9.hlp','defGroupLevel');" class="pop">livello di gruppo</A> di <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>, la proprietà <B>ControlSource</B> determina il campo o l'espressione in base a cui effettuare il raggruppamento.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>ControlSource</B> non si applica a <A HREF="javascript:HelpPopup('actip9.hlp','defCheckBox');" class="pop">caselle di controllo</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defOptionButton');" class="pop">pulsanti di opzione</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defToggleButton');" class="pop">interruttori</A> di un <A HREF="javascript:HelpPopup('actip9.hlp','defOptionGroup');" class="pop">gruppo di opzioni</A>, ma solo al gruppo di opzioni stesso.</P>
+
+<P class=NT>Per i report, la proprietà <B>ControlSource</B> si applica solo ai livelli di gruppo di report.</P>
+
+
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>ControlSource</B> viene impostata come riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=22%>Impostazione</TH>
+<TH width=78%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>Un nome di campo</I></TD>
+<TD class=TT width=78%>Il controllo è associato ad un campo di una tabella, di una query o di un'istruzione SQL. I dati di un campo vengono visualizzati nel controllo. Le modifiche apportate ai dati contenuti nel controllo modificano i dati corrispondenti del campo. Per rendere il controllo di sola lettura, impostare a Sì la proprietà <A HREF="acproEnabled.htm"><B>Locked</B></A>. Se si seleziona un controllo associato ad un campo contenente un <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkDataType');" class="pop">tipo di dati con collegamento ipertestuale</A>, si passa alla destinazione specificata nell'indirizzo del collegamento ipertestuale.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>un'espressione</I></TD>
+<TD class=TT width=78%>Il controllo visualizza i dati generati da un'espressione. Questi dati possono essere modificati dall'utente ma non vengono salvati nel database.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare la proprietà <B>ControlSource</B> per un controllo utilizzando la <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> di un controllo, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=T>È inoltre possibile impostare la proprietà <B>ControlSource</B> per una <A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">casella di testo</A> digitando un nome di campo o un'espressione direttamente nella casella di testo in <A HREF="javascript:HelpPopup('actip9.hlp','acrgnFormDesignViewQ');" class="pop">visualizzazione Struttura della maschera</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportDesignQ');" class="pop">visualizzazione Struttura del report</A>.</P>
+
+<P class=T>Per un report è possibile impostare tale proprietà selezionando un campo o digitando un'espressione nella colonna <B>Campo/Espressione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defSortingGroupingWindow');" class="pop">casella <B>Ordinamento e raggruppamento</B></A>. Per ulteriori informazioni, vedere la proprietà <A HREF="acproGroupLevel.htm"><B>GroupLevel</B></A>.</P>
+
+<P class=T>Per impostare il valore di tale proprietà in Visual Basic, utilizzare un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T><A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">Maschere</A> e report funzionano nel database come "finestre". L'origine primaria dei dati per una maschera o per un report viene specificata impostando la relativa proprietà <A HREF="acproRecordSource.htm"><B>RecordSource</B></A> a una tabella, una query o un'istruzione SQL. È quindi possibile impostare la proprietà <B>ControlSource</B> a un campo dell'origine dei dati o ad un'espressione. Se l'impostazione della proprietà <B>ControlSource</B> è un'espressione, il valore visualizzato è di sola lettura e non viene salvato nel database. È possibile utilizzare, ad esempio, le seguenti impostazioni:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Impostazione di esempio</TH>
+<TH width=52%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Cognome</TD>
+<TD class=TT width=52%>Per un controllo i dati del campo Cognome vengono visualizzati nel controllo. Per un livello di gruppo di report i dati vengono raggruppati secondo il cognome.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><CODE>=Data( ) + 7</CODE></TD>
+<TD class=TT width=52%>Per un controllo l'espressione visualizza nel controllo una data di sette giorni successiva a quella odierna.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><CODE>=ParteData("q",DataSpedizione)</CODE></TD>
+<TD class=TT width=52%>Per un controllo l'espressione visualizza il trimestre relativo alla data di spedizione. Per un livello di gruppo di report i dati vengono raggruppati nel trimestre relativo alla data di spedizione.</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

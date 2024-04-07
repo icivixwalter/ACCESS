@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjIndexX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234452'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Index e insieme Indexes (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjindexx"></A>Esempio di oggetto Index e insieme Indexes (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un nuovo indice in una tabella Impiegati.</P>
+
+<PRE class=CT><CODE>Sub NuovoIndice()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef, idx As <B>Index</B>
+&nbsp;&nbsp;&nbsp; Dim fld1 As Field, fld2 As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a tabella Impiegati.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs!Impiegati
+&nbsp;&nbsp;&nbsp; Set idx = tdf.CreateIndex("IndiceNomiImpiegati")
+&nbsp;&nbsp;&nbsp; Set fld1 = idx.CreateField("Cognome")
+&nbsp;&nbsp;&nbsp; Set fld2 = idx.CreateField("Nome")
+&nbsp;&nbsp;&nbsp; idx.Fields.Append fld1
+&nbsp;&nbsp;&nbsp; idx.Fields.Append fld2
+&nbsp;&nbsp;&nbsp; idx.Required = True
+&nbsp;&nbsp;&nbsp; tdf.Indexes.Append idx
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

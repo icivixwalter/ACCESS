@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtDeleteBeforeAfterDelConfirmEP'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2a_1a.rtf'
+Tnum='187165'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Eliminazione, PrimaDiConfermaEliminazione, DopoConfermaEliminazione - Routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproEventProperties">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acevtdeletebeforeafterdelconfirmep"></A>Eventi Eliminazione, PrimaDiConfermaEliminazione, DopoConfermaEliminazione - Routine evento</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtDeleteBeforeAfterDelConfirmEPC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtDeleteBeforeAfterDelConfirmEPX">
+</OBJECT></P>
+
+
+
+<P class=T>Per creare una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> che viene eseguita quando si verifica l'evento Eliminazione, PrimaDiConfermaEliminazione o DopoConfermaEliminazione, impostare la proprietà <A HREF="JavaScript:hhobj_3.Click()"><B>Su eliminazione</B>, <B>Prima di conferma eliminazione</B> o <B>Dopo conferma eliminazione</B></A> a [Routine evento] e fare clic sul pulsante dei<B> </B>generatori <A HREF="javascript:HelpPopup('actip9.hlp','defBuildButton');" class="pop"><IMG SRC="images/buildbut.bmp" BORDER=0></A>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>Private Sub Form_Delete(</B>Cancel <B>As Integer)</B></P>
+
+<P class=SYN><B>Private Sub Form_BeforeDelConfirm(</B>Cancel <B>As Integer</B>, Response <B>As Integer)</B></P>
+
+<P class=SYN><B>Private Sub Form_AfterDelConfirm(</B>Status <B>As Integer)</B></P>
+
+
+
+<P class=T>La routine evento Eliminazione utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Cancel</TD>
+<TD class=TT width=76%>L'impostazione determina l'eventuale verificarsi dell'evento Eliminazione. L'impostazione dell'argomento Cancel a <B>True</B> (-1) annulla l'evento Eliminazione.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>La routine evento PrimaDiConfermaEliminazione utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH colspan=2 width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Cancel</TD>
+<TD class=TT colspan=2 width=76%>L'impostazione determina l'eventuale verificarsi dell'evento PrimaDiConfermaEliminazione. L'impostazione dell'argomento Cancel a <B>True</B> annulla l'evento PrimaDiConfermaEliminazione e impedisce la visualizzazione della finestra di dialogo <B>Conferma eliminazione</B>. Se l'evento viene annullato, vengono ripristinati i <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> iniziali, ma si verifica ancora l'evento DopoConfermaEliminazione. Se Cancel è impostato a <B>True</B>, l'argomento Response viene ignorato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT colspan=2 width=76%>Se Cancel è impostato a <B>False</B> (0), cioè l'impostazione predefinita, il valore dell'argomento Response viene utilizzato da Microsoft Access per determinare il tipo di risposta all'evento di eliminazione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Response</TD>
+<TD class=TT colspan=2 width=76%>L'impostazione determina l'eventuale visualizzazione della finestra di dialogo <B>Conferma eliminazione</B> che richiede se è necessario eliminare il record. L'argomento Response può essere impostato a una delle <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A> riportate di seguito:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TH width=28%>Costante</TH>
+<TH width=48%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=28%><B>acDataErrContinue</B></TD>
+<TD class=TT width=48%>Continua senza la visualizzazione della finestra di dialogo <B>Conferma eliminazione</B>. L'impostazione dell'argomento Cancel a <B>False</B> e dell'argomento Response a <B>acDataErrContinue</B> consente a Microsoft Access di eliminare i record senza effettuare richiesta all'utente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=28%><B>AcDataErrDisplay</B></TD>
+<TD class=TT width=48%>Impostazione predefinita. Visualizza la finestra di dialogo <B>Conferma eliminazione</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>La routine evento DopoConfermaEliminazione utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento</TH>
+<TH colspan=2 width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Status</TD>
+<TD class=TT colspan=2 width=76%>L'impostazione indica l'eventuale avvenuta eliminazione di un record. L'argomento Status può corrispondere a una delle costanti intrinseche riportate di seguito:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TH width=29%>Costante</TH>
+<TH width=47%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=29%><B>acDeleteOK</B></TD>
+<TD class=TT width=47%>Indica l'avvenuta eliminazione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=29%><B>AcDeleteCancel</B></TD>
+<TD class=TT width=47%>Indica l'annullamento dell'eliminazione in Visual Basic.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=29%><B>acDeleteUserCancel</B></TD>
+<TD class=TT width=47%>Indica l'annullamento dell'eliminazione da parte dell'utente.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Non è possibile annullare l'evento DopoConfermaEliminazione.</P>
+
+<P class=T>È possibile utilizzare questi eventi per personalizzare le operazioni di eliminazione di record. Quando si elimina un record, ad esempio il record relativo a un impiegato, si verifica l'evento Eliminazione. È possibile immettere del codice nella routine evento Eliminazione per salvare i dati dei campi ID impiegato e Nome in un set di variabili temporanee. Quando si verifica l'evento PrimaDiConfermaEliminazione, è possibile impedire la visualizzazione della finestra di dialogo <B>Conferma eliminazione</B> impostando l'argomento Response ad <B>acDataErrContinue</B>. In tal modo si consente la visualizzazione di una <A HREF="javascript:HelpPopup('actip9.hlp','defCustomDialogBox');" class="pop">finestra di dialogo personalizzata</A>. Quando si verifica l'evento DopoConfermaEliminazione e l'argomento Status è impostato ad <B>acDeleteOK</B>, è possibile effettuare l'eliminazione delle variabili temporanee o salvare le informazioni relative agli impiegati in un'altra tabella.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

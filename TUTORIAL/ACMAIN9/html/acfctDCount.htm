@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDCount'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187157'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzione DCount</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daidxAggregateFunctions">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlCount">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaidxConcatenation">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthUpdate">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acfctdcount"></A>Funzione DCount</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDCountC;dasqlCount">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDCountX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>DCount</B> per stabilire il numero di record contenuti in un determinato set di record, un <A HREF="javascript:HelpPopup('actip9.hlp','defDomain');" class="pop">dominio</A>. Utilizzare la funzione <B>DCount</B> in Visual Basic, in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>, in una espressione nella query o in un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A>.</P>
+
+<P class=T>È possibile ad esempio utilizzare la funzione <B>DCount</B> in un modulo per restituire il numero di record contenuti in una tabella Ordini corrispondente agli ordini inoltrati in una determinata data.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DCount(</B><I>espr</I>, <I>dominio</I>[, <I>criteri</I>]<B>)</B></P>
+
+
+
+<P class=T>La funzione <B>DCount</B> dispone degli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>espr</I></TD>
+<TD class=TT width=75%>Un'espressione che identifica il campo contenente i record che si desidera contare. È possibile che si tratti di un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che identifica un campo in una tabella o in una query oppure un'espressione che esegue <A HREF="achowFieldCalcDomain.htm">un calcolo dei campi</A>. In <I>espr</I> è possibile includere il nome di un campo in una tabella, un controllo in una maschera, una costante o una funzione. Se <I>espr</I> include una funzione, è possibile che sia incorporata o definita dall'utente, ma non è possibile che si tratti di un'altra funzione di aggregazione sui domini o di <A HREF="JavaScript:hhobj_3.Click()">aggregazione SQL</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>dominio</I></TD>
+<TD class=TT width=75%>Un'espressione stringa che identifica il set di record che costituisce il dominio. È possibile che sia un nome di tabella o di query.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>criteri</I></TD>
+<TD class=TT width=75%>Una stringa opzionale utilizzata per limitare l'intervallo di dati su cui viene eseguita la funzione <B>DCount</B>. L'argomento <I>criteri</I> ad esempio equivale spesso alla proposizione WHERE priva della parola WHERE in un'espressione SQL. Se si omette l'argomento <I>criteri</I>, la funzione <B>DCount</B> valuta <I>espr</I> confrontandolo con l'intero dominio. È necessario che qualsiasi campo incluso in <I>criteri</I> appartenga anche all'argomento <I>dominio</I>. In caso contrario, la funzione <B>DCount</B> restituisce il valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Utilizzare la funzione <B>DCount</B> per contare il numero di record contenuti in un dominio quando non è necessario conoscere i relativi valori specifici. Anche se l'argomento <I>espr</I> è in grado di eseguire un calcolo in un campo, la funzione <B>DCount</B> conteggia semplicemente il numero di record. Il valore di qualsiasi calcolo eseguito da <I>espr</I> non è disponibile.</P>
+
+<P class=T>Sia che la funzione <B>DCount</B> venga utilizzata in una macro o in un modulo, in una espressione nella query o in un controllo calcolato, è necessario creare con attenzione l'argomento <I>criteri</I> per assicurarsi che venga valutato correttamente.</P>
+
+<P class=T>Utilizzare la funzione <B>DCount</B> in un controllo calcolato quando si rende necessario specificare criteri per limitare l'intervallo di dati su cui viene eseguita la funzione. Per visualizzare ad esempio il numero di ordini da inoltrare in California, impostare la proprietà <A HREF="acproControlSource.htm"><B>Origine controllo</B></A> di una casella di testo all'espressione seguente:</P>
+
+<PRE class=CT><CODE>=DCount("[IDOrdine]", "Ordini", "[ZonaDestinatario] = 'CA'")</CODE></PRE>
+
+
+
+<P class=T>Se si desidera semplicemente contare tutti i record contenuti in <I>dominio</I> senza specificare alcuna limitazione, utilizzare la funzione <A HREF="JavaScript:hhobj_4.Click()"><B>Count</B></A>.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; La funzione <B>Count</B> è stata ottimizzata per velocizzare il conteggio dei record nelle query. Utilizzare la funzione <B>Count</B> in un'espressione nella query invece della funzione <B>DCount</B> e impostare criteri opzionali per rafforzare qualsiasi limitazione sui risultati. Utilizzare la funzione <B>DCount</B> quando è necessario contare i record in un dominio dall'interno di un modulo di codice o di una macro o in un controllo calcolato.</P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>DCount</B> per contare il numero di record contenenti un determinato campo non presente nell'origine record su cui si basa la maschera o il report. È possibile ad esempio visualizzare il numero di ordini nella tabella Ordini in un controllo calcolato in una maschera basata sulla tabella Prodotti.</P>
+
+<P class=T>La funzione <B>DCount</B> non esegue il conteggio dei record contenenti valori <B>Null</B> nel campo a cui fa riferimento <I>espr</I>, a meno che <I>espr</I> corrisponda al <A HREF="acconWildcardCharactersS.htm">carattere jolly</A> asterisco (*). Se si utilizza un asterisco, la funzione <B>DCount</B> calcola il numero complessivo dei record, compresi quelli contenenti campi <B>Null</B>. Nell'esempio riportato di seguito si calcola il numero di record contenuti in una tabella Ordini.</P>
+
+<PRE class=CT><CODE>intX = DCount("*", "Ordini")</CODE></PRE>
+
+
+
+<P class=T>Se <I>dominio</I> è una tabella con una <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A>, è anche possibile contare il numero complessivo di record impostando <I>espr</I> al campo della chiave primaria, poiché un valore <B>Null</B> non compare mai nel campo della chiave primaria.</P>
+
+<P class=T>Se <I>espr</I> identifica più campi, separare i nomi dei campi con un <A HREF="JavaScript:hhobj_5.Click()">operatore di concatenazione</A>, una E commerciale (&amp;) o un segno più (+). Se si utilizza una E commerciale per separare i campi, la funzione <B>DCount</B> restituisce il numero di record contenenti dati in un campo qualsiasi tra quelli elencati. Se si utilizza un segno più, la funzione <B>DCount</B> restituisce solo il numero di record contenenti dati in tutti i campi elencati. L'esempio riportato di seguito dimostra gli effetti di ciascun operatore quando viene utilizzato in un campo contenente dati in tutti i record (Destinatario) e un campo che non contiene dati (ZonaDestinatario).</P>
+
+<PRE class=CT><CODE>intW = DCount("[Destinatario]", "Ordini")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Restituisce 831.
+intX = DCount("[ZonaDestinatario]", "Ordini")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Restituisce 323.
+intY = DCount("[Destinatario] + [ZonaDestinatario]", _
+&nbsp;&nbsp;&nbsp;&nbsp; "Ordini")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Restituisce 323.
+intZ = DCount("[Destinatario] &amp; [ZonaDestinatario]", _
+&nbsp;&nbsp;&nbsp;&nbsp; "Ordini")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Restituisce 831.</CODE></PRE>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La E commerciale è l'operatore preferenziale per l'esecuzione di concatenazione di stringhe. Si consiglia di evitare l'utilizzo dell'operatore di addizione se non per le operazioni di addizione numerica, salvo che non si desideri espressamente diffondere valori <B>Null</B> in un'espressione.</P>
+
+
+
+<P class=T>Le modifiche non salvate ai record in <I>dominio</I> non sono contemplate quando si utilizza questa funzione. Se si desidera che la funzione <B>DCount</B> sia basata sui valori modificati, è necessario prima salvare le modifiche scegliendo il comando <B>Salva record</B> dal menu <B>File</B> spostando lo stato attivo su un altro record oppure utilizzando il metodo <A HREF="JavaScript:hhobj_6.Click()"><B>Update</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

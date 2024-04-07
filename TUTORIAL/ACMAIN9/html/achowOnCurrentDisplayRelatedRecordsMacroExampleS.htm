@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowOnCurrentDisplayRelatedRecordsMacroExampleS'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmactsk.rtf'
+Tnum='186748'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di utilizzo di una macro per visualizzare record correlati quando ci si sposta tra i record</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowoncurrentdisplayrelatedrecordsmacroexamples"></A>Esempio di utilizzo di una macro per visualizzare record correlati quando ci si sposta tra i record</H1>
+
+<P class=T>Quando ci si sposta tra record di fornitori di una maschera Fornitori, è possibile che si desideri visualizzare i prodotti di ogni fornitore in una maschera Elenco prodotti. Ciò è possibile tramite l'esecuzione di un'azione ApriMaschera in una macro che viene eseguita in risposta all'evento Corrente della maschera Fornitori. È possibile fare in modo che vengano visualizzati i record della maschera Elenco prodotti il cui valore nel campo IDFornitore nella tabella sottostante corrisponde a quello del campo IDFornitore della maschera Fornitori. Impostare l'argomento <B>Condizione WHERE</B> dell'azione come segue:</P>
+
+<P class=SYN>[IDFornitore]=Forms![Fornitori]![IDFornitore]</P>
+
+
+
+<P class=TPT><B>Suggerimento</B>&nbsp;&nbsp; Se si desidera che la maschera Prodotti non venga aperta sempre quando ci si sposta tra i record della maschera Fornitori, includere un'espressione condizionale nella macro che consente di controllare se la maschera Elenco prodotti è aperta o meno.</P>
+
+<P class=ART><IMG SRC="images/cmactsk5.bmp" ALT="Visualizzazione di record in un'altra tabella tramite una macro" BORDER=0></P>
+
+<P class=T>Dopo aver creato la macro, impostare la proprietà <B>Su corrente</B> della maschera Fornitori al nome della macro.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowOnCurrentDisplayRelatedRecordsMacroExampleSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconUsingEnumsAccess97'
+Feature='accon'
+Handoff='2'
+SourceFile='acvbanew.doc'
+Tnum='188239'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzo delle costanti enumerate in Microsoft Access 2000</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acconusingenumsaccess97"></A>Utilizzo delle costanti enumerate in Microsoft Access 2000</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconUsingEnumsAccess97C">
+</OBJECT></P>
+
+
+
+<P class=T>In Microsoft Access 2000 sono state aggiunte o modificate numerose <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A> per poter creare elenchi di costanti "enumerate" che vengono visualizzate nell'elenco <B>Elenco automatico membri</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defModuleWindow');" class="pop">finestra del modulo</A> per gli argomenti di vari <A HREF="javascript:HelpPopup('actip9.hlp','defMethod');" class="pop">metodi</A>, funzioni e proprietà di Microsoft Access oppure come impostazione di varie proprietà di Microsoft Access. È possibile selezionare la costante appropriata dall'elenco nella finestra del modulo, invece di dover ricordare la costante o ricercarla negli argomenti della Guida.</P>
+
+<P class=T>Le seguenti informazioni si riferiscono alle costanti enumerate:
+
+<UL>
+	<LI class=LB1>Il set di costanti enumerate per ciascun argomento di metodo, funzione o proprietà ha un nome che viene visualizzato nella riga della sintassi relativa al metodo, funzione o proprietà nella finestra del modulo quando l'opzione <B>Informazioni standard automatiche</B> è selezionata nella scheda <B>Editor</B> della finestra di dialogo <B>Opzioni</B>, disponibile scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B>. Per le impostazioni delle proprietà viene visualizzato solo l'elenco delle costanti, ma non il nome. La riga di sintassi per il metodo <A HREF="acmthactOpenForm.htm"><B>OpenForm</B></A> dell'oggetto <A HREF="acobjDoCmd.htm"><B>DoCmd</B></A> visualizza ad esempio <B>[View as AcFormView = acNormal]</B> per l'argomento <I>visualizza</I> di tale metodo. <B>AcFormView</B> è il nome di questo set di costanti enumerate e <B>acNormal</B> è l'impostazione predefinita per l'argomento. Il <A HREF="javascript:HelpPopup('actip9.hlp','defObjectBrowser');" class="pop">Visualizzatore oggetti</A> elenca inoltre i nomi dei set delle costanti enumerate nella casella <B>Classi</B> ed elenca le costanti intrinseche contenute in ognuno di questi set nella casella <B>Membri</B>.<BR><BR></LI>
+
+	<LI class=LB1>Per i nomi di costanti modificati, le costanti precedenti continuano a funzionare. Una delle costanti intrinseche per l'argomento <I>salva</I> del metodo <A HREF="acmthactClose.htm"><B>Close</B></A> dell'oggetto <B>DoCmd</B> era ad esempio <B>acPrompt</B>. Ora è diventata <B>acSavePrompt</B>, ma <B>acPrompt</B> continua a funzionare.<BR><BR></LI>
+
+	<LI class=LB1>In molti casi nelle versioni precedenti di Microsoft Access era possibile lasciare un'impostazione di argomento vuota e veniva eseguita l'azione predefinita per quell'argomento. Era possibile ad esempio lasciare vuoti gli argomenti <I>tipooggetto</I> e <I>nomeoggetto</I> del metodo <B>Close</B> e la finestra attiva veniva chiusa. Per i nuovi set di costanti enumerate, l'impostazione vuota è stata sostituita da una nuova costante predefinita. L'argomento <I>tipooggetto</I> del metodo <B>Close</B> ad esempio dispone ora di una nuova costante predefinita, <B>acDefault</B>. L'impostazione di questo argomento alla nuova costante equivale a lasciare vuoto l'argomento. È ancora possibile lasciare vuoti alcuni argomenti e in questo caso viene utilizzata la nuova costante predefinita.<BR><BR></LI>
+
+	<LI class=ILB>Vi è una sola eccezione a quanto è stato appena detto. Se viene eseguito il codice Visual Basic di versioni precedenti di Visual Basic in Microsoft Access utilizzando l'<A HREF="javascript:HelpPopup('actip9.hlp','defOLEAutomation');" class="pop">Automazione</A>, gli argomenti vuoti provocano un errore se hanno le nuove costanti predefinite. Tale problema non si verifica per i codici precedenti Visual Basic, Applications Edition o Visual Basic eseguiti direttamente in Microsoft Access.</LI>
+</UL>
+
+
+
+<P class=T>La tabella riportata di seguito elenca tutte le costanti intrinseche aggiunte o modificate per creare elenchi di costanti enumerate in Microsoft Access 2000.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=27%>Elemento di linguaggio</TH>
+<TH width=18%>Argomento</TH>
+<TH width=15%>Costante precedente</TH>
+<TH width=40%>Nuova costante</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo<A HREF="acmthactClose.htm"> <B>Close</B></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)<BR></TD>
+<TD class=TT width=40%><B>acDataAccessPage<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo<A HREF="acmthactCopyObject.htm"> <B>CopyObject</B></A></TD>
+<TD class=TT width=18%><I>tipooggettoorigine</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acDataAccessPage<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo<A HREF="acmthactDeleteObject.htm"> <B>DeleteObject</B></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acDataAccessPage<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo <A HREF="acmthactOpenDataAccessPage.htm"><B>OpenDataAccessPage</B></A></TD>
+<TD class=TT width=18%><I>visualizza</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acDataAccessPageBrowse<BR>
+acDataAccessPageDesign</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo<A HREF="acmthactOutputTo.htm"> <B>OutputTo</B></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acOutputDataAccessPage<BR>
+acOutputServerView<BR>
+acOutputStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo<A HREF="acmthactRename.htm"> <B>Rename</B></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acDataAccessPage<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo<A HREF="acmthactRepaintObject.htm"> <B>RepaintObject</B></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acDataAccessPage<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo <A HREF="acmthRunCommand.htm"><B>RunCommand</B></A></TD>
+<TD class=TT width=18%><I>comando</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acCmdDataAccessPageBrowse<BR>
+acCmdDataAccessPageDesignView<BR>
+acCmdDiagramAddRelatedTables<BR>
+acCmdDiagramAutosizeSelectedTables<BR>
+acCmdDiagramDeleteRelationship<BR>
+acCmdDiagramLayoutDiagram<BR>
+acCmdDiagramLayoutSelection<BR>
+acCmdDiagramModifyUserDefinedView<BR>
+acCmdDiagramNewLabel<BR>
+acCmdDiagramNewTable<BR>
+acCmdDiagramRecalculatePageBreaks<BR>
+acCmdDiagramRelationshipLabels<BR>
+acCmdDiagramViewPageBreaks<BR>
+acCmdEditTriggers<BR>
+acCmdHidePane<BR>
+acCmdMicrosoftScriptEditor<BR>
+acCmdNewObjectAutoDataAccessPage<BR>
+acCmdNewObjectDataAccessPage<BR>
+acCmdNewObjectDiagram<BR>
+acCmdNewObjectStoredProcedure<BR>
+acCmdNewObjectView<BR>
+acCmdQueryAddToOutput<BR>
+acCmdSelectDataAccessPage<BR>
+acCmdShowPaneDiagram<BR>
+acCmdShowPaneGrid<BR>
+acCmdShowPaneView<BR>
+acCmdViewDataAccessPages<BR>
+acCmdViewDiagrams<BR>
+acCmdViewFieldList<BR>
+acCmdViewStoredProcedures<BR>
+acCmdViewTableColumnNames<BR>
+acCmdViewTableColumnProperties<BR>
+acCmdViewTableKeys<BR>
+acCmdViewTableNameOnly<BR>
+acCmdViewTableUserView<BR>
+acCmdViewViewVerifySQL<BR>
+acCmdViewViewViews<BR>
+acCmdZoomSelection</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo<A HREF="acmthactSave.htm"> <B>Save</B></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acDataAccessPage<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo <A HREF="acmthactSelectObject.htm"><B>SelectObject</B></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acDataAccessPage<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo<A HREF="acmthactSendObject.htm"> <B>SendObject</B></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acSendDataAccessPage</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>metodo <A HREF="acmthactTransferDatabase.htm"><B>TransferDatabase</B><BR></A></TD>
+<TD class=TT width=18%><I>tipooggetto</I></TD>
+<TD class=TT width=15%>(nessuna)</TD>
+<TD class=TT width=40%><B>acDataAccessPage<BR>
+acDiagram<BR>
+acServerView<BR>
+acStoredProcedure</B></TD>
+</TR>
+</TABLE><BR>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

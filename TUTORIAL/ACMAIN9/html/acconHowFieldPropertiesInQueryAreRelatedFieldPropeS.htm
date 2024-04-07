@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconHowFieldPropertiesInQueryAreRelatedFieldPropeS'
+Feature='Queries: Properties'
+Handoff='1'
+SourceFile='cqrypro_2.rtf'
+Tnum='188031'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Correlazione tra le proprietà di campo in una query e la relativa tabella o query sottostante</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconhowfieldpropertiesinqueryarerelatedfieldpropes"></A>Correlazione tra le proprietà di campo in una query e la relativa tabella o query sottostante</H1>
+
+<P class=T>Un campo contenuto in una query eredita, per impostazione predefinita, tutte le <A HREF="javascript:HelpPopup('actip9.hlp','defProperty');" class="pop">proprietà</A> che ha nella tabella o query sottostante. Se ad esempio la proprietà <B>Formato</B> di un campo DataOrdine è stata impostata a <B>Data breve</B>, il campo viene formattato nei risultati della query come<B> </B>data breve. Vengono visualizzate su una finestra delle proprietà di campo in una query solo le proprietà di campo che è possibile modificare.</P>
+
+<P class=T>Se viene modificata una proprietà di campo in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A> della tabella, qualsiasi query nuova o esistente eredita automaticamente la modifica, a meno che quella proprietà non sia stata modificata in precedenza in visualizzazione Struttura della query. Le impostazioni modificate in visualizzazione Struttura della query non vengono influenzate da modifiche successive in visualizzazione Struttura della tabella e la visualizzazione Struttura della tabella non viene influenzata dalle modifiche apportate alle proprietà in visualizzazione Struttura della query.</P>
+
+<P class=T>Poiché i <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedField');" class="pop">campi calcolati</A> visualizzano dati che non sono memorizzati in nessuna tabella, essi non ereditano le proprietà della tabella. È possibile ad esempio che la query includa un campo che calcola un valore della valuta, ma i valori contenuti in questo campo non vengono visualizzati nel formato valuta, a meno che la proprietà <B>Formato</B> per questo campo non sia impostata a <B>Valuta</B>.</P>
+
+<P class=T>Quando si crea una maschera o un report basato su una query, i campi della maschera o del report assumono le proprietà di campo impostate nella query o nella tabella sottostante. Se l'impostazione della proprietà di un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> della maschera o del report viene in seguito modificata, la modifica non influisce sull'impostazione di quella proprietà per il campo nella query sottostante. Allo stesso modo, se viene modificata l'impostazione della proprietà per un campo in una query dopo aver creato una maschera utilizzando quel campo, l'impostazione della proprietà per il controllo non viene aggiornata automaticamente, è necessario effettuare questa operazione manualmente.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconHowFieldPropertiesInQueryAreRelatedFieldPropeSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

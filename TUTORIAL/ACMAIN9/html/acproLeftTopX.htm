@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproLeftTopX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosiz1_1a.rtf'
+Tnum='187404'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio delle proprietà Left, Top</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprolefttopx"></A>Esempio delle proprietà Left, Top</B></P>
+
+
+
+<P class=T>Nell'esempio che segue si controlla l'impostazione della proprietà <B>Left</B> per il report corrente. Se il valore è inferiore all'impostazione minima del margine, le proprietà <B>NextRecord</B> e <B>PrintSection</B> vengono impostate a <B>False</B> (0). La sezione non avanza al record successivo e la sezione successiva non viene stampata.</P>
+
+<PRE class=CT><CODE>Sub Dettagli1_Format(Cancel As Integer, FormatCount As Integer)
+Const conMargineSinistro = 1880
+' Non avanza al record successivo né stampa la sezione successiva
+' se l'impostazione della proprietà Left è inferiore a 1880 twip.
+&nbsp;&nbsp;&nbsp; If Me.<B>Left</B> &lt; conMargineSinistro Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me.NextRecord = False
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me.PrintSection = False
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

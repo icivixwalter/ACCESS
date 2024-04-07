@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactFindRecord'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187240'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione TrovaRecord</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactFindRecord">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactfindrecord"></A>Azione TrovaRecord</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactFindRecordC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactFindRecordX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione TrovaRecord trova la prima occorrenza di dati che corrisponda ai <A HREF="javascript:HelpPopup('actip9.hlp','defCriteria');" class="pop">criteri</A> specificati dagli argomenti relativi all'azione nel <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> corrente, in quello precedente o successivo oppure nel primo. È possibile trovare record nel <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> della tabella attiva, della query, della maschera o nella maschera.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione TrovaRecord utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=28%>Argomenti azione</TH>
+<TH width=72%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Trova</TD>
+<TD class=TT width=72%>Specifica i dati che si desidera trovare nel record. Immettere il testo, il numero o la data che si desidera trovare oppure digitare un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> preceduta da un segno di uguale (=) nella casella <B>Trova</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. È possibile utilizzare <A HREF="acconWildcardCharactersS.htm">caratteri jolly</A>. L'argomento è richiesto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Confronta</TD>
+<TD class=TT width=72%>Specifica dove sono posizionati i dati all'interno di un <A HREF="javascript:HelpPopup('actip9.hlp','defField');" class="pop">campo</A>. È possibile specificare un tipo di ricerca di dati "Parte del campo", cioè in qualsiasi posizione del campo, "Campo intero", cioè nel campo preso interamente, o "Inizio campo", cioè di dati posizionati all'inizio del campo. L'impostazione predefinita è "Campo intero".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Maiuscole/minuscole</TD>
+<TD class=TT width=72%>Specifica se la ricerca viene effettuata con distinzione tra maiuscole e minuscole, che dovranno corrispondere esattamente. Selezionare <B>Sì</B> per effettuare una ricerca con distinzione tra maiuscole e minuscole oppure <B>No</B> per una ricerca senza distinzione tra maiuscole e minuscole. L'impostazione predefinita è No.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Cerca in</TD>
+<TD class=TT width=72%>Specifica se la ricerca viene eseguita all'indietro a partire dal record corrente fino all'inizio dei record (Su), in avanti fino alla fine dei record (Giù) oppure in avanti dal record corrente fino alla fine dei record e successivamente dall'inizio dei record fino al record corrente, in modo che la ricerca venga effettuata su tutti i record (Tutto). L'impostazione predefinita è Tutto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Come formattato</TD>
+<TD class=TT width=72%>Specifica se la ricerca comprende dati formattati. Se si seleziona <B>Sì</B>, Microsoft Access ricerca i dati così come sono stati formattati e visualizzati nel campo. Se si seleziona <B>No</B>, Microsoft Access ricerca i dati nel modo in cui sono stati memorizzati nel database, che non sempre corrisponde al modo in cui vengono visualizzati. L'impostazione predefinita è No.
+<P class=TT>È possibile utilizzare tale funzione per limitare la ricerca ai dati in un determinato formato. Selezionare <B>Sì</B> ad esempio e immettere 1.234 nell'argomento Trova per cercare il valore 1.234 in un campo formattato in modo da includere punti. Selezionare <B>No</B> se si desidera immettere 1234 per cercare il dato in quel campo.</P>
+
+<P class=TT>Per cercare date, selezionare <B>Sì</B> per trovare una data esattamente come è stata formattata, ad esempio 09 marzo 1991. Se si seleziona <B>No</B>, nell'argomento Trova immettere la data nel formato impostato nella finestra di dialogo <B>Proprietà - Impostazioni internazionali</B> del Pannello di controllo di Microsoft Windows. Questo corrisponde alla casella <B>Formato data breve</B> contenuta nella scheda <B>Data</B> della finestra di dialogo <B>Proprietà - Impostazioni internazionali</B>. Se ad esempio <B>Formato data breve</B> è impostato a M/g/aa, è possibile immettere 3/9/91 e Microsoft Access troverà tutte le immissioni contenute in un campo Data corrispondenti a 9 marzo 1991, indipendentemente dal modo in cui è stato formattato il campo.</P>
+
+<P class=TT><B>Nota</B>&nbsp;&nbsp; Questo argomento ha effetto solo se il campo corrente è un <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">controllo associato</A>, se l'argomento Confronta è impostato a "Campo intero", se l'argomento Solo campo corrente è impostato a Sì e se l'argomento Maiuscole/minuscole è impostato a No.</P>
+
+<P class=TT>Se l'argomento Maiuscole/minuscole è impostato a Sì o l'argomento Solo campo corrente è impostato a No, è anche necessario impostare a Sì l'argomento Come formattato.</P>
+
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Solo campo corrente</TD>
+<TD class=TT width=72%>Specifica se la ricerca è limitata al campo corrente di ciascun record oppure se comprende tutti i campi di ciascun record. La ricerca nel campo corrente è più rapida. Selezionare <B>Sì</B> per limitare la ricerca al campo corrente oppure <B>No</B> per cercare in tutti i campi di ciascun record. L'impostazione predefinita è Sì.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>Trova primo</TD>
+<TD class=TT width=72%>Specifica se la ricerca ha inizio dal primo record o dal record corrente. Selezionare <B>Sì</B> per cominciare dal primo record oppure <B>No</B> per cominciare dal record corrente. L'impostazione predefinita è Sì.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Quando l'azione TrovaRecord viene eseguita da una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>, Microsoft Access cerca i dati specificati nei record nell'ordine determinato dall'impostazione dell'argomento Cerca in. Quando vengono trovati i dati specificati, questi vengono selezionati nel record.</P>
+
+<P class=T>L'azione TrovaRecord equivale a scegliere <B>Trova</B> dal menu <B>Modifica</B> menu e i relativi argomenti equivalgono alle opzioni della finestra di dialogo <B>Trova nel campo</B>, disponibile scegliendo <B>Trova</B> dal menu <B>Modifica</B>. Se gli argomenti dell'azione TrovaRecord vengono impostati nella finestra della macro e viene quindi eseguita la macro, facendo clic su <B>Trova</B> verranno visualizzate le opzioni corrispondenti selezionate nella finestra di dialogo <B>Trova nel campo</B>.</P>
+
+<P class=T>Microsoft Access conserva gli argomenti più recenti dell'azione TrovaRecord durante una sessione di database in modo che non si renda necessario immettere più volte gli stessi criteri quando si eseguono operazioni TrovaRecord successive. Se si lascia vuota una casella relativa a un argomento, Microsoft Access utilizza l'impostazione più recente dell'argomento, corrispondente all'impostazione di una precedente azione TrovaRecord o a un'impostazione della finestra di dialogo <B>Trova nel campo</B>.</P>
+
+<P class=T>Quando si desidera trovare un record tramite una macro, utilizzare l'azione TrovaRecord, invece di <A HREF="acactRunCommand.htm">EseguiComando</A>, con i relativi argomenti impostati in modo da eseguire il comando <B>Trova</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'azione TrovaRecord equivale al comando <B>Trova</B> del menu <B>Modifica</B> relativamente a tabelle, query e maschere,<B> </B>ma non relativamente<B> </B>alla <A HREF="javascript:HelpPopup('actip9.hlp','defModuleWindow');" class="pop">finestra del modulo</A>. Non è possibile utilizzare l'azione TrovaRecord per cercare testo nei <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">moduli</A>.</P>
+
+
+
+<P class=T>Se il testo correntemente selezionato è uguale al testo da ricercare quando si esegue la macro TrovaRecord, la ricerca inizia immediatamente dopo la selezione nello stesso record e nello stesso campo della selezione. Negli altri casi la ricerca comincia all'inizio del record corrente. In questo modo è possibile trovare più occorrenze dello stesso criterio di ricerca in un singolo record.</P>
+
+<P class=T>Notare tuttavia che, se per eseguire una macro che contiene l'azione TrovaRecord si utilizza un pulsante di comando, la prima occorrenza del criterio di ricerca verrà trovata più volte per lo stesso record, poiché fare clic su tale pulsante modifica lo stato attivo del campo che contiene il valore corrispondente e, di conseguenza, l'azione TrovaRecord comincerà la ricerca a partire dall'inizio del record. Per evitare il problema, eseguire la macro utilizzando una tecnica che non prevede la modifica dello stato attivo, come un pulsante di una barra degli strumenti personalizzata o una combinazione di tasti definita in una macro <A HREF="achowAssignMacroKeyS.htm">AutoKeys</A> oppure impostare lo stato attivo nella macro per il campo che contiene i criteri di ricerca prima dell'esecuzione dell'azione TrovaRecord.</P>
+
+<P class=T>Se si utilizza un <A HREF="javascript:HelpPopup('actip9.hlp','defCommandButton');" class="pop">pulsante di comando</A> per eseguire una macro che contiene l'azione TrovaSuccessivo, si ottiene lo stesso comportamento.</P>
+
+<P class=T>Per eseguire l'azione TrovaRecord in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>FindRecord</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

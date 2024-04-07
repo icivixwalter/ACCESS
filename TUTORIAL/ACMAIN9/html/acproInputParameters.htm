@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproInputParameters'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproadpv9.doc'
+Tnum='267165'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà InputParameters (Parametri di input)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjCommand">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjParameter">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproinputparameters"></A>Proprietà InputParameters (Parametri di input)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproInputParameters_C;mdmthADORequery;mdobjCommand;mdobjParameter">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproInputParameters_X">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproInputParameters_A">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>InputParameters</B> per specificare o determinare i parametri di input da passare a un'istruzione SQL nella proprietà <A HREF="acproRecordSource.htm"><B>RecordSource</B></A> di una maschera, di un report o di una <A HREF="javascript:HelpPopup('actip9.hlp','defStoredProcedure');" class="pop">stored procedure</A> quando utilizzata come <A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A> all'interno di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (adp).</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=SYN>&lt;<I>nome</I>&gt; &lt;<I>tipo</I>&gt; = &lt;<I>espressione</I>&gt; [,&lt;<I>nome</I>&gt; &lt;<I>tipo</I>&gt; = &lt;<I>espressione</I>&gt; ]..</P>
+
+
+
+<P class=T>La proprietà <B>InputParameters</B> ha i seguenti argomenti.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=20%>Argomento</TH>
+<TH width=80%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><I>nome</I></TD>
+<TD class=TT width=80%>Il nome del parametro. Si tratta di un parametro di stored procedure che richiede il simbolo iniziale @. Nei nomi di parametro non sono ammessi spazi.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><I>tipo</I></TD>
+<TD class=TT width=80%>Tipo dati SQL Server del parametro.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%><I>espressione</I></TD>
+<TD class=TT width=80%>Un'espressione di Microsoft Access passata alla funzione per espressioni perché venga risolta. Come le altre espressioni, essa può fare riferimento a un altro controllo della maschera, può fornire un testo di richiesta di immissione da parte dell'utente o può essere una stringa letterale.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=20%>&nbsp;</TD>
+<TD class=TT width=80%>Se il segno di uguale (=) è l'ultimo o è seguito dalla virgola, la routine viene eseguita utilizzando il valore di parametro predefinito indicato nella query o nel comando CREATE PROC. Questo è vero anche se il parametro non è incluso nella stringa.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>È possibile impostare questa proprietà utilizzando la <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> o <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Utilizzo con la proprietà <B>RecordSource</B>:</P>
+
+<P class=T>Di seguito viene riportata una stringa di esempio della proprietà <B>InputParameter</B> utilizzata con un'istruzione SQL nella proprietà <B>RecordSource</B>.</P>
+
+<P class=T>stato char=[Maschera]![ElencoStati], annodivendita smallint=[Immettere l'anno di interesse]</P>
+
+<P class=T>Il parametro stato viene impostato al valore corrente del controllo ElencoStati e all'utente viene richiesto il parametro annodivendita. Ai valori dei parametri eventualmente non presenti nell'elenco vengono assegnati i valori predefiniti.</P>
+
+<P class=T>È necessario eseguire la query con un segno ? per ciascun parametro non predefinito presente nell'elenco di <B>InputParameter</B>.</P>
+
+<P class=T>Un comando di aggiornamento o requery eseguito tramite menu, tastiera o barra di spostamento in Access dovrebbe attivare una riesecuzione della query. Questa operazione può essere effettuata da codice chiamando il metodo <B>Recordset.<A HREF="acmthRequery.htm">Requery</A></B> standard. Se il valore di un parametro è associato a un controllo sulla maschera, il valore corrente del controllo verrà utilizzato alla riesecuzione della query. La query non viene rieseguita automaticamente alla modifica del valore del controllo.</P>
+
+
+
+<P class=T>Utilizzo con le stored procedure:</P>
+
+<P class=T>Di seguito viene riportata una stringa di esempio della proprietà <B>InputParameter</B> utilizzata con una stored procedure:</P>
+
+<P class=T>@stato char=[Maschera]![ElencoStati], @annodivendita smallint=[Immettere l'anno di interesse]</P>
+
+<P class=T>In questo modo si otterrebbe l'impostazione del parametro @stato al valore corrente del controllo ElencoStati e all'utente verrebbe richiesto il parametro @annodivendita. In presenza di altri parametri della stored procedure non inclusi in questo elenco, essi otterrebbero i valori predefiniti assegnati.</P>
+
+<P class=T>La stored procedure dovrà essere eseguita usando una stringa di comando contenente la sintassi {call } con un indicatore ? per ogni parametro non predefinito inlcuso nell'elenco <B>InputParameter</B>.</P>
+
+<P class=T>Un comando di aggiornamento o requery eseguito tramite menu, tastiera o barra di spostamento in Access dovrebbe attivare la riesecuzione della stored procedure. Gli utenti potrebbero ottenere la stessa azione con il codice, chiamando il metodo standard <B>Recordset.<A HREF="acmthRequery.htm">Requery</A></B>. Se il valore di un parametro è associato a un controllo sulla maschera, al momento della requery viene utilizzato il valore corrente del controllo. La stored procedure non viene rieseguita automaticamente al variare del valore del controllo.</P>
+
+<P class=T>Questa finestra di dialogo di generatore viene richiamata la prima volta che una stored procedure viene selezionata come origine record di un maschera se la stored procedure presenta dei parametri. Dopo la creazione iniziale della stringa <B>InputParameters</B>, la stessa finestra di dialogo viene utilizzata come generatore per modificare la stringa. In questo caso, però, l'elenco dei parametri deriva dal contenuto già presente nella stringa.</P>
+
+<P class=T>È anche possibile impostare i valori dei parametri con il codice, utilizzando gli oggetti ADO <A HREF="JavaScript:hhobj_4.Click()"><B>Command</B></A> e <A HREF="JavaScript:hhobj_5.Click()"><B>Parameter</B></A>. Se il risultato restituisce un set di risultati, è possibile associare a quest'ultimo una maschera impostando la proprietà <A HREF="acproRecordset.htm"><B>Recordset</B></A> della maschera. Il codice ADO rappresenta l'unico modo di gestire stored procedure che non restituiscono set di risultati come query di azione, quelle che restituiscono parametri di output o quelle che restituiscono più set di risultati. </P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acproInputParametersW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

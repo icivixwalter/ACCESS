@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlWITHOWNERACCESSOptionS'
+Feature='acsql'
+Handoff='1'
+SourceFile='acdsql03_1a.rtf'
+Tnum='234591'
+Piece='1040'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Dichiarazione WITH OWNERACCESS OPTION</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acsqlwithowneraccessoptions"></A>Dichiarazione WITH OWNERACCESS OPTION</H1>
+
+
+
+<P class=T>È possibile includere la dichiarazione WITH OWNERACCESS OPTION in un'istruzione <A HREF="javascript:HelpPopup('actip9.hlp','defSQL');" class="pop">SQL</A> per consentire agli utenti di eseguire una query e visualizzare i risultati anche se non si dispone di <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> di protezione nelle tabelle sottostanti. Se tale opzione è impostata, vengono concesse all'utente le stesse autorizzazioni del proprietario della query.</P>
+
+<P class=T>Il proprietario di una query di una tabella Impiegati può, ad esempio, includere la dichiarazione WITH OWNERACCESS OPTION nella definizione della query che restituisce tutti i campi tranne quelli relativi agli indirizzi degli impiegati. Un utente privo delle autorizzazioni di lettura per la tabella Impiegati può quindi eseguire la query e visualizzare solo i campi inclusi nella query. In tal modo l'utente dispone ora di accesso di lettura limitato alla tabella.</P>
+
+<P class=T>L'utilizzo di tale dichiarazione equivale ad impostare a Proprietario la proprietà <B>Applica autorizzazioni</B> nella finestra delle proprietà della query in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura della query</A>. L'omissione della dichiarazione equivale ad impostare a Utenti (impostazione predefinita) la proprietà <B>Applica autorizzazioni</B>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

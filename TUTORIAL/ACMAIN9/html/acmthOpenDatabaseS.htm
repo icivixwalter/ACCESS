@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthOpenDatabaseS'
+Feature='acmth'
+Handoff='2'
+SourceFile='acdmeth1_1a.rtf'
+Tnum='234489'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo OpenDatabase (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthopendatabases"></A>Metodo OpenDatabase (MDB)</H1>
+
+
+
+<P class=T>In Microsoft Access, utilizzare la funzione <B>CurrentDb</B> per restituire un riferimento al database corrente e assegnarlo a una variabile <B>Database</B>, come mostrato nell'esempio riportato di seguito.</P>
+
+<PRE class=CT><CODE>Dim dbsCurrent As Database
+Set dbsCurrent = CurrentDb</CODE></PRE>
+
+
+
+<P class=T>Utilizzare il metodo <B>OpenDatabase</B> per aprire da Visual Basic un database diverso da quello corrente.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

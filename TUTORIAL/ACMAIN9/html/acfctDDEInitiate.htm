@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDDEInitiate'
+Feature='acfct'
+Handoff='1'
+SourceFile='ddestuff_1a.doc'
+Tnum='186355'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzione DDEInitiate</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaconUnderstandingOLEAutomation">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acfctddeinitiate"></A>Funzione DDEInitiate</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDDEInitiateC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDDEInitiateX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>DDEInitiate</B> per iniziare una conversazione <A HREF="javascript:HelpPopup('actip9.hlp','defDDE');" class="pop">DDE (Dynamic Data Exchange</A>) con un'altra applicazione. Tale funzione<B> </B>apre un <A HREF="javascript:HelpPopup('actip9.hlp','defDDEChannel');" class="pop">canale DDE</A> per trasferire i dati da un server DDE a un'applicazione client e viceversa.</P>
+
+<P class=T>Se si desidera ad esempio trasferire dati da un foglio di calcolo Microsoft Excel a un database di Microsoft Access, è possibile utilizzare la funzione <B>DDEInitiate</B> per aprire un canale tra le due applicazioni. In questo esempio Microsoft Access funge da client e Microsoft Excel da applicazione server.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DDEInitiate(</B><I>applicazione</I>, <I>argomento</I><B>)</B></P>
+
+
+
+<P class=T>La funzione <B>DDEInitiate</B> utilizza i seguenti argomenti.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=21%>Argomento</TH>
+<TH width=79%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>applicazione</I></TD>
+<TD class=TT width=79%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che identifica un'applicazione in grado di partecipare a una conversazione DDE. In genere, l'argomento <I>applicazione</I> è costituito dal nome di un file EXE (senza l'estensione EXE) di un'applicazione per Microsoft Windows, come Microsoft Excel.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><I>argomento</I></TD>
+<TD class=TT width=79%>Espressione stringa costituita dal nome di un <A HREF="javascript:HelpPopup('actip9.hlp','defTopic');" class="pop">argomento</A> riconosciuto dall'argomento dell'<I>applicazione</I>. Per un elenco degli argomenti, consultare la documentazione dell'applicazione.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>La funzione <B>DDEInitiate</B>, se riesce, inizia una conversazione DDE con l'<I>applicazione</I> e l'<I>argomento</I> specificati dai relativi argomenti, quindi restituisce un valore intero <A HREF="javascript:HelpPopup('actip9.hlp','defLongDataType');" class="pop"><B>Lungo</B></A>. Quest'ultimo rappresenta un <A HREF="javascript:HelpPopup('actip9.hlp','defChannelNumber');" class="pop">numero di canale</A> univoco che identifica un canale attraverso cui può aver luogo il trasferimento dei dati. Tale numero di canale viene utilizzato in seguito con altre funzioni e istruzioni DDE.</P>
+
+<P class=T>Se l'applicazione non è ancora in esecuzione oppure se non riconosce l'<I>argomento</I> o non supporta DDE, la funzione <B>DDEInitiate</B> restituisce un <A HREF="javascript:HelpPopup('actip9.hlp','defRunTimeError');" class="pop">errore di run-time</A>.</P>
+
+<P class=T>Il valore dell'<I>argomento</I> varia a seconda dell'applicazione specificata dall'argomento <I>applicazione</I>, in quanto i nomi di argomento validi per le applicazioni che utilizzano documenti o file di dati spesso includono il nome di tali file.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Il numero massimo di canali che è possibile aprire contemporaneamente è determinato da Microsoft Windows e dalla memoria e le risorse disponibili sul computer. Se un canale non è utilizzato, chiuderlo con l'istruzione <A HREF="acstmDDETerminate.htm"><B>DDETerminate</B></A> o <A HREF="acstmDDETerminateAll.htm"><B>DDETerminateAll</B></A>, per risparmiare le risorse.</P>
+
+
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Se è necessario manipolare gli oggetti di un'altra applicazione da Microsoft Access, è possibile utilizzare l'<A HREF="JavaScript:hhobj_3.Click()">Automazione</A>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

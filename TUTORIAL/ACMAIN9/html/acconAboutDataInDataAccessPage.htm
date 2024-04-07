@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutDataInDataAccessPage'
+Feature='Page: Basics'
+Handoff='3'
+SourceFile='cdapflst.rtf'
+Tnum='270183'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Origine dei dati utilizzati da una pagina di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutdataindataaccesspage"></A>Origine dei dati utilizzati da una pagina di accesso ai dati</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#typesofdatasourcesfordaps">Tipi di origine dati per una pagina di accesso ai dati</A></P>
+
+<P class=LBR1><A HREF="#typesofdatasourcesformsowcs">Tipi di origine dati per Microsoft Office Web Components su una pagina di accesso ai dati</A></P>
+
+<H2><A NAME="typesofdatasourcesfordaps"></A>Tipi di origine dati per una pagina di accesso ai dati</H2>
+
+<P class=T>Una pagina di accesso ai dati ottiene i dati da un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o da un database di Microsoft SQL Server 6.5 o versioni successive. Per creare una pagina che utilizzi i dati di uno di questi database, è necessario che la pagina sia connessa al database. Se è già stato aperto un database o un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> connesso a un database di Microsoft SQL Server, la pagina di accesso ai dati creata verrà connessa automaticamente al database corrente e il percorso verrà memorizzato nella proprietà <B>ConnectionString</B> della pagina. Quando la pagina viene aperta in Internet Explorer 5 o in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPageView');" class="pop">visualizzazione Pagina</A>, vengono visualizzati i dati correnti del database di origine utilizzando il percorso definito nella proprietà <B>ConnectionString</B>. Se la pagina di accesso ai dati viene creata quando il database si trova su un'unità locale, verrà utilizzato il percorso locale e pertanto i dati non saranno accessibili ad altri utenti. Per questo motivo è essenziale spostare o copiare il database in un percorso di rete accessibile a coloro che dovranno utilizzare questa pagina. Dopo averlo spostato o copiato in una condivisione di rete, <A HREF="ofdecOpenDocumentOnNetworkUsingUNC.htm">aprire il database utilizzando l'indirizzo UNC</A>. Se il database viene spostato o copiato dopo avere creato la pagina, sarà necessario <A HREF="achowSpecifyDatabaseDAPConnectedTo.htm">aggiornare il percorso nella proprietà <B>ConnectionString</B></A> in base alla nuova posizione. </P>
+
+<P class=T>Quando la pagina di accesso ai dati è connessa a un database, nella scheda <B>Database</B> dell'Elenco campi compaiono le cartelle contenenti tutte le tabelle o le <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> disponibili nel database. I <A HREF="acconAboutFieldListForDataAccessPage.htm">dati vengono aggiunti alla pagina di accesso ai dati</A> da queste origini record. Se l'icona del database è contrassegnata da una <B>X</B> rossa e sotto di essa non compare alcuna cartella, è necessario <A HREF="achowSpecifyDatabaseDAPConnectedTo.htm">connettere la pagina di accesso ai dati a un database</A> per continuare la progettazione.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutdataindataaccesspage">inizio</A></P>
+
+<H2><A NAME="typesofdatasourcesformsowcs"></A>Tipi di origine dati per Microsoft Office Web Components su una pagina di accesso ai dati</H2>
+
+<P class=T>Sebbene la pagina di accesso ai dati ottenga i dati da un database di Microsoft Access o di Microsoft SQL Server, i controlli di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefWebComponent');" class="pop">Microsoft Office Web Components</A> sulla pagina possono visualizzare i dati di questi database o di altre origini. La pagina può ad esempio contenere un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPivotTableList');" class="pop">elenco di tabella pivot</A>, <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefSpreadsheet');" class="pop">un foglio di calcolo</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defGraph');" class="pop">grafico</A> con dati di un foglio di lavoro di Microsoft Excel o di un database non di Microsoft Access o Microsoft SQL Server. A seconda dell'origine, i dati in questi controlli possono essere uno snapshot dei dati originali o i dati veri e propri visualizzati mediante una connessione separata del controllo all'origine dati. </P>
+
+<P class=T>Per creare un componente Web con i dati di un'origine diversa dal database corrente, potrebbe essere necessario utilizzare un programma diverso da Microsoft Access per pubblicare prima i dati su una pagina Web. Per creare ad esempio un elenco di tabella pivot contenente i dati di un foglio di lavoro di Microsoft Excel, è necessario pubblicare i dati da Microsoft Excel. In Microsoft Access è quindi possibile <A HREF="achowCreateDataAccessPageByUsingExistingHTMLDocument.htm">aprire la pagina Web e trasformarla in una pagina di accesso ai dati</A> aggiungendo i controlli associati a un database di Microsoft Access o di Microsoft SQL Server. La pagina può essere ulteriormente personalizzata con etichette, immagini o altre caratteristiche che ne migliorano l'aspetto. Da Microsoft Access è possibile <A HREF="achowCreatePivotTableList.htm">creare un elenco di tabella pivot</A> che utilizza i dati di un'origine esterna diversa da Microsoft Excel. Per eseguire questa operazione, è necessario specificare le informazioni di connessione nella sezione <B>Origine dati</B> della <B>Casella delle proprietà Tabella pivot</B> quando si crea il controllo.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutdataindataaccesspage">inizio</A></P>
+
+<H2>Ulteriori informazioni</H2>
+
+<P class=T><A HREF="acconAboutMicrosoftOfficeWebComponents.htm">Informazioni su Microsoft Office Web Components</A></P>
+
+<P class=T><A HREF="acconAboutOLEDBDataLinks.htm">Informazioni su OLE DB e sui collegamenti ai dati</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutDataInDataAccessPageW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

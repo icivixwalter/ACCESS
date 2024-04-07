@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefExamplesOfHyperlinkAddresses'
+Feature='Hyperlinks'
+Handoff='3'
+SourceFile='chyper2.doc'
+Tnum='260704'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di indirizzi di collegamenti ipertestuali</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefexamplesofhyperlinkaddresses"></A>Esempi di indirizzi di collegamenti ipertestuali</H1>
+
+<P class=T>La seguente tabella contiene alcuni esempi di indirizzi di collegamenti ipertestuali. Per gli <A HREF="javascript:HelpPopup('actip9.hlp','defURL');" class="pop">URL</A> vengono utilizzate le barre, mentre per i <A HREF="javascript:HelpPopup('actip9.hlp','defUNC');" class="pop">percorsi UNC</A> vengono utilizzate le barre rovesciate.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=60%>Indirizzo del collegamento ipertestuale</TH>
+<TH width=40%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>Microsoft Corporation#http://www.microsoft.com#</TD>
+<TD class=TT width=40%>La Home Page Microsoft sul Web, visualizzata come "Microsoft Corporation".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>#http://www.microsoft.com#</TD>
+<TD class=TT width=40%>La Home Page Microsoft sul Web.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>#http://www.microsoft.com#esempio#</TD>
+<TD class=TT width=40%>Tag Name chiamato "esempio" nel documento html della Home Page Microsoft.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>#\\northwind\public\prodotti.doc##Elenco di prodotti scontati</TD>
+<TD class=TT width=40%>File di Microsoft Word chiamato Prodotti.doc nella directory Public del server Northwind. La descrizione è "Elenco di prodotti scontati".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>Curriculum#c:\windows\personal\curricul.doc#</TD>
+<TD class=TT width=40%>File di Word chiamato Curricul.doc  nella cartella \Windows\Personal. Visualizzato come "Curriculum."</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>#c:\windows\personal\curricul.doc#</TD>
+<TD class=TT width=40%>File Curricul.doc  nella cartella \Windows\Personal. Verrà visualizzato il nome del percorso in quanto non viene visualizzato alcun testo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>#c:\windows\personal\curricul.doc#Titoli</TD>
+<TD class=TT width=40%>Il segnalibro chiamato "Titoli" del file Curricul.doc.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>#c:\windows\personal\northwind.mdb#Maschera Fornitori</TD>
+<TD class=TT width=40%>Maschera Fornitori del database Northwind  nella cartella \Windows\Personal.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>Fornitori##Maschera Fornitori#Fare clic per visualizzare e modificare le informazioni sui fornitori</TD>
+<TD class=TT width=40%>Maschera Fornitori del database corrente. Visualizzata come "Fornitori", con la descrizione "Fare clic per visualizzare e modificare le informazioni sui fornitori".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>#c:\windows\personal\Vendite 1996.ppt#13</TD>
+<TD class=TT width=40%>Diapositiva 13 della presentazione di PowerPoint Vendite 1996 nella cartella \Windows\Personal.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=60%>#c:\windows\personal\budget.xls#Foglio1!A2</TD>
+<TD class=TT width=40%>Cella A2 nel Foglio1 del file budget.xls di Excel  nella cartella \Windows\Personal.</TD>
+</TR>
+</TABLE><BR>
+
+<P class=T>Per facilitare l'immissione di un indirizzo di collegamento ipertestuale, è possibile omettere alcune parti dell'indirizzo. Ad esempio:
+
+<UL>
+	<LI class=LB1>Se si digita <B>http://esempio.microsoft.com</B>, viene riconosciuto il protocollo "http:" e l'indirizzo viene tradotto come #http://esempio.microsoft.com#. Non è necessario immettere i simboli di cancelletto  (#).<BR><BR></LI>
+
+	<LI class=LB1>Se si desidera fare riferimento a un oggetto di Microsoft Access del database corrente, è sufficiente specificare il nome dell'oggetto che si desidera collegare, senza il percorso UNC. Se esistono più oggetti con lo stesso nome, viene utilizzato il seguente ordine per determinare a quale fare riferimento: maschere, report, query, tabelle, pagine di accesso ai dati, macro, moduli, visualizzazioni, schemi, stored procedure, tabelle collegate SQL, tabelle collegate e trigger. Se, ad esempio, esiste una maschera Ordini e una tabella Ordini, il riferimento sarà alla maschera Ordini. È possibile specificare un determinato tipo di oggetto immettendo <I>tipo oggetto nome oggetto</I>. Per fare riferimento alla tabella Ordini anziché alla maschera Ordini, ad esempio, immettere <B>Tabella Ordini</B> come sottoindirizzo. Per i tipi di oggetto comprendenti più parole, omettere gli spazi tra le parole, ad esempio inserendo <B>paginadiaccessoaidati Ordini</B>.<BR><BR></LI>
+
+	<LI class=LB1>Se il testo immesso non include il simbolo di cancelletto (#), un protocollo, ad esempio "http:", o un riferimento a un oggetto del database corrente, il testo immesso viene automaticamente interpretato come <I>testo da visualizzare</I> e lo stesso testo, preceduto da "http://", viene considerato l'<I>indirizzo</I>. Se, ad esempio, si digita <B>esempio.microsoft.com</B>, l'indirizzo viene tradotto in esempio.microsoft.com#http://esempio.microsoft.com#.</LI>
+</UL>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefExamplesOfHyperlinkAddressesW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

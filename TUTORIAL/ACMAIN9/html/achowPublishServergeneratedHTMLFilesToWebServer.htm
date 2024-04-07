@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowPublishServergeneratedHTMLFilesToWebServer'
+Feature='Web'
+Handoff='3'
+SourceFile='ctbliel.rtf'
+Tnum='269800'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Pubblicare file HTML generati dal server su un server Web</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconAboutProtectingAccessProject">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowpublishservergeneratedhtmlfilestowebserver"></A>Pubblicare file HTML generati dal server su un server Web</H1>
+
+<P class=T>Per utilizzare file <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefServergeneratedHTML');" class="pop">HTML generati dal server</A> (<A HREF="javascript:HelpPopup('actip9.hlp','defASPFiles');" class="pop">ASP</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defIDCHTXfiles');" class="pop">IDC/HTX</A>) su un server Web, attenersi alla seguente procedura:
+
+<OL>
+	<LI class=LPROC><A HREF="acrefAboutWorldWideWebApplicationProductsPlatforms.htm">Installare il software appropriato</A> nel computer che diventerà il server Web ed <A HREF="acconGetMoreInformationToDecideWhetherToUseStaticOrDynamicHTMLFormat.htm">elaborerà i file HTML generati dal server</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Creare sotto la <A HREF="javascript:HelpPopup('oftip9.hlp','ofhowRootDirectory');" class="pop">cartella principale</A> una cartella in cui memorizzare i file ASP o IDC/HTX. La cartella principale predefinita è <B>\Webshare\Wwwroot</B> per Personal Web Server e <B>\Inetpub\Wwwroot</B> per Microsoft Internet Information Server.<BR><BR></LI>
+
+	<LI class=LPROC>Definire i privilegi appropriati per la cartella: <B>Esegui</B> per Windows NT 4.0 o versioni successive ed <B>Esegui gli script</B> per Windows 95 o versioni successive. Per ulteriori informazioni sulla condivisione di una cartella, vedere la Guida di Windows.<BR><BR></LI>
+
+	<LI class=LPROC>Copiare nella cartella i file ASP o IDC/HTX, nonché i file correlati (quali oggetti grafici o file collegati) e le relative cartelle oppure assicurarsi che i file correlati possano essere individuati dal software del server Web. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="pprefAbtLinksOnWebPages.htm">gestione dei collegamenti e delle pagine Web</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Copiare il database di Microsoft Access o il database di Microsoft SQL Server nella cartella oppure definirne il percorso di rete nell'<A HREF="javascript:HelpPopup('actip9.hlp','defODBCDataSource');" class="pop">origine dati ODBC</A> definita nel passaggio&nbsp;6.<BR><BR></LI>
+
+	<LI class=LPROC>Definire l'origine dati ODBC come DSN di sistema sul server Web. Assicurarsi che il nome dell'origine dati corrisponda a quello immesso nella finestra di dialogo <B>Opzioni di output</B> appropriata al momento dell'invio dei file ASP o IDC/HTX come output. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="achowStartODBCManager.htm">definizione di un'origine dati ODBC</A>. <BR><BR></LI>
+
+	<LI class=LPROC>Se lo si desidera, definire la protezione del database per l'origine dati ODBC, ma assicurarsi che gli utenti possano accedere a quest'ultima.
+<P class=LT1>Per un database di Microsoft Access definire un nome utente e una password di <A HREF="javascript:HelpPopup('actip9.hlp','defUserLevelSecurity');" class="pop">protezione a livello utente</A> per consentire agli utenti di accedere al database di Access dalla pagina Web. Se non si definisce un nome utente o una password di protezione a livello utente, verrà utilizzato il nome utente predefinito <B>Admin</B> senza password. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="acdecProtectWithUserlevelSecurity.htm">protezione a livello utente in un database di Access</A>.
+
+<P class=LT1>Per un progetto di Microsoft Access definire nelle caselle <B>Nome utente</B> e <B>Password</B> un nome utente e una password di database per consentire agli utenti di accedere al database di Microsoft SQL Server dalla pagina Web. Se non si definisce un nome utente o una password, verrà utilizzato il nome utente predefinito è <B>Sa</B> senza password. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="JavaScript:hhobj_1.Click()">protezione dei database SQL Server</A>.
+
+<P class=LT1>Il nome utente e la password devono corrispondere a quelli immessi nelle caselle <B>Utente connesso come</B> e <B>Password utente</B> della finestra di dialogo <B>Opzioni di output per</B> <B>Microsoft Active</B> <B> Server Pages</B> o <B>Opzioni di output per HTX/IDC</B> visualizzata quando si inviano i file ASP o IDC/HTX come output. 
+</LI>
+</OL>
+
+<P class=T><B>Nota&nbsp;&nbsp;</B> Se si desidera esportare più <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">fogli dati</A>, è possibile automatizzare l'operazione <A HREF="acdecCreateOrModifyMacros.htm">creando una macro</A> o <A HREF="acdecCreateOrModifyProceduresInModules.htm">creando un programma con Visual Basic, Applications Edition</A>. Tali soluzioni si rivelano particolarmente utili quando si devono esportare frequentemente fogli dati per verificare e creare un sito Web.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowPublishServergeneratedHTMLFilesToWebServerW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

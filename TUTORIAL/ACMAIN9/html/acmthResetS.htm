@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthResetS'
+Feature='acmth'
+Handoff='1'
+SourceFile='acocmdbsp_1a.doc'
+Tnum='234531'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Reset</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthresets"></A>Metodo Reset</H1>
+
+
+
+<P class=T>In Microsoft Access 2000 per reimpostare una <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBar');" class="pop">barra dei menu</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> incorporata, è possibile utilizzare la finestra <B>Proprietà barra degli strumenti</B>. Scegliere <B>Barra degli strumenti</B> dal menu <B>Visualizza</B>, fare clic su <B>Personalizza</B>, quindi sul pulsante <B>Proprietà</B> nella finestra di dialogo <B>Personalizza</B>. Nella casella <B>Barra degli strumenti selezionata</B> scegliere la barra dei menu o la barra degli strumenti incorporata, quindi fare clic sul pulsante <B>Ripristina</B>. Non è possibile reimpostare una barra dei menu o una barra degli strumenti personalizzata, né un determinato <A HREF="javascript:HelpPopup('actip9.hlp','defShortCutMenus');" class="pop">menu di scelta rapida</A>.</P>
+
+<P class=T>Se si seleziona <B>Menu di scelta rapida</B> nella finestra di dialogo <B>Personalizza</B>, il pulsante <B>Reimposta</B> nella finestra di dialogo <B>Personalizza</B> reimposta la barra dei menu o degli strumenti incorporata che è stata selezionata o tutti i menu di scelta rapida incorporati. Il comando <B>Reimposta</B> del menu di scelta rapida, visualizzato quando si fa clic con il pulsante destro del mouse su un determinato controllo incorporato in una barra dei menu o degli strumenti quando la finestra di dialogo <B>Personalizza</B> è aperta, reimposta il controllo allo stato originale. La scelta del pulsante <B>Reimposta</B> e del relativo<B> </B>comando equivale a scegliere il metodo <B>Reset</B>.</P>
+
+<P class=T>Il pulsante <B>Ripristina</B> reimposta non solo l'immagine dei controlli della barra dei menu o degli strumenti, il testo e i comandi eseguiti, ma anche tutte le impostazioni originali della barra dei menu o degli strumenti, comprese la posizione e la visibilità originali.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

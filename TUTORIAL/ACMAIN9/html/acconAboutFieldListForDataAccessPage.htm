@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutFieldListForDataAccessPage'
+Feature='Page: Basics'
+Handoff='3'
+SourceFile='cdapflst.rtf'
+Tnum='270182'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'aggiunta di dati a una pagina di accesso ai dati mediante l'elenco campi</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutfieldlistfordataaccesspage"></A>Informazioni sull'aggiunta di dati a una pagina di accesso ai dati mediante l'elenco campi</H1>
+
+<P class=T>Quando si utilizza l'<A HREF="javascript:HelpPopup('actip9.hlp','defFieldList');" class="pop">elenco campi</A> per aggiungere i dati alla pagina di accesso ai dati, vengono creati automaticamente i <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A> <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">associati</A> ai campi che vengono aggiunti, come avviene per l'elenco campi di maschere e report. L'elenco campi di maschere e report e quello delle pagine di accesso ai dati tuttavia non sono equivalenti. Prima di poter aggiungere controlli associati a una maschera o a un report, è necessario associare la maschera o il report a un'origine record specifica. Una volta eseguita questa operazione, nell'elenco campi verranno visualizzati solo i campi di tale origine record. Una pagina di accesso ai dati invece non viene associata fino a quando non si aggiungono i controlli, dopodiché può essere associata anche a più origini record contemporaneamente. L'elenco campi di una pagina di accesso ai dati pertanto visualizza tutti i campi che è possibile aggiungere alla pagina selezionandoli dal database.</P>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento sulle operazioni da eseguire per utilizzare l'elenco campi e su cosa contiene, sulle operazioni eseguite da Access quando si utilizza l'elenco campi e su come si aggiungono i campi alla pagina di accesso ai dati. Prima di iniziare, è utile acquisire familiarità con le <A HREF="acconStrategiesForCreatingDataAccessPages.htm">strategie per la creazione di una pagina di accesso ai dati</A>.</P>
+
+<P class=LBR1><A HREF="#youconnecttoadatabase">Connessione a un database</A></P>
+
+<P class=LBR1><A HREF="#accessidentifiesrelatedfields">Individuazione dei campi correlati in Access</A></P>
+
+<P class=LBR1><A HREF="#youcanaddindividualcontrolsforeachfield">Aggiunta di singoli controlli per ciascun campo</A></P>
+
+<P class=LBR1><A HREF="#youcanaddapivottablecontrolwithmultiplefields">Aggiunta di un controllo Tabella pivot con più campi</A></P>
+
+<P class=LBR1><A HREF="#accessbuildsthesqlqueryforthedataaccesspage">Creazione della query SQL per la pagina di accesso ai dati in Access</A></P>
+
+<P class=LBR1><A HREF="#accessbuildsthepagesdatadefinition">Creazione della definizione dei dati della pagina di accesso ai dati in Access</A></P>
+
+<H2><A NAME="youconnecttoadatabase"></A>Connessione a un database</H2>
+
+<P class=T>Prima di poter aggiungere i dati a una pagina di accesso ai dati, è necessario connettersi a un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o di Microsoft SQL Server. Quando la pagina è connessa a un database di questo tipo, nella scheda <B>Database</B> dell'elenco campi compaiono le cartelle contenenti tutte le tabelle o le <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> disponibili nel database. Se l'icona del database nell'elenco campi è contrassegnata da una <B>X</B> rossa e sotto di essa non compare alcuna cartella, è necessario <A HREF="achowSpecifyDatabaseDAPConnectedTo.htm">connettere la pagina di accesso ai dati al database</A> per continuare la progettazione.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutfieldlistfordataaccesspage">inizio</A></P>
+
+<H2><A NAME="accessidentifiesrelatedfields"></A>Individuazione dei campi correlati in Access</H2>
+
+<P class=T>Nell'elenco campi, quando si fa clic sull'<A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefExpandIndicator');" class="pop">indicatore di espansione</A> accanto a una tabella o a una query specifica, viene visualizzato l'elenco dei campi dell'origine record corrispondente. Se l'origine record è una tabella, al di sopra dell'elenco campi verrà visualizzata una cartella Tabelle correlate che elenca le tabelle e i campi correlati alla tabella espansa nell'elenco campi. Se si posiziona il puntatore su una delle tabelle presenti nella cartella Tabelle correlate, viene visualizzato il campo di correlazione delle tabelle. Se si aggiungono i campi direttamente dalle tabelle correlate o dalle query che le utilizzano, vengono utilizzate automaticamente le relazioni esistenti per la creazione della pagina di accesso ai dati. Se si aggiungono i campi da tabelle non correlate o da tabelle che hanno più relazioni con tabelle già utilizzate nella pagina, viene chiesto di definire una nuova relazione ogni volta. Le relazioni definite in questo modo vengono utilizzate solo per la pagina di accesso ai dati corrente e non vengono aggiunte al database.</P>
+
+<P class=ART><IMG SRC="images/dapfldl.bmp" ALT="Elenco campi" BORDER=0></P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; In un ambiente multiutente può essere utile <A HREF="achowRefreshPagesFieldList.htm">aggiornare l'elenco campi</A> di tanto in tanto, nel caso siano state aggiunte tabelle o query dopo l'inizio della progettazione della pagina di accesso ai dati.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutfieldlistfordataaccesspage">inizio</A></P>
+
+<H2><A NAME="youcanaddindividualcontrolsforeachfield"></A>Aggiunta di singoli controlli per ciascun campo</H2>
+
+<P class=T>È possibile trascinare i campi uno alla volta nella pagina di accesso ai dati per <A HREF="achowCreateBoundControlS.htm">creare un controllo</A> associato al campo stesso. In alternativa, è possibile trascinare un'intera tabella o un'altra origine record dall'elenco campi per aggiungere tutti i campi corrispondenti contemporaneamente. Se lo strumento <B>Creazioni guidate Controllo</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrControlWizardsQ');" class="pop"><IMG SRC="images/cntlwizh.bmp"  BORDER=0></A> nella casella degli strumenti è attivato, quando si trascina un'intera tabella in una sezione, viene visualizzata l'Impostazione guidata Layout, in cui è possibile specificare se aggiungere i campi come controlli singoli o come <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPivotTableList');" class="pop">elenco di tabella pivot</A>. Per consentire agli utenti di modificare i dati nei campi o per disporre i controlli in un layout personalizzato, utilizzare i controlli singoli. Fatta eccezione per pochi casi, viene creato automaticamente il tipo di controllo singolo appropriato in base al tipo di dati memorizzati nel campo. È anche possibile <A HREF="achowCreateSpecificTypeOfTextBoxOrOtherControlOnDataAccessPage.htm">scegliere il tipo di controllo singolo da creare</A> prima di trascinare il campo nella pagina di accesso ai dati.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutfieldlistfordataaccesspage">inizio</A></P>
+
+<H2><A NAME="youcanaddapivottablecontrolwithmultiplefields"></A>Aggiunta di un controllo Tabella pivot con più campi</H2>
+
+<P class=T>Per visualizzare dati che si desidera ridisporre, riepilogare e analizzare in vari modi, senza aggiungere o modificare i valori effettivi, è necessario aggiungere i campi come parte di un controllo Tabella pivot. Per ulteriori informazioni, vedere <A HREF="mk:@MSITStore:msowcdpl.chm::/html/dconWhatIsPL.htm">cos'è e come funziona un elenco di tabella pivot</A> prima di prendere una decisione. In alternativa, è possibile utilizzare un elenco di tabella pivot solo per visualizzare i dati in una griglia, ad esempio i record di dettaglio di una <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefGroupedDataAccessPage');" class="pop">pagina di accesso ai dati con gruppi</A>. Quando si utilizza un controllo Tabella pivot in questo modo, è possibile impostare le proprietà in modo da nascondere le funzionalità pivot. Se si crea un elenco di tabella pivot trascinando una tabella o un'altra origine record dall'elenco campi e scegliendo poi <B>Elenco tabella pivot</B>, alcune delle proprietà sono già impostate per nascondere determinate caratteristiche delle tabelle pivot, come la barra del titolo, la barra degli strumenti e le aree di rilascio di righe e colonne. <A HREF="mk:@MSITStore:msowcdpl.chm::/html/ddecToolbarPropBrow.htm">Utilizzare la <B>Casella degli strumenti Tabella pivot</B></A> per modificare queste e altre proprietà del controllo e del relativo contenuto. </P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Un controllo elenco di tabella pivot ha un proprio elenco campi, diverso da quello della pagina di accesso ai dati, che mostra tutti i campi aggiunti dall'elenco campi della pagina di accesso ai dati nel controllo Tabella pivot. Questo elenco non contiene tutti i campi e le origini record disponibili nel database. Se un campo viene rimosso dal controllo elenco di tabella pivot, rimane nell'elenco campi della tabella pivot per consentirne l'aggiunta in un momento successivo. A differenza dell'elenco campi della pagina di accesso ai dati, quello della tabella pivot è anche disponibile nel browser e consente ad altri utenti della pagina di <A HREF="mk:@MSITStore:msowcdpl.chm::/html/dconAboutPLDiffData.htm">aggiungere campi all'elenco di tabella pivot</A> durante l'analisi dei dati.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutfieldlistfordataaccesspage">inizio</A></P>
+
+<H2><A NAME="accessbuildsthesqlqueryforthedataaccesspage"></A>Creazione della query SQL per la pagina di accesso ai dati con Access</H2>
+
+<P class=T>Man mano che si trascinano i campi e le origini record nella pagina di accesso ai dati e che si aggiungono i <A HREF="javascript:HelpPopup('actip9.hlp','defGroupLevel');" class="pop">livelli di gruppo</A>, i tipi di ordinamento e così via, viene costruita una query che converte le informazioni e le impostazioni specificate nel linguaggio <A HREF="javascript:HelpPopup('actip9.hlp','defSQL');" class="pop">Structured Query Language (SQL)</A> comprensibile al database. Utilizzando le <A HREF="javascript:HelpPopup('actip9.hlp','defRelationship');" class="pop">relazioni</A> esistenti definite tra le origini record, viene creata una query in grado di recuperare i dati selezionati e di presentarli nel modo specificato. Se si aggiungono campi da origini record che non hanno alcuna relazione, viene visualizzata la finestra di dialogo <B>Nuova relazione</B> che consente di <A HREF="achowDefineRelationshipDAP.htm">definire la relazione</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutfieldlistfordataaccesspage">inizio</A></P>
+
+<H2><A NAME="accessbuildsthepagesdatadefinition"></A>Creazione della definizione dei dati della pagina di accesso ai dati in Access</H2>
+
+<P class=T>Quando si aggiunge un campo alla pagina di accesso ai dati, lo si aggiunge anche alla definizione dei dati della pagina, ossia all'insieme dei dati aggiunti alla pagina. La definizione dei dati, rappresentata nella scheda <B>Pagina</B> dell'elenco campi, mostra le origini record utilizzate per la pagina, le relazioni tra i dati e i livelli di gruppo.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutfieldlistfordataaccesspage">inizio</A></P>
+
+<H2>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="acconAboutDataInDataAccessPage.htm">Origine dei dati utilizzati da una pagina di accesso ai dati</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutFieldListForDataAccessPageW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

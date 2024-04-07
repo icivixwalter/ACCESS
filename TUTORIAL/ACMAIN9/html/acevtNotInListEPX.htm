@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtNotInListEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2a_1a.rtf'
+Tnum='187724'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento NonInElenco - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtnotinlistepx"></A>Evento NonInElenco - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza l'evento NonInElenco per aggiungere una voce a una casella combinata.</P>
+
+<P class=T>Per provare l'esempio, creare in una maschera una casella combinata chiamata Colori. Impostare a Sì la proprietà <B>Solo in elenco</B> della casella combinata. Per riempire la casella combinata, impostarne la relativa proprietà <B>Tipo origine riga</B> a Elenco valori e fornire un elenco di valori separati da punti e virgola come impostazione della proprietà <B>Origine riga</B>. È possibile ad esempio fornire i valori seguenti come impostazione di questa proprietà: Rosso; Verde; Blu.</P>
+
+<P class=T>Aggiungere quindi la routine evento riportata di seguito alla maschera. Passare alla visualizzazione Maschera e immettere un nuovo valore nella parte testo della casella combinata.</P>
+
+<PRE class=CT><CODE>Private Sub Colori_<B>NotInList</B>(NewData As String, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Response As Integer)
+&nbsp;&nbsp;&nbsp; Dim ctl As Control
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce l'oggetto Control che fa riferimento alla casella combinata.
+&nbsp;&nbsp;&nbsp; Set ctl = Me!Colori
+&nbsp;&nbsp;&nbsp; ' Richiede di verificare se si desidera aggiungere un nuovo valore.
+&nbsp;&nbsp;&nbsp; If MsgBox("Valore non presente nell'elenco. Aggiungere?", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vbOKCancel) = vbOK Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta l'argomento Response per indicare che i dati 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' vengono aggiunti.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Response = acDataErrAdded
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiunge la stringa nell'argomento NewData a origine riga.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctl.RowSource = ctl.RowSource &amp; ";" &amp; NewData
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp; ' Se si sceglie Cancel, si elimina il messaggio di errore
+&nbsp;&nbsp;&nbsp; ' e si annullano le modifiche.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Response = acDataErrContinue
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctl.Undo
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'esempio riportato sopra aggiunge una voce a una casella combinata non associata. Quando si aggiunge una voce a una casella combinata associata, si aggiunge un valore a un campo dell'origine dati sottostante. Nella maggior parte dei casi, non è possibile aggiungere semplicemente un campo in un nuovo record. Secondo la struttura dei dati contenuti nella tabella, è probabilmente necessario aggiungere uno o più campi per soddisfare le richieste dei dati. È necessario ad esempio che il nuovo record includa i valori per qualsiasi campo che comprende la chiave primaria. Se è necessario aggiungere voci in modo dinamico a una casella combinata associata, è necessario richiedere all'utente di immettere i dati per tutti i campi richiesti, salvare il nuovo record e quindi rieseguire la query sulla casella combinata per visualizzare il nuovo valore.</P>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

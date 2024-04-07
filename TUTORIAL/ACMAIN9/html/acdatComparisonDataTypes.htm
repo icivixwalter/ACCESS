@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acdatComparisonDataTypes'
+Feature='acdat'
+Handoff='3'
+SourceFile='acdattyp_1a.doc'
+Tnum='186571'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Confronto di tipi di dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daproType">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlJetDataTypes">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acdatcomparisondatatypes"></A>Confronto di tipi di dati</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acdatComparisonDataTypesC;daproFieldSize;daproType;dasqlJetDataTypes;vagrpDataType">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acdatComparisonDataTypesX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Specifiche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acdatComparisonDataTypesS">
+</OBJECT></P>
+
+
+
+<P class=T>Il <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');"class="pop">modulo di gestione di database di Microsoft Jet</A> riconosce numerosi set di tipi di dati sovrapposti. In Microsoft Access vi sono quattro contesti diversi in cui potrebbe essere necessario specificare un tipo di dati, vale a dire nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');"class="pop">visualizzazione Struttura della tabella</A>, nella finestra di dialogo <B>Parametri query</B>, in Visual Basic e nella <A HREF="javascript:HelpPopup('actip9.hlp','defSQLView');" class="pop">visualizzazione SQL</A> di una query.</P>
+
+<P class=T>La tabella riportata di seguito confronta i cinque set di tipi di dati corrispondenti a ciascun contesto. La prima colonna elenca le impostazioni della proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>Tipo</B></A> disponibili nella visualizzazione Struttura della tabella e le cinque impostazioni della proprietà <A HREF="acproFieldSize.htm"><B>Dimensione campo</B></A> per il tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defNumberDataType');" class="pop">Numerico</A>. La seconda colonna elenca i corrispondenti <A HREF="javascript:HelpPopup('actip9.hlp','defQueryParameterDataType');" class="pop">tipi di dati dei parametri di una query</A> disponibili per strutturare le <A HREF="javascript:HelpPopup('actip9.hlp','defParameterQuery');" class="pop">query con parametri</A> nella finestra di dialogo <B>Parametri query</B>. La terza colonna elenca i corrispondenti tipi di dati di Visual Basic. La quarta colonna elenca i tipi di dati dell'oggetto <B>Field</B> DAO. La quinta colonna elenca i corrispondenti <A HREF="JavaScript:hhobj_5.Click()">tipi di dati del modulo di gestione di database SQL</A> definiti dal modulo di gestione di database Jet insieme ai relativi sinonimi validi.</P>
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=15%>Campi tabella</TH>
+<TH width=15%>Parametri query</TH>
+<TH width=19%>Visual Basic</TH>
+<TH width=20%>Costanti proprietà tipo di dati ADO</TH>
+<TH width=31%>Modulo di gestione SQL di database Microsoft Jet e sinonimi</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%><I>Non supportato</I></TD>
+<TD class=TT width=15%>Binario</TD>
+<TD class=TT width=19%><I>Non supportato</I></TD>
+<TD class=TT width=20%><B>adBinary</B></TD>
+<TD class=TT width=31%>BINARY (Vedere note)<BR>
+(Sinonimo: VARBINARY)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Sì/No</TD>
+<TD class=TT width=15%>Sì/No</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defBoolean');" class="pop"><B>Booleano</B></A></TD>
+<TD class=TT width=20%><B>adBoolean</B></TD>
+<TD class=TT width=31%>BOOLEAN<BR>
+(Sinonimi: BIT, LOGICAL, LOGICAL1, YESNO)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Numerico<BR>
+(<B>Dimensione campo</B> =
+Byte)</TD>
+<TD class=TT width=15%>Byte</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defByteDataType');" class="pop"><B>Byte</B></A></TD>
+<TD class=TT width=20%><B>adUnsignedTinyInt</B></TD>
+<TD class=TT width=31%>BYTE<BR>
+(Sinonimo: INTEGER1)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Contatore<BR>
+(<B>Dimensione campo</B>=
+<P class=TT>Intero lungo)</P>
+</TD>
+<TD class=TT width=15%>Intero lungo</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defLongDataType');" class="pop"><B>Intero lungo</B></A></TD>
+<TD class=TT width=20%><B>adInteger</B></TD>
+<TD class=TT width=31%>COUNTER<BR>
+(Sinonimo: AUTOINCREMENT)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Valuta</TD>
+<TD class=TT width=15%>Valuta</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defCurrencyDataType');" class="pop"><B>Valuta</B></A></TD>
+<TD class=TT width=20%><B>adCurrency</B></TD>
+<TD class=TT width=31%>CURRENCY<BR>
+(Sinonimo: MONEY)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Data/ora</TD>
+<TD class=TT width=15%>Data/ora</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defDateDataType');" class="pop"><B>Data</B></A></TD>
+<TD class=TT width=20%><B>adDate</B></TD>
+<TD class=TT width=31%>DATETIME<BR>
+(Sinonimi: DATE, TIME, TIMESTAMP)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Numerico<BR>
+(<B>Dimensione campo</B> =<BR>
+Precisione doppia)</TD>
+<TD class=TT width=15%>Precisione doppia</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defDoubleDataType');" class="pop"><B>Precisione doppia</B></A></TD>
+<TD class=TT width=20%><B>adDouble</B></TD>
+<TD class=TT width=31%>DOUBLE<BR>
+(Sinonimi: FLOAT, FLOAT8, IEEEDOUBLE, NUMBER, NUMERIC)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Contatore /GUID
+<P class=TT>(<B>Dimensione campo</B> =<BR>
+ID replica)</P>
+</TD>
+<TD class=TT width=15%>ID replica</TD>
+<TD class=TT width=19%><I>Non supportato</I></TD>
+<TD class=TT width=20%><B>adGUID</B></TD>
+<TD class=TT width=31%>GUID</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Numerico<BR>
+(<B>Dimensione campo</B> =<BR>
+Intero lungo)</TD>
+<TD class=TT width=15%>Intero lungo</TD>
+<TD class=TT width=19%><B>Lungo</B></TD>
+<TD class=TT width=20%><B>adInteger</B></TD>
+<TD class=TT width=31%>LONG (Vedere note)<BR>
+(Sinonimi: INT, INTEGER, INTEGER4)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Oggetto OLE</TD>
+<TD class=TT width=15%>Oggetto OLE</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defStringDataType');" class="pop"><B>Stringa</B></A></TD>
+<TD class=TT width=20%><B>adLongVarBinary</B></TD>
+<TD class=TT width=31%>LONGBINARY<BR>
+(Sinonimi: GENERAL, OLEOBJECT)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Memo</TD>
+<TD class=TT width=15%>Memo</TD>
+<TD class=TT width=19%><B>Stringa</B></TD>
+<TD class=TT width=20%><B>adLongVarWChar</B></TD>
+<TD class=TT width=31%>LONGTEXT<BR>
+(Sinonimi: LONGCHAR, MEMO, NOTE)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Numerico<BR>
+(<B>Dimensione campo</B> =<BR>
+Precisione singola)</TD>
+<TD class=TT width=15%>Precisione singola</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defSingleDataType');" class="pop"><B>Precisione singola</B></A></TD>
+<TD class=TT width=20%><B>adSingle</B></TD>
+<TD class=TT width=31%>SINGLE<BR>
+(Sinonimi: FLOAT4, IEEESINGLE, REAL)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Numerico<BR>
+(<B>Dimensione campo</B> =<BR>
+Intero)</TD>
+<TD class=TT width=15%>Intero</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>Intero</B></A></TD>
+<TD class=TT width=20%><B>adSmallInt</B></TD>
+<TD class=TT width=31%>SHORT (Vedere note)<BR>
+(Sinonimi: INTEGER2, SMALLINT)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Testo</TD>
+<TD class=TT width=15%>Testo</TD>
+<TD class=TT width=19%><B>Stringa</B></TD>
+<TD class=TT width=20%><B>adVarWChar</B></TD>
+<TD class=TT width=31%>TEXT<BR>
+(Sinonimi: ALPHANUMERIC, CHAR, CHARACTER, STRING, VARCHAR)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%>Collegamento ipertestuale</TD>
+<TD class=TT width=15%>Memo</TD>
+<TD class=TT width=19%><B>Stringa</B></TD>
+<TD class=TT width=20%><B>adLongVarWChar</B></TD>
+<TD class=TT width=31%>LONGTEXT<BR>
+(Sinonimi: LONGCHAR, MEMO, NOTE)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%><I>Non supportato</I></TD>
+<TD class=TT width=15%>Valore</TD>
+<TD class=TT width=19%><A HREF="javascript:HelpPopup('actip9.hlp','defVariant');" class="pop"><B>Variante</B></A></TD>
+<TD class=TT width=20%><B>adVariant</B></TD>
+<TD class=TT width=31%>VALUE (Vedere note)</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Microsoft Access non utilizza il tipo di dati Binario. Esso viene riconosciuto soltanto per l'utilizzo nelle query su tabelle collegate da altri prodotti di database che supportano il tipo di dati Binario.<BR><BR></LI>
+
+	<LI class=NLB>Il tipo di dati INTEGER nel modulo di gestione di database Jet SQL non corrisponde al tipo di dati <B>Intero</B> per i campi di tabella, per i parametri di query o per Visual Basic. Invece, in SQL, il tipo di dati INTEGER corrisponde a un tipo di dati <B>Intero lungo</B> per campi di tabella e parametri di query e a un tipo di dati <B>Long</B> in Visual Basic.<BR><BR></LI>
+
+	<LI class=NLB>La parola riservata VALUE non rappresenta un tipo di dati definito dal modulo di gestione di database Jet. In Microsoft Access o nelle query SQL tuttavia la parola riservata VALUE può essere considerata un sinonimo valido per il tipo di dati <B>Variante</B> di Visual Basic.<BR><BR></LI>
+
+	<LI class=NLB>Se si sta impostando il tipo di dati per un <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetto DAO</A> nel codice Visual Basic, è necessario impostare la proprietà <B>Type</B> dell'oggetto.</LI>
+</UL>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acdatComparisonDataTypesW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

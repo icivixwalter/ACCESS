@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproSQLX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234547'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà SQL (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprosqlx"></A>Esempio di proprietà SQL (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea una query con parametri in base alla tabella Ordini. La query seleziona tutti gli ordini la cui data di ordinazione è compresa tra i valori immessi dall'utente.</P>
+
+<PRE class=CT><CODE>Sub IntervalloDiOrdini()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, qdf As QueryDef, rst As Recordset
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea una nuova query.
+&nbsp;&nbsp;&nbsp; Set qdf = dbs.CreateQueryDef("IntervalloDiOrdini")
+&nbsp;&nbsp;&nbsp; ' Crea una dichiarazione SQL compresi i parametri.
+&nbsp;&nbsp;&nbsp; qdf.<B>SQL</B> = "PARAMETERS [Inizio] DATETIME, [Fine] DATETIME; " &amp; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "SELECT * FROM Ordini WHERE DataOrdine BETWEEN " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "[Inizio] AND [Fine];"
+&nbsp;&nbsp;&nbsp; qdf.Parameters("Inizio") = #1/1/96#
+&nbsp;&nbsp;&nbsp; qdf.Parameters("Fine") = #1/31/96#
+&nbsp;&nbsp;&nbsp; ' Crea un oggetto Recordset di tipo snapshot da oggetto QueryDef.
+&nbsp;&nbsp;&nbsp; Set rst = qdf.OpenRecordset(dbOpenSnapshot)
+&nbsp;&nbsp;&nbsp; ' Esegue le operazioni relative al set di record.
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

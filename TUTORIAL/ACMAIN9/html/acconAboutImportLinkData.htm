@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutImportLinkData'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='241695'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'importazione e il collegamento di dati e l'importazione di oggetti di database</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acdecCreateAccessProject">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconaboutimportlinkdata"></A>Informazioni sull'importazione e il collegamento di dati e l'importazione di oggetti di database</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconaboutimportlinkdata_1">Differenza tra importazione e collegamento</A></P>
+
+<P class=LBR1><A HREF="#acconaboutimportlinkdata_2">Importazione di dati</A></P>
+
+<P class=LBR1><A HREF="#acconaboutimportlinkdata_3">Collegamento di dati</A></P>
+
+<P class=LBR1><A HREF="#acconaboutimportlinkdata_4">Modi per importare e collegare i dati</A></P>
+
+<P class=LBR1><A HREF="#acconaboutimportlinkdata_5">Utilizzo delle origini dati ODBC</A></P>
+
+<P class=LBR1><A HREF="#acconaboutimportlinkdata_6">Programmi non supportati</A></P>
+
+<P class=LBR1><A HREF="#acconaboutimportlinkdata_7">Automatizzazione delle operazioni di importazione</A></P>
+
+<H2><A NAME="acconaboutimportlinkdata_1"></A>Differenza tra importazione e collegamento</H2>
+
+<P class=T>In Microsoft Access vi sono due modi per utilizzare i dati di un'origine dati esterna. È possibile:
+
+<UL>
+	<LI class=LB1>Importare i dati in una nuova tabella di Microsoft Access per convertire i dati da un formato diverso e copiarli in Microsoft Access. È anche possibile importare oggetti di database nel <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessdatabase');" class="pop">database di Microsoft Access</A> o nel <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> corrente.<BR><BR></LI>
+
+	<LI class=LB1>Collegare i dati per connettersi a essi da un'altra applicazione senza importarli. In questo modo, è possibile visualizzare e modificare i dati sia nell'applicazione originale che in un database di Access. Nelle versioni precedenti di Microsoft Access questo processo veniva definito con il nome di allegazione.</LI>
+</UL>
+
+<P class=T>È possibile importare o collegare i dati da una varietà di <A HREF="acrefDataSourcesMicrosoftAccessCanImportOrLink.htm">database, programmi e formati di file supportati</A>. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutimportlinkdata">inizio</A></P>
+
+<H2><A NAME="acconaboutimportlinkdata_2"></A>Importazione di dati</H2>
+
+<P class=T>Quando si importano dei dati, se ne crea una copia in una nuova tabella nel database o nel progetto di Access. In questo processo la tabella o il file di origine non viene alterato. </P>
+
+<P class=T>Quando si importano dei dati, non è possibile accodarli a tabelle esistenti, tranne quando si importano file di testo o fogli di calcolo. Una volta importata una tabella tuttavia, in un database di Access è possibile eseguire una <A HREF="javascript:HelpPopup('actip9.hlp','defAppendQuery');" class="pop">query di accodamento</A> o in un progetto di Access è possibile utilizzare una <A HREF="javascript:HelpPopup('actip9.hlp','defstoredprocedure');" class="pop">stored procedure</A> per aggiungere i dati della tabella in un'altra.</P>
+
+<P class=T>È anche possibile importare oggetti di database che non siano tabelle, ad esempio maschere e report, da un altro database o progetto di Access.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutimportlinkdata">inizio</A></P>
+
+<H2><A NAME="acconaboutimportlinkdata_3"></A>Collegamento di dati</H2>
+
+<P class=T>In un database di Access collegare i dati significa leggerli e, nella maggior parte dei casi, aggiornarli nell'origine dati esterna senza eseguire l'importazione. Il formato dell'origine dati esterna non viene alterato in modo che l'utente possa continuare a utilizzare il file con il programma con cui è stato creato. È tuttavia possibile aggiungere, eliminare o modificare i relativi dati utilizzando Microsoft Access. Una tabella può essere collegata solo in un database di Access, non in un progetto.</P>
+
+<P class=T>In Microsoft Access vengono utilizzate icone diverse per rappresentare le tabelle collegate e le tabelle memorizzate nel database corrente. Se si elimina l'icona corrispondente a una tabella collegata, si elimina il collegamento alla tabella, non la tabella esterna vera e propria.</P>
+
+<P class=ART><IMG SRC="images/ctblimp1.bmp" ALT="Icone per tabelle collegate nella finestra del database" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutimportlinkdata">inizio</A></P>
+
+<H2><A NAME="acconaboutimportlinkdata_4"></A>Modi per importare e collegare i dati</H2>
+
+<P class=T>Vi sono due modi per importare o collegare i dati:
+
+<UL>
+	<LI class=LB1>Aprire o <A HREF="acdecDecideMethodUseCreateDatabaseS.htm">creare un database di Access</A> oppure <A HREF="JavaScript:hhobj_1.Click()">creare un progetto di Access</A> in cui inserire le tabelle importate o le tabelle collegate nel caso di un database di Access, quindi utilizzare il comando <B>Importa</B> o <B>Collega</B> <B>tabelle</B> del sottomenu <B>Carica dati</B> <B>esterni</B> del menu <B>File</B>.<BR><BR></LI>
+
+	<LI class=LB1>In un database di Access <A HREF="achowOpenExistingDatabaseS.htm">aprire il database esterno</A> direttamente, ad esempio dBASE, Paradox o Exchange, e qualsiasi origine dati ODBC, tra cui Microsoft SQL Server e Microsoft Visual FoxPro. A questo punto verrà creato automaticamente un nuovo database di Access nella stessa cartella del database esterno e verranno aggiunti dei collegamenti a ciascuna tabella del database esterno.</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutimportlinkdata">inizio</A></P>
+
+<H2><A NAME="acconaboutimportlinkdata_5"></A>Utilizzo delle origini dati ODBC</H2>
+
+<P class=T>È possibile importare o collegare dati da database <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC</A>, ad esempio Microsoft SQL Server e Visual FoxPro, nonché da altri programmi dotati di driver conformi a ODBC Level 1 per accedere ai relativi file di dati.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutimportlinkdata">inizio</A></P>
+
+<H2><A NAME="acconaboutimportlinkdata_6"></A>Programmi non supportati</H2>
+
+<P class=T>Se si utilizza un programma i cui dati non sono memorizzati in uno dei formati di file o di database esterni supportati, ma che è comunque in grado di esportare, convertire o salvare i dati in uno di questi formati, è possibile importare tali dati. Inoltre, quando si importa o collega un formato di database esterno, quale dBASE o Paradox, in genere vengono mantenuti gli indici. Non è possibile ad esempio importare o collegare direttamente un database di Microsoft Works, ma è possibile esportare i dati da Microsoft Works in un file di database dBASE IV (dbf), quindi importare i dati in Microsoft Access per mantenere i nomi dei campi e gli indici. </P>
+
+<P class=T>In generale la maggior parte dei programmi non supportati, anche quelli su sistemi operativi diversi, è in grado di esportare i dati in un file di testo delimitato o a larghezza fissa, che potrà poi essere importato o collegato da Microsoft Access. Gli indici non verranno comunque mantenuti.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutimportlinkdata">inizio</A></P>
+
+<H2><A NAME="acconaboutimportlinkdata_7"></A>Automatizzazione delle operazioni di importazione</H2>
+
+<P class=T>Le operazioni di importazione più frequenti possono essere eseguite più facilmente se le si rende automatiche <A HREF="acdecCreateOrModifyMacros.htm">creando una macro</A> o <A HREF="acdecCreateOrModifyProceduresInModules.htm">creando una routine Visual Basic, Applications Edition</A>. Ciò è utile ad esempio per importare i dati con scadenze regolari o quando l'importazione dei dati deve essere eseguita secondo requisiti particolarmente complessi o insoliti.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutimportlinkdata">inizio</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutImportLinkDataW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

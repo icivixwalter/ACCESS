@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproObjectX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproole2_1a.rtf'
+Tnum='187739'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Object</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproobjectx"></A>Esempio di proprietà Object</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare la proprietà <B>Object</B> di una cornice oggetto non associato OLE1. Le informazioni relative al nome del cliente e all'indirizzo vengono inserite in un documento incorporato di Word, formattato come una lettera tipo, con segnaposti per il nome e l'indirizzo e del testo preimpostato nel corpo della lettera. La routine sostituisce il nome e l'indirizzo per ciascun record e stampa la lettera tipo. La routine non salva copie della lettera tipo stampata.</P>
+
+<PRE class=CT><CODE>Sub StampaLetteraTipo_Click()
+&nbsp;&nbsp;&nbsp; Dim objWord As Object
+&nbsp;&nbsp;&nbsp; Dim strCliente As String, strIndirizzo As String
+&nbsp;&nbsp;&nbsp; Dim strCittà As String, strZona As String
+
+&nbsp;&nbsp;&nbsp; ' Assegna la proprietà Object del controllo alla variabile.
+&nbsp;&nbsp;&nbsp; Set objWord = Me!OLE1.<B>Object</B>.Application.Wordbasic
+&nbsp;&nbsp;&nbsp; ' Assegna indirizzo del cliente alle variabili.
+&nbsp;&nbsp;&nbsp; strCliente = Me!NomeSocietà
+&nbsp;&nbsp;&nbsp; strIndirizzo = Me!Indirizzo
+&nbsp;&nbsp;&nbsp; strCittà = Me!Città &amp; ", "
+&nbsp;&nbsp;&nbsp; If Not IsNull(Me!Zona) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strZona = Me!Zona
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strZona = Me!Paese
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; ' Attiva controllo ActiveX.
+&nbsp;&nbsp;&nbsp; Me!OLE1.Action = acOLEActivate
+&nbsp;&nbsp;&nbsp; With objWord
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.StartOfDocument
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Passa al primo segnaposto.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.LineDown 2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Evidenzia il testo del segnaposto.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.EndOfLine 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inserisci il nome del cliente.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Insert strCliente
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Passa al segnaposto successivo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.LineDown
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.StartOfLine
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Evidenzia il testo del segnaposto.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.EndOfLine 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inserisci indirizzo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Insert strIndirizzo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Passa all'ultimo segnaposto.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.LineDown
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.StartOfLine
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Evidenzia il testo del segnaposto.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.EndOfLine 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inserisci Città e Zona.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Insert strCittà &amp; strZona
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.FilePrint
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.FileClose
+&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; Set objWord = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

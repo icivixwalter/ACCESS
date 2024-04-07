@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproObjectVerbsX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproole2_1a.rtf'
+Tnum='187759'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ObjectVerbs e ObjectVerbsCount</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproobjectverbsx"></A>Esempio di proprietà ObjectVerbs e ObjectVerbsCount</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono restituiti i verbi supportati dall'oggetto OLE nel controllo OLE1 e ciascun verbo viene visualizzato in una casella di messaggio.</P>
+
+<PRE class=CT><CODE>Sub OttieneElencoVerbi(frm As Form, OLE1 As Control)
+&nbsp;&nbsp;&nbsp; Dim intX As Integer, intVerbiNum As Integer
+&nbsp;&nbsp;&nbsp; Dim strElencoVerbi As String
+
+&nbsp;&nbsp;&nbsp; ' Aggiorna elenco verbi.
+&nbsp;&nbsp;&nbsp; With frm!OLE1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.Action = acOLEFetchVerbs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intVerbiNum =.ObjectVerbsCount
+&nbsp;&nbsp;&nbsp; For intX = 0 To intVerbiNum - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strElencoVerbi = strElencoVerbi &amp;.ObjectVerbs(intX) &amp; "; "
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next intX
+&nbsp;&nbsp;&nbsp; End With
+
+&nbsp;&nbsp;&nbsp; ' Visualizza verbi in casella di messaggio.
+&nbsp;&nbsp;&nbsp; MsgBox Left(strElencoVerbi, Len(strElencoVerbi) - 2)
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

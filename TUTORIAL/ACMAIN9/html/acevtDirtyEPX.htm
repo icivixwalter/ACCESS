@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtDirtyEPX'
+Feature='acevt'
+Handoff='2'
+SourceFile='acevtV9.doc'
+Tnum='250697'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Dirty - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtdirtyepx"></A>Evento Dirty - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene attivato il pulsante pulsAnnulla quando si modificano i dati. La subroutine AnnullaModifiche( ) viene richiamata dall'evento Dirty dei controlli Casella di testo. Scegliendo il pulsante pulsAnnulla viene ripristinato il valore originale del controllo tramite la proprietà <B>Vecchio valore</B>.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Dirty</B>()
+    If Me.Dirty Then
+        Me!pulsAnnulla.Enabled = True    ' Attiva pulsante.
+    Else
+        Me!pulsAnnulla.Enabled = False    ' Disattiva pulsante.
+    End If
+End Sub
+
+Sub pulsAnnulla_Click()
+    Dim ctlC As Control
+        ' Per ogni controllo.
+        For Each ctlC in Me.Controls
+            If ctlC.ControlType = acTextBox Then
+                ' Ripristina valore precedente.
+                ctlC.Value = ctlC.OldValue
+            End If
+        Next ctlC
+End Sub
+</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

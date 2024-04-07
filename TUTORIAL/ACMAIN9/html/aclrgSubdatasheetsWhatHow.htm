@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='aclrgSubdatasheetsWhatHow'
+Feature='Data: Subdatasheets'
+Handoff='2'
+SourceFile='ctbldat4.rtf'
+Tnum='236216'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'utilizzo dei fogli dati secondari</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproSubdatasheetName">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowDefineRelationshipsBetweenTablesS">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproSourceObject">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproLinkChildMasterFields">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproDefaultView">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="aclrgsubdatasheetswhathow"></A>Informazioni sull'utilizzo dei fogli dati secondari</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#aclrgsubdatasheetswhathow_1">Definizione di foglio dati secondario</A></P>
+
+<P class=LBR1><A HREF="#aclrgsubdatasheetswhathow_2">Modalità di utilizzo del foglio dati secondario</A></P>
+
+<P class=LBR1><A HREF="#aclrgsubdatasheetswhathow_4">Fogli dati secondari di tabella e di query</A></P>
+
+<P class=LBR1><A HREF="#aclrgsubdatasheetswhathow_3">Nidificazione dei fogli dati secondari</A></P>
+
+<P class=LBR1><A HREF="#aclrgsubdatasheetswhathow_5">Maschere, sottomaschere e fogli dati secondari</A></P>
+
+<P class=LBR1><A HREF="#aclrgsubdatasheetswhathow_6">Confronto tra fogli dati secondari in un database e in un progetto di Microsoft Access</A></P>
+
+<P class=LBR1><A HREF="#aclrgsubdatasheetswhathow_7">Ulteriori informazioni</A></P>
+
+<H2><A NAME="aclrgsubdatasheetswhathow_1"></A>Definizione di foglio dati secondario</H2>
+
+<P class=T>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefSubdatasheet');" class="pop">foglio dati secondario</A> è possibile visualizzare o modificare dati <A HREF="javascript:HelpPopup('actip9.hlp','defRelationship');" class="pop">correlati</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defJoin');" class="pop">collegati tramite join</A> di un foglio dati di tabella, query, maschera o <A HREF="javascript:HelpPopup('actip9.hlp','defSubForm');" class="pop">sottomaschera</A>. Ad esempio, nel database di esempio Northwind la tabella Fornitori ha una <A HREF="javascript:HelpPopup('actip9.hlp','defOneToMany');" class="pop">relazione uno-a-molti</A> con la tabella Prodotti, di conseguenza per ogni riga della tabella Fornitori in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetview');" class="pop">visualizzazione Foglio dati</A> è possibile visualizzare e modificare le righe correlate della tabella Prodotti di un foglio dati secondario.</P>
+
+<P class=ART><IMG SRC="images/ctbldat4.bmp" ALT="Tabella Fornitori in visualizzazione Foglio dati contenente un foglio dati secondario della tabella Prodotti" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#aclrgsubdatasheetswhathow">inizio</A></P>
+
+<H2><A NAME="aclrgsubdatasheetswhathow_2"></A>Modalità di utilizzo del foglio dati secondario</H2>
+
+<P class=T>Access crea automaticamente un foglio dati secondario in una tabella che presenta una <A HREF="javascript:HelpPopup('actip9.hlp','defOneToOne');" class="pop">relazione uno-a-uno</A> o che si trova sul lato "uno" di una relazione uno-a-molti, quando la proprietà <A HREF="JavaScript:hhobj_1.Click()"><B>Nome foglio dati second.</B></A> della tabella è impostata ad <B>Auto</B>. La relazione si definisce specificando come corrispondenti i campi <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defforeignKey');" class="pop">chiave esterna</A> nelle tabelle correlate. 
+Per ulteriori informazioni, vedere <A HREF="JavaScript:hhobj_2.Click()">Definizione di relazioni</A>.</P>
+
+<P class=T>È tuttavia possibile aggiungere un foglio dati secondario a qualsiasi tabella, query o maschera. Un foglio dati secondario può avere come oggetto origine una tabella o una query, specificata nella proprietà <B>SubdatasheetName</B>. Un foglio dati secondario corrispondente a un  <A HREF="javascript:HelpPopup('actip9.hlp','defSubformSubreport');" class="pop">controllo sottomaschera</A> può avere come oggetto origine una tabella, una query o una maschera; tale oggetto origine viene specificato nella <A HREF="JavaScript:hhobj_3.Click()">proprietà <B>SourceObject</B></A> del controllo sottomaschera.</P>
+
+<P class=rtt>Torna all'<A HREF="#aclrgsubdatasheetswhathow">inizio</A></P>
+
+<H2><A NAME="aclrgsubdatasheetswhathow_4"></A>Fogli dati secondari di tabella e di query</H2>
+
+<P class=T>In visualizzazione Foglio dati sia la tabella sia la query possono contenere un foglio dati secondario. Se una tabella presenta una relazione uno-a-molti con più tabelle, è possibile scegliere la tabella da aggiungere come foglio dati secondario facendo clic sull'icona <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefExpandIndicator');" class="pop">indicatore di espansione</A> (+) e selezionando una tabella nella finestra di dialogo <B>Inserisci foglio dati secondario</B>. </P>
+
+<P class=T>Per impostazione predefinita, Access non visualizza la chiave esterna o i campi corrispondenti nel foglio dati secondario. È possibile visualizzare temporaneamente la chiave esterna o i campi corrispondenti scegliendo <B>Scopri colonne</B> dal menu <B>Formato</B>, ma alla successiva apertura del foglio dati contenente il foglio dati secondario, le colonne saranno di nuovo nascoste. Il fatto che questi campi vengano scoperti o nascosti modifica solo l'aspetto del foglio dati secondario, ma non modifica alcuna relazione o oggetto origine dello stesso.</P>
+
+<P class=T>Utilizzando il comando <B>Foglio dati secondario</B> del menu <B>Inserisci</B> è possibile aggiungere un foglio dati secondario a una tabella o a una query in visualizzazione Foglio dati oppure modificare un foglio dati secondario. I campi corrispondenti tra il foglio dati e il foglio dati secondario devono essere specificati nelle caselle <B>Collega campi secondari</B> e <B>Collega campi master</B> della finestra di dialogo <B>Inserisci foglio dati secondario</B>. Queste caselle corrispondono alle proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>LinkChildFields</B> e <B>LinkMasterFields</B></A> della tabella o della query contenente il foglio dati secondario. Se queste caselle rimangono vuote, vengono visualizzate tutte le righe del foglio dati secondario sotto ciascuna riga del foglio dati, non solo le righe del foglio dati secondario che presentano la corrispondenza.</P>
+
+<P class=rtt>Torna all'<A HREF="#aclrgsubdatasheetswhathow">inizio</A></P>
+
+<H2><A NAME="aclrgsubdatasheetswhathow_3"></A>Nidificazione dei fogli dati secondari</H2>
+
+<P class=T>È possibile nidificare un foglio dati secondario all'interno di un foglio dati secondario fino a un massimo di otto livelli. Tuttavia, ogni foglio dati o foglio dati secondario può avere un solo foglio dati secondario nidificato. Ad esempio, nel database di esempio Northwind, la tabella Clienti può contenere un solo foglio dati secondario della tabella Origini, e questo a sua volta può contenere un solo foglio dati secondario Dettagli ordini. La tabella Clienti non può però contenere un foglio dati secondario della tabella Ordini e un foglio dati secondario della query Venditori.</P>
+
+<P class=rtt>Torna all'<A HREF="#aclrgsubdatasheetswhathow">inizio</A></P>
+
+<H2><A NAME="aclrgsubdatasheetswhathow_5"></A>Maschere, sottomaschere e fogli dati secondari</H2>
+
+<P class=T>Anche una maschera in visualizzazione Maschera o in visualizzazione Foglio dati può avere un foglio dati secondario, ma esistono delle differenze tra il foglio dati secondario di una maschera e quello di una tabella o di una query:
+
+<UL>
+	<LI class=LB1>Il foglio dati secondario viene inserito in una maschera aggiungendo un controllo sottomaschera e definendo un oggetto origine tramite l'impostazione della proprietà <B>SourceObject</B> del controllo della sottomaschera a una tabella, a una query o a una maschera. Il foglio dati secondario di una maschera corrisponde a una sottomaschera. Se l'oggetto origine della sottomaschera è una maschera, è possibile impostare la <A HREF="JavaScript:hhobj_5.Click()">proprietà <B>Visualizzazione predefinita</B></A> della stessa a <B>Foglio dati</B>, <B>Visualizzazione singola</B> o <B>Maschere continue</B>. Di conseguenza, quando la maschera è in visualizzazione Foglio dati, è possibile vedere il foglio dati secondario come una maschera singola o continua. Nel foglio dati secondario è possibile <A HREF="achowSwitchBetweenDatasheetViewFormViewInSubformS.htm">passare dalla visualizzazione Foglio dati alla visualizzazione Maschera e viceversa</A> scegliendo <B>Foglio dati</B> <B>sottomaschera</B> dal menu <B>Visualizza</B>. Come i fogli dati secondari di tabella e di query, se le proprietà <B>LinkChildFields</B> e <B>LinkMasterFields</B> della sottomaschera non sono definite, Access visualizza tutte le righe dell'oggetto origine, non solo quelle corrispondenti.<BR><BR></LI>
+
+	<LI class=LB1>Sebbene una maschera possa avere più di una sottomaschera, ognuna delle quali può essere nidificata fino a un massimo di due livelli, in visualizzazione Foglio dati di una maschera viene visualizzato un solo foglio dati secondario. Access visualizza il foglio dati secondario corrispondente alla prima sottomaschera nell'ordine della struttura a schede della maschera. Tuttavia, se una sottomaschera ha una tabella o query come oggetto origine e la proprietà <B>Visualizzazione predefinita</B> impostata a <B>Foglio dati</B>, è possibile inserire un altro foglio dati secondario in quello che corrisponde alla sottomaschera e nidificare fino a otto livelli in visualizzazione Foglio dati o in <A HREF="javascript:HelpPopup('actip9.hlp','defFormview');" class="pop">visualizzazione Maschera</A>.<BR><BR></LI>
+
+	<LI class=LB1>La prima volta che si apre una tabella, una query o una maschera in visualizzazione Foglio dati, il relativo foglio dati secondario non viene espanso; quando invece una maschera viene aperta per la prima volta in visualizzazione Maschera, il foglio dati secondario corrispondente alla sottomaschera viene espanso.<BR><BR></LI>
+
+	<LI class=LB1>Se l'oggetto origine della sottomaschera è una maschera, è possibile visualizzare in modo permanente la chiave esterna o i campi corrispondenti del foglio dati secondario corrispondente alla sottomaschera.</LI>
+</UL>
+
+<P class=T><A HREF="acconWhatIsSubformS.htm">Ulteriori informazioni sulle sottomaschere</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#aclrgsubdatasheetswhathow">inizio</A></P>
+
+<H2><A NAME="aclrgsubdatasheetswhathow_6"></A>Confronto tra fogli dati secondari in un database e in un progetto di Microsoft Access</H2>
+
+<P class=T>È possibile utilizzare un foglio dati secondario di tabella o di query solo in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> e non in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>. Tuttavia, è possibile utilizzare un foglio dati secondario in una sottomaschera o in visualizzazione Foglio dati di maschera sia in un database di Access sia in un progetto di Access.</P>
+
+<P class=rtt>Torna all'<A HREF="#aclrgsubdatasheetswhathow">inizio</A></P>
+
+<H2><A NAME="aclrgsubdatasheetswhathow_7"></A>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="achowInsertSubdatasheet.htm">Inserire o modificare un foglio dati secondario di tabella o di query in un database di Access</A></P>
+
+<P class=rtt>Torna all'<A HREF="#aclrgsubdatasheetswhathow">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="aclrgSubdatasheetsWhatHowW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

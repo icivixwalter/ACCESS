@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDSumX'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187196'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di funzione DSum</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdsumx"></A>Esempi di funzione DSum</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si calcola il totale dei valori del campo Spese trasporto relativo agli ordini spediti nel Regno Unito. Il dominio è la tabella Ordini. L'argomento <I>criteri</I> limita il set di record risultante ai record per cui PaeseDestinatario è UK.</P>
+
+<PRE class=CT><CODE>Dim curX As Currency
+curX = <B>DSum(</B>"[SpeseTrasporto]", "Ordini", "[PaeseDestinatario] = 'UK'"<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si calcola un totale utilizzando due criteri distinti. Si noti che nell'espressione stringa vengono inclusi gli apici (') e i cancelletti (#) in modo che, quando le stringhe verranno concatenate, la variabile letterale <CODE>UK</CODE> viene racchiusa tra apici e la data viene racchiusa tra cancelletti.</P>
+
+<PRE class=CT><CODE>Dim curX As Currency
+curX = <B>DSum(</B>"[SpeseTrasporto]", "Ordini", _
+&nbsp;&nbsp;&nbsp; "[PaeseDestinatario] = 'UK' AND [DataSpedizione] &gt; #01/01/95#"<B>)</B></CODE></PRE>
+
+
+
+<P class=T>È possibile utilizzare una funzione di dominio nella riga <B>Aggiorna a</B> di una query di aggiornamento. Se ad esempio si desidera tenere traccia in una tabella Prodotti delle vendite correnti secondo il prodotto, è possibile aggiungere alla tabella Prodotti un nuovo campo chiamato VenditeAggiornate ed eseguire una query di aggiornamento per calcolare i valori corretti e aggiornare i record. Creare una nuova query basata sulla tabella Prodotti e scegliere <B>Aggiorna</B> dal menu <B>Query</B>. Aggiungere il campo VenditeAggiornate alla griglia della query e immettere quanto segue nella riga <B>Aggiorna a</B>:</P>
+
+<PRE class=CT><CODE><B>DSum(</B>"[Quantità]*[PrezzoUnitario]", "Dettagli Ordini", "[IDProdotto] = " _
+&nbsp;&nbsp;&nbsp; &amp; [IDProdotto]<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Quando si esegue la query, si calcola il totale complessivo delle vendite per ciascun prodotto, in base alle informazioni di una tabella Dettagli ordini. La somma delle vendite per ciascun prodotto viene aggiunta alla tabella Prodotti.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

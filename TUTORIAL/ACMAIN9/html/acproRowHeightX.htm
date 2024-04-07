@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRowHeightX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosht2_1a.rtf'
+Tnum='187985'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà RowHeight, ColumnWidth</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorowheightx"></A>Esempio di proprietà RowHeight, ColumnWidth</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene modificata l'altezza delle righe in visualizzazione Foglio dati della tabella Clienti per visualizzare due righe di dati (450 twip) e impostare la larghezza della colonna Indirizzo a 3,8 cm o 1,5 pollici, corrispondenti a 2160 twip. Le impostazioni di questa proprietà hanno effetto sulla successiva apertura della tabella Clienti in visualizzazione Foglio dati.</P>
+
+<P class=T>Per impostare le proprietà <B>RowHeight</B> e <B>ColumnWidth</B>, viene utilizzata nell'esempio la routine ImpostaProprietàTabella, mostrata nell'<A HREF="acproDatasheetFontItalicX.htm">esempio</A> delle proprietà <B>DatasheetFontItalic</B>, <B>DatasheetFontUnderline</B> e la routine ImpostaProprietàCampo, mostrata nell'<A HREF="acproColumnHiddenX.htm">esempio</A> della proprietà <B>ColumnHidden</B>.</P>
+
+<PRE class=CT><CODE>Dim dbs As Object, tdfClienti As Object
+Const DB Long As Long = 4
+Const DB Integer As Integer = 3
+Set dbs = CurrentDb
+Set tdfClienti = dbs![Clienti]
+ImpostaProprietàTabella tdfClienti, "<B>RowHeight</B>", DB_Long, 450
+ImpostaProprietàCampo tdfClienti![Indirizzo], "<B>ColumnWidth</B>", DB_Integer, 2160</CODE></PRE>
+
+
+
+<P class=T>L'esempio successivo ha luogo in visualizzazione Foglio dati della maschera Clienti aperta. Si imposta l'altezza delle righe a 450 twip e si dimensiona la colonna in modo che si adatti alla dimensione del testo visibile.</P>
+
+<PRE class=CT><CODE>Forms![Clienti].<B>RowHeight</B> = 450
+Forms![Clienti]![Indirizzo].<B>ColumnWidth</B> = -2</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

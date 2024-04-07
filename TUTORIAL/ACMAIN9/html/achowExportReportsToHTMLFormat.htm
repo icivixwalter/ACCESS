@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowExportReportsToHTMLFormat'
+Feature='Web'
+Handoff='3'
+SourceFile='ctbliel.rtf'
+Tnum='189065'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esportare un report in formato HTML statico</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowexportreportstohtmlformat"></A>Esportare un report in formato HTML statico</H1>
+
+<OL>
+	<LI class=LPROC>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> fare clic sul nome del report che si desidera esportare, quindi scegliere <B>Esporta</B> dal menu <B>File</B>.<BR><BR>
+</LI>
+
+	<LI class=LPROC>Nella casella <B>Tipo file</B> fare clic su <B>Documenti HTML (*.html;*.htm)</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Selezionare il collegamento nella <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_oftipPlacesBar');" class="pop">barra percorsi</A> oppure fare cilc sulla freccia a destra della casella di riepilogo <B>Salva in</B> e selezionare l'unità o la cartella di destinazione. <BR><BR></LI>
+
+	<LI class=LPROC>Nella casella <B>Nome file</B> immettere il nome del file.<BR><BR></LI>
+
+	<LI class=LPROC>Selezionare la casella di controllo <B>Avvio automatico</B> per visualizzare i risultati nel <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefBrowser');" class="pop">browser</A> Web predefinito.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul pulsante <B>Salva</B>.<BR><BR><P class=LT1>Nella casella di testo <B>Modello HTML</B> della finestra di dialogo <B>Opzioni di output per HTML</B> immettere un modello HTML. Se non si specifica un file modello <A HREF="javascript:HelpPopup('actip9.hlp','defHTML');" class="pop">HTML</A> contenente token di spostamento, verrà fornito uno schema di spostamento predefinito. Fare clic qui per informazioni sul <A HREF="achowUseHTMLTemplateFile.htm">file modello HTML</A>.
+</LI>
+</OL>
+
+<P class=T>Una volta esportato un report in un file HTML, è necessario <A HREF="javascript:HelpPopup('actip9.hlp','defPublish');" class="pop">pubblicarlo</A> per renderlo disponibile su <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefWorldWideWeb');" class="pop">World Wide Web</A>. Fare clic qui per informazioni sulla <A HREF="achowPublishStaticHTMLFilesToWorldWideWeb.htm">pubblicazione dei file HTML statici su un server Web</A>.</P>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>A differenza del <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A>, un report viene esportato come più file HTML, con un file per pagina stampata. I nomi file vengono creati utilizzando il nome oggetto e un suffisso, ad esempio Prodotti.html, ProdottiPagina2.html, ProdottiPagina3.html e così via.<BR><BR></LI>
+
+	<LI class=NLB>Se il report contiene una query con parametri, vengono richiesti i valori dei parametri ed esportati i risultati.<BR><BR></LI>
+
+	<LI class=NLB>I campi con il <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkDataType');" class="pop">tipo di dati Collegamento ipertestuale</A> vengono esportati come <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkAddress');" class="pop">indirizzi di collegamenti ipertestuali</A> utilizzando i tag HTML &lt;A HREF&gt;.<BR><BR></LI>
+
+	<LI class=NLB>La maggior parte dei controlli e delle funzioni di un report, inclusi i sottoreport, sono supportati, ad eccezione di: linee, rettangoli e oggetti OLE. È tuttavia possibile <A HREF="acexaTemplateFileExample.htm">utilizzare un file modello HTML per includere immagini nell'intestazione o nel piè di pagina di un report</A>.<BR><BR></LI>
+
+	<LI class=NLB>Sebbene il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefTheme');" class="pop">tema</A> predefinito non venga applicato quando si esporta il report, è possibile applicarlo <A HREF="achowCreateDataAccessPageByUsingExistingHTMLDocument.htm">creando una pagina di accesso ai dati dalla pagina Web esistente</A> (in questo caso il file HTML statico appena creato), <A HREF="achowApplyThemeToExistingDAP.htm">applicando un tema</A> nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura della pagina</A> e quindi salvando la pagina. Fare clic qui per informazioni sui <A HREF="acconAboutThemes.htm">temi</A>. <BR><BR></LI>
+
+	<LI class=NLB>In un browser Web è possibile visualizzare le informazioni dei report non solo come report HTML statici, ma in molti modi diversi. Ad esempio come uno <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefReportSnapshot');" class="pop">snapshot di report</A> su una pagina Web, creando anche una <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefGroupedDataAccessPage');" class="pop">pagina di accesso ai dati con gruppi</A>. Non è possibile tuttavia esportare un report in un formato <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefServergeneratedHTML');" class="pop">HTML generato da server</A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowExportReportsToHTMLFormatW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

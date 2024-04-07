@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproSelLengthX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproedt2_1a.rtf'
+Tnum='188049'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà SelLenght, SelStart e SelText</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprosellengthx"></A>Esempio di proprietà SelLenght, SelStart e SelText</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono utilizzate due routine evento per ricercare il testo specificato. Il testo da ricercare è impostato nella routine evento Caricamento della maschera. La routine evento Clic relativa al pulsante Trova, utilizzato per iniziare la ricerca, richiede all'utente il testo da ricercare e seleziona il testo contenuto nella casella di testo se la ricerca ha esito positivo.</P>
+
+<PRE class=CT><CODE>Sub Form_Load()
+&nbsp;&nbsp;&nbsp; Dim ctlTestoDiRicerca As Control
+&nbsp;&nbsp;&nbsp; Set ctlTestoDiRicerca = Forms!Maschera1!CasellaTesto1
+&nbsp;&nbsp;&nbsp; ctlTestoDiRicerca.SetFocus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Sposta lo stato attivo sulla casella di testo.
+&nbsp;&nbsp;&nbsp; ctlTestoDiRicerca.Text = "La società piazza " _
+&nbsp;&nbsp;&nbsp; &amp; "2 volte l'anno ingenti ordini di aglio, origano, peperoncini e cumino."
+End Sub
+
+Sub Trova_Click()
+&nbsp;&nbsp;&nbsp; Dim strRicerca As String, intDove As Integer
+&nbsp;&nbsp;&nbsp; Dim ctlTestoDiRicerca As Control
+&nbsp;&nbsp;&nbsp; ' Ottiene da utente la stringa di ricerca.
+&nbsp;&nbsp;&nbsp; With Me!Textbox1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strRicerca = InputBox("Immettere testo da ricercare:")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Trova stringa nel testo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intDove = InStr(.Value, strRicerca)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If intDove Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Se trovata.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .SetFocus
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<B>SelStart</B> = intDove - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .<B>SelLength</B> = Len(strRicerca)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Notifica utente.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Stringa non trovata."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End With
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

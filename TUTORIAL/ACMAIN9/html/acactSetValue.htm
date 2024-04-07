@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactSetValue'
+Feature='acact'
+Handoff='1'
+SourceFile='act_q-z_1a.rtf'
+Tnum='188076'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione ImpostaValore</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acdecUseExpressionBuilder">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactsetvalue"></A>Azione ImpostaValore</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactSetValueC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactSetValueX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione ImpostaValore per impostare il valore di un <A HREF="javascript:HelpPopup('actip9.hlp','defField');" class="pop">campo</A>, di un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> o di una <A HREF="javascript:HelpPopup('actip9.hlp','defProperty');" class="pop">proprietà</A> di Microsoft Access in una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A>, in un <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> di una maschera o di un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Non è possibile utilizzare l'azione ImpostaValore per impostare il valore di una proprietà di Microsoft Access che restituisce un <A HREF="javascript:HelpPopup('actip9.hlp','defObject');" class="pop">oggetto</A>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione ImpostaValore utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento azione</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Elemento</TD>
+<TD class=TT width=76%>Il nome del campo, del controllo o della proprietà di cui si desidera impostare il valore. Immettere il nome del campo, del controllo o della proprietà nella casella <B>Elemento</B> della sezione <B>Argomenti azione</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. Per fare riferimento a tale elemento, è necessario utilizzare la sintassi completa, come <I>nomecontrollo</I>, per un controllo della maschera o del report da cui è stata chiamata la <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> o <B>Forms</B>!<I>nomemaschera</I>!<I>nomecontrollo</I>. L'argomento è obbligatorio.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Espressione</TD>
+<TD class=TT width=76%>L'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> utilizzata per impostare il valore dell'elemento. È sempre necessario utilizzare la sintassi completa per fare riferimento a qualsiasi <A HREF="javascript:HelpPopup('actip9.hlp','defObject');" class="pop">oggetto</A> dell'espressione. Per aumentare ad esempio del 10% il valore di un controllo Stipendio di una maschera Impiegati, utilizzare <CODE>Forms!Impiegati!Stipendio*1,1</CODE>. L'argomento è obbligatorio.
+<P class=TT><B>Nota</B>&nbsp;&nbsp; Si consiglia di non utilizzare un segno di uguale (=) prima dell'espressione di questo argomento. Se lo si fa, Microsoft Access valuta l'espressione e utilizza il valore risultato come espressione dell'argomento. Se l'espressione è una <A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">stringa</A>, è possibile che si abbiano risultati imprevisti.</P>
+
+<P class=TT>Se ad esempio si digita <B>="Stringa1"</B> come argomento, Microsoft Access valuta innanzitutto l'espressione come Stringa1. Tale espressione viene quindi utilizzata nell'argomento al fine di trovare nella maschera o nel report che hanno chiamato la macro una proprietà o un controllo chiamato Stringa1.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB) fare clic sul pulsante dei<B> </B>generatori <A HREF="javascript:HelpPopup('actip9.hlp','defBuildButton');" class="pop"><IMG SRC="images/buildbut.bmp" BORDER=0></A> a destra della casella <B>Elemento</B> o <B>Espressione</B> per <A HREF="JavaScript:hhobj_3.Click()">utilizzare il Generatore di espressioni</A> e creare un'espressione per uno di questi argomenti.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare questa azione per impostare un valore di un campo o di un controllo in una maschera, in un foglio dati di una maschera o in un report. È inoltre possibile impostare il valore di quasi tutte le proprietà di controlli, maschere e report in qualsiasi <A HREF="javascript:HelpPopup('actip9.hlp','defView');" class="pop">visualizzazione</A>. Per sapere se è possibile impostare una determinata proprietà utilizzando una macro e in quali visualizzazioni è possibile impostarla, vedere l'argomento relativo alla proprietà specifica.</P>
+
+<P class=T>È inoltre possibile impostare il valore di un campo nella tabella sottostante una maschera, anche se la maschera non contiene un controllo <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">associato</A> al campo. Utilizzare la sintassi <B>Forms</B>!<I>nomemaschera</I>!<I>nomecampo</I> nella casella <B>Elemento</B> per impostare il valore di tale campo. È anche possibile fare riferimento a un campo di una tabella sottostante un report utilizzando la sintassi <B>Reports</B>!<I>nomereport</I>!<I>nomecampo</I>, ma è necessario disporre nel report di un controllo associato a tale campo o è necessario che il campo faccia riferimento a un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> del report.</P>
+
+<P class=T>Se si imposta il valore di un controllo in una maschera, l'azione ImpostaValore non attiva le <A HREF="javascript:HelpPopup('actip9.hlp','defValidationRule');" class="pop">regole di convalida</A> a livello di maschera del controllo, ma attiva le regole di convalida a livello di tabella del campo sottostante, se il controllo è associato. L'azione ImpostaValore attiva inoltre il ricalcolo, ma non in modo immediato. Per attivare l'<A HREF="javascript:HelpPopup('actip9.hlp','defrepaint');" class="pop">aggiornamento</A> immediato e forzare il completamento del ricalcolo, utilizzare l'azione <A HREF="acactRepaintObject.htm">AggiornaOggetto</A>. Il valore impostato in un controllo utilizzando l'azione ImpostaValore non viene influenzato da una <A HREF="javascript:HelpPopup('actip9.hlp','defInputMask');" class="pop">maschera di input</A> impostata nella proprietà <A HREF="acproInputMask.htm"><B>Maschera di input</B></A> del controllo o del campo sottostante.</P>
+
+<P class=T>Per modificare il valore di un controllo, è possibile utilizzare l'azione ImpostaValore in una macro specificata dalla <A HREF="acproEventProperties.htm">proprietà di evento</A> <B>Dopo aggiornamento</B> del controllo. Per modificare il valore del controllo non è possibile utilizzare l'azione ImpostaValore in una macro specificata da una proprietà di evento <B>Prima di aggiornare</B> di un controllo, anche se è possibile utilizzare l'azione ImpostaValore per modificare il valore di altri controlli. È inoltre possibile utilizzare l'azione ImpostaValore in una macro specificata dalla proprietà <B>Prima di aggiornare</B> o <B>Dopo aggiornamento</B> di una maschera per modificare il valore di qualsiasi controllo del record corrente.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Non è possibile utilizzare l'azione ImpostaValore per impostare il valore dei seguenti controlli:
+
+<UL>
+	<LI class=NLB>Controlli associati e controlli calcolati di report<BR><BR></LI>
+
+	<LI class=NLB>Controlli calcolati di maschere</LI>
+</UL>
+
+
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile utilizzare l'azione ImpostaValore per nascondere o visualizzare una maschera in visualizzazione Maschera. Immettere <B>Forms</B>!<I>nomemaschera</I><B>.Visible</B> nella casella <B>Elemento</B> e <B>No</B> o <B>Sì</B> nella casella <B>Espressione</B>. L'impostazione a No della proprietà <B>Visibile</B> di una maschera a <A HREF="javascript:HelpPopup('actip9.hlp','defModal');" class="pop">scelta obbligatoria</A> nasconde la maschera e la rende non a scelta obbligatoria. L'impostazione a Sì della proprietà visualizza la maschera e la rende di nuovo a scelta obbligatoria.</P>
+
+
+
+<P class=T>La modifica del valore o l'aggiunta di nuovi dati in un controllo tramite l'azione ImpostaValore in una macro non attiva eventi come PrimaDiAggiornare, PrimaDiInserire o Modifica, che si verificano quando si modificano o si immettono dati in tali controlli nell'interfaccia utente. Tali eventi inoltre non si verificano se si imposta il valore del controllo utilizzando Visual Basic.</P>
+
+<P class=T>L'azione non è disponibile in Visual Basic. Impostare il valore direttamente da Visual Basic.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

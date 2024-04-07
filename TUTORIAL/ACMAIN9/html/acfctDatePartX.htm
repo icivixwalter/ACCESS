@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDatePartX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acobdatx_1a.rtf'
+Tnum='234392'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione DatePart</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdatepartx"></A>Esempio di funzione DatePart</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la funzione <B>DatePart</B> per specificare i criteri per una query di selezione. Si supponga ad esempio di voler creare una query basata su una tabella Ordini per elencare tutti gli ordini effettuati nel primo trimestre del 1996. Supponendo che la tabella Ordini contenga un campo IDOrdine e un campo DataOrdine, è possibile trascinare il campo IDOrdine alla prima cella della griglia di struttura della query e immettere nella cella <B>Criteri</B> sottostante quanto riportato di seguito:</P>
+
+<PRE class=CT><CODE>(<B>DatePart(</B>"t", [DataOrdine]) = 1<B>)</B> and (<B>DatePart(</B>"aaaa", [DataOrdine]) = 1996<B>)</B>
+</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

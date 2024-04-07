@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproContainerX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234363'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Container e Permissions (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocontainerx"></A>Esempio di proprietà Container e Permissions (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si determina il nome dell'oggetto <B>Container</B> al quale appartiene un oggetto <B>Document</B> e in base a questo nome si impostano le autorizzazioni per l'account di gruppo specificato. Tenere presente che è necessario definire un determinato account utente o di gruppo prima di impostare le autorizzazioni per un oggetto. Nell'esempio seguente si suppone che si sia definito un gruppo di commercianti.</P>
+
+<P class=T>In Microsoft Access sono definiti ulteriori oggetti <B>Container</B> oltre a quelli del modulo di gestione di database Microsoft Jet. Tali oggetti includono gli oggetti <B>Container</B> di tipo Form, Report, Script e Module.</P>
+
+<P class=T>Si noti che l'operatore <B>Or</B> esegue un confronto su singoli bit per determinare se un attributo è impostato correntemente.</P>
+
+<PRE class=CT><CODE>Sub ImpostaAutorizzazioniDoc(docSconosciuto As Document)
+&nbsp;&nbsp;&nbsp; Dim strNomeContenitore As String
+
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà UserName ad un account di gruppo esistente valido.
+&nbsp;&nbsp;&nbsp; docSconosciuto.UserName = "Commercianti"
+&nbsp;&nbsp;&nbsp; ' Ottiene il valore della proprietà Container.
+&nbsp;&nbsp;&nbsp; strNomeContenitore = docSconosciuto.<B>Container</B>.Name
+&nbsp;&nbsp;&nbsp; Select Case strNomeContenitore
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case "Forms"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta le autorizzazioni per l'oggetto Document di tipo Form.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; docSconosciuto.<B>Permissions</B> = docSconosciuto.<B>Permissions</B> Or _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; acSecFrmRptWriteDef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case "Reports"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta le autorizzazioni per l'oggetto Document di tipo Report.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; docSconosciuto.<B>Permissions</B> = docSconosciuto.<B>Permissions</B> Or _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; acSecFrmRptExecute
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case "Scripts"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta le autorizzazioni per l'oggetto Document di tipo Script.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; docSconosciuto.<B>Permissions</B> = docSconosciuto.<B>Permissions</B> Or _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; acSecMacWriteDef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case "Modules"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta le autorizzazioni per l'oggetto Document di tipo Module.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; docSconosciuto.<B>Permissions</B> = docSconosciuto.<B>Permissions</B> Or _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; acSecModReadDef
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub
+&nbsp;&nbsp;&nbsp; End Select
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

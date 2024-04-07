@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjReferenceX'
+Feature='acobj'
+Handoff='1'
+SourceFile='aobjv8.rtf'
+Tnum='186793'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Reference e insieme References</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjreferencex"></A>Esempio di oggetto Reference e insieme References</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un riferimento a una determinata libreria dei tipi.</P>
+
+<PRE class=CT><CODE>Function ReferenceFromFile(strFileName As String) As Boolean
+&nbsp;&nbsp;&nbsp; Dim ref As <B>Reference</B>
+
+&nbsp;&nbsp;&nbsp; On Error GoTo Error_ReferenceFromFile
+&nbsp;&nbsp;&nbsp; Set ref = <B>References</B>.AddFromFile(strFileName)
+&nbsp;&nbsp;&nbsp; ReferenceFromFile = True
+
+Exit_ReferenceFromFile:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_ReferenceFromFile:
+&nbsp;&nbsp;&nbsp; MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; ReferenceFromFile = False
+&nbsp;&nbsp;&nbsp; Resume Exit_ReferenceFromFile
+End Function</CODE></PRE>
+
+
+
+<P class=T>È possibile richiamare tale funzione utilizzando una routine che crea un riferimento al Controllo calendario come quella riportata di seguito.</P>
+
+<PRE class=CT><CODE>Sub CreaRiferimentoCalendario ()
+&nbsp;&nbsp;&nbsp; If RiferimentoDaFile("C:\Windows\System\Mscal.ocx") = True Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Riferimento impostato con esito positivo."
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Riferimento non impostato con esito positivo."
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

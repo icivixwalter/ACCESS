@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateNewDocument'
+Feature='acmth'
+Handoff='2'
+SourceFile='acmthV9.doc'
+Tnum='254212'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo CreateNewDocument</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthcreatenewdocument"></A>Metodo CreateNewDocument</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateCreateNewDocument_C;acmthCreateNewDocument_C">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateCreateNewDocument_X">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateNewDocument_A">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare il metodo <B>CreateNewDocument</B> per creare un nuovo documento associato ad un <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlink');" class="pop">collegamento ipertestuale</A> specificato. </P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I>.<B>CreateNewDocument</B> <I>nomefile</I>, <I>editnow</I>, <I>overwrite</I></P>
+
+
+
+<P class=T>Il metodo <B>CreateNewDocument</B> utilizza gli argomenti riportati di seguito.</P>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=23%>Argomento</TH>
+<TH width=77%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>oggetto</I></TD>
+<TD class=TT width=77%>L'oggetto <A HREF="acobjHyperlink.htm"><B>Hyperlink</B></A> all'interno di un controllo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>nomefile</I></TD>
+<TD class=TT width=77%>Un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che identifica il nome e il percorso del documento. Indicando l'estensione con il nomefile, è possibile determinare il tipo di formato del documento da utilizzare per l'output dei dati. È possibile creare file HTML (*.htm), Microsoft Active Server Pages (*.asp), Microsoft Excel (*.xls), Microsoft IIS (*.htx, *.idc), Testo MS-DOS (*.txt), Rich Text Format (*.rtf) o Microsoft Data Access Pages (*.html). I moduli possono effettuare l'output solo in formato Testo MS-DOS, le pagine di accesso ai dati solo in formato HTML. I formati Microsoft Internet Information Server e Microsoft Active Server sono disponibili solo per le <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabelle</A>, le <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> e le maschere.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%><B>Nota&nbsp;&nbsp;</B> Se non viene indicata un'estensione, viene utilizzato il formato della pagina di accesso ai dati (HTML).
+<P class=TT>Se non viene specificata una directory, viene utilizzata la directory di database predefinita; questa viene determinata dall'impostazione nella finestra di dialogo Opzioni.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>editnow</I></TD>
+<TD class=TT width=77%>Un valore <A HREF="javascript:HelpPopup('actip9.hlp','defBoolean');" class="pop"><B>Booleano</B></A> che se impostato a <B>True</B> (-1) apre il documento in visualizzazione Struttura mentre se impostato a <B>False</B> memorizza il nuovo documento nella directory di database specificata. L'impostazione predefinita è <B>True</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>overwrite</I></TD>
+<TD class=TT width=77%>Un valore <B>Booleano</B> che se impostato a <B>True</B> (-1) sovrascrive un documento esistente se l'argomento <I>nomefile</I> identifica un documento esistente, mentre se impostato a <B>False</B> richiede che l'argomento nomefile specifichi un nuovo nomefile. L'impostazione predefinita è <B>False</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Il metodo <B>CreateNewDocument</B> consente di creare da programma un documento associato ad un collegamento ipertestuale all'interno di un controllo.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acmthCreateNewDocumentW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproControlSourceX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosrc1_1a.rtf'
+Tnum='187096'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ControlSource</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocontrolsourcex"></A>Esempio di proprietà ControlSource</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come impostare la proprietà <B>ControlSource</B> per una casella di testo denominata ParteIndirizzo a un campo chiamato Città:</P>
+
+<PRE class=CT><CODE>Forms!Clienti!ParteIndirizzo.<B>ControlSource</B> = "Città"</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si imposta la proprietà <B>ControlSource</B> per una casella di testo chiamata ArrivoPrevisto all'espressione <CODE>= Data() + 7</CODE>.</P>
+
+<PRE class=CT><CODE>Me!ArrivoPrevisto.<B>ControlSource</B> = "= Data() + 7"</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

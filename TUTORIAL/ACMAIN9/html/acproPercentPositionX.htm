@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPercentPositionX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234506'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà PercentPosition (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpropercentpositionx"></A>Esempio di proprietà PercentPosition (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicata la posizione corrente in percentuale di un record in un set di record, quindi si visualizza tale posizione in una casella di messaggio.</P>
+
+<PRE class=CT><CODE>Sub PercentualeDiRecord()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim strInput As String, strSQL As String
+
+&nbsp;&nbsp;&nbsp; strSQL = "SELECT * FROM Prodotti ORDER BY NomeProdotto;"
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Apre oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset(strSQL, dbOpenDynaset)
+&nbsp;&nbsp;&nbsp; ' Si sposta alla fine del set di record.
+&nbsp;&nbsp;&nbsp; rst.MoveLast
+&nbsp;&nbsp;&nbsp; ' Torna all'inizio del set di record.
+&nbsp;&nbsp;&nbsp; rst.MoveFirst
+&nbsp;&nbsp;&nbsp; ' Richiede di immettere il nome del prodotto.
+&nbsp;&nbsp;&nbsp; strInput = InputBox("Immettere il nome completo del prodotto.")
+&nbsp;&nbsp;&nbsp; ' Ricerca la prima ricorrenza.
+&nbsp;&nbsp;&nbsp; rst.FindFirst "NomeProdotto = '" &amp; strInput &amp; "'"
+&nbsp;&nbsp;&nbsp; ' Visualizza la posizione corrente in percentuale.
+&nbsp;&nbsp;&nbsp; MsgBox("La posizione corrente del set di record è " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; rst.<B>PercentPosition</B> &amp; "%.")
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

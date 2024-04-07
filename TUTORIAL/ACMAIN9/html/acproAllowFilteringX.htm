@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproAllowFilteringX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aprofrd1.doc'
+Tnum='186997'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà AllowFilters</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproallowfilteringx"></A>Esempio di proprietà AllowFilters</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene mostrata una funzione che attiva e disattiva la proprietà <B>AllowFilters</B> di una maschera.</P>
+
+<PRE class=CT><CODE>Function ToggleAllowFilters() As Integer
+  Forms!Customers.<B>AllowFilters</B> = Not Forms!Customers.<B>AllowFilters</B>
+End Function</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

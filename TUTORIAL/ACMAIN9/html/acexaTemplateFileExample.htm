@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acexaTemplateFileExample'
+Feature='Web'
+Handoff='3'
+SourceFile='ctbliel.rtf'
+Tnum='189062'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di file modello HTML</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acexatemplatefileexample"></A>Esempio di file modello HTML</H1>
+
+<P class=T>&lt;HTML&gt;</P>
+
+<P class=T>&lt;!--Il token seguente colloca il nome dell'oggetto nella barra del titolo del browser Web.--&gt;</P>
+
+<P class=T>&lt;TITLE&gt;&lt;!--AccessTemplate_Titolo--&gt;&lt;/TITLE&gt;</P>
+
+<P class=T>&lt;!--Il tag HTML seguente crea un colore di sfondo diverso da quello predefinito del browser Web.--&gt;</P>
+
+<P class=T>&lt;BODY BACKGROUND = "grigio.jpg"&gt;</P>
+
+<P class=T>&lt;!--Il token seguente colloca tutto l'output degli oggetti all'interno del tag &lt;BODY&gt;.--&gt;</P>
+
+<P class=T>&lt;!--AccessTemplate_Corpo--&gt;</P>
+
+<P class=T>&lt;/BODY&gt;</P>
+
+<P class=T>&lt;BR&gt;&lt;BR&gt;</P>
+
+<P class=T>&lt;!--I quattro token seguenti creano quattro pulsanti di testo che consentono di passare alla prima e pagina di un report, alla pagina precedente, a quella successiva o all'ultima.--&gt;</P>
+
+<P class=T>&lt;A HREF = "&lt;!--AccessTemplate_PrimaPagina--&gt;"&gt;Prima&lt;/A&gt;</P>
+
+<P class=T>&lt;A HREF = "&lt;!--AccessTemplate_PaginaPrecedente--&gt;"&gt;Precedente&lt;/A&gt;</P>
+
+<P class=T>&lt;A HREF = "&lt;!--AccessTemplate_PaginaSuccessiva--&gt;"&gt;Successiva&lt;/A&gt;</P>
+
+<P class=T>&lt;A HREF = "&lt;!--AccessTemplate_UltimaPagina--&gt;"&gt;Ultima&lt;/A&gt;</P>
+
+<P class=T>&lt;!--Il token seguente inserisce il testo "Pagina n", dove n è il numero di pagina corrente.--&gt;</P>
+
+<P class=T>&lt;P ALIGN = CENTER&gt;Page &lt;!--AccessTemplate_NumeroPagina--&gt;.&lt;/P&gt;</P>
+
+<P class=T>&lt;!--Il tag HTML seguente aggiunge il logo della società alla fine della pagina Web.--&gt;</P>
+
+<P class=T>&lt;IMG SRC = "logo_società.jpg"&gt;</P>
+
+<P class=T>&lt;/HTML&gt;</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acexaTemplateFileExampleW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

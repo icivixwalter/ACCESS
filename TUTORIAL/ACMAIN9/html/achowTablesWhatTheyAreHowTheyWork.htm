@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<SCRIPT language="VBSCRIPT">
+Dim isIE
+Function DetectBrowserVersion()
+	Dim iVersion
+	iVersion = navigator.appversion
+	If Left(iVersion, 1) >= 4 Then
+		DetectBrowserVersion="4.0>"
+	Else
+		DetectBrowserVersion="3.0x"
+	End If
+End Function
+
+Function Window_OnLoad()
+	isIE = DetectBrowserVersion()
+End Function
+
+Sub DisplayCard()
+	If isIE = "3.0x" Then
+		L_IE3NotSupported_ErrorMessage="Questa caratteristica della Guida non è supportata dalla versione 3.0x del browser. Installare una versione successiva."
+		L_ConceptCards_DialogTitle="Guida di Microsoft Office"
+
+		MsgBox L_IE3NotSupported_ErrorMessage,64,L_ConceptCards_DialogTitle
+	Else
+		achhctrl_1.HHClick()
+	End If
+End Sub
+</SCRIPT>
+
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowTablesWhatTheyAreHowTheyWork'
+Feature='Tables: Graphical concepts'
+Handoff='3'
+SourceFile='cthumb.doc'
+Tnum='275394'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Definizione e funzionamento delle tabelle</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowtableswhattheyarehowtheywork"></A>Definizione e funzionamento delle tabelle</H1>
+
+<P class=T>Per visualizzare l'argomento, fare clic sull'immagine:</P>
+
+<P class=ART><A HREF=JavaScript:DisplayCard()><IMG SRC="images/lgthumb.bmp" ALT="Per visualizzare l'argomento, fare clic sull'immagine." BORDER=0></A>&nbsp;</P>
+
+<P class=T>Per visualizzare l'argomento utilizzando la tastiera, premere F6 per attivare il riquadro dell'argomento, quindi TAB per selezionare l'immagine e infine INVIO.</P>
+<OBJECT id=achhctrl_1 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM name="Command" value="Related Topics">
+<PARAM name="Window" value="MSO_Large">
+<PARAM name="Item1" value="Default Title;acmain9.chm::/html/TablesWhatTheyAreAndHowTheyWork_FS.htm#aclrgTablesWhatTheyAreHowTheyWork1.htm">
+</OBJECT><SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthMoveADOX'
+Feature='acmth'
+Handoff='2'
+SourceFile='ACAMETHX9.doc'
+Tnum='261120'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Move</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthmoveadox"></A>Esempio di metodo Move</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito il metodo <B>Move</B> viene utilizzato per spostare in avanti due righe in un oggetto <B>Recordset</B>:</P>
+
+<PRE class=CT><CODE>Sub SpostaAvanti()
+    Dim rst As New ADODB.Recordset
+    Dim strCriteria As String
+
+    ' Apre un oggetto Recordset di tipo dynaset.
+    rst.Open "SELECT * FROM Ordini ORDER BY PaeseDestinatario;" _
+, currentProject.connection, adOpenKeyset, adLockOptimistic
+    rst.MoveLast
+    rst.MoveFirst
+    ' Verifica numero di record in oggetto Recordset.
+    If rst.RecordCount &gt; 2 Then
+        ' Sposta in avanti due righe.
+        rst.<B>Move</B> 2
+        Debug.Print rst!PaeseDestinatario
+    End If
+    rst.Close
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

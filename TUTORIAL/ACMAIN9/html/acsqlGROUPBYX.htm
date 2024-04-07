@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlGROUPBYX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234437'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proposizione GROUP BY (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlgroupbyx"></A>Esempio di proposizione GROUP BY (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si calcola la media dei prezzi unitari di tutti i prodotti di ciascun fornitore e si suddivide l'elenco dei prezzi per fornitore:</P>
+
+<PRE class=CT><CODE>SELECT IDFornitore, Media(PrezzoUnitario) AS PrezzoUnitarioMedio
+FROM Prodotti <B>GROUP BY</B> IDFornitore;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si calcola il prezzo unitario massimo di un prodotto per ciascuna categoria:</P>
+
+<PRE class=CT><CODE>SELECT IDCategoria, Max(PrezzoUnitario) AS PrezzoUnitarioMassimo
+FROM Prodotti <B>GROUP BY</B> IDCategoria;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si calcola il numero di ordini attribuiti a ciascun impiegato nel database:</P>
+
+<PRE class=CT><CODE>SELECT IDImpiegato, Conteggio(IDOrdine) AS ConteggioIDOrdine
+FROM Ordini <B>GROUP BY</B> IDImpiegato;</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutConvertingAccess2000DatabaseToAccess97'
+Feature='Databases: Conversion'
+Handoff='3'
+SourceFile='cdatcon2.rtf'
+Tnum='264251'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla conversione di un database di Access 2000 nel formato Access 97</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutconvertingaccess2000databasetoaccess97"></A>Informazioni sulla conversione di un database di Access 2000 nel formato Access 97</H1>
+
+<P class=T>È possibile convertire un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access 2000</A> in un database di Access 97 se non appartiene a un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefReplicaSet');" class="pop">set di repliche</A>. Quando si esegue la conversione nel formato Access 97, si perdono le funzionalità specifiche di Access 2000. </P>
+
+<P class=T>In seguito alla conversione di un database di Access 2000 nel formato Access 97, il database ottenuto subisce le modifiche di seguito elencate:
+
+<UL>
+	<LI class=LB1>I collegamenti alle <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagine di accesso ai dati</A> vengono persi.<BR><BR></LI>
+
+	<LI class=LB1>È possibile che i dati basati sul supporto <A HREF="javascript:HelpPopup('actip9.hlp','defUnicode');" class="pop">Unicode</A> in Access 2000 non vengano convertiti in modo corretto. Access 97 utilizza i caratteri di un'unica tabella codici, vale a dire un set numerato di 256 caratteri. È possibile ad esempio che un database di Access 97 utilizzi unicamente i caratteri <A HREF="javascript:HelpPopup('actip9.hlp','defANSI');" class="pop">ANSI</A>. Durante la conversione la sequenza di ordinamento del database di Access 2000 originale determina il set di caratteri che il nuovo database di Access 97 potrà utilizzare. Tutti i caratteri non appartenenti a questo set non verranno convertiti in modo corretto.<BR><BR></LI>
+
+	<LI class=LB1>Un database di Access 2000 contenente una tabella con una proprietà <B>Dimensione campo</B> impostata a Decimale non può essere convertito nel formato Access 97. È necessario impostare la proprietà <B>Dimensione campo</B> a un altro valore, ad esempio Precisione singola o Precisione doppia, oppure cambiare il tipo di dati del campo in Valuta prima di procedere alla conversione del database.</LI>
+</UL>
+
+<P class=T>Per convertire un database di Access protetto, l'account utente utilizzato per accedere deve disporre delle seguenti autorizzazioni:
+<UL>
+<LI class=LB1>Autorizzazioni di Apertura/esecuzione e Apertura esclusiva per il database stesso. Autorizzazione di Lettura struttura per tutti gli oggetti nel database.<br><br></LI>
+
+<LI class=LB1>Per proteggere il database convertito, aprirlo con Microsoft Access 97 e applicare la <A HREF="javascript:HelpPopup('actip9.hlp','defUserLevelSecurity');" class="pop">protezione a livello utente</A>.</LI>
+</UL>
+
+<P class=T>Se il database di Access è protetto da password, è possibile convertirlo senza rimuovere la password. Se il codice Visual Basic, Applications Edition (VBA) è protetto da password, è necessario <A HREF="achowProtectVBACode.htm">fornire la password in ambiente Visual Basic</A>.</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutConvertingAccess2000DatabaseToAccess97W">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

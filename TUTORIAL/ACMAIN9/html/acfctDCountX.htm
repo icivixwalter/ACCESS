@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDCountX'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187158'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione DCount</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdcountx"></A>Esempio di funzione DCount</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si restituisce il numero di ordini inoltrati nel Regno Unito dopo il 1 gennaio 1995. Il dominio è la tabella Ordini. L'argomento <I>criteri</I> limita il set di record risultante ai record per i quali PaeseDestinatario è uguale a UK e DataSpedizione è posteriore all'<CODE>01/01/95</CODE>.</P>
+
+<PRE class=CT><CODE>intX = <B>DCount(</B>"[DataSpedizione]", "Ordini", _
+&nbsp;&nbsp;&nbsp; "[PaeseDestinatario] = 'UK' AND [DataSpedizione] &gt; #01/01/95#"<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito l'argomento <I>criteri</I> include il valore corrente di una casella combinata chiamata PaeseDestinatario. I valori contenuti nella casella combinata PaeseDestinatario provengono dal campo PaeseDestinatario della tabella Ordini. Si noti che non viene incluso il riferimento al controllo tra le virgolette che denotano la stringa. In tale modo si assicura che ogni volta che viene richiamata la funzione <B>DCount</B>, il controllo fornisca il valore corrente.</P>
+
+<PRE class=CT><CODE>intX = <B>DCount(</B>"[DataSpedizione]", "Ordini", "[PaeseDestinatario] = '" _
+&nbsp;&nbsp;&nbsp; &amp; Forms!Ordini![PaeseDestinatario] &amp; "'AND [DataSpedizione] &gt; #01/01/95#"<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

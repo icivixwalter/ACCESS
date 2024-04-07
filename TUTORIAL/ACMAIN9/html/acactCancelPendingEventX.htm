@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactCancelPendingEventX'
+Feature='acact'
+Handoff='1'
+SourceFile='macroex8_2.doc'
+Tnum='186869'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convalidare i dati mediante una macro - Esempio</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acactcancelpendingeventx"></A>Convalidare i dati mediante una macro - Esempio</B></P>
+
+<P class=T>La macro di convalida riportata di seguito controlla i codici di avviamento postale inseriti nella maschera Fornitori. La macro illustra l'utilizzo delle azioni ArrestaMacro, FinestraMessaggio, AnnullaEvento e VaiAControllo. Un'espressione condizionale controlla il paese e il CAP inseriti in un record della maschera. Se il CAP non è nel formato appropriato per il paese corrispondente, la macro visualizza una finestra di messaggio e annulla il salvataggio del record, quindi rimanda al controllo CAP, dove è possibile correggere l'errore.</P>
+
+<P class=T>Per visualizzare gli argomenti relativi a ciascuna azione, fare clic sul nome dell'azione.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=4>
+
+<TR VALIGN="top">
+<TH width=38%>Condizione</TH>
+<TH width=23%>Azione</TH>
+<TH width=33%>Commento</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>&nbsp;</TD>
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=33%>Associata alla proprietà Prima di aggiornare della maschera Fornitori.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>IsNull([Paese])</TD>
+<TD class=TT width=23%><A HREF="acactce1ax.htm">ArrestaMacro</A></TD>
+<TD class=TT width=33%>Se Paese è Null, il CAP non può essere convalidato</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>[Paese] In ("Francia","Italia","Spagna") And Len([CAP]) &lt;&gt; 5</TD>
+<TD class=TT width=23%><A HREF="acactce1X.htm">FinestraMessaggio</A></TD>
+<TD class=TT width=33%>Se il CAP non è di 5 caratteri, visualizza un messaggio e...</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>...</TD>
+<TD class=TT width=23%><A HREF="acactce2X.htm">AnnullaEvento</A></TD>
+<TD class=TT width=33%>... annulla l'evento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>&nbsp;</TD>
+<TD class=TT width=23%><A HREF="acactce7X.htm">VaiAControllo</A></TD>
+<TD class=TT width=33%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>[Paese] In ("Australia","Singapore") And Len([CAP]) &lt;&gt; 4</TD>
+<TD class=TT width=23%><A HREF="acactce3X.htm">FinestraMessaggio</A></TD>
+<TD class=TT width=33%>Se il CAP non è di 4 caratteri, visualizza un messaggio e...</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>...</TD>
+<TD class=TT width=23%><A HREF="acactce4X.htm">AnnullaEvento</A></TD>
+<TD class=TT width=33%>... annulla l'evento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>&nbsp;</TD>
+<TD class=TT width=23%><A HREF="acactce7X.htm">VaiAControllo</A></TD>
+<TD class=TT width=33%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>([Paese] = "Canada") And ([CAP] Not Like"[A-Z][0-9][A-Z] [0-9][A-Z][0-9]")</TD>
+<TD class=TT width=23%><A HREF="acactce5X.htm">FinestraMessaggio</A></TD>
+<TD class=TT width=33%>Se il CAP per Canada non è corretto, visualizza un messaggio e...</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>...</TD>
+<TD class=TT width=23%><A HREF="acactce6X.htm">AnnullaEvento</A></TD>
+<TD class=TT width=33%>... annulla l'evento.</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='WaysToSpecifyMultipleCriteriaInAQuery_Nav'
+Feature='Queries: Graphical concepts'
+Handoff='3'
+SourceFile='WaysToSpecifyMultipleCriteriaInAQuery_Nav.htm'
+Tnum='252726'
+Piece='1136'
+Recycle='N'
+>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodi per specificare più criteri in una query</TITLE>
+<script language="VBScript" src="ConceptCards_Code.vbs"></script>
+<style>@import url(Gallery4.css);</style>
+<link disabled rel="stylesheet" href="Gallery3.css">
+
+<script LANGUAGE="VBscript">
+Dim iIsIE, current
+Function Window_OnLoad()
+	iIsIE=DetectBrowserVersion()
+
+	If Top.sURL <>"" and iIsIE="4.0>" Then
+		For q = 0 To Document.All("gallery").Length - 1
+	   		If Document.All("gallery").Item(q).parentElement.ID =top.sURL Then 
+				current=q
+				Document.All("gallery").Item(current).Style.Fontweight="Bold"
+				Document.All("gallery").Item(current).ParentElement.ParentElement.Children(0).InnerHTML="<img SRC='blkarrow.gif' WIDTH=4 HEIGHT=7>"
+				Document.All("gallery").Item(current).ParentElement.bgcolor="#FFCC00"
+			End If
+	   	Next
+	End If
+End Function
+</script>
+</head>
+
+<body BGCOLOR="White">
+
+<table ID="mybutton" cellpadding="3" cellspacing="1" width="100%" align="left" valign="top" Style="border: none;">
+
+<tr VALIGN="middle">
+    <td width="10"></td>
+    <td HEIGHT="20" bgcolor="#FFFFFF" idx="0" onmouseover="G_Riser()" onmouseout="G_Flatten()" id="aclrgWaysToSpecifyMultipleCriteriaInQuery.htm">
+<a href="#" onclick='G_LoadPane("aclrgWaysToSpecifyMultipleCriteriaInQuery.htm")' id="gallery" class="gallerymenu">Un campo con <b>Or</b></A></TD>
+</TR>
+<tr VALIGN="middle">
+    <td width="10"></td>
+    <td HEIGHT="20" bgcolor="#FFFFFF" idx="0" onmouseover="G_Riser()" onmouseout="G_Flatten()" id="aclrgWaysToSpecifyMultipleCriteriaInQuery2.htm">
+<a href="#" onclick='G_LoadPane("aclrgWaysToSpecifyMultipleCriteriaInQuery2.htm")' id="gallery" class="gallerymenu">Un campo con <b>And</b></A></TD>
+</TR>
+<tr VALIGN="middle">
+    <td width="10"></td>
+    <td HEIGHT="20" bgcolor="#FFFFFF" idx="0" onmouseover="G_Riser()" onmouseout="G_Flatten()" id="aclrgWaysToSpecifyMultipleCriteriaInQuery3.htm">
+<a href="#" onclick='G_LoadPane("aclrgWaysToSpecifyMultipleCriteriaInQuery3.htm")' id="gallery" class="gallerymenu">Due campi con <b>Or</b></A></TD>
+</TR>
+<tr VALIGN="middle">
+    <td width="10"></td>
+    <td HEIGHT="20" bgcolor="#FFFFFF" idx="0" onmouseover="G_Riser()" onmouseout="G_Flatten()" id="aclrgWaysToSpecifyMultipleCriteriaInQuery4.htm">
+<a href="#" onclick='G_LoadPane("aclrgWaysToSpecifyMultipleCriteriaInQuery4.htm")' id="gallery" class="gallerymenu">Due campi con <b>And</b></A></TD>
+</TR>
+<tr VALIGN="middle">
+    <td width="10"></td>
+    <td HEIGHT="20" bgcolor="#FFFFFF" idx="0" onmouseover="G_Riser()" onmouseout="G_Flatten()" id="aclrgWaysToSpecifyMultipleCriteriaInQuery5.htm">
+<a href="#" onclick='G_LoadPane("aclrgWaysToSpecifyMultipleCriteriaInQuery5.htm")' id="gallery" class="gallerymenu">Tre campi con <b>And</b> e <b>Or</b></A></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPrtDevNames'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproprt2_1a.rtf'
+Tnum='187916'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà PrtDevNames</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acproprtdevnames"></A>Proprietà PrtDevNames</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPrtDevNamesC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPrtDevNamesX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPrtDevNamesA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>PrtDevNames</B> per impostare o restituire informazioni relative alla stampante selezionata nella finestra di dialogo <B>Stampa</B> per una maschera o per un report.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per una documentazione completa relativa alle proprietà <B>PrtDevMode</B>, <B>PrtDevNames</B> e <B>PrtMip</B>, si consiglia di consultare Win32 Software Development Kit.</P>
+
+
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>La proprietà <B>PrtDevNames</B> è una struttura a lunghezza variabile che riflette la struttura DEVNAMES definita in Win32 Software Development Kit.</P>
+
+<P class=T>La proprietà <B>PrtDevNames</B> utilizza i membri riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=21%>Membro</TH>
+<TH width=79%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>DriverOffset</TD>
+<TD class=TT width=79%>Specifica l'offset dall'inizio della struttura a una stringa terminata con valore <B>Null</B> che specifica il nome di file del driver della periferica privo di estensione. Tale stringa viene utilizzata per specificare la stampante che viene inizialmente visualizzata nella finestra di dialogo <B>Stampa</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>DeviceOffset</TD>
+<TD class=TT width=79%>Specifica l'offset dall'inizio della struttura a una stringa terminata con valore <B>Null</B> che specifica il nome della periferica. Tale stringa non può superare i 32 byte di lunghezza, compreso il carattere nullo e deve essere identica al membro DeviceName della struttura DEVMODE.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>OutputOffset</TD>
+<TD class=TT width=79%>Specifica l'offset dall'inizio della struttura a una stringa terminata con valore <B>Null</B> che specifica il nome della periferica MS-DOS per il supporto dell'output fisico o porta di output, come ad esempio "LPT1:".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Default</TD>
+<TD class=TT width=79%>Specifica se le stringhe specificate nella struttura DEVNAMES identificano la stampante predefinita. Prima che venga visualizzata la finestra di dialogo <B>Stampa</B>, se il membro Default è impostato a 1 e tutti i valori della struttura DEVNAMES corrispondono alla stampante predefinita corrente, la stampante selezionata è impostata alla stampante predefinita. Il membro Default è impostato a 1 se la stampante predefinita corrente è stata selezionata.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Microsoft Access imposta la proprietà <B>PrtDevNames</B> al momento della selezione effettuata nella sezione Stampante della finestra di dialogo <B>Stampa</B>. È inoltre possibile impostare la proprietà utilizzando <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A>.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Microsoft Access utilizza la struttura DEVNAMES per inizializzare la finestra di dialogo <B>Stampa</B>. Quando si sceglie OK per chiudere la finestra di dialogo, le informazioni relative alla stampante selezionata vengono restituite dalla proprietà <B>PrtDevNames</B>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

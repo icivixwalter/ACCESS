@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCurrentDbX'
+Feature='acmth'
+Handoff='2'
+SourceFile='amthv2.doc'
+Tnum='186631'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CurrentDb</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcurrentdbx"></A>Esempio di metodo CurrentDb</B></P>
+
+
+
+<P class=T>Nell'esempio seguente, il metodo <B>CurrentDb</B> viene utilizzato per restituire una variabile di oggetto <B>Database</B> che punti al database corrente e che quindi elenchi tutti i campi della tabella Dipendenti in quel database.</P>
+
+<PRE class=CT><CODE>Sub ElencaCampi()
+    Dim dbs As Database, tdf As TableDef, fld As Field
+
+    ' Restituisce la variabile di oggetto Database che punta al database corrente.
+    Set dbs = <B>CurrentDb</B>
+    ' Restituisce la variabile di oggetto TableDef che punta alla tabella Dipendenti.
+    Set tdf = dbs.TableDefs!Dipendenti
+    ' Enumera i campi nella tabella Dipendenti.
+    For Each fld In tdf.Fields
+        Debug.Print fld.Name
+    Next fld
+End Sub</CODE></PRE>
+
+
+
+<PRE class=CT></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

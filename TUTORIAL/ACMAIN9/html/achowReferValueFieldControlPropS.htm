@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowReferValueFieldControlPropS'
+Feature='Forms: Expressions'
+Handoff='3'
+SourceFile='cexpbas.rtf'
+Tnum='186854'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Fare riferimento in un'espressione al valore di un controllo o di una proprietà</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowrefervaluefieldcontrolprops"></A>Fare riferimento in un'espressione al valore di un controllo o di una proprietà</H1>
+
+<P class=T>È possibile fare riferimento al valore di un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> o di una proprietà in un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> digitando il relativo <A HREF="javascript:HelpPopup('actip9.hlp','defIdentifier');" class="pop">identificatore</A>.</P>
+
+<P class=T><B>Per fare riferimento al valore di un controllo</B>
+
+<UL>
+	<LI class=LPROCS>Digitare l'identificatore della maschera o del report che contiene il controllo, seguito dall'operatore punto esclamativo (!) e dal nome del controllo. L'identificatore riportato di seguito ad esempio fa riferimento al valore del controllo IDOrdine nella maschera Ordini:
+<P class=LT1>Forms![Ordini]![IDOrdine]
+
+<P class=LTPT><B>Suggerimento</B>&nbsp;&nbsp; Se si sta facendo riferimento a un controllo di una sottomaschera o di un sottoreport, non è necessario specificare l'identificatore completo della maschera o del report utilizzando la proprietà <B>Form</B> o <B>Report</B>. È possibile utilizzare ad esempio l'identificatore riportato di seguito per fare riferimento al controllo Quantità nella Sottomaschera Ordini:
+
+<P class=LT1>Forms![Ordini]![Sottomaschera Ordini]![Quantità]
+</LI>
+</UL>
+
+<P class=T><B>Per fare riferimento al valore di una proprietà</B>
+
+<UL>
+	<LI class=LPROCS>Digitare l'identificatore della maschera, del report o del controllo a cui viene applicata la proprietà, seguito dall'operatore punto (.) e dal nome della proprietà. L'identificatore riportato di seguito ad esempio fa riferimento alla proprietà <B>Valore predefinito</B> del controllo DataOrdine nella maschera Ordini:
+<P class=LT1>Forms![Ordini]![DataOrdine].DefaultValue
+</LI>
+</UL>
+
+<P class=TPT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>È possibile utilizzare il Generatore di espressioni per creare un identificatore di un controllo o di una proprietà.<BR><BR></LI>
+
+	<LI class=NLB>Quando si esegue una macro o del codice Visual Basic contenente un'espressione che fa riferimento a una maschera o a un report, è necessario che tale maschera o report sia aperto.</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni sulla creazione di un'espressione utilizzando il Generatore di espressioni, fare clic su <A HREF="aclsaUsingExpressionBuilder.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sull'uso di identificatori all'interno di espressioni, fare clic su <A HREF="achowIdentifiersExpressionsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sull'uso di valori all'interno di espressioni, fare clic su <A HREF="acconValuesExpressionsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sul riferimento a una maschera, a un report, a una sottomaschera o a un sottoreport in un'espressione, fare clic su <A HREF="achowReferFormReportS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowReferValueFieldControlPropSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

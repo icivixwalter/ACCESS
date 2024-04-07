@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPrtMipX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproprt2_1a.rtf'
+Tnum='187921'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà PrtMip</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproprtmipx"></A>Esempio di proprietà PrtMip</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito della proprietà <B>PrtMip</B> viene dimostrato come impostare il report con due colonne orizzontali.</P>
+
+<PRE class=CT><CODE>Type str_PRTMIP
+&nbsp;&nbsp;&nbsp; strRGB As String * 28
+End Type
+Type type_PRTMIP
+&nbsp;&nbsp;&nbsp; intMargineSin As Long
+&nbsp;&nbsp;&nbsp; intMargineSup As Long
+&nbsp;&nbsp;&nbsp; intMargineDes As Long
+&nbsp;&nbsp;&nbsp; intMargineInf As Long
+&nbsp;&nbsp;&nbsp; intSoloDati As Long
+&nbsp;&nbsp;&nbsp; intLarghezza As Long
+&nbsp;&nbsp;&nbsp; intAltezza As Long
+&nbsp;&nbsp;&nbsp; intDimensPredef As Long
+&nbsp;&nbsp;&nbsp; intColonne As Long
+&nbsp;&nbsp;&nbsp; intSpaziaturaCol As Long
+&nbsp;&nbsp;&nbsp; intSpaziaturaRig As Long
+&nbsp;&nbsp;&nbsp; intLayoutElem As Long
+&nbsp;&nbsp;&nbsp; intStampaVeloce As Long
+&nbsp;&nbsp;&nbsp; intFoglioDati As Long
+End Type
+
+Sub ColonnePrtMip(strNome As String)
+&nbsp;&nbsp;&nbsp; Dim StringaPrtMip As str_PRTMIP
+&nbsp;&nbsp;&nbsp; Dim PM As type_PRTMIP
+&nbsp;&nbsp;&nbsp; Dim rpt As Report
+&nbsp;&nbsp;&nbsp; Const PM_HORIZONTALCOLS = 1953
+&nbsp;&nbsp;&nbsp; Const PM_VERTICALCOLS = 1954
+&nbsp;&nbsp;&nbsp; DoCmd.OpenReport strNome, acDesign
+&nbsp;&nbsp;&nbsp; Set rpt = Reports(strNome)
+&nbsp;&nbsp;&nbsp; StringaPrtMip.strRGB = rpt.<B>PrtMip</B>
+&nbsp;&nbsp;&nbsp; LSet PM = StringaPrtMip
+&nbsp;&nbsp;&nbsp; PM.intColonne = 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea due colonne.
+&nbsp;&nbsp;&nbsp; PM.intSpaziaturaRig = 0.25 * 1440&nbsp;&nbsp;&nbsp; ' Imposta 0,63 cm tra righe.
+&nbsp;&nbsp;&nbsp; PM.intSpaziaturaCol = 0.5 * 1440&nbsp;&nbsp;&nbsp; ' Imposta 1,2 cm tra colonne.
+&nbsp;&nbsp;&nbsp; PM.intLayoutElem = PM_HORIZONTALCOLS
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; LSet StringaPrtMip = PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiorna la proprietà.
+&nbsp;&nbsp;&nbsp; rpt.<B>PrtMip</B> = StringaPrtMip.strRGB
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo della proprietà <B>PrtMip</B> viene indicato come impostare tutti i margini a 2,54 cm.</P>
+
+<PRE class=CT><CODE>Sub ImpostaMarginiPredefin(strNome As String)
+&nbsp;&nbsp;&nbsp; Dim StringaPrtMip As str_PRTMIP
+&nbsp;&nbsp;&nbsp; Dim PM As type_PRTMIP
+&nbsp;&nbsp;&nbsp; Dim rpt As Report
+&nbsp;&nbsp;&nbsp; DoCmd.OpenReport strNome, acDesign
+&nbsp;&nbsp;&nbsp; Set rpt = Reports(strNome)
+&nbsp;&nbsp;&nbsp; StringaPrtMip.strRGB = rpt.<B>PrtMip</B>
+&nbsp;&nbsp;&nbsp; LSet PM = StringaPrtMip
+&nbsp;&nbsp;&nbsp; PM.intMargineSin = 1 * 1440&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta margini.
+&nbsp;&nbsp;&nbsp; PM.intMargineSup = 1 * 1440
+&nbsp;&nbsp;&nbsp; PM.intMargineDes = 1 * 1440
+&nbsp;&nbsp;&nbsp; PM.intMarginInf = 1 * 1440
+&nbsp;&nbsp;&nbsp; LSet StringaPrtMip = PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Aggiorna la proprietà.
+&nbsp;&nbsp;&nbsp; rpt.<B>PrtMip</B> = StringaPrtMip.strRGB
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

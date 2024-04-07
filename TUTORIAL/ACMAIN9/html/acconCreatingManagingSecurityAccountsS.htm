@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconCreatingManagingSecurityAccountsS'
+Feature='Security: Accounts/Permissions'
+Handoff='3'
+SourceFile='csecusr.rtf'
+Tnum='188256'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Organizzare gli account di protezione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconcreatingmanagingsecurityaccountss"></A>Organizzare gli account di protezione</H1>
+
+<P class=T>Un <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> di Microsoft Access contiene gli account predefiniti riportati di seguito:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=18%>Account</TH>
+<TH width=82%>Funzione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=18%>Amministratore</TD>
+<TD class=TT width=82%>L'<A HREF="javascript:HelpPopup('actip9.hlp','defUserAccount');" class="pop">account utente</A> predefinito. Questo account è esattamente lo stesso per tutte le copie di Microsoft Access e altre applicazioni in cui è possibile utilizzare il <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A>, ad esempio Microsoft Visual Basic, Applications Edition e Microsoft Excel.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=18%>Amministratori</TD>
+<TD class=TT width=82%>L'<A HREF="javascript:HelpPopup('actip9.hlp','defGroupAccount');" class="pop">account gruppo</A> dell'amministratore. Questo account è univoco per ciascun file di informazioni sul gruppo di lavoro. In base all'impostazione predefinita, l'utente Amministratore si trova nel gruppo Amministratori. È necessario che nel gruppo Amministratori sia sempre presente almeno un utente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=18%>Utenti</TD>
+<TD class=TT width=82%>L'account gruppo che comprende tutti gli account utente. Gli account utente vengono aggiunti automaticamente al gruppo Utenti quando vengono creati da un membro del gruppo Amministratori. Questo account è uguale per qualsiasi file di informazioni sul gruppo di lavoro, ma contiene solo account utente creati dai membri del gruppo Amministratori di quel gruppo di lavoro. In base all'impostazione predefinita, questo account dispone di <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> complete per tutti gli <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetti</A> di nuova creazione. L'unico modo per rimuovere un account utente dal gruppo Utenti è l'eliminazione di quell'utente da parte di un membro del gruppo Amministratori.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>La protezione in Microsoft Access è sempre attiva. Fino a quando non viene attivata la procedura di accesso per un gruppo di lavoro, tutti gli utenti vengono collegati in modo invisibile al momento dell'avvio mediante l'account Amministratore predefinito con una password vuota. L'account Amministratore viene utilizzato come l'account amministratore del gruppo di lavoro, nonché come il proprietario di qualsiasi database e delle tabelle, delle query, delle maschere, dei report e delle macro creati.</P>
+
+<P class=T>Gli amministratori e i proprietari sono importanti in quanto dispongono di autorizzazioni che non è possibile rimuovere:
+
+<UL>
+	<LI class=LB1>Gli Amministratori (membri del gruppo Amministratori) possono sempre ottenere autorizzazioni complete per oggetti creati nel gruppo di lavoro.<BR><BR></LI>
+
+	<LI class=LB1>Un account proprietario di una tabella, di una query, di una maschera, di un report o di una macro può sempre ottenere autorizzazioni complete per quell'oggetto.<BR><BR></LI>
+
+	<LI class=LB1>Un account proprietario di un database può sempre aprirlo.
+</LI>
+</UL>
+
+<P class=T>Dal momento che l'account Amministratore è esattamente uguale per tutte le copie di Microsoft Access, le prime fasi per la protezione dell'accesso al database consistono nella definizione degli account amministratore e proprietario o di un singolo account utente per l'amministratore e il proprietario, quindi nella rimozione dell'account Amministratore dal gruppo Amministratori. In caso contrario, chiunque disponga di una copia di Microsoft Access può collegarsi al gruppo di lavoro utilizzando l'account Amministratore e disporre di autorizzazioni complete per le tabelle, le query, le maschere, i report e le macro del gruppo di lavoro.
+
+</P>
+
+<P class=T>Per proteggere ad esempio l'accesso a un database denominato Ordini, è possibile creare gli account personalizzati AmministratoreOrdini e ProprietarioOrdini ai quali aggiungere delle password.
+
+</P>
+
+<P class=T>È possibile assegnare al gruppo Amministratori il numero desiderato di account utente, ma solo un account utente è il proprietario del database, vale a dire l'account utente attivo quando viene creato il database o quando la proprietà viene trasferita con la creazione di un nuovo database e l'importazione in esso di tutti i relativi oggetti. Gli account gruppo tuttavia possono essere proprietari delle tabelle, delle query, delle maschere, dei report e delle macro all'interno di un database.
+</P>
+
+<P class=NT><B>Importante</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=LB1>È necessario memorizzare gli account creati per utenti del database nel file di informazioni sul gruppo di lavoro al quale tali utenti si uniranno quando utilizzeranno il database. Se per creare il database si sta utilizzando un file diverso, modificare il file prima di creare gli account.<BR><BR></LI>
+
+	<LI class=LB1>Assicurarsi di aver creato una password univoca per gli account amministratore e utente. Un utente che può collegarsi utilizzando l'account amministratore può sempre ottenere autorizzazioni complete per qualsiasi tabella, query, maschera, report e macro creati nel gruppo di lavoro. Un utente che può collegarsi utilizzando un account proprietario può sempre ottenere autorizzazioni complete per gli oggetti che appartengono a quell'utente.
+</LI>
+</UL>
+
+<P class=T>L'organizzazione di utenti in gruppi rende più semplice la gestione di un database con accesso protetto. Con questa strategia, invece di assegnare autorizzazioni a ogni utente per ciascuna tabella, query, maschera, report e macro del database, è possibile assegnarle a pochi gruppi, quindi aggiungere gli utenti al gruppo appropriato. Quando gli utenti si collegano a Microsoft Access, ereditano le autorizzazioni da tutti i gruppi ai quali appartengono. Solo gli account utente possono collegarsi a Microsoft Access. Non è possibile collegarsi utilizzando un account gruppo.
+
+</P>
+
+<P class=T>È possibile ad esempio proteggere l'accesso a un database Ordini creando un gruppo Direttori per i direttori, un gruppo Rappresentanti per i rappresentanti e un gruppo Staff per gli impiegati. È possibile assegnare il set di autorizzazioni meno restrittive al gruppo Direttori, un set di autorizzazioni più restrittive al gruppo Rappresentanti e quelle più restrittive in assoluto al gruppo Staff. Quando viene creato un account utente per un nuovo impiegato, aggiungere quell'account al gruppo appropriato. L'impiegato disporrà quindi delle autorizzazioni associate a quel gruppo.
+
+</P>
+
+<P class=T>Dopo aver creato gli account utente e gruppi, è possibile visualizzarne le relazioni esistenti scegliendo <B>Account utenti e gruppi</B> dal sottomenu <B>Protezione</B> del menu <B>Strumenti</B>, quindi scegliendo il pulsante <B>Stampa utenti e gruppi</B>. Viene stampato un report degli account del gruppo di lavoro in cui vengono riportati i gruppi ai quali appartiene ciascun utente e gli utenti che appartengono a ciascun gruppo.
+</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconCreatingManagingSecurityAccountsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

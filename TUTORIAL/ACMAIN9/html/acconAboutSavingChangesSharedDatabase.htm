@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutSavingChangesSharedDatabase'
+Feature='Data: Sharing'
+Handoff='3'
+SourceFile='cmusbas_4.rtf'
+Tnum='264750'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sul salvataggio delle modifiche alla struttura in un database di Microsoft Access condiviso</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutsavingchangesshareddatabase"></A>Informazioni sul salvataggio delle modifiche alla struttura in un database di Microsoft Access condiviso</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a: </P>
+
+<P class=LBR1><A HREF="#acconaboutsavingchangesshareddatabase_1">Salvataggio delle modifiche alla struttura in un database di Microsoft Access condiviso</A></P>
+
+<P class=LBR1><A HREF="#acconaboutsavingchangesshareddatabase_3">Differenze tra le modifiche principali e secondarie alla struttura</A></P>
+
+<P class=LBR1><A HREF="#acconaboutsavingchangesshareddatabase_2">Strategie per la condivisione della progettazione e dello sviluppo di un database di Access</A></P>
+
+<P class=LBR1><A HREF="#acconaboutsavingchangesshareddatabase_4">Ulteriori informazioni</A></P>
+
+<H2><A NAME="acconaboutsavingchangesshareddatabase_1"></A>Salvataggio delle modifiche alla struttura in un database di Microsoft Access condiviso</H2>
+
+<P class=T>Non è possibile salvare le modifiche alla struttura di un database di Access se tale database è condiviso con altri utenti. L'unico modo per salvare le modifiche è <A HREF="achowOpenExistingDatabaseS.htm">aprire il database di Access in modalità esclusiva</A>.</P>
+
+<P class=T>Quando si tenta di apportare una modifica alla struttura di un <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetto di database</A> ad eccezione di tabelle e query o di un elemento in modalità condivisa, in genere viene attivata temporaneamente la modalità <A HREF="javascript:HelpPopup('actip9.hlp','defExclusive');" class="pop">esclusiva</A> per il database di Access se si è il solo utente che lo sta utilizzando al momento. Dopo il salvataggio di tutte le modifiche alla struttura e la chiusura di tutte le finestre in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A>, viene riattivata la modalità condivisa. Nel frattempo gli altri utenti non potranno aprire il database di Access. </P>
+
+<P class=T>Se un altro utente ha aperto il database di Access in modalità condivisa e si tenta di apportare una modifica principale alla struttura, ad esempio si modifica una maschera, un messaggio avverte che potrebbe non essere possibile salvare le modifiche. Se in una situazione analoga si tenta invece di apportare una modifica secondaria alla struttura, ad esempio si modificano le impostazioni di stampa, <I>non viene visualizzato alcun messaggio di avviso</I>. In entrambi i casi è opportuno attendere che nessun altro utente utilizzi il database di Access in modo da poter salvare le modifiche principali e secondarie apportate alla struttura.</P>
+
+<P class=T>Una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> viene gestita in modo diverso. Sebbene per creare, rinominare, spostare ed eliminare una pagina di accesso ai dati sia comunque necessaria la modalità esclusiva perché queste operazioni comportano la modifica di informazioni nel database di Access, tale modalità non è richiesta per la modifica della pagina perché il file HTML corrispondente si trova nel file system all'esterno del database.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutsavingchangesshareddatabase">inizio</A></P>
+
+<H2><A NAME="acconaboutsavingchangesshareddatabase_3"></A>Differenze tra le modifiche principali e secondarie alla struttura</H2>
+
+<P class=T>Se non si dispone dell'accesso esclusivo a un database di Access, viene visualizzato un messaggio di avviso quando potrebbe non essere possibile salvare le seguenti modifiche principali alla struttura:
+
+<UL>
+	<LI class=LB1>Modifiche agli oggetti di database, ad eccezione di tabelle e query, apportate in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A><BR><BR></LI>
+
+	<LI class=LB1>Modifiche alla finestra delle proprietà di una maschera in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A><BR><BR></LI>
+
+	<LI class=LB1>Compilazione del <A HREF="javascript:HelpPopup('actip9.hlp','defProject');" class="pop">progetto</A>, modifica delle proprietà del progetto oppure aggiunta o rimozione di un riferimento in Visual Basic Editor<BR><BR></LI>
+
+	<LI class=LB1>Operazioni per rinominare, incollare o eliminare un oggetto di database<BR><BR></LI>
+
+	<LI class=LB1>Salvataggio di un oggetto di database come altro tipo<BR><BR></LI>
+
+	<LI class=LB1>Aggiunta o modifica dei controlli su una barra dei comandi<BR><BR></LI>
+
+	<LI class=LB1>Modifica dei gruppi personalizzati nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A><BR><BR></LI>
+
+	<LI class=LB1>Operazioni per creare, rinominare, spostare ed eliminare una pagina di accesso ai dati.</LI>
+</UL>
+
+<P class=T>Se non si dispone dell'accesso esclusivo a un database di Access, <I>non viene visualizzato alcun messaggio di avviso</I> quando si tenta di salvare le seguenti modifiche secondarie alla struttura:
+
+<UL>
+	<LI class=LB1>Modifiche alle proprietà di formattazione del foglio dati, quali stili di linea e tipi di carattere<BR><BR></LI>
+
+	<LI class=LB1>Operazioni per bloccare, sbloccare, nascondere e visualizzare le colonne del foglio dati<BR><BR></LI>
+
+	<LI class=LB1>Regolazione della larghezza delle colonne e delle dimensioni delle righe del foglio dati<BR><BR></LI>
+
+	<LI class=LB1>Modifiche al filtro o al tipo di ordinamento per una maschera o un foglio dati<BR><BR></LI>
+
+	<LI class=LB1>Modifiche allo stato di un foglio dati secondario, espanso o compresso<BR><BR></LI>
+
+	<LI class=LB1>Modifiche al <A HREF="javascript:HelpPopup('actip9.hlp','defLink');" class="pop">collegamento OLE/DDE </A> di un oggetto <A HREF="javascript:HelpPopup('actip9.hlp','defOLE');" class="pop">OLE</A> o modifiche al contenuto di una <A HREF="javascript:HelpPopup('actip9.hlp','defUnboundObjectFrame');" class="pop">cornice di oggetto non associato</A><BR><BR></LI>
+
+	<LI class=LB1>Modifiche alle impostazioni di stampa<BR><BR></LI>
+
+	<LI class=LB1>Modifiche a una barra dei comandi, ad esempio la posizione e la visualizzazione<BR><BR></LI>
+
+	<LI class=LB1>Modifiche al layout della finestra del database.</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutsavingchangesshareddatabase">inizio</A></P>
+
+<H2><A NAME="acconaboutsavingchangesshareddatabase_2"></A>Strategie per la condivisione della progettazione e dello sviluppo di un database di Access</H2>
+
+<P class=T>Se si intende condividere la progettazione di un database di Access, è opportuno considerare l'utilizzo delle seguenti strategie: 
+
+<UL>
+	<LI class=LB1>Assegnare oggetti o gruppi di oggetti specifici a sviluppatori specifici. Uno sviluppatore ad esempio può essere addetto alla creazione delle maschere e un altro a quella dei report. Ogni sviluppatore può utilizzare una propria copia del database di Access. Quando il team di sviluppo è pronto per la verifica, l'assemblaggio e la produzione, ogni sviluppatore può <A HREF="achowExportTableOtherDatabaseObjectAnotherMSAccessS.htm">esportare gli oggetti di database</A> dalla propria copia in un database di Access principale.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare un programma di controllo del codice sorgente. È possibile ad esempio utilizzare in combinazione Microsoft Visual SourceSafe versione 6.0 e il componente aggiuntivo Controllo del codice sorgente che attiva il supporto Visual Source Safe Code in Access. Questo componente aggiuntivo è disponibile in <A HREF="acconADTContentsS.htm">Microsoft Office 2000 Developer (MOD)</A>. Se si utilizza Visual SourceSafe, è opportuno eseguire regolarmente l'Analizzatore prestazioni (scegliendo <B>Analizza</B> dal menu <B>Strumenti</B>, quindi <B>Prestazioni</B>) per garantire sempre prestazioni ottimali. </LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutsavingchangesshareddatabase">inizio</A></P>
+
+<H2><A NAME="acconaboutsavingchangesshareddatabase_4"></A>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="acconAboutSharingDatabase.htm">Informazioni sulla condivisione dei database di Access in rete</A></P>
+
+<P class=LBR1><A HREF="achowSplitApplicationIntoFrontendInterfaceSharedBaS.htm">Dividere un database di Access esistente in dati e oggetti</A></P>
+
+<P class=LBR1><A HREF="achowOpenExistingDatabaseS.htm">Aprire un database di Access</A></P>
+
+<P class=LBR1><A HREF="achowSpecifyWhetherMyDatabasesDefaultOpeningInSharS.htm">Specificare se un database di Access viene aperto in modalità Accesso condiviso o Accesso esclusivo in base all'impostazione predefinita</A></P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutsavingchangesshareddatabase">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutSavingChangesSharedDatabaseW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

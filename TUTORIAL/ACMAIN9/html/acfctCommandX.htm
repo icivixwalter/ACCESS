@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctCommandX'
+Feature='acfct'
+Handoff='1'
+SourceFile='afctv2_1a.doc'
+Tnum='186630'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Command</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctcommandx"></A>Esempio di funzione Command</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come avviare Microsoft Access con l'argomento di una riga di comando, quindi viene indicato come restituire il valore di questo argomento utilizzando la funzione <B>Command</B>.</P>
+
+<P class=T>Per verificare questo esempio, fare clic sul pulsante <B>Start</B> di Windows (<B>Avvio</B> in Windows 95 e Windows NT 4.0), quindi scegliere <B>Esegui</B>. Nella finestra di dialogo <B>Esegui</B> digitare su una sola riga quanto riportato di seguito. È necessario racchiudere tra virgolette le parti di informazioni della riga di comando.</P>
+
+<PRE class=CT><CODE>"C:\Programmi\Microsoft Office\ Office \Msaccess.exe" _"C:\Programmi\Microsoft Office\ Office \Esempi\Northwind.mdb"_ /cmd "Ordini"</CODE></PRE>
+
+
+
+<P class=T>Aprire quindi un nuovo modulo nel database di esempio Northwind e aggiungere la funzione riportata di seguito.</P>
+
+<PRE class=CT><CODE>Function VerificaRigaDiComando()
+&nbsp;&nbsp;&nbsp; ' Verifica il valore restituito dalla funzione Command.
+&nbsp;&nbsp;&nbsp; If <B>Command</B> = "Ordini" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.OpenForm "Ordini"
+&nbsp;&nbsp;&nbsp; ElseIf <B>Command</B> = "Impiegati" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.OpenForm "Impiegati"
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Function
+&nbsp;&nbsp;&nbsp; End If
+End Function</CODE></PRE>
+
+
+
+<P class=T>Quando si chiama questa funzione, viene aperta la maschera Ordini.</P>
+
+<P class=T>È possibile creare una macro denominata AutoExec per chiamare questa funzione automaticamente quando il database viene aperto. Per ulteriori informazioni su come eseguire un'azione quando si apre un database, vedere <A HREF="achowRunMacroWhenMyDatabaseFirstOpensS.htm">Eseguire un'azione all'apertura del database</A>.</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

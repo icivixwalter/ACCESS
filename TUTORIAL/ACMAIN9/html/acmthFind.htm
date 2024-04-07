@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthFind'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186803'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Find</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthfind"></A>Metodo Find</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthFindC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthFindX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthFindA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>Find</B> trova testo specificato in un <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">modulo standard</A> o in un <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">modulo di classe</A>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I><B>.Find(</B><I>destinazione</I>, <I>rigainizio</I>, <I>colonnainizio</I>, <I>rigafine</I>, <I>colonnafine</I>[, <I>parolaintera</I>, <I>maiuscole/minuscole</I>, <I>ricercamodello</I>]<B>)</B></P>
+
+
+
+<P class=T>Il metodo <B>Find</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>oggetto</I></TD>
+<TD class=TT width=75%>Oggetto <A HREF="acobjModule.htm"><B>Module</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>destinazione</I></TD>
+<TD class=TT width=75%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che ha come risultato il testo che si desidera trovare.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>rigainizio</I></TD>
+<TD class=TT width=75%>Valore <A HREF="javascript:HelpPopup('actip9.hlp','defLongDataType');" class="pop"><B>lungo</B></A> che specifica la riga da cui iniziare la ricerca. Se viene trovata una corrispondenza, il valore dell'argomento <I>rigainizio</I> viene impostato alla riga in cui viene trovato il carattere iniziale del testo di corrispondenza.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>colonnainizio</I></TD>
+<TD class=TT width=75%>Valore <B>lungo</B> che specifica la colonna da cui iniziare la ricerca. Ciascun carattere di una riga si trova in una colonna separata, che inizia da zero sulla parte sinistra del modulo. Se viene trovata una corrispondenza, il valore dell'argomento <I>colonnainizio</I> viene impostato alla colonna in cui viene trovato il carattere iniziale del testo di corrispondenza.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>rigafine</I></TD>
+<TD class=TT width=75%>Valore <B>lungo</B> che specifica la riga su cui terminare la ricerca. Se viene trovata una corrispondenza, il valore dell'argomento <I>rigafine</I> viene impostato alla riga in cui viene trovato il carattere finale del testo di corrispondenza.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>colonnafine</I></TD>
+<TD class=TT width=75%>Valore <B>lungo</B> che specifica la colonna su cui terminare la ricerca. Se viene trovata una corrispondenza, il valore dell'argomento <I>colonnafine</I> viene impostato alla colonna in cui viene trovato il carattere finale del testo di corrispondenza.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>parolaintera</I></TD>
+<TD class=TT width=75%>Facoltativo. Valore <A HREF="javascript:HelpPopup('actip9.hlp','defBoolean');" class="pop"><B>booleano</B></A> il cui risultato è <B>True</B> (-1) per una ricerca di sole parole intere e <B>False</B> (0) per una ricerca di parti di parole. L'impostazione predefinita è <B>False</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>maiuscole/minuscole</I></TD>
+<TD class=TT width=75%>Facoltativo. Valore <B>booleano</B> il cui risultato è <B>True</B> per una ricerca di parole con distinzione tra maiuscole e minuscole corrispondente all'argomento <I>destinazione</I> e <B>False</B> per una ricerca di parole che non tiene conto della distinzione tra maiuscole e minuscole. L'impostazione predefinita è <B>False</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>ricercamodello</I></TD>
+<TD class=TT width=75%>Facoltativo. Valore <B>booleano</B> il cui risultato è <B>True</B> per una ricerca in cui l'argomento <I>destinazione</I> può contenere caratteri jolly come un asterisco (*) o un punto interrogativo (?) e <B>False</B> per una ricerca che non considera i punti interrogativi o gli asterischi come caratteri jolly. L'impostazione predefinita è <B>False</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Il metodo <B>Find</B> ricerca la <A HREF="javascript:HelpPopup('actip9.hlp','defString');" class="pop">stringa</A> di testo specificata in un oggetto <B>Module</B>. Se la stringa viene trovata, il metodo <B>Find</B> restituisce <B>True</B>; nel caso contrario, restituisce <B>False</B>.</P>
+
+<P class=T>Per determinare all'interno del modulo la posizione in cui è stato trovato il testo di ricerca, passare le variabili vuote al metodo <B>Find</B> per gli argomenti <I>rigainizio</I>, <I>colonnainizio</I>, <I>rigafine</I> e <I>colonnafine</I>. Se viene trovata una corrispondenza, tali argomenti conterranno il numero della riga e la posizione della colonna da cui il testo di ricerca inizia (<I>rigainizio</I>, <I>colonnainizio</I>) e finisce (<I>rigafine</I>, <I>colonnafine</I>).</P>
+
+<P class=T>Se il testo di ricerca trovato, ad esempio, è alla riga 5, inizia alla colonna 10 e termina alla colonna 20, i valori di tali argomenti saranno: <I>rigainizio</I> = 5, <I>colonnainizio</I> = 10, <I>rigafine</I> = 5, <I>colonnafine</I> = 20.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

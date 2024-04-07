@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDistinctCountX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234406'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà DistinctCount (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodistinctcountx"></A>Esempio di proprietà DistinctCount (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si stampa il numero di valori univoci negli indici dei campi IDOrdine e DataOrdine di una tabella Ordini. Si noti che la proprietà <B>DistinctCount</B> restituisce il numero di valori univoci di un indice solo immediatamente dopo la creazione di un indice mediante il metodo <B>CreateIndex</B> oppure dopo che un database è stato compattato o convertito utilizzando il metodo <B>CompactDatabase</B>.</P>
+
+<PRE class=CT><CODE>Sub ContaChiavi()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef
+&nbsp;&nbsp;&nbsp; Dim idx As Index, fldIDOrdine As Field, fldDataOrdine As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento alla tabella Ordini.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs!Ordini
+&nbsp;&nbsp;&nbsp; ' Crea nuovo indice.
+&nbsp;&nbsp;&nbsp; Set idx = tdf.CreateIndex("IndiceDataOrdine")
+&nbsp;&nbsp;&nbsp; ' Crea e accoda campi indice.
+&nbsp;&nbsp;&nbsp; Set fldDataOrdine = idx.CreateField("DataOrdine", dbDate)
+&nbsp;&nbsp;&nbsp; idx.Fields.Append fldDataOrdine
+&nbsp;&nbsp;&nbsp; ' Accoda nuovo indice.
+&nbsp;&nbsp;&nbsp; tdf.Indexes.Append idx
+&nbsp;&nbsp;&nbsp; ' Aggiorna insieme Indexes.
+&nbsp;&nbsp;&nbsp; tdf.Indexes.Refresh
+&nbsp;&nbsp;&nbsp; ' Stampa il valore della proprietà DistinctCount per il nuovo indice.
+&nbsp;&nbsp;&nbsp; Debug.Print idx.<B>DistinctCount</B>
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

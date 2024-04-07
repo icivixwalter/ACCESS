@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowAttachFileFormReportControlS'
+Feature='Forms: Advanced'
+Handoff='3'
+SourceFile='CFRMADV2.rtf'
+Tnum='187932'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare un file della Guida compilato che viene visualizzato quando si preme F1</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowattachfileformreportcontrols"></A>Creare un file della Guida compilato che viene visualizzato quando si preme F1</H1>
+
+<OL>
+	<LI class=LPROC>Creare il file di origine utilizzando l'editor di testo o il programma di elaborazione testi desiderato. Per ulteriori informazioni sulla creazione del file di origine, vedere la Guida in linea di Microsoft Help Workshop. Assicurarsi di aver salvato il file di origine in formato RTF (Rich Text Format).<BR><BR></LI>
+
+	<LI class=LPROC>Compilare il file della Guida utilizzando Microsoft Help Workshop.<BR><BR></LI>
+
+	<LI class=LPROC>Visualizzare la finestra delle proprietà relativa alla maschera o al report e specificare nella casella della proprietà <B>File guida</B> il nome del file della Guida compilato. 
+<P class=LNT><B>Nota&nbsp;&nbsp;</B> Per ottenere risultati migliori, collocare il file della Guida nella stessa cartella dell'applicazione. In tal modo, è possibile mantenere la stessa impostazione della proprietà <B>File guida</B> per ciascun sito che utilizza l'applicazione ed allo stesso tempo consentire agli utenti di installare l'applicazione nella cartella desiderata. Se in questa proprietà non viene specificata l'impostazione del percorso, il file della Guida viene ricercato nella cartella in cui è installata l'applicazione.
+</LI>
+
+	<LI class=LPROC>Nella casella della proprietà <B>ID argomento guida</B> relativa alla maschera o del report, digitare il numero dell'argomento (un numero diverso da zero) che verrà visualizzato quando si preme F1. Tale argomento, in genere, fornisce informazioni per l'intera maschera o report.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella della proprietà <B>ID argomento guida</B> relativa a un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di una maschera che può ricevere lo stato attivo, digitare il numero dell'argomento che verrà visualizzato quando si preme F1. Tale argomento fornirà le informazioni specifiche per il controllo. 
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+<UL>
+	<LI class=NLB>È necessario associare i valori impostati per la proprietà <B>ID argomento guida</B> alle stringhe di contesto nel sistema della Guida. Per ulteriori informazioni, vedere la Guida di Microsoft Help Workshop.<BR><BR></LI>
+
+	<LI class=NLB>Se un controllo possiede lo stato attivo quando si preme F1, ma non dispone di un argomento della Guida personalizzato, viene visualizzato l'argomento della Guida personalizzato per la maschera. Se quest'ultimo non esiste, verrà visualizzata la finestra di dialogo <B>Assistente di Office</B>.<BR><BR></LI>
+
+	<LI class=NLB>Non è possibile visualizzare la Guida personalizzata con l'<B>Assistente di Office</B><BR><BR>.</LI>
+
+	<LI class=NLB>È anche possibile utilizzare Microsoft HTML Help Workshop per creare un file della Guida. Per ulteriori informazioni sulla creazione di una Guida personalizzata, vedere il capitolo relativo all'aggiunta di una Guida personalizzata nel <I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I>. Fare clic qui per informazioni su come <A HREF="JavaScript:hhobj_1.Click()">ricevere una copia del manuale</A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowAttachFileFormReportControlSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

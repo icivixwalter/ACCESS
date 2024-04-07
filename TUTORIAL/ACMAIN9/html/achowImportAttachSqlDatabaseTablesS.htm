@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowImportAttachSqlDatabaseTablesS'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='187620'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Importare o collegare delle tabelle o dei dati di database SQL da altre origini dati ODBC</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowimportattachsqldatabasetabless"></A>Importare o collegare delle tabelle o dei dati di database SQL da altre origini dati ODBC</H1>
+
+<P class=NT><B>Nota&nbsp;&nbsp;</B> È possibile <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegare</A> una tabella solo in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessdatabase');" class="pop">database di Microsoft Access</A>, non in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>.</P>
+
+<P class=NT><B>Importante</B>&nbsp;&nbsp; È possibile importare o collegare un'<A HREF="javascript:HelpPopup('actip9.hlp','defODBCDataSource');" class="pop">origine dati</A> SQL o un'altra origine dati <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC</A> solo se è installato il <A HREF="acdecAboutDriversDataSources.htm">driver appropriato</A>.
+
+<OL>
+	<LI class=LPROC>Aprire un database oppure passare alla <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> aperto.<BR><BR></LI>
+
+	<LI class=LPROC>Per <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importare</A> delle tabelle, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Importa</B>.
+<P class=LT1>Per collegare delle tabelle, scegliere <B>Carica dati esterni</B> dal menu <B>File</B>, quindi <B>Collega tabelle</B>.
+
+</LI>
+
+	<LI class=LPROC>Dalla casella <B>Tipo file</B> della finestra di dialogo <B>Importa</B> o <B>Collega</B> selezionare <B>Database ODBC ()</B>.<P class=LT1><B>Importante&nbsp;&nbsp;</B> Se ci si collega a un file in una rete locale, assicurarsi di utilizzare un percorso <A HREF="javascript:HelpPopup('actip9.hlp','defUNC');" class="pop">UNC (Universal Naming Convention)</A> invece di utilizzare la lettera identificativa di un'unità di rete mappata in Esplora risorse di Windows (Gestione risorse in Windows 95 e Windows NT 4.0). La lettera di un'unità può variare da computer a computer o non essere definita, mentre un percorso UNC è un modo affidabile e coerente per individuare l'origine dati che contiene la tabella collegata.
+
+<P class=LT1>Verrà visualizzata la finestra di dialogo <B>Seleziona fonte dati</B> con l'elenco delle origini dati definite per tutti i driver ODBC installati nel computer. Fare clic sulla scheda <B>Fonte dati su file</B> o <B>Fonte dati macchina</B>, quindi fare doppio clic sull'origine dati ODBC che si desidera importare. Per definire una nuova origine dati per un driver ODBC installato, scegliere il pulsante <B>Nuova</B>, quindi seguire le istruzioni della finestra di dialogo <B>Crea nuova fonte dati</B> e delle finestre successive prima di continuare. Per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="acconAboutODBCDataSources.htm">origini dati</A>.
+</LI>
+
+	<LI class=LPROC>Se per l'origine dati ODBC selezionata è necessario effettuare l'accesso, immettere l'ID e la password di accesso, e, se non sono richieste ulteriori informazioni, scegliere <B>OK</B>.
+<P class=LT1>Microsoft Access effettua l'accesso all'origine dati ODBC e visualizza l'elenco di tabelle che è possibile importare o collegare.
+</LI>
+
+	<LI class=LPROC>Se si sta collegando una tabella, selezionare la casella di controllo <B>Usa connessione a cui si concede fiducia</B> se si desidera salvare queste informazioni relative alla tabella nel database corrente per evitare di reimmetterle a ogni apertura. Se la casella di controllo non è selezionata, tutti gli utenti dovranno immettere l'ID e la password di accesso ogni volta che aprono quella tabella in una nuova sessione di Microsoft Access. L'amministratore del <A HREF="javascript:HelpPopup('actip9.hlp','defSQLDatabaseODBC');" class="pop">database SQL</A> può anche disattivare questa casella di controllo per richiedere a tutti gli utenti di immettere l'ID e la password di accesso ogni volta che si connettono al database SQL. Per ulteriori informazioni sulla disattivazione della casella di controllo <B>Usa connessione a cui si concede fiducia</B>, fare clic su <A HREF="achowMsysconfTableAttachedSqlDatabasesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LPROC>Selezionare ogni tabella da importare o collegare, quindi scegliere <B>OK</B>. Se la tabella che si sta collegando non dispone di un indice che identifichi ciascun record in modo univoco, viene visualizzato un elenco dei campi che appartengono alla tabella collegata. Selezionare un campo o una combinazione di campi che identificheranno ciascun record in modo univoco, quindi scegliere <B>OK</B>.</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=LB1>Dopo aver importato o collegato una tabella di database SQL, è possibile impostare delle proprietà di campo della tabella. Se si importa una tabella, è possibile impostare una chiave primaria per la tabella. Per ulteriori informazioni sull'impostazione delle proprietà dei campi di una tabella, fare clic su&nbsp;&nbsp; <A HREF="acrefSettingPropertiesAttachedTablesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Se si è verificato un errore nell'importazione, nel collegamento o nell'utilizzo di una tabella di database SQL, potrebbe essere causato da un problema con l'account sul server di database SQL o con lo stesso database. Se non è possibile accedere alla tabella di database SQL, contattare l'amministratore di database SQL.<BR><BR></LI>
+
+	<LI class=LB1>Per modificare una tabella di database SQL collegata, questa deve generalmente disporre di un <A HREF="javascript:HelpPopup('actip9.hlp','defUniqueIndex');" class="pop">indice univoco</A> sul server. Se si desidera modificare una tabella che non dispone di un indice univoco o modificare una visualizzazione SQL, è possibile creare un indice all'interno di Microsoft Access senza influire sul database SQL. A questo scopo si crea una query di definizione dati utilizzando l'istruzione <B>Create Index</B>. Si tenga presente, comunque, che l'indice deve essere creato in un campo o in una combinazione di campi in cui ciascun valore è univoco. Se il campo contiene dei valori duplicati, tutti gli aggiornamenti della tabella avranno esito negativo. Per eliminare l'indice, utilizzare un'altra query di definizione dati. Per ulteriori informazioni sulla creazione di una query di definizione dati, fare clic su <A HREF="achowCreateAlterTablesIndexesSqlDatadefinitionQuerS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Se la struttura di una tabella di database SQL viene modificata dopo essere stata collegata, utilizzare il Gestore tabelle collegate per aggiornare il collegamento. Per ulteriori informazioni, fare clic su <A HREF="achowViewChangeFileNamePathAttachedTablesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Se si sta effettuando un'importazione da un database di Microsoft SQL Server in un progetto di Access, è consigliabile l'utilizzo di DTS (Data Transformation Services), un metodo più rapido e flessibile per l'importazione e la trasformazione dei dati. Per ulteriori informazioni, <A HREF="acconAboutMicrosoftSQLServerDocumentation.htm">consultare la documentazione di Microsoft SQL Server</A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowImportAttachSqlDatabaseTablesSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

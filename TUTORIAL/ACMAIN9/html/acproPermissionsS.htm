@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPermissionsS'
+Feature='acpro'
+Handoff='3'
+SourceFile='ACDMisc.doc'
+Tnum='234507'
+Piece='1039'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Permissions (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vbdlgProtectionTabProjectSettingsDialogBox">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acpropermissionss"></A>Proprietà Permissions (MDB)</H1>
+
+
+
+<P class=T>Microsoft Access definisce quattro tipi di oggetto <B>Container</B> oltre a quelli definiti dal <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A>. Questi oggetti <B>Container</B> sono Maschere, Report, Script o Moduli. I singoli oggetti <B>Document</B> Maschera, Report, Script e Modulo fanno parte degli insiemi <B>Documents</B> relativi a tali oggetti <B>Container</B>. Per questi oggetti <B>Container</B> e <B>Document</B> è anche possibile impostare la proprietà <B>Permissions</B> alle costanti riportate di seguito:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Costanti</TH>
+<TH width=64%>L'utente o il gruppo può</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>acSecFrmRptReadDef</B></TD>
+<TD class=TT width=64%>Aprire la maschera o il report in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A> senza poter apportare alcuna modifica.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>AcSecFrmRptWriteDef</B></TD>
+<TD class=TT width=64%>Modificare o eliminare la maschera o il report in visualizzazione Struttura.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>AcSecFrmRptExecute</B></TD>
+<TD class=TT width=64%>Aprire la maschera in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A>. Stampare o aprire il report in anteprima rapida o in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">anteprima di stampa</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>acSecMacReadDef</B></TD>
+<TD class=TT width=64%>Aprire la <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A> e visualizzare una macro senza apportare modifiche.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>AcSecMacWriteDef</B></TD>
+<TD class=TT width=64%>Modificare o eliminare la macro nella finestra della macro.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>AcSecModReadDef</B></TD>
+<TD class=TT width=64%>Aprire il modulo senza poter apportare alcuna modifica.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>AcSecModWriteDef</B></TD>
+<TD class=TT width=64%>Modificare o eliminare il contenuto di un modulo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>AcSecMacExecute</B></TD>
+<TD class=TT width=64%>Eseguire la macro.</TD>
+</TR>
+</TABLE><BR>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; acSecModReadDef e acSecModWriteDef sono state incluse solo per mantenere la compatibilità con le versioni precedenti. Siccome ora l'accesso al modulo è controllato dalla proprietà <A HREF="JavaScript:hhobj_1.Click()"><B>Protection</B></A> nell'ambiente Visual Basic, queste costanti non costituiscono più parametri validi in Microsoft Access 2000.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

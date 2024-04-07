@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjDatabaseX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acdobjx.doc'
+Tnum='234385'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Database e insieme Databases (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjdatabasex"></A>Esempio di oggetto Database e insieme Databases (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono indicati tre modi di restituire un oggetto <B>Database</B> in Microsoft Access. La routine restituisce un oggetto <B>Database</B> che rappresenta il database corrente aperto nella finestra di Microsoft Access. La routine crea, quindi, un altro database chiamato NUOVODB.MDB e lo salva su disco. Viene quindi aperto un database esistente chiamato ALTRO.MDB. Tutti gli oggetti <B>Database</B> vengono infine elencati nell'insieme <B>Databases</B>.</P>
+
+<PRE class=CT><CODE>Sub RiferimentoDatabase()
+&nbsp;&nbsp;&nbsp; Dim wsp As Workspace
+&nbsp;&nbsp;&nbsp; Dim dbsCurrent As <B>Database</B>, dbsNew As <B>Database</B>
+&nbsp;&nbsp;&nbsp; Dim dbsAnother As <B>Database</B>, dbs As <B>Database</B>
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbsCurrent = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento ad area di lavoro predefinita.
+&nbsp;&nbsp;&nbsp; Set wsp = DBEngine.Workspaces(0)
+&nbsp;&nbsp;&nbsp; ' Crea nuovo oggetto Database.
+&nbsp;&nbsp;&nbsp; Set dbsNew = wsp.CreateDatabase("Nuovodb.mdb", dbLangGeneral)
+&nbsp;&nbsp;&nbsp; ' Apre database diverso da quello corrente.
+&nbsp;&nbsp;&nbsp; Set dbsAnother = wsp.OpenDatabase("Altro.mdb")
+&nbsp;&nbsp;&nbsp; ' Enumera tutti i database aperti.
+&nbsp;&nbsp;&nbsp; For Each dbs in wsp.<B>Databases</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print dbs.Name
+&nbsp;&nbsp;&nbsp; Next dbs
+&nbsp;&nbsp;&nbsp; For Each dbs In wsp.Databases
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+&nbsp;&nbsp;&nbsp; Next dbs
+&nbsp;&nbsp;&nbsp; Set wsp = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

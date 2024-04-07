@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateQueriesX'
+Feature='achow'
+Handoff='3'
+SourceFile='acaNewX.doc'
+Tnum='274931'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di creazione di visualizzazioni, routine e query</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="achowcreatequeriesx"></A>Esempi di creazione di visualizzazioni, routine e query</B></P>
+
+
+
+<P class=T>L'esempio sotto riportato crea ed esegue sia una query di comando che una query di selezione standard creando un oggetto di comando ADO e accodandolo agli insiemi delle routine e delle visualizzazioni ADO. </P>
+
+<P class=NT><B>Nota</B></P>
+
+<P class=NT>Attualmente la creazione delle routine e delle visualizzazioni non è supportata nei progetti di Access (adp) se si usa la versione del provider SQL fornita con Microsoft Access 2000. È necessario impostare un riferimento a "Microsoft ADO ext. 2.1 for DDL and Security" per utilizzare questo esempio.</P>
+
+
+
+<P class=NT>Per l'esecuzione di questa routine, è necessaria la funzione <B>RunQuery</B>.</P>
+
+
+
+<PRE class=CT><CODE>Sub CreateQueryX()
+&nbsp;&nbsp;&nbsp; Dim catNorthwind As New ADOX.Catalog
+&nbsp;&nbsp;&nbsp; Dim cdView As New ADODB.Command
+&nbsp;&nbsp;&nbsp; Dim cdProc As New ADODB.Command
+&nbsp;&nbsp;&nbsp; Dim tblTemp As New ADOX.Table
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; Set catNorthwind.ActiveConnection = CurrentProject.Connection
+
+&nbsp;&nbsp;&nbsp; With catNorthwind
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set cdProc.ActiveConnection = CurrentProject.Connection
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set cdView.ActiveConnection = CurrentProject.Connection
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With tblTemp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Name = "tblTemp"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With .Columns
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Append "EmpID", adInteger
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Append "LastName", adVarWChar
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Append "FirstName", adVarWChar
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Tables.Append tblTemp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea una nuova query di comando.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cdProc.CommandText = "Insert Into tbltemp " _ &amp; "(EmpID, LastName, FirstName) Select EmployeeID, " _ &amp; "LastName, FirstName From Employees Where Title =" _ &amp; "'Sales Representative'"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Accoda al database
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Procedures.Append "PopulateTmptbl", cdProc
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RunQuery "PopulateTmptbl"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Crea una nuova query di selezione
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cdView.CommandText = "SELECT * FROM tblTemp"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Views.Append "NewQuery", cdView
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RunQuery "NewQuery"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ ' Elimina i nuovi oggetti poiché si tratta di una dimostrazione.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Views.Delete "NewQuery"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Procedures.Delete "PopulateTmptbl"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Tables.Delete tblTemp.Name
+&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; Set catNorthwind = Nothing
+End Sub
+
+Function RunQuery(qryName As String)
+&nbsp;&nbsp;&nbsp; Dim qryTemp As Object
+&nbsp;&nbsp;&nbsp; Dim cat As New ADOX.Catalog
+&nbsp;&nbsp;&nbsp; Dim intNumRecs As Integer
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; Set cat.ActiveConnection = CurrentProject.Connection
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; On Error Resume Next
+&nbsp;&nbsp;&nbsp; Set qryTemp = cat.Procedures(qryName)
+&nbsp;&nbsp;&nbsp; If Err.Number &lt;&gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set qryTemp = cat.Views(qryName)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Err.Number = 0
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; On Error GoTo 0
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; If TypeOf qryTemp Is ADOX.View Then
+    'Se query di selezione visualizza il numero di record
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Numero di record in " &amp; qryName
+     Debug.Print DLookup("Count(*)", qryName)
+&nbsp;&nbsp;&nbsp; Else
+    'Se query di comando visualizza i record interessati
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; qryTemp.Command.Execute intNumRecs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print "Numero di record interessati"
+     Debug.Pring intNumRecs
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; Set cat = Nothing
+&nbsp;&nbsp;&nbsp; Set qryTemp = Nothing
+
+End Function
+</CODE></PRE>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateQueriesXW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

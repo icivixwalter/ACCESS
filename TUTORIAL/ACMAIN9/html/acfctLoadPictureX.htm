@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctLoadPictureX'
+Feature='acmth'
+Handoff='1'
+SourceFile='alanachg_1a.doc'
+Tnum='186620'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio del metodo LoadPicture</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctloadpicturex"></A>Esempio del metodo LoadPicture</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito utilizza il metodo <B>LoadPicture</B> per caricare un metafile in un controllo ActiveX su una maschera Impiegati.</P>
+
+<PRE class=CT><CODE>Sub VisualizzaGrafico()
+&nbsp;&nbsp;&nbsp; Const strConPercorsoABitmap = "C:\Programmi\Microsoft Office\Office\Bitmaps\Styles\"
+
+&nbsp;&nbsp;&nbsp; ' Dichiara le variabili oggetto di tipo Immagine e Controllo.
+&nbsp;&nbsp;&nbsp; Dim objImmagine As Object, ctl As Control
+
+&nbsp;&nbsp;&nbsp; ' Imposta la variabile Controllo come riferimento al controllo ActiveX sulla maschera.
+&nbsp;&nbsp;&nbsp; Set ctl = Forms!Impiegati!UnControlloPersonalizzato
+&nbsp;&nbsp;&nbsp; ' Assegna il valore restituito di LoadPicture all'oggetto Immagine.
+&nbsp;&nbsp;&nbsp; Set objImmagine = <B>LoadPicture</B>(strConPercorsoABitmap &amp; "Mondo.wmf")
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà Immagine del controllo ActiveX.
+&nbsp;&nbsp;&nbsp; Set ctl.Picture = objImmagine
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

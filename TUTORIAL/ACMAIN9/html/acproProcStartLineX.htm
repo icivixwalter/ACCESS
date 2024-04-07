@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproProcStartLineX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprov8_1a.rtf'
+Tnum='186779'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ProcStartLine, ProcBodyLine, ProcCountLines</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproprocstartlinex"></A>Esempio di proprietà ProcStartLine, ProcBodyLine, ProcCountLines</B></P>
+
+
+
+<P class=T>La funzione riportata di seguito visualizza nella finestra <B>Debug</B> le informazioni relative ad una routine specifica di un modulo:</P>
+
+<PRE class=CT><CODE>Function InfoRigaRoutine(strNomeModulo As String, _
+&nbsp;&nbsp;&nbsp;&nbsp; strNomeRoutine As String)
+&nbsp;&nbsp;&nbsp; Dim mdl As Module
+&nbsp;&nbsp;&nbsp; Dim lngRigaInizio As Long, lngRigaCorpo As Long
+&nbsp;&nbsp;&nbsp; Dim lngConteggio As Long, lngFineRoutine As Long
+
+&nbsp;&nbsp;&nbsp; ' Apre uno specifico oggetto Module.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenModule strNomeModulo
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento all'oggetto Module.
+&nbsp;&nbsp;&nbsp; Set mdl = Modules(strNomeModulo)
+
+&nbsp;&nbsp;&nbsp; ' Conta le righe della routine.
+&nbsp;&nbsp;&nbsp; lngConteggio = mdl.ProcCountLines(strNomeRoutine, vbext_pk_Proc)
+&nbsp;&nbsp;&nbsp; ' Determina la riga di inizio.
+&nbsp;&nbsp;&nbsp; lngRigaInizio = mdl.ProcStartLine(strNomeRoutine, vbext_pk_Proc)
+&nbsp;&nbsp;&nbsp; ' Determina la riga di corpo.
+&nbsp;&nbsp;&nbsp; lngRigaCorpo = mdl.ProcBodyLine(strNomeRoutine, vbext_pk_Proc)
+&nbsp;&nbsp;&nbsp; Debug.Print
+
+&nbsp;&nbsp;&nbsp; ' Visualizza tutte le righe della routine che precedono la riga di corpo.
+&nbsp;&nbsp;&nbsp; Debug.Print "Righe che precedono la routine " &amp; strNomeRoutine &amp; ": "
+&nbsp;&nbsp;&nbsp; Debug.Print mdl.Lines(lngRigaInizio, lngRigaCorpo - lngRigaInizio)
+
+&nbsp;&nbsp;&nbsp; ' Determina il numero dell'ultima riga della routine.
+&nbsp;&nbsp;&nbsp; lngFineRoutine = (lngRigaCorpo + lngConteggio - 1) _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Abs(lngRigaCorpo - lngRigaInizio)
+
+&nbsp;&nbsp;&nbsp; ' Visualizza tutte le righe nel corpo della routine.
+&nbsp;&nbsp;&nbsp; Debug.Print "Righe di corpo: "
+&nbsp;&nbsp;&nbsp; Debug.Print mdl.Lines(lngRigaCorpo, (lngFineRoutine - lngRigaCorpo) _
+&nbsp;&nbsp;&nbsp;&nbsp; + 1)
+End Function</CODE></PRE>
+
+
+
+<P class=T>È possibile richiamare questa funzione dal database di esempio Northwind utilizzando una routine come quella riportata di seguito:</P>
+
+<PRE class=CT><CODE>Sub OttieniInfoRoutine()
+&nbsp;&nbsp;&nbsp; ProcLineInfo "funzioni di utilità ", "Caricata"
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

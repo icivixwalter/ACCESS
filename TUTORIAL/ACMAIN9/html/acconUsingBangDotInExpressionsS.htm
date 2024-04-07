@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconUsingBangDotInExpressionsS'
+Feature='Forms: Expressions'
+Handoff='3'
+SourceFile='cexpbas.rtf'
+Tnum='186936'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare gli operatori punto esclamativo (!) e punto (.) nelle espressioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconusingbangdotinexpressionss"></A>Utilizzare gli operatori punto esclamativo (!) e punto (.) nelle espressioni</H1>
+
+<P class=T>È possibile utilizzare gli operatori punto esclamativo (!) e punto (.) in un <A HREF="javascript:HelpPopup('actip9.hlp','defIdentifier');" class="pop">identificatore</A> per indicare il tipo di elemento immediatamente successivo.</P>
+
+<P class=T>L'operatore punto esclamativo (!) indica che ciò che segue è un elemento definito dall'utente, ossia un elemento di un insieme. È possibile ad esempio utilizzare l'operatore punto esclamativo (!) per fare riferimento a una maschera o a un report aperto oppure a un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di una maschera o di un report aperto.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=44%>Identificatore</TH>
+<TH width=56%>Fa riferimento a</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=44%>Forms![Ordini]</TD>
+<TD class=TT width=56%>Maschera Ordini aperta</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=44%>Reports![Fattura]</TD>
+<TD class=TT width=56%>Report Fattura aperto</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=44%>Forms![Ordini]![IDOrdine]</TD>
+<TD class=TT width=56%>Controllo IDOrdine della maschera Ordini aperta</TD>
+</TR>
+</TABLE><BR>
+
+<P class=T>L'operatore punto (.) indica che ciò che segue è un elemento attivo definito dal programma. Utilizzare ad esempio l'operatore punto (.) per fare riferimento a una proprietà di una maschera, di un report o di un controllo.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È anche possibile utilizzare l'operatore punto (.) per fare riferimento al valore di un campo in un'istruzione SQL, un <A HREF="javascript:HelpPopup('actip9.hlp','defMethod');" class="pop">metodo</A> Visual Basic Applications Edition o un insieme. L'identificatore Forms![Ordini].Controls fa riferimento ad esempio all'insieme <B>Controls</B> della maschera Ordini. Poiché però l'insieme <B>Controls</B> è l'insieme predefinito per le maschere e i report, non è in genere necessario fare riferimento a esso in modo esplicito.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconUsingBangDotInExpressionsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

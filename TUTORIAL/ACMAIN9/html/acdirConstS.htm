@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acdirConstS'
+Feature='acdir'
+Handoff='1'
+SourceFile='acobcons.rtf'
+Tnum='234314'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Istruzione #Const</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acdirconsts"></A>Istruzione #Const</H1>
+
+
+
+<P class=T>In Microsoft Access è possibile definire una <A HREF="javascript:HelpPopup('actip9.hlp','defConditionalCompilerConstant');" class="pop">costante condizionale pubblica del compilatore</A> nella <A HREF="javascript:HelpPopup('actip9.hlp','defDeclarationsSection');" class="pop">sezione Dichiarazioni</A> di un modulo. Una costante pubblica del compilatore può essere applicata a tutti i moduli del database corrente e non a quelli di altri database.</P>
+
+<P class=T>È inoltre possibile dichiarare una costante pubblica del compilatore scegliendo <B>Opzioni</B> dal menu <B>Strumenti</B> facendo clic sulla scheda <B>Avanzate</B>. Immettere la costante nella casella <B>Argomenti di compilazione condizionali</B>.</P>
+
+<P class=T>È possibile ad esempio immettere nella casella <B>Argomenti di compilazione condizionali</B> l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>conDebug = 1</CODE></PRE>
+
+
+
+<P class=T>È possibile quindi utilizzare una costante pubblica del compilatore nel codice di qualsiasi modulo. È possibile ad esempio creare un costrutto <B>#If...Then...#Else</B> per l'esecuzione opzionale del codice di debug.</P>
+
+<PRE class=CT><CODE>#If conDebug = 1 Then
+&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Esegue il codice di debug.
+&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; .
+#Else
+&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Esegue il codice senza debug.
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+#End If</CODE></PRE>
+
+
+
+<P class=T>Per creare più costanti condizionali pubbliche del compilatore, dichiarare tali costanti su righe separate nella sezione Dichiarazioni. Nella casella <B>Argomenti di compilazione condizionali</B> utilizzare il punto e virgola per separare le costanti una dall'altra. È possibile ad esempio immettere le costanti di compilazione riportate di seguito nella casella <B>Argomenti di compilazione condizionali</B>.</P>
+
+<PRE class=CT><CODE>conLinguaAttiva = 1 : conDebug = 1</CODE></PRE>
+
+
+
+<P class=T>È possibile utilizzare un operatore logico per includere entrambe le costanti in un costrutto <B>#If...Then...#Else</B>. Nell'esempio riportato di seguito viene eseguito il primo segmento del codice solo se entrambe le costanti sono correntemente uguali a 1, in modo che l'espressione contenente le costanti sia vera.</P>
+
+<PRE class=CT><CODE>#If (conLinguaAttiva = 1 And conDebug = 1) Then
+&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Esegue il codice di debug per la versione nella lingua attiva.
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+#Else
+&nbsp;&nbsp;&nbsp; .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Esegue un altro segmento di codice.
+&nbsp;&nbsp;&nbsp; .
+&nbsp;&nbsp;&nbsp; .
+#End If
+</CODE></PRE>
+
+<P class=T>Se una delle due costanti o entrambe hanno un valore diverso, viene eseguito il codice della parte <B>#Else</B> del costrutto. Per cambiare il blocco di codice eseguito, è possibile modificare i valori delle costanti.</P>
+
+
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>Una costante di compilazione condizionale viene sempre valutata con un metodo di confronto tra stringhe basato sul testo. Tale valutazione equivale ad avere l'istruzione <B>Option Compare Text</B> nel modulo e si verifica anche se il modulo contiene un'istruzione <B>Option Compare Database</B>.<BR><BR></LI>
+
+	<LI class=NLB>Quando si scrive il codice per la compilazione condizionale, è consigliabile visualizzare una routine alla volta piuttosto che visualizzare tutte le routine contenute nel modulo. Per cambiare la modalità di visualizzazione del codice, scegliere <B>Opzioni</B> dal menu <B>Strumenti</B>, quindi fare clic sulla scheda <B>Modulo</B>. Nell'area <B>Visualizzazione codice</B> deselezionare la casella di controllo <B>Visualizza modulo intero</B>.<BR><BR></LI>
+</UL>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

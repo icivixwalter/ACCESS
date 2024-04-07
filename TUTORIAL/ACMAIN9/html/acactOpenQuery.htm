@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactOpenQuery'
+Feature='acact'
+Handoff='1'
+SourceFile='act_a-p_1a.rtf'
+Tnum='187801'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione ApriQuery</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactOpenQuery">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactopenquery"></A>Azione ApriQuery</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenQueryC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenQueryX">
+</OBJECT></P>
+
+
+
+<P class=T>L'azione ApriQuery apre una query <A HREF="javascript:HelpPopup('actip9.hlp','defSelectQuery');" class="pop">di selezione</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defCrosstabQuery');" class="pop">a campi incrociati</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A>, in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A>. L'azione esegue una <A HREF="javascript:HelpPopup('actip9.hlp','defActionQuery');" class="pop">query di comando</A>. È inoltre possibile selezionare una modalità di immissione dati per la query.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Questa azione è disponibile solo per i <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB). Vedere le azioni <A HREF="acactOpenView.htm"><B>ApriVisualizzazione</B></A> o <A HREF="acactOpenStoredProcedure.htm"><B>ApriStoredProcedure</B></A> quando si lavora in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (ADP).</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione ApriQuery utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomenti azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome query</TD>
+<TD class=TT width=75%>Il nome della query da aprire. La casella <B>Nome query</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A> visualizza tutte le query del database corrente. L'argomento è richiesto.
+<P class=TT>Se viene eseguita una macro contenente l'azione ApriQuery in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, Microsoft Access cerca la query contraddistinta da tale nome innanzitutto nel database di libreria, quindi nel database corrente.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Visualizzazione</TD>
+<TD class=TT width=75%>La <A HREF="javascript:HelpPopup('actip9.hlp','defView');" class="pop">visualizzazione</A> in cui viene aperta la query. Selezionare <B>Foglio dati</B>, <B>Struttura</B> o <B>Anteprima di stampa</B> nella casella <B>Visualizzazione</B>. L'impostazione predefinita è Foglio dati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Modalità Immissione Dati</TD>
+<TD class=TT width=75%>La modalità di immissione dati per la query. L'argomento viene applicato solo a query aperte in visualizzazione Foglio dati. Selezionare <B>Aggiungi</B> per consentire l'aggiunta di nuovi <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> ma non la modifica di quelli esistenti, <B>Modifica</B> per consentire la modificare dei record esistenti e l'aggiunta di nuovi record oppure <B>Sola lettura</B> per consentire solo la visualizzazione dei record. L'impostazione predefinita è Modifica.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Se si utilizza Foglio dati per l'argomento Visualizzazione, Microsoft Access visualizza il <A HREF="javascript:HelpPopup('actip9.hlp','defDynaset');" class="pop">set di risultati</A> se la query è una query di selezione, a campi incrociati, di<A HREF="javascript:HelpPopup('actip9.hlp','defUnionQuery');" class="pop"> unione</A> o di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defPassThroughQuery');" class="pop">pass-through</A> e la cui proprietà <A HREF="acproReturnsRecords.htm"><B>Restituisci record</B></A> è impostata a Sì. Se si tratta di una query di comando, <A HREF="javascript:HelpPopup('actip9.hlp','defDataDefinitionQuery');" class="pop">di definizione di dati</A> o di tipo pass-through la cui proprietà <B>Restituisci record</B> è impostata a No, questa viene eseguita da Microsoft Access.</P>
+
+<P class=T>L'azione ApriQuery equivale a fare clic sul pulsante <B>Apri</B> o <B>Struttura</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> dopo aver selezionato una query nella <A HREF="javascript:HelpPopup('actip9.hlp','acrgnDatabaseQueryQ');" class="pop">scheda <B>Query</B></A>. Tramite tale azione è possibile selezionare ulteriori opzioni.</P>
+
+<P class=NT><B>Suggerimento</B> È possibile selezionare una query nella finestra del database e trascinarla in una <A HREF="javascript:HelpPopup('actip9.hlp','defActionRow');" class="pop">riga di azione</A> della macro. In tal modo viene creata automaticamente un'azione ApriQuery che apre la query in visualizzazione Foglio dati.</P>
+
+
+
+<P class=T>Se si passa in visualizzazione Struttura con la query aperta, viene rimossa l'impostazione dell'argomento Modalità Immissione dati per la query, che non è più attiva anche se si torna alla visualizzazione Foglio dati.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Se non si desidera visualizzare i messaggi di sistema che in genere appaiono durante l'esecuzione di una query e indicano se si tratta di una query di comando, nonché quanti sono i record interessati all'operazione, è possibile utilizzare l'azione <A HREF="acactSetWarnings.htm">ImpostaAvvisi</A> per eliminare la visualizzazione di tali messaggi.</P>
+
+
+
+<P class=T>Per eseguire l'azione ApriQuery in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>OpenQuery</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

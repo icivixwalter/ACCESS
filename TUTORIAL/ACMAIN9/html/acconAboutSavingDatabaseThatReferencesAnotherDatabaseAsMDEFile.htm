@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutSavingDatabaseThatReferencesAnotherDatabaseAsMDEFile'
+Feature='Security: Code'
+Handoff='3'
+SourceFile='csecnew.rtf'
+Tnum='189010'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sui riferimenti e sui file MDE</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutsavingdatabasethatreferencesanotherdatabaseasmdefile"></A>Informazioni sui riferimenti e sui file MDE</H1>
+
+<P class=T>Se si tenta di salvare come file MDE un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (mdb) o un <A HREF="javascript:HelpPopup('actip9.hlp','defAddIn');" class="pop">componente aggiuntivo</A> (mda) che fa riferimento a un altro database di Access o a un altro componente aggiuntivo, viene visualizzato un messaggio di errore e non è possibile completare l'operazione. Per salvare come file MDE un database di Access che fa riferimento a un altro database di Access, è necessario salvare come file MDE tutti i database contenuti nel concatenamento dei riferimenti, a partire dal primo database a cui si fa riferimento. Dopo aver salvato il primo database come file MDE, è necessario aggiornare il riferimento nel database successivo in modo che punti al nuovo file MDE prima di salvare anche questo database come file MDE e così via.</P>
+
+<P class=T>Se ad esempio Database1.mdb fa riferimento a Database2.mdb, il quale a sua volta fa riferimento a Database3.mda, la procedura è la seguente:
+
+<OL>
+	<LI class=LPROC>Salvare Database3.mda con il nome Database3.mde.<BR><BR></LI>
+
+	<LI class=LPROC>Aprire Database 2.mdb e modificare il riferimento al nuovo Database3.mde.<BR><BR></LI>
+
+	<LI class=LPROC>Salvare Database2.mdb con il nome Database2.mde.<BR><BR></LI>
+
+	<LI class=LPROC>Aprire Database1.mdb e modificare il riferimento al nuovo Database2.mde. <BR><BR></LI>
+
+	<LI class=LPROC>Salvare Database1.mdb con il nome Database1.mde.</LI>
+</OL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutSavingDatabaseThatReferencesAnotherDatabaseAsMDEFileW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

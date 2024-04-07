@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPaintingX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprofrd3_1a.rtf'
+Tnum='187848'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Painting</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpropaintingx"></A>Esempio di proprietà Painting</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>Painting</B> viene utilizzata per attivare o disattivare l'aggiornamento di una maschera a seconda che la variabile <CODE>ImpostaAggiornamento</CODE> sia impostata a <B>True</B> (-1) o <B>False</B> (0). Se l'aggiornamento della maschera viene disattivato, durante questa operazione viene visualizzata l'icona con la clessidra.</P>
+
+<PRE class=CT><CODE>Function AttivaAggiornamento(frmNome As Form,_
+&nbsp;&nbsp;&nbsp;&nbsp; ByVal ImpostaAggiornamento As Integer) As Integer
+&nbsp;&nbsp;&nbsp; frmNome.<B>Painting</B> = ImpostaAggiornamento
+&nbsp;&nbsp;&nbsp; If ImpostaAggiornamento = False Then&nbsp;&nbsp;&nbsp; ' Aggiornamento maschera disattivato.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.Hourglass True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Visualizza icona con clessidra.
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.Hourglass False&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Non visualizza icona con clessidra.
+&nbsp;&nbsp;&nbsp; End If
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

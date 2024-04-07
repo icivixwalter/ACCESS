@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDAOCountX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234368'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Count (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodaocountx"></A>Esempio di proprietà Count (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si stampano i nomi e il numero totale dei campi in una tabella Ordini.</P>
+
+<PRE class=CT><CODE>Sub ContaCampi()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef
+&nbsp;&nbsp;&nbsp; Dim fld As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento alla tabella Ordini.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs!Ordini
+&nbsp;&nbsp;&nbsp; ' Esegue il conteggio dei campi nell'insieme Fields dell'oggetto TableDef.
+&nbsp;&nbsp;&nbsp; Debug.Print tdf.Fields.<B>Count</B>
+&nbsp;&nbsp;&nbsp; ' Elenca i nomi di tutti i campi.
+&nbsp;&nbsp;&nbsp; For Each fld In tdf.Fields
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print fld.Name
+&nbsp;&nbsp;&nbsp; Next fld
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

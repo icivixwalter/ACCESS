@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acstmDeleteControlX'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186380'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi DeleteControl e DeleteReportControl</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acstmdeletecontrolx"></A>Esempio di metodi DeleteControl e DeleteReportControl</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea una maschera con un pulsante di comando e si visualizza un messaggio che chiede all'utente se desidera eliminare il pulsante di comando. Se si sceglie Sì, il pulsante di comando viene eliminato.</P>
+
+<PRE class=CT><CODE>Sub EliminaPulsanteComando()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, ctlNuovo As Control
+&nbsp;&nbsp;&nbsp; Dim strMsg As String, intRisposta As Integer, intDialogo As Integer
+
+&nbsp;&nbsp;&nbsp; ' Crea una nuova maschera e punta a essa.
+&nbsp;&nbsp;&nbsp; Set frm = CreateForm
+&nbsp;&nbsp;&nbsp; ' Crea un nuovo pulsante di comando.
+&nbsp;&nbsp;&nbsp; Set ctlNuovo = CreateControl(frm.Name, acCommandButton)
+&nbsp;&nbsp;&nbsp; ' Ripristina la maschera.
+&nbsp;&nbsp;&nbsp; DoCmd.Restore
+&nbsp;&nbsp;&nbsp; ' Imposta etichetta.
+&nbsp;&nbsp;&nbsp; ctlNuovo.Caption = "Nuovo pulsante di comando"
+&nbsp;&nbsp;&nbsp; ' Ridimensiona il controllo.
+&nbsp;&nbsp;&nbsp; ctlNuovo.SizeToFit
+&nbsp;&nbsp;&nbsp; ' Richiede all'utente di eliminare il controllo.
+&nbsp;&nbsp;&nbsp; strMsg = "Eliminazione di " &amp; ctlNuovo.Name &amp;". Continua?"
+&nbsp;&nbsp;&nbsp; ' Definisce i pulsanti da visualizzare nella finestra di dialogo.
+&nbsp;&nbsp;&nbsp; intDialogo = vbYesNo + vbCritical + vbDefaultButton2
+&nbsp;&nbsp;&nbsp; intRisposta = MsgBox(strMsg, intDialogo)
+&nbsp;&nbsp;&nbsp; If intRisposta = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Elimina il controllo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>DeleteControl</B> frm.Name, ctlNuovo.Name
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

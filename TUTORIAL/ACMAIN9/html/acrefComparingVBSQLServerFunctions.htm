@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefComparingVBSQLServerFunctions'
+Feature='Access Project: Basic'
+Handoff='3'
+SourceFile='ccsbas.rtf'
+Tnum='274578'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Confronto delle funzioni tra Visual Basic, Applications Edition e Microsoft SQL Server Transact-SQL</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefcomparingvbsqlserverfunctions"></A>Confronto delle funzioni tra Visual Basic, Applications Edition e Microsoft SQL Server Transact-SQL</H1>
+
+<P class=T>La tabella che segue mette a confronto le funzioni di Visual Basic, Applications Edition (VBA) e di Microsoft SQL Server Transact-SQL. Tenere presente che l'Upsize guidato converte le funzioni VBA indicate di seguito (che possono trovarsi nelle regole di convalida di tabella, nelle convalide di campo e nelle impostazioni predefinite) in funzioni Transact-SQL. In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acrefcomparingvbsqlserverfunctions_1">Funzioni su stringhe</A></P>
+
+<P class=LBR1><A HREF="#acrefcomparingvbsqlserverfunctions_2">Funzioni di conversione</A></P>
+
+<P class=LBR1><A HREF="#acrefcomparingvbsqlserverfunctions_3">Funzioni su date</A></P>
+
+<P class=LBR1><A HREF="#acrefcomparingvbsqlserverfunctions_4">Funzioni matematiche</A></P>
+
+<H2><A NAME="acrefcomparingvbsqlserverfunctions_1"></A>Funzioni su stringhe</H2>
+<!-- ALPHA SORTED LIST -->
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Funzioni di Visual Basic</TH>
+<TH width=52%>Funzioni di Transact-SQL</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>asc(x)</TD>
+<TD class=TT width=52%>ascii(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>chr$(x)</TD>
+<TD class=TT width=52%>char(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>lcase$(x)</TD>
+<TD class=TT width=52%>lower(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>len(x)</TD>
+<TD class=TT width=52%>datalength(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>ltrim$( x)</TD>
+<TD class=TT width=52%>ltrim(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>mid$(x,y,z)</TD>
+<TD class=TT width=52%>substring(x,y,z)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>right$(x,y)</TD>
+<TD class=TT width=52%>right(x,y)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>rtrim$(x)</TD>
+<TD class=TT width=52%>rtrim(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>space$( x)</TD>
+<TD class=TT width=52%>space(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>str$(x)</TD>
+<TD class=TT width=52%>str(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>ucase$( x)</TD>
+<TD class=TT width=52%>upper(x)</TD>
+</TR>
+</TABLE><BR>
+
+<P class=rtt>Torna all'<A HREF="#acrefcomparingvbsqlserverfunctions">inizio</A></P>
+
+<H2><A NAME="acrefcomparingvbsqlserverfunctions_2"></A>Funzioni di conversione</H2>
+<!-- ALPHA SORTED LIST -->
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Funzioni di Visual Basic</TH>
+<TH width=52%>Funzioni di Transact-SQL</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>ccur(x)</TD>
+<TD class=TT width=52%>convert(money,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>cdbl(x)</TD>
+<TD class=TT width=52%>convert(float,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>cint(x)</TD>
+<TD class=TT width=52%>convert(smallint,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>clng(x)</TD>
+<TD class=TT width=52%>convert(int,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>csng(x)</TD>
+<TD class=TT width=52%>convert(real,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>cstr(x)</TD>
+<TD class=TT width=52%>convert(varchar,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>cvdate(x)</TD>
+<TD class=TT width=52%>convert(datetime,x)</TD>
+</TR>
+</TABLE><BR>
+
+<P class=rtt>Torna all'<A HREF="#acrefcomparingvbsqlserverfunctions">inizio</A></P>
+
+<H2><A NAME="acrefcomparingvbsqlserverfunctions_3"></A>Funzioni su date</H2>
+<!-- ALPHA SORTED LIST -->
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Funzioni di Visual Basic</TH>
+<TH width=52%>Funzioni di Transact-SQL</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>date(x )</TD>
+<TD class=TT width=52%>convert(datetime,convert(varchar,getdate(x)))</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>dateadd("&lt;Access datepart&gt;", x, y)</TD>
+<TD class=TT width=52%>dateadd(&lt;SQL Server datepart&gt;, x, y)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>datediff("&lt;Access datepart&gt;", x, y)</TD>
+<TD class=TT width=52%>datediff(&lt;SQL Server datepart&gt;, x, y)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>datepart("&lt;Access datepart&gt;", x)</TD>
+<TD class=TT width=52%>datepart(&lt;SQL Server datepart&gt;, x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>day(x)</TD>
+<TD class=TT width=52%>datepart(dd,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>hour(x)</TD>
+<TD class=TT width=52%>datepart(hh,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>minute(x)</TD>
+<TD class=TT width=52%>datepart(mi,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>month(x)</TD>
+<TD class=TT width=52%>datepart(mm,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>now(x)</TD>
+<TD class=TT width=52%>getdate(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>second(x)</TD>
+<TD class=TT width=52%>datepart(ss,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>weekday(x)</TD>
+<TD class=TT width=52%>datepart(dw,x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>year(x)</TD>
+<TD class=TT width=52%>datepart(yy,x)</TD>
+</TR>
+</TABLE><BR>
+
+<P class=rtt>Torna all'<A HREF="#acrefcomparingvbsqlserverfunctions">inizio</A></P>
+
+<H2><A NAME="acrefcomparingvbsqlserverfunctions_4"></A>Funzioni matematiche</H2>
+<!-- ALPHA SORTED LIST -->
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Funzioni di Visual Basic</TH>
+<TH width=52%>Funzioni di Transact-SQL</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>int(x)</TD>
+<TD class=TT width=52%>floor(x)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>sgn(x)</TD>
+<TD class=TT width=52%>sign(x)</TD>
+</TR>
+</TABLE><BR>
+
+<P class=rtt>Torna all'<A HREF="#acrefcomparingvbsqlserverfunctions">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefComparingVBSQLServerFunctionsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

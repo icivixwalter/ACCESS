@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmscUsingADOInAccess2000'
+Feature='acmsc'
+Handoff='3'
+SourceFile='acaADOinf.doc'
+Tnum='285627'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzo degli oggetti ADO (ActiveX Data Objects) in Microsoft Access 2000</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjConnection">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="adobjCatalog">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="jrobjReplica">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="jrobjJetEngine">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmscusingadoinaccess2000"></A>Utilizzo degli oggetti ADO (ActiveX Data Objects) in Microsoft Access 2000</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmscUsingADOInAccess2000_C">
+</OBJECT></P>
+
+
+
+<P class=T>In Microsoft Access 2000 sono disponibili tre nuovi modelli di oggetti da utilizzare per la creazione, la gestione e la manutenzione dei database di Access 2000 e dei dati collegati tramite Visual Basic.</P>
+
+<P class=RL><B>ADO (Microsoft ActiveX Data Objects)</B></P>
+
+<P class=T>Gli oggetti ADO consentono di creare, gestire ed eliminare i record di una origine dati specificata.</P>
+
+<P class=RL><B>ADOX (Microsoft ADO Ext. for DDL and Security)</B></P>
+
+<P class=T>L'estensione ADOX fornisce gli oggetti DDL (Data Definition Language) necessari per creare un nuovo database e i relativi oggetti Container, oltre agli oggetti necessari per gestire la protezione. </P>
+
+<P class=RL><B>Libreria JRO (Microsoft Jet and Replication Objects) 2.1</B> </P>
+
+<P class=T>Siccome gli oggetti ADO sono stati realizzati per funzionare con molti altri database oltre ai <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">database di Microsoft Access</A>, le funzioni specifiche di Jet sono state riversate nella libreria JRO.</P>
+
+<P class=T>La tabella seguente elenca le funzionalità fornite da ciascun database e il confronto con gli oggetti DAO.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=5>
+
+<TR VALIGN="top">
+<TH width=29%>Funzionalità</TH>
+<TH width=18%>DAO</TH>
+<TH width=17%>ADO<SUP>1</SUP></TH>
+<TH width=18%>ADOX<SUP>2</SUP></TH>
+<TH width=18%>JRO<BR> (solo MDB)</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Creazione di Recordset</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>X</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Modifica proprietà di avvio</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>X**</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Supporto ANSI92 SQL***</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=17%>X</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Creazione di tabelle</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Creazione di un nuovo database</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X*</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Modifica proprietà di tabella esistenti</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Creazione di relazioni tra tabelle</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X*</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Creazione nuovi utenti/gruppi</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Modifica impostazioni di protezione</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X*</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Supporto nuovo tipo di dati Decimale di Jet 4.0</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Supporto attributo Compressione per i dati di colonna</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Modifica di query o visualizzazioni SQL memorizzate e semplici</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X*</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Creazione di query permanenti accessibili solo tramite codice </TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>X*</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Creazione di query accessibili tramite contenitore/interfaccia utente di database e codice</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Compattazione/crittografia database</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>X<SUP>4</SUP></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Aggiornamento cache</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>X</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Rendere replicabile un database</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>X<SUP>3</SUP></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Repliche di database</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>X<SUP>3</SUP></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Sincronizzazione delle repliche</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>X<SUP>3</SUP></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Modifica proprietà di database</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Creazione proprietà di database personalizzate</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Modifica proprietà delle colonne di tabella</TD>
+<TD class=TT width=18%>X</TD>
+<TD class=TT width=17%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+<TD class=TT width=18%>&nbsp;</TD>
+</TR>
+</TABLE><BR>
+
+<P class=T>* Disponibile solo se si lavora con database di Microsoft Access (mdb). Le versioni future di SQL Provider potranno offrire tale funzionalità nei progetti di Microsoft Access (adp).</P>
+
+<P class=T>** Disponibile solo se si lavora con progetti di Access.</P>
+
+<P class=T>*** Jet supporta parte di ANSI 92 SQL, tuttavia non è ancora completamente conforme ad ANSI92.</P>
+
+<P class=T><SUP>1</SUP> Usa l'oggetto <A HREF="JavaScript:hhobj_2.Click()"><B>Connection</B></A> per fare riferimento al database.</P>
+
+<P class=T><SUP>2</SUP> Usa l'oggetto <A HREF="JavaScript:hhobj_3.Click()"><B>Catalog</B></A> per fare riferimento al database.</P>
+
+<P class=T><SUP>3</SUP> Usa l'oggetto<A HREF="JavaScript:hhobj_4.Click()"> <B>Replica</B></A> per fare riferimento al database.</P>
+
+<P class=T><SUP>4</SUP> Usa l'oggetto <A HREF="JavaScript:hhobj_5.Click()"><B>JetEngine</B></A> per fare riferimento al database.</P>
+
+
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Diversamente dagli oggetti DAO, gli oggetti ADO e ADOX possono eseguire azioni segnalate anche in database diversi da Jet, a condizione che il provider di tali database supporti l'azione richiesta.</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

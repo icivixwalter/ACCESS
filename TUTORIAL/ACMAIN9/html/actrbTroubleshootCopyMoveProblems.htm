@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbTroubleshootCopyMoveProblems'
+Feature='Data: Cut/Copy/Paste'
+Handoff='1'
+SourceFile='CutCopyPaste.rtf'
+Tnum='188367'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impossibile incollare i dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrbtroubleshootcopymoveproblems"></A>Impossibile incollare i dati</H1>
+
+<P class=T>Nella maggior parte dei casi, se non è possibile incollare tutti o parte dei dati in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A>, viene creata la tabella Errori di incollamento. In questo caso viene visualizzato un messaggio che indica che i dati verranno aggiunti alla tabella Errori di incollamento. Per ulteriori informazioni sulla visualizzazione di tale tabella, fare clic su <A HREF="achowDisplayPasteErrorsTable.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>I motivi per cui parte dei dati o tutti i dati non vengono incollati sono diversi:
+
+<UL>
+	<LI class=LB1>Si è tentato di incollare uno o più campi senza selezionare una destinazione. È necessario selezionare il campo o i campi in cui si desidera effettuare l'incollamento. Per ulteriori informazioni sulla selezione dei campi, fare clic su <A HREF="acrefMouseKeyboardTechniquesSelectingFieldsRecordsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Si è tentato di incollare più campi di quelli contenuti nel foglio dati su cui si desidera effettuare l'incollamento oppure più campi di quelli selezionati come destinazione. I campi in eccesso non vengono incollati.<BR><BR></LI>
+
+	<LI class=LB1>Si è tentato di incollare un valore che non è compatibile con il <A HREF="javascript:HelpPopup('actip9.hlp','defDataType');" class="pop">tipo di dati</A> del campo, ad esempio, l'incollamento di una combinazione di lettere e numeri in un campo numerico di un database di Microsoft Access o in un campo con tipo di dati smallint di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>.<BR><BR></LI>
+
+	<LI class=LB1>Si è tentato di incollare un testo troppo lungo per essere contenuto nel campo. L'impostazione della proprietà <B>Dimensione campo</B> di un database di Access  o della proprietà <B>Lunghezza</B> di una colonna in un progetto di Access determina la dimensione massima di un valore di campo. Per vedere l'impostazione, verificare il campo in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A> della tabella se si sta lavorando con un database di Access o in visualizzazione Proprietà colonne di un <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgDatabaseDiagram');" class="pop">diagramma di database</A> se si sta lavorando con un progetto di Access.<BR><BR></LI>
+
+	<LI class=LB1>Si è tentato di incollare un valore duplicato nella <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> della tabella, in un campo la cui proprietà <B>Indicizzato</B> è impostata a <B>Duplicati impossibili</B> in un database di Access oppure in un campo che ha un vincolo univoco o un indice univoco in un progetto di Access.  Per vedere l'impostazione, verificare il campo nella visualizzazione Struttura se si sta lavorando in un database di Access o nella visualizzazione Proprietà colonne in un diagramma di database se si sta lavorando in un progetto di Access.<BR><BR></LI>
+
+	<LI class=LB1>Si è tentato di incollare dati in un campo nascosto e ciò non è consentito. Per visualizzare colonne nascoste, scegliere <B>Scopri colonne</B> dal menu <B>Formato</B>.<BR><BR></LI>
+
+	<LI class=LB1>In un database di Access, si è tentato di rimuovere o di incollare dati in un <A HREF="javascript:HelpPopup('actip9.hlp','defDisabledField');" class="pop">campo disattivato</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defLocked');" class="pop">bloccato</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedField');" class="pop">calcolato</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defAutoNumber');" class="pop">Contatore</A>. Per ulteriori informazioni su questi tipi di campo, fare clic su <A HREF="acconWhyCantEditFieldS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Non si dispone delle <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> per aggiungere o modificare dati nell'oggetto di database.<BR><BR></LI>
+
+	<LI class=LB1>Si è tentato di incollare un valore che non è consentito inserire nel campo basato sulle impostazioni delle proprietà <B>Valido se</B>, <B>Maschera di input</B>, <B>Richiesto</B> (solo per i database di Access) o <B>Consenti lunghezza zero</B> (solo per i database di Access).<BR><BR></LI>
+
+	<LI class=LB1>La macro di convalida specificata per la proprietà <B>Prima di aggiornare</B> o <B>Su inserimento</B> ha annullato l'aggiornamento. I dati che si è tentato di incollare non soddisfano i requisiti di convalida.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbTroubleshootCopyMoveProblemsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowFieldDataTypesAvailableInMicrosoftAccess'
+Feature='Tables'
+Handoff='2'
+SourceFile='ctblnew_1.rtf'
+Tnum='238518'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Tipi di dati dei campi disponibili in Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFormat">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowfielddatatypesavailableinmicrosoftaccess"></A>Tipi di dati dei campi disponibili in Microsoft Access</H1>
+
+<P class=T>Nella tabella che segue sono riepilogati tutti i tipi di dati dei campi di Microsoft Access con l'indicazione dell'ambito di utilizzo e delle dimensioni di memorizzazione supportate.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=19%>Tipo di dati</TH>
+<TH width=42%>Utilizzabile per</TH>
+<TH width=39%>Dimensione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Testo</TD>
+<TD class=TT width=42%>Testo o combinazioni di testo e numeri, come gli indirizzi. Utilizzabile anche per numeri che non servono per i calcoli, ad esempio i numeri telefonici, i numeri di serie o i codici di avviamento postale.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Testo, fare clic su <A HREF="achowCreateFieldTextMemosS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>Fino a 255 caratteri.
+<P class=TT>Quando si immettono dati in un campo di testo, vengono memorizzati i soli caratteri e non gli eventuali spazi. Per gestire il numero massimo di caratteri consentiti per l'immissione, impostare la proprietà <B>FieldSize</B>.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Memo</TD>
+<TD class=TT width=42%>Testo lungo e numeri, come le note o le descrizioni.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Memo, fare clic su <A HREF="achowCreateFieldTextMemosS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>Fino a 64.000 caratteri.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Numerico</TD>
+<TD class=TT width=42%>I dati numerici da utilizzare per calcoli matematici, ad eccezione dei calcoli che implicano la valuta. Impostare la proprietà <B>FieldSize</B> per definire il tipo di campo numerico specifico.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Numerico, fare clic su <A HREF="achowCreateFieldNumbersCurrencyS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>1, 2, 4 o 8 byte. 16 byte solo per l'ID replica (GUID).
+<P class=TT>Per ulteriori informazioni sulla modifica di un campo di tipo Numerico, fare clic su <A HREF="achowChangeStorageSizeTextNumberFieldsS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Data/ora</TD>
+<TD class=TT width=42%>Data e ora.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Data/ora, fare clic su <A HREF="achowCreateFieldDateTimeS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>8 byte.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Valuta</TD>
+<TD class=TT width=42%>Valori monetari. Utilizzare il tipo di dati Valuta per evitare gli arrotondamenti per difetto nei calcoli. Questo tipo di dati assicura una precisione di 15 cifre a sinistra del separatore decimale e di 4 cifre a destra.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Valuta, fare clic su <A HREF="achowCreateFieldNumbersCurrencyS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>8 byte.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Contatore</TD>
+<TD class=TT width=42%>Numeri univoci sequenziali (con incremento di una unità alla volta) o numeri assegnati in modo casuale inseriti automaticamente quando si aggiunge un record.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Contatore, fare clic su <A HREF="achowCreateFieldAutoNumberS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>4 byte. 16 byte solo per l'ID replica (GUID).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Sì/No</TD>
+<TD class=TT width=42%>Campi che contengono solo uno di due valori, ad esempio Sì/No, Vero/Falso, On/Off.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Sì/No, fare clic su <A HREF="achowCreateFieldForYesNoDataS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>1 bit.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Oggetto OLE</TD>
+<TD class=TT width=42%>Oggetti come i documenti di Microsoft Word, i fogli di lavoro di Microsoft Excel, le figure, i suoni e altri dati binari che sono stati creati in altri programmi con il protocollo OLE e che possono essere <A HREF="javascript:HelpPopup('actip9.hlp','defLink');" class="pop">collegati</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defEmbed');" class="pop">incorporati</A> in una tabella di Microsoft Access. In una maschera o in un report utilizzare una <A HREF="javascript:HelpPopup('actip9.hlp','defBoundObjectFrame');" class="pop">cornice associata contenente oggetti</A> per visualizzare l'oggetto OLE.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Oggetto OLE, fare clic su <A HREF="achowCreateFieldStoreOLEObjectsS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>Fino a 1 GB (se lo spazio disponibile sul disco è sufficiente).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Collegamento ipertestuale</TD>
+<TD class=TT width=42%>Campo che memorizza <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlink');" class="pop">collegamenti ipertestuali</A>. Un collegamento ipertestuale può essere un <A HREF="javascript:HelpPopup('actip9.hlp','defUNC');" class="pop">percorso UNC</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defURL');" class="pop">URL</A>.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Collegamento ipertestuale, fare clic su <A HREF="achowCreateFieldStoreHyperlinksDesign.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>Fino a 64.000 caratteri.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Ricerca guidata</TD>
+<TD class=TT width=42%>Crea un campo che consente di scegliere un valore da un'altra tabella o da un altro elenco di valori utilizzando una casella combinata. Se si sceglie questa opzione dall'elenco dei tipi di dati, verrà avviata una procedura guidata.
+<P class=TT>Per ulteriori informazioni sulla definizione di un campo di tipo Ricerca guidata, fare clic su <A HREF="achowCreateFieldThatLooksUpDataFromAnotherTableS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=39%>La stessa dimensione del campo della <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> che è anche il campo di ricerca, generalmente 4 byte.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; I tipi di dati Numerico, Data/ora, Valuta e Sì/No forniscono <A HREF="javascript:HelpPopup('actip9.hlp','defFormat');" class="pop">formati di visualizzazione</A> predefiniti. Impostare la proprietà <B>Format</B> per scegliere tra i formati disponibili per ogni tipo di dati. È possibile anche creare un formato di visualizzazione personalizzato per tutti i tipi di dati ad eccezione del tipo di dati per gli oggetti OLE. Per informazioni sul modo di definire un formato di visualizzazione personalizzato, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowFieldDataTypesAvailableInMicrosoftAccessW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

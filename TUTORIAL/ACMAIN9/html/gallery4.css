@@ -1,0 +1,19 @@
+BODY {Font-size:75%; FONT-family:"verdana, arial, helvetica, sans-serif"; margin-top:.6em;}
+H1 {FONT-size:125%; Margin-top:.5em; Margin-bottom:.5em;}
+H2 {FONT-size:115%; Margin-top:1.5em; Margin-bottom:.5em;}
+H3 {FONT-size:100%; Margin-top:1.2em; Margin-bottom:.5em;}
+P {font-size:75%; margin-top:.6em; margin-bottom:0em;}
+UL {margin-top:.6em; margin-bottom:0em;}
+LI {padding-bottom:.7em; margin-left:-2em;}
+TD {Font-size: 75%; }
+
+
+A:link {color: black;text-decoration: none;}
+A:active {color: black;text-decoration: none;}
+A:visited {color: black;text-decoration: none;}
+
+.gallerymenu {Font-family:"verdana, arial, helvetica, sans-serif"; cursor:hand;}
+.navSerieBODY {FONT-family:"verdana, arial, helvetica, sans-serif"; background:"#ffcc00";margin-top: 0;margin-bottom: 0;}
+.numbers {cursor:hand; margin-top: 0; margin-bottom: 0;}
+
+

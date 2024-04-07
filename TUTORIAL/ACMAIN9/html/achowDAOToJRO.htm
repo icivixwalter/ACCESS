@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowDAOToJRO'
+Feature='achow'
+Handoff='3'
+SourceFile='acaDAO_ADO9.doc'
+Tnum='267117'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Conversione della replica DAO in JRO</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="achowdaotojro"></A>Conversione della replica DAO in JRO</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowDAOToJRO_C">
+</OBJECT></P>
+
+
+
+<P class=T>Oltre alle librerie di oggetti ADO e ADOX, Microsoft Access comprende anche gli oggetti JRO (Jet and Replication Objects). Questo insieme di oggetti fornisce un modello di oggetti e metodi realizzati specificamente per l'uso con ADO e con il modulo di gestione database Jet.</P>
+
+<P class=T><B>Note</B>&nbsp;&nbsp; Per utilizzare le funzioni JRO, è necessario prima creare un riferimento a MSJRO.DLL scegliendo <B>Riferimenti</B> dal menu <B>Strumenti</B>, quindi selezionando <B>Microsoft Jet and Replication Objects 2.1 Library</B>.</P>
+
+<P class=T>Di seguito viene riportato l'elenco di alcuni metodi comuni di replica DAO e l'equivalente JRO.</P>
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=34%>DAO</TH>
+<TH width=19%>ADO(JRO)</TH>
+<TH width=47%>Nota</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=34%><B>DBEngine</B></TD>
+<TD class=TT width=19%><B>JetEngine</B></TD>
+<TD class=TT width=47%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=34%><B>Database</B></TD>
+<TD class=TT width=19%><B>Catalog</B></TD>
+<TD class=TT width=47%>&nbsp;</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TD class=TT colspan=3 width=100%>Creazione di una <B>Replica</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=45%> <PRE class=TCT><CODE>'Dato un Oggetto di database aperto dbReplicable</CODE></PRE> <PRE class=TCT><CODE>Dim dbTemp As Database
+
+Set dbTemp=OpenDatabase(dbReplicable)
+dbTemp.MakeReplica strNewReplica, _
+"Replica di " &amp; strReplicableDB
+dbsTemp.Close</CODE></PRE>
+</TD>
+<TD colspan=2 width=55%> <PRE class=TCT><CODE>Dim rpMaster As New JRO.Replica</CODE></PRE> <PRE class=TCT><CODE>rpMaster.MakeReplicable "northwind.mdb",False
+Set rpMaster = Nothing
+rpMaster.ActiveConnection ="northwind.mdb"
+rpMaster.CreateReplica "northwind2.mdb", _
+ "Mia replica completa1", jrRepTypeFull, jrRepVisibilityGlobal
+Set rpMaster = Nothing</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT colspan=3 width=100%>Compattazione e crittografia di un <B>Database</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD colspan=2 width=49%> <PRE class=TCT><CODE>Dim dbNWD As Database</CODE></PRE> <PRE class=TCT><CODE>Set dbNWD =OpenDatabase("Northwind.mdb")
+DBEngine.CompactDatabase "Northwind.mdb", _
+"NWD_DAOComp.mdb", , dbEncrypt
+</CODE></PRE>
+</TD>
+<TD width=51%> <PRE class=TCT><CODE>Dim je As New JRO.JetEngine</CODE></PRE> <PRE class=TCT><CODE>je.CompactDatabase _
+"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Northwind.mdb", _&nbsp;&nbsp; "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=NWD_ADOCompmdbmdb;" _
+&amp; "Jet OLEDB:Encrypt Database=True"</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowDAOToJROW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

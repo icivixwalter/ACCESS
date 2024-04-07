@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproOpenArgsX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apromsc1_1a.rtf'
+Tnum='187795'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà OpenArgs</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproopenargsx"></A>Esempio di proprietà OpenArgs</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la proprietà <B>OpenArgs</B> per aprire la maschera Impiegati a un determinato record di impiegato e si dimostra come il metodo <B>OpenForm</B> imposti la proprietà <B>OpenArgs</B>. È possibile eseguire tale routine in un'istanza appropriata, come, ad esempio, quando si verifica l'evento DopoAggiornamento (AfterUpdate) per una finestra di dialogo personalizzata utilizzata per immettere informazioni nuove su un impiegato.</P>
+
+<PRE class=CT><CODE>Sub ApriSuGiorgi()
+&nbsp;&nbsp;&nbsp; DoCmd.OpenForm "Impiegati", acNormal,, acReadOnly, _
+&nbsp;&nbsp;&nbsp;&nbsp;, "Giorgi"
+End Sub
+
+Sub Form_Open(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; Dim strNomeImpiegato As String
+&nbsp;&nbsp;&nbsp; ' Se la proprietà OpenArgs contiene il nome di questo 
+&nbsp;&nbsp;&nbsp; ' impiegato, trovare il record corrispondente e 
+&nbsp;&nbsp;&nbsp; ' visualizzarlo nella maschera. Se, ad esempio, 
+&nbsp;&nbsp;&nbsp; ' la proprietà OpenArgs contiene "Giorgi", si sposta al 
+&nbsp;&nbsp;&nbsp; ' primo record "Giorgi".
+&nbsp;&nbsp;&nbsp; strNomeImpiegato = Forms!Impiegati.<B>OpenArgs</B>
+&nbsp;&nbsp;&nbsp; If Len(strNomeImpiegato) &gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.GoToControl "Cognome"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DoCmd.FindRecord strNomeImpiegato, True, True, True
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si utilizza il metodo <B>FindFirst</B> per individuare l'impiegato il cui nome compare nella proprietà <B>OpenArgs</B>.</P>
+
+<PRE class=CT><CODE>Private Sub Form_Open(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; If Not IsNull(Me.<B>OpenArgs</B>) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim strNomeImpiegato As String
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNomeImpiegato = Me.<B>OpenArgs</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim RS As Recordset
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set RS = Me.RecordsetClone
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RS.FindFirst "Cognome = '" &amp; strNomeImpiegato &amp; "'"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Not RS.NoMatch Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me.Bookmark = RS.Bookmark
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

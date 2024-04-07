@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlMinMaxX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acdsqlx1_1.rtf'
+Tnum='234476'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzioni Min, Max</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlminmaxx"></A>Esempio di funzioni Min, Max</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si suppone di disporre di una tabella Ordini contenente i campi Trasporto e PaeseDestinatario. È possibile utilizzare le funzioni <B>Min</B> e <B>Max</B> per restituire i costi di trasporto maggiori e minori per gli ordini inviati nel Regno Unito. In visualizzazione SQL della finestra della query immettere l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>SELECT <B>Min(</B>[Trasporto]<B>)</B> AS [MinTrasporto] FROM Ordini
+WHERE [PaeseDestinatario] = 'UK';
+
+SELECT <B>Max(</B>[Trasporto]<B>)</B> AS [MaxTrasporto] FROM Ordini
+WHERE [PaeseDestinatario] = 'UK';</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea un controllo calcolato che visualizza i costi di trasporto minori relativi a tutti i record contenuti nella stessa tabella Ordini. Aprire una nuova maschera e impostare a Ordini la proprietà <B>Origine record</B>. Immettere la seguente espressione nella proprietà <B>Origine controllo</B> di una casella di testo sulla maschera. Per applicare una condizione che limiti la ricerca solo ad alcuni record, ad esempio ai record relativi a ordini inviati nel Regno Unito, impostare la proprietà <B>Filtro</B> della maschera.</P>
+
+<PRE class=CT><CODE>=<B>Min(</B>[Trasporto]<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

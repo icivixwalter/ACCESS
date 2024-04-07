@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtLoadUnloadEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187432'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi Caricamento, Scaricamento - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtloadunloadepx"></A>Eventi Caricamento, Scaricamento - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene visualizzata la data corrente nel titolo della maschera al momento del caricamento.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera:</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Load</B>()
+&nbsp;&nbsp;&nbsp; Me.Caption = Date
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio seguente si richiede all'utente di verificare la chiusura della maschera.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera. In visualizzazione Maschera chiudere la maschera per visualizzare la finestra di dialogo, quindi scegliere Sì o No.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Unload</B>(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; If MsgBox("Chiudere la maschera?", vbYesNo) = vbYes Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cancel = True
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

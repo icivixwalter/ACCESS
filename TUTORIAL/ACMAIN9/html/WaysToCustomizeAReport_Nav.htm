@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='WaysToCustomizeAReport_Nav'
+Feature='Reports: Graphical concepts'
+Handoff='2'
+SourceFile='WaysToCustomizeAReport_Nav.htm'
+Tnum='262694'
+Piece='1090'
+Recycle='N'
+>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodi di personalizzazione del report</TITLE>
+<script language="VBScript" src="ConceptCards_Code.vbs"></script>
+<style>@import url(Gallery4.css);</style>
+<link disabled rel="stylesheet" href="Gallery3.css">
+
+<script LANGUAGE="VBScript">
+Dim current, sIsIE
+
+Function Window_OnLoad()
+	sIsIE=DetectBrowserVersion()
+	current=0
+
+	If sIsIE="4.0>" Then
+		Document.All("hotnumber").Item(current).Style.FontSize="110%"
+		Document.All("hotnumber").Item(current).Style.FontWeight="Bold"
+		Document.All("hotnumber").Item(current).parentElement.bgcolor="#ffffff"
+	End If
+
+End Function
+</script>
+</head>
+
+<body BGCOLOR="FFCC00" class="navSerieBody">
+<A NAME="ancTarget">
+<table id="numbers" cellspacing="1" cellpadding="2" border="0" align="left"
+Style="border:none;cursor:default;" class="navSerieBody">
+<tr width="155">
+<td onmouseover="S_Riser()" onmouseout="S_Flatten()" align="center"><a href="#ancTarget" onClick='NumClick("aclrgWaysToCustomizeReport1.htm")' align="center" width="50" bgcolor="#ffffff" id="hotnumber" class="numbers">&nbsp;1&nbsp;</a></td>
+<td onmouseover="S_Riser()" onmouseout="S_Flatten()" align="center"><a href="#ancTarget" onClick='NumClick("ChangeAppearanceOfReport.htm")' align="center" width="50" bgcolor="#ffffff" id="hotnumber" class="numbers">&nbsp;2&nbsp;</a></td>
+<td onmouseover="S_Riser()" onmouseout="S_Flatten()" align="center"><a href="#ancTarget" onClick='NumClick("AddFieldOrControl.htm")' align="center" width="50" bgcolor="#ffffff" id="hotnumber" class="numbers">&nbsp;3&nbsp;</a></td>
+<td onmouseover="S_Riser()" onmouseout="S_Flatten()" align="center"><a href="#ancTarget" onClick='NumClick("MoveSizeAlignControls.htm")' align="center" width="50" bgcolor="#ffffff" id="hotnumber" class="numbers">&nbsp;4&nbsp;</a></td>
+<td onmouseover="S_Riser()" onmouseout="S_Flatten()" align="center"><a href="#ancTarget" onClick='NumClick("ChangeSortingOrGrouping.htm")' align="center" width="50" bgcolor="#ffffff" id="hotnumber" class="numbers">&nbsp;5&nbsp;</a></td>
+<td onmouseover="S_Riser()" onmouseout="S_Flatten()" align="center"><a href="#ancTarget" onClick='NumClick("ChangeLabelText.htm")' align="center" width="50" bgcolor="#ffffff" id="hotnumber" class="numbers">&nbsp;6&nbsp;</a></td>
+</tr>
+</table>
+</A>
+</body>
+</html>
+

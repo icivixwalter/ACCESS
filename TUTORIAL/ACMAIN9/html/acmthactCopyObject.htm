@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactCopyObject'
+Feature='acmth'
+Handoff='2'
+SourceFile='amthact.doc'
+Tnum='186485'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo CopyObject</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthactcopyobject"></A>Metodo CopyObject</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactCopyObjectC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactCopyObjectX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactCopyObjectA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>CopyObject</B> esegue l'azione <A HREF="acactCopyObject.htm">CopiaOggetto</A> in Visual Basic. Per ulteriori informazioni sul funzionamento dell'azione e dei relativi argomenti, vedere l'argomento della Guida in linea relativo all'azione.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DoCmd.CopyObject</B> [<I>databasedestinazione</I>][, <I>nuovonome</I>][, <I>tipooggettoorigine</I>][, <I>nomeoggettoorigine</I>]</P>
+
+
+
+<P class=T>Il metodo <B>CopyObject</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=28%>Argomento</TH>
+<TH width=72%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>databasedestinazione</I></TD>
+<TD class=TT width=72%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che è il percorso e il nome del file validi del database nel quale si desidera copiare l'oggetto. Per selezionare il database corrente omettere questo argomento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=72%><B>Nota&nbsp;&nbsp;</B> In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProjectVBE');" class="pop">progetto di Microsoft Access </A> (ADP) occorre omettere l'argomento <I>databasedestinazione</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=72%>Se si esegue del codice di Visual Basic contenente il metodo <B>CopyObject</B> in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A> e si omette questo argomento, Microsoft Access copia l'oggetto nel database di libreria.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>Nuovonome</I></TD>
+<TD class=TT width=72%>Espressione stringa che è il nuovo nome dell'oggetto che si desidera copiare. Per utilizzare lo stesso nome, se si effettua la copia in un altro database, omettere questo argomento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>Tipooggettoorigine</I></TD>
+<TD class=TT width=72%>Una delle seguenti <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=72%><B>acDataAccessPage<BR>
+acDefault</B> (impostazione predefinita)<BR>
+<B>acDiagram</B><BR>
+<B>acForm</B><BR>
+<B>acMacro</B><BR>
+<B>acModule</B><BR>
+<B>acQuery</B><BR>
+<B>acReport</B><BR>
+<B>acServerView<BR>
+acStoredProcedure<BR>
+acTable</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=72%><B>Nota</B>&nbsp;&nbsp; Quando si utilizza il metodo <B>CopyObject</B> con una pagina di accesso ai dati, nella cartella database predefinita viene creata una copia del file HTML per la pagina di accesso ai dati, e nel database di destinazione viene creato un collegamento alla stessa.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%><I>nomeoggettoorigine</I></TD>
+<TD class=TT width=72%>Espressione stringa che è il nome valido di un oggetto del tipo selezionato tramite l'argomento <I>tipooggettoorigine</I>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=28%>&nbsp;</TD>
+<TD class=TT width=72%>Se si esegue del codice di Visual Basic contenente il metodo <B>CopyObject</B> in un database di libreria, Microsoft Access cerca l'oggetto con questo nome prima nel database di libreria, quindi nel database corrente.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Per questo metodo è necessario specificare l'argomento <I>databasedestinazione</I> o l'argomento <I>nuovonome</I> o entrambi.</P>
+
+<P class=T>Se si omettono gli argomenti <I>tipooggettoorigine</I> e <I>nomeoggettoorigine</I> (la costante predefinita per <I>tipooggettoorigine</I> è <B>acDefault</B>), Microsoft Access copia l'oggetto selezionato nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A>. Per selezionare un oggetto nella finestra del database, è possibile utilizzare l'azione SelezionaOggetto o il metodo <B>SelectObject</B> con l'argomento Da finestra database impostato a Sì (<B>True</B>).</P>
+
+<P class=T>Se si specificano gli argomenti <I>tipooggettoorigine</I> e <I>nomeoggettoorigine</I> ma si omette l'argomento <I>nuovonome</I> o l'argomento <I>databasedestinazione</I>, è necessario includere la virgola dell'argomento <I>nuovonome</I> o dell'argomento <I>databasedestinazione</I>. Se si omette un argomento finale, non utilizzare la virgola dopo l'ultimo argomento specificato.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

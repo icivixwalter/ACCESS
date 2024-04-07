@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconChooseWhichTablesToUpsize'
+Feature='Access Project: Upsizing'
+Handoff='3'
+SourceFile='ccsupwiz.rtf'
+Tnum='274141'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Scegliere le tabelle da sottoporre all'upsize</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconchoosewhichtablestoupsize"></A>Scegliere le tabelle da sottoporre all'upsize</H1>
+
+<P class=T>È possibile selezionare le tabelle del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> di cui si desidera effettuare l'upsize in database di Microsoft SQL Server. In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconchoosewhichtablestoupsize_1">Tabelle collegate</A></P>
+
+<P class=LBR1><A HREF="#acconchoosewhichtablestoupsize_3">Query con alias</A></P>
+
+<P class=LBR1><A HREF="#acconchoosewhichtablestoupsize_2">Effetti dell'Integrità referenziale dichiarativa (DRI)</A></P>
+
+<H2><A NAME="acconchoosewhichtablestoupsize_1"></A>Tabelle collegate</H2>
+
+<P class=T>Nella casella di riepilogo <B>Tabelle disponibili</B> sono incluse tutte le tabelle collegate, a eccezione delle tabelle di Microsoft SQL Server già contenute in un database di SQL Server. Le tabelle collegate che fanno riferimento a un database di SQL Server selezionato per l'upsize vengono automaticamente visualizzate nella casella di riepilogo <B>Esporta in SQL Server</B> e non possono essere rimosse. Le tabelle il cui nome termina con il suffisso "_local" vengono escluse dall'elenco delle tabelle disponibili per evitare che venga effettuato l'upsize di tabelle già sottoposte a questo processo. Se si desidera effettuare nuovamente l'upsize di queste tabelle, rinominarle prima di eseguire l'Upsize guidato rimuovendo il suffisso "_local". Vengono escluse anche le tabelle non correntemente visibili nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A>, comprese le tabelle nascoste e quelle di sistema. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconchoosewhichtablestoupsize">inizio</A></P>
+
+<H2><A NAME="acconchoosewhichtablestoupsize_3"></A>Query con alias</H2>
+
+<P class=T>Se si decide di collegare delle tabelle di Microsoft SQL Server al database di Access, è possibile che l'Upsize guidato crei una query con alias per gestire le differenze tra Microsoft Access e Microsoft SQL Server 6.5, che non consente l'utilizzo di spazi o caratteri speciali nei nomi dei campi, fatta eccezione per il segno di cancelletto (#), il segno del dollaro ($) e il carattere di sottolineatura (_). L'Upsize guidato sostituisce automaticamente gli spazi e i caratteri non validi con il carattere "_". Se nel corso dell'upsize vengono modificati i nomi dei campi, l'Upsize guidato assegna alla tabella collegata il suffisso "_remote", ad esempio Impiegati_remote, e rinomina la tabella originale aggiungendo il suffisso "_local", ad esempio Impiegati_local. L'Upsize guidato quindi crea una query con alias denominata Impiegati affinché le maschere, i report e le query continuino a funzionare correttamente nella nuova tabella di SQL Server collegata.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconchoosewhichtablestoupsize">inizio</A></P>
+
+<H2><A NAME="acconchoosewhichtablestoupsize_2"></A>Effetti dell'Integrità referenziale dichiarativa (DRI)</H2>
+
+<P class=T>Se si intende effettuare l'upsize in SQL Server versione 6.5 ed è già stata selezionata l'Integrità referenziale dichiarativa (Declarative Referential Integrity, DRI) per l'upsize delle tabelle, la DRI impedisce di sovrascrivere le tabelle correlate già sottoposte all'upsize. È possibile eliminare un intero database di SQL Server sottoposto a un upsize utilizzando SQL Server Enterprise Manager per poi effettuare nuovamente l'upsize del database di Access. Se si desidera risottoporre all'upsize solo alcune tabelle, sarà necessario eliminarle insieme a qualsiasi altra tabella correlata partendo dalla tabella "molti" di una <A HREF="javascript:HelpPopup('actip9.hlp','defOneToMany');" class="pop">relazione uno-a-molti</A>, ossia da una tabella che non contiene riferimenti alla relativa chiave primaria di un'altra tabella, quindi effettuare nuovamente l'upsize dell'intero set di tabelle. L'Upsize guidato è solo in grado di stabilire relazioni DRI tra tabelle correlate sottoposte contemporaneamente all'upsize, ma non è in grado di stabilire relazioni tra quelle tabelle e tabelle preesistenti sul server.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconchoosewhichtablestoupsize">inizio</A></P>
+
+<H2></H2>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconChooseWhichTablesToUpsizeW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

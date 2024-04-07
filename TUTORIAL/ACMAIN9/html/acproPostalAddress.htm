@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPostalAddress'
+Feature='acpro'
+Handoff='3'
+SourceFile='feacc1.doc'
+Tnum='262075'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà PostalAddress (Indirizzo)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acpropostaladdress"></A>PostalAddress Property</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:See Also">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPostalAddressC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Example">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPostalAddressX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Applies To">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproPostalAddressA">
+</OBJECT></P>
+
+
+
+<P class=T>You can use the <B>PostalAddress</B> property to specify or determine the postal code and the Customer Barcode data corresponding to the address information displayed in a specified field/textbox. The PostalAddress wizard enables the setting of these properties. </P>
+
+<P class=RL><B>Setting</B></P>
+
+<P class=T>For processing the conversion, correct settings are necessary for all properties of field/textbox that will contain postal code, address, Customer Barcode data.</P>
+
+<P class=T>For settings, use section 1 to 3, delimiting with semicolon (;). </P>
+
+<P class=T><B>Setting for field/textbox for Postal code</B></P>
+
+<P class=T>Specifies the type of postal code for the field/textbox. </P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=22%>Section</TH>
+<TH width=78%>Description</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>1</TD>
+<TD class=TT width=78%>Specifies field/textbox for Prefecture names </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>2</TD>
+<TD class=TT width=78%>Specifies field/textbox for City/Ward/County</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>3</TD>
+<TD class=TT width=78%>Specifies field/textbox for Street/Town/Village</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T><B>Setting for field/textbox for address</B></P>
+
+<P class=T>Specifies the field/textbox contains a postal code or Customer Barcode data. </P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=22%>Section</TH>
+<TH width=78%>Description</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>1</TD>
+<TD class=TT width=78%>Specifies field/textbox for postal code</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>2</TD>
+<TD class=TT width=78%>Specifies field/textbox for Customer Barcode data</TD>
+</TR>
+</TABLE><BR>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; Two semicolons are required at the end of the value.</P>
+
+
+
+<P class=T><B>Setting for field/textbox for Customer Barcode data</B> </P>
+
+<P class=T>Specifies the type of Customer Barcode data in the field/textbox. This setting is the same as the field/textbox for postal code. </P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=22%>Section</TH>
+<TH width=78%>Description</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>1</TD>
+<TD class=TT width=78%>Specifies field/textbox for Prefecture names </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>2</TD>
+<TD class=TT width=78%>Specifies field/textbox for City/Ward/County </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>3</TD>
+<TD class=TT width=78%>Specifies field/textbox for Street/Town/Village</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Remarks</B> </P>
+
+<P class=T>The postal code consist of 3 address items; Prefecture, City/Ward/County, Street/Town/Village. Sections in <B>PostalAddress</B> property of field/textbox for a postal code can be omitted. The following table shows how to omit sections from the property setting. </P>
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=26%>Property Settings</TH>
+<TH colspan=3 width=74%>Address input in field/textbox</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD width=26%>&nbsp;</TD>
+<TH width=27%>Address1</TH>
+<TH width=25%>Address2</TH>
+<TH width=22%>Address3</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1</TD>
+<TD class=TT width=27%>Prefecture+City/Ward/County+Street/Town/Village</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;</TD>
+<TD class=TT width=27%>Prefecture</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>;Address1</TD>
+<TD class=TT width=27%>City/Ward/County+Street/Town/Village</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>;Address1;</TD>
+<TD class=TT width=27%>City/Ward/County</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>;;Address1</TD>
+<TD class=TT width=27%>Street/Town/Village</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;Address2</TD>
+<TD class=TT width=27%>Prefecture</TD>
+<TD class=TT width=25%>City/Ward/County+Street/Town/Village</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;Address1</TD>
+<TD class=TT width=27%>Prefecture+City/Ward/County+Street/Town/Village</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;Address2;</TD>
+<TD class=TT width=27%>Prefecture</TD>
+<TD class=TT width=25%>City/Ward/County</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;Address1;</TD>
+<TD class=TT width=27%>Prefecture+City/Ward/County</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>;Address1;Address2</TD>
+<TD class=TT width=27%>City/Ward/County</TD>
+<TD class=TT width=25%>Street/Town/Village</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>;Address1;Address1</TD>
+<TD class=TT width=27%>City/Ward/County+Street/Town/Village</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;Address2;Address3</TD>
+<TD class=TT width=27%>Prefecture</TD>
+<TD class=TT width=25%>City/Ward/County</TD>
+<TD class=TT width=22%>Street/Town/Village</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;Address2;Address2</TD>
+<TD class=TT width=27%>Prefecture</TD>
+<TD class=TT width=25%>City/Ward/County+Street/Town/Village</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;Address1;Address2</TD>
+<TD class=TT width=27%>Prefecture+City/Ward/County</TD>
+<TD class=TT width=25%>Street/Town/Village</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=26%>Address1;Address1;Address1</TD>
+<TD class=TT width=27%>Prefecture+City/Ward/County+Street/Town/Village</TD>
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=22%>&nbsp;</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>The postal code converter program has been developed and licensed by Advanced Giken Corporation for Microsoft Corporation.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthOpenCurrentDatabaseX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186404'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo OpenCurrentDatabase</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthopencurrentdatabasex"></A>Esempio di metodo OpenCurrentDatabase</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene aperto un database di Microsoft Access in un'altra applicazione tramite Automazione; viene quindi aperta una maschera in tale database.</P>
+
+<P class=T>È possibile immettere il codice riportato di seguito in un modulo di Visual Basic in qualsiasi applicazione che è in grado di agire come componente COM. È possibile, ad esempio, eseguire il codice riportato di seguito da Microsoft Excel, da Microsoft Visual Basic o da Microsoft Access.</P>
+
+<P class=T>Quando la variabile che punta all'oggetto <B>Application</B> non rientra nell'area di validità, anche l'istanza di Microsoft Access che rappresenta tale oggetto viene chiusa. Si consiglia, quindi, di dichiarare tale variabile a livello di modulo.</P>
+
+<PRE class=CT><CODE>' Includere il seguente codice nella sezione Dichiarazioni del modulo.
+Dim appAccess As Access.Application
+
+Sub VisualizzaMaschera()
+&nbsp;&nbsp;&nbsp; ' Inizializza stringa nel percorso del database.
+&nbsp;&nbsp;&nbsp; Const strConPathToSamples = "C:\Programmi " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "\Microsoft Office\Office\Esempi\Northwind.mdb"
+
+&nbsp;&nbsp;&nbsp; strDB = strConPathToSamples &amp; "Northwind.mdb"
+&nbsp;&nbsp;&nbsp; ' Crea nuova istanza di Microsoft Access.
+&nbsp;&nbsp;&nbsp; Set appAccess = _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CreateObject("Applicazione.Access")
+&nbsp;&nbsp;&nbsp; ' Apre database nella finestra Microsoft Access.
+&nbsp;&nbsp;&nbsp; appAccess.<B>OpenCurrentDatabase</B> strConPathToSamples
+&nbsp;&nbsp;&nbsp; ' Apre maschera Ordini.
+&nbsp;&nbsp;&nbsp; appAccess.DoCmd.OpenForm "Ordini"
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowRuntimeErrorHandling'
+Feature='achow'
+Handoff='2'
+SourceFile='acvbhow2.doc'
+Tnum='186924'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Gestione degli errori di run-time</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmOnError">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjError">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaobjErr">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjError">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmResume">
+</OBJECT>
+<OBJECT ID="hhobj_8" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vamthClear">
+</OBJECT>
+<OBJECT ID="hhobj_9" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vastmExit">
+</OBJECT>
+<OBJECT ID="hhobj_10" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vamthRaise">
+</OBJECT>
+<OBJECT ID="hhobj_11" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaobjErr">
+</OBJECT>
+<OBJECT ID="hhobj_12" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjError">
+</OBJECT>
+<OBJECT ID="hhobj_13" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdcolErrors">
+</OBJECT>
+<OBJECT ID="hhobj_14" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjError">
+</OBJECT>
+<OBJECT ID="hhobj_15" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dacolError">
+</OBJECT>
+<OBJECT ID="hhobj_16" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaproNumber">
+</OBJECT>
+<OBJECT ID="hhobj_17" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaproDescription">
+</OBJECT>
+<OBJECT ID="hhobj_18" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproNumber">
+</OBJECT>
+<OBJECT ID="hhobj_19" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daproNumber">
+</OBJECT>
+<OBJECT ID="hhobj_20" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproDescription">
+</OBJECT>
+<OBJECT ID="hhobj_21" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daproDescription">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowruntimeerrorhandling"></A>Gestione degli errori di run-time</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowRuntimeErrorHandlingC;daobjError;daproDescription;daproNumber;mdobjError;mdproDescription;mdproNumber;vamthClear;vamthRaise;vaproDescription;vaproNumber;vastmError;vastmExit;vastmResume">
+</OBJECT></P>
+
+
+
+<P class=RL><B>Errori e gestione degli errori</B></P>
+
+<P class=T>Quando si programma un'applicazione, è necessario considerare le conseguenze che possono derivare dal verificarsi di un errore. Un errore si può verificare per due motivi. Innanzitutto, è possibile che un codice normalmente valido risulti invece in un errore a causa di una determinata condizione che si verifica durante l'esecuzione dell'applicazione. Si verifica un errore ad esempio se il codice tenta di aprire una <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabella</A> che è stata eliminata dall'utente. In secondo luogo, è possibile che il codice contenga una logica errata che impedisce l'esecuzione delle azioni previste. Si verifica un errore ad esempio se il codice tenta di dividere un valore per zero.</P>
+
+<P class=T>Se la gestione degli errori non viene implementata, quando si verifica un errore nel codice l'esecuzione viene interrotta e viene visualizzato un messaggio di errore. Per prevenire che ciò avvenga è opportuno includere nel codice una routine completa per la gestione degli errori che potrebbero verificarsi.</P>
+
+<P class=T>Quando si aggiunge la gestione degli errori a una routine, è necessario considerare come tale routine indirizzerà l'esecuzione quando si verifica un errore. La prima operazione per l'indirizzamento dell'esecuzione a un gestore degli errori consiste nell'abilitare quest'ultimo includendo un'istruzione <A HREF="JavaScript:hhobj_2.Click()"><B>On Error</B></A> all'interno della routine. L'istruzione <B>On Error</B> direziona l'esecuzione in caso di errori. Se non è presente questa<B> </B>istruzione, l'esecuzione si interrompe e viene visualizzato un messaggio quando si verifica un errore.</P>
+
+<P class=T>Quando si verifica un errore in una routine per la quale è stato abilitato un gestore degli errori, non viene visualizzato il normale messaggio di errore. L'esecuzione viene invece indirizzata a un gestore degli errori, se esistente, il quale diventa attivo. All'interno di questo gestore, è possibile determinare il tipo di errore che si è verificato e gestirlo nella maniera appropriata. In Microsoft Access sono disponibili tre oggetti contenenti informazioni sugli errori che si sono verificati: l'oggetto <A HREF="JavaScript:hhobj_3.Click()"><B>Error</B></A> di ADO, l'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>Err</B></A> di Visual Basic e l'oggetto <A HREF="JavaScript:hhobj_5.Click()"><B>Error</B></A> di DAO.</P>
+
+<P class=T>Per ulteriori informazioni sulla gestione degli errori, vedere il capitolo relativo alla gestione degli errori e al debug del <A HREF="JavaScript:hhobj_6.Click()"><I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I></A>.</P>
+
+<P class=RL><B>Indirizzamento dell'esecuzione quando si verifica un errore</B></P>
+
+<P class=T>Un gestore degli errori specifica ciò che si verifica all'interno di una routine in caso di errori. È possibile ad esempio che si desideri interrompere la routine se si verifica un determinato errore oppure correggere la condizione che ha causato tale errore e riprendere l'esecuzione. Le istruzioni <B>On Error</B> e <A HREF="JavaScript:hhobj_7.Click()"><B>Resume</B></A> determinano come deve procedere l'esecuzione in caso di errori.</P>
+
+<P class=RL><I>Istruzione On Error</I></P>
+
+<P class=T>L'istruzione <B>On Error</B> abilita o disabilita una routine di gestione degli errori. Se una routine di questo tipo viene abilitata, l'esecuzione passa a essa quando si verifica un errore.</P>
+
+<P class=T>L'istruzione <B>On Error</B> può avere tre formati: <B>On Error GoTo</B> <I>etichetta</I>, <B>On Error GoTo 0</B> e <B>On Error Resume Next</B>. L'istruzione <B>On Error GoTo</B> <I>etichetta</I> abilita una routine di gestione degli errori che inizia dalla riga in cui si trova l'istruzione stessa. È necessario abilitare la routine di gestione degli errori prima della prima riga in cui si potrebbe verificare un errore. Quando il gestore degli errori è attivo e si verifica un errore, l'esecuzione passa alla riga specificata dall'argomento <I>etichetta</I>.</P>
+
+<P class=T>La riga specificata dall'argomento <I>etichetta</I> dovrebbe essere l'inizio della routine di gestione degli errori. Nella routine riportata di seguito ad esempio viene specificato che se si verifica un errore l'esecuzione passa alla riga <CODE>Error_ProbabileCausaDiErrore:</CODE></P>
+
+<PRE class=CT><CODE>Function ProbabileCausaDiErrore()
+    ' Abilita il gestore degli errori.
+    On Error GoTo Error_ProbabileCausaDiErrore
+    .            ' Include il codice che può generare errore.
+    .
+    .
+
+Error_ProbabileCausaDiErrore:
+    .            ' Include il codice per gestire errore.
+    .
+    .
+End Function</CODE></PRE>
+
+
+
+<P class=T>L'istruzione <B>On Error GoTo 0</B> disabilita la gestione degli errori all'interno di una routine. Non specifica la riga 0 come inizio del codice di gestione degli errori, anche se la routine contiene una riga con il numero 0. Se nel codice non è presente alcuna istruzione <B>On Error GoTo 0</B>, il gestore degli errori viene automaticamente disabilitato al termine dell'esecuzione della routine. L'istruzione <B>On Error GoTo 0</B> reimposta le proprietà dell'oggetto <B>Err</B> e produce lo stesso effetto del metodo <A HREF="JavaScript:hhobj_8.Click()"><B>Clear</B></A> dell'oggetto <B>Err</B>.</P>
+
+<P class=T>L'istruzione <B>On Error Resume Next</B> ignora la riga che causa un errore e indirizza l'esecuzione alla riga successiva. In questo modo, l'esecuzione non viene interrotta. È possibile utilizzare l'istruzione <B>On Error Resume Next</B> se si desidera controllare le proprietà dell'oggetto <B>Err</B> subito dopo la riga in corrispondenza della quale si prevede che si verificherà un errore e gestire tale errore all'interno della routine invece che in un gestore degli errori.</P>
+
+<P class=RL><I>Istruzione Resume</I></P>
+
+<P class=T>L'istruzione <B>Resume</B> restituisce l'esecuzione al corpo della routine dall'interno di una routine di gestione degli errori. È possibile includere un'istruzione <B>Resume</B> all'interno di una routine di gestione degli errori se si desidera che l'esecuzione continui in un determinato punto di una routine. Le istruzioni <B>Resume</B> non sono tuttavia necessarie; è possibile, infatti, terminare la routine dopo la routine di gestione degli errori.</P>
+
+<P class=T>L'istruzione <B>Resume</B> può avere tre formati. L'istruzione <B>Resume</B> o <B>Resume 0</B> restituisce l'esecuzione alla riga in cui si è verificato l'errore. L'istruzione <B>Resume Next</B> restituisce l'esecuzione alla riga successiva a quella in cui si è verificato l'errore. L'istruzione <B>Resume</B> <I>etichetta</I> restituisce l'esecuzione alla riga specificata dall'argomento <I>etichetta</I>, il<I> </I>quale deve indicare un'etichetta o un numero di riga.</P>
+
+<P class=T>L'istruzione <B>Resume</B> o <B>Resume 0</B> viene in genere utilizzata quando l'utente deve effettuare una correzione. Se ad esempio viene richiesto all'utente il nome di una tabella da aprire e l'utente immette il nome di una tabella che non esiste, è possibile ripetere la richiesta e riprendere l'esecuzione con l'istruzione che ha causato l'errore.</P>
+
+<P class=T>L'istruzione <B>Resume Next</B> viene utilizzata quando il codice corregge l'errore all'interno di un gestore degli errori e si desidera continuare l'esecuzione senza la riga che ha causato l'errore. L'istruzione <B>Resume</B> <I>etichetta</I> viene utilizzata quando si desidera continuare l'esecuzione in un altro punto della routine, specificato dall'argomento <I>etichetta</I>. È possibile ad esempio che si desideri riprendere l'esecuzione in corrispondenza di una routine di uscita, come descritto nella sezione seguente.</P>
+
+<P class=RL><I>Uscita da una routine</I></P>
+
+<P class=T>Quando si include una routine di gestione degli errori in una routine, è necessario includere anche una routine di uscita, in modo che la routine di gestione degli errori venga eseguita solo se si verifica un errore. È possibile specificare una routine di uscita con un'etichetta di riga nello stesso modo in cui si specificano le routine di gestione degli errori.</P>
+
+<P class=T>È possibile ad esempio aggiungere una routine di uscita nell'esempio riportato nella sezione precedente. Se non si verifica alcun errore, la routine di uscita viene eseguita dopo il corpo della routine. Se invece si verifica un errore, l'esecuzione passa alla routine di uscita dopo che è stato eseguito il codice della routine di gestione degli errori. La routine di uscita contiene un'istruzione <A HREF="JavaScript:hhobj_9.Click()"><B>Exit</B></A>.</P>
+
+<PRE class=CT><CODE>Function ProbabileCausaDiErrore()
+    ' Abilita il gestore degli errori.
+    On Error GoTo Error_ProbabileCausaDiErrore
+    .            ' Include il codice che può generare errore.
+    .
+    .
+
+Exit_ProbabileCausaDiErrore:
+    Exit Function
+
+Error_ProbabileCausaDiErrore:
+    .            ' Include il codice per gestire errore.
+    .
+    .
+    ' Riprende esecuzione con routine di uscita per uscire dalla funzione.
+    Resume Exit_ProbabileCausaDiErrore
+End Function</CODE></PRE>
+
+
+
+<P class=RL><I>Gestione degli errori in routine nidificate</I></P>
+
+<P class=T>Quando si verifica un errore in una routine nidificata per la quale non è stato abilitato un gestore degli errori, invece di interrompere l'esecuzione, Visual Basic ricerca nell'elenco delle chiamate precedenti per verificare se in un'altra routine è presente un gestore degli errori abilitato. In questo modo, il codice ha la possibilità di correggere l'errore all'interno di un'altra routine. Si supponga ad esempio che la Routine A chiami la Routine B e che questa a sua volta chiami la Routine C. Se si verifica un errore nella Routine C e non è presente alcun gestore degli errori abilitato, Visual Basic ricerca un gestore degli errori abilitato prima nella Routine A e poi nella Routine B. Se il risultato della ricerca è positivo, l'esecuzione passa al gestore degli errori trovato, altrimenti l'esecuzione si interrompe e viene visualizzato un messaggio di errore.</P>
+
+<P class=T>La ricerca di un gestore degli errori abilitato nell'elenco delle chiamate precedenti viene effettuata anche quando si verifica un errore all'interno del gestore degli errori attivo. È possibile forzare Visual Basic a ricercare nell'elenco delle chiamate precedenti rilevando un errore all'interno del gestore degli errori attivo con il metodo <A HREF="JavaScript:hhobj_10.Click()"><B>Raise</B></A> dell'oggetto <B>Err</B>. Ciò è utile per la gestione degli errori non previsti all'interno di un gestore degli errori. Se si verifica un errore non previsto e questo viene rigenerato all'interno del gestore degli errori, viene effettuata di nuovo la ricerca nell'elenco delle chiamate per trovare un altro gestore degli errori che potrebbe essere impostato per gestire questo determinato errore.</P>
+
+<P class=T>Si supponga ad esempio che per la Routine C sia stato abilitato un gestore degli errori, ma che questo gestore non corregga l'errore che si è verificato. Dopo che il gestore degli errori ha ricercato tutti gli errori previsti, può rigenerare l'errore originale. A questo punto l'esecuzione passa all'eventuale gestore degli errori presente nella Routine B, individuato tramite ricerca nelle chiamate precedenti, che potrebbe correggere l'errore. Se nella Routine B non è presente alcun gestore degli errori oppure se il gestore degli errori disponibile non riesce a correggere l'errore e lo rigenera, l'esecuzione passa al gestore degli errori presente nella Routine A, se ne esiste uno.</P>
+
+<P class=T>Per illustrare questo concetto in un altro modo, si supponga che una routine nidificata preveda la gestione di un errore di mancata corrispondenza tra tipi, uno degli errori previsti. A un certo punto, all'interno della Routine C, si verifica un errore di divisione per zero che non è stato previsto. Se è stata inserita un'istruzione per rigenerare l'errore originale, l'esecuzione passa a un altro gestore degli errori abilitato, se disponibile, individuato tramite ricerca nelle chiamate precedenti. Se in un'altra routine dell'elenco di chiamate è stato corretto un errore di divisione per zero, questo errore verrà corretto. Se invece il codice non rigenera l'errore, l'esecuzione della routine continua senza correggere l'errore di divisione per zero che a sua volta potrebbe creare altri errori all'interno del set di routine nidificate.</P>
+
+<P class=T>Riepilogando, Visual Basic ricerca un gestore degli errori abilitato nell'elenco delle chiamate precedenti se:
+
+<UL>
+	<LI class=LB1>Si verifica un errore in una routine che non contiene un gestore degli errori abilitato.<BR><BR></LI>
+
+	<LI class=LB1>Si verifica un errore all'interno di un gestore degli errori attivo. Se si utilizza il metodo <B>Raise</B> dell'oggetto <B>Err</B> per rilevare un errore, è possibile forzare Visual Basic a ricercare un gestore degli errori abilitato nell'elenco delle chiamate precedenti.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Come ottenere informazioni su un errore</B></P>
+
+<P class=T>Dopo che l'esecuzione viene passata alla routine di gestione degli errori, il codice deve determinare quale errore si è verificato e come correggerlo. In Visual Basic e in Microsoft Access sono disponibili diversi elementi di linguaggio che è possibile utilizzare per ottenere informazioni su un errore specifico, ciascuno dei quali è adatto per un diverso tipo di errore. Poiché gli errori si possono verificare in parti diverse dell'applicazione, è necessario determinare quale elemento utilizzare nel codice a seconda di quali errori sono previsti.</P>
+
+<P class=T>Gli elementi di linguaggio disponibili per la gestione degli errori comprendono:
+
+<UL>
+	<LI class=LB1>l'oggetto <A HREF="JavaScript:hhobj_11.Click()"><B>Err</B></A><BR><BR></LI>
+
+	<LI class=LB1>l'oggetto <A HREF="JavaScript:hhobj_12.Click()"><B>Error</B></A> e l'insieme <A HREF="JavaScript:hhobj_13.Click()"><B>Errors</B></A> di ADO<BR><BR></LI>
+
+	<LI class=LB1>l'oggetto <A HREF="JavaScript:hhobj_14.Click()"><B>Error</B></A> e l'insieme <A HREF="JavaScript:hhobj_15.Click()"><B>Errors</B></A> di DAO<BR><BR></LI>
+
+	<LI class=LB1>il metodo <A HREF="acmthAccessError.htm"><B>AccessError</B></A><BR><BR></LI>
+
+	<LI class=LB1>l'evento <A HREF="acevtError.htm">Errore</A>
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><I>Oggetto Err</I></P>
+
+<P class=T>L'oggetto <B>Err</B> è fornito da Visual Basic. Quando si verifica un errore in Visual Basic, le informazioni a esso relative vengono memorizzate nell'oggetto <B>Err</B>. Tale oggetto conserva le informazioni relative a un solo errore alla volta. Quando si verifica un nuovo errore, l'oggetto <B>Err</B> viene aggiornato in modo da includere le informazioni relative a<B> </B>quest'ultimo invece che al precedente.</P>
+
+<P class=T>Per ottenere informazioni su un determinato errore, è possibile utilizzare le proprietà e i metodi dell'oggetto <B>Err</B>. La proprietà <A HREF="JavaScript:hhobj_16.Click()"><B>Number</B></A> è la proprietà predefinita dell'oggetto <B>Err</B> e restituisce il numero identificativo dell'errore che si è verificato. La proprietà <A HREF="JavaScript:hhobj_17.Click()"><B>Description</B></A> dell'oggetto <B>Err</B> restituisce la stringa descrittiva associata a un errore Visual Basic. Il metodo <B>Clear</B> cancella le informazioni sull'errore corrente dall'oggetto <B>Err</B>. Il metodo <B>Raise</B> genera un errore specifico e inserisce le informazioni su tale errore nelle proprietà dell'oggetto <B>Err</B>.</P>
+
+<P class=T>Nell'esempio riportato di seguito viene mostrato l'utilizzo dell'oggetto <B>Err</B> in una routine che potrebbe causare un errore di mancata corrispondenza tra tipi:</P>
+
+<PRE class=CT><CODE>Function ProbabileCausaDiErrore()
+    ' Dichiara la costante per rappresentare un probabile errore.
+    Const conMancataCorrispondenzaTipi As Integer = 13
+
+    On Error GoTo Error_ProbabileCausaDiErrore
+        .            ' Include il codice che potrebbe generare errore.
+        .
+        .
+
+Exit_ProbabileCausaDiErrore:
+    Exit Function
+
+Error_ProbabileCausaDiErrore:
+    ' Controlla le proprietà oggetto Err.
+    If Err = conMancataCorrispondenzaTipi Then
+        .            ' Include il codice per gestire errore.
+        .
+        .
+    Else
+        ' Rigenera errore originale.
+        Dim intNumErr As Integer
+        intNumErr = Err
+        Err.Clear
+        Err.Raise intNumErr
+    End If
+    ' Riprende esecuzione con routine di uscita per uscire dalla funzione.
+    Resume Exit_ProbabileCausaDiErrore
+End Function</CODE></PRE>
+
+
+
+<P class=T>Si noti che nell'esempio precedente si utilizza il metodo <B>Raise</B> per rigenerare l'errore originale. Se si verifica un errore diverso dalla mancata corrispondenza tra tipi, l'esecuzione passa a un altro gestore degli errori abilitato, se disponibile, individuato tramite ricerca nell'elenco delle chiamate precedenti.</P>
+
+<P class=T>L'oggetto <B>Err</B> fornisce tutte le informazioni necessarie sugli errori di Visual Basic mentre non fornisce informazioni complete sugli errori di Microsoft Access o su quelli del <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A>. In Microsoft Access e nella funzionalità <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">DAO (Data Access Objects)</A> vengono forniti elementi di linguaggio aggiuntivi per la gestione di tali errori.</P>
+
+<P class=RL><I>Oggetto Error e insieme Errors</I></P>
+
+<P class=T>L'oggetto <B>Error</B> e l'insieme <B>Errors</B> vengono forniti dalle funzionalità ADO e DAO. L'oggetto <B>Error</B> rappresenta un errore ADO o DAO. Una singola operazione ADO o DAO può causare diversi errori, specialmente se sono in esecuzione operazioni <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC</A> di DAO. A ogni errore che si verifica durante una determinata operazione di accesso ai dati è associato un oggetto <B>Error</B>. Tutti gli oggetti <B>Error</B> associati a una determinata operazione ADO o DAO vengono memorizzati nell'insieme <B>Errors</B>; l'errore di livello inferiore è il primo oggetto dell'insieme mentre quello di livello superiore è l'ultimo oggetto.</P>
+
+<P class=T>Quando si verifica un errore ADO o DAO, l'oggetto <B>Err</B> di Visual Basic contiene il numero di errore relativo al primo oggetto contenuto nell'insieme <B>Errors</B>. Per determinare se si sono verificati altri errori ADO o DAO, controllare l'insieme <B>Errors</B>. I valori della proprietà <A HREF="JavaScript:hhobj_18.Click()"><B>Number</B></A> di ADO o <A HREF="JavaScript:hhobj_19.Click()"><B>Number</B></A> di DAO e della proprietà <A HREF="JavaScript:hhobj_20.Click()"><B>Description</B></A> di ADO o <A HREF="JavaScript:hhobj_21.Click()"><B>Description</B></A> di DAO del primo oggetto <B>Error</B> nell'insieme <B>Errors</B> dovrebbero corrispondere ai valori delle proprietà <B>Number</B> e <B>Description</B> dell'oggetto <B>Err</B> di Visual Basic.</P>
+
+<P class=RL><I>Metodo AccessError</I></P>
+
+<P class=T>È possibile utilizzare il metodo <B>Raise</B> dell'oggetto <B>Err</B> per generare un errore di Visual Basic che non si è effettivamente verificato e per determinare la stringa descrittiva associata a tale errore. Non è possibile tuttavia utilizzare il metodo <B>Raise</B> per generare un errore di Microsoft Access, ADO o DAO. Per determinare la stringa descrittiva associata a un errore di Microsoft Access, ADO o DAO che non si è effettivamente verificato, utilizzare il metodo <B>AccessError</B>.</P>
+
+<P class=RL><I>Evento Errore</I></P>
+
+<P class=T>È possibile utilizzare l'evento Errore per rilevare gli errori che si verificano in una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> o in un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A> di Microsoft Access. L'evento Errore si verifica ad esempio se un utente tenta di immettere del testo in un campo il cui tipo di dati è Data/ora. Se si aggiunge una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> Errore a una maschera Impiegati e quindi si tenta di immettere un valore di testo nel campo Data di assunzione, viene eseguita la routine evento Errore.</P>
+
+<P class=T>La routine evento Errore ha per argomento un numero intero, DataErr. Quando la routine evento Errore viene eseguita, l'argomento DataErr contiene il numero dell'errore di Microsoft Access che si è verificato. L'unico modo per determinare il numero di questo errore consiste nel controllare il valore dell'argomento DataErr. L'oggetto <B>Err</B> non contiene informazioni sull'errore dopo che si è verificato l'evento Errore. È possibile utilizzare il valore dell'argomento DataErr insieme al metodo <B>AccessError</B> per determinare il numero dell'errore e la relativa stringa descrittiva.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'istruzione <B>Error</B> e la funzione <B>Error</B> vengono fornite solo per motivi di compatibilità con le versioni precedenti. Quando si scrive un nuovo codice, utilizzare gli oggetti <B>Err</B> ed <B>Error</B>, la funzione <B>AccessError</B> e l'evento Errore per ottenere informazioni su un errore.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

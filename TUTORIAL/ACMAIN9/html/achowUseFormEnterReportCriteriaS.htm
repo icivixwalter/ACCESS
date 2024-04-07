@@ -1,0 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowUseFormEnterReportCriteriaS'
+Feature='Reports: Advanced'
+Handoff='3'
+SourceFile='crptadv6.doc'
+Tnum='187411'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare una maschera per immettere i criteri relativi ai report</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowWriteUDFS">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowuseformenterreportcriterias"></A>Utilizzare una maschera per immettere i criteri relativi ai report</H1>
+
+<H2>Creare una maschera non associata in cui vengono richiesti criteri relativi ai report</H2>
+
+<OL>
+	<LI class=LPROC>Creare una <A HREF="javascript:HelpPopup('actip9.hlp','defUnboundFormReport');" class="pop">maschera non associata</A>.<BR><BR></LI>
+
+	<LI class=LPROC>In <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura</A> impostare le seguenti proprietà della maschera.
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Proprietà</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Etichetta</B></TD>
+<TD class=TT width=64%>Nome che si desidera venga visualizzato nella barra del titolo della maschera</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Visualizzazione predefinita</B></TD>
+<TD class=TT width=64%><B>Maschera singola</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Visualizzazioni consentite</B></TD>
+<TD class=TT width=64%><B>Maschera</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Barre scorrimento</B></TD>
+<TD class=TT width=64%><B>No</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Selettori record</B></TD>
+<TD class=TT width=64%><B>No</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Pulsanti spostamento</B></TD>
+<TD class=TT width=64%><B>No</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Stile bordo</B></TD>
+<TD class=TT width=64%><B>Dialogo</B></TD>
+</TR>
+</TABLE>
+</LI>
+
+	<LI class=LPROC>Aggiungere una <A HREF="javascript:HelpPopup('actip9.hlp','defUnboundField');" class="pop">casella di testo non associata</A> per ciascun criterio che si desidera immettere.<BR><BR></LI>
+
+	<LI class=LPROC>Impostare le proprietà per le caselle di testo come segue.
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Proprietà</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Nome elemento</B></TD>
+<TD class=TT width=64%>Nome che descrive il tipo di criterio, ad esempio <B>DataIniziale</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Formato</B></TD>
+<TD class=TT width=64%>Formato che riflette il tipo di dati del criterio. Per un criterio relativo alla data ad esempio selezionare un formato quale <B>Data breve</B>.</TD>
+</TR>
+</TABLE>
+</LI>
+
+	<LI class=LPROC>Salvare la maschera e assegnarle un nome, ad esempio Vendite.
+<P class=LT1>I pulsanti di comando <B>OK</B> e <B>Annulla</B> verranno aggiunti alla maschera dopo la creazione delle relative macro.
+</LI>
+</OL>
+
+<H2>Creare le macro per la maschera in un gruppo di macro</H2>
+
+<OL>
+	<LI class=LPROC>Nella finestra del database fare clic sulla scheda <B>Macro</B> <A HREF="javascript:HelpPopup('actip9.hlp','acrgnDatabaseMacroQ');" class="pop"><IMG SRC="images/dbcmac.bmp"  BORDER=0></A>, quindi sul pulsante <B>Nuovo</B> sulla barra degli strumenti.
+<P class=LT1>Per questa routine verranno create quattro macro in un gruppo di macro.
+</LI>
+
+	<LI class=LPROC>Creare una macro che apre la maschera non associata. Iniziare facendo clic sul pulsante <B>Nomi macro</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrMacroNamesQ');" class="pop"><IMG SRC="images/macronms.bmp" BORDER=0></A> per visualizzare la colonna <B>Nome macro</B>. Digitare un nome per la macro, ad esempio <B>Apri Vendite</B>, nella colonna <B>Nome Macro</B>, quindi selezionare l'azione <B>ApriMaschera</B>. Impostare quindi gli argomenti dell'azione come segue:
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Argomento</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Nome maschera</TD>
+<TD class=TT width=64%>Nome della maschera non associata, ad esempio Vendite</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Visualizzazione</TD>
+<TD class=TT width=64%>Maschera</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Modalità Immissione dati</TD>
+<TD class=TT width=64%>Modifica</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Modalità finestra</TD>
+<TD class=TT width=64%>Dialogo</TD>
+</TR>
+</TABLE><BR>
+
+<P class=LT1>Aggiungere una seconda azione, AnnullaEvento, che annulla l'anteprima o la stampa del report quando viene scelto il pulsante <B>Annulla</B> sulla maschera. Fare quindi clic sul pulsante <B>Condizioni</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrConditionsQ');" class="pop"><IMG SRC="images/conditn.bmp" BORDER=0></A> per visualizzare la colonna <B>Condizione</B> e digitare la seguente<B> </B>espressione:
+
+<P class=LT1><B>Not Caricata("Vendite")</B>
+
+<P class=LT1>Caricata è una funzione definita nel modulo Funzioni di utilità del database di esempio Northwind ed è utilizzata per controllare se una maschera viene aperta in visualizzazione Maschera o Foglio dati. È necessario definirla nel database prima di poterla utilizzare. Questa funzione può essere copiata e inserita in un modulo di utilità del database. Per informazioni sulla definizione di una funzione, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>. Per informazioni su come aprire Northwind, fare clic su <A HREF="acconNorthwind.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LPROC>Creare una macro che chiude la maschera e assegnarle un nome, ad esempio Chiudi Vendite. Scegliere l'azione Chiudi, quindi impostare i relativi argomenti come segue:
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Argomento</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Tipo oggetto</TD>
+<TD class=TT width=64%>Maschera</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Nome oggetto</TD>
+<TD class=TT width=64%>Nome della maschera non associata</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Salva</TD>
+<TD class=TT width=64%>No</TD>
+</TR>
+</TABLE>
+</LI>
+
+	<LI class=LPROC>Creare una macro per il pulsante <B>OK</B>. Questa macro nasconde la maschera. Assegnare un nome alla macro, ad esempio OK, e scegliere l'azione ImpostaValore, quindi impostare i relativi argomenti come segue:
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Argomento</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Elemento</TD>
+<TD class=TT width=64%>[Visible]</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Espressione</TD>
+<TD class=TT width=64%>No</TD>
+</TR>
+</TABLE>
+</LI>
+
+	<LI class=LPROC>Creare una macro per il pulsante <B>Annulla</B>. Questa macro chiude la maschera. Assegnare un nome alla maschera, ad esempio Annulla, e scegliere l'azione Chiudi, quindi impostare i relativi argomenti come segue:
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Argomento</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Tipo oggetto</TD>
+<TD class=TT width=64%>Maschera</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Nome oggetto</TD>
+<TD class=TT width=64%>Nome della maschera non associata</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%>Salva</TD>
+<TD class=TT width=64%>No</TD>
+</TR>
+</TABLE>
+</LI>
+
+	<LI class=LPROC>Salvare e chiudere il gruppo di macro e assegnargli un nome, ad esempio lo stesso nome attribuito alla maschera non associata.</LI>
+</OL>
+
+<H2>Aggiungere alla maschera i pulsanti di comando OK e Annulla</H2>
+
+<OL>
+	<LI class=LPROC>Aprire di nuovo la maschera non associata in visualizzazione Struttura.<BR><BR></LI>
+
+	<LI class=LPROC>Creare un pulsante di comando <B>OK</B> e impostarne le proprietà come segue. Assicurarsi che <B>Creazioni guidate Controllo</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrControlWizardsQ');" class="pop"><IMG SRC="images/cntlwizh.bmp" BORDER=0></A> nella <A HREF="javascript:HelpPopup('actip9.hlp','defToolbox');" class="pop">casella degli strumenti</A> non sia selezionato.
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Proprietà</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Nome elemento</B></TD>
+<TD class=TT width=64%><B>OK</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Etichetta</B></TD>
+<TD class=TT width=64%><B>OK</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Pulsante predefinito</B></TD>
+<TD class=TT width=64%><B>Sì</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Su clic</B></TD>
+<TD class=TT width=64%>Nome della macro, ad esempio Vendite.OK</TD>
+</TR>
+</TABLE>
+</LI>
+
+	<LI class=LPROC>Creare un pulsante di comando <B>Annulla</B> e impostarne le proprietà come segue:
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Proprietà</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Nome elemento</B></TD>
+<TD class=TT width=64%><B>Annulla</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Etichetta</B></TD>
+<TD class=TT width=64%><B>Annulla</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Su clic</B></TD>
+<TD class=TT width=64%>Nome della macro, ad esempio Vendite.Annulla</TD>
+</TR>
+</TABLE>
+</LI>
+
+	<LI class=LPROC>Salvare e chiudere la maschera.</LI>
+</OL>
+
+<H2>Immettere i criteri nella query o nella stored procedure sottostante per il report</H2>
+
+<OL>
+	<LI class=LPROC>Aprire la query o la stored procedure sottostante per il report in visualizzazione Struttura.</LI>
+
+	<LI class=LPROC>Immettere i criteri per i dati. Nell'espressione utilizzare l'oggetto Forms, il nome della maschera e i nomi dei <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controlli</A> nei criteri.
+<UL>
+	<LI class=LB2>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (mdb) ad esempio per una maschera denominata Vendite è necessario utilizzare l'espressione riportata di seguito per fare riferimento ai controlli denominati Data iniziale e Data finale nella query:
+<P class=LT2><B>Between [Forms]![Vendite]![Data iniziale] And [Forms]![Vendite]![Data finale]</B>
+</LI>
+
+	<LI class=LB2>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (adp) è necessario in primo luogo assegnare esplicitamente un nome ai parametri della stored procedure, ad esempio:
+<P class=LT2><B>@Data_iniziale datetime, @Data_finale datetime</B>
+
+<P class=LT2>e utilizzare tali parametri nella proposizione WHERE. Ad esempio: 
+
+<P class=LT2><B>WHERE Vendite.DataSpedizione Between @Data_iniziale And @Data_finale</B>
+
+<P class=LT2>In un progetto di Access il riferimento ai controlli va impostato sulla maschera nella proprietà <B>Parametri di input</B> di un report, come indicato nella procedura che segue.
+</LI>
+</UL>
+</LI>
+</OL>
+
+<H2>Impostare la proprietà Parametri di input nel report principale (solo per progetti di Access)</H2>
+
+<OL>
+	<LI class=LPROC>Aprire il report in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Impostare la proprietà <B>Parametri di input</B> del report a una stringa che specifichi i parametri passati alla stored procedure a cui è associato il report. Come nell'esempio che segue, la stringa deve essere un'espressione che comprende i parametri specificati nella stored procedure e il riferimento ai controlli della finestra di dialogo:
+<P class=LT1><B>@Data_iniziale datetime = [Forms]![Vendite]![Data iniziale], @Data_finale datetime = [Forms]![Vendite]![Data finale]</B>
+</LI>
+</OL>
+
+<H2>Allegare le macro al report principale</H2>
+
+<OL>
+	<LI class=LPROC>Aprire il report in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Impostare le seguenti proprietà del report:
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=36%>Proprietà</TH>
+<TH width=64%>Impostazione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Su apertura</B></TD>
+<TD class=TT width=64%>Nome della macro che apre la maschera non associata, ad esempio Vendite.Apri Vendite</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=36%><B>Su chiusura</B></TD>
+<TD class=TT width=64%>Nome della macro che chiude la maschera non associata, ad esempio Vendite.Chiudi Vendite</TD>
+</TR>
+</TABLE><BR>
+
+<P class=6>
+</LI>
+</OL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowUseFormEnterReportCriteriaSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

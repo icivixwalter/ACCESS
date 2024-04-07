@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWorkingWithBankFieldsZeroLengthStringsQueriesS'
+Feature='Queries: Expressions'
+Handoff='1'
+SourceFile='CQRYTOT_1.rtf'
+Tnum='188534'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare campi vuoti nelle query</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctNZ">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconworkingwithbankfieldszerolengthstringsqueriess"></A>Utilizzare campi vuoti nelle query</H1>
+
+<P class=T>Quando un campo non contiene valori, contiene un valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A> oppure, nel caso di campi di tipo Testo, Memo o Collegamento ipertestuale, un valore <B>Null</B> o una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A>. Se un campo contiene valori <B>Null</B>, è possibile che questi influenzino i risultati della query. Di seguito sono riportate alcune istruzioni per l'utilizzo di valori <B>Null</B> e stringhe a lunghezza zero nelle query. Per informazioni sulle differenze tra valori <B>Null</B> e stringhe a lunghezza zero, fare clic su <A HREF="acconSettingFieldPropertiesThatDetermineWhatBlankFS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>In questo argomento verranno fornite informazioni relative a:</P>
+
+<P class=LBR1><A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess_1">Collegamento con join di campi che contengono valori <B>Null</B></A></P>
+
+<P class=LBR1><A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess_2">Ricerca di valori <B>Null</B> o di stringhe a lunghezza zero</A></P>
+
+<P class=LBR1><A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess_3">Influenza dei valori <B>Null</B> sui calcoli numerici</A></P>
+
+<P class=LBR1><A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess_4">Conversione di valori <B>Null</B> a zero</A></P>
+
+<P class=LBR1><A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess_5">Combinazione di campi di tipo Testo che contengono valori <B>Null</B></A></P>
+
+<P class=LBR1><A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess_6">Ordinamento su campi che contengono valori <B>Null</B> e stringhe a lunghezza zero</A></P>
+
+<P class=LBR1><A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess_7">Utilizzo del carattere jolly asterisco (*) per restituire valori non <B>Null</B></A></P>
+
+<H2><A NAME="acconworkingwithbankfieldszerolengthstringsqueriess_1"></A>Collegamento con join di campi che contengono valori Null</H2>
+
+<P class=T>Quando si collegano con join delle tabelle in una query, il risultato include soltanto i record che non contengono valori <B>Null</B> nei campi corrispondenti. Per elencare ad esempio fornitori e clienti che vivono nella stessa zona, creare una query che include le tabelle Fornitori e Clienti che saranno collegate con join nel campo Zona. Quando vengono visualizzati i risultati, vengono mostrati soltanto i valori dei record che contengono un valore contenuto nel campo Zona in entrambe le tabelle.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess">inizio</A></P>
+
+<H2><A NAME="acconworkingwithbankfieldszerolengthstringsqueriess_2"></A>Ricerca di valori Null o di stringhe a lunghezza zero</H2>
+
+<P class=T>Se si utilizza una query per cercare valori <B>Null</B> o stringhe a lunghezza zero, digitare <B>Is Null</B> nella cella <B>Criteri</B> per cercare valori <B>Null</B> oppure digitare due volte le virgolette (" ") senza interporre spazi nella cella <B>Criteri</B> per cercare stringhe a lunghezza zero.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess">inizio</A></P>
+
+<H2><A NAME="acconworkingwithbankfieldszerolengthstringsqueriess_3"></A>Influenza dei valori Null sui calcoli numerici</H2>
+
+<P class=T>Se si utilizza una <A HREF="javascript:HelpPopup('actip9.hlp','defAggregateFunction');" class="pop">funzione di aggregazione</A> per calcolare la somma, la media, il conteggio o un altro calcolo sui valori di un campo, i record contenenti valori <B>Null</B> in quel campo non verranno inclusi nel calcolo. Questo è vero sia che la funzione di aggregazione venga calcolata utilizzando la riga <B>Formula</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> della query, la Creazione guidata Query semplice o un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> personalizzata. Se ad esempio viene utilizzata la funzione <B>Conteggio</B> per contare il numero di valori contenuti in un campo, questa restituirà un conteggio di tutti i record con valori non <B>Null</B>. Se si desidera trovare il numero totale di record inclusi quelli contenenti valori <B>Null</B>, utilizzare <B>Conteggio</B> con il carattere jolly asterisco (*).</P>
+
+<P class=ART><IMG SRC="images/cqryto11.bmp" ALT="Inclusione di record con valori Null utilizzando la funzione Conteggio" BORDER=0></P>
+
+<P class=T>Se si utilizza un operatore aritmetico (ad esempio <B>+</B>, <B>-</B>, <B>*</B>, <B>/</B>) in un'espressione quale [Scorte]+[Quantità Ordinata] e uno dei campi nell'espressione contiene un valore <B>Null</B>, il risultato dell'intera espressione sarà <B>Null</B>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess">inizio</A></P>
+
+<H2><A NAME="acconworkingwithbankfieldszerolengthstringsqueriess_4"></A>Conversione di valori Null a zero</H2>
+
+<P class=T>Quando si hanno dei campi che contengono valori <B>Null</B>, è possibile creare un'espressione che converte i valori <B>Null</B> a zero. È possibile effettuare questa operazione se si desidera includere i record che contengono valori <B>Null</B> nel calcolo di una funzione di aggregazione oppure se si desidera impedire che un'espressione risulti in un valore <B>Null</B> quando un campo a cui si fa riferimento contiene valori <B>Null</B>. Utilizzare ad esempio la funzione <B>Nz</B> per convertire i valori <B>Null</B> a zero.</P>
+
+<P class=T>Nz([Subtotale],0)+Nz([Trasporto],0)</P>
+
+<P class=T>Per ulteriori informazioni sulla funzione <B>Nz</B>, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess">inizio</A></P>
+
+<H2><A NAME="acconworkingwithbankfieldszerolengthstringsqueriess_5"></A>Combinazione di campi di tipo Testo che contengono valori Null</H2>
+
+<P class=T>Se si utilizza un'espressione per combinare due campi che contengono valori di testo e uno o entrambi i campi includono valori <B>Null</B>, utilizzare l'operatore <B>&amp;</B> invece dell'operatore <B>+</B> per combinare i valori. L'operatore <B>&amp;</B> combina i valori anche se questi contengono valori <B>Null</B>, mentre l'operatore <B>+</B> restituisce un valore <B>Null</B> se uno dei due valori è <B>Null</B>. Ad esempio: </P>
+
+<P class=T>Nome: [Cognome] &amp; " " &amp; [Nome]</P>
+
+<P class=rtt>Torna all'<A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess">inizio</A></P>
+
+<H2><A NAME="acconworkingwithbankfieldszerolengthstringsqueriess_6"></A>Ordinamento su campi che contengono valori Null e stringhe a lunghezza zero</H2>
+
+<P class=T>Quando si esegue l'ordinamento di un campo in ordine crescente, vengono elencati per primi i record in cui quel campo contiene un valore <B>Null</B>. Se un campo contiene sia valori <B>Null</B> che stringhe a lunghezza zero, i valori <B>Null</B> vengono considerati per primi nel criterio di ordinamento, subito seguiti dalle stringhe a lunghezza zero.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess">inizio</A></P>
+
+<H2><A NAME="acconworkingwithbankfieldszerolengthstringsqueriess_7"></A>Utilizzo del carattere jolly asterisco (*) per restituire valori non Null</H2>
+
+<P class=T>Se si utilizza l'espressione Like "*" quando vengono definiti dei criteri della query per un campo, i risultati della query includeranno in quel campo stringhe a lunghezza zero ma non valori <B>Null</B>.</P>
+
+
+
+<P class=rtt>Torna all'<A HREF="#acconworkingwithbankfieldszerolengthstringsqueriess">inizio</A></P>
+
+<H2>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="acdecDecideMethodUseCalculateSumAverageCountAnotheS.htm">Panoramica sull'esecuzione di calcoli in una query</A></P>
+
+<P class=LBR1><A HREF="acrefOptionsInTotalRowS.htm">Funzioni di aggregazione e altre opzioni nella riga Formula della griglia di struttura della query</A></P>
+
+<P class=LBR1><A HREF="achowSpecifyCriteriaSortOrderUsingAsteriskInDesignGrid.htm">Specificare un criterio di ordinamento per una query</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWorkingWithBankFieldsZeroLengthStringsQueriesSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCurrentSectionLeftTopX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprosiz2_1a.rtf'
+Tnum='187121'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà CurrentSectionLeft e CurrentSectionTop</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocurrentsectionlefttopx"></A>Esempio di proprietà CurrentSectionLeft e CurrentSectionTop</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono visualizzate le impostazioni delle proprietà <B>CurrentSectionLeft</B> e <B>CurrentSectionTop</B> per un controllo presente in una maschera continua. Ogni volta che ci si sposta su un nuovo record, le impostazioni della proprietà relative alla sezione corrente vengono visualizzate nell'etichetta <CODE>lblStato</CODE> nell'intestazione della maschera.</P>
+
+<PRE class=CT><CODE>Private Sub Form_Current()
+&nbsp;&nbsp;&nbsp; Dim intCorSup As Integer, intCorSin As Integer
+
+&nbsp;&nbsp;&nbsp; intCorSup = Me.<B>CurrentSectionTop</B>
+&nbsp;&nbsp;&nbsp; intCorSin = Me.<B>CurrentSectionLeft</B>
+&nbsp;&nbsp;&nbsp; Me!lblStato.Caption = intCorSin &amp; ", " &amp; intCorSup
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

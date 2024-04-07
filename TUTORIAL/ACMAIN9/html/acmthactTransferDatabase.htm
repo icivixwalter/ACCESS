@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactTransferDatabase'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthact_1b.rtf'
+Tnum='186519'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo TransferDatabase</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactTransferDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproActiveCon">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjODBRec">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthacttransferdatabase"></A>Metodo TransferDatabase</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferDatabaseC;;mdmthADORefreshLink;mdobjODBRec;mdproActiveConnection">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferDatabaseX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferDatabaseA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>TransferDatabase</B> esegue l'azione <A HREF="JavaScript:hhobj_4.Click()">TrasferisciDatabase</A> in Visual Basic. Per ulteriori informazioni sul funzionamento dell'azione e dei relativi argomenti, vedere l'argomento della Guida in linea relativo all'azione.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DoCmd.TransferDatabase</B> [<I>tipotrasferimento</I>], <I>tipodatabase</I>, <I>nomedatabase</I>[, <I>tipooggetto</I>], <I>origine</I>, <I>destinazione</I>[, <I>solostruttura</I>][, <I>salvaidconnessione</I>]</P>
+
+
+
+<P class=T>Il metodo <B>TransferDatabase</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=22%>Argomento</TH>
+<TH width=78%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>tipotrasferimento</I></TD>
+<TD class=TT width=78%>Una delle seguenti <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%><B>acExport</B><BR>
+<B>acImport</B> (impostazione predefinita)<BR>
+<B>acLink</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%>Se si omette questo argomento, viene utilizzata la costante predefinita (<B>acImport</B>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%><B>Nota</B>&nbsp;&nbsp; Il tipo di trasferimento <B>acLink</B> non è supportato in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetti di Microsoft Access</A> (adp).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>tipodatabase</I></TD>
+<TD class=TT width=78%>Una <A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">stringa espressione</A>, che è il nome di uno dei tipi di database utilizzati per importare, esportare o collegare dati. 
+<P class=TT>Microsoft Access (impostazione predefinita)<BR>
+Jet 2.x<BR>
+Jet 3.x<BR>
+dBase III<BR>
+dBbase IV<BR>
+dBase 5<BR>
+Paradox 3.x<BR>
+Paradox 4.x<BR>
+Paradox 5.x<BR>
+Paradox 7.x<BR>
+Database ODBC</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra delle macro</A> è possibile visualizzare i tipi di database contenuti nell'elenco dell'argomento dell'azione Tipo Database dell'azione TrasferisciDatabase.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>nomedatabase</I></TD>
+<TD class=TT width=78%>Espressione stringa che è il nome completo, compreso il percorso, del database che si desidera utilizzare per importare, esportare o collegare dati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>tipooggetto</I></TD>
+<TD class=TT width=78%>Una delle seguenti costanti intrinseche:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%><B>acTable (impostazione predefinita)<BR>
+acQuery</B><BR>
+<B>acForm</B><BR>
+<B>acReport<BR>
+acMacro</B><BR>
+<B>acModule<BR>
+acDataAccessPage<BR>
+acServerView<BR>
+acDiagram<BR>
+acStoredProcedure</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%>Rappresenta il tipo di oggetto del quale si desidera importare, esportare o collegare dati. È possibile specificare un oggetto diverso da <B>acTable</B> solo se si stanno importando o esportando dati tra due database di Microsoft Access. Se si stanno esportando i risultati di una <A HREF="javascript:HelpPopup('actip9.hlp','defSelectQuery');" class="pop">query di selezione</A> di Microsoft Access ad un altro tipo di database, specificare <B>acTable</B> per questo argomento.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%>Se si omette questo argomento, l'impostazione predefinita è (<B>acTable</B>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%><B>Nota</B>&nbsp;&nbsp; La costante <B>acDefault</B>, che compare nell'elenco Elenco automatico membri relativo a questo argomento, non è valida. È necessario scegliere una delle costanti riportate sopra.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>origine</I></TD>
+<TD class=TT width=78%>Espressione stringa che è il nome dell'oggetto del quale si desidera importare, esportare o collegare dati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>destinazione</I></TD>
+<TD class=TT width=78%>Espressione stringa che è il nome dell'oggetto importato, esportato o collegato nel database di destinazione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>solostruttura</I></TD>
+<TD class=TT width=78%>Utilizzare <B>True</B> (–1) per importare o esportare solo la struttura di una tabella di database. Utilizzare <B>False</B> (0) per importare o esportare la struttura della tabella ed i suoi dati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%>Se si omette questo argomento, viene utilizzata l'impostazione predefinita (<B>False</B>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>salvaidconnessione</I></TD>
+<TD class=TT width=78%>Utilizzare <B>True</B> per memorizzare l'identificatore (ID) e la password di connessione per un <A HREF="javascript:HelpPopup('actip9.hlp','defODBCDatabase');" class="pop">database ODBC</A> nella <A HREF="javascript:HelpPopup('actip9.hlp','defConnectionString');" class="pop">stringa di connessione</A> di una tabella collegata dal database. Se si esegue questa operazione, non è necessario connettersi ogni volta che si apre la tabella. Utilizzare <B>False</B> se non si desidera memorizzare l'ID e la password.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%>Se si omette questo argomento, viene utilizzata l'impostazione predefinita (<B>False</B>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%>&nbsp;</TD>
+<TD class=TT width=78%>Questo argomento è disponibile solo in Visual Basic.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile omettere un argomento facoltativo all'interno della sintassi, ma è necessario includere la virgola dell'argomento stesso. Se si omette un argomento finale, non utilizzare la virgola dopo l'ultimo argomento specificato.</P>
+
+<P class=T>L'amministratore di un database ODBC può disattivare la funzione fornita dall'argomento <I>salvaidconnessione</I>, richiedendo a tutti gli utenti di immettere l'ID e la password ogni volta che si collegano al database ODBC.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È inoltre possibile utilizzare gli <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti ADO</A> per creare un collegamento utilizzando la proprietà <A HREF="JavaScript:hhobj_5.Click()"><B>ActiveConnection</B></A> per l'oggetto <A HREF="JavaScript:hhobj_6.Click()"><B>Recordset</B></A>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconControlPropertiesPropertyInheritanceS'
+Feature='Forms: Controls'
+Handoff='3'
+SourceFile='CFRMCTL1.RTF'
+Tnum='187702'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Correlazione tra le proprietà dei controlli di una maschera o di un report e le proprietà nei relativi campi sottostanti in un database di Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconcontrolpropertiespropertyinheritances"></A>Correlazione tra le proprietà dei controlli di una maschera o di un report e le proprietà nei relativi campi sottostanti in un database di Access</H1>
+
+<P class=T>Quando viene creato un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> associato nelle maschere o nei report trascinando un campo dall'<A HREF="javascript:HelpPopup('actip9.hlp','defFieldList');" class="pop">elenco campi</A>, alcune proprietà vengono copiate dal campo della tabella o della <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> sottostante nel controllo. Se ad esempio nel campo Prezzo unitario di una tabella Prodotti la proprietà <B>Formato</B> è impostata a <B>Valuta</B> e la proprietà <B>Posizioni decimali</B> è impostata ad <B>Automatiche</B>, quando viene creata una casella di testo associata in una maschera trascinando il campo Prezzo unitario dall'elenco campi, le proprietà <B>Formato</B> e <B>Posizioni decimali</B> per la casella di testo vengono impostate automaticamente agli stessi valori. Si presuppone che la proprietà <B>Visualizza controllo</B> del campo sia impostata a <B>Casella di testo</B> o non abbia alcuna impostazione.</P>
+
+<P class=T>È possibile modificare le impostazioni di tutte le proprietà ereditate (copiate) nella finestra delle proprietà del controllo. Se si modifica l'impostazione della proprietà di un controllo, la modifica non influisce sull'impostazione di quella proprietà per il campo della tabella o della query sottostante. Analogamente se si modifica l'impostazione della proprietà per un campo di una tabella o di una query dopo aver creato una maschera utilizzando quel campo, l'impostazione della proprietà per il controllo non viene aggiornata. È necessario eseguire questo aggiornamento manualmente. Se però si modificano le impostazioni delle proprietà dei campi per le proprietà <B>Valore predefinito</B>, <B>Valido se</B> e <B>Messaggio di errore</B>, le modifiche vengono apportate a tutti i controlli che si basano su questi campi, anche se sono stati creati prima che fossero modificate le proprietà dei campi.</P>
+
+<P class=TPT><B>Suggerimento</B>&nbsp;&nbsp; È consigliabile impostare le proprietà <B>Formato</B>, <B>Posizioni decimali</B>, <B>Maschera di input</B>, <B>Valido se</B>, <B>Messaggio di errore</B> e <B>Valore predefinito</B> nel campo sottostante piuttosto che in un controllo. In questo modo si è certi di avere impostazioni coerenti ogni volta che si aggiungono campi a una maschera o a un report.</P>
+
+<P class=T>Nella tabella riportata di seguito sono elencate le proprietà ereditate per ogni tipo di controllo associato quando si trascina un campo dall'elenco campi nelle maschere e nei report.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=38%>Controllo associato</TH>
+<TH width=62%>Proprietà ereditate</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>Casella di testo</TD>
+<TD class=TT width=62%><B>Formato</B>, <B>Posizioni decimali</B>, <B>Maschera di input</B> e <B>Testo barra stato</B> (dalla proprietà <B>Descrizione</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>Casella di riepilogo</TD>
+<TD class=TT width=62%>Tutte le proprietà specificate nella scheda <B>Ricerca</B> in visualizzazione Struttura della tabella e la proprietà <B>Testo barra stato</B> (dalla proprietà <B>Descrizione</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>Casella combinata</TD>
+<TD class=TT width=62%>Tutte le proprietà specificate nella scheda <B>Ricerca</B> in visualizzazione Struttura della tabella, la proprietà <B>Maschera di input</B> e la proprietà <B>Testo barra stato</B> (dalla proprietà <B>Descrizione</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>Casella di controllo, pulsante di opzione, gruppo di opzioni, interruttore,<BR> cornice di oggetto associato</TD>
+<TD class=TT width=62%><B>Testo barra stato</B> (dalla proprietà <B>Descrizione</B>)</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Le proprietà <B>Valore predefinito</B>, <B>Valido se</B> e <B>Messaggio di errore</B> non vengono ereditate. In Access infatti le proprietà dei controlli non vengono impostate ai valori delle stesse proprietà del campo sottostante. Queste impostazioni tuttavia vengono applicate quando si crea un controllo basato su un campo con queste impostazioni. Se si imposta la proprietà <B>Valido se</B> in un campo e anche in un controllo basato su quel campo, verranno applicate entrambe le regole. Se si imposta la proprietà <B>Valore predefinito</B> per un campo e anche in un controllo basato su quel campo, la proprietà del controllo avrà la precedenza sulla proprietà del campo.<BR><BR></LI>
+
+	<LI class=NLB>Se si crea una casella di testo basata su un campo contenente dati di tipo Memo, la proprietà <B>Funzione tasto INVIO</B> verrà impostata automaticamente a <B>Nuova riga del campo</B> e la proprietà <B>Barre scorrimento</B> a <B>Verticale</B>. Queste proprietà non vengono ereditate dalle proprietà del campo ma sono proprietà del controllo.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconControlPropertiesPropertyInheritanceSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

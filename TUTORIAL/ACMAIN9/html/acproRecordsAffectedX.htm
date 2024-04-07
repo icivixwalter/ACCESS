@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRecordsAffectedX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234525'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà RecordsAffected (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorecordsaffectedx"></A>Esempio di proprietà RecordsAffected (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si stampa il numero di record aggiornati mediante una query di comando.</P>
+
+<PRE class=CT><CODE>Sub AggiornamentoRecord()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, qdf As QueryDef
+&nbsp;&nbsp;&nbsp; Dim strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; strSQL = "UPDATE Impiegati SET Posizione = " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "'Caporappresentante' " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "WHERE Posizione = 'Rappresentante';"
+&nbsp;&nbsp;&nbsp; ' Crea nuovo aggetto QueryDef.
+&nbsp;&nbsp;&nbsp; Set qdf = dbs.CreateQueryDef("AggiornaPosizioni", strSQL)
+&nbsp;&nbsp;&nbsp; ' Esegue oggetto QueryDef.
+&nbsp;&nbsp;&nbsp; qdf.Execute
+&nbsp;&nbsp;&nbsp; Debug.Print qdf.<B>RecordsAffected</B>
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

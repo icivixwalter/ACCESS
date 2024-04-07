@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconShouldICreateNumberOrCurrencyField'
+Feature='Tables'
+Handoff='2'
+SourceFile='ctblnew_1.rtf'
+Tnum='188857'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare un campo Numerico o Valuta</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFormat">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconshouldicreatenumberorcurrencyfield"></A>Creare un campo Numerico o Valuta</H1>
+
+<P class=LPROCT>In Microsoft Access esistono due <A HREF="javascript:HelpPopup('actip9.hlp','defFieldDataType');" class="pop">tipi di dati di campo</A> per memorizzare i dati che contengono valori numerici: Numerico o Valuta.</P>
+
+<P class=LPROCT>Utilizzare un campo Numerico per memorizzare i dati che servono per calcoli matematici, ad eccezione di calcoli di valori monetari o di calcoli che richiedono un alto grado di precisione. Per stabilire il tipo e la dimensione dei valori numerici che possono essere memorizzati in un campo Numerico, impostare la proprietà <B>Dimensione campo</B>. L'impostazione Byte ad esempio memorizza solo i numeri interi compresi tra 0 e 255 (senza valori decimali) e occupa 1 byte di spazio su disco.</P>
+
+<P class=LPROCT>Utilizzare un campo Valuta per impedire l'arrotondamento durante i calcoli. Un campo Valuta ha una precisione di 15 cifre a sinistra del separatore decimale e di 4 cifre a destra e occupa 8 byte di spazio su disco.</P>
+
+<P class=LPROCT>I campi di tipo Numerico e Valuta forniscono anche <A HREF="javascript:HelpPopup('actip9.hlp','defFormat');" class="pop">formati di visualizzazione</A> predefiniti. Per scegliere un formato di visualizzazione o per creare un formato personalizzato, impostare la proprietà <B>Formato</B>. Per informazioni sulla creazione di un formato personalizzato, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sulla creazione di un campo di tipo Numerico o Valuta, fare clic su <A HREF="achowCreateFieldNumbersCurrencyS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconShouldICreateNumberOrCurrencyFieldW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

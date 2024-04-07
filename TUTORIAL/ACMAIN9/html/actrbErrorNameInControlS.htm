@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbErrorNameInControlS'
+Feature='Forms: Troubleshooting'
+Handoff='2'
+SourceFile='cfrmtrb.rtf'
+Tnum='188660'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>In un controllo su una maschera o un report viene visualizzato il messaggio #Errore? o #Nome?</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrberrornameincontrols"></A>In un controllo su una maschera o un report viene visualizzato il messaggio #Errore? o #Nome?</H1>
+
+<P class=T>È possibile che venga visualizzato #Errore? o #Nome? in un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> per una serie di motivi. Per risolvere il problema, effettuare le seguenti operazioni:
+
+<UL>
+	<LI class=LB1>Assicurarsi che il campo specificato nella proprietà <B>Origine controllo</B> del controllo non sia stato rimosso dalla tabella sottostante o dall'<A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A>.<BR><BR></LI>
+
+	<LI class=LB1>Controllare l'ortografia del nome di campo nella proprietà <B>Origine controllo</B> del controllo.<BR><BR></LI>
+
+	<LI class=LB1>Se nella proprietà <B>Origine controllo</B> del controllo viene specificata un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A>, assicurarsi che questa sia preceduta da un segno uguale.<BR><BR></LI>
+
+	<LI class=LB1>Assicurarsi che nelle espressioni i riferimenti a controlli o nomi di campo che includono spazi siano racchiusi tra parentesi quadre. Per sottrarre, ad esempio, un campo Data spedizione da un campo Data richiesta, immettere la seguente espressione: <B>=[Data richiesta]-[Data spedizione]</B>.<BR><BR></LI>
+
+	<LI class=LB1>Se si utilizza una delle funzioni incorporate, assicurarsi che si sta utilizzando il numero corretto di argomenti, che gli argomenti siano nell'ordine corretto e che non sia stata tralasciata la punteggiatura necessaria. Per determinare la sintassi corretta da utilizzare, consultare l'argomento della Guida relativo alla funzione che si sta utilizzando.<BR><BR></LI>
+
+	<LI class=LB1>Se si fa riferimento ad un altro controllo, assicurarsi che si stia utilizzando la sintassi corretta. Per ulteriori informazioni sui riferimenti ai controlli, fare clic su <A HREF="acconCalcControlExpReferToValuesInControls.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Assicurarsi che non vi sia un riferimento circolare per un controllo. Se si specifica, ad esempio, MioControllo nella proprietà <B>Nome elemento</B> di un controllo e quindi si digita <B>=[A]+[B]+[MioControllo]</B> nella casella della proprietà <B>Origine controllo</B> del controllo, in Microsoft Access non è possibile elaborare l'espressione.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbErrorNameInControlSW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconTypesPermissionsHowTheyWorkS'
+Feature='Security: Accounts/Permissions'
+Handoff='3'
+SourceFile='csecprm.rtf'
+Tnum='188280'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzionamento e assegnazione delle autorizzazioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="accontypespermissionshowtheyworks"></A>Funzionamento e assegnazione delle autorizzazioni</H1>
+
+<P class=T>Esistono due tipi di <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A>: le autorizzazioni esplicite e le autorizzazioni implicite. Le autorizzazioni esplicite sono quelle assegnate direttamente a un <A HREF="javascript:HelpPopup('actip9.hlp','defUserAccount');" class="pop">account utente</A> e non coinvolgono nessun altro utente. Le autorizzazioni implicite sono quelle assegnate a un <A HREF="javascript:HelpPopup('actip9.hlp','defGroupAccount');" class="pop">account di gruppo</A>. Quando un utente viene aggiunto a un gruppo, gli vengono assegnate le autorizzazioni del gruppo; quando viene rimosso dal gruppo, l'utente viene privato delle relative autorizzazioni.</P>
+
+<P class=T>Quando un utente tenta di eseguire un'operazione su un oggetto di database protetto, il set di autorizzazioni dell'utente è basato sull'intersezione delle relative autorizzazioni esplicite e implicite. Il livello di protezione di un utente è sempre il meno restrittivo rispetto alle autorizzazioni esplicite dell'utente e alle autorizzazioni dei gruppi ai quali appartiene. Per questo motivo, il modo meno complesso per amministrare un gruppo di lavoro è quello di creare nuovi gruppi e assegnare le autorizzazioni ai gruppi piuttosto che ai singoli utenti. È possibile quindi modificare le autorizzazioni dei singoli utenti aggiungendoli o rimuovendoli dai gruppi. Se inoltre si desidera assegnare nuove autorizzazioni, è possibile assegnarle a tutti i membri di un gruppo con un'unica operazione.</P>
+
+<P class=T>Le autorizzazioni per un oggetto di database possono essere modificate da:
+
+<UL>
+	<LI class=LB1>I membri del <A HREF="javascript:HelpPopup('actip9.hlp','defAdminsGroup');" class="pop">gruppo Amministratori</A> del <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> in uso al momento della creazione del database.<BR><BR></LI>
+
+	<LI class=LB1>Il <A HREF="javascript:HelpPopup('actip9.hlp','defOwner');" class="pop">proprietario</A> dell'oggetto.<BR><BR></LI>
+
+	<LI class=LB1>Qualsiasi utente che disponga dell'autorizzazione Amministrazione per l'oggetto.</LI>
+</UL>
+
+<P class=T>Gli utenti che non sono correntemente in grado di eseguire un'azione potrebbero assegnarsi le autorizzazioni per eseguirla. Ciò risulta valido per un utente membro del gruppo Amministratori o proprietario di un oggetto.</P>
+
+<P class=T>L'utente che crea una tabella, una query, una maschera, un report o una macro ne è il proprietario. Lo stesso gruppo di utenti che può modificare le autorizzazioni, può modificare la proprietà di questi oggetti utilizzando il comando <B>Autorizzazioni utenti e gruppi</B> del sottomenu <B>Protezione</B> nel menu <B>Strumenti</B> o può crearli di nuovo. Per effettuare quest'ultima operazione, non è necessario ricominciare da zero, ma è sufficiente eseguire una copia dell'oggetto oppure importarlo o esportarlo in un altro database. Se si desidera proteggere un intero database, questo è il modo più semplice per trasferire la proprietà di tutti gli oggetti, incluso il database. Il modo migliore per proteggere un intero database è quello di utilizzare l'Impostazione guidata Protezione, che crea un nuovo database e vi importa tutti gli oggetti.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Le operazioni di copia, importazione o esportazione non comportano la modifica dell'appartenenza delle query la cui proprietà <B>Applica autorizzazioni</B> è impostata a <B>Proprietario</B>. L'appartenenza di una query può essere modificata soltanto se la relativa proprietà <B>Applica autorizzazioni</B> è impostata a <B>Utente</B>.</P>
+
+<P class=T>Per informazioni sui tipi di autorizzazioni, fare clic su <A HREF="acrefTypesOfPermissionsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconTypesPermissionsHowTheyWorkSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

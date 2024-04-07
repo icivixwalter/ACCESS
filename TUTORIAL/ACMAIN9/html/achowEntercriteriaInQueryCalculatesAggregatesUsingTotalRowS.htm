@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowEntercriteriaInQueryCalculatesAggregatesUsingTotalRowS'
+Feature='Queries: Expressions'
+Handoff='1'
+SourceFile='CQRYTOT.RTF'
+Tnum='188532'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Punti in cui specificare i criteri per determinare quando vengono eseguiti i calcoli</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowentercriteriainquerycalculatesaggregatesusingtotalrows"></A>Punti in cui specificare i criteri per determinare quando vengono eseguiti i calcoli</H1>
+
+<P class=T>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> della query il punto in cui vengono specificati dei criteri determina il momento dell'esecuzione del calcolo.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Sebbene negli esempi riportati di seguito vengano mostrate soltanto query che calcolano formule, queste istruzioni si applicano anche a campi calcolati. 
+
+<UL>
+	<LI class=LB1>Per limitare i raggruppamenti prima che vengano eseguiti dei calcoli su gruppi di record, specificare i criteri nei campi <B>Raggruppamento</B>.
+<P class=LA><IMG SRC="images/cqrytot7.bmp" ALT="Impostare i criteri di raggruppamento da utilizzare durante l'esecuzione di un calcolo" BORDER=0>
+</LI>
+
+	<LI class=LB1>Per restituire soltanto i risultati selezionati dopo l'esecuzione del calcolo, specificare i criteri nel campo che contiene il calcolo. Questa regola si applica se si sta eseguendo il calcolo su ciascun record, su gruppi di record o su tutti i record.
+<P class=LA><IMG SRC="images/cqrytot8.bmp" ALT="Eseguire un calcolo e restituire i risultati selezionati" BORDER=0>
+</LI>
+
+	<LI class=LB1>Per limitare i record prima che questi vengano raggruppati e prima dell'esecuzione del calcolo, aggiungere alla griglia di struttura il campo di cui si desidera limitare i record, quindi specificare dei criteri nella cella <B>Criteri</B> del campo. Se si stanno calcolando delle formule nella stessa query, impostare a <B>Dove</B> la cella <B>Formula</B> del campo che contiene i criteri. Questa regola si applica se si sta calcolando la formula su tutti i record o su gruppi di record. La casella di controllo <B>Mostra</B> viene deselezionata automaticamente.
+
+<P class=LT1>Nell'esempio riportato di seguito il campo Prezzo complessivo viene utilizzato due volte, una per limitare i record ed una per calcolare la formula. È possibile tuttavia utilizzare un campo diverso per limitare i record trascinando quel campo sulla griglia di struttura ed impostando la relativa cella <B>Formula</B> a <B>Dove</B>.
+
+<P class=LA><IMG SRC="images/cqrytot9.bmp" ALT="Limitare il record e calcolare il totale utilizzando lo stesso campo" BORDER=0>
+</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per visualizzare esempi di espressioni criterio, fare clic su <A HREF="acconExamplesCriteriaExpressionsQueriesFiltersS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowEntercriteriaInQueryCalculatesAggregatesUsingTotalRowSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproReadyStateChangeSSX'
+Feature='acpro'
+Handoff='2'
+SourceFile='snapshot_mth.doc'
+Tnum='262423'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di proprietà Error, PageCount, SnapshotPath e di evento ReadyStateChange</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproreadystatechangessx"></A>Esempi di proprietà Error, PageCount, SnapshotPath e di evento ReadyStateChange</B></P>
+
+
+
+<P class=T>Nell'esempio seguente viene utilizzata un'istruzione Select Case in una routine evento <B>ReadyStateChange</B> di controllo Snapshot per determinare lo stato della proprietà <B>ReadyState</B>. Se il caricamento di un file snapshot nel controllo ha esito positivo, viene visualizzata una finestra di messaggio che riporta le informazioni sul percorso del file e sul conteggio delle relative pagine. Se viceversa durante il caricamento dello snapshot si verifica un errore, viene chiamata una routine personalizzata di gestione degli errori per visualizzare le informazioni sull'errore che si è verificato. All'inizio della procedura, vengono definite le costanti per ogni possibile valore della proprietà <B>ReadyState</B>.</P>
+
+<PRE class=CT><CODE>Private Sub Snapshot1<I>_</I><B>ReadyStateChange</B>(ByVal ReadyState As Long)
+  Const conSnpNotInitialized = 0
+  Const conSnpLoading = 1
+  Const conSnpStillDownloading = 2
+  Const conSnpDownloadComplete = 4
+  Select Case ReadyState
+    Case conSnpNotInitialized
+      ' controllo snapshot non inizializzato.
+    Case conSnpLoading
+      ' Controllo snapshot in corso di caricamento.
+    Case conSnpStillDownloading
+      ' Controllo snapshot caricato. File
+      ' snapshot in corso di caricamento.
+    Case conSnpDownloadComplete
+      ' Caricamento snapshot completato.
+    With Snapshot1
+      If.<B>Error</B> = 0 Then
+        ' File snapshot caricato nel controllo.
+          Msgbox.<B>SnapshotPath</B> &amp; _
+          " caricato nel " _
+          &amp; "controllo Snapshot Viewer." &amp; vbCrLf &amp; vbCrLf _
+          &amp; "Il file snapshot contiene " &amp;.<B>PageCount</B> _
+          &amp; " pagine."
+      Else
+        ' Si è verificato un errore durante il caricamento del file snapshot.
+        Call HandleSnapError(.<B>SnapshotPath</B>,.<B>Error</B>)
+        Exit sub
+      End If
+    End With
+  End Select
+End Sub
+
+Sub HandleSnapError(strFile As String, lngError As Long)
+  Dim strError As String
+  Select Case lngError
+    Case 2500
+      strError = "Errore " &amp; CStr(lngError) &amp; ": Valore non valido."
+    Case 2501
+      strError = "Errore " &amp; CStr(lngError) &amp; ": Pagina non valida."
+    Case 2502
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": File snapshot non valido o mancante."
+    Case 2503
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": Proprietà di sola lettura."
+    Case 2504
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": Operazione annullata dall'utente."
+    Case 2505
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": Per visualizzare questo file snapshot è necessaria " _
+        &amp; "una versione più recente del controllo Snapshot Viewer."
+    Case 2506
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": Errore durante la stampa."
+    Case 2507
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": Errore durante l'apertura di un file snapshot."
+    Case 2508
+      strError = "Errore " &amp; CStr(lngError) &amp; ": Memoria esaurita"
+    Case 2509
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": Si è verificato un errore di scrittura in un " _
+        &amp; "file temporaneo durante l'apertura di un file snapshot."
+    Case 2510
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": Non vi è una stampante installata oppure " _
+        &amp; "nessuna stampante è stata impostata come predefinita."
+    Case Else
+      strError = "Errore " &amp; CStr(lngError) &amp; _
+        ": Si è verificato un errore sconosciuto."
+  End Select
+
+  MsgBox strError &amp; " File: " &amp; strFile
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

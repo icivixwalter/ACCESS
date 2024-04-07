@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjCollectionS'
+Feature='acobj'
+Handoff='2'
+SourceFile='acob2obj.rtf'
+Tnum='234351'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Oggetto Collection</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acobjcollections"></A>Oggetto Collection</H1>
+
+
+
+<P class=T>In Microsoft Access, un oggetto <B>Collection</B> può essere costituito da un set di oggetti di qualsiasi tipo. È possibile creare un oggetto <B>Collection</B> costituito da diversi oggetti dello stesso tipo o da oggetti di tipo differente.</P>
+
+<P class=T>L'insieme definito da un oggetto <B>Collection</B> può contenere qualsiasi combinazione di <A HREF="javascript:HelpPopup('actip9.hlp','defMSAccessObject');" class="pop">oggetti di Microsoft Access</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti DAO</A> e oggetti di qualsiasi altra applicazione che rende disponibili i relativi oggetti a Microsoft Access. È anche possibile aggiungere un oggetto <B>Collection</B> ad un insieme definito dallo stesso oggetto <B>Collection</B>.</P>
+
+<P class=T>L'insieme può anche contenere <A HREF="javascript:HelpPopup('actip9.hlp','defUserDefinedObject');" class="pop">oggetti definiti dall'utente</A> creati con Microsoft Access. È possibile, ad esempio, creare oggetti definiti dall'utente utilizzando metodi e proprietà personalizzati di un <A HREF="javascript:HelpPopup('actip9.hlp','defFormModule');" class="pop">modulo di maschera</A> o di un <A HREF="javascript:HelpPopup('actip9.hlp','defReportModule');" class="pop">modulo di report</A>. È quindi possibile aggiungere tali oggetti a un insieme definito da un oggetto <B>Collection</B> e manipolarli come set.</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

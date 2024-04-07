@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproItemsSelectedX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acprov9a.doc'
+Tnum='257788'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ItemsSelected</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproitemsselectedx"></A>Esempio di proprietà ItemsSelected</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito consente di stampare il valore della colonna associata a ciascuna riga selezionata nella casella di riepilogo Nomi della maschera Contatti. Per riprodurre l'esempio, creare la casella di riepilogo e impostare la proprietà <B>BoundColumn</B> come desiderato, quindi impostare la proprietà <B>MultiSelect</B> a Semplice o Estesa. Passare alla visualizzazione Maschera, selezionare un determinato numero di righe ed eseguire il seguente codice:</P>
+
+<PRE class=CT><CODE>Sub BoundData()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, ctl As Control
+&nbsp;&nbsp;&nbsp; Dim varItm As Variant
+
+&nbsp;&nbsp;&nbsp; Set frm = Forms!Contacts
+&nbsp;&nbsp;&nbsp; Set ctl = frm!Names
+&nbsp;&nbsp;&nbsp; For Each varItm In ctl.<B>ItemsSelected</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print ctl.ItemData(varItm)
+&nbsp;&nbsp;&nbsp; Next varItm
+End Sub</CODE></PRE>
+
+
+
+<P class=T>L'esempio riportato di seguito utilizza lo stesso controllo della casella di riepilogo, ma oltre ai valori della colonna associata, stampa anche i valori di ciascuna colonna per ogni riga selezionata nella casella di riepilogo.</P>
+
+<PRE class=CT><CODE>Sub AllSelectedData()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, ctl As Control
+&nbsp;&nbsp;&nbsp; Dim varItm As Variant, intI As Integer
+
+&nbsp;&nbsp;&nbsp; Set frm = Forms!Contatti
+&nbsp;&nbsp;&nbsp; Set ctl = frm!Nomi
+&nbsp;&nbsp;&nbsp; For Each varItm In ctl.<B>ItemsSelected</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For intI = 0 To ctl.ColumnCount - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print ctl.Column(intI, varItm)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next intI
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print
+&nbsp;&nbsp;&nbsp; Next varItm
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

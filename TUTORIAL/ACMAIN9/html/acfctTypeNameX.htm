@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctTypeNameX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acob2fcx_1a.rtf'
+Tnum='234570'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione TypeName</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfcttypenamex"></A>Esempio di funzione TypeName</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si creano diverse variabili di oggetto e si passano alla funzione <B>TypeName</B>.</P>
+
+<PRE class=CT><CODE>Sub TipiOggetto()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef
+&nbsp;&nbsp;&nbsp; Dim fld As Field
+
+&nbsp;&nbsp;&nbsp; ' Ottiene il database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce oggetto TableDef che punta alla tabella Ordini.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs("Ordini")
+&nbsp;&nbsp;&nbsp; ' Restituisce oggetto Field che punta al campo DataOrdine.
+&nbsp;&nbsp;&nbsp; Set fld = tdf.Fields("DataOrdine")
+&nbsp;&nbsp;&nbsp; ' Stampa il valore restituito da TypeName per ciascun oggetto.
+&nbsp;&nbsp;&nbsp; Debug.Print <B>TypeName(</B>dbs<B>)</B>
+&nbsp;&nbsp;&nbsp; Debug.Print <B>TypeName(</B>tdf<B>)</B>
+&nbsp;&nbsp;&nbsp; Debug.Print <B>TypeName(</B>fld<B>)</B>
+
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

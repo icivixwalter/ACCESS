@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproPreviousControlX'
+Feature='acpro'
+Handoff='1'
+SourceFile='apromsc1_1a.rtf'
+Tnum='187880'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà PreviousControl</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpropreviouscontrolx"></A>Esempio di proprietà PreviousControl</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene visualizzato un messaggio se il controllo che per ultimo ha ricevuto lo stato attivo non è la casella di testo <CODE>txtImmissioneFinale</CODE>.</P>
+
+<PRE class=CT><CODE>Function ElaboraDati() As Integer
+&nbsp;&nbsp;&nbsp; Dim ctlPrecedente As Control
+&nbsp;&nbsp;&nbsp; ' Nessun errore precedente di controllo.
+&nbsp;&nbsp;&nbsp; Const conNoControlloPrecedente = 2483
+&nbsp;&nbsp;&nbsp; On Error GoTo Elabora_Err
+&nbsp;&nbsp;&nbsp; Set ctlPrecedente = Screen.<B>PreviousControl</B>
+&nbsp;&nbsp;&nbsp; If ctlPrecedente.Name = "txtImmissioneFinale" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Elaborare i dati.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ElaboraDati = True
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Sposta stato attivo su txtImmissioneFinale e visualizza il messaggio.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!txtImmissioneFinale.SetFocus
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Immettere un valore."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ElaboraDati = False
+&nbsp;&nbsp;&nbsp; End If
+Elabora_Bye:
+&nbsp;&nbsp;&nbsp; Exit Function
+Elabora_Err:
+&nbsp;&nbsp;&nbsp; If Err = conNoControlloPrecedente Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!txtImmissioneFinale.SetFocus
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Immettere il valore da elaborare."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ElaboraDati = False
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Resume Elabora_Bye
+End Function</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

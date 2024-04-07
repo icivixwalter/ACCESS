@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowDisplayCustomHelpFromButtonOnToolbarOrMenu'
+Feature='Command Bars'
+Handoff='1'
+SourceFile='CCMDBRS.RTF'
+Tnum='188839'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare i Suggerimenti di Guida rapida per i pulsanti delle barre degli strumenti o per i comandi di menu</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconADTContentsS">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowdisplaycustomhelpfrombuttonontoolbarormenu"></A>Creare i Suggerimenti di Guida rapida per i pulsanti delle barre degli strumenti o per i comandi di menu</H1>
+
+<P class=LPROCT>I suggerimenti della Guida rapida vengono visualizzati quando si sceglie <B>Guida rapida</B> dal menu ? o si preme MAIUSC+F1 e si fa clic su un pulsante della barra degli strumenti o su un comando di menu.</P>
+
+<H2>Creazione del suggerimento</H2>
+
+<OL>
+	<LI class=LPROC>Creare il file di origine utilizzando l'editor di testo o il programma di elaborazione testi desiderato. Assicurarsi di salvare il file come Rich Text Format. Per ulteriori informazioni sulla creazione del file di origine, vedere la Guida fornita con il compilatore della Guida di Windows.<BR><BR></LI>
+
+	<LI class=LPROC>Compilare il file della Guida utilizzando il compilatore della Guida di Windows.
+<P class=LNT><B>Nota</B>&nbsp;&nbsp; Per ottenere i risultati migliori, collocare il file della Guida nella cartella dell'applicazione. In tal modo, ciascun sito che utilizza l'applicazione può utilizzare la stessa impostazione per la proprietà <B>FileGuida</B> ed installare l'applicazione nella cartella desiderata. Se per questa proprietà non viene specificata l'impostazione del percorso, il file della Guida viene ricercato nella cartella in cui è installata l'applicazione.
+</LI>
+</OL>
+
+<H2>Assegnazione del suggerimento ad un pulsante della barra degli strumenti o ad un comando di menu</H2>
+
+<OL>
+	<LI class=LPROC>Scegliere <B>Barre degli strumenti</B> dal menu <B>Visualizza</B>, quindi scegliere <B>Personalizza</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Visualizzare la barra degli strumenti o la barra dei menu che si desidera utilizzare.
+<P class=LBR2><A HREF="ofhowShowOrHideCommandBar.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Con la finestra di dialogo <B>Personalizza</B> aperta, fare clic con il pulsante destro del mouse sul pulsante della barra degli strumenti o sul comando di menu a cui si desidera assegnare un suggerimento, quindi scegliere <B>Proprietà</B> dal menu di scelta rapida.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella delle proprietà <B>FileGuida</B>, specificare il percorso ed il nome del file della Guida compilato.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella delle proprietà <B>IDArgomentoGuida</B>, digitare il numero dell'argomento, il quale deve essere diverso da zero.</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>È necessario associare i valori impostati per la proprietà <B>IDArgomentoGuida</B> alle stringhe di contesto del sistema della Guida. Per ulteriori informazioni, vedere il file della Guida fornito con il compilatore della Guida di Windows.<BR><BR></LI>
+
+	<LI class=NLB>Non è possibile visualizzare i Suggerimenti della Guida rapida mediante l'Assistente di Office.<BR><BR></LI>
+
+	<LI class=NLB>Il compilatore della Guida di Windows è incluso in Microsoft Office 2000, Developer Edition, in Microsoft Visual Basic, Applications Edition, in Microsoft Visual C++ e in Microsoft Windows Software Development Kit (SDK). È anche possibile ordinare Help Authoring Kit di Microsoft. Per ulteriori informazioni sul contenuto di Microsoft Office 2000, Developer Edition, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowDisplayCustomHelpFromButtonOnToolbarOrMenuW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

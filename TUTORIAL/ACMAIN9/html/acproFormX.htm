@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFormX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproref1_1a.rtf'
+Tnum='187253'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Form, Report</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproformx"></A>Esempio di proprietà Form, Report</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizzano le proprietà <B>Form</B> e <B>Report</B> per fare riferimento a un controllo di una sottomaschera e di un sottoreport.</P>
+
+<PRE class=CT><CODE>Dim curImportoComplessivo As Currency
+Dim curVenditeComplessive As Currency
+curImportoComplessivo = Forms!Ordini!DettagliOrdine.<B>Form</B>!ImportoComplessivo
+curVenditeComplessive = Reports!Vendite!Impiegati.<B>Report</B>!VenditeComplessive</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCurrentPageSSX'
+Feature='acpro'
+Handoff='1'
+SourceFile='snapshot_pro.doc'
+Tnum='262409'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà CurrentPage e PageCount</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocurrentpagessx"></A>Esempio di proprietà CurrentPage e PageCount</B></P>
+
+
+
+<P class=T>L'esempio che segue illustra l'utilizzo delle proprietà <B>CurrentPage</B> e <B>PageCount</B> per spostarsi a una pagina all'interno di un file snapshot.</P>
+
+<PRE class=CT><CODE>Sub Navigate()
+&nbsp;&nbsp;&nbsp; Dim lngPageNum As Long
+&nbsp;&nbsp;&nbsp; Dim snpCtl As SnapshotViewer
+&nbsp;&nbsp;&nbsp; Set snpCtl = Me.SnapShot1.Object
+&nbsp;&nbsp;&nbsp; lngPageNum = InputBox("Immettere la pagina di snapshot da visualizzare")
+&nbsp;&nbsp;&nbsp; If IsNumeric(lngPageNum) And Len(lngPageNum) &gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If lngPageNum &lt;= snpCtl.<B>PageCount</B> Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; snpCtl.<B>CurrentPage</B> = lngPageNum
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Msgbox "Immettere un valore compreso tra 1 e " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; snpCtl.<B>PageCount</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

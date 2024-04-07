@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDatasheetFontNameX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aprosht2.doc'
+Tnum='187140'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà DatasheetFontName, DatasheetFontHeight, DatasheetFontWeight</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodatasheetfontnamex"></A>Esempio di proprietà DatasheetFontName, DatasheetFontHeight, DatasheetFontWeight</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono impostati in visualizzazione Foglio dati della tabella Prodotti il carattere a MS Serif, la dimensione in punti a 10 e lo spessore dei caratteri a medio (500).</P>
+
+<P class=T>Per impostare queste proprietà, viene utilizzata la routine ImpostaProprietàTabella, mostrata nell'<A HREF="acproDatasheetFontItalicX.htm">esempio</A> delle proprietà <B>DatasheetFontItalic</B> e <B>DatasheetFontUnderline</B>.</P>
+
+<PRE class=CT><CODE>Dim dbs As Database, tdfProdotti As TableDef
+Set dbs = CurrentDb
+Set tdfProdotti = dbs!Prodotti
+ImpostaProprietàTabella tdfProdotti, "<B>DatasheetFontName</B>", dbText, "MS Serif"
+ImpostaProprietàTabella tdfProdotti, "<B>DatasheetFontHeight</B>", dbInteger, 10
+ImpostaProprietàTabella tdfProdotti, "<B>DatasheetFontWeight</B>", dbInteger, 500</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono effettuate le stesse modifiche dell'esempio precedente in visualizzazione Foglio dati della maschera Prodotti aperta.</P>
+
+<PRE class=CT><CODE>Forms!Prodotti.<B>DatasheetFontName</B> = "MS Serif"
+Forms!Prodotti.<B>DatasheetFontHeight</B> = 10
+Forms!Prodotti.<B>DatasheetFontWeight</B> = 500</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

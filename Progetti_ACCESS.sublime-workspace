@@ -72,9 +72,11 @@
 	},
 	"expanded_folders":
 	[
+		"/C/CASA/LINGUAGGI/ACCESS"
 	],
 	"file_history":
 	[
+		"/C/CASA/LINGUAGGI/ACCESS/ReadMe.md",
 		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70____________________________________________CRIPTA_DECODIFICA.txt",
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/RECORDSET.MD",
 		"/C/CASA/LINGUAGGI/ACCESS/GIT_BAT/git_OpenGitHub.bat",
@@ -136,7 +138,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 107.2,
+		"height": 116.0,
 		"where_history":
 		[
 			"*.md",

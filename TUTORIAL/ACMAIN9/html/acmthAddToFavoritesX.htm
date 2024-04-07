@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthAddToFavoritesX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8_1a.rtf'
+Tnum='186810'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo AddToFavorites</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthaddtofavoritesx"></A>Esempio di metodo AddToFavorites</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come impostare la proprietà <B>HyperlinkAddress</B> di un pulsante di comando. Quando si fa clic sul pulsante di comando, l'indirizzo viene aggiunto alla cartella Preferiti utilizzando il metodo <B>AddToFavorites</B>.</P>
+
+<P class=T>Per provare tale esempio, creare una nuova maschera e aggiungere un pulsante di comando chiamato Comando0. Incollare il codice riportato di seguito nel modulo della maschera. Passare in visualizzazione Maschera e fare clic sul pulsante di comando.</P>
+
+<PRE class=CT><CODE>Private Sub Caricamento_Maschera()
+&nbsp;&nbsp;&nbsp; Me!Comando0.HyperlinkAddress = "http://www.microsoft.com/"
+End Sub</CODE></PRE>
+
+
+
+<PRE class=CT><CODE>Private Sub Comando0_Click()
+&nbsp;&nbsp;&nbsp; Me!Comando0.Hyperlink.<B>AddToFavorites</B>
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproParentX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproref2.doc'
+Tnum='187857'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Parent</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproparentx"></A>Esempio di proprietà Parent</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la proprietà <B>Parent</B> per esaminare l'elemento principale del controllo di tipo etichetta Etichetta Speedy, il controllo Casella di controllo Speedy e il gruppo di opzioni <B>Corriere</B>.</P>
+
+<PRE class=CT><CODE>Dim frm As Form
+Dim ctl As Control
+Set frm = Forms!Ordini
+Set ctl = frm.[Etichetta Speedy]
+' Restituisce il nome del controllo associato a etichetta.
+MsgBox "Il controllo principale è " &amp; ctl.<B>Parent</B>.Nome
+Set ctl = frm.Speedy
+' Restituisce il nome del controllo contenente il controllo.
+MsgBox "Il controllo principale è " &amp; ctl.<B>Parent</B>.Nome
+Set ctl = frm.Corriere
+' Restituisce il nome della maschera contenente il controllo del gruppo di opzioni.
+MsgBox "Il controllo principale è " &amp; ctl.<B>Parent</B>.Nome</CODE></PRE>
+
+
+
+<P class=T>Anche l'esempio successivo restituisce il nome della maschera contenente il controllo Gruppo di opzioni.</P>
+
+<PRE class=CT><CODE>MsgBox Forms!Ordini! _
+  [Etichetta Speedy].<B>Parent</B>.<B>Parent</B>.<B>Parent</B>.Nome</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

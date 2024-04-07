@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconGeneralGuidelinesMakingQueriesRunFasterS'
+Feature='Queries: Optimize'
+Handoff='1'
+SourceFile='CQRYOPT.RTF'
+Tnum='188145'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Ottimizzazione delle prestazioni delle query</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acsqlFirstLastS">
+</OBJECT>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFailOnError">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="accongeneralguidelinesmakingqueriesrunfasters"></A>Ottimizzazione delle prestazioni delle query</H1>
+
+<P class=T>Sono disponibili diverse operazioni per rendere più veloce l'esecuzione delle query. Oltre ai seguenti suggerimenti è possibile utilizzare l'Analizzatore prestazioni per analizzare determinate query nel database. Per ulteriori informazioni sull'utilizzo dell'Analizzatore prestazioni, fare clic su <A HREF="achowAnalyzerTopicsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+
+<UL>
+	<LI class=LB1>Compattare il database. Questa operazione è in grado di velocizzare le query riorganizzando i record delle tabelle in modo tale che questi vengano inseriti in pagine di database vicine e ordinate in base alla chiave primaria della tabella. In questo modo vengono migliorate le prestazioni delle ricerche sequenziali effettuate sui record di una tabella. Infatti per recuperare tutti i record viene letto soltanto il minor numero possibile di pagine di database. Dopo aver compattato il database, eseguire ciascuna query per compilarlo mediante le statistiche aggiornate della tabella.<BR><BR></LI>
+
+	<LI class=LB1><A HREF="javascript:HelpPopup('actip9.hlp','defIndex');" class="pop">Indicizzare</A> i campi utilizzati per impostare i criteri per la query e indicizzare i campi indice su entrambi i lati di un <A HREF="javascript:HelpPopup('actip9.hlp','defJoin');" class="pop">join</A> oppure creare una <A HREF="javascript:HelpPopup('actip9.hlp','defRelationship');" class="pop">relazione</A> tra questi campi. In tal caso il <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A> crea un indice nella <A HREF="javascript:HelpPopup('actip9.hlp','defForeignKey');" class="pop">chiave esterna</A>, se questo non esiste già, altrimenti utilizza l'indice esistente.
+<P class=LNT><B>Nota</B>&nbsp;&nbsp; Il modulo di gestione di database Microsoft Jet ottimizza automaticamente una query che unisce una tabella di Microsoft Access sull'unità disco rigido a una tabella sul server <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC</A> se le dimensioni della tabella di Microsoft Access sono ridotte e i campi uniti sono indicizzati. In questo caso Microsoft Access migliora le prestazioni richiedendo al server solo i record necessari. Accertarsi che le tabelle unite aventi origini diverse vengano indicizzate nei campi di join.
+</LI>
+
+	<LI class=LB1>Per definire un campo in una tabella, scegliere il tipo di dati di dimensioni minori che sia appropriato per i dati inseriti nel campo. Assegnare inoltre ai campi utilizzati in join gli stessi tipi di dati o dati che siano compatibili, ad esempio Contatore e Numerico se la proprietà <B>Dimensione campo</B> è impostata a <B>Intero lungo</B>.<BR><BR></LI>
+
+	<LI class=LB1>Quando si crea una query, aggiungere solo i campi necessari. Nei campi utilizzati per impostare i criteri deselezionare la casella di controllo <B>Mostra</B> se non si desidera che questi vengano visualizzati.<BR><BR></LI>
+
+	<LI class=LB1>Se la proprietà <B>Origine record</B> di una maschera o di un report è impostata a un'istruzione SQL, salvare tale istruzione come query e impostare quindi la proprietà <B>Origine record</B> al nome della query. Per ulteriori informazioni, fare clic su <A HREF="achowSaveSQLStatementAsQueryS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Evitare di inserire dei campi calcolati nelle sottoquery. Se si aggiunge una query contenente un campo calcolato a un'altra, è possibile che l'espressione presente nel campo calcolato rallenti le prestazioni sulla query principale. Nell'esempio riportato di seguito la query Q1 viene utilizzata come input per la query Q2.
+<PRE class=LCT1><CODE>Q1: SELECT IIF([MiaColonna]="Sì","Ordine confermato","Ordine non confermato") AS X FROM MiaTabella;
+Q2: SELECT * FROM Q1 WHERE X="Ordine confermato";</CODE></PRE>
+</LI>
+</UL>
+
+
+
+<P class=LT1>Poiché l'espressione <B>IIf</B> presente nella query Q1 non può essere ottimizzata, neanche Q2 può esserlo. Se un'espressione non ottimizzabile è nidificata all'interno di una sottoquery, non è possibile ottimizzare l'intera query.</P>
+
+<P class=LT1>Di seguito è riportato un modo alternativo per formulare la query:</P>
+
+<PRE class=LCT1><CODE>Q1: SELECT * FROM MiaTabella WHERE MiaColonna = "Sì";</CODE></PRE>
+
+
+
+<P class=LT1>Se le espressioni sono necessarie per l'output, provare a collocarle in un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> presente in una maschera o in un report. È possibile ad esempio modificare la query precedente in una query con parametri che richiede il valore di MiaColonna e basare quindi la maschera o il report su tale query. Nella maschera o nel report è poi possibile aggiungere un controllo calcolato che visualizzi "Benvenuto" o "Arrivederci" a seconda del valore specificato in MiaColonna.</P>
+
+<P class=LT1>Formulare la query in base alle indicazioni riportate di seguito:</P>
+
+<PRE class=LCT1><CODE>PARAMETERS [Per vedere gli ordini confermati, digitare Sì. Per vedere gli ordini non confermati, digitare No.] Testo;
+SELECT *
+FROM MiaTabella
+WHERE MiaColonna = [Per vedere gli ordini confermati, digitare Sì. Per vedere gli ordini non confermati, digitare No.];</CODE></PRE>
+
+
+
+<P class=LT1>Nel controllo calcolato presente nella maschera o nel report inserire quanto segue:</P>
+
+<PRE class=LCT1><CODE>=IIF([MiaColonna]="Sì","Ordine confermato","Ordine non confermato")</CODE></PRE>
+
+<P class=6>
+
+<UL>
+	<LI class=LB1>Quando si raggruppano i record in base ai valori presenti in un campo di join, specificare <B>Raggruppamento</B> per il campo contenuto nella stessa tabella del campo di cui si sta calcolando il totale, includendo nel calcolo un <A HREF="javascript:HelpPopup('actip9.hlp','defAggregateFunction');" class="pop">aggregato</A>. Se ad esempio nel database di esempio Northwind si crea una query che totalizza i valori contenuti nel campo Quantità della tabella Dettagli ordini e li raggruppa per ID ordine, è consigliabile specificare <B>Raggruppamento</B> per il campo ID ordine della suddetta tabella. Se si specifica Raggruppamento nel campo ID ordine della tabella Ordini, Microsoft Access deve prima unire tutti i record ed eseguire quindi l'aggregato anziché eseguire l'aggregato e poi unire solo i campi necessari.
+<P class=LT1>Per velocizzare le operazioni, utilizzare <B>Raggruppamento</B> nel minor numero di campi possibile. Utilizzare come alternativa la funzione <B>Primo</B>, se appropriato. Per ulteriori informazioni sulla funzione <B>Primo</B>, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+
+<P class=LT1>Se una query Totali comprende un join, è consigliabile raggruppare i record in una query e aggiungerla in un'altra che esegua il join. In tal modo vengono migliorate le prestazioni di alcune query.
+</LI>
+
+	<LI class=LB1>Evitare, quando è possibile, di utilizzare <A HREF="javascript:HelpPopup('actip9.hlp','defCriteria');" class="pop">criteri</A> restrittivi per una query nei campi <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedField');" class="pop">calcolati</A> e non indicizzati.
+<P class=LT1>Utilizzare delle espressioni criterio ottimizzabili. Per ulteriori informazioni sull'ottimizzazione delle espressioni criterio con la tecnologia Rushmore, fare clic su <A HREF="acconOptimizingSimpleComplexExpressionsRushmoreTecS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LB1>Se si utilizzano dei criteri di restrizione per i valori di un campo utilizzato in un join fra tabelle con una <A HREF="javascript:HelpPopup('actip9.hlp','defOneToMany');" class="pop">relazione uno a molti</A>, verificare se la query viene eseguita più rapidamente con i criteri posti sul lato del join definito "uno" oppure su quello definito "molti". In alcune query si ottengono infatti delle prestazioni migliori aggiungendo dei criteri per il campo sul lato "uno" del join anziché sul lato "molti".<BR><BR></LI>
+
+	<LI class=LB1>Indicizzare i campi utilizzati per l'ordinamento.<BR><BR></LI>
+
+	<LI class=LB1>Se i dati non vengono modificati spesso, utilizzare le <A HREF="javascript:HelpPopup('actip9.hlp','defMakeTableQuery');" class="pop">query di creazione tabella</A> per creare delle tabelle dai risultati delle query. Utilizzare queste tabelle invece delle query come base per le maschere, i report o altre query e accertarsi che gli indici vengano aggiunti secondo le indicazioni generali riportate di seguito.<BR><BR></LI>
+
+	<LI class=LB1>Evitare di utilizzare le <A HREF="javascript:HelpPopup('actip9.hlp','defDomainFunction');" class="pop">funzioni di aggregazione sui domini</A>, quali la funzione <B>DLookup</B> per accedere ai dati da una tabella non presente nella query. Le funzioni di aggregazione sui domini sono tipiche di Microsoft Access e il modulo di gestione di database Microsoft Jet non è in grado di ottimizzare le query che le utilizzano. Aggiungere invece alla query la tabella alla quale deve accedere la funzione oppure creare una <A HREF="javascript:HelpPopup('actip9.hlp','defSubquery');" class="pop">sottoquery</A>.<BR><BR></LI>
+
+	<LI class=LB1>Se si sta creando una <A HREF="javascript:HelpPopup('actip9.hlp','defCrosstabQuery');" class="pop">query a campi incrociati</A>, utilizzare se possibile le intestazioni di colonna fisse. Per ulteriori informazioni, fare clic su <A HREF="achowRearrangeLimitColumnHeadingsDisplayedInCrosstS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare gli operatori <B>BETWEEN...AND</B>, <B>IN</B> e <B>=</B> nei campi indicizzati.<BR><BR></LI>
+
+	<LI class=LB1>Per le query di aggiornamento collettivo in base a origini dati ODBC, ottimizzare le prestazioni sul server impostando la proprietà <B>Errore</B> a <B>Sì</B>. Per ulteriori informazioni, fare clic su <A HREF="JavaScript:hhobj_2.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per avere suggerimenti sull'ottimizzazione delle prestazioni di database SQL esterni, fare clic su <A HREF="acrefOptimizeSqlDatabasePerformanceS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconGeneralGuidelinesMakingQueriesRunFasterSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlAlterX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234326'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione ALTER TABLE (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlalterx"></A>Esempio di istruzione ALTER TABLE (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare nessuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+
+
+<P class=WT><B>Attenzione</B>&nbsp;&nbsp; Questi esempi modificano il database di esempio Northwind. Di conseguenza, prima di iniziare è opportuno eseguire una copia di backup.</P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si aggiunge un campo Stipendio con un tipo di dati Valuta alla tabella Impiegati:</P>
+
+<PRE class=CT><CODE><B>ALTER TABLE</B> Impiegati ADD COLUMN Stipendio CURRENCY;</CODE></PRE>
+
+<UL></UL>
+
+<P class=T>Nell'esempio riportato di seguito si rimuove il campo Stipendio dalla tabella Impiegati:</P>
+
+<PRE class=CT><CODE><B>ALTER TABLE</B> Impiegati DROP COLUMN Stipendio;</CODE></PRE>
+
+<UL></UL>
+
+<P class=T>Dopo aver eseguito le due query successive, scegliere <B>Relazioni</B> dal menu <B>Strumenti</B> per visualizzare le relazioni modificate.</P>
+
+<P class=T>Nell'esempio riportato di seguito si rimuove la chiave esterna esistente dalla tabella Ordini:</P>
+
+<PRE class=CT><CODE><B>ALTER TABLE</B> Ordini DROP CONSTRAINT OrdiniImpiegati;</CODE></PRE>
+
+<UL></UL>
+
+<P class=T>Nell'esempio riportato di seguito si ripristina la chiave esterna nella tabella Ordini:</P>
+
+<PRE class=CT><CODE><B>ALTER TABLE</B> Ordini ADD CONSTRAINT OrdiniImpiegati FOREIGN KEY (IDImpiegato) REFERENCES Impiegati (IDImpiegato);</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

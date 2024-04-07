@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlSubqueriesX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234548'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di sottoquery SQL (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlsubqueriesx"></A>Esempio di sottoquery SQL (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si indicano tutti gli ordini non scontati il cui totale supera il valore medio degli ordini:</P>
+
+<PRE class=CT><CODE>SELECT IDOrdine, (PrezzoUnitario * Quantità) _
+    AS TotaleOrdine FROM [Dettagli ordini]
+WHERE Sconto = 0 AND (PrezzoUnitario * Quantità) &gt; _
+    ALL(SELECT Media(PrezzoUnitario * Quantità)  FROM [Dettagli ordini]);</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si riportano il nome e il prezzo unitario di ogni prodotto il cui prezzo unitario corrisponde a quello di Aniseed Syrup:</P>
+
+<PRE class=CT><CODE>SELECT NomeProdotto, PrezzoUnitario FROM Prodotti
+WHERE PrezzoUnitario = (SELECT PrezzoUnitario FROM [Prodotti]
+WHERE NomeProdotto = 'Aniseed Syrup');</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si riportano la società e il contatto di tutti clienti che hanno effettuato un ordine nel secondo trimestre del 1995:</P>
+
+<PRE class=CT><CODE>SELECT NomeContatto, NomeSocietà, PosizioneContatto, Telefono
+    FROM Clienti
+WHERE IDCliente IN (SELECT IDCliente FROM Ordini
+WHERE DataOrdine
+BETWEEN #04/1/95# AND #06/30/95#);</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si seleziona il nome di tutti gli impiegati che hanno ricevuto almeno un ordine. Tale operazione può essere eseguita anche tramite INNER JOIN.</P>
+
+<PRE class=CT><CODE>SELECT Nome, Cognome FROM Impiegati
+WHERE EXISTS (SELECT IDOrdine FROM Ordini
+WHERE Ordini.IDImpiegato = Impiegati.IDImpiegato);</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

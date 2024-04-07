@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtCurrentEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv1_1a.rtf'
+Tnum='187113'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Corrente - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtcurrentepx"></A>Evento Corrente - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito una routine evento Corrente verifica lo stato di un pulsante di opzione denominato Sospeso. Se si seleziona questo pulsante, l'esempio imposta il colore di sfondo del campo NomeProdotto a rosso per indicare che il prodotto è stato sospeso.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la seguente routine evento a una maschera contenente un'opzione denominata Sospeso e una casella di testo denominata NomeProdotto.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Current</B>()
+&nbsp;&nbsp;&nbsp; If Me!Sospeso Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!NomeProdotto.BackColor = 255
+&nbsp;&nbsp;&nbsp; EndIf
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>Etichetta</B> di una maschera viene impostata al campo NomeFornitore. Poiché lo stato attivo si sposta da un record a un altro, sulla barra del titolo viene visualizzato il nome del fornitore corrente.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la seguente routine evento a una maschera contenente una casella di testo denominata NomeFornitore.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Current</B>()
+&nbsp;&nbsp;&nbsp; Me.Caption = Me!Fornitore
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

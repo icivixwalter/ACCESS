@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctEvalX'
+Feature='acfct'
+Handoff='1'
+SourceFile='afctmisc_1a.doc'
+Tnum='186389'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Eval</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctevalx"></A>Esempio di funzione Eval</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si suppone di avere una serie di 50 funzioni definite come A1, A2, e così via. Nell'esempio si utilizza la funzione <B>Eval</B> per richiamare ciascuna funzione della serie.</P>
+
+<PRE class=CT><CODE>Sub RichiamaSerie()
+&nbsp;&nbsp;&nbsp; Dim intI As Integer
+
+&nbsp;&nbsp;&nbsp; For intI = 1 To 50
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>Eval(</B>"A" &amp; intI &amp; "()"<B>)</B>
+&nbsp;&nbsp;&nbsp; Next intI
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si attiva un evento <B>Clic</B>, in modo analogo all'esecuzione di un clic su un pulsante di una maschera. Se si antepone un segno di uguale (=) al valore della proprietà <B>OnClick</B> del pulsante, indicando in tal modo che si tratta del nome di una funzione, la funzione <B>Eval</B> richiama la funzione, attivando così l'evento <B>Clic</B>. Se non si antepone al valore un segno di uguale, è necessario allora che il valore assegni un nome a una macro. Il metodo <B>RunMacro</B> dell'oggetto <B>DoCmd</B> esegue quindi la macro con il nome assegnato.</P>
+
+<PRE class=CT><CODE>Dim ctl As Control, varTemp As Variant
+
+Set ctl = Forms!Contatti!Pulsante
+If (Left(ctl.OnClick, 1) = "=") Then
+&nbsp;&nbsp;&nbsp; varTemp = <B>Eval(</B>Mid(ctl.OnClick,2)<B>)</B>
+Else
+&nbsp;&nbsp;&nbsp; DoCmd.RunMacro ctl.OnClick
+End If</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

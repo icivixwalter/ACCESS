@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproValidationRuleX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproent1.doc'
+Tnum='188243'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ValidationRule e ValidationText</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprovalidationrulex"></A>Esempio di proprietà ValidationRule e ValidationText</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come creare una regola di convalida per un campo che consente solo l'immissione di valori superiori a 65. Se viene immesso un valore inferiore a 65, viene visualizzato un messaggio. Le proprietà vengono impostate utilizzando la funzione ImpostaConvalidaCampo.</P>
+
+<PRE class=CT><CODE>Dim strNomeTabella As String, strNomeCampo As String
+Dim strValidoSe As String
+Dim strMessErrore As String, intX As Integer
+
+strNomeTabella = "Clienti"
+strNomeCampo = "Età"
+strRegolaConvalida = "&gt;= 65"
+strTestoConvalida = "Immettere un numero maggiore o uguale a 65."
+intX = ImpostaConvalidaCampo(strNomeTabella, strNomeCampo, _
+ strValidoSe, strMessErrore)
+
+Function ImpostaConvalidaCampo(strNomeTabella As String, _
+ strNomeCampo As String, strValidoSe As String, _
+ strMessErrore As String) As Integer
+
+ Dim dbs As Database, tdf As TableDef, fld As Field
+
+ Set dbs = CurrentDb
+ Set tdf = dbs.TableDefs(strNomeTabella)
+ Set fld = tdf.Fields(strNomeCampo)
+ fld.<B>ValidationRule</B> = strValidoSe
+ fld.<B>ValidationText</B> = strMessErrore
+End Function</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo viene indicato come utilizzare la funzione ImpostaConvalidaTabella per impostare il livello di validità di record in modo da assicurare che il valore contenuto nel campo DataFinale segua il valore del campo DataInizio.</P>
+
+<PRE class=CT><CODE>Dim strNomeTabella As String, strRegolaConvalida As String
+Dim strMessErrore As String
+Dim intX As Integer
+
+strNomeTabella = "Impiegati"
+strValidoSe = "DataFinale &gt; DataInizio"
+strMessErrore = "Immettere una data finale successiva alla data di inizio."
+intX = ImpostaConvalidaTabella(strNomeTabella, strValidoSe, strMessErrore)
+
+Function ImpostaConvalidaTabella(strNomeTabella As String, _
+ strValidoSe As String, strMessErrore As String) _
+ As Integer
+
+ Dim dbs As Database, tdf As TableDef
+
+ Set dbs = CurrentDb
+ Set tdf = dbs.TableDefs(strNomeTabella)
+ tdf.<B>ValidationRule</B> = strValidoSe
+ tdf.<B>ValidationText</B> = strMessErrore
+End Function</CODE></PRE>
+
+
+
+
+
+</BODY>
+</HTML>

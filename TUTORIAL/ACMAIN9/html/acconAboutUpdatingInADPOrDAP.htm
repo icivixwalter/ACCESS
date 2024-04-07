@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutUpdatingInADPOrDAP'
+Feature='Access Project: Basic'
+Handoff='3'
+SourceFile='ccsbas.rtf'
+Tnum='274763'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'aggiornamento dei dati in un progetto di Microsoft Access o in una pagina di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutupdatinginadpordap"></A>Informazioni sull'aggiornamento dei dati in un progetto di Microsoft Access o in una pagina di accesso ai dati</H1>
+
+<P class=T>Il modo in cui i dati vengono aggiornati in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> o in una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> è diverso dal modo in cui vengono aggiornati in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A>. Sia gli utenti che i programmatori devono essere consapevoli di queste differenze. In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconaboutupdatinginadpordap_1">Regole generali per l'aggiornamento dei dati</A></P>
+
+<P class=LBR1><A HREF="#acconaboutupdatinginadpordap_2">Utilizzo di snapshot aggiornabili</A></P>
+
+<P class=LBR1><A HREF="#acconaboutupdatinginadpordap_4">Visualizzazione dei valori dei campi aggiornati</A></P>
+
+<P class=LBR1><A HREF="#acconaboutupdatinginadpordap_3">Metodi consigliati per aggiornare i dati correlati</A></P>
+
+<H2><A NAME="acconaboutupdatinginadpordap_1"></A>Regole generali per l'aggiornamento dei dati</H2>
+
+<P class=T>Le regole riportate di seguito vengono applicate quando si aggiornano i dati da un progetto o una pagina di Access connessa a un database di Access o di Microsoft SQL Server:
+
+<UL>
+	<LI class=LB1>Per aggiornare qualsiasi campo (incluso quello della chiave primaria) in una singola <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabella</A> o tabella di base di un <A HREF="javascript:HelpPopup('actip9.hlp','defJoin');" class="pop">join</A>, è necessario avere un campo o una combinazione di campi univoca definita come vincolo della chiave primaria, un vincolo univoco o un qualsiasi indice univoco per quella tabella.<BR><BR></LI>
+
+	<LI class=LB1>È possibile aggiornare i dati in base a un join <A HREF="javascript:HelpPopup('actip9.hlp','defOneToMany');" class="pop">uno-a-molti</A> in una maschera e in una pagina, ma solo per i campi del lato "molti" della relazione. Quando si apre una <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgView');" class="pop">visualizzazione</A> o si esegue una <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgStoredProcedure');" class="pop">stored procedure</A> contenente un join in visualizzazione Fogli dati, la visualizzazione o la stored procedure è di sola lettura. È tuttavia possibile aggiornare i dati da una maschera o da una pagina, anche se presenta una visualizzazione o una stored procedure come origine record, impostando la proprietà <B>UniqueTable</B> della pagina o della maschera (vedere più avanti la relativa spiegazione). <BR><BR></LI>
+
+	<LI class=LB1>Per aggiornare una visualizzazione o una stored procedure, è necessario essere in possesso delle autorizzazioni UPDATE, INSERT e DELETE per la tabella o le tabelle di base a cui fa riferimento la visualizzazione o la procedura, nonché l'autorizzazione SELECT per la visualizzazione o l'autorizzazione EXECUTE per la procedura.<BR><BR></LI>
+
+	<LI class=LB1>Non è possibile aggiornare i dati in una <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefGroupedDataAccessPage');" class="pop">pagina con gruppi</A>, ma solo in una pagina senza gruppi.<BR><BR></LI>
+
+	<LI class=LB1>Non è possibile aggiornare i dati derivati da un <A HREF="javascript:HelpPopup('actip9.hlp','defSelfJoin');" class="pop">self-join</A>, ad esempio tutti gli impiegati e i superiori a cui fanno riferimento, in alcuna circostanza.<BR><BR></LI>
+
+	<LI class=LB1>Nel caso di un database di Access:
+<UL>
+	<LI class=LB2>Non è possibile aggiornare una maschera, un foglio dati o una pagina in cui l'istruzione SQL sottostante dell'<A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A> contiene una proposizione GROUP BY o COMPUTE. <BR><BR></LI>
+
+	<LI class=LB2>Non è possibile aggiornare i campi basati su espressioni, ad esempio "prezzo * quantità AS prezzo_esteso".<BR><BR></LI>
+
+	<LI class=LB2>Non è possibile aggiornare una maschera, un foglio dati o una pagina basata su un join <A HREF="javascript:HelpPopup('actip9.hlp','defManyToManyRelationship');" class="pop">molti-a-molti</A>. </LI>
+</UL>
+</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutupdatinginadpordap">inizio</A></P>
+
+<H2><A NAME="acconaboutupdatinginadpordap_2"></A>Utilizzo di snapshot aggiornabili</H2>
+
+<P class=T>Access 2000 supporta unicamente l'inserimento, l'eliminazione e l'aggiornamento dei dati nella riga di una tabella univoca (il lato "molti" di un join) in uno <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefUpdatableSnapshot');" class="pop">snapshot aggiornabile</A> creato da un'operazione di join uno-a-molti in una visualizzazione, una stored procedure con restituzione di righe o un'istruzione SQL. Access 2000 non consente di aggiornare i campi sul lato "uno" del join. </P>
+
+<P class=T>Una maschera o pagina basata su un join uno-a-molti deve <A HREF="acproUniqueTable.htm">definire la proprietà <B>UniqueTable</B></A> perché il <A HREF="javascript:HelpPopup('actip9.hlp','defRecordset');" class="pop">set di record</A> sia aggiornabile. La tabella univoca (chiamata anche tabella "most-many") è il lato "molti" di una relazione uno-a-molti. Una tabella è univoca quando un suo record corrisponde a un record della visualizzazione, della stored procedure con restituzione di righe o dell'istruzione SQL. In una visualizzazione che unisce le tabelle Clienti e Ordini ad esempio, Ordini è la tabella univoca perché un record di questa tabella corrisponde, in gran parte, a un record univoco della visualizzazione. Al contrario, un record della tabella Clienti può corrispondere a più record della visualizzazione. </P>
+
+<P class=T>Inoltre, nel caso di un'<A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A> data da una stored procedure o istruzione SQL contenente marcatori di parametri, se si desidera visualizzare i valori correnti di un record dopo l'aggiornamento, è anche necessario <A HREF="acproResynchCommand.htm">impostare la proprietà <B>ResyncCommand</B></A>. Se non si imposta la proprietà <B>ResyncCommand</B> in questi casi, l'unica conseguenza è che i valori correnti di un record non saranno visibili dopo un aggiornamento o un inserimento. L'aggiornamento o l'inserimento comunque avrà luogo correttamente. Per altri tipi di origini record vengono visualizzati i valori correnti anche se la proprietà <B>ResyncCommand</B> non è stata impostata. </P>
+
+<P class=T>In uno snapshot aggiornabile sono visibili solo i valori correnti di un record appena aggiunto o modificato dopo che è stato salvato (vedere più avanti la relativa spiegazione). La tabella Ordini ad esempio contiene una colonna ID come chiave primaria. Quando si esegue un inserimento in questa tabella, il nuovo valore IDOrdine verrà visualizzato dopo avere salvato il record o dopo essersi spostati su un altro record (con implicito salvataggio). Analogamente, in una maschera basata su una visualizzazione che unisce Clienti e Ordini, se si aggiorna il campo IDOrdine a un IDCliente diverso, il campo Indirizzo non mostrerà l'indirizzo del nuovo cliente fino a quando il record non sarà stato salvato. </P>
+
+<P class=T>Infine, tutti i campi chiave o la tabella univoca devono trovarsi nell'elenco di selezione delle istruzioni SQL, anche se non necessariamente in forma visibile. È anche necessario selezionare tutte le colonne NOT NULL per cui non sono stati definiti valori predefiniti per il server e fornire valori per queste colonne nel set di record, a eccezione dei campi con la proprietà <B>Identity</B> impostata. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutupdatinginadpordap">inizio</A></P>
+
+<H2><A NAME="acconaboutupdatinginadpordap_4"></A>Visualizzazione dei valori dei campi aggiornati</H2>
+
+<P class=T>In generale, quando si aggiornano dei campi di una maschera, di un foglio dati o di una pagina, Access è in grado di inserire automaticamente un valore, ad esempio un valore predefinito, un campo calcolato, un valore di data/ora, un campo ID/Contatore o un'azione eseguita da un trigger. Contrariamente a un database di Access tuttavia, la visualizzazione del valore o le conseguenze dell'operazione hanno luogo dopo la conferma del record. Ciò si verifica perché Access deve aggiornare o eseguire l'operazione sul server, quindi aggiornare la visualizzazione corrente sul client.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutupdatinginadpordap">inizio</A></P>
+
+<H2><A NAME="acconaboutupdatinginadpordap_3"></A>Metodi consigliati per aggiornare i dati correlati</H2>
+
+<P class=T>Di seguito sono elencati i metodi consigliati per aggiornare i dati correlati:
+
+<UL>
+	<LI class=LB1>Maschera standard costituisce un modo pratico per creare una maschera che consenta l'aggiornamento di una visualizzazione o stored procedure basata su un join. Utilizzare Maschera standard per creare rapidamente la maschera, quindi passare in visualizzazione Struttura per impostare la proprietà <B>Tabella univoca</B>. È anche possibile impostare la proprietà <B>Visualizzazione predefinita</B> se si preferisce una visualizzazione Foglio dati a una visualizzazione Maschera singola. <BR><BR></LI>
+
+	<LI class=LB1>Per aggiornare tutti i dati in una relazione uno-a-molti, è possibile <A HREF="acdecCreateSubformS.htm">creare una combinazione maschera/sottomaschera</A>. Anziché visualizzare ad esempio i dati di una singola maschera in cui vengono uniti gli ordini e i clienti (in questo caso, i campi cliente sarebbero di sola lettura), è possibile creare una maschera con i clienti e una sottomaschera con gli ordini. Poiché la combinazione maschera/sottomaschera utilizza due set di record diversi, è possibile aggiornare tutti i campi. È inoltre possibile <A HREF="aclrgSubdatasheetsWhatHow.htm">visualizzare questa combinazione maschera/sottomaschera come foglio dati con un foglio dati secondario</A>.<BR><BR></LI>
+
+	<LI class=LB1>In una pagina è possibile simulare una combinazione maschera/sottomaschera <A HREF="achowCreateHyperlinkFromOneDataAccessPageToAnother.htm">collegando due pagine mediante un campo di tipo Collegamento ipertestuale</A>, quindi <A HREF="acconStrategiesForCreatingDataAccessPages.htm">utilizzare Microsoft FrontPage per creare due frame, uno per ogni pagina</A>.</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutupdatinginadpordap">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutUpdatingInADPOrDAPW">
+</OBJECT>
+</P>
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWhatKindPrimaryKeyDoINeedS'
+Feature='Tables'
+Handoff='2'
+SourceFile='ctblnew_1.rtf'
+Tnum='188337'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Tipo di chiave primaria da utilizzare</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwhatkindprimarykeydoineeds"></A>Tipo di chiave primaria da utilizzare</H1>
+
+<P class=T>La potenza di un sistema di database relazionali come Microsoft Access deriva dalla capacità di trovare velocemente e unire le informazioni memorizzate in tabelle diverse utilizzando <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschere</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>. A questo scopo è necessario che ogni tabella includa un campo o un set di campi che identifichi in modo univoco ogni record memorizzato nella tabella. Queste informazioni vengono definite chiave primaria della tabella. Dopo aver stabilito la chiave primaria per una tabella, per assicurare l'univocità verrà impedito l'inserimento di valori duplicati o <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop">Null</A> nei campi chiave primaria.</P>
+
+<P class=T>In Microsoft Access è possibile definire tre tipi di chiavi primarie: Contatore, a campo singolo e multicampo.</P>
+
+<P class=LBR1><A HREF="#acconwhatkindprimarykeydoineeds_1">Chiavi primarie Contatore</A></P>
+
+<P class=LBR1><A HREF="#acconwhatkindprimarykeydoineeds_2">Chiavi primarie a campo singolo</A></P>
+
+<P class=LBR1><A HREF="#acconwhatkindprimarykeydoineeds_3">Chiavi primarie multicampo</A></P>
+
+<H2><A NAME="acconwhatkindprimarykeydoineeds_1"></A>Chiavi primarie Contatore</H2>
+
+<P class=T>È possibile impostare un campo Contatore per immettere automaticamente un numero sequenziale ogni volta che viene aggiunto un record alla tabella. La definizione di tale campo come chiave primaria di una tabella è il modo più semplice di creare una chiave primaria. Se prima di salvare una tabella appena creata non viene impostata una chiave primaria, verrà richiesto se si desidera crearne una. Se si sceglie Sì, verrà creata una chiave primaria Contatore. Se la tabella verrà utilizzata con la <A HREF="javascript:HelpPopup('actip9.hlp','rpldefDBReplication');" class="pop">replica dei database</A>, è necessario prendere in considerazione altri fattori. Per ulteriori informazioni, vedere l'argomento relativo ai <A HREF="mk:@MSITStore:rplbrf35.chm::/html/acrefSelectAutoNumberReplicationS.htm">campi Contatore e replica in un database di Microsoft Access</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhatkindprimarykeydoineeds">inizio</A></P>
+
+<H2><A NAME="acconwhatkindprimarykeydoineeds_2"></A>Chiavi primarie a campo singolo</H2>
+
+<P class=T>Se si dispone di un campo che contiene valori univoci, quali numeri parte o ID, tale campo può essere definito come chiave primaria. Se il campo selezionato come chiave primaria contiene valori duplicati o <B>Null</B>, la chiave primaria non verrà impostata. È possibile eseguire una Query ricerca duplicati per determinare quali record contengono dati duplicati. Se i valori duplicati non possono essere eliminati con facilità modificando i dati, è possibile aggiungere un campo Contatore e impostarlo come chiave primaria oppure definire una chiave primaria multicampo.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhatkindprimarykeydoineeds">inizio</A></P>
+
+<H2><A NAME="acconwhatkindprimarykeydoineeds_3"></A>Chiavi primarie multicampo</H2>
+
+<P class=T>In situazioni in cui non può essere garantita l'univocità di ogni singolo campo, è possibile definire due o più campi come chiave primaria. La situazione più comune in cui ciò può verificarsi è nella tabella utilizzata per correlare altre due tabelle in una <A HREF="javascript:HelpPopup('actip9.hlp','defManyToManyRelationship');" class="pop">relazione molti-a-molti</A>. Un esempio di questo tipo di tabella è la tabella Dettagli ordini nel database di esempio Northwind che correla le tabelle Ordini e Prodotti. La chiave primaria della tabella Dettagli ordini è composta da due campi: ID ordine e ID prodotto. Questa tabella può elencare molti prodotti e molti ordini, ma poiché ogni prodotto può essere riportato solo una volta per ordine, combinando i campi ID ordine e ID prodotto viene creata una chiave primaria appropriata.</P>
+
+<P class=ART><IMG SRC="images/ctblnew2.bmp" ALT="Ogni prodotto può comparire nell'elenco una sola volta per ordine." BORDER=0></P>
+
+<P class=T>Un altro esempio potrebbe essere un database di un inventario che utilizza un numero parte di campo di due o più campi (parte o sottoparte).</P>
+
+<P class=NT><B>Nota&nbsp;&nbsp;</B> Se non si è sicuri di poter selezionare una combinazione appropriata di campi per una chiave primaria multicampo, è consigliabile aggiungere un campo Contatore e definirlo come chiave primaria. Non è consigliabile ad esempio combinare i campi Nome e Cognome per creare una chiave primaria, dal momento che è possibile trovare valori duplicati nella combinazione di questi due campi.</P>
+
+<P class=T>Per informazioni sull'impostazione di una chiave primaria, fare clic su <A HREF="achowSetChangePrimaryKeyS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconwhatkindprimarykeydoineeds">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWhatKindPrimaryKeyDoINeedSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

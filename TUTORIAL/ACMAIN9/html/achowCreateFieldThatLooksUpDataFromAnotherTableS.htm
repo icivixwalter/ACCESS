@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateFieldThatLooksUpDataFromAnotherTableS'
+Feature='Tables'
+Handoff='2'
+SourceFile='ctblnew_1.rtf'
+Tnum='188319'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare un campo che cerca i dati di un'altra tabella in visualizzazione Struttura</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreatefieldthatlooksupdatafromanothertables"></A>Creare un campo che cerca i dati di un'altra tabella in visualizzazione Struttura</H1>
+
+<OL>
+	<LI class=LPROC>In <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A> aprire la tabella alla quale si desidera aggiungere un campo di ricerca.<BR><BR></LI>
+
+	<LI class=LPROC>Effettuare una delle seguenti operazioni:
+<UL>
+	<LI class=LB2>Per inserire un nuovo campo all'interno della tabella, fare clic sulla riga al di sotto della quale si desidera aggiungere il campo, quindi fare clic sul pulsante <B>Inserisci righe</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrInsertRowQ');" class="pop"><IMG SRC="images/inrow.bmp" BORDER=0></A> sulla barra degli strumenti. Per aggiungere un nuovo campo alla fine della tabella, fare clic sulla prima riga vuota. Nella colonna <B>Nome campo</B> digitare il nome del campo rispettando le <A HREF="javascript:HelpPopup('actip9.hlp','defStandardNamingConventions');" class="pop">regole per la denominazione degli oggetti</A> in Microsoft Access.<BR><BR></LI>
+
+	<LI class=LB2>Se il campo che si desidera utilizzare come <A HREF="javascript:HelpPopup('actip9.hlp','defForeignKey');" class="pop">chiave esterna</A> per la ricerca è già esistente, fare clic sulla riga di questo campo. Se ad esempio nella tabella Prodotti è già stato definito il campo ID fornitore e si desidera modificarlo in un campo di ricerca per visualizzare i nomi dei fornitori contenuti nella tabella Fornitori, fare clic sulla freccia del campo ID fornitore.</LI>
+</UL>
+</LI>
+
+	<LI class=LPROC>Nella colonna <B>Tipo dati</B> fare clic sulla freccia e selezionare <B>Ricerca guidata</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Selezionare l'opzione che indica che si desidera cercare i valori in una tabella o in una query.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic su <B>Avanti</B> e seguire le indicazioni delle altre finestre di dialogo della <B>Ricerca guidata</B>.
+<P class=LT1>Quando si sceglie il pulsante <B>Fine</B>, viene creato il campo di ricerca e vengono impostate alcune proprietà del campo in base alle scelte che sono state effettuate nella Ricerca guidata. Dopo aver creato un campo con un elenco di ricerca, se lo si aggiunge a una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> la relativa definizione verrà copiata nella maschera stessa. La casella combinata o di riepilogo viene creata automaticamente nella maschera. Se tuttavia nella tabella la definizione di un campo con un elenco di ricerca o di valori viene modificata dopo aver aggiunto il campo ad una maschera, queste modifiche non avranno alcun effetto nella maschera. Per evitare ciò, eliminare il campo dalla maschera e poi aggiungerlo di nuovo. Per informazioni sulle proprietà che vengono impostate tramite la Ricerca guidata, fare clic su <A HREF="acconPropertiesThatMakeListBoxesCombosWorkS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+</OL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È inoltre possibile aggiungere un campo di ricerca ad una tabella che visualizza i valori della stessa tabella contenente il campo di ricerca. Nella tabella Impiegati del database di esempio Northwind, il campo Superiore è un campo di ricerca che visualizza i dati dei campi Nome e Cognome cercando il corrispondente ID impiegato nella stessa tabella.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateFieldThatLooksUpDataFromAnotherTableSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

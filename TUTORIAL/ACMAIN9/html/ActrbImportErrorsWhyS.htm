@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='ActrbImportErrorsWhyS'
+Feature='External: Import/Link'
+Handoff='3'
+SourceFile='ctblimp.rtf'
+Tnum='188544'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Errori relativi all'importazione di un foglio di calcolo o di un file di testo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrbimporterrorswhys"></A>Errori relativi all'importazione di un foglio di calcolo o di un file di testo</H1>
+
+<P class=T>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A>, per la maggior parte dei record che provocano un errore, viene aggiunta una riga alla tabella relativa agli errori di importazione. Per visualizzare l'elenco degli errori incontrati, aprire la tabella relativa agli errori di importazione nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A>. Per ulteriori informazioni sui messaggi riguardanti la tabella relativa ad errori di importazione, fare clic su  <A HREF="acrefUseTheImportErrorsTableS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Nei <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetti di Microsoft Access</A>, non viene creata alcuna tabella relativa agli errori di importazione. È consigliabile l'utilizzo di DTS (Data Transformation Services), un metodo più rapido e flessibile per l' <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importazione</A> e la trasformazione dei dati. Per ulteriori informazioni, <A HREF="acconAboutMicrosoftSQLServerDocumentation.htm">consultare la documentazione di Microsoft SQL Server</A>.</P>
+
+<P class=T>Vengono riportate di seguito le cause più comuni di errore:
+
+<UL>
+	<LI class=LB1>Dei dati di un campo non possono essere memorizzati nel tipo di dati assegnato a quel campo particolare. Un valore di testo può essere stato incluso accidentalmente, per esempio, in un campo che dovrebbe contenere soltanto dei numeri o delle date, oppure una riga del file di testo o del foglio di calcolo contiene delle informazioni di riepilogo o dei caratteri estranei.
+<P class=LT1>Se si ritiene che il programma abbia assegnato un tipo di dati corretto per tale campo, modificare il file di testo o il foglio di calcolo per correggere gli errori, quindi effettuare nuovamente l'importazione. In caso contrario, effettuare nuovamente l'importazione e specificare il tipo di dati appropriato.
+</LI>
+
+	<LI class=LB1>È stato assegnato il tipo di dati non corretto ad un campo. Il tipo di dati viene assegnato in ciascun campo in base ai dati nella prima riga importata. Se, ad esempio, un campo contenente principalmente dei valori di testo ha un numero nella prima riga, in un database e in un progetto di Access viene assegnato il tipo di dati Numerico e non è possibile importare i record rimanenti.
+<P class=LT1>Effettuare nuovamente l'importazione e specificare il tipo di dati appropriato durante l'importazione.
+</LI>
+
+	<LI class=LB1>Una o più righe del file di testo o del foglio di calcolo contengono più campi rispetto alla prima riga. La seconda riga di un file, ad esempio, può avere un carattere di delimitazione di campo aggiuntivo seguito da un valore che non si riesce ad inserire nella nuova tabella.
+<P class=LT1>Modificare il file di testo o il foglio di calcolo, in modo che ciascuna riga abbia lo stesso numero di campi, quindi importare nuovamente.
+</LI>
+
+	<LI class=LB1>I campi di tipo data importati da un foglio di calcolo di Microsoft Excel differiscono di quattro anni. Microsoft Excel per Windows utilizza il Sistema Data 1900, in cui i numeri seriali vanno da uno a 65.380 e corrispondono alle date dal 1 gennaio 1900 al 31 dicembre 2078, mentre Microsoft Excel per il Macintosh utilizza il Sistema Data 1904, in cui i numeri seriali vanno da zero a 63.918 e corrispondono alle date dal 1 gennaio 1904 al 31 dicembre 2078.
+<P class=LT1>Prima di importare i dati cambiare il sistema relativo alla data del foglio di calcolo di Microsoft Excel, oppure, dopo l'importazione dei dati, eseguire una query di aggiornamento utilizzando l'espressione [campo data] + 1462 per correggere le date. Per ulteriori informazioni sul sistema relativo alla data di Microsoft Excel, consultare la documentazione relativa a Microsoft Excel.
+</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="ActrbImportErrorsWhySW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

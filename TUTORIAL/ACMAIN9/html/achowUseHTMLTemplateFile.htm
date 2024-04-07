@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowUseHTMLTemplateFile'
+Feature='Web'
+Handoff='3'
+SourceFile='ctbliel.rtf'
+Tnum='189061'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sui file modello HTML</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowusehtmltemplatefile"></A>Informazioni sui file modello HTML</H1>
+
+<P class=T>È possibile utilizzare uno o più file modello <A HREF="javascript:HelpPopup('actip9.hlp','defHTML');" class="pop">HTML</A> per migliorare l'aspetto, la coerenza e le possibilità di esplorazione dei file HTML statici e <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefServergeneratedHTML');" class="pop">HTML generati da server</A>. È possibile ad esempio includere il logo di una società nella sezione dell'intestazione, un'immagine di sfondo approvata dalla società nella sezione del corpo del testo e i pulsanti di spostamento personalizzati nella sezione del piè di pagina di un report HTML statico.</P>
+
+<P class=T>Un modello HTML è un file di testo che comprende tag e token HTML specifici di Microsoft Access. Questi token indicano dove inserire gli output e gli altri dati nei file HTML statici o HTML generati da server. Per ulteriori informazioni, vedere un <A HREF="acexaTemplateFileExample.htm">esempio di file modello HTML</A>.</P>
+
+<P class=T>Quando si invia l'output di una tabella, una query, una maschera o un report e si specifica un file modello HTML nella relativa finestra di dialogo <B>Opzioni di output</B>, il file HTML viene unito ai file di output html, asp e htx e i token vengono sostituiti come indicato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=56%>Token modello HTML</TH>
+<TH width=44%>Sostituzione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=DELETE colspan=2 width=100%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=56%>&lt;!--AccessTemplate_Titolo--&gt;</TD>
+<TD class=TT width=44%>Il nome della tabella, della query, della maschera o del report posizionato nella barra del titolo del <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefBrowser');" class="pop">browser</A> Web</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=56%>&lt;!--AccessTemplate_Corpo--&gt;</TD>
+<TD class=TT width=44%>L'output della tabella, della query, della maschera o del report</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=56%>&lt;!--AccessTemplate_PrimaPagina--&gt;</TD>
+<TD class=TT width=44%>Un tag HTML di ancoraggio alla prima pagina di un report</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=56%>&lt;!--AccessTemplate_PaginaPrecedente--&gt;</TD>
+<TD class=TT width=44%>Un tag HTML di ancoraggio alla pagina che precede la pagina del report corrente</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=56%>&lt;!--AccessTemplate_PaginaSuccessiva--&gt;</TD>
+<TD class=TT width=44%>Un tag HTML di ancoraggio alla pagina che segue la pagina del report corrente</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=56%>&lt;!--AccessTemplate_UltimaPagina--&gt;</TD>
+<TD class=TT width=44%>Un tag HTML di ancoraggio all'ultima pagina di un report</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=56%>&lt;!--AccessTemplate_NumeroPagina--&gt;</TD>
+<TD class=TT width=44%>Il numero di pagina corrente</TD>
+</TR>
+</TABLE><BR>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowUseHTMLTemplateFileW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefStartUpCommandLineOptionsS'
+Feature='Databases: Startup options'
+Handoff='3'
+SourceFile='cdatbas5.rtf'
+Tnum='188300'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Opzioni della riga di comando per l'avvio</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctCommand">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acrefstartupcommandlineoptionss"></A>Opzioni della riga di comando per l'avvio</H1>
+
+<P class=T>Nella seguente tabella sono elencate le opzioni della riga di comando di Microsoft Access:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=24%>Opzione</TH>
+<TH width=53%>Effetto</TH>
+<TH width=23%>Si applica a</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><I>database</I> </TD>
+<TD class=TT width=53%>Apre il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> specificato. Includere un percorso se necessario. Se si utilizza Microsoft Windows 95, il percorso predefinito è la cartella Documenti.</TD>
+<TD class=TT width=23%>Database o progetto di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/excl</B></TD>
+<TD class=TT width=53%>Apre il database di Access specificato con accesso <A HREF="javascript:HelpPopup('actip9.hlp','defExclusive');" class="pop">esclusivo</A>. Per aprire il database con accesso condiviso in un ambiente <A HREF="javascript:HelpPopup('actip9.hlp','defMultiUserDatabase');" class="pop">multiutente</A>, omettere questa opzione.</TD>
+<TD class=TT width=23%>Solo database di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/ro</B></TD>
+<TD class=TT width=53%>Apre il database o il progetto di Access specificato con accesso di sola lettura.</TD>
+<TD class=TT width=23%>Database o progetto di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/user</B> <I>nome utente</I></TD>
+<TD class=TT width=53%>Avvia Microsoft Access utilizzando il nome utente specificato.</TD>
+<TD class=TT width=23%>Solo database di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/pwd</B> <I>password</I></TD>
+<TD class=TT width=53%>Avvia Microsoft Access utilizzando la password specificata.</TD>
+<TD class=TT width=23%>Solo database di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/profile</B> <I>profilo utente</I></TD>
+<TD class=TT width=53%>Avvia Microsoft Access utilizzando le opzioni presenti nel profilo utente specificato invece delle impostazioni standard del registro di configurazione di Windows create al momento dell'installazione di Microsoft Access. Questa opzione sostituisce l'opzione /<B>ini</B> utilizzata nelle versioni di Microsoft Access precedenti ad Access 97 per specificare un file di inizializzazione.</TD>
+<TD class=TT width=23%>Database o progetto di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/compact</B> <I>database di destinazione</I> o <I>progetto di Access di destinazione</I></TD>
+<TD class=TT width=53%>Compatta e ripara il database di Access o compatta il progetto di Access specificato prima dell'opzione <B>/compact</B>, quindi chiude Microsoft Access. Se si omette il nome di un file di destinazione dopo l'opzione <B>/compact</B>, il file viene compattato con il nome e la cartella del database originale. Per compattarlo con un nome diverso, specificare un file di destinazione. Se non si include un percorso nel <I>database di destinazione</I> o nel <I>progetto di Access di destinazione</I>, questo, per impostazione predefinita, viene creato nella cartella Documenti.<P class=TT>In un progetto di Access questa opzione compatta il file di progetto di Access (adp) ma non il database di Microsoft SQL Server.</P>
+</TD>
+<TD class=TT width=23%>Database o progetto di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/repair</B></TD>
+<TD class=TT width=53%>Ripristina il database di Access specificato prima dell'opzione <B>/repair</B>, quindi chiude Microsoft Access. <P class=TT>In Microsoft Access 2000 le funzioni di compattazione e riparazione sono state riunite sotto <B>/compact</B>. L'opzione /<B>repair</B> è supportata per motivi di compatibilità con le versioni precedenti.</P>
+</TD>
+<TD class=TT width=23%>Solo database di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/convert</B> <I>database di destinazione</I></TD>
+<TD class=TT width=53%>Converte con un nuovo nome un database di una versione precedente di Access in un database di Microsoft Access 2000, quindi chiude Microsoft Access. È necessario specificare il database di origine prima di utilizzare l'opzione <B>/convert</B>.</TD>
+<TD class=TT width=23%>Solo database di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/x</B> <I>macro</I></TD>
+<TD class=TT width=53%>Avvia Microsoft Access ed esegue la macro specificata. Un altro modo di eseguire una macro quando si apre un database è di utilizzare una macro AutoExec.</TD>
+<TD class=TT width=23%>Database o progetto di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/cmd</B></TD>
+<TD class=TT width=53%>Specifica che quanto segue sulla riga di comando è il valore che sarà restituito dalla funzione <B>Command</B>. Questa opzione deve essere l'ultima sulla riga di comando. È possibile utilizzare un punto e virgola invece di <B>/cmd</B>.
+<P class=TT>Per ulteriori informazioni sulla funzione <B>Command</B>, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+</TD>
+<TD class=TT width=23%>Database o progetto di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/nostartup</B></TD>
+<TD class=TT width=53%>Avvia Microsoft Access senza visualizzare la finestra di dialogo di avvio, vale a dire la seconda finestra di dialogo visualizzata quando si avvia Microsoft Access.</TD>
+<TD class=TT width=23%>Database o progetto di Access</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%><B>/wrkgrp</B> <I>file di informazioni <BR> sul gruppo di lavoro</I></TD>
+<TD class=TT width=53%>Avvia Microsoft Access utilizzando il file di informazioni sul gruppo di lavoro specificato.</TD>
+<TD class=TT width=23%>Solo database di Access</TD>
+</TR>
+</TABLE><BR>
+
+<P class=NT><B>Nota</B>
+
+<UL>
+	<LI class=NLB>Per eseguire una routine di Visual Basic, Applications Edition quando si apre un database, utilizzare l'azione EseguiCodice nella macro AutoExec o nella macro eseguita dalla riga di comando con l'opzione <B>/x</B>. È inoltre possibile eseguire una routine di Visual Basic quando si apre un database creando una maschera con una routine di Visual Basic definita per l'evento SuApertura. Definire questa come maschera di avvio facendo clic con il pulsante destro del mouse sulla finestra del database, scegliendo <B>Avvio</B> dal menu visualizzato e immettendo la maschera nella casella <B>Visualizza maschera/pagina</B>.<BR><BR></LI>
+
+	<LI class=NLB>Per specificare una barra (/) o un punto e virgola (;) sulla riga di comando, digitare il carattere due volte. Per specificare, ad esempio, la password <B>;mjs/md</B> sulla riga di comando, digitare <B>;;mjs//md</B> dopo l'opzione della riga di comando <B>/pwd</B>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefStartUpCommandLineOptionsSW">
+</OBJECT>
+</P><SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

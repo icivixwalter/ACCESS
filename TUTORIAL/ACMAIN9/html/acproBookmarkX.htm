@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproBookmarkX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproref2.doc'
+Tnum='187039'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Bookmark</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprobookmarkx"></A>Esempio di proprietà Bookmark</B></P>
+
+
+
+<P class=T>Per verificare l'esempio riportato di seguito nel database di esempio Northwind, è necessario aggiungere un pulsante di comando chiamato <CODE>cmdTrovaNomeContatto</CODE> alla maschera Fornitori e quindi aggiungere il codice specificato di seguito all'evento Clic del pulsante. Quando si preme il pulsante, verrà chiesto di immettere una parte del nome contatto da trovare. Se si trova tale nome, la proprietà <B>Bookmark</B> della maschera verrà impostata alla proprietà ADO <B>Bookmark</B> dell'oggetto <B>Recordset</B>, che sposta il record corrente della maschera al nome trovato.</P>
+
+<PRE class=CT><CODE>Private Sub cmdFindContactName_Click()
+  Dim rst As adodb.Recordset, strCriteria As String
+  strCriteria = "[NomeContatto] Like '*" &amp; InputBox("Immettere le " _
+    &amp; "prime lettere del nome da cercare") &amp; "*'"
+
+  Set rst = Me.RecordsetClone
+  rst.FindFirst strCriteria
+  If rst.NoMatch Then
+    MsgBox "Nessun nome trovato"
+  Else
+    Me.<B>Bookmark</B> = rst.Bookmark
+  End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

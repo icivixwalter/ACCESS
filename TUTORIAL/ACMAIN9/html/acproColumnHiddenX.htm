@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproColumnHiddenX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aprosht1.doc'
+Tnum='187080'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ColumnHidden</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprocolumnhiddenx"></A>Esempio di proprietà ColumnHidden</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene nascosto il campo IDProdotto in visualizzazione Foglio dati della maschera Prodotti.</P>
+
+<PRE class=CT><CODE>Forms!Prodotti!IDProdotto.<B>ColumnHidden</B> = -1</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo viene inoltre nascosto il campo IDProdotto in visualizzazione Foglio dati della tabella Prodotti. Per impostare la proprietà <B>ColumnHidden</B>, nell'esempio vengono utilizzate le routine MostraColonna e ImpostaProprietàCampo, contenute nel modulo standard del database.</P>
+
+<PRE class=CT><CODE>Dim dbs As Database
+Set dbs = CurrentDb
+MostraColonna dbs.TableDefs!Prodotti.Fields!IDProdotto, False
+
+Sub MostraColonna(fldOggetto As Field, intMostra As Integer)
+  ' Imposta la proprietà ColumnHidden.
+  ImpostaProprietàCampo fldOggetto, "<B>ColumnHidden</B>", dbLong, Not intMostra
+End Sub
+
+Sub ImpostaProprietàCampo(fldCampo As Field, strNomeProprietà As String, _
+    intTipoProprietà As Integer, varValoreProprietà As Variant)
+  ' Imposta la proprietà del campo senza causare un errore di run-time irreparabile.
+  Const conErroreProprietàNonTrovata = 3270
+  Dim prpProprietà As Property
+  On Error Resume Next        ' Non rileva errori.
+  fldCampo.Properties(strNomeProprietà) = varValoreProprietà
+  If Err &lt;&gt; 0 Then          ' Si è verificato un errore impostando il valore.
+    If Err &lt;&gt; conErroreProprietàNonTrovata Then
+      On Error GoTo 0
+      MsgBox "Impossibile impostare la proprietà '" &amp; strNomeProprietà _
+        &amp; "' nel campo '" &amp; fldCampo.name &amp; "'", 48, "ImpostaProprietàCampo"
+    Else
+      On Error GoTo 0
+      Set prpProprietà = fldCampo.CreateProperty(strNomeProprietà, _
+        intTipoProprietà, varValoreProprietà)
+      fldCampo.Properties.Append prpProprietà
+    End If
+  End If
+End Sub</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

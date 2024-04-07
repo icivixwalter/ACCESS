@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFontBoldX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprotxt2_1a.rtf'
+Tnum='187243'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà FontBold</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprofontboldx"></A>Esempio di proprietà FontBold</B></P>
+
+
+
+<P class=T>È possibile utilizzare la routine evento riportata di seguito per stampare in un report la data corrente in carattere grassetto secondo le coordinate specificate dall'impostazione delle proprietà <B>CurrentX</B> e <B>CurrentY</B>.</P>
+
+<PRE class=CT><CODE>Private Sub IntestazioneReport0_Print(Cancel As Integer, _
+&nbsp;&nbsp;&nbsp;&nbsp; PrintCount As Integer)
+&nbsp;&nbsp;&nbsp; Dim MiaData
+
+&nbsp;&nbsp;&nbsp; MiaData = Date
+&nbsp;&nbsp;&nbsp; Me.<B>FontBold</B> = True
+&nbsp;&nbsp;&nbsp; ' Stampa il titolo del report in grassetto.
+&nbsp;&nbsp;&nbsp; Me.Print("Report gestione vendite")
+&nbsp;&nbsp;&nbsp; Me.Print(MiaData)
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

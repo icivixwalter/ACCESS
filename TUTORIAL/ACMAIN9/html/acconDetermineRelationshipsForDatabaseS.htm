@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconDetermineRelationshipsForDatabaseS'
+Feature='Tables: Relationships'
+Handoff='3'
+SourceFile='CDATLATE.RTF'
+Tnum='188444'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulle relazioni in un database di Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="accondeterminerelationshipsfordatabases"></A>Informazioni sulle relazioni in un database di Access</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#accondeterminerelationshipsfordatabases_1">Perché definire le relazioni</A></P>
+
+<P class=LBR1><A HREF="#accondeterminerelationshipsfordatabases_2">Funzionamento delle relazioni</A></P>
+
+<P class=LBR1><A HREF="#accondeterminerelationshipsfordatabases_3">Relazione uno-a-molti</A></P>
+
+<P class=LBR1><A HREF="#accondeterminerelationshipsfordatabases_4">Relazione molti-a-molti</A></P>
+
+<P class=LBR1><A HREF="#accondeterminerelationshipsfordatabases_5">Relazione uno-a-uno</A></P>
+
+<P class=LBR1><A HREF="#accondeterminerelationshipsfordatabases_6">Definizione delle relazioni</A></P>
+
+
+
+<H2><A NAME="accondeterminerelationshipsfordatabases_1"></A>Perché definire le relazioni</H2>
+
+<P class=T>Dopo avere impostato diverse tabelle per ciascun argomento del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A>, è necessario indicare il modo per ricollegare le informazioni. Definire innanzitutto le relazioni tra le tabelle. È quindi possibile creare query, maschere e report in cui visualizzare le informazioni di diverse tabelle contemporaneamente. In questa maschera sono incluse ad esempio le informazioni di cinque tabelle:</P>
+
+<P class=ART><IMG SRC="images/cdatlat1.bmp" ALT="Maschera Ordini che visualizza contemporaneamente le informazioni correlate provenienti da cinque tabelle" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#accondeterminerelationshipsfordatabases">inizio</A></P>
+
+<H2><A NAME="accondeterminerelationshipsfordatabases_2"></A>Funzionamento delle relazioni</H2>
+
+<P class=T>Nell'esempio precedente i campi delle cinque tabelle devono essere coordinati in modo da visualizzare le informazioni nello stesso ordine. Tale coordinamento viene effettuato con le <A HREF="javascript:HelpPopup('actip9.hlp','defRelationship');" class="pop">relazioni</A> tra le tabelle. Una relazione funziona facendo corrispondere i dati nei campi chiave, in genere un campo con lo stesso nome per entrambe le tabelle. Nella maggior parte dei casi questa sarà la <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> di una tabella che fornisce un identificatore univoco per ogni record, che corrisponde a una voce nella <A HREF="javascript:HelpPopup('actip9.hlp','defForeignKey');" class="pop">chiave esterna</A> dell'altra tabella. Gli impiegati possono essere associati ad esempio agli ordini di cui sono responsabili creando una relazione tra la tabella Impiegati e la tabella Ordini utilizzando i campi IDImpiegato.</P>
+
+<P class=ART><IMG SRC="images/cdatlat2.bmp" ALT="ID impiegato utilizzato come chiave primaria nella tabella Impiegati e come chiave esterna nella tabella Ordini." BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#accondeterminerelationshipsfordatabases">inizio</A></P>
+
+<H2><A NAME="accondeterminerelationshipsfordatabases_3"></A>Relazione uno-a-molti</H2>
+
+<P class=T>Una relazione uno-a-molti è il tipo più comune di relazione. In una relazione uno-a-molti un record della tabella A può avere molti record corrispondenti nella tabella B, ma un record della tabella B non ha più di un record corrispondente nella tabella A.</P>
+
+<P class=ART><IMG SRC="images/cdatlat3.bmp" ALT="Un record della tabella Fornitori con più di un record correlato nella tabella Prodotti" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#accondeterminerelationshipsfordatabases">inizio</A></P>
+
+<H2><A NAME="accondeterminerelationshipsfordatabases_4"></A>Relazione molti-a-molti</H2>
+
+<P class=T>In una relazione molti-a-molti un record della tabella A può avere molti record corrispondenti nella tabella B e viceversa. Questo tipo di relazione è possibile solo definendo una terza tabella, chiamata tabella di congiunzione, la cui chiave primaria consiste almeno di due campi, vale a dire le chiavi esterne di entrambe le tabelle A e B. Una relazione molti-a-molti è in realtà composta da due relazioni uno-a-molti con una terza tabella. La tabella Ordini e la tabella Prodotti ad esempio hanno una relazione molti-a-molti definita creando due relazioni uno-a-molti per la tabella Dettagli ordini.</P>
+
+<P class=ART><IMG SRC="images/cdatlat4.bmp" ALT="Chiavi esterne nella tabella Dettagli ordini e chiavi primarie corrispondenti nelle tabelle Ordini e Prodotti" BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#accondeterminerelationshipsfordatabases">inizio</A></P>
+
+<H2><A NAME="accondeterminerelationshipsfordatabases_5"></A>Relazione uno-a-uno</H2>
+
+<P class=T>In una relazione uno-a-uno ogni record della tabella A può avere solo un record corrispondente nella tabella B e viceversa. Questo tipo di relazione non è comune, in quanto la maggior parte delle informazioni correlate viene inclusa in una tabella. È possibile utilizzare una relazione uno-a-uno per dividere una tabella con molti campi, per isolare parte di una tabella per ragioni di protezione o per memorizzare le informazioni valide solo per un sottoinsieme della tabella principale. È possibile ad esempio che si desideri creare una tabella per tenere traccia degli impiegati che prendono parte a una partita di calcio di beneficenza.</P>
+
+<P class=ART><IMG SRC="images/cdatlat5.bmp" ALT="Ogni record della tabella Impiegati può avere un solo record corrispondente nella tabella Giocatori calcio." BORDER=0></P>
+
+<P class=rtt>Torna all'<A HREF="#accondeterminerelationshipsfordatabases">inizio</A></P>
+
+<H2><A NAME="accondeterminerelationshipsfordatabases_6"></A>Definizione delle relazioni</H2>
+
+<P class=T>Per definire una relazione, aggiungere le tabelle che si desidera correlare alla finestra Relazioni, quindi trascinare il campo chiave da una tabella e rilasciarlo nel campo chiave dell'altra tabella. È anche possibile <A HREF="achowDefineRelationshipsWithoutDraggingFields.htm">definire le relazioni utilizzando la tastiera.</A></P>
+
+<P class=ART><IMG SRC="images/cdatlat6.bmp" ALT="Trascinare un campo da una tabella al campo corrispondente dell'altra tabella." BORDER=0></P>
+
+<P class=T>Il tipo di relazione creata dipende dal modo in cui vengono definiti i campi correlati.
+
+<UL>
+	<LI class=LB1>Una relazione uno-a-molti viene creata se solo uno dei campi correlati rappresenta una chiave primaria o ha un <A HREF="javascript:HelpPopup('actip9.hlp','defUniqueIndex');" class="pop">indice univoco</A>.<BR><BR></LI>
+
+	<LI class=LB1>Una relazione uno-a-uno viene creata se entrambi i campi correlati rappresentano chiavi primarie o hanno indici univoci.<BR><BR></LI>
+
+	<LI class=LB1>Una relazione molti-a-molti è in realtà composta da due relazioni uno-a-molti con una terza tabella la cui chiave primaria consiste di due campi, vale a dire le chiavi esterne delle altre due tabelle.</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni su come definire le relazioni, fare clic su <A HREF="achowDefineRelationshipsBetweenTablesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si trascina un campo che non rappresenta una chiave primaria e che non ha un indice univoco in un altro campo che anch'esso non rappresenta una chiave primaria e che non ha un indice univoco, verrà creata una relazione indeterminata. Nelle query contenenti tabelle con una relazione indeterminata verrà visualizzata una linea di congiunzione predefinita tra le tabelle, ma non verrà applicata l'<A HREF="javascript:HelpPopup('actip9.hlp','defReferentialIntegrity');" class="pop">integrità referenziale</A> e i record non saranno necessariamente univoci in entrambe le tabelle.</P>
+
+<P class=rtt>Torna all'<A HREF="#accondeterminerelationshipsfordatabases">inizio</A></P>
+
+
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo alle <A HREF="mk:@MSITStore:acadp9.chm::/html/dvconTableRelationships.htm"><U>relazioni in un progetto di Microsoft Access</U></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconDetermineRelationshipsForDatabaseSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

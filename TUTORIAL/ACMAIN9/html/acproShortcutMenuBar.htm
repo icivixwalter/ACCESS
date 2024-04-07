@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproShortcutMenuBar'
+Feature='acpro'
+Handoff='2'
+SourceFile='apromsc3.doc'
+Tnum='188086'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà ShortcutMenuBar (Barra menu scelta rapida)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acproshortcutmenubar"></A>Proprietà ShortcutMenuBar (Barra menu scelta rapida)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproShortcutMenuBarC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproShortcutMenuBarX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproShortcutMenuBarA">
+</OBJECT></P>
+
+
+
+<P class=T>La proprietà <B>ShortcutMenuBar</B> può essere utilizzata per specificare il <A HREF="javascript:HelpPopup('actip9.hlp','defShortCutMenus');" class="pop">menu di scelta rapida</A> da visualizzare quando si fa clic su una maschera, un report o un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di maschera con il pulsante destro del mouse. Per creare tali menu, scegliere <B>Barre degli strumenti</B> dal menu <B>Visualizza</B>, quindi scegliere <B>Personalizza</B>. Per ulteriori informazioni sulla creazione di barre degli strumenti personalizzate, vedere <A HREF="achowCreateCustomShortcutMenuForCurrentDatabase.htm">Creare un menu di scelta rapida personalizzato per il database corrente</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>ShortcutMenuBar</B> è valida solo per i controlli delle maschere e non dei report.</P>
+
+
+
+<P class=T>La proprietà <B>ShortcutMenuBar</B> può anche essere utilizzata per specificare la <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBarScript');" class="pop">macro per la creazione di barre dei menu</A> che consente di visualizzare un menu di scelta rapida per un foglio dati, una maschera, un controllo di maschera o un report.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Nelle versioni di Microsoft Access precedenti a Microsoft Access 97, la creazione di un menu di scelta rapida personalizzato avviene impostando la proprietà <B>ShortcutMenuBar</B> al nome di una macro per la creazione di barre dei menu; quindi viene creato un <A HREF="javascript:HelpPopup('actip9.hlp','defMacroGroup');" class="pop">gruppo di macro</A> che contiene i comandi per tale menu. Sebbene questa funzione sia ancora supportata in Microsoft Access 2000, per creare i menu di scelta rapida si consiglia di utilizzare la nuova finestra di dialogo <B>Personalizza</B>, disponibile scegliendo <B>Barre degli strumenti</B> dal menu <B>Visualizza</B>, quindi <B>Personalizza</B>.</P>
+
+
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>Immettere il nome del menu di scelta rapida che si desidera visualizzare. Un menu di scelta rapida può essere una qualsiasi <A HREF="javascript:HelpPopup('actip9.hlp','defCommandBar');" class="pop">barra dei comandi</A> la cui proprietà <B>Type</B> è impostata a Popup. Se non viene specificata un'impostazione per la proprietà <B>ShortcutMenuBar</B>, viene visualizzato il menu di scelta rapida incorporato (predefinito) oppure il <A HREF="javascript:HelpPopup('actip9.hlp','defGlobalShortcutMenu');" class="pop">menu di scelta rapida globale</A> dell'applicazione. Se la proprietà <B>ShortcutMenuBar</B> viene impostata ad un valore diverso dal nome di un menu di scelta rapida o di una macro per la creazione di barre dei menu esistente, la maschera, il controllo di maschera o il report non disporranno di un menu di scelta rapida, ossia non verrà visualizzato quello predefinito.</P>
+
+<P class=T>È possibile impostare questa proprietà utilizzando la <A HREF="achowSetFormReportControlProperties.htm">finestra delle proprietà</A> dell'oggetto, una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=T>In Visual Basic, questa proprietà viene impostata utilizzando un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> costituita dal nome del menu di scelta rapida che si desidera visualizzare.</P>
+
+<P class=T>Per visualizzare il menu di scelta rapida incorporato per un database, una maschera, un controllo di maschera o un report utilizzando una macro o Visual Basic, impostare la proprietà ad una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A> (" ").</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Per creare un menu di scelta rapida personalizzato, è necessario prima creare una <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> che comprenda tutti i comandi desiderati. Aprire quindi la finestra di dialogo <B>Proprietà barra degli strumenti</B> selezionando la barra degli strumenti nella finestra di dialogo <B>Personalizza</B> e facendo clic sul pulsante <B>Proprietà</B>. In questa finestra di dialogo<B> </B>impostare la proprietà <B>Tipo</B> a Popup. A questo punto, la barra degli strumenti sarà disponibile nella casella della proprietà <B>ShortcutMenuBar</B> della finestra delle proprietà per una maschera, un controllo di maschera o un report.</P>
+
+<P class=T>Se utilizzata con l'oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>, la proprietà <B>ShortcutMenuBar</B> consente di visualizzare un menu di scelta rapida personalizzato come menu globale. Tuttavia, se è stata impostata la proprietà <B>ShortcutMenuBar</B> per una maschera, un controllo di maschera o un report del database, viene visualizzato il menu di scelta rapida personalizzato dell'oggetto invece di quello globale del database. È possibile visualizzare un menu personalizzato differente per una specifica maschera, controllo di maschera o report impostando la relativa proprietà <B>ShortcutMenuBar</B> a un menu di scelta rapida diverso. Quando uno di questi oggetti ha lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A>, il menu di scelta rapida personalizzato viene visualizzato premendo il pulsante destro del mouse; altrimenti appare quello globale per il database.</P>
+
+<P class=T>Se la proprietà <A HREF="acproAllowShortcutMenus.htm"><B>AllowShortcutMenus</B></A> è impostata a <B>False</B> (0), i menu di scelta rapida non sono disponibili per alcun oggetto.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

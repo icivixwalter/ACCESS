@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproOleTypeX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproole2_1a.rtf'
+Tnum='187781'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà OLEType</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprooletypex"></A>Esempio di proprietà OLEType</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene illustrato come visualizzare la finestra di dialogo <B>Inserisci oggetto</B> e un messaggio di errore nel caso in cui si scelga <B>Annulla</B> nella finestra di dialogo <B>Inserisci oggetto</B>.</P>
+
+<PRE class=CT><CODE>Sub InserisciOggetto_Click()
+&nbsp;&nbsp;&nbsp; Dim conAnnullatoDaUtente As Integer
+
+&nbsp;&nbsp;&nbsp; ' Messaggio di errore restituito quando l'utente ha premuto il pulsante Annulla.
+&nbsp;&nbsp;&nbsp; conAnnullatoDaUtente = 2001
+&nbsp;&nbsp;&nbsp; On Error GoTo PulsanteErr
+&nbsp;&nbsp;&nbsp; If OLE1.<B>OLEType</B> = acOLENone Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Non è stato creato alcun oggetto OLE.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Visualizza la finestra di dialogo Inserisci oggetto.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OLE1.Action = acOLEInsertObjDlg
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Exit Sub
+
+PulsanteErr:
+&nbsp;&nbsp;&nbsp; If Err = conAnnullatoDaUtente Then ' Visualizza messaggio.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "È stato premuto il pulsante Annulla " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "e non è stato creato alcun oggetto."
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Resume Next
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

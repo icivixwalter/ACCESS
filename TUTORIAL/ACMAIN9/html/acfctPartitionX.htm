@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctPartitionX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acob2fcx_1a.rtf'
+Tnum='234505'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione Partition (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctpartitionx"></A>Esempio di funzione Partition (MDB)</B></P>
+
+
+
+<P class=T>È possibile utilizzare la funzione <B>Partition</B> nella griglia di struttura della query e in visualizzazione SQL della finestra Query. Nella griglia di struttura della query, è possibile utilizzare la funzione <B>Partition</B> in un campo calcolato o per specificare i criteri per una query di selezione.</P>
+
+<P class=T>Nell'esempio riportato di seguito si indica come utilizzare la funzione <B>Partition</B> per creare un campo calcolato che elenca il numero di record compresi in ciascun intervallo specificato. Se si dispone di una tabella Ordini contenente un campo SpeseTrasporto, nella finestra Query creare una nuova query Totali aggiungendo la tabella Ordini e facendo clic sul pulsante <B>Formule</B> della barra dei comandi della<B> </B>query. Trascinare il campo SpeseTrasporto nella prima cella <B>Campo</B> nella griglia di struttura della query e impostare a Conteggio il valore della cella <B>Formula</B>. In un'altra cella del campo immettere l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>Intervallo: <B>Partition(</B>[SpeseTrasporto], 0, 1000, 50<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Impostare a Raggruppamento la cella <B>Formula</B> sottostante il campo ed eseguire la query. La funzione <B>Partition</B> restituisce 11 intervalli, 0:99, 100:199, 200:299, e così via. La query indica il numero degli ordini con spese di trasporto compresi in ciascun intervallo.</P>
+
+<P class=T>Nell'esempio successivo si indica come utilizzare la funzione <B>Partition</B> in visualizzazione SQL della finestra Query. La funzione crea una query a campi incrociati che valuta un campo SpeseTrasporto in una tabella Ordini e calcola il numero di ordini per ciascun cliente i cui costi di trasporto sono compresi in uno dei diversi intervalli. Gli intervalli vengono definiti dagli argomenti associati alla funzione <B>Partition</B>: <I>inizio</I> = 0, <I>stop</I> = 1000, <I>intervallo</I> = 50.</P>
+
+<P class=T>Immettere l'espressione riportata di seguito in visualizzazione SQL. Quando si esegue la query, ciascun intervallo viene visualizzato come intestazione di colonna.</P>
+
+<PRE class=CT><CODE>TRANSFORM Conteggio(Ordini.[IDOrdine]) AS [ConteggioDiIDOrdine]
+SELECT Ordini.[IDCliente]
+FROM Ordini
+GROUP BY Ordini.[IDCliente]
+PIVOT <B>Partition(</B>Int([SpeseTrasporto]), 0, 1000, 50<B>)</B>;</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

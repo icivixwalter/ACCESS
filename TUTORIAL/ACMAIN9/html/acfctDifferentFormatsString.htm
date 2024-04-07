@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDifferentFormatsString'
+Feature='acfct'
+Handoff='2'
+SourceFile='acvbmsc1.doc'
+Tnum='234404'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Formati diversi per valori di stringa differenti (funzione Format)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acfctdifferentformatsstring"></A>Formati diversi per valori di stringa differenti (funzione Format)</H1>
+
+
+
+<P class=T>In Microsoft Access versioni 1.<I>x</I> e 2.0 è possibile utilizzare la funzione <B>Format</B> per restituire un valore per una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A> e un altro per un valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>. È possibile utilizzare ad esempio un'espressione di formato simile a quella riportata di seguito con la funzione <B>Format</B>, per restituire il valore di stringa appropriato del codice:</P>
+
+<PRE class=CT><CODE>Dim varX As Variant, varStrX As Variant
+' Assegna un valore a varStrX e passa alla funzione Format.
+varX = Format(varStrX, "@;ZLS;Null")</CODE></PRE>
+
+
+
+<P class=T>In Microsoft Access 97 e in Microsoft Access 2000 è necessario verificare il caso <B>Null</B> separatamente, quindi restituire il valore appropriato in base al risultato. È possibile utilizzare ad esempio la funzione <B>IIf</B> in un'espressione con la funzione <B>Format</B> come riportato di seguito:</P>
+
+<PRE class=CT><CODE>varX = IIf(IsNull(varStrX),"Null", Format(varStrX, "@;ZLS"))</CODE></PRE>
+
+
+
+<P class=T>Questa modifica viene applicata solo quando si utilizza la funzione <B>Format</B> per formattare una stringa, a seconda che si tratti di una stringa a lunghezza zero o di un valore <B>Null</B>. Le altre espressioni di formato utilizzate con la funzione <B>Format</B> continuano a funzionare come nelle versioni precedenti.</P>
+
+<P class=T>Se si converte un database da Microsoft Access versione 1.<I>x</I> o 2.0 in Microsoft Access 2000, sarà necessario modificare il codice per verificare separatamente il caso <B>Null</B>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

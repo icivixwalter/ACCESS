@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproDestConnectStrX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproqry2.doc'
+Tnum='187172'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà DestConnectStr, DestinationDB, DestinationTable</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprodestconnectstrx"></A>Esempio di proprietà DestConnectStr, DestinationDB, DestinationTable</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito i record contenuti nella tabella Clienti vengono accodati alla tabella Clienti di un database Microsoft Access chiamato Clienti nella directory C:\Dati. Tale istruzione SQL viene immessa in visualizzazione SQL della finestra di query.</P>
+
+<PRE class=CT><CODE>INSERT INTO Clienti IN 'C:\Dati\Clienti.mdb'
+SELECT Clienti.[NomeSocietà], Clienti.Telefono
+FROM Clienti;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo viene creata una nuova tabella chiamata Contatti in un database di Paradox versione 3.<I>x</I> nella directory C:\DatiParadox.</P>
+
+<PRE class=CT><CODE>SELECT Clienti.NomeSocietà, Clienti.Telefono
+INTO Contatti IN 'C:\Datiparadox' [Paradox 3.x;] FROM Clienti;</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

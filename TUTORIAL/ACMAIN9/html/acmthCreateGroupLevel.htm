@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateGroupLevel'
+Feature='acmth'
+Handoff='1'
+SourceFile='wizards_1a.rtf'
+Tnum='186373'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo CreateGroupLevel</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproGroupLevel">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproGroupHeaderFooter">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproGroupOn">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproGroupInterval">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproKeepTogetherGroups">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthcreategrouplevel"></A>Metodo CreateGroupLevel</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateGroupLevelC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCreateGroupLevelX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare il metodo <B>CreateGroupLevel</B> per specificare un campo o un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> in cui raggruppare o ordinare i dati di un report.</P>
+
+<P class=T>Si supponga, ad esempio, di strutturare una Creazione guidata personalizzata che offra all'utente una scelta di campi in cui raggruppare i dati quando si progetta un report. Richiamare il metodo <B>CreateGroupLevel</B> dalla Creazione guidata per creare gli appositi gruppi secondo la scelta dell'utente.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>CreateGroupLevel(</B><I>report</I>, <I>espressione</I>, <I>intestazione</I>, <I>piè di pagina</I><B>)</B></P>
+
+
+
+<P class=T>Il metodo <B>CreateGroupLevel</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=22%>Argomento</TH>
+<TH width=78%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>report</I></TD>
+<TD class=TT width=78%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che identifica il nome del report contenente il nuovo livello di gruppo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>espressione</I></TD>
+<TD class=TT width=78%>Espressione stringa che identifica il campo o l'espressione da riordinare o raggruppare.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><I>intestazione</I>, <I>piè di pagina</I></TD>
+<TD class=TT width=78%>Valore <A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>Intero</B></A> che indica se un campo o un'espressione avranno un'<A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportGroupHeaderSectionQ');" class="pop">intestazione</A> e/o un <A HREF="javascript:HelpPopup('actip9.hlp','acrgnReportGroupFooterSectionQ');" class="pop">piè di pagina di gruppo</A> associati. Se l'argomento <I>intestazione</I> o <I>piè di pagina</I> è <B>True</B> (-1), il campo o l'espressione avranno un'intestazione o un piè di pagina di gruppo. Se l'argomento <I>intestazione</I> o <I>piè di pagina</I> è <B>False</B> (0), il campo o l'espressione non avranno intestazione o piè di pagina. È possibile creare sia l'intestazione che il piè di pagina impostando entrambi gli argomenti a <B>True</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Utilizzare il metodo <B>CreateGroupLevel</B> quando si progetta una Creazione guidata che crea un report contenente gruppi o totali. Il metodo <B>CreateGroupLevel</B> raggruppa o ordina i dati contenuti nel campo o nell'espressione specificati e crea un'intestazione e/o un piè di pagina per il livello di gruppo.</P>
+
+<P class=T>Il metodo <B>CreateGroupLevel</B> è disponibile solo nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewReport');" class="pop">visualizzazione Struttura report</A>.</P>
+
+<P class=T>Per tenere traccia dei livelli di gruppo creati per un report, Microsoft Access utilizza la <A HREF="javascript:HelpPopup('actip9.hlp','defArray');" class="pop">matrice</A> della proprietà <A HREF="JavaScript:hhobj_3.Click()"><B>GroupLevel</B></A>. Il metodo <B>CreateGroupLevel</B> aggiunge alla matrice un nuovo livello di gruppo in base all'argomento <I>espressione</I>. Il metodo <B>CreateGroupLevel</B> restituisce quindi un valore di indice che rappresenta la posizione del nuovo livello di gruppo nella matrice. Il primo campo o la prima espressione ordinata o raggruppata corrisponde al livello zero, il secondo campo o la seconda espressione al livello uno e così via. È possibile avere fino a dieci livelli di gruppo in un report (da zero a nove).</P>
+
+<P class=T>Quando si specifica che l'argomento <I>intestazione</I> o <I>piè di pagina</I> o entrambi corrispondono a <B>True</B>, le proprietà <A HREF="JavaScript:hhobj_4.Click()"><B>GroupHeader</B> e <B>GroupFooter</B></A> di un report vengono impostate a Sì e si crea un'intestazione e/o un piè di pagina per il livello di gruppo.</P>
+
+<P class=T>Una volta creati un'intestazione o un piè di pagina, è possibile impostare altre proprietà GroupLevel: <A HREF="JavaScript:hhobj_5.Click()"><B>GroupOn</B></A>, <A HREF="JavaScript:hhobj_6.Click()"><B>GroupInterval</B></A> e <A HREF="JavaScript:hhobj_7.Click()"><B>KeepTogether</B></A>. È possibile impostare tali proprietà in Visual Basic o nella casella <B>Ordinamento e raggruppamento</B>, disponibile facendo clic su <B>Ordinamento e raggruppamento</B>  <A HREF="javascript:HelpPopup('actip9.hlp','actbrSortingAndGroupingQ');" class="pop"><IMG SRC="images/sortgrp.bmp" BORDER=0></A>  sulla <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> <B>Struttura report</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se la Creazione guidata crea livelli di gruppo in un report nuovo o esistente, è necessario che apra il report in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

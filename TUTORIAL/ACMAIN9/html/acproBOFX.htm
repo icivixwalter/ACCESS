@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproBOFX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234337'
+Piece='1039'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà BOF e EOF (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprobofx"></A>Esempio di proprietà BOF e EOF (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la proprietà <B>EOF</B> di un oggetto <B>Recordset</B> per spostare il puntatore del record corrente dopo l'ultimo record nell'oggetto <B>Recordset</B>, quindi si utilizza la proprietà <B>BOF</B> per spostare il puntatore del record corrente prima del primo record nell'oggetto <B>Recordset</B>.</P>
+
+<PRE class=CT><CODE>Sub DelimitazioniDelFile()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Apre il recordset sulla tabella Ordini.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset("Ordini")
+&nbsp;&nbsp;&nbsp; ' Esegue fino alla fine del file.
+&nbsp;&nbsp;&nbsp; Do Until rst.<B>EOF</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Si sposta al record successivo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.MoveNext
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp; Loop
+&nbsp;&nbsp;&nbsp; ' Si sposta all'ultimo record per impostare un record corrente.
+&nbsp;&nbsp;&nbsp; rst.MoveLast
+&nbsp;&nbsp;&nbsp; ' Esegue fino all'inizio del file.
+&nbsp;&nbsp;&nbsp; Do Until rst.<B>BOF</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.MovePrevious
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+&nbsp;&nbsp;&nbsp; Loop
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

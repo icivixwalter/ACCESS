@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRecordsetX'
+Feature='acpro'
+Handoff='2'
+SourceFile='acproV9.doc'
+Tnum='252734'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Recordset</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorecordsetx"></A>Esempio di proprietà Recordset</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>Recordset</B> viene utilizzata per creare una nuova copia dell'oggetto <B>Recordset</B> dalla maschera corrente e per stampare i nomi dei campi della finestra Debug.</P>
+
+<PRE class=CT><CODE>Sub Print_Field_Names()
+  Dim rst As DAO.Recordset, intI As Integer
+  Dim fld As Field
+
+  Set rst = Me.Recordset
+  For Each fld in rst.Fields
+    ' Stampa nomi campo.
+    Debug.Print fld.Name
+  Next
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito la proprietà <B>Recordset</B> e l'oggetto <B>Recordset</B> vengono utilizzati per sincronizzare il record di un set di record con il record corrente della maschera. Quando si seleziona il nome di una società in una casella combinata, per individuare il record di quella società viene utilizzato il metodo <B>FindFirst</B>. Questa operazione consente la visualizzazione del record trovato.</P>
+
+<PRE class=CT><CODE>Sub IDFornitore_AfterUpdate()
+  Dim rst As DAO.Recordset
+  Dim strNomeRicerca As String
+
+  Set rst = Me.Recordset
+  strNomeRicerca = Str(Me!IDFornitore)
+  rst.FindFirst "IDFornitore = " &amp; strNomeRicerca
+    If rst.NoMatch Then
+      MsgBox "Record non trovato"
+    End If
+  rst.Close
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Il codice riportato di seguito consente di determinare il tipo di set di record restituito dalla proprietà <B>Recordset</B> in diverse situazioni.</P>
+
+<PRE class=CT><CODE>Sub CheckRSType()
+&nbsp;&nbsp;&nbsp; Dim rs as Object
+
+&nbsp;&nbsp;&nbsp; Set rs=Forms(0).<B>Recordset</B>
+&nbsp;&nbsp;&nbsp; If TypeOf rs Is DAO.Recordset Then
+  MsgBox "Recordset DAO"
+&nbsp;&nbsp;&nbsp; ElseIf TypeOf rs is ADODB.Recordset Then
+  MsgBox "Recordset ADO"
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

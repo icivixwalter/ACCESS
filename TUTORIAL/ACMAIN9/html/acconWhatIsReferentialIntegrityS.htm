@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWhatIsReferentialIntegrityS'
+Feature='Tables: Relationships'
+Handoff='2'
+SourceFile='ctblnew_1.rtf'
+Tnum='187538'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Integrità referenziale</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwhatisreferentialintegritys"></A>Integrità referenziale</H1>
+
+<P class=T>L'integrità referenziale è un sistema di regole utilizzate per assicurare che le relazioni tra i record delle tabelle correlate siano valide e che non vengano eliminati o modificati per errore i dati correlati. È possibile impostare l'integrità referenziale quando vengono soddisfatte tutte le seguenti condizioni:
+
+<UL>
+	<LI class=LB1>Il campo corrispondente della <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryTable');" class="pop">tabella primaria</A> è una <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> o dispone di un <A HREF="javascript:HelpPopup('actip9.hlp','defUniqueIndex');" class="pop">indice univoco</A>.<BR><BR></LI>
+
+	<LI class=LB1>I campi correlati contengono lo stesso tipo di dati con due eccezioni: un campo Contatore può essere correlato a un campo Numerico la cui proprietà <B>Dimensione campo</B> sia impostata a <B>Intero lungo</B> e un campo Contatore la cui proprietà <B>Dimensione campo</B> sia impostata a <B>ID replica</B> può essere correlato a un campo Numerico la cui proprietà <B>Dimensione campo</B> sia anch'essa impostata a <B>ID replica</B>.<BR><BR></LI>
+
+	<LI class=LB1>Entrambe le tabelle appartengono allo stesso database di Microsoft Access. Se si tratta di <A HREF="javascript:HelpPopup('actip9.hlp','defAttachedTable');" class="pop">tabelle collegate</A>, per impostare l'integrità referenziale è necessario che le tabelle siano state create in Microsoft Access e che il database in cui sono memorizzate sia aperto. Non è possibile applicare l'integrità referenziale a tabelle correlate di database in altri formati.</LI>
+</UL>
+
+<P class=T>Quando viene applicata l'integrità referenziale, è necessario osservare le seguenti regole:
+
+<UL>
+	<LI class=LB1>Non è possibile immettere un valore nel campo <A HREF="javascript:HelpPopup('actip9.hlp','defForeignKey');" class="pop">chiave esterna</A> della tabella correlata che non esiste nella chiave primaria della tabella primaria. È possibile, comunque, immettere un valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A> nella chiave esterna, specificando che i record non sono correlati. Un ordine ad esempio non può essere assegnato a un cliente che non esiste, ma può essere assegnato a un cliente indefinito immettendo un valore <B>Null</B> nel campo ID cliente.<BR><BR></LI>
+
+	<LI class=LB1>Non è possibile eliminare un record da una tabella primaria, se esistono record corrispondenti in una tabella correlata. Non è possibile ad esempio eliminare un record relativo a un impiegato della tabella Impiegati se ci sono ordini assegnati a quell'impiegato nella tabella Ordini.<BR><BR></LI>
+
+	<LI class=LB1>Non è possibile modificare un valore chiave primaria nella tabella primaria, se quel record dispone di record correlati. Non è possibile ad esempio modificare un ID di un impiegato nella tabella Impiegati se ci sono ordini assegnati a quell'impiegato nella tabella Ordini.</LI>
+</UL>
+
+<P class=T>Se si desidera che queste regole vengano applicate a una relazione, selezionare la casella di controllo <B>Applica integrità referenziale</B> quando si crea la relazione. Se l'integrità referenziale viene applicata e non viene rispettata una delle regole per le tabelle correlate, verrà visualizzato un messaggio e non verrà consentita la modifica.</P>
+
+<P class=T>È possibile ignorare le restrizioni sull'eliminazione o sulla modifica dei record correlati, pur mantenendo l'integrità referenziale, selezionando le caselle di controllo <B>Aggiorna campi correlati a catena</B> ed <B>Elimina record correlati a catena</B>. Quando è selezionata la casella di controllo <B>Aggiorna campi correlati a catena</B>, modificando un valore chiave primaria nella tabella primaria, verrà automaticamente aggiornato il valore corrispondente in tutti i record correlati. Quando è selezionata la casella di controllo <B>Elimina record correlati a catena</B>, eliminando un record nella tabella primaria, verranno eliminati tutti i record correlati nella tabella correlata. Per ulteriori informazioni sulle caselle di controllo <B>Elimina record correlati a catena</B> e <B>Aggiorna campi correlati a catena</B>, fare clic su <A HREF="acconWhatIsCascadingUpdateS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per informazioni su come modificare una relazione esistente e impostare l'integrità referenziale, fare clic su <A HREF="achowEditExistingRelationshipS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per informazioni su come definire una nuova relazione, fare clic su <A HREF="achowDefineRelationshipsBetweenTablesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWhatIsReferentialIntegritySW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

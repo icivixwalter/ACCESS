@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthBuildCriteriaX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv3_1a.rtf'
+Tnum='186546'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo BuildCriteria</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthbuildcriteriax"></A>Esempio di metodo BuildCriteria</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene richiesto di immettere le prime lettere del nome di un prodotto e di utilizzare quindi il metodo <B>BuildCriteria</B> per costruire una stringa di criteri in base all'input dell'utente. La routine fornisce, quindi, tale stringa come argomento alla proprietà <B>Filter</B> di una maschera Prodotti. Si imposta, infine, la proprietà <B>FilterOn</B> per applicare il filtro.</P>
+
+<PRE class=CT><CODE>Sub ImpostaFiltro()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, strMsg As String
+&nbsp;&nbsp;&nbsp; Dim strInput As String, strFilter As String
+
+&nbsp;&nbsp;&nbsp; ' Apre la maschera Prodotti in visualizzazione Maschera.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenForm "Prodotti"
+&nbsp;&nbsp;&nbsp; ' Restituisce la variabile di oggetto Form che punta alla maschera Prodotti.
+&nbsp;&nbsp;&nbsp; Set frm = Forms!Prodotti
+&nbsp;&nbsp;&nbsp; strMsg = "Immettere una o più lettere del nome del prodotto " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "seguite da un asterisco."
+&nbsp;&nbsp;&nbsp; ' Richiede input ad utente.
+&nbsp;&nbsp;&nbsp; strInput = InputBox(strMsg)
+&nbsp;&nbsp;&nbsp; ' Costruisce la stringa di criteri.
+&nbsp;&nbsp;&nbsp; strFilter = <B>BuildCriteria(</B>"NomeProdotto", dbText, strInput<B>)</B>
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà Filter per applicare il filtro.
+&nbsp;&nbsp;&nbsp; frm.Filter = strFilter
+&nbsp;&nbsp;&nbsp; ' Imposta la proprietà FilterOn; la maschera visualizza ora i record filtrati.
+&nbsp;&nbsp;&nbsp; frm.FilterOn = True
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

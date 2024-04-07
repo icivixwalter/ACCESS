@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconExamplesSimpleExpressionsTheirCombinationsOptS'
+Feature='Queries: Optimize'
+Handoff='1'
+SourceFile='CQRYOPT.RTF'
+Tnum='188143'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di espressioni ottimizzabili semplici</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconexamplessimpleexpressionstheircombinationsopts"></A>Esempi di espressioni ottimizzabili semplici</H1>
+
+<P class=T>Se sono stati creati degli indici per i campi Cognome, Età e DataAssunzione nella tabella Impiegati, le espressioni seguenti sono espressioni ottimizzabili semplici:
+
+<UL>
+	<LI class=LB1><CODE>[Cognome]="Rossi"</CODE><BR><BR></LI>
+
+	<LI class=LB1><CODE>[Età]&gt;=21</CODE><BR><BR></LI>
+
+	<LI class=LB1><CODE>#30/12/90#&lt;[DataAssunzione]</CODE><BR><BR></LI>
+
+	<LI class=LB1><CODE>Impiegati.[Cognome]=Clienti.[Cognome]</CODE><BR><BR></LI>
+
+	<LI class=LB1><CODE>[Cognome] In ("Rossi", "Bianchi", "Verdi")</CODE><BR><BR></LI>
+
+	<LI class=LB1><CODE>[Età] Between 18 And 65</CODE></LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconExamplesSimpleExpressionsTheirCombinationsOptSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

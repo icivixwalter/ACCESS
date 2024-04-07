@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconGetMoreInformationToDecideWhetherToUseStaticOrDynamicHTMLFormat'
+Feature='Web'
+Handoff='3'
+SourceFile='ctbliel.rtf'
+Tnum='189137'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Elaborazione sul server Web del formato HTML generato da server</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="accongetmoreinformationtodecidewhethertousestaticordynamichtmlformat"></A>Elaborazione sul server Web del formato HTML generato da server</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=T><A HREF="#accongetmoreinformationtodecidewhethertousestaticordynamichtmlformat_1">Elaborazione dei file IDC/HTX sul server Web</A></P>
+
+<P class=T><A HREF="#accongetmoreinformationtodecidewhethertousestaticordynamichtmlformat_2">Elaborazione dei file ASP sul server Web</A></P>
+
+<H2><A NAME="accongetmoreinformationtodecidewhethertousestaticordynamichtmlformat_1"></A>Elaborazione dei file IDC/HTX sul server Web</H2>
+
+<P class=T>Quando si invia l'output di una tabella, di una query o di una maschera in formato <A HREF="javascript:HelpPopup('actip9.hlp','defIDCHTXfiles');" class="pop">file IDC/HTX</A>, anziché come file html, vengono creati un file con estensione HTML (htx) e un file Internet Database Connector (idc). Internet Database Connector (httpodbc.dll) è un componente di Microsoft Internet Information Server.</P>
+
+<P class=T>Il file idc contiene una query sotto forma di istruzione SQL e le informazioni che Microsoft Internet Information Server utilizza per connettersi a un'<A HREF="javascript:HelpPopup('actip9.hlp','defODBCDataSource');" class="pop">origine dati ODBC</A>, in questo caso un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> o di Microsoft SQL server. Le informazioni relative alla connessione comprendono il nome dell'origine dati e spesso il nome utente e la password, entrambi facoltativi.</P>
+
+<P class=T>Il file htx è un file HTML che contiene i tag e le istruzioni per la formattazione e, anziché i dati, dei segnaposti che indicano dove inserire i valori restituiti dalla query nel file idc.</P>
+
+<P class=T>Dopo la <A HREF="achowPublishServergeneratedHTMLFilesToWebServer.htm">pubblicazione dei file IDC/HTX su un server Web</A>, su richiesta del <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefBrowser');" class="pop">browser</A> Web, Microsoft Internet Information Server apre il database utilizzando il driver ODBC appropriato e le informazioni sulla connessione del file idc, esegue la query nel file idc per accedere ai dati, unisce i risultati e il file htx in un unico file html e infine invia di nuovo il file html creato dinamicamente al browser Web per visualizzare una pagina Web.</P>
+
+<P class=rtt>Torna all'<A HREF="#accongetmoreinformationtodecidewhethertousestaticordynamichtmlformat">inizio</A></P>
+
+<H2><A NAME="accongetmoreinformationtodecidewhethertousestaticordynamichtmlformat_2"></A>Elaborazione dei file ASP sul server Web</H2>
+
+<P class=T>Quando si invia l'output di una tabella, di una query o di una maschera in formato <A HREF="javascript:HelpPopup('actip9.hlp','defASPFiles');" class="pop">file ASP</A>, anziché come file html, viene creato un file Microsoft Active Server Page (asp). Active Server è un componente di Microsoft Internet Information Server 3.0 o versioni successive.</P>
+
+<P class=T>Il file asp contiene tag HTML inframmezzati da una o più query sotto forma di istruzioni SQL, direttive di modelli e codice Visual Basic Script con riferimenti ai controlli ActiveX Server. Il file asp inoltre contiene informazioni sulla connessione ODBC per connettersi a un'origine dati ODBC, in questo caso un database di Microsoft Access o di Microsoft SQL Server. Le informazioni relative alla connessione comprendono il nome dell'origine dati e spesso il nome utente e la password, entrambi facoltativi.</P>
+
+<P class=T>Dopo la <A HREF="achowPublishServergeneratedHTMLFilesToWebServer.htm">pubblicazione dei file ASP su un server Web</A>, su richiesta del browser Web, Microsoft Internet Information Server esegue il codice Visual Basic Scripting, chiama i controlli ActiveX Server, apre il database utilizzando il driver ODBC appropriato e le informazioni sulla connessione del file asp, esegue le query nel file asp per accedere ai dati, unisce i risultati e i tag HTML contenuti nel file asp in un unico file html e infine invia di nuovo il file html creato dinamicamente al browser Web per visualizzarlo come pagina Web.</P>
+
+<P class=rtt>Torna all'<A HREF="#accongetmoreinformationtodecidewhethertousestaticordynamichtmlformat">inizio</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconGetMoreInformationToDecideWhetherToUseStaticOrDynamicHTMLFormatW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

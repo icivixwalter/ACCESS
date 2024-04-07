@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acidxFilterEvents'
+Feature='acidx'
+Handoff='2'
+SourceFile='aidxlan_1a.doc'
+Tnum='187234'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi di filtro</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acidxfilterevents"></A>Eventi di filtro</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxFilterEventsC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxFilterEventsX">
+</OBJECT></P>
+
+
+
+<P class=T>Gli eventi di filtro si verificano quando si applica o si crea un filtro in una maschera.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=22%>Evento</TH>
+<TH width=28%>Proprietà di evento</TH>
+<TH width=50%>Quando si verifica</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtApplyFilter.htm">ApplicazioneFiltro</A></TD>
+<TD class=LMC width=28%><A HREF="acproEventProperties.htm"><B>OnApplyFilter</B></A> (maschere)</TD>
+<TD class=LMC width=50%>Quando si sceglie <B>Applica filtro</B> dal menu <B>Record</B> o si fa clic sul pulsante <B>Applica filtro</B> o <B>Applica filtro su server</B> sulla barra dei comandi. Viene applicato il filtro creato più recentemente tramite la funzionalità Filtro in base a maschera, la funzionalità Filtro su server in base a maschera o la finestra Ordinamento/filtro avanzato.
+<P class=LMC>Quando si sceglie <B>Filtro in base a selezione</B> o <B>Filtro su server in base a maschera</B> dopo aver scelto <B>Filtro</B> dal menu <B>Record</B> oppure si fa clic sul pulsante <B>Filtro in base a selezione</B> sulla barra dei comandi. Viene applicato un filtro basato sulla selezione corrente della maschera.</P>
+
+<P class=LMC>Quando si sceglie <B>Rimuovi filtro/ordina</B> dal menu <B>Record</B> o si fa clic sul pulsante <B>Rimuovi filtro</B> sulla barra dei comandi. Rimuove qualsiasi filtro o ordinamento attualmente applicato alla maschera.</P>
+
+<P class=LMC>Quando si chiude la finestra Ordinamento/filtro avanzato o la finestra Filtro in base a maschera.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtFilter.htm">Filtro</A></TD>
+<TD class=LMC width=28%><A HREF="acproEventProperties.htm"><B>OnFilter</B></A> (maschere)</TD>
+<TD class=LMC width=50%>Quando si sceglie <B>Filtro in base a maschera</B> o <B>Filtro su server in base a maschera</B> dopo aver scelto <B>Filtro</B> dal menu <B>Record</B> o si fa clic sul pulsante <B>Filtro in base a maschera</B> o <B>Filtro su server in base a maschera</B> sulla barra dei comandi. Viene visualizzata la finestra Filtro in base a maschera, in cui è possibile creare rapidamente un filtro basato sui campi della maschera.
+<P class=LMC>Quando si sceglie <B>Ordinamento/filtro avanzato</B> dopo aver scelto <B>Filtro</B> dal menu <B>Record</B>. Viene visualizzata la finestra Ordinamento/filtro avanzato, in cui è possibile creare filtri complessi per la maschera.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

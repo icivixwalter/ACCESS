@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDVar'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187197'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzioni DVar, DVarP</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daidxAggregateFunctions">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlVarP">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthUpdate">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acfctdvar"></A>Funzioni DVar, DVarP</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDVarC;dasqlDVarP">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDVarX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare le funzioni <B>DVar</B> e <B>DVarP</B> per stimare la varianza relativa a un set di valori di un determinato set di record, un <A HREF="javascript:HelpPopup('actip9.hlp','defDomain');" class="pop">dominio</A>. Utilizzare le funzioni <B>DVar</B> e <B>DVarP</B> in Visual Basic, in una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>, in una espressione nella query o in un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> in una maschera o in un report.</P>
+
+<P class=T>Utilizzare la funzione <B>DVarP</B> per valutare la varianza in una popolazione intera e la funzione <B>DVar</B> per valutare la varianza in un campione di popolazione.</P>
+
+<P class=T>È possibile ad esempio utilizzare la funzione <B>DVar</B> per calcolare la varianza relativa a un set di votazioni riportate da studenti nei compiti in classe.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><B>DVar(</B><I>espr</I>, <I>dominio</I>[, <I>criteri</I>]<B>)</B></P>
+
+<P class=SYN><B>DVarP(</B><I>espr</I>, <I>dominio</I>[, <I>criteri</I>]<B>)</B></P>
+
+
+
+<P class=T>Le funzioni <B>DVar</B> e <B>DVarP</B> dispongono degli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;<I>espr</I></TD>
+<TD class=TT width=75%>Un'espressione che identifica il campo numerico in cui si desidera trovare la varianza. È possibile che si tratti di un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che identifica un campo in una tabella o in una query oppure un'espressione che esegue <A HREF="achowFieldCalcDomain.htm">un calcolo dei campi</A>. In <I>espr</I> è possibile includere il nome di un campo in una tabella, un controllo in una maschera, una costante o una funzione. Se <I>espr</I> include una funzione, è possibile che sia incorporata o definita dall'utente, ma non è possibile che si tratti di un'altra funzione di aggregazione sui domini o di <A HREF="JavaScript:hhobj_3.Click()">aggregazione SQL</A>. I campi inclusi in <I>espr</I> devono essere di tipo numerico.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>dominio</I></TD>
+<TD class=TT width=75%>Un'espressione stringa che identifica il set di record che costituisce il dominio. È possibile che sia un nome di tabella o di query.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>criteri</I></TD>
+<TD class=TT width=75%>Una stringa opzionale utilizzata per limitare l'intervallo di dati sui cui viene eseguita la funzione <B>DVar</B> o <B>DVarP</B>. L'argomento <I>criteri</I> ad esempio equivale spesso alla proposizione WHERE priva della parola WHERE in un'espressione SQL. Se si omette l'argomento <I>criteri</I>, le funzioni <B>DVar</B> e <B>DVarP</B> valutano <I>espr</I> confrontandolo con l'intero dominio. È necessario che qualsiasi campo incluso in <I>criteri</I> appartenga anche all'argomento <I>dominio</I>. In caso contrario, la funzione <B>DVar</B> o <B>DVarP</B> restituisce il valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Se <I>dominio</I> fa riferimento a meno di due record o se meno di due record soddisfano <I>criteri</I>, le funzioni <B>DVar</B> e <B>DVarP</B> restituiscono un valore <B>Null</B>, indicando che non è possibile calcolare una varianza.</P>
+
+<P class=T>Sia che la funzione <B>DVar</B> o <B>DVarP</B> venga utilizzata in una macro, in un modulo, in un'espressione nella query o in un controllo calcolato, è necessario creare l'argomento <I>criteri</I> con attenzione per assicurarsi che venga valutato correttamente.</P>
+
+<P class=T>È possibile utilizzare le funzioni <B>DVar</B> e <B>DVarP</B> per specificare i criteri nella riga <B>Criteri</B> di una query di selezione, in un'espressione di campo calcolato di una query o nella riga <B>Aggiorna a</B> di una query di aggiornamento.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile utilizzare le funzioni <B>DVar</B> e <B>DVarP</B> o le funzioni <A HREF="JavaScript:hhobj_4.Click()"><B>Var</B> e <B>VarP</B></A> in un'espressione di campo calcolato di una <A HREF="javascript:HelpPopup('actip9.hlp','defTotalsQuery');" class="pop">query di totalizzazione</A>. Se si utilizzala funzione <B>DVar</B> o <B>DVarP</B>, i valori vengono calcolati prima del raggruppamento dei dati. Se si utilizza la funzione <B>Var</B> o <B>VarP</B>, i dati vengono raggruppati prima che vengano valutati i valori contenuti nell'espressione di campo.</P>
+
+
+
+<P class=T>Utilizzare le funzioni <B>DVar</B> e <B>DVarP</B> in un controllo calcolato quando si rende necessario l'argomento <I>criteri</I> per limitare l'intervallo di dati in cui viene eseguita la funzione. Per visualizzare ad esempio una varianza per gli ordini da inoltrare in California, impostare la proprietà <A HREF="acproControlSource.htm"><B>Origine controllo</B></A> di una casella di testo alla seguente espressione:</P>
+
+<PRE class=CT><CODE>=DVar("[SpeseTrasporto]", "Ordini", "[ZonaDestinatario] = 'CA'")</CODE></PRE>
+
+
+
+<P class=T>Se si desidera semplicemente trovare la deviazione standard in tutti i record contenuti in <I>dominio</I>, utilizzare la funzione <B>Var</B> o <B>VarP</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Le modifiche ai record che non vengono salvate in <I>dominio</I> non vengono incluse quando si utilizzano queste funzioni. Se si desidera che la funzione <B>DVar</B> o <B>DVarP</B> sia basata sui valori modificati, è necessario prima salvare le modifiche scegliendo il comando <B>Salva record</B> dal menu <B>File</B>, spostando lo stato attivo su un altro record oppure utilizzando il metodo <A HREF="JavaScript:hhobj_5.Click()"><B>Update</B></A>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

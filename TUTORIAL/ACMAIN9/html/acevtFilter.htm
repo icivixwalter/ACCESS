@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtFilter'
+Feature='acevt'
+Handoff='2'
+SourceFile='aevtv3.doc'
+Tnum='187230'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Filtro</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acevtfilter"></A>Evento Filtro</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtFilterC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtFilterX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Macro">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtFilterMO">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Routine evento">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtFilterEP">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acevtFilterA">
+</OBJECT></P>
+
+
+
+<P class=T>L'evento Filtro può verificarsi in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (adp) o in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (mdb).</P>
+
+<P class=T>In un database di Access l'evento Filtro si verifica quando si effettua una delle seguenti operazioni:
+
+<UL>
+	<LI class=LB1>In <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> si sceglie <B>Filtro</B> dal menu <B>Record</B>, quindi <B>Filtro in base a maschera</B> oppure si fa clic su <B>Filtro in base a maschera</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrQuickFilterQ');" class="pop"><IMG SRC="images/filtform.bmp" BORDER=0></A> sulla <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A>. Ciò consente di aprire la finestra <A HREF="javascript:HelpPopup('actip9.hlp','acrgnFilterByFormWindowQ');" class="pop">Filtro in base a maschera</A> che permette di creare un <A HREF="javascript:HelpPopup('actip9.hlp','defFilter');" class="pop">filtro</A> in base ai campi nella <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A>.<BR><BR></LI>
+
+	<LI class=LB1>In visualizzazione Maschera si sceglie <B>Filtro</B> dal menu <B>Record</B>, quindi <B>Ordinamento/filtro avanzato</B>. Ciò consente di aprire la finestra <A HREF="javascript:HelpPopup('actip9.hlp','defAdvancedFilterSort');" class="pop">Ordinamento/filtro avanzato</A> che permette di creare filtri complessi per la maschera.<BR><BR></LI>
+
+	<LI class=LB1>Si sceglie <B>Ordinamento/filtro avanzato</B> dal menu <B>Filtro</B> quando la finestra Filtro in base a maschera è aperta oppure <B>Filtro in base a maschera</B> dal menu <B>Filtro</B> quando la finestra Ordinamento/filtro avanzato è aperta. Tale operazione provoca l'esecuzione dell'evento <A HREF="acevtApplyFilter.htm">ApplicazioneFiltro</A> quando viene chiusa la finestra di filtro aperta e l'esecuzione dell'evento Filtro quando viene aperta l'altra finestra del filtro.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>In un progetto di Access un evento Filtro si verifica quando si effettua una delle seguenti operazioni:
+
+<UL>
+	<LI class=LB1>In visualizzazione Maschera si sceglie <B>Filtro</B> dal menu <B>Record</B>, quindi <B>Filtro in base a maschera</B> oppure si fa clic su <B>Filtro in base a maschera</B> <IMG SRC="images/filtform.bmp"  BORDER=0> sulla barra degli strumenti. In questo modo viene aperta la finestra Filtro in base a maschera in cui è possibile creare un <U>filtro</U> basato sui campi della <U>maschera</U>.<BR><BR></LI>
+
+	<LI class=LB1>In visualizzazione Maschera si sceglie <B>Filtro</B> dal menu <B>Record</B>, quindi si fa clic su <B>Filtro su server in base a maschera</B> <U><IMG SRC="images/servfilt.bmp"  BORDER=0></U> sulla barra degli strumenti. In questo modo viene aperta la finestra <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefServerFilterByForm');" class="pop">Filtro su server in base a maschera</A> in cui è possibile creare velocemente un filtro su server basato sui campi della maschera.<BR><BR></LI>
+
+	<LI class=LB1>La finestra <B>Ordinamento/filtro avanzato</B> non è disponibile per i progetti di Access.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Per eseguire una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> quando si verifica questo evento, impostare la proprietà <A HREF="acproEventProperties.htm"><B>Su filtro</B></A> al nome della macro o su [Routine Evento].</P>
+
+<P class=T>L'evento Filtro può essere utilizzato per:
+
+<UL>
+	<LI class=LB1>Rimuovere i precedenti filtri per la maschera. Per fare ciò, impostare la proprietà <A HREF="acproFilter.htm"><B>Filtro</B></A> o <A HREF="acproServerFilter.htm"><B>Filtro su server</B></A> della maschera a una <A HREF="javascript:HelpPopup('actip9.hlp','defZeroLengthString');" class="pop">stringa a lunghezza zero</A> (" ") nella macro Filtro o nella routine evento. Ciò risulta particolarmente utile per accertarsi che il nuovo filtro non contenga criteri estranei. Quando ad esempio si utilizza la funzione <A HREF="javascript:HelpPopup('actip9.hlp','defFilterBySelection');" class="pop">Filtro in base a selezione</A>, il criterio utilizzato (il testo selezionato nella maschera) viene aggiunto all'espressione della proposizione <A HREF="javascript:HelpPopup('actip9.hlp','defWHEREClause');" class="pop">WHERE</A> della proprietà <B>Filtro</B> o <B>Filtro su server</B> e visualizzato nelle finestre Filtro in base a maschera e Ordinamento/filtro avanzato. È possibile rimuovere i vecchi criteri tramite l'evento Filtro.<BR><BR></LI>
+
+	<LI class=LB1>Immettere le impostazioni predefinite per il nuovo filtro. Per fare ciò, impostare la proprietà <B>Filtro</B> o <B>Filtro su server</B> in modo che includa tali criteri. È possibile ad esempio fare in modo che tutti i filtri di una maschera Prodotti visualizzino soltanto i prodotti correnti (quelli per i quali non è selezionato il controllo Sospeso nella maschera Prodotti).<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare la finestra del filtro personalizzata anziché quelle di Microsoft Access. Quando si verifica l'evento Filtro, è possibile aprire la maschera personalizzata e utilizzare le relative immissioni per impostare la proprietà <B>Filtro</B> o <B>Filtro su server</B> e filtrare la maschera originale. Per applicare il filtro, quando si chiude la maschera personalizzata, impostare la proprietà <A HREF="acproFilterOn.htm"><B>Applica filtro</B></A> o <A HREF="acproServerFilterByForm.htm"><B>Filtro su server da maschera</B></A> della maschera originale a <B>Vero</B> (-1). Annullando l'evento Filtro, si impedisce l'apertura della finestra del filtro di Microsoft Access.<BR><BR></LI>
+
+	<LI class=LB1>Impedire a determinati controlli della maschera di apparire o essere utilizzati nella finestra Filtro in base a maschera o Filtro su server in base a maschera. Se si nasconde o si disattiva un controllo nella macro Filtro o nella routine evento, il controllo viene nascosto o disattivato nella finestra Filtro in base a maschera o Filtro su server in base a maschera e non può essere utilizzato per impostare i criteri del filtro. È possibile utilizzare l'evento ApplicazioneFiltro per mostrare o attivare il controllo dopo che il filtro è stato applicato o rimosso dalla maschera.
+<P class=4>
+</LI>
+</UL>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateRelationX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234379'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CreateRelation (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreaterelationx"></A>Esempio di metodo CreateRelation (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un nuovo oggetto <B>Relation</B> che definisce una relazione tra una tabella Categorie e una tabella Prodotti. La tabella Categorie è la tabella primaria della relazione e la tabella Prodotti è la tabella correlata. Il campo IDCategoria è la chiave primaria della tabella Categorie ed è una chiave esterna della tabella Prodotti.</P>
+
+<P class=T>Per verificare tale esempio nel database Northwind, scegliere <B>Relazioni</B> dal menu <B>Strumenti</B> ed eliminare la relazione tra la tabella Categorie e la tabella Prodotti. Chiudere la finestra Relazioni, salvando al momento della richiesta la configurazione corrente. Eseguire la routine riportata di seguito. Visualizzare quindi di nuovo la finestra Relazioni per vedere la nuova relazione.</P>
+
+<PRE class=CT><CODE>Sub NuovaRelazione()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rel As Relation, fld As Field
+&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea il nuovo oggetto Relation e specifica la tabella esterna.
+&nbsp;&nbsp;&nbsp; Set rel = dbs.<B>CreateRelation</B>("CategoriaProdotti", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Categorie", "Prodotti")
+&nbsp;&nbsp;&nbsp; ' Imposta attributi per rafforzare integrità di riferimento.
+&nbsp;&nbsp;&nbsp; rel.Attributes = dbRelationUpdateCascade And _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbRelationDeleteCascade
+&nbsp;&nbsp;&nbsp; ' Crea un campo in oggetto Relation.
+&nbsp;&nbsp;&nbsp; Set fld = rel.CreateField("IDCategoria")
+&nbsp;&nbsp;&nbsp; ' Specifica nome campo in tabella esterna.
+&nbsp;&nbsp;&nbsp; fld.ForeignName = "IDCategoria"
+&nbsp;&nbsp;&nbsp; ' Accoda oggetto Field a insieme Fields di oggetto Relation.
+&nbsp;&nbsp;&nbsp; rel.Fields.Append fld
+&nbsp;&nbsp;&nbsp; ' Accoda oggetto Relation a insieme Relations.
+&nbsp;&nbsp;&nbsp; dbs.Relations.Append rel
+&nbsp;&nbsp;&nbsp; dbs.Relations.Refresh
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

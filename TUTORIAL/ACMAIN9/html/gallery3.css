@@ -1,0 +1,15 @@
+BODY {Font:75%; FONT-family:"verdana, arial, helvetica, sans-serif"; margin-top:.6em; }
+H1 {FONT-size:46%; Margin-top:.5em; Margin-bottom:.5em;}
+H2 {FONT-size:54%; Margin-top:1.5em; Margin-bottom:.5em;}
+H3 {FONT-size:65%; Margin-top:1.2em; Margin-bottom:.5em;}
+P {font-size:75%; margin-top:.6em; margin-bottom:0em;}
+UL { }
+LI {font: sans-serif Verdana; font-size: 70%; }
+TD {Font-size: 75%; }
+
+A:link {color: black;text-decoration: none;}
+A:active {color: black;text-decoration: none;}
+A:visited {color: black;text-decoration: none;}
+
+.gallerymenu { }
+.numbers { }

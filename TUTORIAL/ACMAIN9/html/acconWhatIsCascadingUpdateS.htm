@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconWhatIsCascadingUpdateS'
+Feature='Tables: Relationships'
+Handoff='1'
+SourceFile='ctblnew_2.rtf'
+Tnum='187539'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzo delle opzioni di aggiornamento o di eliminazione a catena</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconwhatiscascadingupdates"></A>Utilizzo delle opzioni di aggiornamento o di eliminazione a catena</H1>
+
+<P class=T>Per le relazioni alle quali è applicata l'<A HREF="javascript:HelpPopup('actip9.hlp','defReferentialIntegrity');" class="pop">integrità referenziale</A>, è possibile specificare se si desidera utilizzare automaticamente le opzioni di <A HREF="javascript:HelpPopup('actip9.hlp','defCascadeUpdate');" class="pop">aggiornamento a catena</A> e di <A HREF="javascript:HelpPopup('actip9.hlp','defCascadeDelete');" class="pop">eliminazione a catena</A> per i record correlati. Se si impostano queste opzioni, le operazioni di eliminazione e di aggiornamento, che di solito sarebbero impedite dalle regole sull'integrità referenziale, vengono consentite. Quando si eliminano record o si modificano i valori di <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A> in una <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryTable');" class="pop">tabella primaria</A>, le modifiche alle tabelle collegate si rendono necessarie per conservare l'integrità referenziale.</P>
+
+<P class=T>Se si seleziona la casella di controllo <B>Aggiorna campi correlati a catena</B> quando si definisce una relazione, ogni volta che si modifica la chiave primaria di un record nella tabella primaria, la chiave primaria verrà automaticamente aggiornata al nuovo valore in tutti i record correlati. Se ad esempio si modifica un ID di un cliente nella tabella Clienti, il campo ID cliente nella tabella Ordini verrà automaticamente aggiornato per tutti gli ordini di quel cliente in modo da non interrompere la relazione. Gli aggiornamenti verranno eseguiti in successione senza visualizzare alcun messaggio.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se la chiave primaria della tabella primaria è un campo Contatore, la selezione della casella di controllo <B>Aggiorna campi correlati a catena</B> non avrà alcun effetto poiché non è possibile modificare il valore di un campo Contatore.</P>
+
+<P class=T>Se si seleziona la casella di controllo <B>Elimina record correlati a catena</B> quando si definisce una relazione, ogni volta che si eliminano dei record nella tabella primaria verranno automaticamente eliminati i record correlati nella tabella correlata. Se ad esempio si elimina un record relativo a un cliente dalla tabella Clienti, tutti gli ordini di quel cliente verranno automaticamente eliminati dalla tabella Ordini, inclusi i record nella tabella Dettagli ordini correlati ai record della tabella Ordini. Quando tuttavia si eliminano dei record da una maschera o da un foglio dati tramite la selezione della casella di controllo <B>Elimina record correlati a catena</B> impostata, verrà visualizzato un messaggio che indica che anche i record correlati possono essere eliminati. Quando tuttavia si eliminano dei record utilizzando una <A HREF="javascript:HelpPopup('actip9.hlp','defDeleteQuery');" class="pop">query di eliminazione</A>, questi verranno automaticamente eliminati nelle tabelle correlate senza visualizzare un messaggio di avviso.</P>
+
+<P class=T>Per informazioni su come modificare una relazione esistente e impostare l'integrità referenziale, fare clic su <A HREF="achowEditExistingRelationshipS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per informazioni su come definire una nuova relazione, fare clic su <A HREF="achowDefineRelationshipsBetweenTablesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconWhatIsCascadingUpdateSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

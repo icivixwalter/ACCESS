@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutConvertingPreviousVersion'
+Feature='Security: Conversion'
+Handoff='3'
+SourceFile='csecnew.rtf'
+Tnum='239289'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla conversione o attivazione di un database protetto da una versione precedente di Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutconvertingpreviousversion"></A>Informazioni sulla conversione o attivazione di un database protetto da una versione precedente di Microsoft Access</H1>
+
+<P class=T>Prima di utilizzare un database protetto da una versione precedente di Microsoft Access è necessario effettuare dei passaggi aggiuntivi sulla base di alcune considerazioni fondamentali.</P>
+
+<P class=NT><B>Importante</B>&nbsp;&nbsp; Per convertire o <A HREF="javascript:HelpPopup('actip9.hlp','defEnabledDatabase');" class="pop">attivare</A> un database protetto, devono essere soddisfatti i requisiti di seguito riportati, altrimenti la conversione non avrà luogo:
+
+<UL>
+	<LI class=LB1>Nel corso dell'installazione di Microsoft Access 2000 viene creato un nuovo file di informazioni sul gruppo di lavoro, che diventa il file corrente. Prima di convertire il database protetto, è pertanto necessario entrare a far parte del <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> che definisce gli account utente utilizzati per accedere al database che si desidera convertire o che erano in uso quando il database è stato inizialmente protetto. Per informazioni su come entrare a far parte di un file di informazioni sul gruppo di lavoro, fare clic su <A HREF="achowJoinMSAccessWorkgroupS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>L'account utente utilizzato per la connessione durante la conversione deve disporre delle seguenti autorizzazioni: 
+<P class=LT2>Autorizzazioni di Apertura/esecuzione e Apertura esclusiva per il database.
+
+<P class=LT2>Autorizzazione di Modifica struttura o Amministrazione per tutte le tabelle del database, altrimenti è necessario essere il proprietario di tutte le tabelle del database.
+
+<P class=LT2>Autorizzazione di Lettura struttura per tutti gli oggetti del database.
+</LI>
+</UL>
+
+<P class=T>Se tutti gli utenti di un database protetto di una versione precedente intendono eseguire l'aggiornamento a Microsoft Access 2000, è opportuno convertire il database e il relativo file di informazioni sul gruppo di lavoro. Le operazioni successive dipendono dalla versione di Microsoft Access da cui si esegue l'aggiornamento.</P>
+
+<P class=T>Se soltanto alcuni utenti di un database protetto intendono eseguire l'aggiornamento a Microsoft Access 2000, è possibile condividere il database e il file di informazioni sul gruppo di lavoro tra tutte le versioni di Microsoft Access in uso al momento. Vi sono diversi modi per condividere il database protetto e il relativo file di informazioni sul gruppo di lavoro.</P>
+
+<P class=NT><B>Importante</B>&nbsp;&nbsp; Eseguire la conversione di un database protetto di una versione precedente solo se tutti gli utenti di tale database intendono eseguire l'aggiornamento a Microsoft Access 2000. Se sono solo alcuni gli utenti che intendono procedere in tal modo, è possibile condividere il database nel formato corrente.</P>
+
+<P class=T><B>Importante&nbsp;&nbsp;</B> Poiché non è possibile proteggere il codice Microsoft Visual Basic nei moduli e il codice di maschere e report con la protezione a livello utente di Microsoft Access 2000, il codice convertito da un database protetto di una versione precedente non sarà più protetto. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="acdecProtectModules.htm">protezione del codice Visual Basic</A>.</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutConvertingPreviousVersionW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

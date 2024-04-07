@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtMouseMoveEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187489'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento MouseSpostato - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtmousemoveepx"></A>Evento MouseSpostato - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si determina dove è il mouse e se il pulsante sinistro del mouse e/o il tasto MAIUSC è stato premuto. Le coordinate x e y relative alla posizione del puntatore del mouse vengono visualizzate in un controllo Etichetta quando si sposta il mouse.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera contenente un'etichetta chiamata Coordinate:</P>
+
+<PRE class=CT><CODE>Private Sub Dettaglio_<B>MouseMove</B>(Button As Integer, _
+&nbsp;&nbsp;&nbsp;&nbsp; Shift As Integer, X As Single, Y As Single)
+&nbsp;&nbsp;&nbsp; Dim intMaiuscGiù As Integer, intPulsanteSin As Integer
+
+&nbsp;&nbsp;&nbsp; Me!Coordinate.Caption = X &amp; ", " &amp; Y
+&nbsp;&nbsp;&nbsp; ' Utilizza maschere di bit per determinare lo stato
+&nbsp;&nbsp;&nbsp; ' di MAIUSC e del pulsante sinistro.
+&nbsp;&nbsp;&nbsp; intMaiuscGiù = Shift And acShiftMask
+&nbsp;&nbsp;&nbsp; intPulsanteSin = Button And acLeftButton
+&nbsp;&nbsp;&nbsp; ' Verifica che MAIUSC e il pulsante sinistro 
+&nbsp;&nbsp;&nbsp; ' siano entrambi premuti.
+&nbsp;&nbsp;&nbsp; If intMaiuscGiù And intPulsanteSin &gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "MAIUSC e il pulsante sinistro del mouse sono stati premuti."
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

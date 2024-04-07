@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlSELECTX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234534'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione SELECT e proposizione FROM (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlselectx"></A>Esempio di istruzione SELECT e proposizione FROM (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, è necessario creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si selezionano i campi Cognome e Nome di tutti i record della tabella Impiegati:</P>
+
+<PRE class=CT><CODE><B>SELECT</B> Cognome, Nome <B>FROM</B> Impiegati;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si selezionano tutti i campi della tabella Impiegati:</P>
+
+<PRE class=CT><CODE><B>SELECT</B> * <B>FROM</B> Impiegati;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si calcola il numero di record che hanno una voce nel campo CAP e si denomina il campo restituito Registrazione:</P>
+
+<PRE class=CT><CODE><B>SELECT</B> Conteggio(CAP) AS Registrazione <B>FROM</B> Clienti;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si indicano quali sarebbero i prezzi unitari dei prodotti aumentati del 10%. I prezzi unitari esistenti nel database non vengono modificati.</P>
+
+<PRE class=CT><CODE><B>SELECT</B> NomeProdotto, PrezzoUnitario AS Corrente, _
+    PrezzoUnitario * 1.1 AS NuoviPrezziProposti
+<B>FROM</B> Prodotti;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si calcola il numero di prodotti del database e i prezzi unitari medi e massimi:</P>
+
+<PRE class=CT><CODE><B>SELECT</B> Conteggio(*) AS [Prodotti totali], Media(PrezzoUnitario)
+    AS [Prezzo unitario medio], Max(PrezzoUnitario)
+    AS [Prezzo unitario massimo] <B>FROM</B> Prodotti;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si visualizza il NomeProdotto e il PrezzoUnitario di ogni record della tabella Prodotti. La stringa "ha un prezzo unitario pari a" separa i due campi del set di risultati.</P>
+
+<PRE class=CT><CODE><B>SELECT</B> NomeProdotto, 'ha un prezzo unitario pari a', _
+    PrezzoUnitario <B>FROM</B> Prodotti;</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

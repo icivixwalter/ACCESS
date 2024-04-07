@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproMeX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproref2_1a.rtf'
+Tnum='187454'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Me</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpromex"></A>Esempio di proprietà Me</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene mostrato come modificare l'etichetta di una maschera Clienti in un valore fornito dall'utente. La subroutine ModificaEtichette passa la proprietà <B>Me</B>, rappresentante l'oggetto <B>Form</B>, a una determinata maschera attiva. Poiché la routine ModificaEtichette modifica l'etichetta della maschera attiva e non quella di una determinata maschera, è possibile chiamarla da altre routine di un'applicazione.</P>
+
+<PRE class=CT><CODE>ModificaEtichette <B>Me</B>, InputBox("Immettere nuova etichetta " 
+&nbsp;&nbsp;&nbsp; &amp; "per maschera")
+
+Sub ModificaEtichette(frmMascheraCorrente As _
+&nbsp;&nbsp;&nbsp; Form, strEtichetta As String)
+' Modifica etichetta.
+&nbsp;&nbsp;&nbsp; If NomeTipo(frmMascheraCorrente.Etichetta) = "Null" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frmMascheraCorrente.Etichetta = strEtichetta
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; If UCase(strEtichetta) _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&gt; UCase(frmMascheraCorrente.Etichetta) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frmMascheraCorrente.Etichetta = strEtichetta
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

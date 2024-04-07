@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='actrbCantEditOLEObjectS'
+Feature='Forms: Controls'
+Handoff='3'
+SourceFile='cfrmctl4.doc'
+Tnum='188673'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Quando si fa doppio clic su un oggetto collegato o incorporato, viene visualizzato un messaggio indicante l'impossibilità di aprire il file</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="actrbcanteditoleobjects"></A>Quando si fa doppio clic su un oggetto collegato o incorporato, viene visualizzato un messaggio indicante l'impossibilità di aprire il file</H1>
+
+<P class=T>In Microsoft Access un messaggio di questo tipo viene visualizzato quando non è possibile aprire il file di origine per un oggetto OLE. Assicurarsi che siano soddisfatte le seguenti condizioni:
+
+<UL>
+	<LI class=LB1>L'applicazione necessaria per modificare il file deve essere installata sul computer. <BR><BR></LI>
+
+	<LI class=LB1>La memoria disponibile deve essere sufficiente per eseguire l'applicazione di origine. Chiudere altre applicazioni per liberare la memoria.<BR><BR></LI>
+
+	<LI class=LB1>Se l'applicazione che si sta tentando di aprire è già in esecuzione, assicurarsi che non abbia finestre di dialogo aperte.<BR><BR></LI>
+
+	<LI class=LB1>Se è un oggetto collegato, assicurarsi che non sia già stato aperto da un altro utente.<BR><BR></LI>
+
+	<LI class=LB1>Se è un oggetto collegato di una maschera, assicurarsi che il nome del file di origine non sia cambiato o che il file di origine non sia stato spostato. Per visualizzare il nome del file originale, fare clic sull'oggetto, quindi scegliere <B>Collegamenti OLE/DDE</B> dal menu <B>Modifica</B>. Il nome del file originale viene visualizzato nella casella <B>Collegamenti</B>. Se il file è stato rinominato o spostato, fare clic sul collegamento nella casella <B>Collegamenti</B>, quindi scegliere <B>Cambia origine</B> per riconnettere il collegamento.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="actrbCantEditOLEObjectSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='3' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactSendObject'
+Feature='acact'
+Handoff='2'
+SourceFile='act_q-z.doc'
+Tnum='188055'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione InviaOggetto</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainingTheMicrosoftOffice97ResourceKit">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="dasqlSum">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactsendobject"></A>Azione InviaOggetto</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactSendObjectC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactSendObjectX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione InviaOggetto per includere un determinato <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A>, una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A>, un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A>, un <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">modulo</A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> di Microsoft Access in un messaggio di posta elettronica, dove è possibile visualizzarlo e inviarlo. È possibile includere gli oggetti in formato Microsoft Excel 2000 (*.xls), Testo MS-DOS (*.txt), Rich Text Format (*.rtf) o <A HREF="javascript:HelpPopup('actip9.hlp','defHTML');" class="pop">HTML</A> (*.html) in messaggi di Microsoft Exchange, Microsoft Mail, posta di Microsoft Windows per Workgroup o di un'altra applicazione di posta elettronica che utilizza l'interfaccia Microsoft Mail Applications Programming Interface (MAPI).</P>
+
+<P class=T>Se si dispone di un'applicazione di posta elettronica che utilizza il protocollo Vendor Independent Mail (VIM) ed è stata installata una <A HREF="javascript:HelpPopup('actip9.hlp','defDLL');" class="pop">DLL</A> (Mapivim.dll) che converte i messaggi di posta elettronica MAPI nel protocollo VIM, è possibile inviare gli oggetti di Microsoft Access all'applicazione di posta elettronica VIM.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione InviaOggetto utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento azione</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Tipo oggetto</TD>
+<TD class=TT width=76%>Il tipo di oggetto da includere nel messaggio di posta elettronica. Selezionare <B>Tabella</B> per un foglio dati di tipo tabella, <B>Query</B> per un foglio dati di tipo query, <B>Maschera</B> per una maschera o un foglio dati di tipo maschera, <B>Report</B>, <B>Modulo</B>, <B>Pagina di accesso ai dati</B>, <b>Visualizzazione server</b> o <b>Stored procedure</b> nella casella <B>Tipo oggetto</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. Non è possibile inviare una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>. Se si desidera includere l'oggetto attivo, selezionarne il tipo con questo argomento, ma lasciare vuoto l'argomento Nome oggetto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Nome oggetto</TD>
+<TD class=TT width=76%>Il nome dell'oggetto da includere nel messaggio di posta elettronica. Nella casella <B>Nome oggetto</B> vengono visualizzati tutti gli oggetti del database corrispondenti al tipo selezionato tramite l'argomento Tipo oggetto. Se entrambi gli argomenti Tipo oggetto e Nome oggetto vengono lasciati vuoti, all'applicazione di posta elettronica viene inviato un messaggio senza alcun oggetto di database.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=76%>Se si esegue una macro contenente l'azione InviaOggetto in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, l'oggetto con questo nome viene ricercato prima nel database di libreria, quindi nel database corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Formato output</TD>
+<TD class=TT width=76%>Il tipo di formato che si desidera utilizzare per l'oggetto incluso. Nella casella <B>Formato output</B> è possibile selezionare <B>HTML (*.html)</B>, <B>Microsoft Excel (*.xls)</B>, <B>Testo MS-DOS (*.txt)</B>, <B>Rich Text Format (*.rtf)</B> o <B>Pagina di accesso ai dati di Microsoft Access (*.html)</B>. I moduli possono essere inviati solo in formato testo MS-DOS. Le pagine di accesso ai dati possono essere inviate solo in formato HTML. I moduli possono essere inviati solo in formato MS-DOS. Se si lascia vuoto questo argomento, viene richiesto di specificare il formato di output.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=76%><B>Nota</B>&nbsp;&nbsp; Non è possibile includere oggetti in formato <B>Microsoft Active Server Pages (*.asp)</B> o <B>Microsoft IIS (*.htx, *.idc)</B> anche se queste selezioni sono visualizzate nell'elenco.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>A</TD>
+<TD class=TT width=76%>I destinatari del messaggio i cui nomi si desidera inserire nella riga A del messaggio di posta elettronica. Se si lascia vuoto questo argomento, viene richiesto di specificare i nomi dei destinatari.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=76%>Separare con un punto e virgola (;) i nomi dei destinatari specificati in questo argomento e negli argomenti Cc e Ccn oppure utilizzare il <A HREF="javascript:HelpPopup('actip9.hlp','defSeparator');" class="pop">separatore</A> di elenco impostato sulla scheda <B>Numeri</B> della finestra di dialogo <B>Proprietà - Impostazioni internazionali</B> del Pannello di controllo di Windows. Se l'applicazione non riesce a identificare i nomi dei destinatari, il messaggio non viene inviato e si verifica un errore.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Cc</TD>
+<TD class=TT width=76%>I destinatari del messaggio i cui nomi si desidera inserire nella riga Cc ("copia per conoscenza") del messaggio di posta elettronica. Se si lascia vuoto questo argomento, la riga Cc del messaggio di posta elettronica rimane vuota.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Ccn</TD>
+<TD class=TT width=76%>I destinatari del messaggio i cui nomi si desidera inserire nella riga Ccn ("copia per conoscenza nascosta") del messaggio di posta elettronica. Se si lascia vuoto questo argomento, la riga Ccn del messaggio di posta elettronica rimane vuota.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Oggetto messaggio</TD>
+<TD class=TT width=76%>L'oggetto del messaggio. Il testo viene visualizzato sulla riga Oggetto del messaggio di posta elettronica. Se si lascia vuoto questo argomento, la riga Oggetto del messaggio di posta elettronica rimane vuota.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Testo messaggio</TD>
+<TD class=TT width=76%>Il testo che si desidera includere nel messaggio oltre all'oggetto di database. Tale testo viene visualizzato nel corpo principale del messaggio di posta elettronica, dopo l'oggetto. Se si lascia vuoto questo argomento, non viene aggiunto altro testo al messaggio. Se si lasciano vuoti gli argomenti Tipo oggetto e Nome oggetto, è possibile utilizzare questo argomento per inviare un messaggio senza un oggetto di database.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Modifica messaggio</TD>
+<TD class=TT width=76%>Specifica se il messaggio può essere modificato prima dell'invio. Se si seleziona <B>Sì</B>, l'applicazione di posta elettronica viene avviata automaticamente e il messaggio può essere modificato. Se si seleziona <B>No</B>, il messaggio viene inviato senza che sia possibile modificarlo. L'impostazione predefinita è No.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>File Modello</TD>
+<TD class=TT width=76%>Il percorso e il nome del file che si desidera utilizzare come modello per un file HTML. Il file modello è un file contenente tag HTML.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>L'azione InviaOggetto è disponibile solo se sul computer è installata un'applicazione di posta elettronica compatibile MAPI oppure se si dispone di un'applicazione compatibile VIM ed è stata installata la DLL Mapivi32.dll. Per informazioni su come installare il supporto Microsoft Access per le applicazioni di posta elettronica VIM, consultare il <I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I>. Per informazioni su come ottenere tale<I> </I>pubblicazione, fare clic su <A HREF="JavaScript:hhobj_3.Click()"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+<P class=T>L'oggetto del messaggio di posta elettronica è nel formato di output selezionato. Facendo doppio clic sull'oggetto, viene avviato il software appropriato con l'oggetto aperto. Microsoft Excel (per i file XLS), Blocco note di Microsoft Windows (per i file TXT) e Microsoft Word (per i file RTF) sono le applicazioni per ciascun tipo di formato di output. Per i file HTML, viene avviato il browser Internet predefinito.</P>
+
+<P class=T>Quando si utilizza l'azione InviaOggetto per includere un oggetto di database nel messaggio di posta elettronica si applicano le seguenti regole:
+
+<UL>
+	<LI class=LB1>È possibile inviare fogli dati in formato tabella, query e maschera. Nell'oggetto incluso, tutti i <A HREF="javascript:HelpPopup('actip9.hlp','defField');" class="pop">campi</A> del foglio dati vengono visualizzati come in Microsoft Access, tranne i campi contenenti <A HREF="javascript:HelpPopup('actip9.hlp','defOLEObject');" class="pop">oggetti OLE</A>. Le colonne di tali campi sono incluse nell'oggetto ma i campi sono vuoti.<BR><BR></LI>
+
+	<LI class=LB1>Per un controllo associato a un campo di tipo Sì/No (<A HREF="javascript:HelpPopup('actip9.hlp','defToggleButton');" class="pop">Interruttore</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defOptionButton');" class="pop">Pulsante di opzione</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defCheckBox');" class="pop">Casella di controllo</A>), il file di output visualizza il valore -1 (Sì) o 0 (No).<BR><BR></LI>
+
+	<LI class=LB1>Per una <A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">casella di testo</A> associata a un campo <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkDataType');" class="pop">Collegamento ipertestuale</A>, il file di output visualizza il <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlink');" class="pop">collegamento ipertestuale</A> per tutti i formati di output tranne Testo MS-DOS, nel qual caso il collegamento ipertestuale viene visualizzato come testo normale.<BR><BR></LI>
+
+	<LI class=LB1>Se si invia una maschera in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A>, l'oggetto incluso contiene sempre la <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> della maschera.<BR><BR></LI>
+
+	<LI class=LB1>Se si invia un report, gli unici controlli inclusi nell'oggetto sono le caselle di testo per i file XLS oppure le caselle di testo e le etichette per i file RTF, TXT e HTML. Tutti gli altri controlli vengono ignorati. Inoltre, non vengono incluse informazioni sulle intestazioni e i piè di pagina. L'unica eccezione è costituita dal fatto che, quando si invia un report in formato Microsoft Excel, nell'oggetto viene inclusa una casella di testo in un piè di pagina di gruppo contenente un'espressione che utilizza la funzione <A HREF="JavaScript:hhobj_4.Click()"><B>Sum</B></A>. Nell'oggetto non viene incluso nessun altro controllo in un'intestazione o in piè di pagina e nessun'altra <A HREF="javascript:HelpPopup('actip9.hlp','defAggregateFunction');" class="pop">funzione di aggregazione</A> oltre a <B>Sum</B>. <BR><BR></LI>
+
+	<LI class=LB1>I <A HREF="javascript:HelpPopup('actip9.hlp','defSubreport');" class="pop">sottoreport</A> vengono inclusi nell'oggetto, mentre le <A HREF="javascript:HelpPopup('actip9.hlp','defSubform');" class="pop">sottomaschere</A> vengono incluse quando si invia l'output a file ASP, ma solo se si invia l'output come maschera e non come foglio dati.<BR><BR></LI>
+
+	<LI class=LB1>Quando si invia un foglio dati, una maschera o una pagina di accesso ai dati in formato HTML, viene creato un solo file HTML. Quando si invia un report in formato HTML, viene creato un file HTML per ciascuna pagina del report.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni sulle regole e sulle limitazioni relative all'inclusione di oggetti in formato HTML, vedere <A HREF="achowExportDatasheetOrFormViewToHTMLFormat.htm">Esportare un foglio dati in formato HTML statico</A> e <A HREF="achowExportReportsToHTMLFormat.htm">Esportare un report in formato HTML statico</A>.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Se si inviano i dati di un report e le colonne e le righe di dati dell'oggetto incluso non sono allineate come nel report, considerare i seguenti suggerimenti:
+
+<UL>
+	<LI class=NLB>Scegliere <B>Dimensione</B> dal menu <B>Formato</B> e quindi <B>Adatta</B> per ridimensionare i controlli.<BR><BR></LI>
+
+	<LI class=NLB>Evitare la sovrapposizione o l'eccessiva vicinanza dei controlli.<BR><BR></LI>
+
+	<LI class=NLB>Scegliere <B>Allinea</B> dal menu <B>Formato</B>, quindi scegliere il comando appropriato per allineare i controlli nel report. I controlli non allineati nella stessa riga possono essere posizionati in righe separate nell'oggetto incluso, aumentando in tal modo la spaziatura.</LI>
+</UL>
+
+
+
+<P class=T>L'azione InviaOggetto equivale a scegliere <B>Invia</B> dal menu <B>File</B>, mentre gli argomenti dell'azione corrispondono alle impostazioni presenti nelle finestre di dialogo <B>Invia</B>. Il comando <B>Invia</B> tuttavia è valido solo per l'oggetto attivo. Utilizzando l'azione InviaOggetto, è possibile specificare l'oggetto che si desidera inviare.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile inviare i dati selezionati con il comando <B>Invia</B>. Questa funzione tuttavia non è disponibile con l'azione InviaOggetto.</P>
+
+
+
+<P class=T>Per eseguire l'azione InviaOggetto in Visual Basic, utilizzare il metodo <A HREF="acmthactSendObject.htm"><B>SendObject</B></A> dell'oggetto <A HREF="acobjDoCmd.htm"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
+

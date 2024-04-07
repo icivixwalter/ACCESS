@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtKeyDownUpEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187377'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi TastoGiù, TastoSu - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtkeydownupepx"></A>Eventi TastoGiù, TastoSu - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si determina se è stato premuto MAIUSC, CTRL o ALT.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera contenente una casella di testo chiamata GestoreTasti.</P>
+
+<PRE class=CT><CODE>Private Sub GestoreTasti_<B>KeyDown</B>(KeyCode As Integer, _
+&nbsp;&nbsp;&nbsp;&nbsp; Shift As Integer)
+&nbsp;&nbsp;&nbsp; Dim intMaiuscGiù As Integer, intAltGiù As Integer
+&nbsp;&nbsp;&nbsp; Dim intCtrlGiù As Integer
+
+&nbsp;&nbsp;&nbsp; ' Utilizza maschere di bit per determinare quale tasto è stato premuto.
+&nbsp;&nbsp;&nbsp; intMaiuscGiù = (Shift And acShiftMask) &gt; 0
+&nbsp;&nbsp;&nbsp; intAltGiù = (Shift And acAltMask) &gt; 0
+&nbsp;&nbsp;&nbsp; intCtrlGiù = (Shift And acCtrlMask) &gt; 0
+&nbsp;&nbsp;&nbsp; ' Visualizza un messaggio che indica quale tasto è stato premuto.
+&nbsp;&nbsp;&nbsp; If intMaiusctGiù Then MsgBox "MAIUSC premuto."
+&nbsp;&nbsp;&nbsp; If intAltGiù Then MsgBox "ALT premuto."
+&nbsp;&nbsp;&nbsp; If intCtrlGiù Then MsgBox "CTRL premuto."
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

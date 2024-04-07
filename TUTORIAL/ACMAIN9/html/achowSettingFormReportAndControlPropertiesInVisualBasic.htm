@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSettingFormReportAndControlPropertiesInVisualBasic'
+Feature='accon'
+Handoff='2'
+SourceFile='alanmsc2.doc'
+Tnum='188061'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostare le proprietà di maschere, report e controlli in Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproMe">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproSection">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowsettingformreportandcontrolpropertiesinvisualbasic"></A>Impostare le proprietà di maschere, report e controlli in Visual Basic</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingFormReportAndControlPropertiesInVisualBasicC">
+</OBJECT></P>
+
+
+
+<P class=T>Le proprietà degli oggetti <A HREF="acobjForm.htm"><B>Form</B></A>, <A HREF="acobjReport.htm"><B>Report</B></A> e <A HREF="acobjControl.htm"><B>Control</B></A>, che sono <A HREF="javascript:HelpPopup('actip9.hlp','defMSAccessObject');" class="pop">oggetti di Microsoft Access</A>, possono essere impostate all'interno di una routine <A HREF="javascript:HelpPopup('actip9.hlp','defSubProcedure');" class="pop"><B>Sub</B></A>, <A HREF="javascript:HelpPopup('actip9.hlp','defFunctionProcedure');" class="pop"><B>Function</B></A> o <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">evento</A>. È inoltre possibile impostare le proprietà per le <A HREF="javascript:HelpPopup('actip9.hlp','defSection');" class="pop">sezioni</A> di maschere e report.</P>
+
+<P class=RL><B>Per impostare una proprietà di una maschera o di un report</B></P>
+
+<P class=T>Fare riferimento a una maschera o a un report all'interno dell'insieme <A HREF="accolForms.htm"><B>Forms</B></A> o <A HREF="accolReports.htm"><B>Reports</B></A> e indicare il nome della proprietà e il relativo valore. La riga di codice riportata di seguito indica ad esempio come impostare a <B>True</B> (-1) la proprietà <B>Visible</B> per la maschera Clienti.</P>
+
+<PRE class=CT><CODE>Forms!Clienti.Visible = True</CODE></PRE>
+
+
+
+<P class=T>La proprietà di una maschera o di un report può essere impostata anche dall'interno del modulo dell'oggetto utilizzando la proprietà <A HREF="JavaScript:hhobj_2.Click()"><B>Me</B></A> dell'oggetto. L'esecuzione del codice che utilizza tale proprietà<B> </B>è più veloce rispetto al codice che utilizza il nome completo dell'oggetto. La riga di codice riportata di seguito indica ad esempio come impostare la proprietà <B>RecordSource</B> della maschera Clienti a un'<A HREF="javascript:HelpPopup('actip9.hlp','defSQLString');" class="pop">istruzione SQL</A> che restituisce tutti i record con dati che iniziano per "A" nel campo NomeSocietà contenuto nel modulo della maschera Clienti.</P>
+
+<PRE class=CT><CODE>Me!RecordSource = "SELECT * FROM Clienti " _
+    &amp; "WHERE NomeSocietà Like 'A*'"</CODE></PRE>
+
+
+
+<P class=RL><B>Per impostare una proprietà di un controllo</B></P>
+
+<P class=T>Fare riferimento al <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> all'interno dell'insieme <A HREF="accolControls.htm"><B>Controls</B></A> dell'oggetto <B>Form</B> o <B>Report</B> su cui è residente. È possibile fare riferimento all'insieme <B>Controls</B> in modo implicito o esplicito, ma l'esecuzione del codice è più veloce se si utilizza un riferimento implicito. Gli esempi riportati di seguito indicano come impostare la proprietà <B>Visible</B> di una <A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">casella di testo</A> denominata IDCliente nella maschera Clienti.</P>
+
+<PRE class=CT><CODE>' Metodo più veloce.
+Me!IDCliente.Visible = True</CODE></PRE>
+
+
+
+<PRE class=CT><CODE>' Metodo più lento.
+Forms!Clienti.Controls!IDCliente.Visible = True</CODE></PRE>
+
+
+
+<P class=T>Il metodo più veloce per impostare una proprietà di un controllo consiste nell'eseguire l'operazione dall'interno di un modulo di un oggetto utilizzando la proprietà <B>Me</B> dell'oggetto. È possibile ad esempio utilizzare il codice riportato di seguito per alternare la proprietà <B>Visible</B> di una casella di testo denominata IDCliente nella maschera Clienti.</P>
+
+<PRE class=CT><CODE>With Me!IDCliente
+    .Visible = Not .Visible
+End With</CODE></PRE>
+
+
+
+<P class=RL><B>Per impostare una proprietà di una sezione di maschera o report</B></P>
+
+<P class=T>Fare riferimento alla maschera o al report all'interno dell'insieme <B>Forms</B> o <B>Reports</B> e indicare la proprietà <A HREF="JavaScript:hhobj_3.Click()"><B>Section</B></A> e il valore intero o la costante che identifica la sezione. Gli esempi riportati di seguito indicano come impostare a <B>Falso</B> (0) la proprietà <B>Visibile</B> della sezione dell'<A HREF="javascript:HelpPopup('actip9.hlp','acrgnPageHeaderSectionQ');" class="pop">intestazione di pagina</A> della maschera Clienti.</P>
+
+<PRE class=CT><CODE>Forms!Clienti.Section(3).Visible = False</CODE></PRE>
+
+
+
+<PRE class=CT><CODE>Me!Section(acIntestazionePagina).Visible = False</CODE></PRE>
+
+
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>Ricercare le proprietà da impostare nell'indice della Guida in linea per informazioni relative a:
+<UL>
+	<LI class=LB2>La possibilità di impostare la proprietà da Visual Basic.<BR><BR></LI>
+
+	<LI class=LB2>Le visualizzazioni nelle quali è possibile impostare la proprietà. Non tutte le proprietà infatti possono essere impostate in qualsiasi visualizzazione. La proprietà <B>Stile bordo</B> di una maschera si può ad esempio impostare solo nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura della maschera</A>.<BR><BR></LI>
+
+	<LI class=LB2>I valori da utilizzare per impostare la proprietà. Spesso, infatti, quando si imposta una proprietà in Visual Basic anziché nella finestra delle proprietà, vengono utilizzati valori differenti. Se ad esempio le impostazioni della proprietà sono selezionabili da un elenco, per ogni voce dell'elenco è necessario utilizzare il valore o l'equivalente numerico.</LI>
+</UL>
+</LI>
+
+	<LI class=NLB>Per impostare da Visual Basic le <A HREF="javascript:HelpPopup('actip9.hlp','defDefaultProperty');" class="pop">proprietà predefinite</A> per i controlli, utilizzare il metodo <A HREF="acmthDefaultControl.htm"><B>DefaultControl</B></A>.</LI>
+</UL>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

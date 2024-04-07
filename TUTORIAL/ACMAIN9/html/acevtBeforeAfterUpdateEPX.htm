@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtBeforeAfterUpdateEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv1_1a.rtf'
+Tnum='187036'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi PrimaDiAggiornare e DopoAggiornamento - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtbeforeafterupdateepx"></A>Eventi PrimaDiAggiornare e DopoAggiornamento - Esempio di routine evento</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito illustra come utilizzare la routine evento PrimaDiAggiornare per verificare se il nome di un prodotto è già stato immesso nel database. Dopo aver digitato il nome di un prodotto nella casella NomeProdotto, il valore viene confrontato con il campo NomeProdotto della tabella Prodotti. Se questa tabella contiene un valore corrispondente, viene visualizzato un messaggio che informa che il nome del prodotto è già stato immesso.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la seguente routine evento a una maschera denominata Prodotti contenente la casella di testo NomeProdotto.</P>
+
+<PRE class=CT><CODE>Private Sub NomeProdotto_<B>BeforeUpdate</B>(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; If(Not IsNull(DLookup("[NomeProdotto]", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Prodotti", "[NomeProdotto] ='" _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; Me!NomeProdotto &amp; "'"))) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Il prodotto è già stato immesso nel database."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cancel = True
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me!NomeProdotto.Undo
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

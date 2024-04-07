@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjPropertyS'
+Feature='acobj'
+Handoff='1'
+SourceFile='ACDOBJ01.rtf'
+Tnum='234516'
+Piece='1040'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Oggetto Property, insieme Properties (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acobjpropertys"></A>Oggetto Property, insieme Properties (MDB)</H1>
+
+
+
+<P class=T>In Microsoft Access sono presenti diversi tipi di proprietà. È possibile rappresentare ciascuna di tali proprietà nel codice di Visual Basic con una variabile di oggetto <B>Property</B> e ciascuna proprietà fa parte di un insieme <B>Properties</B>.</P>
+
+<P class=RL><B>Proprietà applicabili a oggetti DAO</B>
+
+<UL>
+	<LI class=LB1>Le proprietà incorporate vengono definite dal <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Microsoft Jet</A> per tutti gli <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">oggetti DAO</A>.<BR><BR></LI>
+
+	<LI class=LB1>È possibile aggiungere proprietà definite dall'utente ad alcuni oggetti DAO. Tali oggetti DAO includono gli oggetti <B>Database</B>, <B>Index</B>, <B>QueryDef</B> e <B>TableDef</B> e gli oggetti <B>Field</B> nell'insieme <B>Fields</B> di un oggetto <B>QueryDef</B> o <B>TableDef</B>.<BR><BR></LI>
+
+	<LI class=LB1>Alcune proprietà definite da Microsoft Access vengono applicate a oggetti DAO. È possibile in genere impostare tali proprietà nella finestra di Microsoft Access o da Visual Basic. Il Modulo di gestione di database Microsoft Jet non è in grado di riconoscere tali proprietà fino al momento in cui vengono appositamente creati oggetti <B>Property</B> corrispondenti e accodati all'insieme <B>Properties</B>. Gli oggetti DAO a cui è possibile applicare tali proprietà sono <B>QueryDef</B> e <B>TableDef</B> e gli oggetti <B>Field</B> contenuti nell'insieme <B>Fields</B> di un oggetto <B>QueryDef</B> o <B>TableDef</B>. Per gli elenchi di tali proprietà definite da Microsoft Access, vedere l'argomento Specifiche di Microsoft Access per oggetti <B>TableDef</B>, <B>QueryDef</B> e <B>Field</B>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Le proprietà definite da Microsoft Access che vengono applicate a oggetti DAO si differenziano in più modi dalle proprietà definite dal modulo di gestione di database Microsoft Jet.</P>
+
+<P class=T>Per fare riferimento a una proprietà definita dall'utente o a una proprietà definita da Microsoft Access, è necessario fare esplicitamente riferimento all'insieme <B>Properties</B>. Per fare riferimento più rapidamente a una proprietà di Microsoft Access, utilizzare la sintassi riportata di seguito:</P>
+
+<P class=SYN><I>oggetto</I><B>.Properties</B>!<I>nomeproprietà</I></P>
+
+
+
+<P class=T>Nell'esempio precedente, <I>oggetto</I> è un oggetto DAO e <I>nomeproprietà</I> è il nome della proprietà di Microsoft Access.</P>
+
+<P class=T>È anche possibile utilizzare la seguente sintassi, anche se è più lenta rispetto alla precedente:</P>
+
+<P class=SYN><I>oggetto</I><B>.Properties("</B><I>nome</I><B>")</B></P>
+
+
+
+<P class=T>Per fare invece riferimento alle proprietà definite dal modulo di gestione di database Microsoft Jet, è sufficiente utilizzare la sintassi <I>oggetto</I>.<I>nome</I>.</P>
+
+<P class=T>Se si imposta per la prima volta il valore di una proprietà definita da Microsoft Access, è necessario creare prima tale proprietà utilizzando il metodo <B>CreateProperty</B>. La proprietà <B>Caption</B> di un oggetto <B>Field</B>, ad esempio, è una proprietà definita da Microsoft Access. Se tale proprietà<B> </B>non è stata precedentemente impostata in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura tabella</A>, ma si imposta la proprietà per la prima volta dal codice di Visual Basic, prima di poterne impostare il valore è necessario creare la proprietà utilizzando il metodo <B>CreateProperty</B> e accodarla all'insieme <B>Properties</B>.</P>
+
+<P class=T>Una proprietà definita da Microsoft Access viene automaticamente accodata all'insieme <B>Properties</B> quando viene impostata per la prima volta nella finestra di Microsoft Access. Se una proprietà è già stata impostata nell'interfaccia utente, non è necessario creare e accodare tale proprietà nel codice. È possibile, ad esempio, impostare la proprietà <B>Caption</B> per una tabella in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> scegliendo <B>Carattere</B> dal menu <B>Formato</B>. Tale proprietà viene quindi inclusa nell'insieme <B>Properties</B> di un oggetto <B>TableDef</B> che punta alla tabella.</P>
+
+<P class=T>La proprietà non viene visualizzata nell'insieme <B>Properties</B> fino a quando non viene impostata una proprietà definita da Microsoft Access in visualizzazione Struttura tabella o dal codice di Visual Basic. Quando si impostano tali proprietà da Visual Basic, si consiglia di includere un codice di gestione degli errori che verifica la presenza della proprietà nell'insieme <B>Properties</B> e, nel caso non sia presente, la crea e la accoda.</P>
+
+<P class=RL><B>Proprietà applicabili a oggetti di Microsoft Access</B></P>
+
+<P class=T>Ogni <A HREF="javascript:HelpPopup('actip9.hlp','defMSAccessObject');" class="pop">oggetto di Microsoft Access</A>, così come gli oggetti DAO, contiene un insieme <B>Properties</B> con oggetti <B>Property</B> incorporati. Gli oggetti <B>Property</B> applicabili a una maschera, ad esempio, sono membri dell'insieme <B>Properties</B> dell'oggetto <B>Form</B>.</P>
+
+<P class=T>È anche possibile creare proprietà definite dall'utente per oggetti di Microsoft Access. È possibile, ad esempio, creare una proprietà chiamata Tipo testo che venga applicata a una casella di testo.</P>
+
+<P class=T>Gli oggetti <B>Property</B> contenuti negli insiemi <B>Properties</B> di oggetti <B>Form</B>, <B>Report</B> e <B>Control</B> sono diversi dagli oggetti DAO <B>Property</B> in quanto non hanno una proprietà <B>Inherited</B>.</P>
+
+<P class=T>È possibile elencare gli oggetti <B>Property</B> contenuti nell'insieme <B>Properties</B> di oggetti <B>Form</B>, <B>Report</B> e <B>Control</B>. L'oggetto <B>Application</B> e l'oggetto <B>Screen</B> di Microsoft Access dispongono di insiemi <B>Properties</B> che non è possibile elencare. Le proprietà di tali oggetti, inoltre, sono di sola lettura.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

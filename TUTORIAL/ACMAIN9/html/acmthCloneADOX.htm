@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCloneADOX'
+Feature='acmth'
+Handoff='2'
+SourceFile='ACAMETHX9.doc'
+Tnum='261113'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo Clone</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcloneadox"></A>Esempio di metodo Clone</B></P>
+
+
+
+<P class=T>Nell'esempio seguente, un oggetto <B>Recordset</B> viene creato utilizzando un'istruzione SQL su una tabella Dipendenti, quindi viene utilizzato il metodo <B>Clone</B> per creare un clone dell'oggetto <B>Recordset</B> in modo che i due oggetti possano condividere gli stessi segnalibri. Questa tecnica risulta particolarmente utile quando occorre confrontare i risultati di una query da più punti contemporaneamente.</P>
+
+<P class=T>La funzione legge e memorizza in una variabile il valore della proprietà <B>Bookmark</B> del record corrente, in questo caso il secondo record dell'oggetto <B>Recordset</B> originale. La proprietà <B>Bookmark</B> dell'oggetto <B>Recordset</B> duplicato viene impostata a questa stringa, in modo che il secondo record diventi il record corrente anche in questo oggetto <B>Recordset</B>. I valori correnti del campo Cognome per i due recordset sono uguali, come si può vedere quando vengono stampati nella finestra Debug.</P>
+
+<PRE class=CT><CODE>Sub CreaClone()
+&nbsp;&nbsp;&nbsp; Dim cnn As ADODB.Connection
+&nbsp;&nbsp;&nbsp; Dim rstEmployees As New ADODB.Recordset, rstDuplicate As ADODB.Recordset
+&nbsp;&nbsp;&nbsp; Dim fldName As ADODB.Field, varBook As Variant
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set cnn = CurrentProject.Connection
+&nbsp;&nbsp;&nbsp; ' Apre un oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp;     rstEmployees.Open "SELECT * FROM Dipendenti ORDER BY Cognome", _ cnn, adOpenKeyset, adLockOptimistic
+&nbsp;&nbsp;&nbsp; ' Clona oggetto Recordset.
+&nbsp;&nbsp;&nbsp; Set rstDuplicate = rstEmployees.Clone
+&nbsp;&nbsp;&nbsp; Set fldName = rstEmployees.Fields!Cognome
+&nbsp;&nbsp;&nbsp; ' Imposta record corrente.
+&nbsp;&nbsp;&nbsp; rstEmployees.MoveFirst
+&nbsp;&nbsp;&nbsp; ' Passa al secondo record.
+&nbsp;&nbsp;&nbsp; rstEmployees.MoveNext
+&nbsp;&nbsp;&nbsp; ' Richiama il valore della proprietà Bookmark e stampa il valore di campo corrente.
+&nbsp;&nbsp;&nbsp; If rstEmployees.Properties("Con segnalibro") Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varBook = rstEmployees.Bookmark
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print fldName.Value
+        ' Imposta la proprietà Bookmark del clone al valore ottenuto.
+&nbsp;&nbsp;          rstDuplicate.Bookmark = varBook
+    &nbsp;&nbsp;&nbsp; Debug.Print fldName.Value
+&nbsp;&nbsp;&nbsp; End If&nbsp;&nbsp;&nbsp; 
+
+&nbsp;&nbsp;&nbsp; rstEmployees.Close
+&nbsp;&nbsp;&nbsp; rstDuplicate.Close
+&nbsp;&nbsp;&nbsp; Set cnn = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

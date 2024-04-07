@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproApplicationX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproobj3.doc'
+Tnum='187006'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Application e DBEngine</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproapplicationx"></A>Esempio di proprietà Application e DBEngine</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito vengono visualizzate le proprietà <B>DBEngine</B> in una casella di messaggio.</P>
+
+<PRE class=CT><CODE>Private Sub Comando1_Click()
+  MostraInfoApplicazione Me
+End Sub
+
+Function MostraInfoApplicazione(obj As Object) As Integer
+  Dim objApp As Object, intI As Integer, strProp As String
+  On Error Resume Next
+    ' Proprietà Application della maschera.
+    Set objApp = obj.<B>Application</B>
+    MsgBox "Proprietà Application visibile = " &amp; objApp.Visible
+    If objApp.UserControl = True Then
+    For intI = 0 To objApp.<B>DBEngine</B>.Properties.Count - 1
+      strProp = strProp &amp; objApp.<B>DBEngine</B>.Properties(intI).Name &amp; ", "
+    Next intI
+    End If
+    MsgBox Left(strProp, Len(strProp) - 2) &amp; ".", vbOK, "Proprietà DBEngine"
+End Function</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

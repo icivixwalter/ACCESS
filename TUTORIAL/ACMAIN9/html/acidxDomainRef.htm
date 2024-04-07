@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acidxDomainRef'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187186'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzioni di aggregazione sui domini</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daidxAggregateFunctions">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSQLStringVBA">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acidxdomainref"></A>Funzioni di aggregazione sui domini</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxDomainRefC">
+</OBJECT></P>
+
+
+
+<P class=T>Le funzioni di aggregazione forniscono informazioni statistiche relative a set di record, un <A HREF="javascript:HelpPopup('actip9.hlp','defDomain');" class="pop">dominio</A>. È possibile ad esempio utilizzare una funzione di aggregazione per contare il numero di record contenuti in un determinato set o per stabilire la media dei valori di un determinato campo.</P>
+
+<P class=T>I due tipi di funzioni di aggregazione, le funzioni di aggregazione sui domini e le <A HREF="JavaScript:hhobj_2.Click()">funzioni di aggregazione SQL</A>, forniscono una funzionalità simile ma vengono utilizzati in situazioni differenti. È possibile includere le funzioni di aggregazione SQL nella sintassi di un'<A HREF="JavaScript:hhobj_3.Click()">istruzione SQL</A>, ma non è possibile richiamarle direttamente da Visual Basic. È possibile invece richiamare direttamente dal codice Visual Basic le funzioni di aggregazione sui domini. È inoltre possibile includere tali funzioni in un'istruzione SQL, ma una funzione di aggregazione SQL risulta più efficiente.</P>
+
+<P class=T>Se si eseguono calcoli statistici dall'interno di un codice, è necessario utilizzare le funzioni di aggregazione sui domini. È inoltre possibile utilizzare le funzioni di aggregazione sui domini per specificare criteri, aggiornare valori o creare campi calcolati in un'espressione nella query. È possibile utilizzare sia le funzioni di aggregazione SQL che quelle di aggregazione sui domini in un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedControl');" class="pop">controllo calcolato</A> di una maschera o di un report.</P>
+
+<P class=T>Le funzioni di aggregazione sui domini includono:</P>
+
+
+
+<P class=CRT><A HREF="acfctDAvg.htm">Funzione <B>DAvg</B></A></P>
+
+<P class=CRT><A HREF="acfctDCount.htm">Funzione <B>DCount</B></A></P>
+
+<P class=CRT><A HREF="acfctDLookup.htm">Funzione <B>DLookup</B></A></P>
+
+<P class=T><A HREF="acfctDFirstLast.htm">Funzioni <B>DFirst</B>, <B>DLast</B></A></P>
+
+<P class=CRT><A HREF="acfctDMinDMax.htm">Funzioni <B>DMin</B>, <B>DMax</B></A></P>
+
+<P class=CRT><A HREF="acfctDStDev.htm">Funzioni <B>DStDev</B>, <B>DStDevP</B></A></P>
+
+<P class=CRT><A HREF="acfctDSum.htm">Funzione <B>DSum</B></A></P>
+
+<P class=CRT><A HREF="acfctDVar.htm">Funzioni <B>DVar</B>, <B>DVarP</B></A></P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

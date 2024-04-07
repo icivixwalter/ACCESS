@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowConvertAccess2000DatabaseToAccess97'
+Feature='Databases: Conversion'
+Handoff='3'
+SourceFile='cdatcon2.rtf'
+Tnum='264253'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Convertire un database di Access 2000 in Access 97</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowconvertaccess2000databasetoaccess97"></A>Convertire un database di Access 2000 in Access 97</H1>
+
+<OL>
+	<LI class=LPROC>Aprire il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> da convertire. Se si tratta di un <A HREF="javascript:HelpPopup('actip9.hlp','defMultiUserDatabase');" class="pop">database multiutente</A> che si trova in un server o in una cartella condivisa, assicurarsi che non sia aperto da altri utenti.
+<P class=LNT><B>Importante</B>&nbsp;&nbsp; Se il codice di Microsoft Visual Basic, Applications Edition (VBA) è stato protetto, sarà necessario fornire una password per eseguire la conversione. Per fornire la password, avviare Microsoft Visual Basic aprendo un modulo, quindi scegliere <B>Proprietà di</B> <I>nomedatabase</I> dal menu <B>Strumenti</B> e inserire la password nella finestra di dialogo visualizzata<I></I><B></B>.
+
+<P class=LT1>Per convertire un database di Access protetto, è necessario disporre delle autorizzazioni Apertura/esecuzione e Apertura esclusiva per il database stesso e dell'autorizzazione Lettura struttura per tutti gli oggetti contenuti. Per proteggere il database convertito, aprirlo con Microsoft Access 97 e applicare la <A HREF="javascript:HelpPopup('actip9.hlp','defUserLevelSecurity');" class="pop">protezione a livello utente</A>.
+<br><br></LI>
+
+	<LI class=LPROC>Scegliere <B>Utilità database</B> dal menu <B>Strumenti</B>, scegliere <B>Converti database</B>, quindi fare clic su <B>Alla versione precedente di Access</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella di testo <B>Nome file</B> della finestra di dialogo <B>Converti database con nome</B> digitare il nome del nuovo database da creare nel formato della versione precedente e fare clic sul pulsante <B>Salva</B>.</LI>
+</OL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se il database in formato Access 2000 contiene del codice, potrebbe essere necessario <A HREF="achowFixMissingReferencesAfterConvertingAccess2000DatabaseToAccess97.htm">risolvere i riferimenti mancanti</A> dopo la conversione in Microsoft Access 97. Inoltre, se il database di Access utilizza <A HREF="javascript:HelpPopup('actip9.hlp','defAddIn');" class="pop">componenti aggiuntivi</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di librerie</A> creati in Access 2000, sarà necessario convertire anche quelli in Access 97. </P>
+
+<P class=T>Per ulteriori informazioni, vedere <A HREF="acconAboutConvertingAccess2000DatabaseToAccess97.htm">Conversione di un database di Access 2000 in Access 97</A>.</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowConvertAccess2000DatabaseToAccess97W">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

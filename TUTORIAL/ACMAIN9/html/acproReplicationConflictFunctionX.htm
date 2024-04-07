@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproReplicationConflictFunctionX'
+Feature='acpro'
+Handoff='3'
+SourceFile='replconf.rtf'
+Tnum='187958'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà ReplicationConflictFunction</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproreplicationconflictfunctionx"></A>Esempio di proprietà ReplicationConflictFunction</B></P>
+
+
+
+<P class=T>Nella funzione riportata di seguito si imposta una proprietà di Microsoft Access per un oggetto DAO. È possibile utilizzare questa funzione per impostare la proprietà <B>ReplicationConflictFunction</B>. Se la proprietà non è già presente nell'insieme <B>Properties</B> dell'oggetto <B>Document</B> definito dall'utente, viene creata e accodata. Tenere presente che per impostare questa proprietà, è necessario fornire un valore <B>True</B> (-1) per l'argomento <CODE>blnDDL</CODE> opzionale.</P>
+
+<PRE class=CT><CODE>Function ImpostaProprietàAccess(obj As Object, strNome As String, _
+    intTipo As Integer, varImpostazione As Variant, _
+    Optional blnDDL As Boolean) As Boolean
+  Dim prp As Property
+  Const intPropNonTrovata As Integer = 3270
+
+  On Error GoTo Error_ImpostaProprietàAccess
+  ' Si riferisce in modo esplicito all'insieme Properties.
+  obj.Properties(strNome) = varImpostazione
+  obj.Properties.Refresh
+  ImpostaProprietàAccess = True
+
+Exit_ImpostaProprietàAccess:
+  Exit Function
+
+Error_ImpostaProprietàAccess:
+  If Err = intPropNonTrovata Then
+    ' Verifica se è stato passato l'argomento opzionale.
+    If Not IsMissing(blnDDL) Then
+      ' Crea la proprietà, specifica il tipo, imposta il valore iniziale e indica la DDL.
+      Set prp = obj.CreateProperty(strNome, intTipo, varImpostazione, blnDDL)
+    Else
+      ' Crea la proprietà, specifica il tipo, imposta il valore iniziale.
+      Set prp = obj.CreateProperty(strNome, intTipo, varImpostazione)
+    End If
+    ' Accoda l'oggetto Property all'insieme Properties.
+    obj.Properties.Append prp
+    obj.Properties.Refresh
+    ImpostaProprietàAccess = True
+    Resume Exit_ImpostaProprietàAccess
+  Else
+    MsgBox Err &amp; ": " &amp; vbCrLf &amp; Err.Description
+    ImpostaProprietàAccess = False
+    Resume Exit_ImpostaProprietàAccess
+  End If
+End Function</CODE></PRE>
+
+
+
+<P class=T>La routine riportata di seguito richiama la funzione ImpostaProprietàAccess per impostare la proprietà <B>ReplicationConflictFunction</B>:</P>
+
+<PRE class=CT><CODE>Sub ImpostaRisolutoreConflitti()
+  Dim dbs As Database, ctr As Container, doc As Document
+  Dim blnRestituito As Boolean
+
+  ' Restituisce il riferimento al database corrente.
+  Set dbs = CurrentDb
+  ' Restituisce il riferimento al container Databases.
+  Set ctr = dbs.Containers!Databases
+  ' Restituisce il riferimento all'oggetto SummaryInfo Document.
+  Set doc = ctr.Documents!definitodautente
+  blnRestituito = ImpostaProprietàAccess(doc, _
+    "<B>ReplicationConflictFunction</B>", dbText, "CustomResolver", True)
+  ' Valuta il valore restituito.
+  If blnRestituito = True Then
+    Debug.Print "Proprietà impostata con esito positivo."
+  Else
+    Debug.Print "Proprietà non impostata con esito positivo."
+  End If
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

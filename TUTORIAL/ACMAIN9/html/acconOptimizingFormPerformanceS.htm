@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOptimizingFormPerformanceS'
+Feature='Forms: Subform'
+Handoff='1'
+SourceFile='CFRMSUB.RTF'
+Tnum='187667'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Ottimizzare le prestazioni di una maschera e di una sottomaschera</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconoptimizingformperformances"></A>Ottimizzare le prestazioni di una maschera e di una sottomaschera</H1>
+
+<P class=T>È possibile effettuare diverse operazioni per far funzionare le maschere in modo più efficiente. Se si sta utilizzando un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A>, oltre ai suggerimenti che seguono è possibile utilizzare l'Analizzatore prestazioni per analizzare maschere specifiche nel database. Per ulteriori informazioni sull'utilizzo dell'Analizzatore prestazioni, fare clic su <A HREF="achowAnalyzerTopicsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<H2>Suggerimenti per le prestazioni</H2>
+
+<UL>
+	<LI class=LB1>Evitare di sovrapporre i controlli.<BR><BR></LI>
+
+	<LI class=LB1>Utilizzare bitmap e altri oggetti grafici con parsimonia. <BR><BR></LI>
+
+	<LI class=LB1>Convertire cornici di oggetto non associato che visualizzano grafica in controlli Immagine. <BR><BR></LI>
+
+	<LI class=LB1>Utilizzare bitmap in bianco e nero piuttosto che a colori.<BR><BR></LI>
+
+	<LI class=LB1>Chiudere le maschere che non vengono utilizzate.<BR><BR></LI>
+
+	<LI class=LB1>Se l'origine record sottostante include molti record e si desidera utilizzare la maschera essenzialmente per immettere nuovi record, impostare la proprietà <B>Immissione dati</B> della maschera a <B>Sì</B> in modo che la maschera si apra con un record vuoto. Se si apre una maschera nella quale sono visualizzati tutti i record, è necessario che venga letto ciascun record prima che venga visualizzato il record vuoto alla fine del set di record. <BR><BR></LI>
+
+	<LI class=LB1>Ordinare i record in una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> sottostante solo se l'ordine dei record stessi risulta importante, specialmente con le query a tabelle multiple.<BR><BR></LI>
+
+	<LI class=LB1>Basare le sottomaschere su query piuttosto che su tabelle e includere dall'origine record soltanto i campi assolutamente necessari. Campi aggiuntivi possono ridurre le prestazioni della sottomaschera.<BR><BR></LI>
+
+	<LI class=LB1><A HREF="javascript:HelpPopup('actip9.hlp','defIndex');" class="pop">Indicizzare</A> tutti i campi nella sottomaschera che sono collegati alla maschera principale.<BR><BR></LI>
+
+	<LI class=LB1>Indicizzare qualsiasi campo della sottomaschera utilizzato come criterio.<BR><BR></LI>
+
+	<LI class=LB1>Impostare a <B>No</B> le proprietà <B>Consenti modifiche</B>, <B>Consenti aggiunte</B> e <B>Consenti eliminazioni</B> della sottomaschera se i record contenuti nella sottomaschera non verranno modificati oppure impostare a <B>Snapshot</B> la proprietà <B>Tipo Recordset</B>. <BR><BR></LI>
+
+	<LI class=LB1>Eliminare il codice dalle maschere che non ne hanno necessità impostando a <B>No</B> la proprietà <B>Possiede modulo</B> della maschera. Questa<B> </B>proprietà specifica se la maschera debba disporre di un modulo della maschera. Una maschera senza modulo viene caricata più rapidamente e occupa meno spazio su disco. Se una maschera o i relativi controlli non utilizzano le routine evento, la maschera non richiede un modulo. Se ad esempio l'applicazione utilizza un pannello principale esclusivamente per passare ad altre maschere, invece di utilizzare i pulsanti di comando con le routine evento, è possibile utilizzare tali pulsanti con le macro o i <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlink');" class="pop">collegamenti ipertestuali</A>. È possibile comunque utilizzare il codice con una maschera che non dispone di alcun modulo richiamando le routine <B>Function</B> da un modulo standard mediante un'espressione. Tenere presente che non è possibile utilizzare le routine <B>Sub</B>, in quanto non possono essere richiamate mediante un'espressione. Per eseguire tale operazione, definire una routine <B>Function</B> in un modulo standard, quindi richiamare tale funzione da una proprietà di evento della maschera o di un controllo. Per utilizzare ad esempio un pulsante di comando per richiamare una funzione per aprire una maschera, aggiungere un'espressione alla proprietà <B>Su clic</B> del pulsante di comando simile a quella riportata di seguito: =OpenDataEntry(). 
+<P class=LNT><B>Nota</B>&nbsp;&nbsp; Se una maschera attualmente contiene routine evento e si decide di eliminare dalla maschera il codice di tutte le routine evento, è necessario impostare la proprietà <B>Possiede modulo</B> a <B>No</B> in modo da rimuovere completamente il modulo della maschera. 
+<P class=6>
+</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOptimizingFormPerformanceSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

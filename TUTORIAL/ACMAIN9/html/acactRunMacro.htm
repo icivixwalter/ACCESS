@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactRunMacro'
+Feature='acact'
+Handoff='1'
+SourceFile='act_q-z_1a.rtf'
+Tnum='188004'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione EseguiMacro</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactRunMacro">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactrunmacro"></A>Azione EseguiMacro</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRunMacroC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRunMacroX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione EseguiMacro per eseguire una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>. È possibile che la macro faccia parte di un <A HREF="javascript:HelpPopup('actip9.hlp','defMacroGroup');" class="pop">gruppo di macro</A>.</P>
+
+<P class=T>È possibile utilizzare l'azione:
+
+<UL>
+	<LI class=LB1>Per <A HREF="achowRunMacroAnotherMacroS.htm">eseguire una macro da un'altra macro</A>.<BR><BR></LI>
+
+	<LI class=LB1>Per <A HREF="achowMakeMacroRunCertainConditionsS.htm">eseguire una macro in una determinata condizione</A>.<BR><BR></LI>
+
+	<LI class=LB1>Per <A HREF="acdecAddCustomCommandsMenusS.htm">allegare una macro a un comando di menu personalizzato</A>.</LI>
+</UL>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione EseguiMacro utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=29%>Argomento azione</TH>
+<TH width=71%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Nome macro</TD>
+<TD class=TT width=71%>Il nome della macro da eseguire. La casella <B>Nome macro</B> della sezione <B>Argomenti azione</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A> visualizza tutte le macro e i gruppi di macro del database corrente. Se la macro fa parte di un gruppo di macro, viene elencata sotto il nome del gruppo come <I>nomegruppomacro</I>.<I>nomemacro</I>. L'argomento è obbligatorio.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>&nbsp;</TD>
+<TD class=TT width=71%>Se si esegue una macro contenente l'azione EseguiMacro in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, Microsoft Access cerca la macro con tale nome nel database di libreria e non nel database corrente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Numero ripetizioni</TD>
+<TD class=TT width=71%>Il numero massimo di volte per cui la macro viene eseguita. Se non si immette alcun valore per quest'argomento e neanche per l'argomento Numero ripetizioni, la macro viene eseguita una sola volta.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>Espressione arresto</TD>
+<TD class=TT width=71%><A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">Espressione</A> uguale a <B>True</B> (-1) o <B>False</B> (0). La macro si arresta se l'espressione è uguale a <B>False</B>. L'espressione viene valutata ogni volta che si esegue la macro.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Se si immette il nome di un gruppo di macro per l'argomento Nome macro, viene eseguita la prima macro del gruppo.</P>
+
+<P class=T>Tale azione equivale a scegliere <B>Macro</B> dal menu <B>Strumenti</B>, comando che può essere utilizzato per selezionare ed eseguire una determinata macro. Il comando tuttavia esegue la macro una sola volta, mentre l'azione EseguiMacro è in grado di eseguire una macro per il numero desiderato di volte.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; È possibile utilizzare gli argomenti Numero ripetizioni ed Espressione arresto per determinare il numero di volte per cui verrà eseguita la macro:
+
+<UL>
+	<LI class=NLB>Se non si immette alcun valore per alcuno degli argomenti, la macro viene eseguita una sola volta.<BR><BR></LI>
+
+	<LI class=NLB>Se si immette un numero per Numero ripetizioni, ma non per Espressione arresto, la macro verrà eseguita per il numero di volte specificato.<BR><BR></LI>
+
+	<LI class=NLB>Se si immette un'espressione per Espressione arresto ma non per Numero ripetizioni, la macro viene eseguita fino a che l'espressione è uguale a <B>False</B>.<BR><BR></LI>
+
+	<LI class=NLB>Se si immettono valori per entrambi gli argomenti, la macro viene eseguita per il numero di volte specificato in Numero ripetizioni o fino a quando Espressione arresto è uguale a <B>False</B>, a seconda del caso che si verifica per primo.</LI>
+</UL>
+
+
+
+<P class=T>Quando si esegue una macro che contiene l'azione EseguiMacro e questa raggiunge tale azione, viene eseguita la macro richiamata. Quando questa è stata portata a termine, Microsoft Access ritorna alla macro originale ed esegue l'azione successiva.</P>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=NLB>È possibile chiamare una macro dello stesso gruppo di macro o di un altro gruppo.<BR><BR></LI>
+
+	<LI class=NLB>È possibile nidificare macro, cioè eseguire la macro A, che a propria volta chiama la macro B, e così via. In qualsiasi caso, quando la macro chiamata è al termine, Microsoft Access ritorna alla macro che ha chiamato quella precedente ed esegue l'azione successiva di quella macro.</LI>
+</UL>
+
+
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Per eseguire una macro dal menu personalizzato è possibile utilizzare l'azione EseguiMacro in un gruppo di macro che definisce i comandi personalizzati per una <A HREF="javascript:HelpPopup('actip9.hlp','defMenuBar');" class="pop">barra dei menu</A> personalizzata. Risulta tuttavia più semplice utilizzare la nuova funzionalità delle <A HREF="javascript:HelpPopup('actip9.hlp','defCommandBar');" class="pop">barre dei comandi</A> che permette di eseguire una macro da una barra dei menu, da una <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> o da un <A HREF="javascript:HelpPopup('actip9.hlp','defShortCutMenus');" class="pop">menu di scelta rapida</A>. Scegliere <B>Barre degli strumenti</B> dal menu <B>Visualizza</B>, quindi <B>Personalizza</B> per visualizzare la finestra di dialogo <B>Personalizza</B>. Nella scheda <B>Barre degli strumenti</B> selezionare la barra dei menu, la barra degli strumenti o il menu di scelta rapida da cui si desidera eseguire la macro. Nella scheda <B>Comandi</B> selezionare <B>Tutte le macro</B> nella casella <B>Categorie</B>, quindi selezionare nella casella <B>Comandi</B> la macro che si desidera eseguire e trascinarla nella barra dei menu, nella barra degli strumenti o nel menu di scelta rapida. La macro viene eseguita quando si fa clic sulla relativa icona nella barra dei menu, nella barra degli strumenti o nel menu di scelta rapida. È inoltre possibile trascinare una macro dalla <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> su una barra dei menu o degli strumenti e verrà creata un'icona che esegue tale macro.</P>
+
+
+
+<P class=T>Per eseguire l'azione EseguiMacro in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>RunMacro</B></A> dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

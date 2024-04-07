@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproMDE'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew8.doc'
+Tnum='187448'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà MDE</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acpromde"></A>Proprietà MDE</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproMDEC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproMDEX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproMDEA;daobjDatabase">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>MDE</B> per determinare se un database è stato salvato come file MDE.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Questa proprietà è disponibile solo con un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB).</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>Quando un database è salvato come file MDE, Microsoft Access aggiunge la proprietà <B>MDE</B> al database e la imposta al valore <A HREF="javascript:HelpPopup('actip9.hlp','defStringDataType');" class="pop"><B>Stringa</B></A> "T".</P>
+
+<P class=T>La proprietà <B>MDE</B> può essere impostata solo utilizzando <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A> ed è di sola lettura in tutte le visualizzazioni.</P>
+
+<P class=IT><B>Importante</B>&nbsp;&nbsp; Il tentativo di impostare la proprietà <B>MDE</B> per un database che non è stato salvato come file MDE genera un <A HREF="javascript:HelpPopup('actip9.hlp','defRunTimeError');" class="pop">errore di run-time</A> 3270 (proprietà non trovata). La proprietà <B>MDE</B> non esiste nel database finché questo non viene salvato come file MDE.</P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile convertire un database in un file MDE scegliendo <B>Utilità database</B> dal menu <B>Strumenti</B>, quindi <B>Crea file MDE</B>. Quando si salva un database come un file MDE, tutto il codice sorgente modificabile viene rimosso, tutti i moduli vengono compilati e il database compattato. Il codice Visual Basic continua a funzionare, ma non può essere visualizzato o modificato. Non è possibile aggiungere oggetti relativi ai report o alle maschere, né apportarvi delle modifiche.</P>
+
+
+
+<P class=WT><B>Attenzione</B>&nbsp;&nbsp; Assicurarsi di conservare una copia del database originale. Se si desidera modificare del codice o la struttura degli oggetti in un database MDE, è necessario farlo nel database originale per poi creare un nuovo database MDE. Il database originale è anche necessario per poterlo convertire nel formato delle future versioni di Microsoft Access, in quanto non è possibile effettuare direttamente la conversione di file MDE.</P>
+
+
+
+<P class=T>Il salvataggio di un database come file MDE è consigliato quando si desidera evitare modifiche alle maschere o ai report, oppure nascondere il codice Visual Basic agli altri utenti del database. È inoltre possibile convertire un database in un file MDE quando si realizzano delle procedure guidate personalizzate oppure per la parte front end di un'<A HREF="javascript:HelpPopup('actip9.hlp','defFrontBackEndApp');" class="pop">applicazione frontend/backend</A>.</P>
+
+<P class=T>Un database duplicato non può essere salvato come file MDE. Se tuttavia il database è stato salvato come file MDE, può essere duplicato.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

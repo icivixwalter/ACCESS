@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateColumnX'
+Feature='achow'
+Handoff='3'
+SourceFile='acaNewX.doc'
+Tnum='274267'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di creazione di colonne</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="achowcreatecolumnx"></A>Esempio di creazione di colonne</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creata una nuova tabella con due colonne. Una delle colonne è impostata a Contatore. La procedura rende inoltre la colonna Contatore la chiave primaria della tabella. </P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà AutoIncrement non è disponibile in un progetto di Access (adp) tramite il provider SQL fornito con Microsoft Access 2000. È necessario impostare un riferimento a "Microsoft ADO ext. 2.1 for DDL and Security" per utilizzare questo esempio.</P>
+
+<PRE class=CT><CODE>Sub NewTable()
+&nbsp;&nbsp;&nbsp; Dim tbl As New ADOX.Table
+&nbsp;&nbsp;&nbsp; Dim cat As New ADOX.Catalog
+&nbsp;&nbsp;&nbsp; Dim idx As New ADOX.Index
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set cat.ActiveConnection = CurrentProject.Connection
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</CODE> <CODE>With tbl</CODE>
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Name = "Contatti"&nbsp;&nbsp;&nbsp; </CODE>
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With .Columns</CODE>
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Append "IDContatto", adInteger</CODE>
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Append "Contatto", , 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </CODE>
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </CODE>
+<CODE>    'In un adp omettere la seguente proposizione With.</CODE>
+<CODE>     With !IDContatto</CODE>
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set .ParentCatalog = cat</CODE>
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Properties("AutoIncrement")=True</CODE>
+<CODE>     End With</CODE>
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End With</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; End With</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; </CODE>
+<CODE>&nbsp;&nbsp;&nbsp; ' Crea l'indice chiavi primarie.</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; idx.Name = "PrimaryKey"</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; </CODE>
+<CODE>&nbsp;&nbsp;&nbsp; ' Accoda la colonna indice.</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; idx.Columns.Append "IDContatto", adInteger</CODE>
+
+<CODE>&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta la proprietà PrimaryKey.</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; idx.PrimaryKey = True</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; ' Accoda l'indice.</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; tbl.Indexes.Append idx</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; ' Accoda l'oggetto TableDef.</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; cat.Tables.Append tbl</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; </CODE>
+<CODE>&nbsp;&nbsp;&nbsp; Set tbl = Nothing</CODE>
+<CODE>&nbsp;&nbsp;&nbsp; Set cat = Nothing</CODE>
+<CODE>End Sub</CODE>
+</PRE>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateColumnXW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

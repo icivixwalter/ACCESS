@@ -1,0 +1,558 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowDDEUsingAsServer'
+Feature='achow'
+Handoff='1'
+SourceFile='ddestuff.rtf'
+Tnum='186349'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare Microsoft Access come server DDE</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vaconUnderstandingOLEAutomation">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowddeusingasserver"></A>Utilizzare Microsoft Access come server DDE</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowDDEUsingAsServerC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowDDEUsingAsServerX">
+</OBJECT></P>
+
+
+
+<P class=T><A HREF="javascript:HelpPopup('actip9.hlp','defDDE');" class="pop">DDE (Dynamic Data Exchange</A>) è supportato da Microsoft Access come applicazione di destinazione (client) o come applicazione di origine (server). Un'applicazione come Microsoft Word, ad esempio, che funge da client, può richiedere dati tramite DDE a un database di Microsoft Access che funge da server.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Se è necessario manipolare gli oggetti Microsoft Access da un'altra applicazione, è possibile utilizzare l'<A HREF="JavaScript:hhobj_3.Click()">Automazione</A>.</P>
+
+
+
+<P class=T>Una conversazione DDE tra un client ed un server viene stabilita in base a un particolare <A HREF="javascript:HelpPopup('actip9.hlp','defTopic');" class="pop">argomento</A>. Un argomento può essere un file di dati nel formato supportato dall'applicazione server oppure l'argomento System che fornisce informazioni sull'applicazione server stessa. Quando si inizia una conversazione basata su un particolare argomento, è possibile trasferire solo un <A HREF="javascript:HelpPopup('actip9.hlp','defDataItem');" class="pop">dato</A> a esso associato.</P>
+
+<P class=T>Si supponga, ad esempio, di utilizzare Microsoft Word e che si desideri inserire i dati di un determinato database di Microsoft Access in un documento. Per trasferire i dati dal database a Microsoft Word attraverso un <A HREF="javascript:HelpPopup('actip9.hlp','defDDEChannel');" class="pop">canale DDE</A>, è possibile iniziare una conversazione DDE con Microsoft Access aprendo tale canale con la funzione <A HREF="acfctDDEInitiate.htm"><B>DDEInitiate</B></A> e specificando il nome file del database come argomento.</P>
+
+<P class=T>In qualità di server DDE Microsoft Access supporta gli argomenti riportati di seguito:
+
+<UL>
+	<LI class=LB1>L'argomento System<BR><BR></LI>
+
+	<LI class=LB1>Il nome di un database (argomento <I>database</I>)<BR><BR></LI>
+
+	<LI class=LB1>Il nome di una tabella (argomento <I>nometabella</I>)<BR><BR></LI>
+
+	<LI class=LB1>Il nome di una query (argomento <I>nomequery</I>)<BR><BR></LI>
+
+	<LI class=LB1>Una <A HREF="javascript:HelpPopup('actip9.hlp','defSQLString');" class="pop">stringa SQL</A> Microsoft Access (argomento <I>stringasql</I>)
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Dopo aver stabilito una conversazione DDE, è possibile utilizzare l'istruzione <A HREF="acstmDDEExecute.htm"><B>DDEExecute</B></A> per inviare un comando dal client all'applicazione server. Quando Microsoft Access viene utilizzato come server DDE, riconosce come validi i comandi riportati di seguito:
+
+<UL>
+	<LI class=LB1>Il nome di una macro contenuta nel database corrente.<BR><BR></LI>
+
+	<LI class=LB1>Qualsiasi azione possa essere eseguita in Visual Basic con uno dei metodi dell'oggetto <A HREF="JavaScript:hhobj_4.Click()"><B>DoCmd</B></A>.<BR><BR></LI>
+
+	<LI class=LB1>Le azioni ApriDatabase e ChiudiDatabase, utilizzate solo per le operazioni DDE. Per un esempio sull'utilizzo di tali azioni, vedere più avanti in questa sezione.
+<P class=4>
+</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se come istruzione <B>DDEExecute</B> viene specificata un'azione <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>, l'azione e gli argomenti seguono la sintassi dell'oggetto <B>DoCmd</B> e devono essere racchiusi tra parentesi quadre ([ ]). Le applicazioni che supportano DDE non riconoscono tuttavia le <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A> nelle operazioni DDE. Se inoltre la stringa contiene una virgola, è necessario che gli argomenti stringa siano racchiusi tra virgolette ("&nbsp;"), in caso contrario, le virgolette non sono richieste.</P>
+
+
+
+<P class=T>L'applicazione client può utilizzare la funzione <A HREF="acfctDDERequest.htm"><B>DDERequest</B></A> per richiedere i dati di tipo testo all'applicazione server attraverso un canale DDE aperto oppure può utilizzare l'istruzione <A HREF="acstmDDEPoke.htm"><B>DDEPoke</B></A> per inviare i dati all'applicazione server. Quando il trasferimento dei dati viene completato, il client può utilizzare l'istruzione <A HREF="acstmDDETerminate.htm"><B>DDETerminate</B></A> per chiudere il canale DDE oppure l'istruzione <A HREF="acstmDDETerminateAll.htm"><B>DDETerminateAll</B></A> per chiudere tutti i canali aperti.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Quando l'applicazione client ha terminato di ricevere i dati attraverso un canale DDE, è necessario chiudere il canale per risparmiare risorse di memoria.</P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come creare una routine Microsoft Word con Visual Basic che utilizza Microsoft Access come server DDE. Perché questo esempio possa funzionare, è necessario che Microsoft Access sia in esecuzione.</P>
+
+<PRE class=CT><CODE>Sub DDEAccess()
+&nbsp;&nbsp;&nbsp; Dim intCan1 As Integer, intCan2 As Integer
+&nbsp;&nbsp;&nbsp; Dim strDatiQuery As String
+
+&nbsp;&nbsp;&nbsp; ' Utilizza argomento System per aprire il database di esempio Northwind.
+&nbsp;&nbsp;&nbsp; ' Prima di utilizzare altri argomenti DDE, apri il database.
+&nbsp;&nbsp;&nbsp; intCan1 = DDEInitiate("MSAccess", "System")
+&nbsp;&nbsp;&nbsp; ' Può essere necessario modificare il percorso per scegliere la posizione effettiva 
+&nbsp;&nbsp;&nbsp; ' del database di esempio Northwind.
+&nbsp;&nbsp;&nbsp; DDEExecute intCan1, "[OpenDatabase C:\Access\Esempi\Northwind.mdb]"
+
+&nbsp;&nbsp;&nbsp; ' Reperisce tutti i dati della query Dieci prodotti più costosi.
+&nbsp;&nbsp;&nbsp; intCan2 = DDEInitiate("MSAccess", "Northwind.mdb;" _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "QUERY Dieci prodotti più costosi")
+&nbsp;&nbsp;&nbsp; strDatiQuery = DDERequest(intCan2, "Tutti")
+&nbsp;&nbsp;&nbsp; DDETerminate intCan2
+
+&nbsp;&nbsp;&nbsp; ' Chiude il database.
+&nbsp;&nbsp;&nbsp; DDEExecute intCan1, "[ChiudiDatabase]"
+&nbsp;&nbsp;&nbsp; DDETerminate intCan1
+
+&nbsp;&nbsp;&nbsp; ' Stampa i dati recuperati nella finestra Debug.
+&nbsp;&nbsp;&nbsp; Debug.Print strDatiQuery
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Per informazioni sull'utilizzo di Microsoft Access come client DDE, vedere il <I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I>. Per informazioni su come ottenere il <I>Manuale del programmatore</I>, fare clic su <A HREF="JavaScript:hhobj_5.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Nelle sezioni seguenti sono fornite informazioni sugli argomenti DDE validi, supportati da Microsoft Access.</P>
+
+<P class=RL><B>L'argomento System</B></P>
+
+<P class=T>L'argomento System è un argomento standard di tutte le applicazioni per Microsoft Windows. Esso fornisce informazioni sugli altri argomenti supportati dall'applicazione. Per accedere a tali informazioni, è necessario che il codice prima chiami la funzione <B>DDEInitiate</B>, utilizzando <CODE>"System"</CODE> come <I>argomento</I>, poi esegua l'istruzione <B>DDERequest</B> utilizzando come argomento uno degli <I>elementi</I> riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=21%>Elemento</TH>
+<TH width=79%>Restituisce</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>SysItems</TD>
+<TD class=TT width=79%>Un elenco di elementi supportati dall'argomento System in Microsoft Access.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Formats</TD>
+<TD class=TT width=79%>Un elenco dei formati di Microsoft Access che è possibile copiare negli Appunti.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Status</TD>
+<TD class=TT width=79%>"Occupato" o "Pronto".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Topics</TD>
+<TD class=TT width=79%>Un elenco di tutti i database aperti.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato l'utilizzo delle funzioni <B>DDEInitiate</B> e <B>DDERequest</B> con l'argomento System.</P>
+
+<PRE class=CT><CODE>' In Visual Basic, inizia una conversazione DDE con Microsoft Access.
+Dim intCan1 As Integer, strRisultati As String
+intCan1 = DDEInitiate("MSAccess", "System")
+' Richiede elenco degli elementi supportati da System.
+strRisultati = DDERequest(intCan1, "SysItems")
+' Esegue azione ApriDatabase per aprire Northwind.mdb.
+' Può essere necessario modificare il percorso per scegliere la posizione effettiva
+' del database di esempio Northwind.
+DDEExecute intCan1, "[ApriDatabase C:\Access\Esempi\Northwind.mdb]"</CODE></PRE>
+
+
+
+<P class=RL><B>L'argomento <I>database</I></B></P>
+
+<P class=T>L'argomento <I>database</I> è il nome file di un database esistente. È possibile digitarne solo il nome (Northwind) oppure specificarne anche il percorso e l'estensione MDB (C:\Access\Esempi\Northwind.mdb). Dopo aver iniziato una conversazione DDE con il database, è possibile richiedere un elenco degli oggetti in esso contenuti.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Non è possibile utilizzare DDE per eseguire query nel <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> di Microsoft Access.</P>
+
+
+
+<P class=T>L'argomento <I>database</I> supporta gli elementi riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=29%>Elemento</TH>
+<TH width=71%>Restituisce</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>TableList</TD>
+<TD class=TT width=71%>Un elenco di tabelle.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>QueryList</TD>
+<TD class=TT width=71%>Un elenco di query.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>FormList</TD>
+<TD class=TT width=71%>Un elenco di maschere.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>ReportList</TD>
+<TD class=TT width=71%>Un elenco di report.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>MacroList</TD>
+<TD class=TT width=71%>Un elenco di macro.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>ModuleList</TD>
+<TD class=TT width=71%>Un elenco di moduli.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>ViewList</TD>
+<TD class=TT width=71%>Un elenco di visualizzazioni.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>StoredProcedureList</TD>
+<TD class=TT width=71%>Un elenco di stored procedure.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%>DatabaseDiagramList</TD>
+<TD class=TT width=71%>Un elenco di diagrammi di database.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come aprire la maschera Impiegati nel database di esempio Northwind da una routine Visual Basic.</P>
+
+<PRE class=CT><CODE>' In Visual Basic, inizia una conversazione DDE con
+' il database di esempio Northwind.
+' Verificare che il database sia aperto.
+intCan2 = DDEInitiate("MSAccess", "Northwind")
+' Richiede elenco delle maschere nel database di esempio Northwind.
+strRisposta = DDERequest(intCan2, "FormList")
+' Esegue azione ApriMaschera ed argomenti per aprire la maschera Impiegati.
+DDEExecute intCan2, "[ApriMaschera Impiegati,0,,,1,0]"</CODE></PRE>
+
+
+
+<P class=RL><B>Gli argomenti TABLE <I>nometabella</I>, QUERY <I>nomequery</I> e SQL <I>stringasql</I></B></P>
+
+<P class=T>Questi argomenti utilizzano la seguente sintassi:</P>
+
+<P class=SYN><I>nomedatabase</I><B>; TABLE</B> <I>nometabella</I></P>
+
+<P class=SYN><I>nomedatabase</I><B>; QUERY</B> <I>nomequery</I></P>
+
+<P class=SYN><I>nomedatabase</I><B>; SQL [</B><I>stringasql</I><B>]</B></P>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=23%>Parte</TH>
+<TH width=77%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>nomedatabase</I></TD>
+<TD class=TT width=77%>Il nome del database in cui si trova la tabella o la query o a cui viene applicata l'istruzione SQL, seguita da un punto e virgola (;). Il nome del database può essere costituito solo dal nome (Northwind) oppure anche dal percorso completo e dall'estensione MDB (C:\Access\Esempi\Northwind.mdb).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>nometabella</I></TD>
+<TD class=TT width=77%>Il nome di una tabella esistente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>nomequery</I></TD>
+<TD class=TT width=77%>Il nome di una query esistente.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>stringasql</I></TD>
+<TD class=TT width=77%>Un'istruzione SQL valida, costituita da un massimo di 256 caratteri che termina con un punto e virgola. Per poter scambiare più di 256 caratteri, omettere questo argomento ed utilizzare una sequenza di istruzioni <B>DDEPoke</B> per generare un'istruzione SQL.
+<P class=TT>Il codice Visual Basic riportato di seguitoutilizza ad esempio l'istruzione <B>DDEPoke</B> per generare un'istruzione SQL, quindi richiede i risultati della query.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD colspan=2 width=77%>
+<PRE class=TCT><CODE>intChan1 = DDEInitiate("MSAccess", "Northwind;SQL") DDEPoke intCan1, "TestoSQL", "SELECT *"
+DDEPoke intCan1, "SQLText", " FROM Ordini"
+DDEPoke intCan1, "SQLText", " WHERE [Trasporto] &gt; 100;"
+strRisposta = DDERequest(intCan1, "NextRow")
+DDETerminate intCan1</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nella tabella riportata di seguito sono elencati gli elementi validi per gli argomenti TABLE <I>nometabella</I>, QUERY <I>nomequery</I> e SQL <I>stringasql</I>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=21%>Elemento</TH>
+<TH colspan=2 width=79%>Restituisce</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>All</TD>
+<TD class=TT colspan=2 width=79%>Tutti i dati della tabella, inclusi i nomi dei campi.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>Data</TD>
+<TD class=TT colspan=2 width=79%>Tutte le righe di dati, senza i nomi dei campi.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>FieldNames</TD>
+<TD class=TT colspan=2 width=79%>Un elenco su un'unica riga dei nomi dei campi.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>FieldNames;T</TD>
+<TD class=TT colspan=2 width=79%>Un elenco su due righe dei nomi dei campi (prima riga) e dei relativi tipi di dati (seconda riga).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT colspan=2 width=79%>Di seguito sono riportati i valori restituiti ed i tipi di dati che essi rappresentano:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TH width=13%>Valore</TH>
+<TH width=66%>Tipo di dati</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>0</TD>
+<TD class=TT width=66%>Non valido</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>1</TD>
+<TD class=TT width=66%><B>True</B>/<B>False</B> (non <B>Null</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>2</TD>
+<TD class=TT width=66%>Byte senza segno</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>3</TD>
+<TD class=TT width=66%>Intero a 2 byte con segno (<B>Intero</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>4</TD>
+<TD class=TT width=66%>Intero a 4 byte con segno (<B>Lungo</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>5</TD>
+<TD class=TT width=66%>Intero a 8 byte con segno (<B>Valuta</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>6</TD>
+<TD class=TT width=66%>Virgola mobile a precisione singola a 4 byte (<B>Precisione singola</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>7</TD>
+<TD class=TT width=66%>Virgola mobile in precisione doppia a 8 byte (<B>Precisione doppia</B>)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>8</TD>
+<TD class=TT width=66%>Data/Ora</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>9</TD>
+<TD class=TT width=66%>Dati binari, massimo 256 byte</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>10</TD>
+<TD class=TT width=66%>Testo <A HREF="javascript:HelpPopup('actip9.hlp','defANSI');" class="pop">ANSI</A>, senza distinzione tra maiuscole e minuscole, massimo 256 byte (Testo)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>11</TD>
+<TD class=TT width=66%>Binario lungo (Oggetto OLE)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>&nbsp;</TD>
+<TD class=TT width=13%>12</TD>
+<TD class=TT width=66%>Testo lungo (Memo)
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>NextRow</TD>
+<TD class=TT colspan=2 width=79%>I dati contenuti nella riga successiva della tabella o della query. Quando viene aperto un canale, NextRow restituisce i dati della prima riga. Se NextRow viene eseguito quando la riga corrente costituisce l'ultimo record, la richiesta ha esito negativo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>PrevRow</TD>
+<TD class=TT colspan=2 width=79%>I dati contenuti nella riga precedente della tabella o della query. Se PrevRow rappresenta la prima richiesta su un nuovo canale, vengono restituiti i dati nell'ultima riga della tabella o della query. Se il primo record è quello corrente, la richiesta ha esito negativo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>FirstRow</TD>
+<TD class=TT colspan=2 width=79%>I dati contenuti nella prima riga della tabella o della query.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>LastRow</TD>
+<TD class=TT colspan=2 width=79%>I dati contenuti nell'ultima riga della tabella o della query.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>FieldCount</TD>
+<TD class=TT colspan=2 width=79%>Il numero di campi contenuti nella tabella o nella query.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>SQLText</TD>
+<TD class=TT colspan=2 width=79%>Un'istruzione SQL che rappresenta la tabella o la query. Per le tabelle, questo elemento restituisce un'istruzione SQL nel formato "SELECT * FROM <I>tabella</I>;".</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%>SQLText;<I>n</I></TD>
+<TD class=TT colspan=2 width=79%>Un'istruzione SQL, in parti di <I>n</I> caratteri, che rappresenta una tabella o una query, dove <I>n</I> è un numero intero compreso tra 0 e 256. Se, ad esempio, una query è rappresentata dalla seguente istruzione SQL:
+<PRE class=TCT><CODE>"SELECT * FROM Ordini;"</CODE></PRE>
+
+
+
+<P class=TT>L'elemento "SQLText;7" restituisce le seguenti parti delimitate da tabulazioni:</P>
+
+<PRE class=TCT><CODE>"SELECT "</CODE></PRE>
+
+
+
+<PRE class=TCT><CODE>"* FROM "</CODE></PRE>
+
+
+
+<PRE class=TCT><CODE>"Ordini;"</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come utilizzare DDE in una routine Visual Basic per richiedere i dati di una tabella del database di esempio Northwind ed inserirli in un file di testo.</P>
+
+<PRE class=CT><CODE>Sub DDENorthwind
+&nbsp;&nbsp;&nbsp; Dim intCan1 As Integer, intCan2 As Integer, intCan3 As Integer
+&nbsp;&nbsp;&nbsp; Dim strRisp1 As Variant, strRisp2 As Variant, strRisp3 As Variant
+
+&nbsp;&nbsp;&nbsp; ' In un modulo Visual Basic, reperisce i dati della tabella Categorie,
+&nbsp;&nbsp;&nbsp; ' della query Catalogo e della tabella Ordini in Northwind.mdb.
+&nbsp;&nbsp;&nbsp; ' Verificare prima che il database sia aperto.
+&nbsp;&nbsp;&nbsp; intCan1 = DDEInitiate("MSAccess", "Northwind;TABLE Corrieri")
+&nbsp;&nbsp;&nbsp; intCan2 = DDEInitiate("MSAccess", "Northwind;QUERY Catalogo")
+&nbsp;&nbsp;&nbsp; intCan3 = DDEInitiate("MSAccess", "Northwind;SQL SELECT * " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "FROM Ordini " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "WHERE IDOrdine &gt; 10050;")
+
+&nbsp;&nbsp;&nbsp; strRisp1 = DDERequest(intCan1, "All")
+&nbsp;&nbsp;&nbsp; strRisp2 = DDERequest(intCan2, "FieldNames;T")
+&nbsp;&nbsp;&nbsp; strRisp3 = DDERequest(intCan3, "FieldNames;T")
+&nbsp;&nbsp;&nbsp; DDETerminate intCan1
+&nbsp;&nbsp;&nbsp; DDETerminate intCan2
+&nbsp;&nbsp;&nbsp; DDETerminate intCan3
+
+&nbsp;&nbsp;&nbsp; ' Inserisce dati nel file di testo.
+&nbsp;&nbsp;&nbsp; Open "C:\DATA.TXT" For Append As #1
+&nbsp;&nbsp;&nbsp; Print #1, strRisp1
+&nbsp;&nbsp;&nbsp; Print #1, strRisp2
+&nbsp;&nbsp;&nbsp; Print #1, strRisp3
+&nbsp;&nbsp;&nbsp; Close #1
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

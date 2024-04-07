@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlTransformX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234566'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione TRANSFORM (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqltransformx"></A>Esempio di istruzione TRANSFORM (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare alcuna tabella o query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si crea una query a campi incrociati che mostra le vendite registrate ogni mese di un anno specificato dall'utente. I mesi vengono restituiti da sinistra a destra (pivot) come colonne e i nomi dei prodotti vengono restituiti dall'alto verso il basso come righe.</P>
+
+<PRE class=CT><CODE>PARAMETERS [Vendite per quale anno?] LONG;<B>TRANSFORM</B> Somma([Dettagli ordini].Quantità * _
+    ([Dettagli Ordine].PrezzoUnitario - _
+    ([Dettagli ordini].Sconto / 100) * _
+    [Dettagli ordini].PrezzoUnitario)) AS Vendite
+SELECT NomeProdotto FROM Ordini
+INNER JOIN (Prodotti INNER JOIN [Dettagli ordini]
+ON Prodotti.IDProdotto = [Dettagli ordini].IDProdotto)
+ON Ordini.IDOrdine = [Dettagli ordini].IDOrdine
+WHERE DatePart("aaaa", DataOrdine) = _
+    [Vendite per quale anno?]
+GROUP BY NomeProdotto
+ORDER BY NomeProdotto
+PIVOT DatePart("m", DataOrdine);</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si crea una query a campi incrociati che restituisce le vendite trimestrali di ogni fornitore relative a un anno specificato dall'utente. I trimestri vengono restituiti da sinistra a destra (pivot) come colonne e i nomi dei fornitori vengono restituiti dall'alto verso il basso come righe.</P>
+
+<PRE class=CT><CODE>PARAMETERS [Vendite per quale anno?] LONG; <B>TRANSFORM</B> Somma([Dettagli ordini].Quantità * _
+    ([Dettagli ordini].PrezzoUnitario - _
+    ([Dettagli ordini].Sconto / 100) * _
+    [Dettagli ordini].PrezzoUnitario)) AS Vendite
+SELECT NomeSocietà FROM Ordini
+INNER JOIN ((Fornitori INNER JOIN Prodotti
+ON Fornitori.IDFornitore = Prodotti.IDFornitore)
+INNER JOIN [Dettagli ordini] ON Prodotti.IDProdotto = _
+    [Dettagli ordini].IDProdotto)
+ON Ordini.IDOrdine = [Dettagli ordini].IDOrdine
+WHERE DatePart("aaaa", DataOrdine) = _
+    [Vendite per quale anno?]
+GROUP BY NomeSocietà
+ORDER BY NomeSocietà
+PIVOT "Trim " &amp; DatePart("t", DataOrdine) _
+    In ('Trim 1', 'Trim 2', 'Trim 3', 'Trim 4');</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

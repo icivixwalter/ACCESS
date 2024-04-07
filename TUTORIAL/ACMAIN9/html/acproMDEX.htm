@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproMDEX'
+Feature='acpro'
+Handoff='2'
+SourceFile='apronew8.doc'
+Tnum='187450'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà MDE</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpromdex"></A>Esempio di proprietà MDE</B> </P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzata la funzione MDE per controllare la proprietà <B>MDE</B> per il database corrente.</P>
+
+<PRE class=CT><CODE>Dim dbs As Object
+Set dbs = CurrentDb
+If IsItMDE(dbs) &lt;&gt; True Then
+  ' Elabora il codice del database del cliente.
+End If
+
+Function IsItMDE(dbs as Object) As Boolean
+  Dim strMDE As String
+  On Error Resume Next
+  strMDE = dbs.Properties("<B>MDE</B>")
+  If Err = 0 AND strMDE = "T" Then
+    ' Questo è un database MDE.
+    IsItMDE = True
+  Else
+    IsITMDE = False
+  End if
+End Function</CODE></PRE>
+
+
+
+</BODY>
+</HTML>

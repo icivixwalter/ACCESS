@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactRequery'
+Feature='acact'
+Handoff='1'
+SourceFile='act_v8.rtf'
+Tnum='187960'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione RieseguiQuery</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthRequery">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactRequery">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdmthADORequery">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactrequery"></A>Azione RieseguiQuery</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRequeryC;mdmthADORequery">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRequeryX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione RieseguiQuery per aggiornare i dati contenuti in un determinato <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> nell'<A HREF="javascript:HelpPopup('actip9.hlp','defObject');" class="pop">oggetto</A> attivo tramite la <A HREF="javascript:HelpPopup('actip9.hlp','defRequery');" class="pop">riesecuzione di query</A> sull'origine del controllo. Se non è stato specificato alcun controllo, l'azione rieseguirà la query sull'origine dell'oggetto stesso. Utilizzare tale azione per essere certi che l'oggetto attivo o uno dei relativi controlli visualizzi i dati più recenti.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione RieseguiQuery utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome controllo</TD>
+<TD class=TT width=75%>Il nome del controllo che si desidera aggiornare. Immettere il nome del controllo nella casella <B>Nome controllo</B> della sezione <B>Argomenti azione</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. Si consiglia di utilizzare solo il nome del controllo, non l'identificatore completo, come <B>Forms</B>!<I>nomemaschera</I>!<I>nomecontrollo</I>. Per rieseguire la query sull'origine dell'oggetto attivo, non immettere alcun valore per quest'argomento. Se l'oggetto attivo è un <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defDynaset');" class="pop">set di risultati</A> di query, è necessario non immettere alcun valore per l'argomento.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>L'azione RieseguiQuery:
+
+<UL>
+	<LI class=LB1>Riesegue la query su cui è basato il controllo o l'oggetto.<BR><BR></LI>
+
+	<LI class=LB1>Visualizza tutti i record nuovi o modificati e rimuove i record eliminati dalla <A HREF="javascript:HelpPopup('actip9.hlp','defTable');" class="pop">tabella</A> su cui è basato il controllo o l'oggetto.
+<P class=4>
+</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'azione RieseguiQuery non influenza la posizione del puntatore del record.</P>
+
+<P class=T>I controlli basati su una query o su una tabella comprendono:
+
+<UL>
+	<LI class=LB1><A HREF="javascript:HelpPopup('actip9.hlp','defListBox');" class="pop">Caselle di riepilogo</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">caselle combinate</A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="javascript:HelpPopup('actip9.hlp','defSubformSubreport');" class="pop">Controlli di tipo sottomaschera</A><BR><BR></LI>
+
+	<LI class=LB1><A HREF="javascript:HelpPopup('actip9.hlp','defOLEObject');" class="pop">Oggetti OLE</A>, come <A HREF="acctlChartControl.htm">grafici</A><BR><BR></LI>
+
+	<LI class=LB1>Controlli contenenti <A HREF="javascript:HelpPopup('actip9.hlp','defDomainFunction');" class="pop">funzioni di aggregazione sui domini</A>, come <A HREF="acfctDSum.htm"><B>DSum</B></A>.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Se il controllo specificato non è basato su una query o tabella, l'azione forza un ricalcolo del controllo.</P>
+
+<P class=T>Se non si immette alcun valore per l'argomento Nome controllo, l'azione RieseguiQuery equivale a premere MAIUSC+F9 quando l'oggetto possiede lo <A HREF="javascript:HelpPopup('actip9.hlp','defFocus');" class="pop">stato attivo</A>. Se un controllo di tipo <A HREF="javascript:HelpPopup('actip9.hlp','defSubform');" class="pop">sottomaschera</A> possiede lo stato attivo, l'azione richiede solo l'origine della sottomaschera, così come succede premendo MAIUSC+F9.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; L'azione RieseguiQuery sottopone nuovamente a query l'origine del controllo o dell'oggetto. L'azione <A HREF="acactRepaintObject.htm">AggiornaOggetto</A> invece <A HREF="javascript:HelpPopup('actip9.hlp','defRepaint');" class="pop">aggiorna</A> i controlli nell'oggetto specificato ma non riesegue una query sul database, né visualizza nuovi record. L'azione <A HREF="acactShowAllRecords.htm">MostraOgniRecord</A> non solo sottopone nuovamente a query l'oggetto attivo, ma rimuove anche qualsiasi <A HREF="javascript:HelpPopup('actip9.hlp','defFilter');" class="pop">filtro</A> applicato, come non farebbe l'azione RieseguiQuery.</P>
+
+
+
+<P class=T>Se si desidera rieseguire una query su un controllo non contenuto nell'oggetto attivo, è necessario utilizzare il metodo <A HREF="JavaScript:hhobj_3.Click()"><B>Requery</B></A> in Visual Basic, non l'azione RieseguiQuery o il corrispondente metodo <A HREF="JavaScript:hhobj_4.Click()"><B>Requery</B></A> dell'oggetto <A HREF="JavaScript:hhobj_5.Click()"><B>DoCmd</B></A>. Il metodo <B>Requery</B> in Visual Basic è più veloce dell'azione RieseguiQuery o del metodo <B>DoCmd.Requery</B>. Quando si utilizza l'azione RieseguiQuery o il metodo <B>DoCmd.Requery</B>, la query inoltre viene chiusa e ricaricata dal database. Quando invece si utilizza il metodo <B>Requery</B>, la query viene rieseguita senza essere né chiusa né ricaricata. Notare che il metodo ADO (ActiveX Data Object) <A HREF="JavaScript:hhobj_6.Click()"><B>Requery</B></A> funziona come il metodo <B>Requery</B> di Microsoft Access.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

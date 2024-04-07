@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtPageEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='aevtv3_1a.rtf'
+Tnum='187831'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Pagina - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtpageepx"></A>Evento Pagina - Esempio di routine evento</B></P>
+
+
+
+<P class=T>L'esempio riportato di seguito mostra come tracciare un rettangolo intorno alla pagina di un report tramite il metodo <B>Line</B>. In base all'impostazione predefinita, le proprietà <B>ScaleWidth</B> e <B>ScaleHeight</B> restituiscono la larghezza e l'altezza interna del report.</P>
+
+<PRE class=CT><CODE>Private Sub Report_<B>Page()</B>
+&nbsp;&nbsp;&nbsp; Me.Line(0, 0)-(Me.ScaleWidth, Me.ScaleHeight), , B
+End Sub</CODE></PRE>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

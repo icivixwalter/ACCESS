@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefExamplesDataEntryMasksS'
+Feature='Tables: Field Properties'
+Handoff='1'
+SourceFile='ctblpro_1.rtf'
+Tnum='187550'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di maschere di input</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acrefexamplesdataentrymaskss"></A>Esempi di maschere di input</H1>
+
+<P class=T>Una maschera di input viene utilizzata nei campi di tabelle e query e nelle caselle combinate e di testo di maschere per formattare i dati e controllare quali valori è possibile immettere. Una maschera di input è costituita da caratteri letterali, ad esempio spazi, punti, trattini e parentesi che separano gli spazi da riempire. L'impostazione della proprietà <B>InputMask</B> è costituita da caratteri letterali e da caratteri speciali che determinano il tipo di valore che è possibile immettere nello spazio in quella posizione. Le maschere di input sono utilizzate soprattutto nei campi di tipo Testo e Data/ora, ma possono essere utilizzate anche nei campi Numerico e Valuta.</P>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acrefexamplesdataentrymaskss_1">Esempi di maschere di input</A></P>
+
+<P class=LBR1><A HREF="#acrefexamplesdataentrymaskss_2">Definizione delle maschere di input</A></P>
+
+<P class=LBR1><A HREF="#acrefexamplesdataentrymaskss_3">Caratteri validi per le maschere di input</A></P>
+
+<H2><A NAME="acrefexamplesdataentrymaskss_1"></A>Esempi di maschere di input</H2>
+
+<P class=T>Nella tabella riportata di seguito sono riportate alcune definizioni utili di maschere di input ed esempi di valori che è possibile immettervi. Per ulteriori informazioni sui codici utilizzati per creare le definizioni di maschere di input, fare riferimento alla tabella alla fine di questo argomento.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=50%>Definizione della maschera di input</TH>
+<TH width=50%>Esempi di valori</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>(000) 000-0000</TD>
+<TD class=TT width=50%>(206) 555-0248</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>(999) 999-9999!</TD>
+<TD class=TT width=50%>(206) 555-0248</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&nbsp;</TD>
+<TD class=TT width=50%>(&nbsp;&nbsp; ) 555-0248</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>(000) AAA-AAAA</TD>
+<TD class=TT width=50%>(206) 555-TELE</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>#999</TD>
+<TD class=TT width=50%>-20</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&nbsp;</TD>
+<TD class=TT width=50%>2000</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&gt;L????L?000L0</TD>
+<TD class=TT width=50%>GREENGR339M3</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&nbsp;</TD>
+<TD class=TT width=50%>MAY  R 452B7</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&gt;L0L 0L0</TD>
+<TD class=TT width=50%>T2F 8M4</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>00000-9999</TD>
+<TD class=TT width=50%>98115-</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&nbsp;</TD>
+<TD class=TT width=50%>98115-3007</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&gt;L&lt;??????????????</TD>
+<TD class=TT width=50%>Alessia</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&nbsp;</TD>
+<TD class=TT width=50%>Piero</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>ISBN 0-&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;-0</TD>
+<TD class=TT width=50%>ISBN 1-55615-507-7</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&nbsp;</TD>
+<TD class=TT width=50%>ISBN 0-13-964262-5</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=50%>&gt;LL00000-0000</TD>
+<TD class=TT width=50%>DB51392-0493</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=rtt>Torna all'<A HREF="#acrefexamplesdataentrymaskss">inizio</A></P>
+
+<H2><A NAME="acrefexamplesdataentrymaskss_2"></A>Definizione delle maschere di input</H2>
+
+<P class=T>La definizione della maschera di input può contenere un massimo di tre sezioni separate da un punto e virgola, ad esempio (999) 000-0000!;0;" ".</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=16%>Sezione</TH>
+<TH width=84%>Significato</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>Prima</TD>
+<TD class=TT width=84%>Specifica la maschera di input.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>Seconda</TD>
+<TD class=TT width=84%>Determina se verranno memorizzati i caratteri letterali.
+<P class=TT>0 = i caratteri letterali verranno memorizzati insieme al valore immesso</P>
+
+<P class=TT>1 o se si lascia la parte vuota = verranno memorizzati solo i caratteri immessi negli spazi</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=16%>Terza</TD>
+<TD class=TT width=84%>Il carattere che verrà visualizzato al posto degli spazi nella maschera di input. È possibile utilizzare qualsiasi carattere. Per visualizzare uno spazio, digitare uno spazio racchiuso tra virgolette <B>" "</B>. Se si lascia vuota questa sezione, viene utilizzato il carattere di sottolineatura ( _ ).</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=rtt>Torna all'<A HREF="#acrefexamplesdataentrymaskss">inizio</A></P>
+
+<H2><A NAME="acrefexamplesdataentrymaskss_3"></A>Caratteri validi per le maschere di input</H2>
+
+<P class=T>I caratteri contenuti nella prima parte della definizione della proprietà <B>InputMask</B> vengono interpretati in base alla tabella riportata di seguito. Per definire un carattere letterale, immettere qualsiasi carattere diverso da quelli elencati nella tabella, inclusi spazi e simboli. Per definire uno dei seguenti caratteri come carattere letterale, anteporre al carattere una barra (\).</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=19%>Carattere</TH>
+<TH width=81%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>0</TD>
+<TD class=TT width=81%>Numero (da 0 a 9, immissione necessaria. Non è consentita l'immissione dei segni più [+] e meno [-]).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>9</TD>
+<TD class=TT width=81%>Numero o spazio (immissione non necessaria. Non è consentita l'immissione dei segni più e meno).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>#</TD>
+<TD class=TT width=81%>Numero o spazio (immissione non necessaria. Le posizioni vuote vengono convertite in spazi. È consentita l'immissione dei segni più e meno).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>L</TD>
+<TD class=TT width=81%>Lettera (dalla A alla Z, immissione necessaria).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>?</TD>
+<TD class=TT width=81%>Lettera (dalla A alla Z, immissione facoltativa).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>A</TD>
+<TD class=TT width=81%>Lettera o numero (immissione necessaria).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>a</TD>
+<TD class=TT width=81%>Lettera o numero (immissione facoltativa).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&amp;</TD>
+<TD class=TT width=81%>Qualsiasi carattere o spazio (immissione necessaria).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>C</TD>
+<TD class=TT width=81%>Qualsiasi carattere o spazio (immissione facoltativa).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>,  .  .  ;  -  /</TD>
+<TD class=TT width=81%>Segnaposto decimale e separatori delle migliaia, di data e ora. Il carattere utilizzato dipende dalle Impostazioni internazionali, specificate facendo doppio clic sul Pannello di controllo di Windows.)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&lt;</TD>
+<TD class=TT width=81%>Converte in minuscolo tutti i caratteri successivi.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>&gt;</TD>
+<TD class=TT width=81%>Converte in maiuscolo tutti i caratteri successivi.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>!</TD>
+<TD class=TT width=81%>Visualizza la maschera di input da destra a sinistra invece che da sinistra a destra. I caratteri digitati nella maschera vengono sempre inseriti da sinistra a destra. È possibile includere il punto esclamativo in qualsiasi punto della maschera di input.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>\</TD>
+<TD class=TT width=81%>Il carattere successivo verrà visualizzato come carattere letterale. Utilizzato per visualizzare uno dei caratteri elencati in questa tabella come caratteri letterali, ad esempio \A viene visualizzato come semplice A).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Password</TD>
+<TD class=TT width=81%>L'impostazione della proprietà <B>InputMask</B> a <B>Password</B> consente la creazione di una casella di testo per l'immissione della password. Qualsiasi carattere digitato nella casella di testo verrà memorizzato come carattere ma visualizzato come asterisco (*).</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=rtt>Torna all'<A HREF="#acrefexamplesdataentrymaskss">inizio</A></P>
+
+<H2>Ulteriori informazioni</H2>
+
+<P class=LBR1><A HREF="acdecCreateInputMaskFieldControl.htm">Creare una maschera di input</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefExamplesDataEntryMasksSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

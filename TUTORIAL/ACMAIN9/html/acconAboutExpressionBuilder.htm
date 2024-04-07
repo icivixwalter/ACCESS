@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutExpressionBuilder'
+Feature='Forms: Expressions'
+Handoff='3'
+SourceFile='cexpbas.rtf'
+Tnum='186638'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sul Generatore di espressioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutexpressionbuilder"></A>Informazioni sul Generatore di espressioni</H1>
+
+<P class=T>Il Generatore di espressioni è costituito da tre sezioni:</P>
+
+<P class=ART><IMG SRC="images/cexpbas1.bmp" ALT="Creare un'espressione mediante la selezione di oggetti di database, elementi e valori dagli elenchi" BORDER=0>
+
+<UL>
+	<LI class=LB1>Nella sezione superiore del generatore viene visualizzata un'apposita casella nella quale è possibile generare l'espressione. Utilizzare la sezione inferiore del generatore per creare gli elementi dell'espressione e successivamente incollare questi elementi nell'apposita casella in modo da formare un'espressione. È inoltre possibile digitare parti dell'espressione direttamente nella casella per le espressioni.<BR><BR></LI>
+
+	<LI class=LB1>Nella sezione centrale del generatore sono presenti dei pulsanti relativi agli operatori utilizzati più frequentemente. Se si sceglie uno di questi pulsanti, il Generatore di espressioni inserisce l'operatore nel punto di inserimento della casella dell'espressione. Per ottenere un elenco completo degli operatori utilizzabili nelle espressioni, scegliere la cartella <B>Operatori</B> nella casella inferiore sinistra e la categoria di operatore appropriata nella casella centrale. La casella di destra fornisce un elenco di tutti gli operatori della categoria selezionata.<BR><BR></LI>
+
+	<LI class=LB1>Nella sezione inferiore del generatore sono presenti tre caselle:
+<UL>
+	<LI class=LB2>La casella di sinistra contiene le cartelle che forniscono un elenco degli oggetti di database relativi a tabelle, query, maschere e report, delle funzioni incorporate e definite dall'utente, delle costanti, degli <A HREF="javascript:HelpPopup('actip9.hlp','defOperator');" class="pop">operatori</A> e delle espressioni comuni.<BR><BR></LI>
+
+	<LI class=LB2>La casella centrale fornisce un elenco di elementi specifici o di categorie di elementi per la cartella selezionata nella casella di sinistra. Se nella casella di sinistra si sceglie <B>Funzioni incorporate</B> ad esempio, la casella centrale fornisce un elenco delle categorie delle funzioni di Microsoft Access.<BR><BR></LI>
+
+	<LI class=LB2>La casella di destra fornisce un elenco di valori, qualora ve ne siano, per gli elementi selezionati nella casella centrale e di sinistra. Se ad esempio nella casella di sinistra si sceglie <B>Funzioni incorporate</B> e nella casella centrale una categoria di funzioni, la casella di destra visualizza un elenco di tutte le funzioni incorporate nella categoria selezionata.</LI>
+</UL>
+</LI>
+</UL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=LB1>Per poter visualizzare nuovi nomi di campi nel Generatore di espressioni, è necessario prima salvare la tabella o la query contenente i nuovi campi.<BR><BR></LI>
+
+	<LI class=LB1>Se un oggetto o una funzione non è presente nell'elenco visualizzato nella sezione inferiore del Generatore di espressioni, significa che non ha validità nel contesto nel quale è stato avviato il generatore. Non è possibile ad esempio fare riferimento ad altri campi e controlli nelle <A HREF="javascript:HelpPopup('actip9.hlp','defValidationRule');" class="pop">regole di convalida</A> per un campo presente nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura della tabella</A>, quindi le cartelle <B>Tabelle</B>, <B>Query</B>, <B>Maschere</B> e <B>Report</B> non sono disponibili se il Generatore di espressioni viene avviato dalla proprietà <B>Valido se</B> di un campo presente nella visualizzazione Struttura della tabella.<BR><BR></LI>
+
+	<LI class=LB1>Quando un <A HREF="javascript:HelpPopup('actip9.hlp','defIdentifier');" class="pop">identificatore</A> viene incollato nell'espressione, il Generatore di espressioni incolla solo le parti dell'identificatore richieste nel contesto corrente. Se ad esempio si avvia il Generatore di espressioni dalla finestra delle proprietà della maschera Clienti, quindi si incolla nell'espressione un identificatore per la proprietà <B>Visibile</B> della maschera, il Generatore di espressioni incolla soltanto il nome di proprietà: <B>Visible</B>. Se questa espressione viene utilizzata al di fuori del contesto della maschera, è necessario includere l'identificatore completo: Forms![Clienti].Visible.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutExpressionBuilderW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

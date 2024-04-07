@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutProtectingVBACode'
+Feature='Security: Code'
+Handoff='3'
+SourceFile='Csecbas_3.rtf'
+Tnum='278970'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla protezione del codice Visual Basic, Applications Edition</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutprotectingvbacode"></A>Informazioni sulla protezione del codice Visual Basic, Applications Edition</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconaboutprotectingvbacode_1">Protezione del codice Visual Basic, Applications Edition (VBA)</A></P>
+
+<P class=LBR1><A HREF="#acconaboutprotectingvbacode_2">Moduli, maschere, report e protezione a livello utente</A></P>
+
+<H2><A NAME="acconaboutprotectingvbacode_1"></A>Protezione del codice Visual Basic, Applications Edition (VBA)</H2>
+
+<P class=T>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto</A> e in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> è possibile proteggere tutti i moduli, inclusi quelli sottostanti alle maschere e ai report, impostando una password che è necessario immettere per visualizzare o modificare il codice VBA in Visual Basic Editor. Dopo l'impostazione, viene richiesta l'immissione della password una volta per ciascuna sessione. Questa password non è solo necessaria per visualizzare e modificare il codice, ma anche per tagliare, copiare, incollare, esportare ed eliminare qualsiasi modulo. Questo tipo di protezione del codice VBA tuttavia non impedisce di eseguire il codice VBA esistente.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutprotectingvbacode">inizio</A></P>
+
+<H2><A NAME="acconaboutprotectingvbacode_2"></A>Moduli, maschere, report e protezione a livello utente</H2>
+
+<P class=T>In un database di Microsoft Access 2000 i moduli, inclusi quelli sottostanti alle maschere e ai report, non sono più <A HREF="javascript:HelpPopup('actip9.hlp','defUserLevelSecurity');" class="pop">protetti a livello utente</A>, come nelle versioni precedenti. Per maschere e report invece è ancora attivo questo tipo di protezione. Vengono quindi utilizzati due diversi meccanismi di protezione, uno per i moduli e l'altro per maschere e report.</P>
+
+<P class=T>Se si dispone delle autorizzazioni necessarie, è possibile ad esempio aggiungere un controllo a una maschera, ma se il progetto VBA è bloccato per la visualizzazione e protetto con una password che non si conosce, non sarà possibile visualizzare o modificare il modulo corrispondente. Al contrario, è possibile impedire la progettazione di una maschera o di un report non concedendo l'autorizzazione a modificare la struttura dell'oggetto mediante la protezione a livello utente, ma se l'utente conosce la password del codice VBA, potrà accedere al modulo corrispondente.</P>
+
+<P class=T>Questa regola prevede un'eccezione. Anche se si dispone dell'autorizzazione per modificare la struttura di una maschera o di un report, non è possibile eliminare l'oggetto o impostare la proprietà <B>Possiede modulo</B> a No, poiché questa azione elimina il modulo della maschera o del report. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutprotectingvbacode">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutProtectingVBACodeW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

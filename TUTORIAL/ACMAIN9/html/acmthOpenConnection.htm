@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthOpenConnection'
+Feature='acmth'
+Handoff='2'
+SourceFile='acmthV9.doc'
+Tnum='258628'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo OpenConnection</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdmthCnnOpen">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjConnection">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthopenconnection"></A>Metodo OpenConnection</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthOpenConnection_C">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthOpenConnection_X">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthOpenConnection_A">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare il metodo <B>OpenConnection</B> per aprire una connessione ADO a un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (adp) esistente o a un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Access</A> (mdb) come progetto o database corrente nella finestra di Microsoft Access.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I><B>.OpenConnection</B> [<I>stringaconnessionebase</I>][, <I>idutente</I>][, <I>password</I>]</P>
+
+
+
+<P class=T>Il metodo <B>OpenConnection</B> utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=29%>Argomento</TH>
+<TH width=71%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><I>oggetto</I></TD>
+<TD class=TT width=71%>L'oggetto <A HREF="acobjCurrentProject.htm"><B>CurrentProject</B></A> o <A HREF="acobjCodeProject.htm"><B>CodeProject</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><I>stringaconnessionebase</I></TD>
+<TD class=TT width=71%>Un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che rappresenta la <A HREF="javascript:HelpPopup('actip9.hlp','defConnectionString');" class="pop">stringa di connessione di base</A> del database.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><I>idutente</I></TD>
+<TD class=TT width=71%>Un'espressione stringa che rappresenta il nome del progetto esistente di Access, compreso il nome del percorso e l'estensione del nome file. Se la rete lo supporta, è anche possibile specificare un percorso di rete nella forma seguente:
+<P class=TT><I>\\Server\Nome condiviso\Cartella\Nomefile</I>.<B>adp</B></P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=29%><I>password</I></TD>
+<TD class=TT width=71%><B>Nota&nbsp;&nbsp;</B> Se non viene indicata l'estensione del nomefile, viene assegnata l'estensione adp. Per aprire i file ADP, è possibile utilizzare questo metodo o il metodo <A HREF="acmthOpenCurrentDatabase.htm"><B>OpenCurrentDatabase</B></A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Il metodo <B>OpenConnection</B> è simile al metodo <A HREF="JavaScript:hhobj_4.Click()"><B>Open</B></A> di un oggetto ADO <A HREF="JavaScript:hhobj_5.Click()"><B>Connection</B></A>. Questo metodo stabilisce la connessione fisica con l'origine dati. Una volta che questo metodo è stato svolto con esito positivo, viene stabilita la connessione, vengono impostate le proprietà <A HREF="acproConnection.htm"><B>Connection</B></A> e <A HREF="acproBaseConnectionString.htm"><B>BaseConnectionString</B></A> e i dati della nuova connessione dovrebbero essere raccolti nella finestra del database o nella pagina di accesso ai dati. Tutti i parametri di questo metodo sono opzionali. Se non viene fornita alcuna stringa di connessione di base, la connessione viene stabilita nuovamente utilizzando la stringa di connessione di base precedente, ma in questo caso l'utente deve chiamare <A HREF="acmthCloseConnection.htm"><B>CloseConnection</B></A> prima di chiamare di nuovo <B>OpenConnection</B>. Nel caso di un progetto Access, la proprietà <B>BaseConnectionString</B> può specificare solo il provider DB OLE di SQL Server.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acmthOpenConnectionW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

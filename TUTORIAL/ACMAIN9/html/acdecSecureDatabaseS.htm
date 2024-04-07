@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acdecSecureDatabaseS'
+Feature='Security: Basic'
+Handoff='3'
+SourceFile='csecbas.rtf'
+Tnum='188226'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulla protezione dei database di Microsoft Access </TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="rerefObtainMicrosoftOffice97VisualBasicProgrammersGuide">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acdecsecuredatabases"></A>Informazioni sulla protezione dei database di Microsoft Access </H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acdecsecuredatabases_1">Protezione dei file di database di Microsoft Access</A></P>
+
+<P class=LBR1><A HREF="#acdecsecuredatabases_2">Protezione degli oggetti di database a livello utente</A></P>
+
+<P class=LBR1><A HREF="#acdecsecuredatabases_3">Protezione del codice Visual Basic, Applications Edition (VBA)</A></P>
+
+<P class=LBR1><A HREF="#acdecsecuredatabases_4">Protezione delle pagine di accesso ai dati</A></P>
+
+<P class=LBR1><A HREF="#acdecsecuredatabases_5">Protezione di un'applicazione</A></P>
+
+<P class=LBR1><A HREF="#acdecsecuredatabases_6">Protezione in ambiente multiutente</A></P>
+
+<P class=rtt>Torna all'<A HREF="#acdecsecuredatabases">inizio</A></P>
+
+<H2><A NAME="acdecsecuredatabases_1"></A>Protezione dei file di database di Microsoft Access</H2>
+
+<P class=T>Il metodo di protezione più semplice consiste nell'impostazione di una password per l'apertura del <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (mdb). Dopo aver impostato tale password, a ogni apertura del database verrà visualizzata una finestra di dialogo con la richiesta della password e l'apertura del database sarà consentita solo agli utenti che digiteranno la password corretta. Questo metodo è sicuro, in quanto la password viene crittografata in modo che non possa essere letta direttamente nel file, ma si applica soltanto all'apertura del database. Una volta aperto il database, tutti gli oggetti in esso contenuti saranno disponibili per l'utente, a meno che non siano stati impostati altri tipi di protezione descritti più avanti. Per un database condiviso da un piccolo gruppo di utenti o su un solo computer, spesso è sufficiente impostare una password.</P>
+
+<P class=NT><B>Attenzione</B>&nbsp;&nbsp; Non utilizzare una password se si desidera <A HREF="javascript:HelpPopup('actip9.hlp','rpldefDBReplication');" class="pop">replicare</A> un database. I database replicati non possono essere <A HREF="javascript:HelpPopup('actip9.hlp','rpldefSynchronization');" class="pop">sincronizzati</A> se sono state impostate le password.</P>
+
+<P class=T>Per proteggere ulteriormente il database è possibile crittografarlo. Con la crittografia il file del database viene compattato e reso indecifrabile dai programmi di utilità e di elaborazione testi. Decrittografando il database si annullano gli effetti della crittografia.</P>
+
+<P class=rtt>Torna all'<A HREF="#acdecsecuredatabases">inizio</A></P>
+
+<H2><A NAME="acdecsecuredatabases_2"></A>Protezione degli oggetti di database a livello utente</H2>
+
+<P class=T>Il metodo più flessibile e diffuso per la protezione dell'accesso a un database è la protezione a livello utente. Questa forma di protezione è simile ai metodi utilizzati nella maggior parte dei sistemi di rete. Le ragioni principali per cui ricorrere alla protezione a livello utente sono due: <UL>
+	<LI class=LB1>Impedire agli utenti di alterare involontariamente un'applicazione modificando tabelle, query, maschere, report e macro su cui si basa l'applicazione.<BR><BR></LI>
+
+	<LI class=LB1>Proteggere i dati sensibili nel database.</LI>
+</UL>
+
+<P class=T>Se è impostata la protezione a livello utente, gli utenti devono utilizzare un ID di identificazione e digitare una password quando avviano Microsoft Access. Nell'ambito del <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroupInformationFile');" class="pop">file di informazioni sul gruppo di lavoro</A> gli utenti sono identificati come membri di un gruppo. In Microsoft Access sono forniti due gruppi predefiniti, quello degli amministratori (denominato <A HREF="javascript:HelpPopup('actip9.hlp','defAdminsGroup');" class="pop">gruppo Amministratori </A>) e quello degli utenti (denominato <A HREF="javascript:HelpPopup('actip9.hlp','defUsersGroup');" class="pop">gruppo Utenti</A>), ma è possibile definire altri gruppi.</P>
+
+<P class=T>L'impostazione della protezione a livello utente è un'attività lunga e complessa per la maggior parte dei database, ma con l'Impostazione guidata Protezione tutto è più facile e veloce grazie a una procedura che consiste in un solo passaggio. Implementando inoltre schemi di protezione comuni, l'Impostazione guidata Protezione riduce al minimo, se non elimina del tutto, la necessità di utilizzare il comando <B>Protezione</B> del menu <B>Strumenti</B>.</P>
+
+<P class=T>Dopo aver eseguito l'Impostazione guidata Protezione, è possibile assegnare o rimuovere le <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> per gli <A HREF="javascript:HelpPopup('actip9.hlp','defUserAccount');" class="pop">account utente</A> e gli <A HREF="javascript:HelpPopup('actip9.hlp','defGroupAccount');" class="pop">account di gruppo</A> facenti parte del <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroup');" class="pop">gruppo di lavoro</A> per un database e le sue tabelle, query, maschere, report e macro esistenti. È inoltre possibile impostare le autorizzazioni predefinite assegnate da Microsoft Access alle nuove tabelle, query, maschere, report o macro create in un database.</P>
+
+<P class=T>Le autorizzazioni vengono assegnate a gruppi e utenti per definire con quali modalità è consentito utilizzare ciascuna tabella, query, maschera, report e macro contenuti in un database. È possibile ad esempio consentire ai membri del gruppo Utenti di visualizzare, immettere o modificare i dati in una tabella Clienti, ma non di modificarne la struttura. È possibile altrimenti consentire al gruppo Utenti soltanto di visualizzare i dati di una tabella che contiene dati relativi agli ordini, ma impedire loro l'accesso alla tabella Pagamenti. I membri del gruppo Amministratori dispongono di autorizzazioni complete per tutte le tabelle, le query, le maschere, i report e le macro del database. È possibile impostare un sistema di controllo più accurato creando degli account di gruppo personalizzati, assegnando a questi gruppi autorizzazioni mirate e aggiungendo degli utenti ai gruppi.</P>
+
+<P class=T>Se sono sufficienti un gruppo Amministratori e un gruppo Utenti per proteggere il proprio database, non sarà necessario creare altri gruppi e si potranno utilizzare quelli predefiniti (<A HREF="javascript:HelpPopup('actip9.hlp','defAdminsGroup');" class="pop">Amministratori</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defUsersGroup');" class="pop">Utenti</A>). In questo caso si dovrà semplicemente provvedere ad assegnare le autorizzazioni appropriate al gruppo Utenti predefinito e ad aggiungere eventuali altri amministratori al gruppo Amministratori predefinito. Tutti i nuovi utenti aggiunti verranno inclusi automaticamente nel gruppo Utenti. Le autorizzazioni assegnate al gruppo Utenti in genere comprendono la lettura e l'aggiornamento dati per le tabelle e le query e l'apertura/esecuzione per le maschere e i report. </P>
+
+<P class=T>Se si desidera un controllo più articolato su diversi gruppi di utenti, è possibile creare altri gruppi, assegnare loro diversi set di autorizzazioni e aggiungere gli utenti ai gruppi appropriati. Per una più agevole gestione delle autorizzazioni si consiglia di assegnarle soltanto ai gruppi, non agli utenti, e di includere in seguito gli utenti nei gruppi adeguati. </P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per ulteriori informazioni sul modello di protezione di Microsoft Access, consultare il <A HREF="JavaScript:hhobj_1.Click()"><I>Manuale del programmatore di Microsoft Office 2000/Visual Basic</I></A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acdecsecuredatabases">inizio</A></P>
+
+<H2><A NAME="acdecsecuredatabases_3"></A>Protezione del codice Visual Basic, Applications Edition (VBA)</H2>
+
+<P class=T>È possibile proteggere il codice Microsoft Visual Basic, Applications Edition (VBA) presente nei moduli e nei moduli sottostanti le maschere e i report con una password da immettere una sola volta per ogni sessione. La password evita che utenti non autorizzati possano modificare, tagliare, incollare, copiare, esportare e cancellare il codice VBA.</P>
+
+<P class=T>Per proteggere la proprietà intellettuale del codice, è possibile rimuovere dal database il codice VBA modificabile e impedire la modifica della struttura delle maschere, dei report e dei moduli salvandolo come file MDE.</P>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="acdecProtectModules.htm">protezione del codice VBA</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acdecsecuredatabases">inizio</A></P>
+
+<H2><A NAME="acdecsecuredatabases_4"></A>Protezione delle pagine di accesso ai dati</H2>
+
+<P class=T>Per proteggere una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A>, oltre che i dati a cui si accede mediante tale pagina, attenersi alla seguente procedura:
+
+<UL>
+	<LI class=LB1>Proteggere il database di Access contenente il collegamento alla pagina di accesso ai dati e il corrispondente file HTML mediante la protezione del file system del computer in cui sono memorizzati questi file.<BR><BR></LI>
+
+	<LI class=LB1>Proteggere il database collegato alla pagina di accesso ai dati impedendone l'accesso agli utenti non autorizzati, controllando il livello di accesso una volta che l'utente si è connesso e non salvando la password del database con la pagina di accesso ai dati.<BR><BR></LI>
+
+	<LI class=LB1>Impedire l'accesso non autorizzato da script di Visual Basic potenzialmente pericolosi servendosi delle opzioni di protezione di Microsoft Internet Explorer e utilizzando un sistema di accesso ai dati su tre livelli.</LI>
+</UL>
+
+<P class=T>Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="acconAboutProtectingDAP.htm">protezione di una pagina di accesso ai dati</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acdecsecuredatabases">inizio</A></P>
+
+<H2><A NAME="acdecsecuredatabases_5"></A>Protezione di un'applicazione</H2>
+
+<P class=T>È possibile infine impedire a utenti finali curiosi o malintenzionati di danneggiare accidentalmente o volutamente le applicazioni nascondendo gli oggetti di database dalla finestra del database e impostando diverse opzioni di avvio per controllare l'aspetto e la funzionalità delle applicazioni e proteggere i menu e le barre dei comandi.</P>
+
+<P class=rtt>Torna all'<A HREF="#acdecsecuredatabases">inizio</A></P>
+
+<H2><A NAME="acdecsecuredatabases_6"></A>Protezione in ambiente multiutente</H2>
+
+<P class=T>In molti casi potrebbe rivelarsi necessario impedire agli utenti di <A HREF="javascript:HelpPopup('actip9.hlp','rpldefReplication');" class="pop">replicare</A> un database. Consentire a un utente di replicare un database significa permettergli di effettuare una copia di un database condiviso e di aggiungere campi o apportare altre modifiche al database corrente. Sarà probabilmente necessario anche impedire agli utenti di impostare una password per l'accesso al database. Se un utente impostasse una password di accesso a un database condiviso, nessun altro utente sarebbe in grado di aprirlo senza immettere tale password. Un'altra limitazione da imporre agli utenti potrebbe essere quella di impedire loro la modifica delle proprietà di avvio che specificano funzionalità quali menu personalizzati, <A HREF="javascript:HelpPopup('actip9.hlp','defToolbar');" class="pop">barre degli strumenti</A> personalizzate o la maschera di avvio.</P>
+
+<P class=T>Se per un database condiviso non è definita la <A HREF="javascript:HelpPopup('actip9.hlp','defUserLevelSecurity');" class="pop">protezione a livello utente</A>, non sarà possibile impedire agli utenti di apportare una qualsiasi delle modifiche sopra indicate. Eseguendo l'Impostazione guidata Protezione per un database si definiscono le opzioni di protezione a livello utente, il che consente di controllare l'accesso a determinate funzionalità e definisce il modo in cui si possono utilizzare gli oggetti del database. Quando è impostata la protezione a livello utente, per poter replicare un database, impostare per esso una password o modificare le sue proprietà di avvio, un <A HREF="javascript:HelpPopup('actip9.hlp','defUserAccount');" class="pop">utente</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defGroupAccount');" class="pop">gruppo</A> deve disporre dell'<A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazione</A> di Amministratore. Una volta eseguita l'Impostazione guidata Protezione, soltanto i membri del <A HREF="javascript:HelpPopup('actip9.hlp','defAdminsGroup');" class="pop">gruppo Amministratori</A> del <A HREF="javascript:HelpPopup('actip9.hlp','defWorkgroup');" class="pop">gruppo di lavoro</A> corrente disporranno delle autorizzazioni di amministratore.</P>
+
+<P class=T>Se la protezione a livello utente è già definita e un utente o un gruppo dispone dell'autorizzazione di amministratore per un database, rimuovendo tale autorizzazione si impedirà all'utente o al gruppo di apportare una qualsiasi delle modifiche indicate in precedenza. Se si ha necessità di consentire a un utente o a un gruppo di eseguire queste attività, è possibile assegnare all'utente o al gruppo desiderato l'autorizzazione di amministratore. Non è possibile controllare separatamente l'accesso a queste tre attività.</P>
+
+<P class=rtt>Torna all'<A HREF="#acdecsecuredatabases">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acdecSecureDatabaseSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactSave'
+Feature='acact'
+Handoff='2'
+SourceFile='act_v3.doc'
+Tnum='188016'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione Salva</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acactsave"></A>Azione Salva</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactSaveC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactSaveX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione Salva per salvare un determinato <A HREF="javascript:HelpPopup('actip9.hlp','defMSAccessObject');" class="pop">oggetto di Microsoft Access</A> o l'oggetto attivo se non altrimenti specificato. In alcuni casi è inoltre possibile salvare l'oggetto attivo con un nuovo nome, come con il comando <B>Salva con nome</B> del menu <B>File</B>.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione Salva utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=24%>Argomento azione</TH>
+<TH width=76%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Tipo oggetto</TD>
+<TD class=TT width=76%>Il tipo di oggetto che si desidera salvare. Selezionare <B>Tabella</B>, <B>Query</B>, <B>Maschera</B>, <B>Report</B>, <B>Macro</B>, <B>Modulo</B>, <B>Pagina di accesso ai dati</B>, <B>Visualizzazione server</B>, <B>Diagramma</B> o <B>Stored procedure</B> nella casella <B>Tipo oggetto</B> della sezione <B>Argomenti azione</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. Per selezionare l'oggetto attivo, lasciare vuoto questo argomento. Se si seleziona un tipo di oggetto in questo argomento, è necessario selezionare il nome di un oggetto presente nell'argomento Nome oggetto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=24%>Nome oggetto</TD>
+<TD class=TT width=76%>Il nome dell'oggetto da salvare. La casella <B>Nome oggetto</B> visualizza tutti gli oggetti contenuti nel database del tipo selezionato dall'argomento Tipo oggetto. Se si lascia vuoto l'argomento Tipo oggetto, è possibile lasciare vuoto anche questo argomento per salvare l'oggetto attivo o, in alcuni casi, immettere un nuovo nome nell'argomento per salvare l'oggetto attivo con tale nome.
+<P class=TT>Se si immette un nuovo nome, è necessario che tale nome rispetti le <A HREF="javascript:HelpPopup('actip9.hlp','defStandardNamingConventions');" class="pop">regole per la denominazione</A> degli oggetti di Microsoft Access.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile utilizzare l'azione Salva con tutti gli <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetti di database</A> che è possibile aprire e salvare esplicitamente. È necessario aprire l'oggetto specificato per l'azione Salva per riscontrare qualsiasi effetto sull'oggetto stesso. L'effetto di questa azione equivale a selezionare un oggetto e a salvarlo scegliendo <B>Salva</B> dal menu <B>File</B> o facendo clic sul pulsante <B>Salva</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrSaveQ');" class="pop"><IMG SRC="images/save.bmp" BORDER=0></A> sulla <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A>. Lasciando vuoto l'argomento Tipo oggetto e immettendo un nuovo nome nell'argomento Nome oggetto si ottiene lo stesso risultato che scegliendo <B>Salva con nome</B> dal menu <B>File</B> e immettendo un nuovo nome per l'oggetto attivo. L'utilizzo dell'azione Salva consente di specificare un oggetto da salvare e di eseguire il comando <B>Salva con nome</B> da una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Non è possibile utilizzare l'azione Salva per salvare con un nuovo nome quanto segue:
+
+<UL>
+	<LI class=NLB>Una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A>.<BR><BR></LI>
+
+	<LI class=NLB>Un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A>.<BR><BR></LI>
+
+	<LI class=NLB>Un <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">modulo</A>.<BR><BR></LI>
+
+	<LI class=NLB>Una <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgView');" class="pop">visualizzazione</A> del server in visualizzazione Foglio dati o in Anteprima di stampa.<BR><BR></LI>
+
+	<LI class=NLB>Una pagina di accesso ai dati in visualizzazione Pagina.<BR><BR></LI>
+
+	<LI class=NLB>Una tabella in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A>.<BR><BR></LI>
+
+	<LI class=NLB>Una query in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A>.<BR><BR></LI>
+
+	<LI class=NLB>Una stored procedure in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A>.</LI>
+
+</UL>
+
+
+
+<P class=T>L'azione Salva, sia che venga eseguita tramite una macro nel database corrente, sia nel <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, salva sempre l'oggetto specificato o l'oggetto attivo nel database in cui è stato creato l'oggetto stesso.</P>
+
+<P class=T>Se si salva l'oggetto attivo con un nome nuovo, ma il nome è uguale a quello di un oggetto esistente dello stesso tipo, è necessario specificare in una finestra di dialogo se si desidera sovrascrivere l'oggetto esistente. Se è stato impostato a <B>No</B> l'argomento Mostra avvisi dell'azione <A HREF="acactSetWarnings.htm">ImpostaAvvisi</A>, la finestra di dialogo non viene visualizzata e l'oggetto esistente viene automaticamente sovrascritto.</P>
+
+<P class=T>Per eseguire l'azione Salva in Visual Basic, utilizzare il metodo <A HREF="acmthactSave.htm"><B>Save</B></A> dell'oggetto <A HREF="acobjDoCmd.htm"><B>DoCmd</B></A>.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

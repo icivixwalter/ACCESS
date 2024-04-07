@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthDefaultControlX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv3_1a.rtf'
+Tnum='186548'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo DefaultControl</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthdefaultcontrolx"></A>Esempio di metodo DefaultControl</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creata una nuova maschera e utilizzato il metodo <B>DefaultControl</B> per restituire un oggetto <B>Control</B> che rappresenta il pulsante di comando predefinito. La routine imposta alcune delle proprietà predefinite per il pulsante di comando, quindi crea un nuovo pulsante di comando nella maschera.</P>
+
+<PRE class=CT><CODE>Sub ImpostaProprietàPredefinite()
+&nbsp;&nbsp;&nbsp; Dim frm As Form, ctlDefault As Control, ctlNew As Control
+
+&nbsp;&nbsp;&nbsp; ' Crea una nuova maschera.
+&nbsp;&nbsp;&nbsp; Set frm = CreateForm
+&nbsp;&nbsp;&nbsp; ' Restituisce oggetto Control che rappresenta il pulsante di comando predefinito.
+&nbsp;&nbsp;&nbsp; Set ctlDefault = frm.<B>DefaultControl(</B>acCommandButton<B>)</B>
+&nbsp;&nbsp;&nbsp; ' Imposta alcune proprietà predefinite.
+&nbsp;&nbsp;&nbsp; With ctlDefault
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .FontWeight = 700
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .FontSize = 12
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Width = 3000
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Height = 1000
+&nbsp;&nbsp;&nbsp; End With
+&nbsp;&nbsp;&nbsp; ' Crea nuovo pulsante di comando.
+&nbsp;&nbsp;&nbsp; Set ctlNew = CreateControl(frm.Name, acCommandButton, , , , 500, 500)
+&nbsp;&nbsp;&nbsp; ' Imposta la didascalia del controllo.
+&nbsp;&nbsp;&nbsp; ctlNew.caption = "Nuovo pulsante di comando"
+&nbsp;&nbsp;&nbsp; ' Ripristina la maschera.
+&nbsp;&nbsp;&nbsp; DoCmd.Restore
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

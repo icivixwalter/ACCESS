@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproUniqueRecordsX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproqry2.doc'
+Tnum='188215'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà UniqueRecords</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprouniquerecordsx"></A>Esempio di proprietà UniqueRecords</B></P>
+
+
+
+<P class=T>La query contenuta nell'esempio riportato di seguito restituisce dalla tabella Clienti un elenco di clienti che hanno effettuato almeno un ordine riportato nella tabella Ordini.</P>
+
+<P class=RL><B>Tabella Clienti</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2 width=462>
+
+<TR VALIGN="top">
+<TH width=63%>Nome società</TH>
+<TH width=37%>ID Cliente</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=63%>Ernst Handel</TD>
+<TD class=TT width=37%>ERNSH</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=63%>Familia Arquibaldo</TD>
+<TD class=TT width=37%>FAMIA</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=63%>FISSA Fabrica Inter. Salchichas S.A.</TD>
+<TD class=TT width=37%>FISSA</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=63%>Folies gourmandes</TD>
+<TD class=TT width=37%>FOLIG</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Tabella Ordini</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2 width=396>
+
+<TR VALIGN="top">
+<TH width=45%>ID Cliente</TH>
+<TH width=55%>ID Ordine</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=45%>ERNSH</TD>
+<TD class=TT width=55%>10698</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=45%>FAMIA</TD>
+<TD class=TT width=55%>10512</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=45%>FAMIA</TD>
+<TD class=TT width=55%>10725</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=45%>FOLIG</TD>
+<TD class=TT width=55%>10763</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=45%>FOLIG</TD>
+<TD class=TT width=55%>10408</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Tale istruzione SQL restituisce i nomi dei clienti nella tabella seguente:</P>
+
+<PRE class=CT><CODE>SELECT DISTINCTROW Clienti.NomeSocietà, Clienti.IDCliente
+FROM Clienti INNER JOIN Ordini
+ON Clienti.IDCliente = Ordini.IDCliente;</CODE></PRE>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2 width=398>
+
+<TR VALIGN="top">
+<TH width=45%>Clienti restituiti</TH>
+<TH width=55%>ID Cliente</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=45%>Ernst Handel</TD>
+<TD class=TT width=55%>ERNSH</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=45%>Familia Arquibaldo</TD>
+<TD class=TT width=55%>FAMIA</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=45%>Folies gourmandes</TD>
+<TD class=TT width=55%>FOLIG</TD>
+</TR>
+</TABLE><BR>
+
+
+
+</BODY>
+</HTML>

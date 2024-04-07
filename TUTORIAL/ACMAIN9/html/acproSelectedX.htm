@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproSelectedX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprofrm3_1a.doc'
+Tnum='188034'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Selected</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproselectedx"></A>Esempio di proprietà Selected</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza la proprietà <B>Selected</B> per spostare gli elementi selezionati nella casella di riepilogo PrimaOrigine alla casella di riepilogo PrimaDestinazione. La proprietà <B>RowSourceType</B> della casella di riepilogo PrimaDestinazione è impostata a Elenco valori e la proprietà <B>RowSource</B> del controllo è costituita da tutti gli elementi selezionati nel controllo PrimaOrigine. La proprietà <B>MultiSelect</B> della casella di riepilogo PrimaOrigine è impostata a Estesa. La funzione CopiaSelezionata( ) viene chiamata dal pulsante di comando cmdCopiaElemento.</P>
+
+<PRE class=CT><CODE>Sub cmdCopiaElemento_Click()
+&nbsp;&nbsp;&nbsp; CopiaSelezionata Me
+End Sub
+
+Function CopiaSelezionata(frm As Form) As Integer
+&nbsp;&nbsp;&nbsp; Dim ctlOrigine As Control
+&nbsp;&nbsp;&nbsp; Dim ctlDest As Control
+&nbsp;&nbsp;&nbsp; Dim strElementi As String
+&nbsp;&nbsp;&nbsp; Dim intRigaCorrente As Integer
+&nbsp;&nbsp;&nbsp; Set ctlOrigine = frm!PrimaOrigine
+&nbsp;&nbsp;&nbsp; Set ctlDest = frm!PrimaDestinazione
+&nbsp;&nbsp;&nbsp; For intRigaCorrente = 0 To ctlOrigine.Listcount - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If ctlOrigine.<B>Selected</B>(intRigaCorrente) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strElementi = strElementi &amp; ctlOrigine.Column(0, intRigaCorrente) &amp; ";"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Next intRigaCorrente
+&nbsp;&nbsp;&nbsp; ' Reimposta la proprietà RowSource del controllo di destinazione.
+&nbsp;&nbsp;&nbsp; ctlDest.RowSource = ""
+&nbsp;&nbsp;&nbsp; ctlDest.RowSource = strElementi
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

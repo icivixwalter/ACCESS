@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconOverviewWhatNameAutoCorrectFixesWhatItDoesntFix'
+Feature='Data: AutoCorrect'
+Handoff='3'
+SourceFile='cintbind.rtf'
+Tnum='257523'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Nomi ripristinati e nomi non ripristinati da Correzione automatica nome in un database di Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconoverviewwhatnameautocorrectfixeswhatitdoesntfix"></A>Nomi ripristinati e nomi non ripristinati da Correzione automatica nome in un database di Access</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acconoverviewwhatnameautocorrectfixeswhatitdoesntfix_1">Informazioni preliminari</A></P>
+
+<P class=LBR1><A HREF="#acconoverviewwhatnameautocorrectfixeswhatitdoesntfix_2">Nomi ripristinati da Correzione automatica nome</A></P>
+
+<P class=LBR1><A HREF="#acconoverviewwhatnameautocorrectfixeswhatitdoesntfix_3">Nomi non ripristinati da Correzione automatica nome</A></P>
+
+<H2><A NAME="acconoverviewwhatnameautocorrectfixeswhatitdoesntfix_1"></A>Informazioni preliminari</H2>
+
+<P class=T>In Microsoft Access 97 e nelle versioni precedenti, se si rinomina un campo di una tabella, gli oggetti basati su quel campo non visualizzeranno più i dati da esso provenienti. In Microsoft Access 2000 gli effetti collaterali comuni derivanti dall'assegnazione di un nuovo nome alle maschere, ai report, alle tabelle, alle query, ai campi, alle caselle di testo o ad altri controlli in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> vengono corretti automaticamente dalla funzione <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefNameAutoCorrect');" class="pop">Correzione automatica nome</A>.</P>
+
+<P class=T>Quando si apre una maschera o un altro oggetto, vengono automaticamente ricercate e corrette le differenze tra la maschera e gli altri oggetti da cui dipende la maschera. Se ad esempio si apre una maschera associata a una tabella, vengono confrontati gli indicatori data/ora della tabella e della maschera. Se vengono rilevate delle differenze, viene eseguita Correzione automatica nome.</P>
+
+<P class=T>Per usufruire di tutte le potenzialità della funzione Correzione automatica nome è necessario poter salvare le modifiche alla maschera, al report o ad altri oggetti corretti da Correzione automatica nome. Per poter salvare le modifiche apportate a un oggetto è necessario disporre delle <A HREF="javascript:HelpPopup('actip9.hlp','defPermissions');" class="pop">autorizzazioni</A> per modificarne la struttura, possedere l'accesso in scrittura al database e l'accesso esclusivo per apportare modifiche. Se non si è in grado di salvare l'oggetto, le correzioni non vengono salvate alla chiusura dell'oggetto. Correzione automatica nome effettua le modifiche ogni volta che l'oggetto viene aperto, ma non è in grado di salvarle fino a quando un utente in possesso delle necessarie autorizzazioni non apre e salva l'oggetto.</P>
+
+<P class=T>In base all'impostazione predefinita, Correzione automatica nome è attivata nei database creati con Access 2000. Per i database convertiti in Access 2000 da versioni precedenti è invece necessario attivare questa funzione. Per ulteriori informazioni, vedere l'argomento relativo alla <A HREF="achowRepairRenamingErrorsAutomatically.htm">correzione automatica degli errori di ridenominazione in un database</A>.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconoverviewwhatnameautocorrectfixeswhatitdoesntfix">inizio</A></P>
+
+<H2><A NAME="acconoverviewwhatnameautocorrectfixeswhatitdoesntfix_2"></A>Nomi ripristinati da Correzione automatica nome</H2>
+
+<P class=T>Correzione automatica nome corregge tutte le discrepanze rilevate in seguito alla ridenominazione di maschere, report, tabelle o di controlli di maschere e report. Se alcune maschere o oggetti sono stati creati con la funzione Correzione automatica nome disattivata, all'attivazione di questa funzione le discrepanze verranno corrette mentre si continua a utilizzare gli oggetti. Se uno degli oggetti contiene già un errore di ridenominazione quando si attiva Correzione automatica nome, sarà necessario correggere manualmente i riferimenti all'oggetto. Per le maschere o i report che contengono codice <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasic');" class="pop">Visual Basic</A>, verranno ripristinati i riferimenti alla maschera, ma non quelli agli oggetti del progetto di Visual Basic. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconoverviewwhatnameautocorrectfixeswhatitdoesntfix">inizio</A></P>
+
+<H2><A NAME="acconoverviewwhatnameautocorrectfixeswhatitdoesntfix_3"></A>Nomi non ripristinati da Correzione automatica nome</H2>
+
+<P class=T>Correzione automatica nome non è in grado di ripristinare i riferimenti agli oggetti rinominati in determinate situazioni, ad esempio non è in grado di:
+
+<UL>
+	<LI class=LB1>Modificare i riferimenti in un'istruzione SQL non valida.<BR><BR></LI>
+
+	<LI class=LB1>Correggere i riferimenti nel codice Visual Basic.<BR><BR></LI>
+
+	<LI class=LB1>Correggere i riferimenti in una tabella collegata quando la tabella o i campi sono stati rinominati nel database back-end di un database front-end/back-end.<BR><BR></LI>
+
+	<LI class=LB1>Funzionare in un database <A HREF="javascript:HelpPopup('actip9.hlp','rpldefReplication');" class="pop">replicato</A>. Quando si replica un database, Correzione automatica nome viene disattivata. Questa funzione non può essere attivata in una <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDesignMaster');" class="pop">replica master</A> o in una <A HREF="javascript:HelpPopup('actip9.hlp','rpldefReplica');" class="pop">replica</A> di un database. <BR><BR></LI>
+
+	<LI class=LB1>Ripristinare i riferimenti a macro in una barra degli strumenti o in un menu, incluse le proprietà delle barre degli strumenti, dei menu e degli eventi impostate ai nomi delle macro.<BR><BR></LI>
+
+	<LI class=LB1>Funzionare in un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A>.</LI>
+</UL>
+
+<P class=rtt>Torna all'<A HREF="#acconoverviewwhatnameautocorrectfixeswhatitdoesntfix">inizio</A></P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconOverviewWhatNameAutoCorrectFixesWhatItDoesntFixW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

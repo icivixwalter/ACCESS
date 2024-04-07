@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutChoosingWayToFilterDAP'
+Feature='Filters: Creating'
+Handoff='3'
+SourceFile='cdapfltr.rtf'
+Tnum='272517'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Modi di filtrare i record per una pagina di accesso ai dati</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutchoosingwaytofilterdap"></A>Modi di filtrare i record per una pagina di accesso ai dati</H1>
+
+<P class=T>In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=T><A HREF="#waystofilterrecordsbeforetheyareretrieved">Modi di filtrare i record prima del recupero dal database</A></P>
+
+<P class=T><A HREF="#waystofilterrecordsaftertheyareretrieved">Modi di filtrare i record dopo il recupero dal database</A></P>
+
+<H2><A NAME="waystofilterrecordsbeforetheyareretrieved"></A>Modi di filtrare i record prima del recupero dal database</H2>
+
+<P class=T>Per filtrare i record prima che la pagina di accesso ai dati li recuperi, è possibile creare la pagina in base a una <A HREF="javascript:HelpPopup('actip9.hlp','defQuery');" class="pop">query</A> che includa dei criteri (condizioni di ricerca) per limitare i record. In alternativa, in un progetto di Microsoft Access, è possibile definire un filtro utilizzando la proprietà <B>ServerFilter</B> in Visual Basic, Applications Edition o in Microsoft Visual Basic Scripting Edition (VBScript) e, in un database di Microsoft Access, utilizzando la proprietà <B>Filter</B> in Visual Basic, Applications Edition o in Microsoft Visual Basic Scripting Edition (VBScript). In una pagina di accesso ai dati con gruppi è possibile creare un filtro che recuperi i dati per un gruppo specifico, ad esempio gli ordini di un determinato cliente. La pagina di accesso ai dati non visualizza alcun record fino a quando non si seleziona il gruppo dalla relativa casella di riepilogo a discesa in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPageView');" class="pop">visualizzazione Pagina</A> o in Microsoft Internet Explorer. Una volta selezionato il gruppo, viene applicato il filtro e vengono recuperati solo i record specificati. È anche possibile creare un filtro per le pagine di accesso ai dati senza gruppi. In questo caso, invece di selezionare il gruppo di cui visualizzare i record, sarà necessario scegliere un valore del campo designato come campo per il filtro. Questa operazione equivale a utilizzare <A HREF="javascript:HelpPopup('actip9.hlp','defFilterByForm');" class="pop">Filtro in base a maschera</A>. Verranno recuperati tutti i record che contengono tale valore.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Applicare un filtro ai record prima del recupero può migliorare le prestazioni delle pagine di accesso ai dati poiché il numero di record da scaricare dal database sottostante risulta ridotto.</P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutchoosingwaytofilterdap">inizio</A></P>
+
+<H2><A NAME="waystofilterrecordsaftertheyareretrieved"></A>Modi di filtrare i record dopo il recupero dal database</H2>
+
+<P class=T>Per filtrare i record dopo che sono stati recuperati per la pagina di accesso ai dati corrente in visualizzazione Pagina o nel browser, è necessario utilizzare Filtro in base a selezione. Questo tipo di filtro consente di selezionare in un campo il valore che i record filtrati devono contenere. Nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefDataAccessPageDesignView');" class="pop">visualizzazione Struttura della pagina di accesso ai dati</A> è anche possibile aggiungere un filtro a un <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlink');" class="pop">collegamento ipertestuale</A> presente nella pagina stessa. Quando poi si farà clic sul collegamento ipertestuale in visualizzazione Pagina o nel browser, nella pagina di destinazione verranno visualizzati solo i record specificati nel filtro. </P>
+
+<P class=rtt>Torna all'<A HREF="#acconaboutchoosingwaytofilterdap">inizio</A></P>
+
+
+
+<P class=T>Torna a <A HREF="achowCreateFilterForDAP.htm">Creare un filtro per una pagina di accesso ai dati</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconAboutChoosingWayToFilterDAPW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

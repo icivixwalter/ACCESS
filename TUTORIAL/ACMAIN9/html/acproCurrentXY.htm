@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproCurrentXY'
+Feature='acpro'
+Handoff='1'
+SourceFile='aprogph1_1a.rtf'
+Tnum='187124'
+Piece='1042'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà CurrentX e CurrentY</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingPropsUsingCode">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthCircle">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthLine">
+</OBJECT>
+<OBJECT ID="hhobj_7" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthPrint">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acprocurrentxy"></A>Proprietà CurrentX e CurrentY</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproCurrentXYC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproCurrentXYX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproCurrentXYA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare le proprietà <B>CurrentX</B> e <B>CurrentY</B> per specificare le coordinate orizzontali e verticali per la posizione di inizio del successivo <A HREF="javascript:HelpPopup('actip9.hlp','defMethod');" class="pop">metodo</A> di stampa e di disegno in un report. Utilizzare tali proprietà per determinare ad esempio il centro di una circonferenza in una <A HREF="javascript:HelpPopup('actip9.hlp','defSection');" class="pop">sezione</A> di un report.</P>
+
+<P class=RL><B>Impostazione</B>
+
+<UL>
+	<LI class=LB1>La proprietà <B>CurrentX</B> specifica un valore <A HREF="javascript:HelpPopup('actip9.hlp','defSingleDataType');" class="pop"><B>Precisione singola</B></A> utilizzato in un'<A HREF="javascript:HelpPopup('actip9.hlp','defNumericExpression');" class="pop">espressione numerica</A> per impostare la coordinata orizzontale del successivo metodo di stampa e disegno.<BR><BR></LI>
+
+	<LI class=LB1>La proprietà <B>CurrentY</B> specifica un valore <B>Precisione singola</B> utilizzato in un'espressione numerica per impostare la coordinata verticale del successivo metodo di stampa e disegno.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Le coordinate vengono misurate a partire dall'angolo superiore sinistro della sezione del report contenente il riferimento alla proprietà <B>CurrentX</B> o <B>CurrentY</B>. L'impostazione della proprietà <B>CurrentX</B> è zero in corrispondenza del bordo sinistro della sezione e l'impostazione della proprietà <B>CurrentY</B> è zero in corrispondenza del bordo superiore.</P>
+
+<P class=T>È possibile impostare le proprietà <B>CurrentX</B> e <B>CurrentY</B> tramite una <A HREF="achowSettingPropsUsingMacros.htm">macro</A> o una routine evento di <A HREF="JavaScript:hhobj_4.Click()">Visual Basic</A> specificata dall'impostazione della proprietà <A HREF="acproEventProperties.htm"><B>OnPrint</B></A> di una sezione di report.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Utilizzare la proprietà <A HREF="acproScaleMode.htm"><B>ScaleMode</B></A> per definire l'unità di misura su cui saranno basate le coordinate, come <A HREF="javascript:HelpPopup('actip9.hlp','defPoint');" class="pop">punti</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defPixel');" class="pop">pixel</A>, caratteri, pollici, millimetri o centimetri.</P>
+
+<P class=T>Quando si utilizzano i seguenti metodi grafici, le impostazione delle proprietà <B>CurrentX</B> e <B>CurrentY</B> vengono modificate nel modo riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=21%>Metodo</TH>
+<TH width=79%>Imposta le proprietà CurrentX e CurrentY</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><A HREF="JavaScript:hhobj_5.Click()"><B>Circle</B></A></TD>
+<TD class=TT width=79%>al centro dell'oggetto</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><A HREF="JavaScript:hhobj_6.Click()"><B>Line</B></A></TD>
+<TD class=TT width=79%>all'estremità della linea, coordinate <I>x2 e y2</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=21%><A HREF="JavaScript:hhobj_7.Click()"><B>Print</B></A></TD>
+<TD class=TT width=79%>alla successiva posizione di stampa</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

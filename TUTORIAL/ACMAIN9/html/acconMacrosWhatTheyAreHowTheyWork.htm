@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconMacrosWhatTheyAreHowTheyWork'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmaccon.rtf'
+Tnum='186804'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Definizione e funzionamento delle macro</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconmacroswhattheyarehowtheywork"></A>Definizione e funzionamento delle macro</H1>
+
+<H2>Definizione di macro</H2>
+
+<P class=T>Una <A HREF="javascript:HelpPopup('actip9.hlp','defScript');" class="pop">macro</A> è un set di una o più <A HREF="javascript:HelpPopup('actip9.hlp','defAction');" class="pop">azioni</A>, ciascuna delle quali esegue una determinata operazione, ad esempio l'apertura di una maschera o la stampa di un report. Le macro consentono di automatizzare le attività comuni. È possibile ad esempio eseguire una macro che stampa un report quando l'utente sceglie un pulsante di comando.</P>
+
+<P class=ART><IMG SRC="images/cmacon4.bmp" ALT="Le macro contengono azioni e argomenti" BORDER=0></P>
+
+<P class=T>Per macro si intende sia una singola macro costituita da una sequenza di azioni, sia un <A HREF="javascript:HelpPopup('actip9.hlp','defMacroGroup');" class="pop">gruppo di macro</A>. È anche possibile utilizzare un'<A HREF="javascript:HelpPopup('actip9.hlp','defConditionalExpression');" class="pop">espressione condizionale</A> per determinare se in alcuni casi un'azione viene eseguita o meno quando si esegue una macro.</P>
+
+<H2>Sequenza di azioni</H2>
+
+<P class=T>La macro riportata di seguito è costituita da una serie di azioni che vengono eseguite ogni volta che si esegue una macro in Microsoft Access. Per eseguire questa macro, si fa riferimento alla macro denominata Visualizza prodotti.</P>
+
+<P class=ART><IMG SRC="images/cmacon5.bmp" ALT="Macro contenente più azioni" BORDER=0></P>
+
+<H2>Gruppo di macro</H2>
+
+<P class=T>Se si dispone di diverse macro, è possibile raggruppare quelle correlate per gestire più facilmente il database. Per visualizzare i nomi delle macro di un gruppo, scegliere <B>Nomi macro</B> dal menu <B>Visualizza</B> della finestra della macro.</P>
+
+<P class=T>Il gruppo di macro riportato di seguito è denominato ad esempio Pulsanti ed è costituito da tre macro correlate: Impiegati, Prodotti e Rappresentanti. Ciascuna macro esegue l'azione ApriMaschera e la macro Prodotti esegue anche l'azione SpostaRidimensiona.</P>
+
+<P class=ART><IMG SRC="images/cmacon6.bmp" ALT="Esempio di gruppo di macro" BORDER=0></P>
+
+<P class=T>Il nome visualizzato nella colonna <B>Nome macro</B> identifica ciascuna macro. Quando si esegue una macro di un gruppo, viene eseguita l'azione riportata nella relativa colonna e tutte quelle immediatamente successive la cui colonna <B>Nome macro</B> è vuota.</P>
+
+<P class=T>Per eseguire una macro di un gruppo, utilizzare il nome del gruppo seguito da un punto e quindi dal nome della macro. Nell'esempio precedente, per fare riferimento alla macro Impiegati del gruppo Pulsanti, si digiterebbe <B>Pulsanti.Impiegati</B>.</P>
+
+<H2>Azioni condizionali </H2>
+
+<P class=T>Per visualizzare la colonna <B>Condizione</B>, scegliere <B>Condizioni</B> dal menu <B>Visualizza</B> della finestra della macro. La seguente macro esegue le azioni FinestraMessaggio e ArrestaMacro solo quando l'espressione riportata nella colonna <B>Condizione</B> è vera (quando il campo IDFornitore contiene un valore <A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>).</P>
+
+<P class=ART><IMG SRC="images/cmacon8.bmp" ALT="Esempio di azione condizionale in una macro" BORDER=0></P>
+
+<P class=T>Per informazioni sulla creazione di una macro, fare clic su <A HREF="achowCreateMacroS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>. Per informazioni sull'esecuzione di una macro, fare clic su <A HREF="acdecRunMacroS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconMacrosWhatTheyAreHowTheyWorkW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

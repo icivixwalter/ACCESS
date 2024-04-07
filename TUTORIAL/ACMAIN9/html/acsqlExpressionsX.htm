@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlExpressionsX'
+Feature='acsql'
+Handoff='2'
+SourceFile='acdsqlvb_1a.rtf'
+Tnum='234545'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di espressioni SQL</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlexpressionsx"></A>Esempio di espressioni SQL</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea un oggetto <B>Recordset</B> di tipo dynaset da un'istruzione SQL. Tale istruzione include la funzione <B>Year</B> in una proposizione WHERE per restituire solo i record relativi agli ordini effettuati nel 1995.</P>
+
+<PRE class=CT><CODE>Sub Ordini96()
+    Dim dbs As Database, rst As Recordset, strSQL _
+        AS String
+    Dim fld As Field
+
+    Set dbs = CurrentDb
+    strSQL = "SELECT DISTINCTROW IDOrdine, DataOrdine " _
+        &amp; "FROM Ordini " _
+        &amp; "WHERE ((Year([DataOrdine])=1996));"
+    Set rst = dbs.OpenRecordset(strSQL, dbOpenDynaset)
+    rst.MoveLast
+    Debug.Print rst.RecordCount
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo si indica come includere una funzione di Visual Basic in un'istruzione SQL in visualizzazione SQL della finestra della query. L'istruzione SQL riportata di seguito definisce una query che visualizza il campo NomeDestinatario contenuto in una tabella Ordini, calcola il numero di caratteri contenuti nel campo per ciascun record utilizzando la funzione <B>Len</B> e visualizza tale calcolo in un'altra colonna.</P>
+
+<PRE class=CT><CODE>SELECT DISTINCTROW NomeDestinatario, Len([NomeDestinatario]) _
+    AS LunghezzaNomeDestinatario
+FROM Ordini;</CODE></PRE>
+
+
+
+<P class=T>È possibile creare la stessa query nella griglia di struttura della query. Creare una nuova query ed aggiungere la tabella Ordini. Trascinare il campo NomeDestinatario nella cella <B>Campo</B> della prima colonna nella griglia. In un'altra cella <B>Campo</B>, creare un espressione campo calcolato, immettendo l'espressione riportata di seguito:</P>
+
+<PRE class=CT><CODE>LunghezzaNomeDestinatario: Len([NomeDestinatario])</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

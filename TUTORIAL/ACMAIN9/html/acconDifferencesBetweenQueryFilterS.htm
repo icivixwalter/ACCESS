@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconDifferencesBetweenQueryFilterS'
+Feature='Filters: Basics'
+Handoff='1'
+SourceFile='CFLTBAS.RTF'
+Tnum='188154'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Analogie e differenze tra query di selezione e filtri</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="accondifferencesbetweenqueryfilters"></A>Analogie e differenze tra query di selezione e filtri</H1>
+
+<P class=T>L'analogia principale tra <A HREF="javascript:HelpPopup('actip9.hlp','defSelectQuery');" class="pop">query di selezione</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defFilter');" class="pop">filtri</A> è che entrambe recuperano un sottoinsieme di record da una tabella o query sottostante. La modalità di utilizzo dei record restituiti determina se utilizzare un filtro o una query.</P>
+
+<P class=T>Si utilizza, in genere, un filtro per visualizzare o modificare temporaneamente un sottoinsieme di record quando si è in una maschera o in un foglio dati. Si utilizza una query se si desidera eseguire una o tutte le operazioni che seguono:
+
+<UL>
+	<LI class=LB1>Visualizzare il sottoinsieme di record senza aprire prima una tabella o maschera specifica.<BR><BR></LI>
+
+	<LI class=LB1>Scegliere le tabelle contenenti i record che si desidera utilizzare e aggiungere altre tabelle successivamente, se necessario.<BR><BR></LI>
+
+	<LI class=LB1>Controllare quali campi del sottoinsieme di record si desidera visualizzare nei risultati.<BR><BR></LI>
+
+	<LI class=LB1>Eseguire i calcoli sui valori presenti nei campi. 
+<P class=4>
+</LI>
+</UL>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Nel caso in cui si decida comunque di creare una query, utilizzare le semplici tecniche di creazione dei filtri <A HREF="javascript:HelpPopup('actip9.hlp','defFilterByForm');" class="pop">Filtro in base a maschera</A>, <A HREF="javascript:HelpPopup('actip9.hlp','defFilterBySelection');" class="pop">Filtro in base a selezione</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defFilterForInput');" class="pop">Filtro in base a input</A>, quindi salvare il filtro come query. In questo modo verrà evitata completamente la <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> della query, a meno che non si desideri apportare ulteriori modifiche alla query. Anche in questo caso, quando si apre la query in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewQuery');" class="pop">visualizzazione Struttura</A>, verrà visualizzato il modo in cui la griglia di struttura è stata riempita utilizzando le informazioni provenienti dal filtro. Tali informazioni possono essere utilizzate quindi come guida per apportare ulteriori modifiche.</P>
+
+<P class=T>Nella seguente tabella sono riportate le analogie e le differenze tra query e filtri. </P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=42%>Caratteristiche</TH>
+<TH width=12%>Filtri</TH>
+<TH width=46%>Query</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Consentono di aggiungere altre tabelle se si desidera includere i relativi record nel sottoinsieme che viene restituito.</TD>
+<TD class=TT width=12%>No</TD>
+<TD class=TT width=46%>Sì</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Consentono di specificare quali campi del sottoinsieme di record si desidera visualizzare nei risultati.</TD>
+<TD class=TT width=12%>No </TD>
+<TD class=TT width=46%>Sì</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Appaiono come oggetti separati nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A>.</TD>
+<TD class=TT width=12%>No</TD>
+<TD class=TT width=46%>Sì</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Utilizzabili in una tabella, una query o una maschera chiusa.</TD>
+<TD class=TT width=12%>No</TD>
+<TD class=TT width=46%>Sì</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Producono risultati che si possono utilizzare come origine dati di una maschera o un report.</TD>
+<TD class=TT width=12%>Sì</TD>
+<TD class=TT width=46%>Sì</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Possono calcolare somme, medie, conteggi e altri tipi di totali.</TD>
+<TD class=TT width=12%>No</TD>
+<TD class=TT width=46%>Sì</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Possono ordinare record.</TD>
+<TD class=TT width=12%>Sì</TD>
+<TD class=TT width=46%>Sì</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=42%>Consentono di modificare i dati se la modifica è consentita.</TD>
+<TD class=TT width=12%>Sì</TD>
+<TD class=TT width=46%>Sì, a seconda del tipo di query. È possibile anche eseguire aggiornamenti collettivi con una <A HREF="javascript:HelpPopup('actip9.hlp','defUpdateQuery');" class="pop">query di aggiornamento</A>.</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconDifferencesBetweenQueryFilterSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

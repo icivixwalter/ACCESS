@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acrefOptionsInTotalRowS'
+Feature='Queries: Expressions'
+Handoff='1'
+SourceFile='CQRYTOT.RTF'
+Tnum='188533'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Funzioni di aggregazione e altre opzioni nella riga Formula della griglia di struttura della query</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acsqlFirstLastS">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acrefoptionsintotalrows"></A>Funzioni di aggregazione e altre opzioni nella riga Formula della griglia di struttura della query</H1>
+
+<P class=T>Nove delle 12 opzioni nella riga <B>Formula</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> sono <A HREF="javascript:HelpPopup('actip9.hlp','defAggregateFunction');" class="pop">funzioni di aggregazione</A>. Tutte le funzioni, eccetto <B>Primo</B> e <B>Ultimo</B>, sono spiegate nella tabella riportata di seguito. Per informazioni sull'utilizzo delle funzioni <B>Primo</B> e <B>Ultimo</B>, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>. Le altre tre opzioni dell'elenco sono spiegate nella seconda tabella.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Le funzioni di aggregazione non includono i record che contengono valori vuoti (<A HREF="javascript:HelpPopup('actip9.hlp','defNull');" class="pop"><B>Null</B></A>) nei relativi calcoli. La funzione <B>Conteggio</B> restituisce, ad esempio, un conteggio di tutti i record senza valori <B>Null</B>. Esiste un metodo per contare i valori <B>Null</B> ed è possibile convertire i valori <B>Null</B> in zeri in modo da poterli includere in un calcolo. Per ulteriori informazioni, fare clic su <A HREF="acconWorkingWithBankFieldsZeroLengthStringsQueriesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=15%><BR>
+<BR>
+Selezionare</TH>
+<TH width=38%><BR>
+<BR>
+Per trovare</TH>
+<TH width=47%>Utilizzare con questi tipi di dati di campo</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%><B>Somma</B></TD>
+<TD class=TT width=38%>Totale dei valori contenuti in un campo.</TD>
+<TD class=TT width=47%>Numerico, Data/ora, Valuta e Contatore</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%><B>Media</B></TD>
+<TD class=TT width=38%>Media dei valori contenuti in un campo.</TD>
+<TD class=TT width=47%>Numerico, Data/ora, Valuta e Contatore</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%><B>Min</B></TD>
+<TD class=TT width=38%>Il valore più basso in un campo.</TD>
+<TD class=TT width=47%>Testo, Numerico, Data/ora, Valuta e Contatore</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%><B>Max</B></TD>
+<TD class=TT width=38%>Il valore più alto in un campo.</TD>
+<TD class=TT width=47%>Testo, Numerico, Data/ora, Valuta e Contatore</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%><B>Conteggio</B></TD>
+<TD class=TT width=38%>Numero di valori in un campo, esclusi i valori <B>Null</B> (vuoti).</TD>
+<TD class=TT width=47%>Testo, Memo, Numerico, Data/ora, Valuta, Contatore, Sì/No e Oggetto OLE</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%><B>DevSt</B></TD>
+<TD class=TT width=38%>Deviazione standard dei valori contenuti in un campo.</TD>
+<TD class=TT width=47%>Numerico, Data/ora, Valuta e Contatore</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=15%> <B>Var</B></TD>
+<TD class=TT width=38%>Varianza dei valori contenuti in un campo.</TD>
+<TD class=TT width=47%>Numerico, Data/ora, Valuta e Contatore</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=22%>Selezionare</TH>
+<TH width=78%>Per</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>Raggruppamento</B></TD>
+<TD class=TT width=78%>Definire i gruppi per i quali si desidera eseguire i calcoli. Per visualizzare, ad esempio, le vendite totali per categoria, selezionare <B>Raggruppamento</B> per il campo Nome categoria.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>Espressione</B></TD>
+<TD class=TT width=78%>Creare un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedField');" class="pop">campo calcolato</A> che include una funzione di aggregazione nella relativa<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop"> espressione</A>. In genere, viene creato un campo calcolato quando si desidera utilizzare più funzioni in un'espressione.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=22%><B>Dove</B></TD>
+<TD class=TT width=78%>Specificare dei criteri per un campo che non si sta utilizzando per definire dei raggruppamenti. Se si seleziona questa opzione per un campo, questo verrà nascosto nei risultati della query disattivando la casella di controllo <B>Mostra</B>.</TD>
+</TR>
+</TABLE><BR>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acrefOptionsInTotalRowSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

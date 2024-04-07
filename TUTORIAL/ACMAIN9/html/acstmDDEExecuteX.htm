@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acstmDDEExecuteX'
+Feature='acstm'
+Handoff='1'
+SourceFile='ddestuff_1a.doc'
+Tnum='186362'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di DDE (Dynamic Data Exchange)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acstmddeexecutex"></A>Esempio di DDE (Dynamic Data Exchange)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito, viene stabilito un collegamento DDE con Microsoft Excel, vengono inseriti alcuni valori nelle celle della prima riga di un nuovo foglio di lavoro e vengono rappresentati graficamente i valori. Innanzitutto, la funzione <B>DDEInitiate</B> apre un canale per iniziare la conversazione DDE, quindi l'istruzione <B>DDEExecute</B> invia a Microsoft Excel il comando per aprire un nuovo foglio di lavoro e la funzione <B>DDERequest</B> richiede a Microsoft Excel il nome del foglio di lavoro appena creato. Viene aperto un nuovo canale e l'istruzione <B>DDEPoke</B> invia a Microsoft Excel i dati di cui effettuare la rappresentazione grafica. Infine, l'istruzione <B>DDETerminate</B> termina il collegamento DDE con Microsoft Excel, mentre l'istruzione <B>DDETerminateAll</B> termina tutti i collegamenti DDE attivi.</P>
+
+<PRE class=CT><CODE>Sub DDEExcel()
+&nbsp;&nbsp;&nbsp; Dim intI As Integer, intCan1 As Integer
+&nbsp;&nbsp;&nbsp; Dim strArgomenti As String, strRisp As String, strNomeFoglio As String
+
+&nbsp;&nbsp;&nbsp; On Error Resume Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta la gestione errori.
+
+&nbsp;&nbsp;&nbsp; intCan1 = DDEInitiate("Excel", "System")&nbsp;&nbsp;&nbsp; ' Stabilisce il collegamento.
+&nbsp;&nbsp;&nbsp; If Err Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Se si verifica un errore, è possibile che Excel
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Err = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' non venga eseguito. Corregge errore
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shell "C:\Excel\Excel.exe", 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' e avvia il foglio di calcolo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Err Then Exit Sub&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' In caso di altro errore, esce.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Stabilisce il collegamento del foglio di calcolo.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intCan1 = DDEInitiate("Excel", "System")
+&nbsp;&nbsp;&nbsp; End If
+
+&nbsp;&nbsp;&nbsp; ' Crea un nuovo foglio di lavoro.
+&nbsp;&nbsp;&nbsp; DDEExecute intCan1, "[Nuovo(1)]"
+&nbsp;&nbsp;&nbsp; ' Reperisce elenco degli argomenti, nome del foglio di lavoro.
+&nbsp;&nbsp;&nbsp; strArgomenti = DDERequest(intCan1, "Selezione")
+&nbsp;&nbsp;&nbsp; strNomeFoglio = Left(strArgomenti, InStr(1, strArgomenti, "!") - 1)
+&nbsp;&nbsp;&nbsp; ' Termina il collegamento DDE.
+&nbsp;&nbsp;&nbsp; DDETerminate intCan1
+&nbsp;&nbsp;&nbsp; ' Stabilisce il collegamento con un nuovo foglio di lavoro.
+&nbsp;&nbsp;&nbsp; IntCan1 = DDEInitiate("Excel", strNomeFoglio)
+&nbsp;&nbsp;&nbsp; For intI = 1 To 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inserisce dei valori nella
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DDEPoke intCan1, "R1C" &amp; intI, intI&nbsp;&nbsp;&nbsp; ' prima riga.
+&nbsp;&nbsp;&nbsp; Next intI
+&nbsp;&nbsp;&nbsp; ' Esegue il grafico.
+&nbsp;&nbsp;&nbsp; DDEExecute intCan1, "[Seleziona(""R1C1:R1C10"")][Nuovo(2,2)]"
+&nbsp;&nbsp;&nbsp; ' Termina tutti i collegamenti.
+&nbsp;&nbsp;&nbsp; DDETerminateAll
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acidxFocusEvents'
+Feature='acidx'
+Handoff='2'
+SourceFile='aidxlan_1a.doc'
+Tnum='187241'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi di stato attivo</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acidxfocusevents"></A>Eventi di stato attivo</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxFocusEventsC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acidxFocusEventsX">
+</OBJECT></P>
+
+
+
+<P class=T>Gli eventi di stato attivo si verificano quando una maschera o un controllo acquista o perde lo stato attivo oppure quando una maschera o un report diventa attivo o inattivo.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=22%>Evento</TH>
+<TH width=30%>Proprietà di evento</TH>
+<TH width=48%>Quando si verifica</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtActivateDeactivate.htm">Attivazione</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnActivate</B></A> (maschere, report)</TD>
+<TD class=LMC width=48%>Quando una maschera o un report diventa la finestra attiva.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtActivateDeactivate.htm">Disattivazione</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnDeactivate</B></A> (maschere, report)</TD>
+<TD class=LMC width=48%>Quando un'altra finestra di Microsoft Access diventa la finestra attiva, ma prima che questa lo diventi realmente. L'evento Disattivazione non si verifica quando lo stato attivo si sposta sulla finestra di un'altra applicazione, su una finestra di dialogo o su una maschera popup.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtEnterExit.htm">Invio</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnEnter</B></A> (controlli)</TD>
+<TD class=LMC width=48%>Prima che un controllo riceva lo stato attivo da un altro controllo sulla stessa maschera o all'apertura della maschera stessa. Questo evento si verifica prima dell'evento Attivato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtEnterExit.htm">Uscita</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnExit</B></A> (controlli)</TD>
+<TD class=LMC width=48%>Prima che il controllo perda lo stato attivo a favore di un altro controllo della stessa maschera. Questo evento si verifica prima dell'evento Disattivato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtGotLostFocus.htm">Attivato</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnGotFocus</B></A> (maschere, controlli)</TD>
+<TD class=LMC width=48%>Quando un controllo o una maschera senza controlli attivi o abilitati riceve lo stato attivo. Una maschera può ricevere lo stato attivo solo se tutti i controlli visibili in essa disponibili sono disabilitati o se non contiene alcun controllo.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=LMC width=22%><A HREF="acevtGotLostFocus.htm">Disattivato</A></TD>
+<TD class=LMC width=30%><A HREF="acproEventProperties.htm"><B>OnLostFocus</B></A> (maschere, controlli)</TD>
+<TD class=LMC width=48%>Quando una maschera o un controllo perde lo stato attivo. Una maschera può ricevere lo stato attivo solo se tutti i controlli visibili in essa disponibili sono disabilitati o se non contiene alcun controllo.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowExportDatasheetToDynamicFormat'
+Feature='Web'
+Handoff='3'
+SourceFile='ctbliel.rtf'
+Tnum='189078'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esportare un foglio dati in formato HTML generato da server</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconAboutProtectingAccessProject">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowexportdatasheettodynamicformat"></A>Esportare un foglio dati in formato HTML generato da server</H1>
+
+<OL>
+	<LI class=LPROC>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> fare clic sul nome della tabella, della query o della maschera che si desidera esportare, quindi scegliere <B>Esporta</B> dal menu <B>File</B>.<BR><BR>
+</LI>
+
+	<LI class=LPROC>Nella casella <B>Tipo file</B> selezionare <B>Microsoft IIS 1-2 (*.htx;*.idc)</B> o su <B>Microsoft Active Server Pages (*.asp)</B> a seconda del formato di output <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefServergeneratedHTML');" class="pop">HTML generato da server</A> desiderato. Fare clic qui per informazioni sul <A HREF="acconGetMoreInformationToDecideWhetherToUseStaticOrDynamicHTMLFormat.htm">formato HTML generato da server</A>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul collegamento nella <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_oftipPlacesBar');" class="pop">barra percorsi</A> o sulla freccia a destra della casella di riepilogo <B>Salva in</B> e selezionare l'unità o la cartella di destinazione.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella <B>Nome file</B> immettere il nome del file.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul pulsante <B>Salva</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Immettere le informazioni appropriate nella finestra di dialogo <B>Opzioni di output per Microsoft Active Server Pages</B> o <B>Opzioni di output per HTX/IDC</B>:
+<P class=LT1>Nella casella di testo <B>Modello HTML</B> immettere la posizione del modello HTML. Fare clic qui per informazioni sul <A HREF="achowUseHTMLTemplateFile.htm">file modello HTML</A>. 
+
+<P class=LT1>Nella casella di testo <B>Nome origine dati</B> immettere il nome dell'<A HREF="javascript:HelpPopup('actip9.hlp','defODBCDataSource');" class="pop">origine dati ODBC</A> alla quale si verrà connessi quando i file HTML generati da server verranno elaborati sul server Web. Fare clic qui per informazioni sulle <A HREF="acconAboutODBCDataSources.htm">origini dati ODBC</A>.
+
+<P class=LT1>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> nelle caselle <B>Utente connesso come</B> e <B>Password utente</B> immettere un nome utente e una password di <A HREF="javascript:HelpPopup('actip9.hlp','defUserLevelSecurity');" class="pop">protezione a livello utente</A> che consentano agli utenti di accedere al database di Access dalla pagina Web. Se non si immette un nome utente e una password, verrà utilizzato il nome utente predefinito <B>Amministratore</B> senza password. Fare clic qui per informazioni sulla <A HREF="acdecProtectWithUserlevelSecurity.htm">protezione a livello utente</A>.
+
+<P class=LT1>In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> nelle caselle <B>Nome utente</B> e <B>Password</B> immettere un nome utente e una password per consentire agli utenti di accedere al database di Microsoft SQL Server dalla pagina Web. Se non si immettono i dati richiesti, verrà utilizzato il nome utente predefinito <B>Sa</B> senza password. Fare clic qui per informazioni sulla <A HREF="JavaScript:hhobj_1.Click()">protezione del database SQL Server</A>.
+</LI>
+</OL>
+
+<P class=T>Una volta esportato un <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheet');" class="pop">foglio dati</A> in un formato output ASP o IDC/HTX, è necessario <A HREF="javascript:HelpPopup('actip9.hlp','defPublish');" class="pop">pubblicare</A> i file per renderli disponibili su <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefWorldWideWeb');" class="pop">World Wide Web</A>. Fare clic qui per informazioni sulla <A HREF="achowPublishServergeneratedHTMLFilesToWebServer.htm">pubblicazione dei file HTML generati da server su un server Web</A>.</P>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp; 
+
+<UL>
+	<LI class=NLB>Se il foglio dati contiene una query con parametri, Microsoft Access simula la finestra di dialogo <B>Immissione valore parametro</B> creando una pagina dei parametri HTML aggiuntiva che contiene una casella di testo di una maschera HTML per immettere i valori dei parametri e un pulsante per eseguire la query. È necessario definire esplicitamente i tipi di dati dei parametri quando si crea una query con parametri, nonché visualizzare questa pagina Web con i parametri HTML prima di visualizzare la pagina Web del foglio dati. Durante l'operazione di esportazione, Microsoft Access esegue la query e visualizza la finestra di dialogo <B>Immissione valore parametro</B>, ma è possibile solo fare clic su <B>OK</B> perché l'input viene ignorato.<BR><BR></LI>
+
+	<LI class=LB1>I campi con <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkDataType');" class="pop">tipo di dati Collegamento ipertestuale</A> sono esportati come stringhe che utilizzano il seguente formato di <A HREF="javascript:HelpPopup('actip9.hlp','defHyperlinkAddress');" class="pop">collegamento ipertestuale</A>: <I>testovisualizzato#indirizzo#sottoindirizzo#descrizione</I>. Sebbene non sia possibile fare clic sulla stringa in un browser Web per seguire l'indirizzo del collegamento ipertestuale, è possibile copiare e incollare la parte di indirizzo sulla barra degli indirizzi del browser Web.<BR><BR></LI>
+
+	<LI class=LB1>L'invio come output e la visualizzazione di un foglio dati di grandi dimensioni in un browser Web può richiedere molto tempo. Si consiglia di ridurre le dimensioni del foglio dati dividendolo in fogli dati più piccoli in base a criteri come, ad esempio, il campo di tipo Data oppure utilizzando un report o una maschera per visualizzare i dati.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowExportDatasheetToDynamicFormatW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

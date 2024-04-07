@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtBeforeAfterInsertEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2a_1a.rtf'
+Tnum='187031'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Eventi PrimaDiInserire, DopoInserimento - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevtbeforeafterinsertepx"></A>Eventi PrimaDiInserire, DopoInserimento - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si illustra come è possibile utilizzare una routine evento PrimaDiInserire per verificare se si desidera creare un nuovo record e una routine evento DopoInserimento per rieseguire una query sull'origine record per la maschera Impiegati dopo l'aggiunta di un nuovo record.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera chiamata Impiegati, basata su una tabella o su una query. Passare alla visualizzazione Foglio dati della maschera e provare a inserire un record.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>BeforeInsert</B>(Cancel As Integer)
+&nbsp;&nbsp;&nbsp; If MsgBox("Inserire qui il nuovo record?", _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vbOKCancel) = vbCancel Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cancel = True
+&nbsp;&nbsp;&nbsp; End If
+End Sub
+
+Private Sub Form_<B>AfterInsert</B>()
+&nbsp;&nbsp;&nbsp; Forms!Impiegati.Requery
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

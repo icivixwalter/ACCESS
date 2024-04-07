@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthactTransferSpreadsheetX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthact_1b.rtf'
+Tnum='186597'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo TransferSpreadsheet</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthacttransferspreadsheetx"></A>Esempio di metodo TransferSpreadsheet</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come importare i dati dell'intervallo specificato del foglio di calcolo di Lotus Nuoviimp.wk3 nella tabella Impiegati di Microsoft Access. La prima riga del foglio di calcolo viene utilizzata come nomi di campo.</P>
+
+<PRE class=CT><CODE>DoCmd.<B>TransferSpreadsheet</B> acImport, 3, "Impiegati","C:\Lotus\Nuoviimp.wk3", True, "A1:G12"</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

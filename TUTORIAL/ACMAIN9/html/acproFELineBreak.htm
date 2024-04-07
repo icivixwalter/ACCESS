@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFELineBreak'
+Feature='acpro'
+Handoff='3'
+SourceFile='feacc1.doc'
+Tnum='255702'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà FELineBreak</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprofelinebreak"></A>FELineBreak Property</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:See Also">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFELineBreakC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Example">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFELineBreakX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Applies To">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproFELineBreakA">
+</OBJECT></P>
+
+
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>You can use the <B>FELineBreak</B> property to control line breaks at the beginning and end of lines in the form control (text box).</P>
+
+<P class=T><B>Settings</B></P>
+
+<P class=T>The <B>FELineBreak</B> property uses the following settings.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=19%>Setting</TH>
+<TH width=50%>Description</TH>
+<TH width=31%>Visual Basic</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>Yes</TD>
+<TD class=TT width=50%>Controls line breaks.</TD>
+<TD class=TT width=31%><B>True</B> (-1)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>No</TD>
+<TD class=TT width=50%>Does control line breaks (default).</TD>
+<TD class=TT width=31%><B>False</B> (0)</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>You can set this property by using the <A HREF="achowSetFormReportControlProperties.htm">property sheet</A>, a <A HREF="achowSettingPropsUsingMacros.htm">macro</A>, or <A HREF="achowSettingPropsUsingCode.htm">Visual Basic</A>.</P>
+
+<P class=RL><B>Remarks</B></P>
+
+<P class=T>Setting the <B>FELineBreak</B> property to Yes moves any punctuation marks and closing parentheses at the beginning of a line to the end of the previous line, and opening parentheses at the end of a line to the beginning of the next line.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

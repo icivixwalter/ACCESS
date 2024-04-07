@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproLocationOfComponentsX'
+Feature='acpro'
+Handoff='2'
+SourceFile='acproV9.doc'
+Tnum='270030'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà LocationOfComponents</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprolocationofcomponentsx"></A>Esempio di proprietà LocationOfComponents</B></P>
+
+
+
+<P class=T>Nell'esempio seguente viene impostato il percorso da cui vengono scaricati i componenti di Office.</P>
+
+<PRE class=CT><CODE>Application.DefaultWebOptions.<B>LocationOfComponents</B> = _
+  Application.Path &amp; Application.PathSeparator &amp; "foo"</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCreateIndexX'
+Feature='acmth'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234375'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodo CreateIndex (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthcreateindexx"></A>Esempio di metodo CreateIndex (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene creato un nuovo oggetto <B>Index</B> di una tabella Dipendenti. Il nuovo indice è costituito da due campi, Cognome e Nome.</P>
+
+<PRE class=CT><CODE>Sub NuovoIndice()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, tdf As TableDef
+&nbsp;&nbsp;&nbsp; Dim idx As Index
+&nbsp;&nbsp;&nbsp; Dim fldLastName As Field, fldFirstName As Field
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento alla tabella Dipendenti.
+&nbsp;&nbsp;&nbsp; Set tdf = dbs.TableDefs!Dipendenti
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al nuovo indice.
+&nbsp;&nbsp;&nbsp; Set idx = tdf.<B>CreateIndex</B>("NomeEsteso")
+&nbsp;&nbsp;&nbsp; ' Crea e accoda campi indice.
+&nbsp;&nbsp;&nbsp; Set fldLastName = idx.CreateField("Cognome", dbText)
+&nbsp;&nbsp;&nbsp; Set fldFirstName = idx.CreateField("Nome", dbText)
+&nbsp;&nbsp;&nbsp; idx.Fields.Append fldLastName
+&nbsp;&nbsp;&nbsp; idx.Fields.Append fldFirstName
+&nbsp;&nbsp;&nbsp; ' Accoda oggetto Index ed aggiorna insieme.
+&nbsp;&nbsp;&nbsp; tdf.Indexes.Append idx
+&nbsp;&nbsp;&nbsp; tdf.Indexes.Refresh
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

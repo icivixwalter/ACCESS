@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateCrosstabQueryThatSummarizesDataRowColumS'
+Feature='Queries: Basics'
+Handoff='1'
+SourceFile='CQRYTAB_1.rtf'
+Tnum='188047'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare una query a campi incrociati senza utilizzare una creazione guidata</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreatecrosstabquerythatsummarizesdatarowcolums"></A>Creare una query a campi incrociati senza utilizzare una creazione guidata</H1>
+
+<P class=T>Per visualizzare un esempio di una query a campi incrociati prima di iniziare, fare clic su <A HREF="aclrgExampleOfCrosstabQuery.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+
+<OL>
+	<LI class=LPROC>Nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> scegliere <B>Query</B> <A HREF="javascript:HelpPopup('actip9.hlp','acrgnDatabaseQueryQ');" class="pop"><IMG SRC="images/dbcqry.bmp" BORDER=0></A> dall'elenco <B>Oggetti</B>, quindi scegliere il pulsante <B>Nuovo</B> sulla barra degli strumenti della finestra del database.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Nuova query</B> scegliere <B>Visualizzazione Struttura</B>, quindi scegliere <B>OK</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Mostra tabella</B> scegliere la scheda che elenca le tabelle o le query di cui si desidera utilizzare i dati.<BR><BR></LI>
+
+	<LI class=LPROC>Fare doppio clic sul nome di ciascun oggetto che si desidera aggiungere alla query, quindi scegliere <B>Chiudi</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Aggiungere campi alla riga <B>Campo</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura</A> e specificare i criteri.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul pulsante <B>Tipo di query</B> <A HREF="javascript:HelpPopup('actip9.hlp','defQueryTypeButton');" class="pop"><IMG SRC="images/qerytyp.bmp" BORDER=0></A> sulla barra degli strumenti, quindi scegliere <B>Campi incrociati</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sulla riga <B>Campi incrociati</B>, quindi su <B>Intestazione di riga</B> per il campo o i campi i cui valori si desidera vengano visualizzati come intestazioni di riga.
+<P class=LT1>È necessario lasciare il valore predefinito <B>Raggruppamento</B> nella riga <B>Formula</B> per questi campi.
+</LI>
+
+	<LI class=LPROC>Fare clic sulla riga <B>Campi incrociati</B>, quindi su <B>Intestazione di colonna</B> per il campo i cui valori si desidera vengano visualizzati come intestazioni di colonna. È possibile scegliere <B>Intestazione di colonna</B> solo per un campo ed è necessario lasciare <B>Raggruppamento</B> nella riga <B>Formula</B> per questo campo.
+<P class=LT1>Come impostazione predefinita, le intestazioni di colonna sono ordinate numericamente o alfabeticamente. Se si desidera che vengano visualizzate in un ordine diverso o se si desidera limitare il numero di intestazioni di colonna da visualizzare, impostare la proprietà <B>Intestazioni colonne</B> della query.
+
+<P class=LBR2><A HREF="achowRearrangeLimitColumnHeadingsDisplayedInCrosstS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Fare clic sulla riga <B>Campi incrociati</B>, quindi su <B>Valore</B> per il campo di cui si desidera utilizzare i valori nell'incrocio dei campi.
+<P class=LT1>Solo un campo può essere impostato a <B>Valore</B>.
+</LI>
+
+	<LI class=LPROC2>Nella riga <B>Formula</B> di questo campo, scegliere il tipo di <A HREF="javascript:HelpPopup('actip9.hlp','defAggregateFunction');" class="pop">funzione di aggregazione</A> desiderato per l'incrocio dei campi, ad esempio <B>Somma, Media</B> o <B>Conteggio</B>.<BR><BR></LI>
+
+	<LI class=LPROC2>Per specificare dei criteri che limitano le intestazioni di riga prima dell'esecuzione del calcolo, immettere un'espressione nella riga <B>Criteri</B> per un campo che contiene <B>Intestazione di riga</B> nella cella <B>Campi incrociati</B>. È possibile, ad esempio, visualizzare le vendite totali per i prodotti di determinate categorie, ad esempio carne e pesce. 
+<P class=LT1>Per specificare dei criteri che limitano i record prima che le intestazioni di riga siano raggruppate e prima che venga eseguito l'incrocio dei campi, aggiungere alla griglia di struttura il campo per il quale si desidera impostare i criteri, scegliere <B>Dove</B> nella riga <B>Formula</B>, lasciare vuota la cella <B>Campi incrociati</B>, quindi immettere un'espressione nella riga <B>Criteri</B>. I risultati della query non visualizzeranno i campi che contengono <B>Dove</B> nella riga <B>Formula</B>. Per visualizzare esempi relativi a come influiscono i criteri sui calcoli nelle query, fare clic su <A HREF="achowEntercriteriaInQueryCalculatesAggregatesUsingTotalRowS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LPROC2>Per visualizzare i risultati della query, fare clic sul pulsante delle visualizzazioni <A HREF="javascript:HelpPopup('actip9.hlp','defViewButton');" class="pop"><IMG SRC="images/view.bmp" BORDER=0></A> sulla barra degli strumenti.
+<P class=LPROCT>Per interrompere la query dopo l'avvio, premere CTRL+INTERR.
+</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=LB1>La query Ordini trimestrali per prodotto nel database di esempio Northwind è un esempio di query a campi incrociati. Per visualizzare tale query, aprire il database Northwind nella cartella Esempi della cartella Office, quindi aprire Ordini trimestrali per prodotto, in visualizzazione Struttura. Per ulteriori informazioni sull'apertura di Northwind, fare clic su <A HREF="acconNorthwind.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Se viene incluso un campo nella griglia di struttura della query ma si sceglie l'opzione <B>(Non visualizzato)</B> nella cella <B>Campi incrociati</B> e <B>Raggruppamento</B> nella riga <B>Formula</B>, il raggruppamento viene effettuato come una intestazione di riga, ma la riga non viene visualizzata nei risultati della query.<BR><BR></LI>
+
+	<LI class=LB1>È possibile che i valori del campo <B>Intestazione di colonna</B> includano caratteri di solito non consentiti nei nomi di campo, ad esempio i decimali. In tal caso, il carattere viene sostituito con un carattere di sottolineatura nel foglio dati.<BR><BR></LI>
+
+	<LI class=LB1>Per ulteriori informazioni sulla risoluzione di problemi relativi alle query a campi incrociati, fare clic su <A HREF="actrbTroubleshootCrosstabQueriesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Per informazioni sulla creazione di un elenco di tabella pivot in una <A HREF="javascript:HelpPopup('actip9.hlp','defDatapage');" class="pop">pagina di accesso ai dati</A>, fare clic su <A HREF="achowCreatePivotTableList.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateCrosstabQueryThatSummarizesDataRowColumSW">
+</OBJECT>
+</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

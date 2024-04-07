@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowDisplayMessageBoxVB'
+Feature='Macros'
+Handoff='3'
+SourceFile='cmactsk.rtf'
+Tnum='186728'
+Piece='1041'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Visualizzare una finestra di messaggio utilizzando Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowdisplaymessageboxvb"></A>Visualizzare una finestra di messaggio utilizzando Visual Basic</H1>
+
+<OL>
+	<LI class=LPROC>Creare una routine di Visual Basic.
+<P class=LBR2><A HREF="achowCreateVBProcedureS.htm">Procedura</A>
+</LI>
+
+	<LI class=LPROC>Aggiungere un'istruzione di assegnazione alla routine che consente di assegnare il valore restituito dalla funzione <B>MsgBox</B> a una variabile. La funzione restituisce valori diversi a seconda del pulsante su cui viene fatto clic nella finestra di messaggio. La routine può quindi eseguire operazioni diverse a seconda del valore restituito.
+<P class=LT1>L'istruzione di assegnazione riportata di seguito consente, ad esempio, di eseguire la funzione <B>MsgBox</B> visualizzando un messaggio e di assegnare il valore restituito dalla funzione alla variabile ValoreRestituito.
+
+<PRE class=LCT1><CODE>ValoreRestituito = MsgBox("Continuare?", vbOKCancel)</CODE></PRE>
+
+<P class=4>
+</LI>
+
+	<LI class=LPROC>Eseguire la routine.
+<P class=LBR2><A HREF="achowRunVBCodeS.htm">Procedura</A>
+</LI>
+</OL>
+
+<P class=T>Per ulteriori informazioni sulla funzione <B>MsgBox</B>, fare clic su <A HREF="acfctMsgBoxS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowDisplayMessageBoxVBW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

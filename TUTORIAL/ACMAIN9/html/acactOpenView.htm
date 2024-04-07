@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactOpenView'
+Feature='acact'
+Handoff='2'
+SourceFile='act_v9.doc'
+Tnum='252649'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione ApriVisualizzazione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acactopenview"></A>Azione ApriVisualizzazione</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenView_C">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactOpenView_X">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione ApriVisualizzazione per aprire una <A HREF="javascript:HelpPopup('actip9.hlp','dvmsgView');" class="pop">visualizzazione</A> in <A HREF="javascript:HelpPopup('actip9.hlp','defDatasheetView');" class="pop">visualizzazione Foglio dati</A>, in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A> della visualizzazione o in <A HREF="javascript:HelpPopup('actip9.hlp','defPrintPreview');" class="pop">Anteprima di stampa</A>. Questa azione esegue la visualizzazione specificata quando viene aperta in visualizzazione Foglio dati. È possibile impostare la modalità di immissione dei dati per la visualizzazione e limitare i <A HREF="javascript:HelpPopup('actip9.hlp','defRecord');" class="pop">record</A> visualizzati in quest'ultima.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione ApriVisualizzazione utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=30%>Argomenti azione</TH>
+<TH width=70%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Nome visualizzazione</TD>
+<TD class=TT width=70%>Il nome della visualizzazione da aprire. La casella <B>Nome visualizzazione</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A> visualizza tutte le visualizzazioni del database corrente. L'argomento è richiesto.
+<P class=TT>Se viene eseguita una macro contenente l'azione ApriVisualizzazione in un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A>, la visualizzazione con tale nome viene ricercata prima nel database di libreria e poi nel database corrente.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Visualizzazione</TD>
+<TD class=TT width=70%>La <A HREF="javascript:HelpPopup('actip9.hlp','defView');" class="pop">visualizzazione</A> in cui viene aperta la visualizzazione. Selezionare <B>Foglio dati</B>, <B>Struttura</B> o <B>Anteprima di stampa</B> nella casella <B>Visualizzazione</B>. L'impostazione predefinita è Foglio dati.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=30%>Modalità Immissione dati</TD>
+<TD class=TT width=70%>La modalità per l'immissione dei dati nella visualizzazione. Tale argomento si applica solo alle visualizzazioni aperte in visualizzazione Foglio dati. Selezionare <B>Aggiungi</B> per consentire l'aggiunta di nuovi record ma non la visualizzazione o la modifica di quelli esistenti, <B>Modifica</B> per consentire la visualizzazione o la modifica dei record esistenti e l'aggiunta di nuovi record oppure <B>Sola lettura</B> per consentire solo la visualizzazione dei record. L'impostazione predefinita è Modifica.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>L'azione equivale a fare clic sul pulsante <B>Apri</B> o <B>Struttura</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> dopo aver selezionato una visualizzazione nella scheda <B>Visualizzazioni</B>.</P>
+
+<P class=NT>Quando si passa in visualizzazione Struttura mentre la visualizzazione è aperta, l'impostazione dell'argomento Modalità immissione dati viene eliminata. Questa impostazione non sarà attiva anche se si torna in visualizzazione Foglio dati.</P>
+
+<P class=NT><B>Suggerimenti</B>&nbsp;&nbsp; È possibile selezionare una visualizzazione nella finestra del database e trascinarla in una <A HREF="javascript:HelpPopup('actip9.hlp','defActionRow');" class="pop">riga di azione</A> della macro. In tal modo viene creata automaticamente un'azione ApriVisualizzazione che apre la visualizzazione in visualizzazione Foglio dati. </P>
+
+<P class=NT>Se non si desidera vedere i messaggi di sistema normalmente visualizzati quando si esegue una visualizzazione per indicare che si tratta di una visualizzazione e il numero di record interessati, è possibile utilizzare l'azione <A HREF="acactSetWarnings.htm">ImpostaAvvisi</A> per evitarne la visualizzazione.</P>
+
+
+
+<P class=T>Per eseguire l'azione ApriVisualizzazione in Visual Basic, utilizzare il metodo <A HREF="acmthactOpenView.htm"><B>OpenView</B></A> dell'oggetto <A HREF="acobjDoCmd.htm"><B>DoCmd</B></A>.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

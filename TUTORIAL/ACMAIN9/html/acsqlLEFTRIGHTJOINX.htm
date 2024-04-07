@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlLEFTRIGHTJOINX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234469'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di operazioni LEFT JOIN e RIGHT JOIN (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlleftrightjoinx"></A>Esempio di operazioni LEFT JOIN e RIGHT JOIN (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare una tabella o una query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+<P class=T>Nell'esempio riportato di seguito si selezionano tutti i clienti, compresi quelli senza ordini:</P>
+
+<PRE class=CT><CODE>SELECT Clienti.IDCliente,
+NomeSocietà, IDOrdine
+FROM Clienti
+<B>LEFT JOIN</B> Ordini
+ON Clienti.IDCliente = Ordini.IDCliente
+ORDER BY IDOrdine;</CODE></PRE>
+
+
+
+<P class=T>L'esempio successivo seleziona tutti i fornitori, compresi quelli senza prodotti. Prima di procedere con l'esempio, eseguire la query riportata di seguito per aggiungere un record alla tabella Fornitori:</P>
+
+<PRE class=CT><CODE>INSERT INTO Fornitori (NomeSocietà, NomeContatto, _
+    PosizioneContatto)
+VALUES ('Acme Supply Co.', 'That Coyote', _
+    'Direttore Commerciale');</CODE></PRE>
+
+
+
+<P class=T>Quindi, creare una nuova query, incollare l'istruzione SQL riportata di seguito nella finestra SQL ed eseguire la query.</P>
+
+<PRE class=CT><CODE>SELECT Fornitori.IDFornitore, Fornitori.NomeSocietà, _
+    Prodotti.IDProdotto, Prodotti.NomeProdotto
+    FROM Prodotti RIGHT JOIN Fornitori
+    ON Prodotti.IDFornitore = Fornitori.IDFornitore
+    ORDER BY Prodotti.IDFornitore;</CODE></PRE>
+
+
+
+<P class=T>Per eliminare i record aggiuntivi creati nella tabella Fornitori, è possibile eseguire la query riportata di seguito:</P>
+
+<PRE class=CT><CODE>DELETE * FROM Fornitori
+WHERE NomeSocietà = 'Acme Supply Co.';</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

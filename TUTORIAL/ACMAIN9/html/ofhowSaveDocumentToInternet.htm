@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='ofhowSaveDocumentToInternet'
+Feature='Web: (CORE)'
+Handoff='3'
+SourceFile='COFWEB.RTF'
+Tnum='262287'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Salvare una pagina di accesso ai dati in un sito FTP</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="ofhowsavedocumenttointernet"></A>Salvare una pagina di accesso ai dati in un sito FTP</H1>
+
+<P class=NT>Per svolgere questa procedura una azienda deve essere dotata di una rete <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefIntranet');" class="pop">Intranet</A> oppure si deve disporre di accesso a un sito <A HREF="javascript:HelpPopup('oftip9.hlp','IDH_ofdefInternet');" class="pop">Internet</A> che supporti il salvataggio dei file. Occorre inoltre possedere i diritti d'accesso per il salvataggio e occorre aggiungere il sito <A HREF="javascript:HelpPopup('oftip9.hlp','ofhowFileTransferProtocolFTP');" class="pop">FTP</A> all'elenco dei percorsi FTP. Per informazioni sull'aggiunta di un sito FTP all'elenco dei siti Internet, fare clic su <A HREF="ofhowAddFTPSiteToListOfInternetSites.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.
+
+<OL>
+	<LI class=LPROC>Se la <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> che si desidera salvare in un sito FTP non è aperta, aprirla in <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefPageView');" class="pop">visualizzazione Pagina</A> o in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A>. La pagina che si desidera salvare può essere una nuova pagina di accesso ai dati che non è mai stata salvata o una pagina di accesso ai dati esistente.<BR><BR></LI>
+
+	<LI class=LPROC>Scegliere <B>Salva con nome</B> dal menu <B>File</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Salva con nome</B>, digitare un nome per il collegamento alla pagina di accesso ai dati e scegliere <B>OK</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Salva come pagina di accesso ai dati</B>, fare clic su <B>Percorsi FTP</B> nella casella <B>Salva in</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nell'elenco dei siti FTP, fare doppio clic sul sito desiderato, quindi sulla posizione in cui si desidera salvare la pagina di accesso ai dati.
+<P class=LNT><B>Nota</B>&nbsp;&nbsp; Occorre possedere autorizzazioni alla scrittura per il sito FTP per salvarvi la pagina di accesso ai dati.
+</LI>
+
+	<LI class=LPROC>Nella casella <B>Nome file</B> digitare un nome per il file htm.<BR><BR></LI>
+
+	<LI class=LPROC>Fare clic sul pulsante <B>Salva</B>.</LI>
+</OL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="ofhowSaveDocumentToInternetW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

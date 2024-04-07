@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acctlOptionGroupControlDAP'
+Feature='acctl'
+Handoff='2'
+SourceFile='acctrl_new1.doc'
+Tnum='250717'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Controllo Gruppo di opzioni (Pagine di accesso ai dati)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acctloptiongroupcontroldap"></A>Controllo Gruppo di opzioni (Pagine di accesso ai dati)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acctlOptionGroupControlDAP_C">
+</OBJECT></P>
+
+
+
+<P class=T>Un gruppo di opzioni in una <A HREF="javascript:HelpPopup('actip9.hlp','defDataPage');" class="pop">pagina di accesso ai dati</A> visualizza un gruppo limitato di alternative. Per effettuare una selezione da un gruppo di opzioni è sufficiente fare clic sul valore desiderato. In un gruppo di opzioni è possibile selezionare una sola opzione alla volta.</P>
+
+<P class=T>Un gruppo di opzioni è composto da una cornice e da un set di <A HREF="javascript:HelpPopup('actip9.hlp','defCheckBox');" class="pop">caselle di controllo</A>, di <A HREF="javascript:HelpPopup('actip9.hlp','defToggleButton');" class="pop">interruttori</A> o di <A HREF="javascript:HelpPopup('actip9.hlp','defOptionButton');" class="pop">pulsanti di opzione</A>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TD class=TT width=68%><B>Controllo</B>:</TD>
+<TD class=TT width=32%><B>Strumento</B>:</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TART width=68%><img src="images/cfrmct7.bmp" alt="Gruppo di opzioni" BORDER=0></TD>
+<TD class=TART width=32%><A HREF="javascript:HelpPopup('actip9.hlp','actbrOptionGroupQ');" class="pop"><IMG SRC="images/optngrp.bmp"  BORDER=0></A></TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Se un gruppo di opzioni è <A HREF="javascript:HelpPopup('actip9.hlp','defBoundField');" class="pop">associato</A> a un campo, solo la cornice è effettivamente associata al campo, non le caselle di controllo, gli interruttori o i pulsanti di opzione che si trovano all'interno della cornice stessa. Invece di impostare la proprietà <B>ControlSource</B> per ogni controllo del gruppo di opzioni, impostare la proprietà <B>Value</B> per ogni casella di controllo, interruttore o pulsante di opzione a un numero significativo per il campo al quale la cornice è associata. Quando si seleziona un'opzione da un gruppo di opzioni, il valore del campo al quale il gruppo di opzioni è associato viene impostato al valore della proprietà <B>Value</B> dell'opzione selezionata.</P>
+
+
+
+<P class=ART><img src="images/cfrmct8.bmp" alt="Opzione selezionata da un gruppo di opzioni" BORDER=0></P>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>Value</B> viene impostata a un numero perché il valore di un gruppo di opzioni può essere solo un valore numerico e non del testo. Tale numero viene memorizzato nella tabella sottostante. Se nell'esempio precedente si desiderasse visualizzare il nome del corriere invece del codice presente nella tabella Ordini, sarebbe necessario creare una tabella separata denominata Corrieri per memorizzare i nomi dei corrieri e trasformare il campo Corriere della tabella Ordini in un campo di <A HREF="acdecCreatingLookupAndListFieldsInTablesS.htm">ricerca</A> che reperisca i dati nella tabella Corrieri.</P>
+
+
+
+<P class=T>Un gruppo di opzioni può essere impostato anche a un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> oppure può non essere associato. È possibile utilizzare un gruppo di opzioni non associato in una <A HREF="javascript:HelpPopup('actip9.hlp','defCustomDialogBox');" class="pop">finestra di dialogo personalizzata</A> per accettare l'input dell'utente ed eseguire un'azione corrispondente a tale input.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acctlOptionGroupControlDAPW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

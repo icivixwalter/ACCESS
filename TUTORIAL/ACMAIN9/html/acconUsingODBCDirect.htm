@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconUsingODBCDirect'
+Feature='accon'
+Handoff='2'
+SourceFile='acvbanew1.doc'
+Tnum='188231'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Usare ODBCDirect con Microsoft Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daproStillExecuting">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjRecordset">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="damthCreateWorkspace">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daproDefaultType">
+</OBJECT>
+<OBJECT ID="hhobj_6" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjDBEngine">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acconusingodbcdirect"></A>Usare ODBCDirect con Microsoft Access</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconUsingODBCDirectC;daconMSJetDatabaseEngine35;dahowDataAccessOverview;daidxMethodsReferenceODBC;daidxPropertiesReferenceODBC;daidxWhatsNewInDAO">
+</OBJECT></P>
+
+
+
+<P class=RL><B>Definizione di ODBCDirect</B></P>
+
+<P class=T><A HREF="javascript:HelpPopup('actip9.hlp','defODBCDirect');" class="pop">ODBCDirect</A> è una tecnologia che consente di utilizzare i server di <A HREF="javascript:HelpPopup('actip9.hlp','defODBCDatabase');" class="pop">database ODBC</A> senza caricare il <A HREF="javascript:HelpPopup('actip9.hlp','defMSJetDatabaseEngine');" class="pop">modulo di gestione di database Jet di Microsoft</A>. ODBCDirect si basa sul modello di oggetti Microsoft DAO 3.6 per modificare con semplicità il codice <A HREF="javascript:HelpPopup('actip9.hlp','defDataAccessObject');" class="pop">DAO</A> esistente e godere dei vantaggi offerti da ODBCDirect. Microsoft DAO 3.6 include nuovi oggetti, metodi e proprietà per supportare ODBCDirect.</P>
+
+<P class=RL><B>Vantaggi dell'accesso ai dati ODBC con ODBCDirect</B></P>
+
+<P class=T>ODBCDirect offre i seguenti vantaggi per le operazioni ODBC:
+
+<UL>
+	<LI class=LB1>Con ODBCDirect è possibile eseguire il codice in maniera più veloce ed efficiente fornendo l'accesso diretto alle origini dati ODBC. Non dovendo caricare il modulo di gestione di database Microsoft Jet, ODBCDirect richiede al client una quantità limitata di risorse. Il server ODBC si occupa dell'intera elaborazione delle query.<BR><BR></LI>
+
+	<LI class=LB1>ODBCDirect fornisce un accesso migliore a funzionalità specifiche del server che non sono disponibili utilizzando ODBC mediante Microsoft Jet. Per i server ad esempio che supportano la specifica del cursore, ODBCDirect consente di specificare la posizione del cursore, sia a livello locale che di server. Per interagire con le routine memorizzate a livello di server, inoltre, è possibile specificare i valori di input e verificare i valori restituiti, procedura che non è possibile eseguire con Microsoft Jet.<BR><BR></LI>
+
+	<LI class=LB1>ODBCDirect inoltre supporta le query asincrone. Quando si esegue una query, non è necessario attenderne il termine dell'esecuzione prima di iniziare un'altra operazione. È possibile registrare l'esecuzione della query verificando la proprietà <A HREF="JavaScript:hhobj_2.Click()"><B>StillExecuting</B></A>.<BR><BR></LI>
+
+	<LI class=LB1>ODBCDirect supporta l'aggiornamento batch, consentendo di memorizzare nella cache le modifiche apportate all'oggetto <A HREF="JavaScript:hhobj_3.Click()"><B>Recordset</B></A> a livello locale e di sottomettere tali modifiche al server in un singolo batch.<BR><BR></LI>
+
+	<LI class=LB1>Con ODBCDirect è possibile creare <A HREF="javascript:HelpPopup('actip9.hlp','defDynaset');" class="pop">set di risultati</A> semplici e senza cursore o più complessi e con cursore. È inoltre possibile eseguire query che restituiscono qualsiasi numero di set di risultati, limitare il numero di righe restituite e monitorare tutti i messaggi e gli errori generati dall'origine dati remota, senza compromettere la prestazione dell'esecuzione della query.</LI>
+</UL>
+
+<P class=RL><B>Creazione di un'area di lavoro ODBCDirect</B> </P>
+
+<P class=T>È possibile creare un'area di lavoro di ODBCDirect specificando la costante <B>dbUseODBC</B> per l'argomento <I>tipo</I> del metodo <A HREF="JavaScript:hhobj_4.Click()"><B>CreateWorkspace</B></A>. È inoltre possibile specificare che venga creata un'area di lavoro ODBCDirect predefinita impostando la proprietà <A HREF="JavaScript:hhobj_5.Click()"><B>DefaultType</B></A> dell'oggetto <A HREF="JavaScript:hhobj_6.Click()"><B>DBEngine</B></A>.</P>
+
+<P class=T>Una volta creata un'area di lavoro ODBCDirect, è possibile utilizzare specifici oggetti DAO, proprietà e metodi per lavorare con i dati sul server del database ODBC.</P>
+
+<P class=RL><B>Vantaggi dell'accesso ai dati ODBC con Microsoft Jet</B></P>
+
+<P class=T>Le aree di lavoro di Microsoft Jet e di ODBCDirect forniscono funzionalità diverse ma complementari. È consigliabile utilizzare le aree di lavoro di Microsoft Jet per accedere ai file MDB e ai formati di dati ISAM, ad esempio testo e fogli di calcolo. Microsoft Jet fornisce funzionalità uniche, non disponibili in ODBCDirect. È necessario utilizzare l'area di lavoro di Microsoft Jet nei seguenti casi:
+
+<UL>
+	<LI class=LB1><B>Join aggiornabili</B>. Per aggiornare i dati degli oggetti <B>Recordset</B> basati su join di più tabelle.<BR><BR></LI>
+
+	<LI class=LB1><B>Join eterogenei</B>. Per eseguire join di tabelle con diverse origini dati.<BR><BR></LI>
+
+	<LI class=LB1><B>Operazioni DDL (Data Definition Language )</B>. Per eseguire operazioni DDL utilizzando gli oggetti DAO. ODBCDirect non fornisce un oggetto <B>TableDef</B> e di conseguenza non è possibile creare o modificare tabelle utilizzando gli oggetti DAO. È tuttavia possibile eseguire operazioni DDL utilizzando ODBCDirect per eseguire le istruzioni SQL DDL.<BR><BR></LI>
+
+	<LI class=LB1><B>Maschere e controlli associati</B>. Per associare le maschere o i controlli a un'origine dati OBDC, se l'applicazione lo richiede. I dati a cui si accede all'interno di un'area di lavoro di ODBCDirect non possono essere associati alle maschere o ai controlli.
+<P class=4>
+</LI>
+</UL>
+
+<P class=T>Se non si necessita delle funzionalità descritte, è possibile utilizzare un'area di lavoro ODBCDirect.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; È possibile definire le aree di lavoro di Microsoft Jet e di ODBCDirect nelle applicazioni e quindi unirle in qualsiasi modo. Nella stessa funzione è possibile ad esempio definire un'area di lavoro di Microsoft Jet che esegue operazioni DDL utilizzando oggetti DAO o un'area di lavoro di ODBCDirect che esegue query asincrone.</P>
+
+
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

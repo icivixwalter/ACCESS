@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactRunCode'
+Feature='acact'
+Handoff='1'
+SourceFile='act_q-z_1a.rtf'
+Tnum='188000'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione EseguiCodice</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acdecUseExpressionBuilder">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acactruncode"></A>Azione EseguiCodice</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRunCodeC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRunCodeX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione EseguiCodice per chiamare una <A HREF="javascript:HelpPopup('actip9.hlp','defFunctionProcedure');" class="pop">routine <B>Function</B></A> di Visual Basic.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione EseguiCodice utilizza l'argomento riportato di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome funzione</TD>
+<TD class=TT width=75%>Il nome della routine <B>Function</B> di Visual Basic da chiamare. Inserire tra parentesi qualsiasi <A HREF="javascript:HelpPopup('actip9.hlp','defArgument');" class="pop">argomento</A> della funzione. Immettere il nome della funzione nella casella <B>Nome funzione</B> della sezione <B>Argomenti azione</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. L'argomento è obbligatorio.
+<P class=TT><B>Nota</B>&nbsp;&nbsp; In un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB) fare clic sul pulsante dei<B> </B>generatori <A HREF="javascript:HelpPopup('actip9.hlp','defBuildButton');" class="pop"><IMG SRC="images/buildbut.bmp" BORDER=0></A> a destra della casella <B>Nome funzione</B> per <A HREF="JavaScript:hhobj_3.Click()">utilizzare il Generatore di espressioni</A> e selezionare una funzione per questo argomento. Fare clic sulla funzione desiderata, contenuta nell'elenco del Generatore di espressioni.</P>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Le routine <B>Function</B> definite dall'utente sono memorizzate nei <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">moduli</A> di Microsoft Access.</P>
+
+<P class=T>È necessario utilizzare le parentesi, anche se la routine di funzioni non dispone di alcun argomento, come indicato nell'esempio seguente:</P>
+
+<PRE class=CT><CODE>FunzioneProva()</CODE></PRE>
+
+
+
+<P class=T>Al contrario dei nomi di funzioni definite dall'utente per l'impostazione delle <A HREF="javascript:HelpPopup('actip9.hlp','defEventProperty');" class="pop">proprietà di evento</A>, il nome della funzione nell'argomento Nome funzione non comincia con un segno di uguale (=).</P>
+
+<P class=T>Microsoft Access ignora il valore restituito della funzione.</P>
+
+<P class=T><B>Nota</B>&nbsp;&nbsp; Non è possibile chiamare una routine <B>Function</B> da una macro se il nome della funzione e del modulo sono uguali.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Per eseguire una <A HREF="javascript:HelpPopup('actip9.hlp','defSubProcedure');" class="pop">routine <B>Sub</B></A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> scritta in Visual Basic, creare una routine <B>Function</B> che chiama la routine <B>Sub</B> o la routine evento. Utilizzare quindi l'azione EseguiCodice per eseguire la routine <B>Function</B>.</P>
+
+
+
+<P class=T>Se si utilizza l'azione EseguiCodice per chiamare una funzione, Microsoft Access cerca la funzione con il nome specificato dall'argomento Nome funzione nei <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">moduli standard</A> del database. Quando tuttavia questa azione viene eseguita in risposta alla scelta di un comando di menu di una <A HREF="javascript:HelpPopup('actip9.hlp','defForm');" class="pop">maschera</A> o di un <A HREF="javascript:HelpPopup('actip9.hlp','defReport');" class="pop">report</A> o in risposta a un evento su una maschera o su un report, Microsoft Access cerca innanzitutto la funzione nel modulo di classe della <A HREF="javascript:HelpPopup('actip9.hlp','defFormModule');" class="pop">maschera</A> o del <A HREF="javascript:HelpPopup('actip9.hlp','defReportModule');" class="pop">report</A>, quindi nei moduli standard. Microsoft Access non cerca la funzione specificata dall'argomento Nome funzione nei <A HREF="javascript:HelpPopup('actip9.hlp','defClassModule');" class="pop">moduli di classe</A> che compaiono nella scheda <B>Moduli</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A>.</P>
+
+<P class=T>L'azione non è disponibile in Visual Basic. Eseguire la routine <B>Function</B> desiderata direttamente in Visual Basic.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

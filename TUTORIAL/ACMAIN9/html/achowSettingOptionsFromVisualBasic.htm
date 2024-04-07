@@ -1,0 +1,739 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSettingOptionsFromVisualBasic'
+Feature='accon'
+Handoff='2'
+SourceFile='alanmsc2.doc'
+Tnum='188062'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Impostare le opzioni da Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="achowsettingoptionsfromvisualbasic"></A>Impostare le opzioni da Visual Basic</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSettingOptionsFromVisualBasicC">
+</OBJECT></P>
+
+
+
+<P class=T>Per impostare e restituire i valori delle opzioni nella finestra di dialogo <B>Opzioni</B> dal codice, è possibile utilizzare i metodi <A HREF="acmthGetSetOption.htm"><B>SetOption</B></A> e <A HREF="acmthGetSetOption.htm"><B>GetOption</B></A>. Per visualizzare la finestra di dialogo <B>Opzioni</B>, scegliere <B>Opzioni</B> dal menu <B>Strumenti</B>.</P>
+
+<P class=T>Nelle tabelle riportate di seguito sono elencati i nomi di tutte le opzioni che possono essere impostate o restituite dal codice, le schede della finestra di dialogo <B>Opzioni</B> che le contengono e l'argomento di stringa corrispondente che deve essere passato al metodo <B>SetOption</B> o <B>GetOption</B>.</P>
+
+<P class=NT><B>Note</B>
+</P>
+
+<P class=LNT>Se il database può essere eseguito in una versione di Microsoft Access con una lingua diversa da quella in cui è stato creato, gli argomenti dei metodi <B>GetOption</B> e <B>SetOption</B> devono essere forniti in inglese.</P>
+
+<P class=LNT>Alcune opzioni sono disponibili solo all'interno di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB) o di un <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Access</A> (ADP). Le eccezioni sono contrassegnate con (<B><I>Solo MDB</I></B>) o (<B><I>Solo ADP</I></B>).</P>
+
+
+
+<P class=RL><B>Scheda Visualizzazione</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Mostra</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Barra di stato</TD>
+<TD class=TT width=52%>Mostra barra di stato</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Finestra di dialogo di avvio</TD>
+<TD class=TT width=52%>Mostra finestra di avvio</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Collegamenti nuovo oggetto</TD>
+<TD class=TT width=52%>Mostra collegamenti nuovo oggetto</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Oggetti nascosti</TD>
+<TD class=TT width=52%>Mostra oggetti nascosti</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Oggetti di sistema</TD>
+<TD class=TT width=52%>Mostra oggetti di sistema</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Usa barra applicazioni per ciascun documento</TD>
+<TD class=TT width=52%>Usa barra applicazioni per ciascun documento</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>In struttura macro mostra</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Colonna nomi</TD>
+<TD class=TT width=52%>Mostra colonna nomi</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Colonna condizioni</TD>
+<TD class=TT width=52%>Mostra colonna condizioni</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Opzioni di apertura nella finestra del database</TD>
+<TD class=TT width=52%>Comportamento clic Esplora database</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Usa tipo di carattere sostitutivo</TD>
+<TD class=TT width=52%>Consenti scambio tipi di carattere</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Nome tipo di carattere sostitutivo</TD>
+<TD class=TT width=52%>Nome tipo di carattere sostitutivo</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Scheda Generale</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Margini di stampa</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Margine sinistro</TD>
+<TD class=TT width=52%>Margine sinistro</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Margine destro</TD>
+<TD class=TT width=52%>Margine destro</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Margine superiore</TD>
+<TD class=TT width=52%>Margine superiore</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Margine inferiore</TD>
+<TD class=TT width=52%>Margine inferiore</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Cartella database predefinita</TD>
+<TD class=TT width=52%>Directory database predefinita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Attiva segnali acustici</TD>
+<TD class=TT width=52%>Attiva segnali acustici</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Elenco ultimi file usati</TD>
+<TD class=TT width=52%>Attiva elenco file MRU</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Numero ultimi file usati</TD>
+<TD class=TT width=52%>Dimensione elenco file MRU</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Ordinamento nuovi database (<B><I>Solo MDB </I></B>)</TD>
+<TD class=TT width=52%>Ordinamento nuovi database</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Compatta database corrente</TD>
+<TD class=TT width=52%>Compattazione automatica</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Compatta se il database verrà ridotto almeno della percentuale seguente</TD>
+<TD class=TT width=52%>Percentuale compattazione automatica</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Correzione automatica nome (<B><I>Solo MDB</I></B>)</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Tieni traccia delle informazioni di correzione</TD>
+<TD class=TT width=52%>Tieni traccia delle informazioni di correzione</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Esegui correzione automatica nome</TD>
+<TD class=TT width=52%>Esegui correzione automatica nome</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Registra correzioni automatiche al nome</TD>
+<TD class=TT width=52%>Registra correzioni automatiche al nome</TD>
+</TR>
+</TABLE><BR>
+
+<P class=RL><B>Pulsante Opzioni Web (scheda Generale)</B></P>
+
+<P class=T>Le opzioni elencate in corsivo sono compatibili con le versioni precedenti. A eccezione dell'opzione <I>Mostra indirizzi dei collegamenti nella barra di stato</I>, tutte le altre opzioni sono nascoste, ma possono essere impostate con il metodo <B>SetOption</B>. Per ulteriori informazioni sulle opzioni Web, vedere <A HREF="acobjDefaultWebOptions.htm"><B>Oggetto DefaultWebOptions</B></A>.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Colore collegamenti non visitati</TD>
+<TD class=TT width=52%>Colore collegamenti non visitati</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Colore collegamenti visitati</TD>
+<TD class=TT width=52%>Colore collegamenti visitati</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Sottolinea collegamenti</TD>
+<TD class=TT width=52%>Sottolinea collegamenti</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><I>Mostra indirizzi dei collegamenti nella barra di stato</I></TD>
+<TD class=TT width=52%><B>Nota</B>&nbsp;&nbsp; Non valido per Microsoft Access 2000; gli indirizzi vengono mostrati nei suggerimenti.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><I>Modello HTML</I></TD>
+<TD class=TT width=52%>Modello HTML</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><I>Nome origine dati</I></TD>
+<TD class=TT width=52%>Nome origine dati</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><I>Nome utente</I></TD>
+<TD class=TT width=52%>Nome utente</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><I>Password</I></TD>
+<TD class=TT width=52%>Password</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><I>URL Server</I></TD>
+<TD class=TT width=52%>URL Active Server Pages</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%><I>Timeout sessione</I></TD>
+<TD class=TT width=52%>Timeout sessione Active Server Pages</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Scheda Modifica/Trova</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Ricerca/sostituzione predefinita</TD>
+<TD class=TT width=52%>Ricerca/sostituzione predefinita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Conferma</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Modifiche record</TD>
+<TD class=TT width=52%>Conferma modifiche record</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Eliminazione documenti</TD>
+<TD class=TT width=52%>Conferma eliminazione documenti</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Query di comando <B><I>(Solo MDB)</I></B></TD>
+<TD class=TT width=52%>Conferma query di comando</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Mostra elenco di valori in <B><I>(Solo MDB)</I></B></TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Campi locali indicizzati</TD>
+<TD class=TT width=52%>Mostra valori in campi indicizzati</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Campi locali non indicizzati</TD>
+<TD class=TT width=52%>Mostra valori in campi non indicizzati</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Campi ODBC</TD>
+<TD class=TT width=52%>Mostra valori in campi remoti</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Non visualizzare elenchi con numero di record superiore a</TD>
+<TD class=TT width=52%>Mostra limite valori</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Mostra elenco di valori in <B><I>(Solo ADP)</I></B></TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Registra nello snapshot locale</TD>
+<TD class=TT width=52%>Mostra valori in Snapshot</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Registra su server</TD>
+<TD class=TT width=52%>Mostra valori nel server</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Non visualizzare elenchi con numero di record superiore a</TD>
+<TD class=TT width=52%>Mostra limite valori</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Scheda Tastiera</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Con INVIO passa a</TD>
+<TD class=TT width=52%>Con INVIO passa a</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Comportamento cursore nel campo</TD>
+<TD class=TT width=52%>Comportamento cursore nel campo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Con tasti di direzione passa a</TD>
+<TD class=TT width=52%>Con tasti di direzione passa a</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Cursore fermo a primo/ultimo campo</TD>
+<TD class=TT width=52%>Cursore fermo a primo/ultimo campo</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Scheda Foglio dati</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Colori predefiniti</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Carattere</TD>
+<TD class=TT width=52%>Colore carattere predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Sfondo</TD>
+<TD class=TT width=52%>Colore sfondo predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Griglia</TD>
+<TD class=TT width=52%>Colore griglia predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Visualizzazione griglia predefinita</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Orizzontale</TD>
+<TD class=TT width=52%>Linee orizzontali griglia predefinite</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Verticale</TD>
+<TD class=TT width=52%>Linee verticali griglia predefinite</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Larghezza colonne predefinita</TD>
+<TD class=TT width=52%>Larghezza colonne predefinita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Carattere predefinito</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Carattere</TD>
+<TD class=TT width=52%>Tipo carattere predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Spessore</TD>
+<TD class=TT width=52%>Spessore carattere predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Dimensione</TD>
+<TD class=TT width=52%>Dimensione carattere predefinita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Corsivo</TD>
+<TD class=TT width=52%>Carattere corsivo predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Sottolineato</TD>
+<TD class=TT width=52%>Carattere sottolineato predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Effetto celle predefinito</TD>
+<TD class=TT width=52%>Effetto celle predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Mostra animazioni</TD>
+<TD class=TT width=52%>Mostra animazioni</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Scheda Maschere/Report</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Impostazioni selezione</TD>
+<TD class=TT width=52%>Impostazioni selezione</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Modello maschera</TD>
+<TD class=TT width=52%>Modello maschera</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Modello report</TD>
+<TD class=TT width=52%>Modello report</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Utilizza sempre routine evento</TD>
+<TD class=TT width=52%>Utilizza sempre routine evento</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Scheda Avanzate <I>(Solo MDB)</I></B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Ignora richieste DDE</TD>
+<TD class=TT width=52%>Ignora richieste DDE</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Attiva aggiornamento DDE </TD>
+<TD class=TT width=52%>Attiva aggiornamento DDE </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Modalità apertura predefinita</TD>
+<TD class=TT width=52%>Modalità Apertura predefinita per database</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Argomenti della riga di comando</TD>
+<TD class=TT width=52%>Argomenti della riga di comando</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Timeout OLE/DDE (sec)</TD>
+<TD class=TT width=52%>Timeout OLE/DDE (sec)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Numero tentativi aggiornamento</TD>
+<TD class=TT width=52%>Numero tentativi aggiornamento</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Intervallo aggiornamenti ODBC (sec)</TD>
+<TD class=TT width=52%>Intervallo aggiornamenti ODBC (sec)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Intervallo aggiornamenti (sec)</TD>
+<TD class=TT width=52%>Intervallo aggiornamento (sec)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Intervallo tentativi aggiornamento (msec)</TD>
+<TD class=TT width=52%>Intervallo tentativi aggiornamento (msec)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Blocco record predefinito</TD>
+<TD class=TT width=52%>Blocco record predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Utilizza blocco a livello di record</TD>
+<TD class=TT width=52%>Utilizza blocco a livello di record</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Scheda Avanzate (<I>Solo ADP</I>)</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Ignora richieste DDE</TD>
+<TD class=TT width=52%>Ignora richieste DDE</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Attiva aggiornamento DDE</TD>
+<TD class=TT width=52%>Attiva aggiornamento DDE</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Numero massimo record predefinito</TD>
+<TD class=TT width=52%>Limite riga</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Salva informazioni e password di accesso</TD>
+<TD class=TT width=52%>Salva informazioni e password di accesso</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Argomenti della riga di comando</TD>
+<TD class=TT width=52%>Argomenti della riga di comando</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Timeout OLE/DDE (sec)</TD>
+<TD class=TT width=52%>Timeout OLE/DDE (sec)</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Scheda Tabelle/Query (<I>Solo MDB</I>)</B></P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Testo dell'opzione</TH>
+<TH width=52%>Argomento di stringa</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Dimensioni predefinite campi</TD>
+<TD class=TT width=52%>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Testo</TD>
+<TD class=TT width=52%>Dimensione campo Testo predefinita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TTI width=48%>Numerico</TD>
+<TD class=TT width=52%>Dimensione campo Numerico predefinita</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Tipo di campo predefinito</TD>
+<TD class=TT width=52%>Tipo di campo predefinito</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Indice automatico all'importazione/creazione</TD>
+<TD class=TT width=52%>Indice automatico all'importazione/creazione</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Mostra nomi tabelle</TD>
+<TD class=TT width=52%>Mostra nomi tabelle</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Mostra tutti i campi</TD>
+<TD class=TT width=52%>Mostra tutti i campi</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Attiva join automatico</TD>
+<TD class=TT width=52%>Attiva join automatico</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Applica autorizzazioni</TD>
+<TD class=TT width=52%>Applica autorizzazioni</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si sviluppa un'applicazione di database, un <A HREF="javascript:HelpPopup('actip9.hlp','defAddIn');" class="pop">componente aggiuntivo</A>, un <A HREF="javascript:HelpPopup('actip9.hlp','defLibraryDatabase');" class="pop">database di libreria</A> o un <A HREF="javascript:HelpPopup('actip9.hlp','defReferencedDatabase');" class="pop">database di riferimento</A>, assicurarsi che, una volta terminato il debug del codice, l'opzione <B>Intercettazione degli errori</B> sia impostata a 2 (<B>Interrompi su errori non gestiti)</B>.</P>
+
+
+
+<P class=T>Il valore che viene passato al metodo <B>SetOption</B> come argomento <I>impostazione</I> dipende dal tipo di opzione da impostare. Nella tabella riportata di seguito vengono fornite alcune indicazioni per impostare le opzioni.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=48%>Opzione</TH>
+<TH width=52%>Argomento <I>impostazione</I></TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Una <A HREF="javascript:HelpPopup('actip9.hlp','defTextBox');" class="pop">casella di testo</A></TD>
+<TD class=TT width=52%>Una stringa</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Una <A HREF="javascript:HelpPopup('actip9.hlp','defCheckBox');" class="pop">casella di controllo</A></TD>
+<TD class=TT width=52%>Un valore booleano, ossia <B>True</B> (-1) o <B>False</B> (0)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=48%>Un <A HREF="javascript:HelpPopup('actip9.hlp','defOptionButton');" class="pop">pulsante di opzione</A> in un <A HREF="javascript:HelpPopup('actip9.hlp','defOptionGroup');" class="pop">gruppo di opzioni</A> oppure un'opzione in una <A HREF="javascript:HelpPopup('actip9.hlp','defComboBox');" class="pop">casella combinata</A> o in una <A HREF="javascript:HelpPopup('actip9.hlp','defListBox');" class="pop">casella di riepilogo</A></TD>
+<TD class=TT width=52%>Un valore intero corrispondente alla posizione dell'opzione nell'elenco o nel gruppo di opzioni (a partire da zero [0])</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

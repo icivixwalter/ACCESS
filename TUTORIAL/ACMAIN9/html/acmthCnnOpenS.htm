@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthCnnOpenS'
+Feature='acmth'
+Handoff='3'
+SourceFile='ACAMETH9.doc'
+Tnum='257200'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo Open (Connection)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthcnnopens"></A>Metodo Open (Connection)</H1>
+
+
+
+<P class=T>In Microsoft Access, utilizzare <B>CurrentProject.Connection</B> per restituire un riferimento al database corrente e assegnarlo a una variabile <B>Connection</B>, come indicato nell'esempio seguente.</P>
+
+<PRE class=CT><CODE>Dim cnnCurrent As ADODB.Connection
+Set cnnCurrent = CurrentProject.Connection</CODE></PRE>
+
+
+
+<P class=T>Usare il metodo <B>Open</B> di una variabile <B>Connection</B> per aprire da Visual Basic un database diverso da quello corrente.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>
+

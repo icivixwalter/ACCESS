@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproFormatX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproent1_1a.rtf'
+Tnum='187260'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Format</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acproformatx"></A>Esempio di proprietà Format</B></P>
+
+
+
+<P class=T>Nei tre esempi riportati di seguito viene indicato come impostare la proprietà <B>Format</B> utilizzando un formato predefinito.</P>
+
+<PRE class=CT><CODE>Me!Data.<B>Format</B> = "Data media"</CODE></PRE>
+
+
+
+<PRE class=CT><CODE>Me!Ora.<B>Format</B> = "Ora estesa"</CODE></PRE>
+
+
+
+<PRE class=CT><CODE>Me!Registrato.<B>Format</B> = "Sì/No"</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo viene indicato come impostare la proprietà <B>Format</B> utilizzando un formato personalizzato. Viene visualizzata la data nel formato: gen 1995.</P>
+
+<PRE class=CT><CODE>Forms!Impiegati!DataAssunzione.<B>Format</B> = "mmm yyyy"</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio seguente viene indicata una funzione Visual Basic che formatta dati numerici nel formato Valuta e formatta dati di testo in lettere maiuscole. La funzione viene chiamata dall'evento SuDisattivato di un controllo non associato chiamato RimborsoTasse.</P>
+
+<PRE class=CT><CODE>Function FormatValue() As Integer
+&nbsp;&nbsp;&nbsp; Dim varValoreImmesso As Variant
+
+&nbsp;&nbsp;&nbsp; varValoreImmesso = Forms!Indagine!RimborsoTasse.Value
+&nbsp;&nbsp;&nbsp; If IsNumeric(varValoreImmesso) = True Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forms!Indagine!RimborsoTasse.<B>Format</B> = "Valuta"
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forms!Indagine!RimborsoTasse.<B>Format</B> = "&gt;"
+&nbsp;&nbsp;&nbsp; End If
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

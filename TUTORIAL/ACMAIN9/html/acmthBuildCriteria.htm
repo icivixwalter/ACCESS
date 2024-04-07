@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthBuildCriteria'
+Feature='acmth'
+Handoff='2'
+SourceFile='amthv3.doc'
+Tnum='186451'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodo BuildCriteria</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdproType">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acmthbuildcriteria"></A>Metodo BuildCriteria</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthBuildCriteriaC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthBuildCriteriaX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthBuildCriteriaA">
+</OBJECT></P>
+
+
+
+<P class=T>Il metodo <B>BuildCriteria</B> restituisce una stringa di criteri analizzata, nel modo in cui viene visualizzata nella <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura della query</A>, nella modalità <A HREF="javascript:HelpPopup('actip9.hlp','defFilterByForm');" class="pop">filtro in base a maschera</A> o nella modalità <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefServerFilterByForm');" class="pop">filtro su server in base a maschera</A>. È possibile che si desideri, ad esempio, impostare la proprietà <A HREF="acproFilter.htm"><B>Filter</B></A> o <A HREF="acproServerFilter.htm"><B>ServerFilter</B></A> di una maschera in base a criteri variabili stabiliti dall'utente. È possibile utilizzare il metodo <B>BuildCriteria</B> per costruire l'argomento espressione stringa per la proprietà <B>Filter</B> o <B>ServerFilter</B>.</P>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>applicazione</I><B>.BuildCriteria(</B><I>campo</I>, <I>tipocampo</I>, <I>espressione</I><B>)</B></P>
+
+
+
+<P class=T>Il metodo <B>BuildCriteria</B> dispone degli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>applicazione</I></TD>
+<TD class=TT width=75%>Opzionale. Oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>campo</I></TD>
+<TD class=TT width=75%><A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">Espressione stringa</A> che identifica il campo per cui si desidera definire i criteri.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>tipocampo</I></TD>
+<TD class=TT width=75%><A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">Costante intrinseca</A> che denota il tipo di dati del campo. Per un elenco di <A HREF="javascript:HelpPopup('actip9.hlp','defDataType');" class="pop">tipi di dati</A> di campo, vedere la proprietà ADO <A HREF="JavaScript:hhobj_4.Click()"><B>Type</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%><I>espressione</I></TD>
+<TD class=TT width=75%>Espressione stringa che identifica i criteri da analizzare.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Il metodo <B>BuildCriteria</B> restituisce una stringa.</P>
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>Il metodo <B>BuildCriteria</B> consente di costruire con facilità criteri per un filtro in base all'input dell'utente. Il metodo analizza l'argomento <I>espressione</I> come se immesso nella griglia di struttura della query, nella modalità filtro in base a maschera o filtro su server in base a maschera.</P>
+
+<P class=T>È possibile, ad esempio, che un utente che crea una query su una tabella Ordini limiti il <A HREF="javascript:HelpPopup('actip9.hlp','defDynaset');" class="pop">set di risultati</A> agli ordini inoltrati dopo il primo gennaio 1995, impostando i criteri in un campo DataOrdine. È possibile immettere un'espressione come quella riportata di seguito nella riga <B>Criteria</B> sottostante al campo DataOrdine.</P>
+
+<P class=T>&gt;1-1-95</P>
+
+<P class=T>Microsoft Access analizza automaticamente tale espressione e restituisce l'espressione seguente:</P>
+
+<P class=T>&gt;#01/01/95#</P>
+
+<P class=T>Il metodo <B>BuildCriteria</B> fornisce la stessa analisi di codice di Visual Basic. Per restituire, ad esempio, la stringa precedente analizzata correttamente, è possibile fornire al metodo <B>BuildCriteria</B> gli argomenti riportati di seguito.</P>
+
+<PRE class=CT><CODE>Dim strCriteria As String
+strCriteria = BuildCriteria("DataOrdine", dbDate, "&gt;1-1-95")</CODE></PRE>
+
+
+
+<P class=T>È necessario fornire i criteri per la proprietà <B>Filter</B> nella forma analizzata corretta, è possibile a tale scopo utilizzare il metodo <B>BuildCriteria</B> per costruire una stringa analizzata in modo corretto.</P>
+
+<P class=T>È possibile utilizzare il metodo <B>BuildCriteria</B> per costruire una stringa con più criteri, se tali criteri fanno riferimento allo stesso campo. È possibile, ad esempio, utilizzare il metodo <B>BuildCriteria</B> con gli argomenti riportati di seguito per costruire una stringa con più criteri che fanno riferimento al campo DataOrdine.</P>
+
+<PRE class=CT><CODE>strCriteria = BuildCriteria("DataOrdine", dbDate, "&gt;1-1-95 e &lt;5-1-95")</CODE></PRE>
+
+
+
+<P class=T>Questo esempio restituisce la stringa di criteri riportata di seguito.</P>
+
+<P class=T>DataOrdine&gt;#01/01/95# e DataOrdine&lt;#05/01/95#</P>
+
+<P class=T>Se, tuttavia, si desidera costruire una stringa di criteri che fa riferimento a più campi, è necessario creare le stringhe e concatenarle. Se, ad esempio, si desidera costruire dei criteri per un filtro per visualizzare i record relativi a ordini inoltrati dopo il 01/01/95 e per cui il costo di spedizione è inferiore a L. 80.000, è necessario utilizzare due volte il metodo <B>BuildCriteria</B> e concatenare le stringhe risultanti.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

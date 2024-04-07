@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowRunVBCodeS'
+Feature='Modules: Basics'
+Handoff='3'
+SourceFile='cmodbas.rtf'
+Tnum='186634'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sull'esecuzione di codice Visual Basic</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactRunCode">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="achowrunvbcodes"></A>Informazioni sull'esecuzione di codice Visual Basic</H1>
+
+<P class=T>È possibile eseguire il codice <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasic');" class="pop">Visual Basic</A> in Microsoft Access eseguendo una <A HREF="javascript:HelpPopup('actip9.hlp','defSubProcedure');" class="pop">routine <B>Sub</B></A> o una <A HREF="javascript:HelpPopup('actip9.hlp','defFunctionProcedure');" class="pop">routine <B>Function</B></A>. Le routine contengono una serie di <A HREF="javascript:HelpPopup('actip9.hlp','defStatement');" class="pop">istruzioni</A> e di <A HREF="javascript:HelpPopup('actip9.hlp','defMethod');" class="pop">metodi</A> che eseguono un'operazione o calcolano un valore.</P>
+
+<P class=T>Le routine vengono memorizzate in unità chiamate <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">moduli</A>. Non è tuttavia il modulo a essere eseguito, le routine vengono invece chiamate da espressioni, da altre routine o da macro. Le <A HREF="javascript:HelpPopup('actip9.hlp','defEventProcedure');" class="pop">routine evento</A> di un modulo della maschera o del report vengono eseguite anche in risposta alle azioni dell'utente.</P>
+
+<P class=T>Esistono vari modi per eseguire codice Visual Basic in Microsoft Access:
+
+<UL>
+	<LI class=LB1>Creare una routine evento. Quando si esegue un'azione che causa un determinato evento, viene eseguita la relativa routine evento.
+<P class=LT1>È possibile ad esempio aggiungere del codice alla routine evento Clic di un pulsante di comando che apre una maschera quando l'utente fa clic sul pulsante. Per ulteriori informazioni sulla creazione di una routine evento, fare clic su <A HREF="achowWriteEventProcedureS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LB1>Utilizzare una funzione in un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> o nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefImmediateWindow');" class="pop">finestra Immediata</A> di <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefVisualBasicEditor');" class="pop">Visual Basic Editor</A>.
+<P class=LT1>È possibile ad esempio utilizzare una funzione in un'espressione che definisce un <A HREF="javascript:HelpPopup('actip9.hlp','defCalculatedField');" class="pop">campo calcolato</A> di una maschera, un report o una query. È possibile utilizzare espressioni come impostazioni delle proprietà nelle query e nei filtri, nelle macro e nelle azioni, nelle istruzioni e nei metodi di Visual Basic e nelle istruzioni SQL. Per ulteriori informazioni sulla creazione di una funzione personalizzata, fare clic su <A HREF="achowWriteUDFS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LB1>Richiamare una routine <B>Sub</B> in un'altra routine o nella finestra Immediata di Visual Basic Editor.
+<P class=LT1>È possibile ad esempio inserire in una routine <B>Sub</B> del codice che viene eseguito frequentemente. Invece di ripetere in ciascuna routine il codice Visual Basic che esegue l'operazione, è possibile scriverlo una sola volta nella routine più frequente e chiamarla ogni volta che si desidera eseguire l'operazione. Per ulteriori informazioni sulla creazione di una routine <B>Sub</B>, fare clic su <A HREF="achowWriteSubProcedureS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+
+	<LI class=LB1>In Visual Basic Editor scegliere <B>Esegui Sub/UserForm</B> dal menu <B>Esegui</B> per eseguire una routine che non includa argomenti. 
+<P class=LT1>Nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefCodeWindow');" class="pop">finestra Codice</A> posizionare il cursore nella routine da eseguire, quindi scegliere <B>Esegui Sub/UserForm</B> dal menu <B>Esegui</B>. 
+</LI>
+
+	<LI class=LB1>Eseguire l'azione EseguiCodice in una macro.
+<P class=LT1>È possibile utilizzare l'azione EseguiCodice per eseguire una funzione incorporata di Visual Basic oppure una funzione creata dall'utente. Per eseguire una routine <B>Sub</B> o una routine evento, creare una funzione che chiami la routine <B>Sub</B> o la routine evento e utilizzare l'azione EseguiCodice per eseguire la funzione. Per ulteriori informazioni sull'azione EseguiCodice, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.
+</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowRunVBCodeSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

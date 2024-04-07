@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjRecordsetX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acdobjx.doc'
+Tnum='234527'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Recordset e insieme Recordsets (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjrecordsetx"></A>Esempio di oggetto Recordset e insieme Recordsets (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene aperto un oggetto <B>Recordset</B> di tipo tabella, un oggetto <B>Recordset</B> di tipo dynaset e un oggetto <B>Recordset</B> di tipo snapshot. Viene quindi visualizzato il valore della proprietà <B>Updatable</B> per gli oggetti <B>Recordset</B>.</P>
+
+<PRE class=CT><CODE>Sub NuoviRecordset()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As <B>Recordset</B>
+&nbsp;&nbsp;&nbsp; Dim rstEmployees As <B>Recordset</B>, rstOrders As <B>Recordset</B>
+&nbsp;&nbsp;&nbsp; Dim rstProducts As <B>Recordset</B>, strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Crea oggetto Recordset di tipo tabella.
+&nbsp;&nbsp;&nbsp; Set rstEmployees = dbs.OpenRecordset("Impiegati", dbOpenTable)
+&nbsp;&nbsp;&nbsp; ' Crea oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rstOrders = dbs.OpenRecordset("Impiegati", dbOpenDynaset)
+&nbsp;&nbsp;&nbsp; ' Crea oggetto Recordset di tipo snapshot.
+&nbsp;&nbsp;&nbsp; Set rstProducts = dbs.OpenRecordset("Prodotti", dbOpenSnapshot)
+&nbsp;&nbsp;&nbsp; ' Stampa valore della proprietà Updatable di ciascun oggetto Recordset.
+&nbsp;&nbsp;&nbsp; For Each rst In dbs.<B>Recordsets</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print rst.Name; "&nbsp;&nbsp; "; rst.Updatable
+&nbsp;&nbsp;&nbsp; Next rst
+&nbsp;&nbsp;&nbsp; ' Rilascia tutte le variabili di oggetto.
+&nbsp;&nbsp;&nbsp; rstEmployees.Close
+&nbsp;&nbsp;&nbsp; rstOrders.Close
+&nbsp;&nbsp;&nbsp; rstProducts.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

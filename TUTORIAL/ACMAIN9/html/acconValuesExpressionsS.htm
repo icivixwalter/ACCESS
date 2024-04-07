@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconValuesExpressionsS'
+Feature='Forms: Expressions'
+Handoff='3'
+SourceFile='cexpbas.rtf'
+Tnum='186941'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Utilizzare i valori nelle espressioni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="accstConstants">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1><A NAME="acconvaluesexpressionss"></A>Utilizzare i valori nelle espressioni</H1>
+
+<P class=T>È possibile specificare un valore in un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> utilizzando un valore <A HREF="javascript:HelpPopup('actip9.hlp','defLiteral');" class="pop">letterale</A>, una <A HREF="javascript:HelpPopup('actip9.hlp','defConstant');" class="pop">costante</A>, una funzione o un <A HREF="javascript:HelpPopup('actip9.hlp','defIdentifier');" class="pop">identificatore</A>.
+
+<UL>
+	<LI class=LB1>Un valore letterale rappresenta un valore, ad esempio un numero, una stringa o una data valutato dal programma nella maniera esatta in cui è scritto. "New York", 100 e #1-gen-94# sono esempi di valori letterali. Le date sono racchiuse tra segni di cancelletto (#) e le stringhe tra virgolette doppie (").<BR><BR></LI>
+
+	<LI class=LB1>Una costante rappresenta un valore invariabile; <B>True</B>, <B>False</B> e <B>Null</B> sono esempi di costanti definite automaticamente dal programma. È inoltre possibile definire costanti personalizzate in Visual Basic, Applications Edition da utilizzare nelle routine Visual Basic.<BR><BR></LI>
+
+	<LI class=LB1>Una funzione restituisce un valore basato sui risultati di un calcolo o di un'altra operazione. Sono incluse molte funzioni incorporate, ad esempio:
+<UL>
+	<LI class=LB2>La funzione <B>Data</B>, che restituisce la data corrente.<BR><BR></LI>
+
+	<LI class=LB2>La funzione <B>Somma</B>, che restituisce la somma di un set di valori di campo.<BR><BR></LI>
+
+	<LI class=LB2>La funzione <B>DLookup</B>, che restituisce un valore di campo specifico.
+</LI>
+</UL>
+
+<P class=LT1>È inoltre possibile creare funzioni personalizzate utilizzando Visual Basic.
+</LI>
+
+	<LI class=LB1>Un identificatore fa riferimento al valore di un campo, di un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> o di una proprietà. L'identificatore riportato di seguito ad esempio fa riferimento al valore della proprietà <B>DefaultValue</B> del controllo DataOrdine nella maschera Ordini:
+<P class=LT1>Forms![Ordini]![DataOrdine].DefaultValue
+</LI>
+</UL>
+
+<P class=T>È possibile combinare il valore di un campo, di un controllo o di una proprietà con un letterale di stringa utilizzando l'operatore di concatenazione E commerciale (<B>&amp;</B>). L'espressione riportata di seguito ad esempio combina il letterale di stringa [IDCategoria] = " con il valore del controllo IDCategoria nella maschera Prodotti:</P>
+
+<P class=T>"[IDCategoria] = " &amp; Forms![Prodotti]![IDCategoria]</P>
+
+<P class=T>In alcune circostanze, ad esempio in una <A HREF="javascript:HelpPopup('actip9.hlp','defDomainFunction');" class="pop">funzione di aggregazione sui domini</A> come <B>DLookup</B>, il valore di un campo, controllo o proprietà deve apparire tra apici (') o virgolette doppie ("). È possibile ottenere tale risultato in modo semplice aggiungendo un apice (') al letterale di stringa, quindi combinando l'espressione con un altro letterale di stringa, costituito da un apice dopo il valore del campo, del controllo o della proprietà, nel seguente modo:</P>
+
+<P class=T>"[IDCategoria] = ' " &amp; Forms![Prodotti]![IDCategoria] &amp; " ' "</P>
+
+<P class=T>È possibile che le applicazioni di Microsoft Access esistenti utilizzino gli operatori barre verticali (<B>| |</B>) al posto di una serie di operatori di concatenazione come virgolette doppie aperte e chiuse ed E commerciale (<B>&amp;</B>), nel seguente modo:</P>
+
+<P class=T>"[IDCategoria] = '|Forms![Prodotti]![IDCategoria]|' "</P>
+
+<P class=T>Non è consigliabile tuttavia utilizzare le barre verticali poiché possono produrre in determinate circostanze risultati non previsti.</P>
+
+<P class=T>Se si desidera che l'espressione produca una stringa racchiusa tra virgolette doppie, è possibile racchiudere la stringa nidificata sia fra gli apici ('), sia fra tre gruppi di virgolette doppie. Le espressioni che seguono ad esempio sono equivalenti:</P>
+
+<P class=T>Forms![Contatti]![Città].DefaultValue = ' "Parigi" '</P>
+
+<P class=T>Forms![Contatti]![Città].DefaultValue = " " "Parigi" " "</P>
+
+<P class=T>Per ulteriori informazioni sulle costanti, fare clic su <A HREF="JavaScript:hhobj_1.Click()"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sulla creazione di funzioni personalizzate, fare clic su <A HREF="achowWriteUDFS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+<P class=T>Per ulteriori informazioni sull'utilizzo di identificatori nelle espressioni, fare clic su <A HREF="achowIdentifiersExpressionsS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconValuesExpressionsSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

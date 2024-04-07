@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthFindX'
+Feature='acmth'
+Handoff='1'
+SourceFile='amthv8.rtf'
+Tnum='186809'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di metodi Find, ReplaceLine</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthfindx"></A>Esempio di metodi Find, ReplaceLine</B></P>
+
+
+
+<P class=T>La funzione riportata di seguito indica come trovare una determinata stringa in un modulo e sostituire la riga contenente tale stringa con una nuova riga specificata.</P>
+
+<PRE class=CT><CODE>Function FindAndReplace(strModuleName As String, _
+&nbsp;&nbsp;&nbsp; strSearchText As String, _
+&nbsp;&nbsp;&nbsp; strNewText As String) As Boolean
+&nbsp;&nbsp;&nbsp; Dim mdl As Module
+&nbsp;&nbsp;&nbsp; Dim lngSLine As Long, lngSCol As Long
+&nbsp;&nbsp;&nbsp; Dim lngELine As Long, lngECol As Long
+&nbsp;&nbsp;&nbsp; Dim strLine As String, strNewLine As String
+&nbsp;&nbsp;&nbsp; Dim intChr As Integer, intBefore As Integer, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intAfter As Integer
+&nbsp;&nbsp;&nbsp; Dim strLeft As String, strRight As String
+
+&nbsp;&nbsp;&nbsp; ' Apre il modulo.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenModule strModuleName
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento a oggetto Module.
+&nbsp;&nbsp;&nbsp; Set mdl = Modules(strModuleName)
+
+&nbsp;&nbsp;&nbsp; ' Ricerca la stringa.
+&nbsp;&nbsp;&nbsp; If mdl.<B>Find(</B>strSearchText, lngSLine, lngSCol, lngELine, _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lngECol<B>)</B> Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Memorizza il testo della riga contentente la stringa.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strLine = mdl.Lines(lngSLine, Abs(lngELine - lngSLine) + 1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Determina la lunghezza della riga.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intChr = Len(strLine)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Determina il numero di caratteri che precedono il testo di ricerca.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intBefore = lngSCol - 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Determina il numero di caratteri che seguono il testo di ricerca.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intAfter = intChr - CInt(lngECol - 1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Memorizza i caratteri a sinistra del testo di ricerca.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strLeft = Left$(strLine, intBefore)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Memorizza i caratteri a destra del testo di ricerca.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strRight = Right$(strLine, intAfter)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Costruisce la stringa con il testo di sostituzione.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNewLine = strLeft &amp; strNewText &amp; strRight
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Sostituisce la riga originaria.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mdl.<B>ReplaceLine</B> lngSLine, strNewLine
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FindAndReplace = True
+&nbsp;&nbsp;&nbsp; Else
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Testo non trovato."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FindAndReplace = False
+&nbsp;&nbsp;&nbsp; End If
+
+Exit_FindAndReplace:
+&nbsp;&nbsp;&nbsp; Exit Function
+
+Error_FindAndReplace:
+
+MsgBox Err &amp; ": " &amp; Err.Description
+&nbsp;&nbsp;&nbsp; FindAndReplace = False
+&nbsp;&nbsp;&nbsp; Resume Exit_FindAndReplace
+End Function</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

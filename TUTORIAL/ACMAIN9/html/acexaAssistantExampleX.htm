@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acexaAssistantExampleX'
+Feature='acexa'
+Handoff='1'
+SourceFile='ACASSIST.rtf'
+Tnum='234474'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio dell'Assistente di Microsoft Office</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acexaassistantexamplex"></A>Esempio dell'Assistente di Microsoft Office</B></P>
+
+
+
+<P class=T>La funzione riportata di seguito crea un fumetto personalizzato per l'Assistente di Office e determina come l'utente ha risposto a tale fumetto:</P>
+
+<PRE class=CT><CODE>Function FumettoAssistente(Optional varControllo As Variant, Optional varEtichetta As Variant)
+&nbsp;&nbsp;&nbsp; Dim bch As BalloonCheckbox
+&nbsp;&nbsp;&nbsp; Dim intI As Integer
+&nbsp;&nbsp;&nbsp; Dim intRestituito As Integer
+&nbsp;&nbsp;&nbsp; Dim strControllo(5) As String
+&nbsp;&nbsp;&nbsp; Dim strElenco As String
+
+&nbsp;&nbsp;&nbsp; ' Crea un nuovo fumetto.
+&nbsp;&nbsp;&nbsp; Set bal = Assistant.NewBalloon
+&nbsp;&nbsp;&nbsp; ' Specifica il tipo di fumetto.
+&nbsp;&nbsp;&nbsp; bal.BalloonType = msoBalloonTypeButtons
+&nbsp;&nbsp;&nbsp; ' Specifica che il fumetto è a scelta obbligatoria.
+&nbsp;&nbsp;&nbsp; bal.Mode = msoModeModal
+
+&nbsp;&nbsp;&nbsp; ' Rende visibile l'Assistente.
+&nbsp;&nbsp;&nbsp; If Assistant.Visible = False Then Assistant.Visible = True
+&nbsp;&nbsp;&nbsp; ' Controlla se è stato passato il primo argomento.
+&nbsp;&nbsp;&nbsp; If Not IsMissing(varControllo) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Se è troppo grande, imposta il numero massimo di caselle di controllo (5).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If varControllo &gt; 6 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varControllo = 5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta proprietà di testo al carattere alfabetico.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For intI = 1 To varControllo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bal.Casellecontrollo(intI).Text = Chr(64 + intI)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next intI
+&nbsp;&nbsp;&nbsp; End If
+
+&nbsp;&nbsp;&nbsp; If Not IsMissing(varEtichetta) Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Se è troppo grande, imposta il numero massimo di etichette (5).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If varEtichetta &gt; 6 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; varEtichetta = 5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For intI = 1 To varEtichetta
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Imposta la proprietà di testo al carattere alfabetico.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bal.Etichette(intI).Text = Chr(64 + intI)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next intI
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; ' Memorizza il valore restituito.
+&nbsp;&nbsp;&nbsp; intRestituito = bal.Show
+
+&nbsp;&nbsp;&nbsp; intI = 0
+&nbsp;&nbsp;&nbsp; ' Determina le caselle di controllo attivate, se presenti.
+&nbsp;&nbsp;&nbsp; For Each bch In bal.Checkboxes
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If bch.Checked = True Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strControllo(intI) = bch.Text
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strElenco = strElenco &amp; "'" &amp; strControllo(intI) &amp; "'" &amp; Chr(32)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; intI = intI + 1
+&nbsp;&nbsp;&nbsp; Next
+&nbsp;&nbsp;&nbsp; If Len(strElenco) &lt;&gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "Sono state selezionate le caselle di controllo " &amp; strElenco &amp; "."
+&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; ' Determina l'etichetta che è stata selezionata, se presente.
+&nbsp;&nbsp;&nbsp; If intRestituito &gt; 0 Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox "È stata selezionata l'etichetta " &amp; bal.Etichette(intRestituito).Text &amp; "."
+&nbsp;&nbsp;&nbsp; End If
+End Function</CODE></PRE>
+
+
+
+<P class=T>L'esempio che segue indica come è possibile chiamare tale funzione dalla finestra Debug:</P>
+
+<PRE class=CT><CODE>? FumettoAssistente(4, 5)</CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

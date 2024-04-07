@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproTypeADOS'
+Feature='acpro'
+Handoff='3'
+SourceFile='acaProp9.doc'
+Tnum='264575'
+Piece='1039'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà Type</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprotypeados"></A>Proprietà Type</H1>
+
+
+
+<P class=T>In Microsoft Access è possibile impostare il tipo di dati di un campo in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura della tabella</A> e il tipo di dati di un parametro nella finestra di dialogo <B>Parametri query</B>. Tali azioni equivalgono a impostare la proprietà <B>Type</B> ADO di un oggetto <B>Field</B> o <B>Parameter</B> tramite Visual Basic.</P>
+
+<P class=T>La tabella che segue elenca le costanti della proprietà <B>Type</B> ADO e le impostazioni corrispondenti in Microsoft Access per i tipi di dati campo e parametro quando vengono impostati in visualizzazione Struttura della tabella o nella finestra di dialogo <B>Parametri query</B>.</P>
+
+<P class=T>Se si crea un campo di tabella con tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defNumberDataType');" class="pop">Numerico</A>, impostare la proprietà <B>FieldSize</B> in modo che indichi il tipo dei dati del campo tra i sei disponibili. Per impostazione predefinita questa proprietà è impostata a Intero Lungo. Le altre impostazioni sono Byte, Intero, Singolo, Doppio e ID replica.</P>
+
+<TABLE cellpadding=4 cellspacing=4>
+
+<TR VALIGN="top">
+<TH width=27%>Costante</TH>
+<TH width=41%>Impostazione campo tabella</TH>
+<TH width=32%>Impostazione parametro query</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adBoolean</B></TD>
+<TD class=TT width=41%>Sì/No</TD>
+<TD class=TT width=32%>Sì/No</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adUnsignedTinyInt</B></TD>
+<TD class=TT width=41%>Numerico<BR> (<B>FieldSize</B> = Byte)</TD>
+<TD class=TT width=32%>Byte</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adCurrency</B></TD>
+<TD class=TT width=41%>Valuta</TD>
+<TD class=TT width=32%>Valuta</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adDate</B></TD>
+<TD class=TT width=41%>Data/ora</TD>
+<TD class=TT width=32%>Data/ora</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adDouble</B></TD>
+<TD class=TT width=41%>Numerico<BR> (<B>FieldSize</B> = Doppio)</TD>
+<TD class=TT width=32%>Doppio</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adGUID</B></TD>
+<TD class=TT width=41%>Numerico o Contatore<BR> (<B>FieldSize</B> = ID replica)</TD>
+<TD class=TT width=32%><I>Non supportata</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adSmallInt</B></TD>
+<TD class=TT width=41%>Numerico<BR> (<B>FieldSize</B> = Intero)</TD>
+<TD class=TT width=32%>Intero</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adInteger</B></TD>
+<TD class=TT width=41%>Numerico<BR> (<B>FieldSize</B> = Intero lungo)</TD>
+<TD class=TT width=32%>Intero lungo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adInteger</B></TD>
+<TD class=TT width=41%>Contatore<BR> (<B>FieldSize</B> = Intero lungo)</TD>
+<TD class=TT width=32%><I>Non supportata</I></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adLongVarBinary</B></TD>
+<TD class=TT width=41%>Oggetto OLE</TD>
+<TD class=TT width=32%>Oggetto OLE</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%>&nbsp;</TD>
+<TD class=TT width=41%><I>Non supportata</I></TD>
+<TD class=TT width=32%>Binario</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adLongVarWChar</B></TD>
+<TD class=TT width=41%>Memo</TD>
+<TD class=TT width=32%>Memo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adSingle</B></TD>
+<TD class=TT width=41%>Numerico<BR> (<B>FieldSize</B> = Singolo)</TD>
+<TD class=TT width=32%>Singolo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><B>adVarWChar</B></TD>
+<TD class=TT width=41%>Testo</TD>
+<TD class=TT width=32%>Testo</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=T width=27%><B>adDecimal</B></TD>
+<TD class=T width=41%>Numerico
+<P class=T>(<B>FieldSize</B> = Decimale)</P>
+</TD>
+<TD class=T width=32%>Non supportata</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=T width=27%><B>adBinary</B></TD>
+<TD class=T width=41%>Non supportata</TD>
+<TD class=T width=32%>Binario</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=27%><I>Non supportata</I></TD>
+<TD class=TT width=41%><I>Non supportata</I></TD>
+<TD class=TT width=32%>Valore</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Nei database di Access (mdb) il tipo di dati di parametro Valore non corrisponde a un tipo di dati definito nel modulo di gestione di database Jet ma corrisponde alla parola riservata VALUE di SQL, che serve per creare una query con parametri. In Microsoft Access o in query SQL la parola riservata VALUE può essere considerata un sinonimo valido per il tipo di dati <A HREF="javascript:HelpPopup('actip9.hlp','defVariant');" class="pop"><B>Variante</B></A> di Visual Basic.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acproTypeADOSW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

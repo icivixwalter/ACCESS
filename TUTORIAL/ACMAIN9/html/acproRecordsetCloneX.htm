@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproRecordsetCloneX'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproref2.doc'
+Tnum='187935'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà RecordsetClone</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprorecordsetclonex"></A>Esempio di proprietà RecordsetClone</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzata la proprietà <B>RecordsetClone</B> per creare un nuovo duplicato dell'oggetto <B>Recordset</B> dalla maschera Ordini, quindi vengono stampati i nomi dei campi della finestra Immediata.</P>
+
+<PRE class=CT><CODE>Sub Print_Field_Names()
+  Dim rst As Recordset, intI As Integer
+  Dim fld As Field
+
+  Set rst = Me.<B>RecordsetClone</B>
+  For Each fld in rst.Fields
+    ' Stampa nomi campo.
+    Debug.Print fld.Name
+  Next
+End Sub</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio successivo vengono utilizzati la proprietà <B>RecordsetClone</B> e l'oggetto <B>Recordset</B> per sincronizzare un record contenuto in un set di record con il record corrente della maschera. Quando si seleziona il nome di una società da una casella combinata, il metodo <B>FindFirst</B> è utilizzato per individuare il record relativo a tale società e la proprietà DAO <B>Bookmark</B> dell'oggetto <B>Recordset</B> viene assegnata alla proprietà <B>Bookmark</B> della maschera, in modo che la maschera visualizzi il record trovato.</P>
+
+<PRE class=CT><CODE>Sub IDFornitore_AfterUpdate()
+  Dim rst As Recordset
+  Dim strSearchName As String
+
+  Set rst = Me.<B>RecordsetClone</B>
+  strSearchName = Str(Me!IDFornitore)
+  rst.Find "IDFornitore = " &amp; strSearchName
+    If rst.NoMatch Then
+      MsgBox "Record non trovato"
+    Else
+      Me.Bookmark = rst.Bookmark
+    End If
+  rst.Close
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

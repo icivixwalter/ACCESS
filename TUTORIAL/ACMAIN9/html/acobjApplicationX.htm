@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjApplicationX'
+Feature='acobj'
+Handoff='1'
+SourceFile='aobjv8.rtf'
+Tnum='186467'
+Piece='1043'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto Application</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjapplicationx"></A>Esempio di oggetto Application</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene indicato come stampare alcune impostazioni correnti di proprietà dell'oggetto <B>Application</B>, impostare un'opzione e quindi uscire dall'applicazione salvando tutti gli oggetti:</P>
+
+<PRE class=CT><CODE>Sub InformazioniApplicazione()
+&nbsp;&nbsp;&nbsp; ' Stampa nome e tipo di oggetto corrente.
+&nbsp;&nbsp;&nbsp; Debug.Print <B>Application</B>.CurrentObjectName
+&nbsp;&nbsp;&nbsp; Debug.Print <B>Application</B>.CurrentObjectType
+&nbsp;&nbsp;&nbsp; ' Imposta opzione Oggetti nascosti in Visualizza
+&nbsp;&nbsp;&nbsp; ' nella scheda Visualizzazione della finestra Opzioni.
+&nbsp;&nbsp;&nbsp; <B>Application</B>.SetOption "Mostra oggetti nascosti", True
+&nbsp;&nbsp;&nbsp; ' Esce da Microsoft Access, salvando tutti gli oggetti.
+&nbsp;&nbsp;&nbsp; Application.Quit acSaveYes
+End Sub</CODE></PRE>
+
+
+
+<P class=T>L'esempio successivo mostra come utilizzare Microsoft Access come componente COM. Da Microsoft Excel, Visual Basic o da un'altra applicazione che agisce come componente COM, creare un riferimento a Microsoft Access scegliendo <B>Riferimenti</B> dal menu <B>Strumenti</B> nella finestra Moduli. Selezionare la casella di controllo posta accanto a <B>Microsoft Access 9.0 Object Library</B>. Immettere quindi il codice riportato di seguito in un modulo di Visual Basic all'interno di tale applicazione e chiamare la routine RicercaDati.</P>
+
+<P class=T>Nell'esempio, a una routine che crea una nuova istanza della classe <B>Application</B> vengono passati un nome di database e un nome di report, viene aperto il database e stampato il report indicato.</P>
+
+<PRE class=CT><CODE>' Dichiara variabile di oggetto nella sezione Dichiarazioni di un modulo
+&nbsp;&nbsp;&nbsp; Dim appAccess As Access.<B>Application</B>
+
+Sub RicercaDati()
+&nbsp;&nbsp;&nbsp; Dim strDB As String
+&nbsp;&nbsp;&nbsp; Dim strNomeReport As String
+
+&nbsp;&nbsp;&nbsp; ' Inizializza stringa a percorso database.
+&nbsp;&nbsp;&nbsp; strDB = "C:\Program Files\Microsoft Office\Office\Esempi\Northwind.mdb"
+&nbsp;&nbsp;&nbsp; ' Inizializza stringa a nome report.
+&nbsp;&nbsp;&nbsp; strNomeReport = "Catalogo"
+&nbsp;&nbsp;&nbsp; PrintAccessReport strDB, strNomeReport
+End Sub
+
+Sub StampaReport(strDB As String, strNomeReport As String)
+&nbsp;&nbsp;&nbsp; ' Restituisce riferimento a oggetto Application di Microsoft Access.
+&nbsp;&nbsp;&nbsp; Set appAccess = New Access.<B>Application</B>
+&nbsp;&nbsp;&nbsp; ' Apre database in Microsoft Access.
+&nbsp;&nbsp;&nbsp; appAccess.OpenCurrentDatabase strDB
+&nbsp;&nbsp;&nbsp; ' Stampa report.
+&nbsp;&nbsp;&nbsp; appAccess.DoCmd.OpenReport strNomeReport
+&nbsp;&nbsp;&nbsp; MsgBox "Fare clic su OK al " &amp; strNomeReport &amp; _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " termine della stampa"
+&nbsp;&nbsp;&nbsp; appAccess.CloseCurrentDatabase
+&nbsp;&nbsp;&nbsp; Set appAccess = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

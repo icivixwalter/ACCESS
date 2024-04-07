@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproNewRowOrColX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproprt1_1a.rtf'
+Tnum='187708'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà NewRowOrCol</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acpronewroworcolx"></A>Esempio di proprietà NewRowOrCol</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene restituita l'impostazione della proprietà <B>NewRowOrCol</B> e viene assegnata alla variabile <CODE>intValore</CODE>.</P>
+
+<PRE class=CT><CODE>Dim intValore As Integer
+intValore = Me.Section(1).<B>NewRowOrCol</B></CODE></PRE>
+
+
+
+<P class=T>L'esempio successivo presenta due layout per un report che divide i dati in quattro gruppi, da Int1 a Int4. Ciascun gruppo comprende da tre a sei record e ciascun record ha un campo a e un campo b. I layout si distinguono solo per le rispettive impostazioni in <B>Layout colonne</B> nella scheda <B>Colonne</B> della finestra di dialogo <B>Imposta pagina</B> e per i valori delle relative proprietà <B>NewRowOrCol</B>. Tenere presente che la casella <B>Larghezza</B> presente in <B>Dimensioni colonne</B> della scheda <B>Colonne</B> deve essere impostata all'ampiezza attuale del campo. L'impostazione Prima della sezione della proprietà <B>NewRowOrCol</B> richiede, inoltre, una sezione intestazione pagina maggiore di zero per l'opzione <B>Priorità verticale</B> per funzionare correttamente.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TD width=50%>
+<UL>
+	<LI class=TLB><B>Layout colonne - Priorità orizzontale</B>
+<P class=6>
+
+<P class=TT>Int1
+
+<P class=TT>1a 1b2a 2b3a 3b4a 4b
+
+<P class=TT>5a 5b
+
+<P class=TT>Int2
+
+<P class=TT>1a 1b2a 2b3a 3b4a 4b
+
+<P class=TT>Int3
+
+<P class=TT>1a 1b2a 2b3a 3b
+
+<P class=TT>Int4
+
+<P class=TT>1a 1b2a 2b3a 3b4a 4b
+
+<P class=TT>5a 5b6a 6b
+</LI>
+
+	<LI class=TLB><B>Impostazioni griglia - Numero di colonne</B> impostato a 4<BR><BR></LI>
+
+	<LI class=TLB>Impostazione della proprietà <B>NewRowOrCol</B> per la sezione intestazione di gruppo - Prima e dopo</LI>
+</UL>
+</TD>
+<TD width=50%>
+<UL>
+	<LI class=TLB><B>Layout colonne - Priorità verticale</B>
+<P class=6>
+
+<P class=TT>Int1Int2Int3Int4
+
+<P class=TT>1a 1b1a 1b1a 1b1a 1b
+
+<P class=TT>2a 2b2a 2b2a 2b2a 2b
+
+<P class=TT>3a 3b3a 3b3a 3b3a 3b
+
+<P class=TT>4a 4b4a 4b4a 4b
+
+<P class=TT>5a 5b5a 5b
+
+<P class=TT>6a 6b
+</LI>
+
+	<LI class=TLB><B>Impostazioni griglia - Numero di colonne</B> impostato a 4<BR><BR></LI>
+
+	<LI class=TLB>Impostazione della proprietà <B>NewRowOrCol</B> per la sezione intestazione di gruppo - Prima della sezione</LI>
+</UL>
+</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowSpecifyTextCriteriaControlForm'
+Feature='accon'
+Handoff='1'
+SourceFile='criteria_1a.doc'
+Tnum='188171'
+Piece='1043'
+Recycle='Y'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Criteri di testo provenienti da un controllo in una maschera</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acfctDLookup">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="achowspecifytextcriteriacontrolform"></A>Criteri di testo provenienti da un controllo in una maschera</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSpecifyTextCriteriaControlFormC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="achowSpecifyTextCriteriaControlFormX">
+</OBJECT></P>
+
+
+
+<P class=T>Se si desidera modificare l'argomento <I>criteri</I> per un'operazione in base alle preferenze di un utente, è possibile specificare che i criteri provengono da un controllo in una maschera. È possibile ad esempio specificare che l'argomento <I>criteri</I> proviene da una casella di riepilogo contenente i cognomi di tutti gli impiegati presenti in una tabella Impiegati.</P>
+
+<P class=T>Per specificare criteri di testo provenienti da un controllo in una maschera, includere nell'argomento <I>criteri</I> un'espressione che faccia riferimento al controllo della maschera. Tale espressione deve essere distinta dall'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A>, in modo da essere valutata per prima e quindi concatenata al resto dell'espressione stringa prima di eseguire l'operazione appropriata.</P>
+
+<P class=T>Oltre a racchiudere tra virgolette doppie (") l'intera espressione stringa, è necessario assicurarsi che i criteri di testo contenuti nell'espressione stringa siano racchiusi tra apici (').Gli apici devono essere inclusi tra stringhe a fianco dell'espressione che fa riferimento al controllo nella maschera.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Gli apici indicano che l'argomento <I>criteri</I> contiene una data o un'ora in una stringa.</P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene eseguita una ricerca in una tabella Impiegati e in base al cognome degli impiegati viene restituito il nome della zona in cui abita. Il valore corrente di un controllo Casella di riepilogo denominata Cognome nella maschera Impiegati determina i criteri. Si noti la posizione degli apici.</P>
+
+<PRE class=CT><CODE>=DLookup("[Zona]", "Impiegati", "[Cognome] = '" _
+&nbsp;&nbsp;&nbsp; &amp; Forms!Impiegati!Cognome &amp; "'")</CODE></PRE>
+
+
+
+<P class=T>Se il valore corrente del controllo è <CODE>Bianchi</CODE>, l'argomento <I>criteri</I> viene passato alla funzione <A HREF="JavaScript:hhobj_3.Click()"><B>DLookup</B></A> dopo che è stata valutata l'espressione e sono state concatenate le stringhe:</P>
+
+<PRE class=CT><CODE>"[Cognome] = 'Bianchi'"</CODE></PRE>
+
+
+
+<P class=T>Ricordare che l'intera stringa che comprende l'argomento <I>criteri</I> deve essere racchiusa tra virgolette doppie dopo la concatenazione delle stringhe.</P>
+
+<P class=NT><B>Suggerimento</B>&nbsp;&nbsp; Per risolvere un problema relativo a un'espressione nell'argomento <I>criteri</I>, suddividere l'espressione in componenti più piccoli e provare ciascun componente singolarmente nella <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefImmediateWindow');" class="pop">finestra Immediata</A>. Una volta verificato che tutti i componenti funzionano in modo corretto, riunirli uno alla volta fino a quando l'espressione completa non funziona correttamente.</P>
+
+
+
+<P class=T>È anche possibile includere una variabile che rappresenta una stringa di testo nell'argomento <I>criteri</I>. La variabile deve essere distinta dall'espressione stringa, in modo da essere valutata per prima. Il risultato viene quindi concatenato con il resto dell'espressione stringa. La stringa di testo deve essere racchiusa tra apici o virgolette doppie.</P>
+
+<P class=T>Nell'esempio riportato di seguito viene illustrato come costruire un argomento <I>criteri</I> che include una variabile che rappresenta una stringa di testo:</P>
+
+<PRE class=CT><CODE>Dim strCognome As String, varRisultato As Variant
+strCognome = "Bianchi"
+varRisultato = DLookup("[IDImpiegato]", "Impiegati", "[Cognome] = '" _
+&nbsp;&nbsp;&nbsp; &amp; strCognome &amp; "'")</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

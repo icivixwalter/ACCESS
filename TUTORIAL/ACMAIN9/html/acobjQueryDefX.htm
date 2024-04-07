@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acobjQueryDefX'
+Feature='acobj'
+Handoff='1'
+SourceFile='acd_DDLX.doc'
+Tnum='234521'
+Piece='1040'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di oggetto QueryDef, insieme QueryDefs (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acobjquerydefx"></A>Esempio di oggetto QueryDef, insieme QueryDefs (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene verificata la presenza nel database corrente di una query chiamata UltimeAssunzioni che, se esiste, viene eliminata dall'insieme <B>QueryDefs</B>. La routine crea quindi un nuovo oggetto <B>QueryDef</B> e lo apre in visualizzazione Foglio dati.</P>
+
+<PRE class=CT><CODE>Sub NuovaQuery()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, qdf As <B>QueryDef</B>
+&nbsp;&nbsp;&nbsp; Dim strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Aggiorna insieme QueryDefs.
+&nbsp;&nbsp;&nbsp; dbs.<B>QueryDefs</B>.Refresh
+&nbsp;&nbsp;&nbsp; ' Se la query UltimeAssunzioni esiste, la elimina.
+&nbsp;&nbsp;&nbsp; For Each qdf in dbs.<B>QueryDefs</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If qdf.Name = "UltimeAssunzioni" Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbs.<B>QueryDefs</B>.Delete qdf.Name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If
+&nbsp;&nbsp;&nbsp; Next qdf
+&nbsp;&nbsp;&nbsp; ' Crea la stringa SQL per selezionare gli impiegati assunti dopo il 01/01/94.
+&nbsp;&nbsp;&nbsp; strSQL = "SELECT * FROM Impiegati WHERE DataAssunzione &gt;= #1-1-94#;"
+&nbsp;&nbsp;&nbsp; ' Crea il nuovo oggetto QueryDef.
+&nbsp;&nbsp;&nbsp; Set qdf = dbs.CreateQueryDef("UltimeAssunzioni", strSQL)
+&nbsp;&nbsp;&nbsp; ' Apre la query in visualizzazione Foglio dati.
+&nbsp;&nbsp;&nbsp; DoCmd.OpenQuery qdf.Name
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconScopingAndObjectNamingCompatibility'
+Feature='accon'
+Handoff='2'
+SourceFile='acconnew.doc'
+Tnum='188026'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Compatibilità relativa all'area di validità e alla denominazione di oggetti</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="mdobjODBRec">
+</OBJECT>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="daobjRecordset">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="DefaultTopic" VALUE="achowhelptopicnotavailables.htm">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="vafctMsgBox">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acconscopingandobjectnamingcompatibility"></A>Compatibilità relativa all'area di validità e alla denominazione di oggetti</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconScopingAndObjectNamingCompatibilityC;vaconAvoidingNamingConflicts;vaconUnderstandingScope">
+</OBJECT></P>
+
+
+
+<P class=T>Le regole relative all'area di validità di Visual Basic influiscono sulla scelta dei nomi per gli <A HREF="javascript:HelpPopup('actip9.hlp','defObject');" class="pop">oggetti</A>, i <A HREF="javascript:HelpPopup('actip9.hlp','defModule');" class="pop">moduli</A> e le <A HREF="javascript:HelpPopup('actip9.hlp','defProcedure');" class="pop">routine</A>.</P>
+
+<P class=RL><B>Moduli e altri oggetti con lo stesso nome</B></P>
+
+<P class=T>Nell'assegnare un nome a un modulo evitare di anteporre "Form_" o "Report_" ai nomi dei moduli perché ciò sarebbe in conflitto con il codice esistente scritto dietro maschere e report.</P>
+
+<P class=T>Se un modulo di un'applicazione creata con le versioni 1.<I>x</I> o 2.0 di Microsoft Access non rispetta queste regole per la denominazione, in Microsoft Access 2000 viene rilevato un errore durante la conversione dell'applicazione. Se ad esempio in un database delle versioni 1.<I>x</I> o 2.0 di Microsoft Access si assegna il nome Form_Ordini a un modulo, ciò genera un errore e viene richiesto di assegnare un altro nome al modulo prima di tentare di convertirlo.</P>
+
+<P class=RL><B>Moduli e routine con lo stesso nome</B></P>
+
+<P class=T>Anche se non è consigliabile, è possibile avere una routine con lo stesso nome di un modulo. Per chiamare tale routine da un'<A HREF="javascript:HelpPopup('actip9.hlp','defExpression');" class="pop">espressione</A> in qualsiasi punto dell'applicazione è necessario utilizzare per la routine un nome completo che includa sia il nome del modulo sia quello della routine, come nell'esempio riportato di seguito.</P>
+
+<PRE class=CT><CODE>IsLoaded.IsLoaded("Ordini")</PRE></CODE>
+
+<p class=NT><B>Nota</B>&nbsp;&nbsp; Una routine di questo tipo non funziona con l'azione <B>Runcode</B> delle macro poiché nelle macro non è consentito l'accesso a routine che abbiano lo stesso nome di un modulo.</p>
+
+
+
+<P class=RL><B>Routine e controlli con lo stesso nome</B></P>
+
+<P class=T>Se si chiama una routine da un maschera e tale routine ha lo stesso nome di un <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> nella maschera, è necessario specificare in modo completo la chiamata alla routine con il nome del modulo in cui essa risiede. Se ad esempio si desidera chiamare una routine denominata StampaFattura che risiede in un <A HREF="javascript:HelpPopup('actip9.hlp','defStandardModule');" class="pop">modulo standard</A> denominato Utilità e nella stessa maschera esiste anche un pulsante denominato StampaFattura, quando si chiama la routine dalla maschera o dal <A HREF="javascript:HelpPopup('actip9.hlp','defFormModule');" class="pop">modulo di maschera</A>, utilizzare il nome completo <CODE>Utilità.StampaFattura.</CODE></P>
+
+<P class=RL><B>Controlli con nomi simili</B></P>
+
+<P class=T>Non possono esistere due o più controlli con nomi simili che differiscono solo per uno spazio o un simbolo. Non possono esistere contemporaneamente ad esempio un controllo denominato [Data_di_nascita] e un controllo denominato [Data di nascita] o [Data+di+nascita].</P>
+
+<P class=RL><B>Moduli con gli stessi nomi delle librerie dei tipi</B></P>
+
+<P class=T>Non è possibile salvare un modulo con lo stesso nome di una <A HREF="javascript:HelpPopup('actip9.hlp','defTypeLibrary');" class="pop">libreria dei tipi</A>. Se si tenta di salvare un modulo con il nome "ADO", "Access", "DAO" o "VBA", verrà visualizzato un messaggio di errore che indica che il nome è in conflitto con un modulo, un progetto o una <A HREF="javascript:HelpPopup('actip9.hlp','defObjectLibrary');" class="pop">libreria di oggetti</A> esistente. Analogamente, se si è impostato un riferimento a un'altra libreria dei tipi, ad esempio quella di Microsoft Excel, non è possibile salvare un modulo con il nome "Excel".</P>
+
+<P class=RL><B>Campi con gli stessi nomi dei metodi</B></P>
+
+<P class=T>Se il campo di una tabella ha lo stesso nome di un metodo ADO di un oggetto <A HREF="JavaScript:hhobj_2.Click()"><B>Recordset</B></A> ADO o di un metodo DAO di un oggetto 
+<A HREF="JavaScript:hhobj_3.Click()"><B>Recordset</B></A> DAO, non è possibile fare riferimento al campo corrispondente nel <A HREF="javascript:HelpPopup('actip9.hlp','defRecordset');" class="pop">set di record</A> utilizzando la sintassi con il punto (.). È necessario invece utilizzare la sintassi con il punto esclamativo (!), altrimenti Microsoft Access rileverà un errore. Nell'esempio riportato di seguito viene illustrato come fare riferimento a un campo denominato AggiungiNuovo in un set di record aperto in una tabella denominata Contatti.</P>
+
+<P class=T>ADO</P>
+
+<PRE class=CT><CODE>Dim rst As New ADODB.Recordset
+rst.Open "Contatti",CurrentProject.Connection, _
+    adOpenKeySet,adLockOptimistic
+Debug.Print rst!AggiungiNuovo
+</CODE></PRE>
+
+
+
+<P class=T>DAO</P>
+
+<PRE class=CT><CODE>Dim dbs As Database, rst As DAO.Recordset
+Set dbs = CurrentDb
+Set rst = dbs.OpenRecordset("Contatti")
+Debug.Print rst!AggiungiNuovo</CODE></PRE>
+
+
+
+<P class=RL><B>Moduli con gli stessi nomi delle funzioni di Visual Basic</B></P>
+
+<P class=T>Se si salva un modulo con lo stesso nome di una funzione intrinseca di Visual Basic, in Microsoft Access verrà generato un errore quando si tenta di eseguire la funzione. Se ad esempio si salva un modulo denominato MsgBox e si tenta di eseguire una routine che chiama la funzione <A HREF="JavaScript:hhobj_4.Click()"><B>MsgBox</B></A>, in Microsoft Access verrà generato un errore che indica come valore previsto una variabile o una routine, ma non un modulo.</P>
+
+<P class=RL><B>Moduli con gli stessi nomi degli oggetti</B></P>
+
+<P class=T>Se un database creato con una versione precedente di Microsoft Access include un modulo con lo stesso nome di un oggetto di Microsoft Access, di un oggetto ADO o di un oggetto DAO, si possono verificare errori di compilazione durante la conversione del database in Microsoft Access 2000. Un modulo denominato "Form" o "Database" ad esempio può generare un errore di compilazione. Per evitare tali errori, rinominare il modulo.</P>
+
+<P class=RL><B>Denominare i campi utilizzati nelle espressioni o associati a controlli di maschere e report</B></P>
+
+<P class=T>Quando in una tabella si crea un campo che sarà associato a un controllo in un report o sarà utilizzato in un'espressione nella proprietà <A HREF="acproControlSource.htm"><B>Origine controllo</B></A> di un controllo o di un report, evitare di assegnare al campo lo stesso nome di un metodo dell'oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>. Per visualizzare un elenco dei metodi dell'oggetto <B>Application</B>, scegliere <B>Visualizzatore oggetti</B> dal menu <B>Visualizza</B> nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A> del modulo. Selezionare <B>Access</B> dalla casella <B>Progetto/libreria</B>, quindi <B>Application</B> dalla casella <B>Classi</B> e infine visualizzare i metodi dell'oggetto <B>Application</B> nella casella <B>Membri di</B>.</P>
+
+<P class=T>Quando in una tabella si crea un campo che sarà associato a un controllo in un report o in una maschera, evitare di assegnare al campo uno dei seguenti nomi: AddRef, GetIDsOfNames, GetTypeInfo, GetTypeInfoCount, Invoke, QueryInterface, Release.</P>
+
+<P class=RL><B>Identificatori con lo stesso nome di parole chiave di Visual Basic</B></P>
+
+<P class=T>La versione di Visual Basic utilizzata da Microsoft Access 97 e 2000 contiene alcune nuove parole chiave che non è più possibile utilizzare come identificatori. Queste parole chiave sono: <B>AddressOf</B>, <B>Assert</B>, <B>Decimal</B>, <B>DefDec</B>, <B>Enum</B>, <B>Event</B>, <B>Friend</B>, <B>Implements</B>, <B>RaiseEvent</B> e <B>WithEvents</B>. Quando si converte un database creato con una versione precedente di Microsoft Access, gli identificatori esistenti con lo stesso nome di parole chiave di Visual Basic generano un errore di compilazione. Per risolvere questo problema, assegnare un nuovo nome agli identificatori.</P>
+
+<P class=RL><B>Nomi di progetto uguali a oggetti di Microsoft Access</B></P>
+
+<P class=T>Un nome di progetto è una stringa che corrisponde al nome dell'applicazione di Microsoft Access. Nelle versioni precedenti di Microsoft Access il nome di progetto corrisponde al nome del database. In Microsoft Access 2000 il nome di progetto è specificato dall'impostazione della proprietà <B>ProjectName</B> e l'impostazione predefinita del nome di progetto corrisponde al nome del database. Se si converte un database con un nome uguale a una classe di oggetti, ad esempio "applicazione", "maschera" o "report", per creare un nome di progetto che non sia in conflitto con gli oggetti esistenti viene accodato al nome del database un carattere di sottolineatura.</P>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconScopingAndObjectNamingCompatibilityW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

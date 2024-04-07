@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acdecUseODBCToImportLinkExportExternalDataSourcesS'
+Feature='External: ODBC'
+Handoff='2'
+SourceFile='codbc_3.rtf'
+Tnum='188745'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Differenza tra i driver ODBC e i driver interni al sistema per i dati esterni</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acdecuseodbctoimportlinkexportexternaldatasourcess"></A>Differenza tra i driver ODBC e i driver interni al sistema per i dati esterni</H1>
+
+<P class=T>In Microsoft Access è possibile <A HREF="javascript:HelpPopup('actip9.hlp','defImport');" class="pop">importare</A>, <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefExport');" class="pop">esportare</A> o <A HREF="javascript:HelpPopup('actip9.hlp','defAttachLink');" class="pop">collegare</A> i dati di diversi formati di database, foglio di calcolo e file di testo. A tale scopo viene utilizzato un driver interno al sistema oppure un driver
+ <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC</A>. In questo argomento verranno fornite informazioni di riferimento relative a:</P>
+
+<P class=LBR1><A HREF="#acdecuseodbctoimportlinkexportexternaldatasourcess_1">Driver interni al sistema</A></P>
+
+<P class=LBR1><A HREF="#acdecuseodbctoimportlinkexportexternaldatasourcess_2">Driver ODBC</A></P>
+
+<H2><A NAME="acdecuseodbctoimportlinkexportexternaldatasourcess_1"></A>Driver interni al sistema</H2>
+
+<P class=T>Access include dei driver incorporati che consentono di importare, esportare o collegare i seguenti tipi di dati: altri <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A>, <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetti di Microsoft Access</A>, fogli di calcolo Paradox, dBASE, Microsoft Excel e Lotus 1-2-3, <A HREF="javascript:HelpPopup('actip9.hlp','defFixedWidthText');" class="pop">file di testo a larghezza fissa</A> Microsoft Exchange e Microsoft Outlook, <A HREF="javascript:HelpPopup('actip9.hlp','defDelimitedText');" class="pop">file di testo delimitati</A> e <A HREF="javascript:HelpPopup('actip9.hlp','defHTML');" class="pop">HTML</A>.</P>
+
+<P class=T><A HREF="acrefDataSourcesMicrosoftAccessCanImportOrLink.htm">Informazioni sulle origini dati utilizzabili per l'importazione o il collegamento</A></P>
+
+<P class=T><A HREF="acrefDataFormatsMicrosoftAccessCanExport.htm">Informazioni sui formati dati utilizzabili per l'esportazione</A>.</P>
+
+<P class=T>Questi driver interni al sistema sono disponibili quando si utilizzano il comando <B>Esporta</B> del menu <B>File</B> e i comandi <B>Importa</B> e <B>Collega tabelle</B> del sottomenu <B>Carica dati esterni</B> del menu <B>File</B>. Se nel computer è installato un determinato driver interno, il corrispondente tipo di dati risulterà disponibile nella casella <B>Tipo file</B> della finestra di dialogo <B>Esporta</B> <B><I>Oggetto</I></B> <B><I>'Nome oggetto'</I></B> <B>in</B> oppure nella casella <B>Tipo file</B> della finestra di dialogo <B>Importa</B> o <B>Collega</B>. Tutti i driver interni al sistema vengono installati automaticamente quando si installa Access.</P>
+
+<P class=rtt>Torna all'<A HREF="#acdecuseodbctoimportlinkexportexternaldatasourcess">inizio</A></P>
+
+<H2><A NAME="acdecuseodbctoimportlinkexportexternaldatasourcess_2"></A>Driver ODBC</H2>
+
+<P class=T>È possibile utilizzare i driver ODBC per connettersi ai <A HREF="javascript:HelpPopup('actip9.hlp','defSQLDatabaseODBC');" class="pop">database di Microsoft SQL Server</A>, a quelli di Microsoft FoxPro e ai dati di altri programmi che forniscono driver a 32 bit compatibili con ODBC Level 1 per l'accesso ai relativi file di dati. Insieme a Microsoft Access vengono installati automaticamente i driver ODBC Microsoft SQL Server (Sqlsrv32.dll), FoxPro (vfpodbc.dll), Oracle (msorcl32.dll) e alcuni file di supporto ODBC, come i file della Guida e l'icona <B>Fonti dati ODBC (32 bit)</B> del Pannello di controllo. L'opzione <B>Database ODBC</B> è disponibile nella casella <B>Tipo file</B> della finestra di dialogo <B>Esporta</B> <B><I>Oggetto</I></B> <B><I>'Nome oggetto'</I></B> <B>in</B> e nella casella <B>Tipo file</B> della finestra di dialogo <B>Importa</B> o <B>Collega</B>. L'icona <B>Fonti dati ODBC</B> <B>(32 bit)</B> invece è disponibile nel Pannello di controllo.</P>
+
+<P class=T>Altri produttori possono fornire documentazione e driver ODBC aggiuntivi che supportano altri formati di dati. Per informazioni sulla disponibilità di un driver ODBC per un particolare tipo di dati, contattare il produttore del programma che genera quel tipo di dati. Per Access sono richiesti driver ODBC a 32 bit conformi a ODBC Level&nbsp;1.</P>
+
+<P class=T>Anche altri prodotti Microsoft e di altri produttori possono fornire driver ODBC, compresi driver per le stesse applicazioni precedentemente elencate nella sezione Driver interni al sistema. Questi driver ODBC possono essere installati nel computer, ma Microsoft consiglia di utilizzare il driver interno corrispondente, se disponibile. Per sapere se questi driver sono stati testati e verificati per l'utilizzo con Microsoft Access, contattare il relativo produttore. <BR><BR></P>
+
+<P class=T>Per ulteriori informazioni sull'assistenza e sulla disponibilità dei driver ODBC, vedere la Microsoft Access Knowledge Base.</P>
+
+<P class=T><A HREF="ofdecConnectToMicrosoft.htm">Informazioni su come accedere alle risorse tecniche di Microsoft</A></P>
+
+<P class=rtt>Torna all'<A HREF="#acdecuseodbctoimportlinkexportexternaldatasourcess">inizio</A></P>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acdecUseODBCToImportLinkExportExternalDataSourcesSW">
+</OBJECT>
+</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

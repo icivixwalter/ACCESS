@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acsqlCreateIndexX'
+Feature='acsql'
+Handoff='3'
+SourceFile='acjsqlx2_1a.rtf'
+Tnum='234369'
+Piece='1040'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di istruzione CREATE INDEX (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acsqlcreateindexx"></A>Esempio di istruzione CREATE INDEX (MDB)</B></P>
+
+
+
+<P class=T>Per eseguire gli esempi riportati di seguito in Microsoft Access, creare una nuova query nel database di esempio Northwind. Chiudere la finestra di dialogo <B>Mostra tabella</B> senza specificare una tabella o una query. Passare alla visualizzazione SQL, incollare un esempio nella finestra SQL ed eseguire la query.</P>
+
+
+
+<P class=WT><B>Attenzione</B>&nbsp;&nbsp; Questi esempi modificano il database di esempio Northwind. Di conseguenza, prima di iniziare è opportuno eseguire una copia di backup.</P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea un indice costituito dai campi Telefono e Interno nella tabella Impiegati:</P>
+
+<PRE class=CT><CODE><B>CREATE INDEX</B> NuovoIndice ON Impiegati (Telefono, _
+Interno);</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea un indice nella tabella Clienti con il campo IDCliente. I record del campo IDCliente non possono contenere gli stessi dati e non sono consentiti i valori <B>Null</B>.</P>
+
+<PRE class=CT><CODE>CREATE UNIQUE INDEX IDCliente ON Clienti (IDCliente) _
+WITH DISALLOW NULL;</CODE></PRE>
+
+
+
+<P class=T>Per eliminare l'indice creato nell'esempio precedente, è necessario utilizzare l'istruzione DROP. Non è possibile eliminare l'indice dalla visualizzazione Struttura della tabella se non si elimina anche la relazione nella tabella Clienti. L'istruzione riportata di seguito elimina il nuovo indice tramite l'istruzione DROP:</P>
+
+<PRE class=CT><CODE>DROP INDEX IDCliente ON Clienti;</CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si crea un indice in una tabella ODBC collegata. Il database remoto della tabella non è a conoscenza del nuovo indice e non è influenzato da esso. Questo esempio non funziona se viene incollato in Microsoft Access prima di creare una tabella ODBC collegata chiamata DettagliOrdiniODBC.</P>
+
+<PRE class=CT><CODE>CREATE UNIQUE INDEX IDOrdine ON DettagliOrdiniODBC _
+(IDOrdine);</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

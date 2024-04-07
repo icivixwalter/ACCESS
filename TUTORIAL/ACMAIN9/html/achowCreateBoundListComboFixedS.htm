@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowCreateBoundListComboFixedS'
+Feature='Forms: Controls'
+Handoff='3'
+SourceFile='CFRMLST.RTF'
+Tnum='188486'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Creare in una maschera una casella di riepilogo o una casella combinata associata che visualizza i dati di un database di Access</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowcreateboundlistcombofixeds"></A>Creare in una maschera una casella di riepilogo o una casella combinata associata che visualizza i dati di un database di Access</H1>
+
+<P class=T>È possibile creare una casella di riepilogo o una casella combinata che recuperi le informazioni da un <A HREF="javascript:HelpPopup('actip9.hlp','defLookupField');" class="pop">campo di ricerca</A> di una tabella di un <A HREF="javascript:HelpPopup('actip9.hlp','defDatabase');" class="pop">database di Microsoft Access</A> (mdb). Le tabelle di un <A HREF="javascript:HelpPopup('actip9.hlp','defProject');" class="pop">progetto di Microsoft Access</A> (adp) non contengono campi di ricerca, ma è comunque possibile <A HREF="achowCreateBoundListBoxComboBoxOrDropdownListBoxThatDisplaysFixedValuesInAccessProject.htm">creare una casella di riepilogo associata, una casella combinata o una casella di riepilogo a discesa per visualizzare i dati senza utilizzare un campo di ricerca</A>.
+
+<OL>
+	<LI class=LPROC>Creare un campo di ricerca nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura della tabella</A>.
+<P class=LBR2><A HREF="achowCreateAListFieldS.htm">Procedura</A>
+
+<P class=LNT><B>Nota&nbsp;&nbsp;</B> È possibile creare una casella di riepilogo o una casella combinata di ricerca senza creare un campo di ricerca, ma se si crea un campo di ricerca in una tabella, è necessario creare la casella di riepilogo o la casella combinata soltanto una volta. È possibile quindi utilizzare lo stesso elenco di ricerca per qualsiasi maschera. Se si stabilisce di non utilizzare lo stesso elenco di ricerca in più di una maschera, è possibile utilizzare la Creazione guidata Casella di riepilogo o la Creazione guidata Casella combinata nella <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewForm');" class="pop">visualizzazione Struttura della maschera</A>.
+</LI>
+
+	<LI class=LPROC>Effettuare una delle seguenti operazioni:
+<UL>
+	<LI class=LB2>Creare una nuova maschera basata su un'<A HREF="javascript:HelpPopup('actip9.hlp','defRecordSource');" class="pop">origine record</A> che include il campo di ricerca creato nel passo 1. In Microsoft Access verrà creata automaticamente la casella di riepilogo o la casella combinata di ricerca.<BR><BR></LI>
+
+	<LI class=LB2>Aprire una maschera esistente basata su un'origine record che include il campo di ricerca creato nel passo 1. Nella visualizzazione Struttura della maschera fare clic sul pulsante <B>Elenco campi</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrFieldListQ');" class="pop"><IMG SRC="images/fieldlst.bmp" BORDER=0></A> sulla barra degli strumenti per visualizzare l'elenco dei campi, quindi trascinare il campo di ricerca dall'elenco dei campi alla maschera. In Microsoft Access verrà creata automaticamente la casella di riepilogo o la casella combinata di ricerca.</LI>
+</UL>
+</LI>
+
+	<LI class=LPROC>Passare alla <A HREF="javascript:HelpPopup('actip9.hlp','defFormView');" class="pop">visualizzazione Maschera</A> per verificare la casella di riepilogo o la casella combinata.</LI>
+</OL>
+
+<P class=NT><B>Note</B>
+
+<UL>
+	<LI class=LB1>Per ulteriori informazioni sulle proprietà che determinano il funzionamento di una casella di riepilogo o di una casella combinata, fare clic su <A HREF="acconPropertiesThatMakeListBoxesCombosWorkS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=NLB>Quando si utilizza una creazione guidata per creare una casella di riepilogo o una casella combinata basata su una tabella o su una query, in Microsoft Access viene creata un'<A HREF="javascript:HelpPopup('actip9.hlp','defSQLString');" class="pop">istruzione SQL</A> basata sui campi selezionati e viene impostata la proprietà <B> RowSource</B> per il <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A> di quell'istruzione SQL. Se la casella di riepilogo o la casella combinata non è ordinata nel modo desiderato, è possibile modificare l'istruzione SQL facendo clic sul pulsante dei <B>generatori</B> <A HREF="javascript:HelpPopup('actip9.hlp','defBuildButton');" class="pop"><IMG SRC="images/buildbut.bmp"  BORDER=0></A> accanto alla proprietà <B>Origine riga</B>. Per ulteriori informazioni sulla specificazione di un criterio di ordinamento nel Generatore di istruzioni SQL, fare clic su <A HREF="achowSortRecordsBySpecifyingSortOrderInQueryFilterS.htm"><IMG SRC="images/chiclet.bmp"  BORDER=0></A>.<BR><BR></LI>
+
+	<LI class=LB1>Per ulteriori informazioni sulla risoluzione dei problemi relativi alle caselle di riepilogo e alle caselle combinate, fare clic su <A HREF="actrbTroubleshootingListBoxesComboBoxesS.htm"><IMG SRC="images/chiclet.bmp" BORDER=0></A>.</LI>
+</UL>
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowCreateBoundListComboFixedSW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

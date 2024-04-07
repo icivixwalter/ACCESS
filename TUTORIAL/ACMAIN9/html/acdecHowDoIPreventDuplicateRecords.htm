@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acdecHowDoIPreventDuplicateRecords'
+Feature='Queries: Properties'
+Handoff='1'
+SourceFile='CQRYPRO.RTF'
+Tnum='240851'
+Piece='1038'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni su come evitare la duplicazione di record</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acdechowdoipreventduplicaterecords"></A>Informazioni su come evitare la duplicazione di record</H1>
+
+<P class=LPROCT>Un record viene considerato univoco quando il valore di qualunque suo campo è diverso dal valore contenuto nello stesso campo di qualsiasi altro record. In una query non vengono visualizzati necessariamente tutti i campi che formano i record nelle tabelle o nelle query sottostanti. Se il campo che differenzia un record da un altro non è perciò nella griglia di struttura della query, può sembrare che i risultati della query comprendano record duplicati. Se ad esempio si aggiungono solo il campo Cognome e il campo Paese alla griglia di struttura della query, può sembrare che vi siano record duplicati quando si hanno più impiegati con lo stesso cognome e che vivono nello stesso paese. I record però non sono duplicati nella tabella sottostante perché il valore IDImpiegato è univoco per ogni record.</P>
+
+<P class=T>È possibile visualizzare i record univoci così come sono definiti da tutti i campi nella tabella o nella query sottostante o così come sono definiti solo dai campi della griglia di struttura della query. In ogni caso, se vi sono dei duplicati, la query visualizzerà un'unica istanza del record ma non i suoi duplicati.</P>
+
+<P class=T>Torna a <A HREF="achowPreventDuplicateRecordsOrFieldValuesInQueryS.htm">Impedire che record duplicati vengano visualizzati nei risultati della query</A></P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acdecHowDoIPreventDuplicateRecordsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

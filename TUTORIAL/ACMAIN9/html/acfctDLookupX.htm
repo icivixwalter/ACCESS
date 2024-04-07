@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDLookupX'
+Feature='acfct'
+Handoff='1'
+SourceFile='domain_1a.doc'
+Tnum='187183'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempi di funzione DLookup</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdlookupx"></A>Esempi di funzione DLookup</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si restituiscono informazioni relative ai nomi contenuti nel campo NomeSocietà del record che soddisfa <I>criteri</I>. Il dominio è la tabella Corrieri. L'argomento <I>criteri</I> limita il set di record risultante ai record in cui IDCorriere equivale a <CODE>1</CODE>.</P>
+
+<PRE class=CT><CODE>Dim varX As Variant
+varX = <B>DLookup(</B>"[NomeSocietà]", "Corrieri", "[IDCorriere] = 1"<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito, relativo alla tabella Corrieri, si utilizza la maschera IDCorriere per fornire <I>criteri</I> alla funzione <B>DLookup</B>. Si noti che il riferimento al controllo non è racchiuso tra le virgolette che denotano le stringhe. In tale modo si assicura che ogni volta che la funzione <B>DLookup</B> viene richiamata, il controllo fornisca il valore corrente.</P>
+
+<PRE class=CT><CODE>Dim varX As Variant
+varX = <B>DLookup(</B>"[NomeSocietà]", "Corrieri", "[IDCorriere] = " _
+&nbsp;&nbsp;&nbsp; &amp; Forms!Corrieri!IDCorriere<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si utilizza una variabile <CODE>intRicerca</CODE> per ottenere il valore.</P>
+
+<PRE class=CT><CODE>Dim intRicerca As Integer, varX As Variant
+intRicerca = 1
+varX = <B>DLookup(</B>"[NomeSocietà]", "Corrieri", _
+&nbsp;&nbsp;&nbsp; "[IDCorriere] = " &amp; intRicerca<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

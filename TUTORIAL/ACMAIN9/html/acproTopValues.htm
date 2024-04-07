@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproTopValues'
+Feature='acpro'
+Handoff='2'
+SourceFile='aproqry1.doc'
+Tnum='188192'
+Piece='1039'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Proprietà TopValues (Primi valori)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acprotopvalues"></A>Proprietà TopValues (Primi valori)</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproTopValuesC">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproTopValuesX">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acproTopValuesA">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare la proprietà <B>TopValues</B> per restituire un determinato numero di record o una percentuale di record che soddisfano i criteri specificati. È possibile che si desideri, ad esempio, restituire i primi dieci valori o il primo 25% di tutti i valori di un campo.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>TopValues</B> si applica solo a query di <A HREF="javascript:HelpPopup('actip9.hlp','defAppendQuery');" class="pop">accodamento</A>, di <A HREF="javascript:HelpPopup('actip9.hlp','defMakeTableQuery');" class="pop">creazione tabella</A>  e di <A HREF="javascript:HelpPopup('actip9.hlp','defSelectQuery');" class="pop">selezione</A>.</P>
+
+
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'impostazione della proprietà <B>TopValues</B> è un valore <A HREF="javascript:HelpPopup('actip9.hlp','defIntegerDataType');" class="pop"><B>Intero</B></A> che rappresenta il numero esatto dei valori da restituire o un numero seguito da un simbolo di percentuale (%) rappresentante la percentuale di record da restituire. Per ottenere, ad esempio, la restituzione dei primi dieci valori, impostare a 10 la proprietà <B>TopValues</B>. Per ottenere la restituzione del primo 10% dei valori, impostare a 10% la proprietà <B>TopValues</B>.</P>
+
+<P class=T>Non è possibile impostare tale proprietà direttamente nel codice. Essa viene impostata in <A HREF="javascript:HelpPopup('actip9.hlp','defSQLView');" class="pop">visualizzazione SQL</A> della <A HREF="javascript:HelpPopup('actip9.hlp','defQueryWindow');" class="pop">finestra della query</A> utilizzando una proposizione TOP <I>n</I> o TOP <I>n</I> PERCENT nell'<A HREF="javascript:HelpPopup('actip9.hlp','defSQLString');" class="pop">istruzione SQL</A>.</P>
+
+<P class=T>È inoltre possibile impostare la proprietà <B>TopValues</B> utilizzando la <A HREF="achowSetPropertiesQueryItsFieldsFieldListsS.htm">finestra delle proprietà della query</A> o la casella <B>Primi valori</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrTopValuesQ');" class="pop"><img src="images/topvalue.bmp" alt="Primi valori, casella di riepilogo" BORDER=0></A> della <A HREF="javascript:HelpPopup('actip9.hlp','defToolBar');" class="pop">barra degli strumenti</A> <B>Struttura query</B>.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; La proprietà <B>Primi valori</B> presente nella finestra delle proprietà della query e sulla barra degli strumenti <B>Struttura query</B> è una casella combinata contenente un elenco di valori e di percentuali. È possibile selezionare uno di questi valori oppure digitare qualsiasi impostazione valida nella sezione della casella di testo di tale <A HREF="javascript:HelpPopup('actip9.hlp','defControl');" class="pop">controllo</A>.</P>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>L'impostazione della proprietà <B>TopValues</B> viene in genere utilizzata insieme a campi ordinati. È necessario che il campo per cui si desidera visualizzare i primi valori sia posizionato all'estrema sinistra e che la relativa casella <B>Ordinamento</B> sia selezionata nella <A HREF="javascript:HelpPopup('actip9.hlp','defQBEGrid');" class="pop">griglia di struttura della query</A>. Un ordinamento crescente restituisce i record finali e un ordinamento decrescente restituisce i record iniziali. Se viene specificato che deve essere restituito un determinato numero di record, vengono restituiti anche tutti i record con valori corrispondenti al valore dell'ultimo record.</P>
+
+<P class=T>Si supponga, ad esempio, che un gruppo di impiegati abbia effettuato vendite per i totali riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=19%>Vendite</TH>
+<TH width=81%>Venditore</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>90.000</TD>
+<TD class=TT width=81%>Leverling</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>80.000</TD>
+<TD class=TT width=81%>Peacock</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>70.000</TD>
+<TD class=TT width=81%>Davolio</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>70.000</TD>
+<TD class=TT width=81%>King</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>60.000</TD>
+<TD class=TT width=81%>Suyama</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>50.000</TD>
+<TD class=TT width=81%>Buchanan</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>Se la proprietà <B>TopValues</B> viene impostata a 3 con un ordinamento decrescente nel campo Vendite, verranno restituiti i quattro record riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=19%>Vendite</TH>
+<TH width=81%>Venditore</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>90.000</TD>
+<TD class=TT width=81%>Leverling</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>80.000</TD>
+<TD class=TT width=81%>Peacock</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>70.000</TD>
+<TD class=TT width=81%>Davolio</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=19%>70.000</TD>
+<TD class=TT width=81%>King</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Per restituire i valori più alti o più bassi senza visualizzare valori duplicati, impostare a Sì la proprietà <A HREF="acproUniqueValues.htm"><B>UniqueValues</B></A> nella finestra delle proprietà della query.</P>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

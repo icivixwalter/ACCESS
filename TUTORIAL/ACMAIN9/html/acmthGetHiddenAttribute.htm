@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthGetHiddenAttribute'
+Feature='acmth'
+Handoff='2'
+SourceFile='acmthV9.doc'
+Tnum='257104'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Metodi GetHiddenAttribute, SetHiddenAttribute</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acmthgethiddenattribute"></A>Metodi GetHiddenAttribute, SetHiddenAttribute</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthGetHiddenAttribute_C">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthGetHiddenAttribute_X">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Si applica a">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthGetHiddenAttribute_A">
+</OBJECT></P>
+
+<P class=SANSR>
+
+<UL>
+	<LI class=LB1>Il metodo <B>GetHiddenAttribute</B> restituisce il valore dell'attributo nascosto di un <A HREF="javascript:HelpPopup('actip9.hlp','defMSAccessObject');" class="pop">oggetto di Microsoft Access</A> nella finestra di dialogo <B>Proprietà</B> dell'oggetto, a cui si accede selezionando l'oggetto nella finestra del database e scegliendo <B>Proprietà</B> dal menu <B>Visualizza</B>.<BR><BR></LI>
+
+	<LI class=LB1>Il metodo <B>SetHiddenAttribute</B> imposta l'attributo nascosto di un oggetto di Access.
+<P class=4>
+</LI>
+</UL>
+
+<P class=RL><B>Sintassi</B></P>
+
+<P class=SYN><I>oggetto</I><B>.GetHiddenAttribute(</B><I>tipooggetto</I>, <I>nomeoggetto</I><B>)</B></P>
+
+<P class=SYN><I>oggetto</I><B>.SetHiddenAttribute</B> <I>tipooggetto</I>, <I>nomeoggetto, impostazione</I></P>
+
+
+
+<P class=T>I metodi <B>GetHiddenAttribute</B> e <B>SetHiddenAttribute</B> utilizzano i seguenti argomenti.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=23%>Argomento</TH>
+<TH width=77%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>oggetto</I></TD>
+<TD class=TT width=77%>Opzionale. L'oggetto <A HREF="acobjApplication.htm"><B>Application</B></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>tipooggetto</I></TD>
+<TD class=TT width=77%>Una delle seguenti <A HREF="javascript:HelpPopup('actip9.hlp','defIntrinsicConstant');" class="pop">costanti intrinseche</A>:
+<P class=TT><B>acDataAccessPage<BR>
+acDiagram<BR>
+acForm<BR>
+acMacro<BR>
+acModule<BR>
+acQuery<BR>
+acReport<BR>
+acServerView<BR>
+acStoredProcedure<BR>
+acTable</B></P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%>&nbsp;</TD>
+<TD class=TT width=77%>È necessario immettere una costante per l'argomento <I>tipooggetto</I>, <B>acDefault</B> non è un'immissione valida.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>nomeoggetto</I></TD>
+<TD class=TT width=77%>Un'<A HREF="javascript:HelpPopup('actip9.hlp','defStringExpression');" class="pop">espressione stringa</A> che identifica il nome dell'oggetto di Access.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=23%><I>impostazione</I></TD>
+<TD class=TT width=77%>Un valore  <A HREF="javascript:HelpPopup('actip9.hlp','defBoolean');" class="pop"><B>Booleano</B></A> che se impostato a <B>True</B> (-1) imposta l'attributo nascosto mentre se impostato a <B>False</B> (0) lo cancella.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>I metodi <B>GetHiddenAttribute</B> e <B>SetHiddenAttribute</B> forniscono un modo per modificare l'attributo nascosto di un oggetto utilizzando il codice di Visual Basic. Questi metodi consentono di impostare o leggere l'opzione nascosta disponibile nella finestra di dialogo <B>Proprietà</B> dell'oggetto.</P>
+
+<P class=T>Considerati gli attributi nascosti che l'utente può impostare selezionando o deselezionando una casella di controllo, il metodo <B>GetHiddenAttribute</B> restituisce <B>True</B> (–1) se l'opzione è impostata a Sì (la casella di controllo è selezionata) o <B>False</B> (0) se l'opzione è impostata a No (la casella di controllo è deselezionata). Per impostare un'opzione di questo tipo con il metodo <B>SetHiddenAttribute</B>, specificare  <B>True</B> o <B>False</B> per l'argomento impostazione, come nell'esempio seguente:</P>
+
+<PRE class=CT><CODE>Application.SetHiddenAttribute acTable,"Clienti", True</CODE></PRE>
+
+
+
+
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acmthGetHiddenAttributeW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

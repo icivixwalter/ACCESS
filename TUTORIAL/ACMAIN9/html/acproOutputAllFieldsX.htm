@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acproOutputAllFieldsX'
+Feature='acpro'
+Handoff='1'
+SourceFile='aproqry1_1a.rtf'
+Tnum='187821'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà OutputAllFields</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acprooutputallfieldsx"></A>Esempio di proprietà OutputAllFields</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzato un asterisco in un'istruzione SQL per selezionare tutti i campi contenuti nella tabella Corrieri. I campi vengono quindi visualizzati in caselle di testo di una maschera impostando la proprietà <B>ControlSource</B> per le caselle di testo ai nomi dei singoli campi contenuti nella query.</P>
+
+<PRE class=CT><CODE>Dim strOttieniSQL AS String
+strOttieniSQL = "SELECT * FROM Corrieri"
+Forms!Maschera1.RecordSource = strOttieniSQL
+Testo1.ControlSource = "IDCorriere"
+Testo2.ControlSource = "NomeSocietà" </CODE></PRE>
+
+<P class=T>Nell'output relativo alla successiva istruzione SQL, i valori contenuti nei campi NomeSocietà e NomeProdotto vengono ordinati in modo crescente e tutti i campi nelle tabelle Fornitori e Prodotti vengono visualizzati negli elenchi di campi e in visualizzazione Foglio dati. Immettere questa istruzione SQL in visualizzazione SQL della finestra di query.</P>
+
+<PRE class=CT><CODE>SELECT * FROM Fornitori INNER JOIN Prodotti
+ON Fornitori.[IDFornitore] = Prodotti.[IDFornitore]
+ORDER BY Fornitori.[NomeSocietà], Prodotti.[NomeProdotto]; </CODE></PRE>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

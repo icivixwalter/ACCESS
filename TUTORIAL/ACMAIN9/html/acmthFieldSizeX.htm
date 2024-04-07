@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acmthFieldSizeX'
+Feature='acpro'
+Handoff='1'
+SourceFile='acdprox1_1a.rtf'
+Tnum='234422'
+Piece='1039'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di proprietà Dimensione campo (MDB)</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acmthfieldsizex"></A>Esempio di proprietà Dimensione campo (MDB)</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito viene utilizzata la proprietà <B>Dimensione campo</B> per restituire la dimensione in byte di due campi contenuti in una tabella Dipendenti. Il campo Note contiene dati di tipo Memo e il campo Foto contiene dati di tipo Binario lungo (Oggetto OLE).</P>
+
+<PRE class=CT><CODE>Sub RestituisceDimensioneCampo()
+&nbsp;&nbsp;&nbsp; Dim dbs As Database, rst As Recordset
+&nbsp;&nbsp;&nbsp; Dim fldNote As Field, fldFoto As Field
+&nbsp;&nbsp;&nbsp; Dim strSQL As String
+
+&nbsp;&nbsp;&nbsp; ' Restituisce il riferimento al database corrente.
+&nbsp;&nbsp;&nbsp; Set dbs = CurrentDb
+&nbsp;&nbsp;&nbsp; ' Costruisce istruzione SQL per restituire i campi Note e Foto.
+&nbsp;&nbsp;&nbsp; strSQL = "SELECT Note, Foto FROM Dipendenti;"
+&nbsp;&nbsp;&nbsp; ' Crea un oggetto Recordset di tipo dynaset.
+&nbsp;&nbsp;&nbsp; Set rst = dbs.OpenRecordset(strSQL)
+&nbsp;&nbsp;&nbsp; Set fldNote = rst!Note
+&nbsp;&nbsp;&nbsp; Set fldFoto = rst!Foto
+&nbsp;&nbsp;&nbsp; ' Si sposta al primo record.
+&nbsp;&nbsp;&nbsp; rst.MoveFirst
+&nbsp;&nbsp;&nbsp; Debug.Print "Dimensione di Note:"; "&nbsp;&nbsp;&nbsp; "; "Dimensione di Foto:"
+&nbsp;&nbsp;&nbsp; ' Stampa le dimensioni dei campi per ciascun record di oggetto Recordset.
+&nbsp;&nbsp;&nbsp; Do Until rst.EOF
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Debug.Print fldNote.<B>FieldSize</B>; "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "; fldFoto.<B>FieldSize</B>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rst.MoveNext
+&nbsp;&nbsp;&nbsp; Loop
+&nbsp;&nbsp;&nbsp; rst.Close
+&nbsp;&nbsp;&nbsp; Set dbs = Nothing
+End Sub</CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

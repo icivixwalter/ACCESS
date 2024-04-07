@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acevtErrorEPX'
+Feature='acevt'
+Handoff='1'
+SourceFile='evtv2_1a.rtf'
+Tnum='187212'
+Piece='1043'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Evento Errore - Esempio di routine evento</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acevterrorepx"></A>Evento Errore - Esempio di routine evento</B></P>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si illustra come sostituire un messaggio di errore predefinito con un messaggio di errore personalizzato. Quando Microsoft Access restituisce un messaggio di errore che indica che è stata trovata una chiave duplicata (codice di errore 3022), la routine evento visualizza un messaggio che offre informazioni più specifiche sull'applicazione.</P>
+
+<P class=T>Per provare l'esempio, aggiungere la routine evento riportata di seguito a una maschera basata su una tabella con un numero ID impiegato univoco come chiave per ciascun record.</P>
+
+<PRE class=CT><CODE>Private Sub Form_<B>Error</B>(DataErr As Integer, Response As Integer)
+&nbsp;&nbsp;&nbsp; Const conChiaveDuplicata = 3022
+&nbsp;&nbsp;&nbsp; Dim strMsg As String
+
+&nbsp;&nbsp;&nbsp; If DataErr = conChiaveDuplicata Then
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Response = acDataErrContinue
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strMsg = "È necessario che ciascun record per impiegato abbia " _
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp; "un numero ID impiegato univoco. Verificare di nuovo i dati."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox strMsg
+&nbsp;&nbsp;&nbsp; End If
+End Sub</CODE></PRE>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

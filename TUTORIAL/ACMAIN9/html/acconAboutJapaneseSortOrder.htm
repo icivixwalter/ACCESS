@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconAboutJapaneseSortOrder'
+Feature='International'
+Handoff='3'
+SourceFile='acfareast.doc'
+Tnum='267401'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sui criteri di ordinamento per il giapponese</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconaboutjapanesesortorder"></A>About Japanese sort order</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>Japanese characters are sorted in the following order:
+
+<UL>
+	<LI class=LB1>Hiragana and Katakana are sorted in the order of the kana syllabary.<BR><BR></LI>
+
+	<LI class=LB1>English letters will be sorted alphabetically. No distinction is made between uppercase and lowercase letters.<BR><BR></LI>
+
+	<LI class=LB1>Numbers are sorted in descending order.<BR><BR></LI>
+
+	<LI class=LB1>No distinction is made between half-pitch and full-pitch English characters and symbols.<BR><BR></LI>
+
+	<LI class=LB1>Other kanji, symbols, and so on, are sorted in the order of their Shift-JIS codes.</LI>
+</UL>
+
+<P class=T>The order of the kana syllabary is as follows:
+
+<UL>
+	<LI class=LB1>Long vowel sounds (<IMG SRC="images/fe192.bmp"  BORDER=0>) are treated as the vowel of the previous syllable. For example, "<IMG SRC="images/fe191.bmp"  BORDER=0><IMG SRC="images/fe192.bmp"  BORDER=0><IMG SRC="images/fe193.bmp"  BORDER=0><IMG SRC="images/fe153.bmp"  BORDER=0><IMG SRC="images/fe192.bmp"  BORDER=0><IMG SRC="images/fe254.bmp"  BORDER=0>" is treated as "<IMG SRC="images/fe191.bmp"  BORDER=0><IMG SRC="images/fe209.bmp"  BORDER=0><IMG SRC="images/fe193.bmp"  BORDER=0><IMG SRC="images/fe153.bmp"  BORDER=0><IMG SRC="images/fe209.bmp"  BORDER=0><IMG SRC="images/fe254.bmp"  BORDER=0>".<BR><BR></LI>
+
+	<LI class=LB1>Repetition marks ("<IMG SRC="images/fe073.bmp"  BORDER=0>") are treated as the same character as the character preceding the mark. For example, "<IMG SRC="images/fe265.bmp"  BORDER=0><IMG SRC="images/fe073.bmp"  BORDER=0><IMG SRC="images/fe104.bmp"  BORDER=0>" is treated as "<IMG SRC="images/fe265.bmp"  BORDER=0><IMG SRC="images/fe265.bmp"  BORDER=0><IMG SRC="images/fe104.bmp"  BORDER=0>".<BR><BR></LI>
+
+	<LI class=LB1>Voiced and unvoiced sounds are sorted in the following order: unvoiced sound, voiced-sound, semi-voiced sound.<BR><BR></LI>
+
+	<LI class=LB1>No distinction is made between hiragana, full-pitch katakana, and half-pitch katakana.</LI>
+</UL>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

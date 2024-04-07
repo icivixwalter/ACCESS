@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acfctDateDiffX'
+Feature='acfct'
+Handoff='1'
+SourceFile='acobdatx_1a.rtf'
+Tnum='234391'
+Piece='1042'
+Recycle='Y'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Esempio di funzione DateDiff</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acfctdatediffx"></A>Esempio di funzione DateDiff</B></P>
+
+
+
+<P class=T>Negli esempi riportati di seguito si utilizza la funzione <B>DateDiff</B> per calcolare rispettivamente il numero delle settimane comprese tra il primo giorno dell'anno e la data odierna e il numero dei giorni a partire dal 1° febbraio 1995.</P>
+
+<PRE class=CT><CODE>Debug.Print <B>DateDiff(</B>"ss", "1-1", Now()<B>)</B>
+Debug.Print <B>DateDiff(</B>"a", #1-feb-1995#, Now()<B>)</B></CODE></PRE>
+
+
+
+<P class=T>Nell'esempio riportato di seguito si indica come utilizzare la funzione <B>DateDiff</B> in un'espressione nella query. Se si dispone di un tabella Ordini contenente un campo DataOrdine e un campo DataSpedizione, è possibile creare un campo calcolato in una query per visualizzare il tempo trascorso tra la data di un ordine e quella di spedizione di ciascun ordine. Nella finestra Query, creare una nuova query aggiungendo la tabella Ordini e trascinando il campo IDOrdine nella griglia di struttura della query. Per creare un campo calcolato, immettere in una cella <B>Campo</B> vuota quanto riportato di seguito: </P>
+
+<PRE class=CT><CODE>GiorniTrascorsi: <B>DateDiff(</B>"a", [DataOrdine], [DataSpedizione]<B>)</B></CODE></PRE>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

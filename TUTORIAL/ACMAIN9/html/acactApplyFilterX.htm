@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactApplyFilterX'
+Feature='acact'
+Handoff='1'
+SourceFile='macroex8_2.doc'
+Tnum='186858'
+Piece='1042'
+Recycle='N'
+>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Applicare un filtro mediante una macro - Esempio</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<P class=RLNSR><B><A NAME="acactapplyfilterx"></A>Applicare un filtro mediante una macro - Esempio</B></P>
+
+
+
+<P class=T>La macro riportata di seguito contiene un set di azioni, ciascuna delle quali filtra i record per una maschera Elenco telefonico clienti. La macro illustra l'utilizzo delle azioni ApplicaFiltro, MostraOgniRecord e VaiAControllo, nonché quello delle condizioni per individuare quale interruttore è stato selezionato per la maschera da un gruppo di opzioni. A ciascuna riga di comando è associato un interruttore che seleziona tutti i record oppure il set di record a partire da A, B, C e così via.</P>
+
+<P class=T>Per visualizzare gli argomenti relativi a ciascuna azione, fare clic sul nome dell'azione.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=3>
+
+<TR VALIGN="top">
+<TH width=38%>Condizione</TH>
+<TH width=24%>Azione</TH>
+<TH width=38%>Commento</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>&nbsp;</TD>
+<TD class=TT width=24%>&nbsp;</TD>
+<TD class=TT width=38%>Associata all'evento DopoAggiornamento del gruppo di opzioni FiltroNomeSocietà.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>[Filtri Nome della società] =1</TD>
+<TD class=TT width=24%><A HREF="acactaf1X.htm">ApplicaFiltro</A></TD>
+<TD class=TT width=38%>Filtra i nomi delle società che iniziano per A, À, Á, Â, Ã o Ä.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>[Filtri Nome della società] =2</TD>
+<TD class=TT width=24%><A HREF="acactaf2X.htm">ApplicaFiltro</A></TD>
+<TD class=TT width=38%>Filtra i nomi delle società che iniziano per B.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>[Filtri Nome della società] =3</TD>
+<TD class=TT width=24%><A HREF="acactaf3X.htm">ApplicaFiltro</A></TD>
+<TD class=TT width=38%>Filtra i nomi delle società che iniziano per C o Ç.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=6 colspan=3 width=100%>
+<P class=TT>... Le righe di comando da D a Y hanno lo stesso formato di quelle da A a C ...</P>
+
+
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>[Filtri Nome della società] =26</TD>
+<TD class=TT width=24%><A HREF="acactaf4X.htm">ApplicaFiltro</A></TD>
+<TD class=TT width=38%>Filtra i nomi delle società che iniziano per Z, Æ, Ø o Å.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>[Filtri Nome della società] =27</TD>
+<TD class=TT width=24%><A HREF="acactaf5X.htm">MostraOgniRecord</A></TD>
+<TD class=TT width=38%>Mostra ogni record.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=38%>[RecordsetClone].[RecordCount]&gt;0</TD>
+<TD class=TT width=24%><A HREF="acactaf6X.htm">VaiAControllo</A></TD>
+<TD class=TT width=38%>Se vengono restituiti dei record per la lettera selezionata, rendere attivo il controllo NomeSocietà.</TD>
+</TR>
+</TABLE><BR>
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup (sFile, sID)
+Call InitConstants() 
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox L_SECURITY_MSG,48,L_TITLE
+End Sub
+</SCRIPT>
+
+</BODY>
+</HTML>

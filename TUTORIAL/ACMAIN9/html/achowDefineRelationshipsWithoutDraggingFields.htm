@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='achowDefineRelationshipsWithoutDraggingFields'
+Feature='Tables: Relationships'
+Handoff='3'
+SourceFile='ctblnew_3.rtf'
+Tnum='257736'
+Piece='1038'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Definire le relazioni tramite la tastiera</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="achowdefinerelationshipswithoutdraggingfields"></A>Definire le relazioni tramite la tastiera</H1>
+
+<OL>
+	<LI class=LPROC>Chiudere le eventuali tabelle aperte. Non è possibile creare o modificare le relazioni tra tabelle aperte.<BR><BR></LI>
+
+	<LI class=LPROC>Passare alla <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> se non è già visualizzata. Per passare alla finestra del database da una qualsiasi altra finestra, premere F11.<BR><BR></LI>
+
+	<LI class=LPROC>Premere ALT+T per selezionare il menu <B>Strumenti</B>, quindi premere R per aprire la finestra Relazioni.<BR><BR></LI>
+
+	<LI class=LPROC>Se il database non ha alcuna relazione definita, verrà visualizzata automaticamente la finestra di dialogo <B>Mostra tabella</B>. Se è necessario aggiungere le tabelle che si desiderano correlare e la finestra di dialogo <B>Mostra tabella</B> non viene visualizzata, premere ALT+R per selezionare il menu <B>Relazioni</B>, quindi premere M per aprire la finestra di dialogo <B>Mostra tabella</B>. Se le tabelle da correlare sono già visualizzate nella finestra Relazioni, andare al passo 7.<BR><BR></LI>
+
+	<LI class=LPROC>Nella finestra di dialogo <B>Mostra tabella</B> selezionare la prima tabella da correlare e premere INVIO per aggiungerla alla finestra Relazioni.<BR><BR></LI>
+
+	<LI class=LPROC>Ripetere il passo 5 per tutte le altre tabelle da correlare, quindi premere ALT+C per chiudere la finestra di dialogo <B>Mostra tabella</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Premere ALT+R per selezionare il menu <B>Relazioni</B>, quindi premere R per aprire la finestra di dialogo <B>Modifica relazioni</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Premere ALT+N per aprire la finestra di dialogo <B>Crea nuovo oggetto</B>.<BR><BR></LI>
+
+	<LI class=LPROC>Nella casella <B>Nome tabella sinistra</B> selezionare il nome della tabella contenente la <A HREF="javascript:HelpPopup('actip9.hlp','defPrimaryKey');" class="pop">chiave primaria</A>.</LI>
+
+	<LI class=LPROC2>Nella casella <B>Nome tabella destra</B> selezionare il nome della tabella contenente la <A HREF="javascript:HelpPopup('actip9.hlp','defForeignKey');" class="pop">chiave esterna</A>.<BR><BR></LI>
+
+	<LI class=LPROC2>Nella casella <B>Nome colonna sinistra</B> selezionare il campo chiave primaria e, nella casella <B>Nome colonna destra</B>, selezionare il campo chiave esterna.
+<P class=LT1>I campi correlati non possono avere nomi uguali ma devono avere lo stesso <A HREF="javascript:HelpPopup('actip9.hlp','defDataType');" class="pop">tipo di dati</A> e contenere lo stesso tipo di informazioni. Inoltre, se i campi corrispondenti sono campi Numerico, essi dovranno avere la stessa impostazione per la proprietà <B>Dimensioni campo</B>. Esistono due eccezioni per i tipi di dati corrispondenti: è possibile far corrispondere un campo Contatore con un campo Numerico con la proprietà <B>Dimensioni campo</B> impostata a <B>Intero lungo</B>. È possibile anche far corrispondere un campo Contatore con un campo Numerico se la proprietà <B>Dimensioni campo</B> di entrambi i campi è impostata a <B>ID replica</B>.
+</LI>
+
+	<LI class=LPROC2>Premere INVIO.<BR><BR></LI>
+
+	<LI class=LPROC2>Nella finestra di dialogo <B>Modifica relazioni</B> utilizzare i tasti freccia per assicurarsi che le due colonne contengano i nomi desiderati per i campi. Se necessario è possibile cambiarli oppure specificare ulteriori campi se si usa una chiave primaria a campi multipli.
+<P class=LT1>Se necessario, impostare le opzioni per le relazioni. Per informazioni su un elemento specifico della finestra di dialogo <B>Relazioni</B>, selezionare l'elemento e premere F1.
+</LI>
+
+	<LI class=LPROC2>Premere ALT+R per creare la relazione.<BR><BR></LI>
+
+	<LI class=LPROC2>Ripetere i passi da 5 a 14 per ogni coppia di tabelle da correlare.</LI>
+</OL>
+
+<P class=NT><B>Note</B>&nbsp;&nbsp;
+
+<UL>
+	<LI class=NLB>Per visualizzare tutte le relazioni definite in un database, premere ALT+R per selezionare il menu <B>Relazioni</B> e premere L. Per visualizzare solo le relazioni definite per una particolare tabella, selezionare la tabella, premere ALT+R per selezionare il menu <B>Relazioni</B>, quindi premere D.<BR><BR></LI>
+
+	<LI class=NLB>Per modificare la struttura di una tabella, selezionare la tabella, premere MAIUSC+F10 per selezionare il menu di scelta rapida, quindi selezionare <B>Struttura tabella</B>.<BR><BR></LI>
+
+	<LI class=NLB>Le relazioni possono essere create sia per le query che per le tabelle. Per le query tuttavia non viene applicata l'<A HREF="javascript:HelpPopup('actip9.hlp','defReferentialIntegrity');" class="pop">integrità referenziale</A>.<BR><BR></LI>
+
+	<LI class=NLB>Per creare una relazione nell'ambito della stessa tabella, aggiungere due volte quella tabella. Ciò risulta particolarmente utile in situazioni in cui è necessario eseguire una ricerca all'interno della stessa tabella. Nella tabella Impiegati del database di esempio Northwind è stata ad esempio definita una relazione tra i campi ID impiegato e Superiore in modo che il campo Superiore possa visualizzare i dati relativi agli impiegati provenienti da un campo ID impiegati corrispondente.</LI>
+</UL>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="achowDefineRelationshipsWithoutDraggingFieldsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

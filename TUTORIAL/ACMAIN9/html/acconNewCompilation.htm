@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconNewCompilation'
+Feature='accon'
+Handoff='2'
+SourceFile='acvbanew1.doc'
+Tnum='187335'
+Piece='1043'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Miglioramenti nelle prestazioni della compilazione</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1 class=RH1><A NAME="acconnewcompilation"></A>Miglioramenti nelle prestazioni della compilazione</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acconNewCompilationC">
+</OBJECT></P>
+
+
+
+<P class=T>Microsoft Access è caratterizzato da miglioramenti nel caricamento del modulo e nelle prestazioni della compilazione per rendere più veloce la compilazione e l'esecuzione del codice.</P>
+
+<P class=RL><B>Moduli di maschera e di report creati su richiesta</B></P>
+
+<P class=T>Quando si crea una maschera o un report in Microsoft Access 2000, essi non vengono associati automaticamente a un modulo. Il modulo viene creato quando si fa clic sul pulsante <B>Codice</B> <A HREF="javascript:HelpPopup('actip9.hlp','actbrCodeQ');" class="pop"><IMG SRC="images/code.bmp" BORDER=0></A> sulla barra degli strumenti per visualizzare il modulo della maschera o del report. Il modulo può essere creato anche da Visual Basic facendo riferimento alla proprietà <A HREF="acproModule.htm"><B>Module</B></A> della maschera quando la maschera o il report è in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignView');" class="pop">visualizzazione Struttura</A> oppure impostando a <B>Vero</B> (-1) la proprietà <A HREF="acproHasModule.htm"><B>Possiede modulo</B></A>.</P>
+
+<P class=T>L'impostazione della proprietà <B>Possiede modulo</B> indica se la maschera o il report correntemente abbia o meno un modulo associato.</P>
+
+<P class=T>Poiché il modulo di una maschera o di un report non viene creato fino al momento in cui è necessario aggiungervi del codice, è possibile che il progetto abbia pochi moduli da compilare e di conseguenza le prestazioni della compilazione sono migliori. Le maschere e i report privi di moduli, inoltre, si vengono caricati molto più rapidamente rispetto a quelli che ne sono provvisti.</P>
+
+<P class=RL><B>Compilazione su richiesta</B></P>
+
+<P class=T>L'utilizzo dei comandi sopra descritti per compilare esplicitamente i moduli del progetto è consigliabile, ma non necessario. Un modulo che non è già stato compilato infatti viene compilato da Microsoft Access prima dell'esecuzione di una routine.</P>
+
+<P class=T>Quando un modulo viene caricato per l'esecuzione, Microsoft Access verifica se il modulo è già stato compilato. In caso contrario, il modulo viene compilato immediatamente prima dell'esecuzione di una routine al suo interno. La procedura di compilazione rallenta il codice. Il codice che è stato salvato nello stato compilato invece viene eseguito più velocemente.</P>
+
+<P class=T>È importante sottolineare che in Microsoft Access 95, quando si esegue una routine in un modulo, vengono caricati tutti i moduli dell'<A HREF="javascript:HelpPopup('actip9.hlp','defCallTree');" class="pop">albero di chiamata</A> potenziale, sebbene in base all'impostazione predefinita essi non vengano compilati fino al momento in cui una routine non effettua la chiamata. Poiché Microsoft Access 97 e Access 2000 caricano i moduli solo su richiesta, in molti casi il codice può essere eseguito in maniera più veloce.</P>
+
+<P class=T>È possibile migliorare ulteriormente la prestazione raggruppando le routine in moduli per ridurre le compilazioni inutili. Raggruppare le routine in moduli con altre routine che le richiamano, anziché raggrupparle in moduli con routine non correlate.</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

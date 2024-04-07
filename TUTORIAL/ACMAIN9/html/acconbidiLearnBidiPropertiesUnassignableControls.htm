@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='1' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acconbidiLearnBidiPropertiesUnassignableControls'
+Feature='International'
+Handoff='3'
+SourceFile='bidi.doc'
+Tnum='257952'
+Piece='1041'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Informazioni sulle proprietà bidirezionali dell'interfaccia utente</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+
+<H1><A NAME="acconbidilearnbidipropertiesunassignablecontrols"></A>About bidirectional properties of the user interface</H1>
+
+<P class=T><A HREF="ppconLearnAboutLanguagespecificInformation.htm">Informazioni specifiche sulla lingua</A></P>
+
+<P class=T>The options that appear in dialog boxes and other elements of the Microsoft Access 2000 user interface do not have properties that can be set. Although you cannot change their property settings, they do have <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiBidirectional');" class="pop">bidirectional</A> characteristics. Access 2000 assigns the following values:</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=49%>Property</TH>
+<TH width=51%>Value</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>KeyboardLanguage</B></TD>
+<TD class=TT width=51%><A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiSystem');" class="pop">System</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>TextAlign</B></TD>
+<TD class=TT width=51%><A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiGeneral');" class="pop">General</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>ReadingOrder</B> </TD>
+<TD class=TT width=51%><A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiContext');" class="pop">Context</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>ScrollBarAlign</B></TD>
+<TD class=TT width=51%>System</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=49%><B>NumeralShapes</B></TD>
+<TD class=TT width=51%>System</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=T>If the option contains no text, <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiReadingOrder');" class="pop">reading order</A> is determined by the <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiKeyboardLanguage');" class="pop">keyboard language</A> when the control is entered: <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiRightToLeft');" class="pop">Right-to-left</A> if the keyboard language is a right-to-left language, and <A HREF="javascript:HelpPopup('oftip9.hlp','acdefbidiLeftToRight');" class="pop">left-to-right</A> if otherwise. Initial alignment and insertion point position are determined by the General alignment setting.</P>
+
+<P class=TPT><B>Note</B>&nbsp;&nbsp; CTRL+LEFT SHIFT and CTRL+RIGHT SHIFT keyboard sequences used to change keyboard language, reading order, and alignment in other bidirectional applications will temporarily change reading order and alignment.</P>
+<P>
+<OBJECT ID="hhobj_AR" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM NAME="Command" VALUE="ALink">
+<PARAM NAME="Font" VALUE="Verdana,8,1">
+<PARAM NAME="Text" VALUE="Text:Risorse aggiuntive">
+<PARAM NAME="Flags" VALUE=",,1">
+<PARAM NAME="Item1" VALUE="">
+<PARAM NAME="Item2" VALUE="acconbidiLearnBidiPropertiesUnassignableControlsW">
+</OBJECT>
+</P>
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>

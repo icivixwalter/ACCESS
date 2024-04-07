@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<META Version='2' >
+<META App='Access'
+Project='acmain9.chm'
+FileName='acactTransferDatabase'
+Feature='acact'
+Handoff='1'
+SourceFile='act_q-z_1a.rtf'
+Tnum='188197'
+Piece='1042'
+Recycle='N'
+>
+
+<OBJECT ID="oua" WIDTH="0" HEIGHT="0"
+   CLASSID="CLSID:8936033C-4A50-11D1-98A4-00A0C90F27C6">
+</OBJECT>
+
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Azione TrasferisciDatabase</TITLE>
+<style>@import url(/Office.css);</style>
+<link disabled rel="stylesheet" type="text/css" href="/MSOffice.css"></HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<TABLE ALIGN=right WIDTH=0 BORDER=0><TR><TD>
+<OBJECT ID="hhobj_3" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acdecAboutDriversDataSources">
+</OBJECT>
+<OBJECT ID="hhobj_4" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acmthactTransferDatabase">
+</OBJECT>
+<OBJECT ID="hhobj_5" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acobjDoCmd">
+</OBJECT>
+</TD></TR></TABLE>
+
+
+
+<H1 class=RH1><A NAME="acacttransferdatabase"></A>Azione TrasferisciDatabase</H1>
+
+<P class=ALNSR>
+<OBJECT ID="hhobj_1" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Vedere anche">
+	<PARAM NAME="Flags" VALUE="1,,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactTransferDatabaseC;daproConnect">
+</OBJECT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<OBJECT ID="hhobj_2" TYPE="application/x-oleobject" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+	<PARAM NAME="Command" VALUE="ALink">
+	<PARAM NAME="Font" VALUE="Verdana,8,1">
+	<PARAM NAME="Text" VALUE="Text:Esempio">
+	<PARAM NAME="Flags" VALUE=",,1">
+	<PARAM NAME="Item1" VALUE="">
+	<PARAM NAME="Item2" VALUE="acactTransferDatabaseX">
+</OBJECT></P>
+
+
+
+<P class=T>È possibile utilizzare l'azione TrasferisciDatabase per importare o esportare dati tra il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessDatabase');" class="pop">database di Microsoft Access</A> (MDB) o il <A HREF="javascript:HelpPopup('actip9.hlp','IDH_acdefAccessProject');" class="pop">progetto di Microsoft Access</A> (ADP) corrente e un altro database. Per i database di Microsoft Access (MDB) è anche possibile <A HREF="javascript:HelpPopup('actip9.hlp','defAttachedTable');" class="pop">collegare una tabella</A> di un altro database al database corrente. È possibile accedere ai dati di una tabella collegata mentre questa rimane nell'altro database.</P>
+
+<P class=RL><B>Impostazione</B></P>
+
+<P class=T>L'azione TrasferisciDatabase utilizza gli argomenti riportati di seguito.</P>
+
+<TABLE cellpadding=4 cellspacing=4 cols=2>
+
+<TR VALIGN="top">
+<TH width=25%>Argomento azione</TH>
+<TH width=75%>Descrizione</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Tipo trasferimento</TD>
+<TD class=TT width=75%>Il tipo di trasferimento che si desidera effettuare. Selezionare <B>Importa</B>, <B>Esporta</B> o <B>Collega</B> nella casella <B>Tipo trasferimento</B> della sezione <B>Argomenti azione</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defScriptWindow');" class="pop">finestra della macro</A>. L'impostazione predefinita è <B>Importa</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%><B>Nota</B>&nbsp;&nbsp; Il tipo di trasferimento <B>Collega</B> non è supportato nei <U>progetti di Microsoft Access</U> (ADP).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Tipo database</TD>
+<TD class=TT width=75%>Il tipo di database da cui importare, in cui esportare o a cui collegarsi. È possibile selezionare <B>Microsoft Access</B> o uno degli altri tipi di database riportati nella casella <B>Tipo database</B>. L'impostazione predefinita è Microsoft Access.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>I tipi di database visualizzati nella casella Tipo database dipendono dal modo in cui è stata eseguita l'installazione di Microsoft Access. L'installazione predefinita infatti non include tutti i tipi di database. Se il tipo di database che si desidera utilizzare per l'importazione, l'esportazione o il collegamento non è disponibile, eseguire il programma di installazione di Microsoft Access, scegliere il pulsante <B>Aggiungi/Rimuovi</B>, selezionare l'opzione <B>Accesso ai dati e Controlli ActiveX</B> nella finestra di dialogo, infine scegliere il pulsante <B>Modifica opzione</B>. Selezionare la casella di controllo <B>Driver di database</B> e scegliere il pulsante <B>Modifica opzione</B>. Quindi selezionare il tipo di database che si desidera installare e scegliere <B>OK</B>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Nome database</TD>
+<TD class=TT width=75%>Il nome del database da cui importare, in cui esportare o a cui collegarsi. Includere il percorso completo. Questo argomento è richiesto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Per i tipi di database che utilizzano file differenti per ciascuna tabella, ad esempio FoxPro, Paradox e dBASE, immettere la directory contenente il file. Immettere il nome del file nell'argomento Origine (importazione o collegamento) oppure nell'argomento Destinazione (esportazione).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Per i <A HREF="javascript:HelpPopup('actip9.hlp','defODBCDatabase');" class="pop">database ODBC</A>, digitare la <A HREF="javascript:HelpPopup('actip9.hlp','defConnectionString');" class="pop">stringa di connessione</A> <A HREF="javascript:HelpPopup('actip9.hlp','defODBC');" class="pop">ODBC (Open Database Connectivity</A>) completa. Per visualizzare un esempio di stringa di connessione, collegare una <A HREF="javascript:HelpPopup('actip9.hlp','defExternalTable');" class="pop">tabella esterna</A> a Microsoft Access scegliendo <B>Carica dati esterni</B> dal menu <B>File</B> e quindi <B>Collega tabelle</B>. Aprire la tabella in <A HREF="javascript:HelpPopup('actip9.hlp','defDesignViewTable');" class="pop">visualizzazione Struttura</A> e visualizzare le <A HREF="javascript:HelpPopup('actip9.hlp','defTableProperties');" class="pop">proprietà della tabella</A>. Il testo riportato nell'impostazione della proprietà <A HREF="acproDescription.htm"><B>Descrizione</B></A> è la stringa di connessione per questa tabella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Per ulteriori informazioni sulle stringhe di connessione ODBC, consultare il file della Guida o altra documentazione relativa al <A HREF="JavaScript:hhobj_3.Click()">driver ODBC</A> di questo tipo di database ODBC.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Tipo oggetto</TD>
+<TD class=TT width=75%>Il tipo di oggetto da importare o esportare. Se si seleziona <B>Microsoft Access</B> per l'argomento Tipo database, è possibile selezionare <B>Tabella</B>, <B>Query</B>, <B>Maschera</B>, <B>Report</B>, <B>Macro</B>, <B>Modulo</B>, <B>Pagina di accesso ai dati</B>, <B>Visualizzazione server</B>, <B>Diagramma</B> o <B>Stored procedure</B> nella casella <B>Tipo oggetto</B>. Se invece si seleziona un altro tipo di database oppure si seleziona <B>Collega</B> nella casella <B>Tipo trasferimento</B>, questo argomento viene ignorato. L'impostazione predefinita è Tabella.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si sta esportando una query di selezione in un database di Microsoft Access, selezionare <B>Tabella</B> in questo argomento per esportare il <A HREF="javascript:HelpPopup('actip9.hlp','defDynaset');" class="pop">set di risultati</A> di questa query, quindi selezionare <B>Query</B> per esportare la query stessa. Se si sta esportando una query di selezione in un altro tipo di database, questo argomento viene ignorato e il set di risultati della query viene esportato.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Origine</TD>
+<TD class=TT width=75%>Il nome della tabella, della query di selezione o dell'oggetto di Microsoft Access che si desidera importare, esportare o collegare. Per alcuni tipi di database, ad esempio FoxPro, Paradox o dBASE, tale nome è il nome di un file ed è necessario includere l'estensione, ad esempio dbf. Questo argomento è richiesto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Destinazione</TD>
+<TD class=TT width=75%>Il nome della tabella, della query di selezione o dell'oggetto di Microsoft Access importato, esportato o collegato nel database di destinazione. Per alcuni tipi di database, ad esempio FoxPro, Paradox o dBASE, tale nome è il nome di un file ed è necessario includere l'estensione, ad esempio dbf. Questo argomento è richiesto.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si seleziona <B>Importa</B> nell'argomento Tipo trasferimento e <B>Tabella</B> nell'argomento Tipo oggetto, viene creata una nuova tabella contenente i dati della tabella importata.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si importa una tabella o un altro oggetto il cui nome è in conflitto con un nome esistente, al nome della tabella o dell'oggetto importato viene aggiunto un numero. Se ad esempio si importa Impiegati e tale nome esiste già, la tabella o l'altro oggetto importato viene rinominato Impiegati1.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>&nbsp;</TD>
+<TD class=TT width=75%>Se si esportano dati in un database di Microsoft Access o in un altro database, le tabelle o gli altri oggetti esistenti con lo stesso nome vengono automaticamente sostituiti.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD class=TT width=25%>Solo struttura</TD>
+<TD class=TT width=75%>Specifica se importare o esportare solo la struttura di una tabella di database senza i relativi dati. Selezionare <B>Sì</B> oppure <B>No</B>. L'impostazione predefinita è No.</TD>
+</TR>
+</TABLE><BR>
+
+
+
+<P class=RL><B>Osservazioni</B></P>
+
+<P class=T>È possibile importare ed esportare tabelle tra Microsoft Access e altri tipi di database. È inoltre possibile esportare query di selezione di Microsoft Access in altri tipi di database. Il set di risultati della query viene esportato nella maschera di una tabella. È possibile importare ed esportare qualsiasi <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseObjects');" class="pop">oggetto di database</A> di Microsoft Access se entrambi i database sono database di Microsoft Access.</P>
+
+<P class=T>Se in Microsoft Access 2000 viene importata una tabella da un altro database di Microsoft Access (MDB) che costituisce una tabella collegata di quel database, essa rimarrà collegata dopo l'importazione. In altri termini, viene importato il collegamento e non la tabella stessa.</P>
+
+<P class=T>Se il database a cui si accede richiede una password, quando si esegue la macro viene visualizzata una finestra di dialogo in cui è possibile digitarla.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Tra i database di Microsoft Access e quelli di FoxPro versione 3.0 è solo possibile importare ed esportare dati. Se si dispone di un driver ODBC FoxPro, è possibile collegarsi alle tabelle dei database di questa versione di FoxPro.</P>
+
+
+
+<P class=T>L'azione TrasferisciDatabase equivale a scegliere <B>Carica dati esterni</B> o <B>Esporta</B> dal menu <B>File</B> della <A HREF="javascript:HelpPopup('actip9.hlp','defDatabaseWindow');" class="pop">finestra del database</A> e quindi <B>Importa</B> o <B>Collega tabelle</B>. È possibile utilizzare questi comandi per selezionare un'origine dati, ad esempio Microsoft Access o un tipo di database, di foglio di calcolo o di file di testo. Se si seleziona un database, vengono visualizzate una o più finestre di dialogo in cui è possibile selezionare il tipo di oggetto da importare o da esportare (per i database Microsoft Access), il nome dell'oggetto e altre opzioni che variano a seconda del database da cui si sta importando, in cui si sta esportando o a cui ci si sta collegando. Gli argomenti per l'azione TrasferisciDatabase riflettono le opzioni presenti in queste finestre di dialogo.</P>
+
+<P class=T>Se si desidera fornire informazioni sugli indici di una tabella FoxPro o dBASE collegata, collegare innanzitutto la tabella scegliendo <B>Collega tabelle</B> dal comando <B>Carica dati esterni</B> del menu <B>File</B>, quindi specificare gli indici nelle finestre di dialogo relative a questo comando. Le informazioni sugli indici vengono memorizzate in un file di informazioni speciale (INF) posizionato nella cartella Office (il percorso è C:\Programmi\Microsoft Office\Office). È quindi possibile eliminare il collegamento alla tabella collegata. La volta successiva che si utilizza l'azione TrasferisciDatabase per collegare questa tabella FoxPro o dBASE, verranno utilizzate le informazioni sugli indici specificate.</P>
+
+<P class=NT><B>Nota</B>&nbsp;&nbsp; Se si esegue una query o si applica un filtro a una tabella collegata, la query o il filtro distinguono tra maiuscole e minuscole.</P>
+
+
+
+<P class=T>Per eseguire l'azione TrasferisciDatabase in Visual Basic, utilizzare il metodo <A HREF="JavaScript:hhobj_4.Click()"><B>TransferDatabase</B></A> dell'oggetto <A HREF="JavaScript:hhobj_5.Click()"><B>DoCmd</B></A>.</P>
+
+
+
+
+<SCRIPT language="VBScript" src="ShowMe_Code.vbs"></SCRIPT>
+<SCRIPT language="VBSCRIPT">
+Sub HelpPopup(sFile,sID)
+L_SecurityT1_ErrorMessage="Impossibile visualizzare la procedura per la presenza di impostazioni di protezione "
+L_SecurityT2_ErrorMessage="del browser troppo restrittive o per l'errata installazione del controllo ActiveX "
+L_SecurityT3_ErrorMessage="Ouactrl.ocx."
+L_SecurityE1_ErrorMessage="- Impostare un livello inferiore di protezione del browser"
+L_SecurityE2_ErrorMessage="- Se questo messaggio viene visualizzato dopo l'impostazione di un livello inferiore,"
+L_SecurityE3_ErrorMessage="  rivolgersi all'amministratore di sistema per la verifica dell'installazione del controllo"
+L_SecurityE4_ErrorMessage="  ActiveX Ouactrl.ocx, posto nella cartella in cui è installato Microsoft Office"
+sSecurityMSG=L_SecurityT1_ErrorMessage & chr(13) & L_SecurityT2_ErrorMessage & chr(13) & L_SecurityT3_ErrorMessage & chr(13) & chr(13) & L_SecurityE1_ErrorMessage & chr(13) & L_SecurityE2_ErrorMessage & chr(13) & L_SecurityE3_ErrorMessage & chr(13) & L_SecurityE4_ErrorMessage
+L_App_DialogTitle="Guida di Microsoft Office"
+On Error Resume Next
+r=oua.HelpPopup(sFile,sID)
+If Err<>0 Then Msgbox sSecurityMSG,48,L_App_DialogTitle
+End Sub
+</SCRIPT>
+</BODY>
+</HTML>
