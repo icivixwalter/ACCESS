@@ -1,0 +1,121 @@
+SALV_MSys_QUERY
+				 			Note
+		                        TABELLA in cui vengono effettuati tutti i salvataggi  DELLE ENTITA QUERY. 	La chiave principale è il nome della ENTITA QUERY RIPORTATA nel campo 
+		                        		CHIAVE= Name1_s
+
+		                        @salvataggi.SALV_Msys_QUERY.DB.query.@progetto.gestione.DBMDB
+		                        @PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+		                        @salvataggi.tabella.MSys_SALV_Msys_QUERY.@DBMDB
+		                        @SALVATAGGIO.ENTITA.QUERY.SALV_Msys_QUERY
+		                        @SALV_MSys_QUERY.SALVATAGGI
+		                        @SALVATAGGIO.SALV_MSys_QUERY
+		                        faq:
+		                            @dove.sono.effettuati.i.salvataggi.DBMDB
+
+
+
+
+QUERY_SELECT
+	SALV_MSys_QUERY_{@========================================@}_Qry
+	SALV_MSys_QUERY_SEL_Qry01_00_}-------------------------------@
+	SALV_MSys_QUERY_SEL_Qry01_01_TUTTE
+							Note
+								Estrazione di tutti i salvataggi relativi agli oggetti ENTITA QUERY
+								@estrai.entita.salvataquery
+
+							struttura	
+
+								SELECT 
+									SALV_MSys_QUERY.*, 
+									SALV_MSys_QUERY.COD_PROGETTO_s, 
+									SALV_MSys_QUERY.NRO_OGGETTO_i AS ORD
+									FROM SALV_MSys_QUERY
+									ORDER BY 
+									SALV_MSys_QUERY.COD_PROGETTO_s, 
+									SALV_MSys_QUERY.NRO_OGGETTO_i;
+
+
+	
+QUERY_INSERT
+	SALV_MSys_QUERY_INS_Qry01_70_}-------------------------------@
+	SALV_MSys_QUERY_INS_Qry01_71_TUTTE
+							
+							Note
+								NO DUPLICATI: Inserisco i nuovi record con il campo 
+								struttura Name1_s a nullo, tenedo conto della CHIAVE PRIMARIA non 
+								vengono inseriti nomi DUPPLICATI.
+									
+									INSERT 
+										INTO SALV_MSys_QUERY 
+										( NRO_OGGETTO_i, 
+											TIPOGGETTO_s, 
+											NOMEOGGETTO_s, 
+										    NOTA_OGGETTO_s, 
+										    NOTEex_s, 
+										    EXPORT_b, 
+										    COD_PROGETTO_s, 
+										    DISCO_s, 
+										    PATH_s, 
+										    DATABASE_s, 
+										    Expression_m, 
+										    Flag_b, 
+										    LvExtra_i, 
+										    Name1_s, 
+										    Name2_s, 
+										    ObjectId_lng, 
+										    Order_b, 
+										    NOTE_ATTRIBUTI_s, 
+										    
+										    COMANDO_s, 
+										    Scel_b, 
+										    Stam_b, 
+										    Canc_b, 
+										    Agg_b, 
+										    BLOCC_b, 
+										    IdOrd_lng, 
+										    IDKeyArch_lng, 
+										    Msg01_s, 
+										    DATAINS_d, 
+										    DATAAGG_d, 
+										    TIMEOPER_d, 
+										    ORA_AGG_d )
+										SELECT MSys_QUERY.NRO_OGGETTO_i, 
+										MSys_QUERY.TIPOGGETTO_s, 
+										MSys_QUERY.NOMEOGGETTO_s, 
+										MSys_QUERY.NOTA_OGGETTO_s, 
+										MSys_QUERY.NOTEex_s, 
+										MSys_QUERY.EXPORT_b, 
+										MSys_QUERY.COD_PROGETTO_s, 
+										MSys_QUERY.DISCO_s, 
+										MSys_QUERY.PATH_s, 
+										MSys_QUERY.DATABASE_s, 
+										 
+										MSys_QUERY.Expression_m, 
+										MSys_QUERY.Flag_b, 
+										MSys_QUERY.LvExtra_i, 
+										MSys_QUERY.Name1_s, 
+										MSys_QUERY.Name2_s, 
+										MSys_QUERY.ObjectId_lng, 
+										MSys_QUERY.Order_b, 
+										MSys_QUERY.NOTE_ATTRIBUTI_s,  
+										MSys_QUERY.COMANDO_s, 
+										MSys_QUERY.Scel_b, 
+										MSys_QUERY.Stam_b, 
+										MSys_QUERY.Canc_b, 
+										MSys_QUERY.Agg_b, 
+										MSys_QUERY.BLOCC_b, 
+										MSys_QUERY.IdOrd_lng, 
+										MSys_QUERY.IDKeyArch_lng, 
+										MSys_QUERY.Msg01_s, 
+										MSys_QUERY.DATAINS_d, 
+										MSys_QUERY.DATAAGG_d, 
+										MSys_QUERY.TIMEOPER_d, 
+										MSys_QUERY.ORA_AGG_d
+										FROM 
+										MSys_QUERY 
+										LEFT JOIN 
+										SALV_MSys_QUERY ON MSys_QUERY.Name1_s = SALV_MSys_QUERY.Name1_s
+										WHERE (((SALV_MSys_QUERY.Name1_s) Is Null));
+
+	                           
+

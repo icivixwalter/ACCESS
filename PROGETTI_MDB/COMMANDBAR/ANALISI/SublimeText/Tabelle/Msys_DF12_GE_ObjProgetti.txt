@@ -1,0 +1,65 @@
+Msys_DF12_GE_ObjProgetti
+              Note
+                Tabella elenco oggetti da esportare che sono query, tabelle, form report ecc.
+                @tabella.esporta.oggetti.msys
+
+QUERY_INSERT
+    MSys_TABELLE_Qry01_70_}----------------------------@INSERT
+    MSys_TABELLE_Qry01_71_INSERT_toMsys_DF12
+
+
+
+                Note
+                    QUERY di inserimento dati dall'oggetto TABELLE ad ELENCO OGGETTI:
+                        table MSys_TABELLE ---> Msys_DF12_GE_ObjProgetti
+
+                    Query di ACCODAMENTO DATI  dalla tabella TABELLE alla tabella ELENCO
+                    OGGETTI DA ESPORTARE. La funzione che gestisce la copia e la cancellazione
+                    degli oggetti DF12 si trova in questo modulo identificato con questa chiave
+                    di ricerca:
+                        @UTIL_Nro40_N01_CONTROLLO_OGGETTI_DB.OGGETTI.DF12
+                        @modulo.UTIL_Nro40_N01_CONTROLLO_OGGETTI_DB.OGGETTI.DF12
+
+                        
+                        @accoda.TABELLE.to.DF12
+
+                        faq:
+                            accodo le query nella tabella oggetti per una futura esportazione
+
+
+                Struttura
+
+                        INSERT INTO MSys_ELENCO_ObjProgetti ( 
+                        Scel_b, 
+                        Name1_s, 
+                        IdOrd_lng, 
+                        NRO_OGGETTO_i, 
+                        TIPOGGETTO_s, 
+                        COD_PROGETTO_s, 
+                        PROGETTO_s, 
+                        DATAINS_d, 
+                        TIMEOPER_d )
+                        SELECT 
+                        [MSys_TABELLE].[Scel_b], 
+                        [MSys_TABELLE].[Name1_s], 
+                        [MSys_TABELLE].[ID_TAB_lng], 
+                        [MSys_TABELLE].[NRO_OGGETTO_i], 
+                        "TABELLE" AS TIPOGGETTO_s, 
+                        "MSys" AS COD_PROGETTO_s, 
+                        "PROGETTO MSys" AS PROGETTO_s, 
+                        [MSys_TABELLE].[DATAINS_d], 
+                        [MSys_TABELLE].[TIMEOPER_d]
+
+                        FROM 
+                        MSys_TABELLE LEFT JOIN MSys_ELENCO_ObjProgetti 
+                        ON [MSys_TABELLE].[Name1_s]=[MSys_ELENCO_ObjProgetti].[Name1_s]
+                        WHERE 
+                        ((([MSys_TABELLE].[Scel_b])=True) 
+                        And 
+                        (([MSys_ELENCO_ObjProgetti].[Name1_s]) Is Null))
+                        WITH OWNERACCESS OPTION;
+
+
+
+
+

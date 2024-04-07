@@ -1,0 +1,135 @@
+SALV_MSys_TABELLE
+				 			Note
+		                        TABELLA in cui vengono effettuati tutti i salvataggi degli oggetti di compentenza  in questo caso l'elenco oggetti tabella.
+
+		                        @salvataggi.TABELLE.DB.query.@progetto.gestione.DBMDB
+		                        @PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+		                        @salvataggi.tabella.MSys_TABELLE.@DBMDB
+		                        @SALVATAGGIO.ENTITA.TABELLE
+		                        faq:
+		                            @dove.sono.effettuati.i.salvataggi.DBMDB
+		                           
+
+
+
+SALV_MSys_{@==================================================@}
+QUERY_SELECT
+	SALV_MSys_TABELLE_{@========================================@}_Qry
+	SALV_MSys_TABELLE_SEL_Qry01_00_}-------------------------------@
+	SALV_MSys_TABELLE_SEL_Qry01_01_TUTTE
+							Note
+								Estrazione di tutti i salvataggi relativi agli oggetti tabella
+
+							struttura	
+
+								SELECT 
+									SALV_MSys_TABELLE.*, 
+									SALV_MSys_TABELLE.COD_PROGETTO_s, 
+									SALV_MSys_TABELLE.NRO_OGGETTO_i AS ORD
+									FROM SALV_MSys_TABELLE
+									ORDER BY 
+									SALV_MSys_TABELLE.COD_PROGETTO_s, 
+									SALV_MSys_TABELLE.NRO_OGGETTO_i;
+
+
+
+QUERY_INSERT
+	SALV_MSys_TABELLE_INS_Qry01_70_}-------------------------------@
+	SALV_MSys_TABELLE_INS_Qry01_71_TUTTE
+							
+							Note
+								NO DUPLICATI: Inserisco i nuovi record con il campo 
+								struttura Name1_s a nullo, tenedo conto della CHIAVE PRIMARIA non 
+								vengono inseriti nomi DUPPLICATI.
+
+									INSERT 
+										INTO SALV_MSys_TABELLE 
+										( NRO_OGGETTO_i, TIPOGGETTO_s, NOMEOGGETTO_s, 
+										  NOTA_OGGETTO_s, NOTEex_s, EXPORT_b, COD_PROGETTO_s, DISCO_s, PATH_s, DATABASE_s, Attribute_Lng, Expression_m, Flag_b, LvExtra_i, Name1_s, Name2_s, ObjectId_lng, Order_b, NOTE_ATTRIBUTI_s, PROPRIETA_s, VALOREPROPRIETA_m, COMANDO_s, Scel_b, Stam_b, Canc_b, Agg_b, BLOCC_b, IdOrd_lng, IDKeyArch_lng, Msg01_s, DATAINS_d, DATAAGG_d, TIMEOPER_d, ORA_AGG_d )
+										SELECT MSys_TABELLE.NRO_OGGETTO_i, 
+										MSys_TABELLE.TIPOGGETTO_s, 
+										MSys_TABELLE.NOMEOGGETTO_s, 
+										MSys_TABELLE.NOTA_OGGETTO_s, 
+										MSys_TABELLE.NOTEex_s, 
+										MSys_TABELLE.EXPORT_b, 
+										MSys_TABELLE.COD_PROGETTO_s, 
+										MSys_TABELLE.DISCO_s, 
+										MSys_TABELLE.PATH_s, 
+										MSys_TABELLE.DATABASE_s, 
+										MSys_TABELLE.Attribute_Lng, 
+										MSys_TABELLE.Expression_m, 
+										MSys_TABELLE.Flag_b, 
+										MSys_TABELLE.LvExtra_i, MSys_TABELLE.Name1_s, 
+										MSys_TABELLE.Name2_s, MSys_TABELLE.ObjectId_lng, MSys_TABELLE.Order_b, MSys_TABELLE.NOTE_ATTRIBUTI_s, MSys_TABELLE.PROPRIETA_s, MSys_TABELLE.VALOREPROPRIETA_m, MSys_TABELLE.COMANDO_s, MSys_TABELLE.Scel_b, MSys_TABELLE.Stam_b, MSys_TABELLE.Canc_b, MSys_TABELLE.Agg_b, MSys_TABELLE.BLOCC_b, MSys_TABELLE.IdOrd_lng, MSys_TABELLE.IDKeyArch_lng, MSys_TABELLE.Msg01_s, MSys_TABELLE.DATAINS_d, MSys_TABELLE.DATAAGG_d, MSys_TABELLE.TIMEOPER_d, MSys_TABELLE.ORA_AGG_d
+										FROM 
+										MSys_TABELLE 
+										LEFT JOIN 
+										SALV_MSys_TABELLE ON MSys_TABELLE.Name1_s = SALV_MSys_TABELLE.Name1_s
+										WHERE (((SALV_MSys_TABELLE.Name1_s) Is Null));
+
+
+
+QUERY_UPDATE
+	SALV_MSys_TABELLE_UPD_Qry01_60_}-------------------------------@
+	SALV_MSys_TABELLE_UPD_Qry01_61_TUTTE
+
+							Note
+								@aggiorno.record.salvataggi.tabelle
+								@tabelle.aggiorna.record.salvataggi
+								Aggiorno i record con a chiavie primaria .Name1_s e quindi 
+								sono esclusi i campi 
+										ORA_AGG_d = perche gia esite un campo time operazione
+										Name1_s		= escluso perchè chiave primaria che non puo essere
+															 cambiata in entrambe le tabelle.
+
+
+							Struttura = perche
+								..
+
+								UPDATE 
+									MSys_TABELLE
+									 INNER JOIN 
+									 	SALV_MSys_TABELLE 
+									 		ON MSys_TABELLE.Name1_s = SALV_MSys_TABELLE.Name1_s 
+									 		SET 
+									 		[SALV_MSys_TABELLE].[NRO_OGGETTO_i] = [MSys_TABELLE].[NRO_OGGETTO_i],
+									 		[SALV_MSys_TABELLE].[NOMEOGGETTO_s] = [MSys_TABELLE].[NOMEOGGETTO_s],
+									 		[SALV_MSys_TABELLE].[NOTA_OGGETTO_s] = [MSys_TABELLE].[NOTA_OGGETTO_s],
+								 			[SALV_MSys_TABELLE].[NOTEex_s] = [MSys_TABELLE].[NOTEex_s],
+								 			[SALV_MSys_TABELLE].[EXPORT_b] = [MSys_TABELLE].[EXPORT_b],
+								 			[SALV_MSys_TABELLE].[COD_PROGETTO_s] = [MSys_TABELLE].[COD_PROGETTO_s],
+								 			[SALV_MSys_TABELLE].[DISCO_s] = [MSys_TABELLE].[DISCO_s],
+								 			[SALV_MSys_TABELLE].[PATH_s] = [MSys_TABELLE].[PATH_s],
+								 			[SALV_MSys_TABELLE].[DATABASE_s] = [MSys_TABELLE].[DATABASE_s],
+								 			[SALV_MSys_TABELLE].[Attribute_Lng] = [MSys_TABELLE].[Attribute_Lng],
+								 			[SALV_MSys_TABELLE].[Expression_m] = [MSys_TABELLE].[Expression_m],
+								 			[SALV_MSys_TABELLE].[Flag_b] = [MSys_TABELLE].[Flag_b],
+								 			[SALV_MSys_TABELLE].[LvExtra_i] = [MSys_TABELLE].[LvExtra_i],
+								 			[SALV_MSys_TABELLE].[Name2_s] = [MSys_TABELLE].[Name2_s],
+								 			[SALV_MSys_TABELLE].[ObjectId_lng] = [MSys_TABELLE].[ObjectId_lng],
+								 			[SALV_MSys_TABELLE].[Order_b] = [MSys_TABELLE].[Order_b],
+								 			[SALV_MSys_TABELLE].[NOTE_ATTRIBUTI_s] = [MSys_TABELLE].[NOTE_ATTRIBUTI_s],
+								 			[SALV_MSys_TABELLE].[PROPRIETA_s] = [MSys_TABELLE].[PROPRIETA_s],
+								 			[SALV_MSys_TABELLE].[VALOREPROPRIETA_m] = [MSys_TABELLE].[VALOREPROPRIETA_m],
+								 			[SALV_MSys_TABELLE].[COMANDO_s] = [MSys_TABELLE].[COMANDO_s],
+								 			[SALV_MSys_TABELLE].[Scel_b] = [MSys_TABELLE].[Scel_b],
+								 			[SALV_MSys_TABELLE].[Stam_b] = [MSys_TABELLE].[Stam_b],
+								 			[SALV_MSys_TABELLE].[Canc_b] = [MSys_TABELLE].[Canc_b],
+								 			[SALV_MSys_TABELLE].[Agg_b] = [MSys_TABELLE].[Agg_b],
+								 			[SALV_MSys_TABELLE].[BLOCC_b] = [MSys_TABELLE].[BLOCC_b],
+								 			[SALV_MSys_TABELLE].[IdOrd_lng] = [MSys_TABELLE].[IdOrd_lng],
+								 			[SALV_MSys_TABELLE].[IDKeyArch_lng] = [MSys_TABELLE].[IDKeyArch_lng],
+								 			[SALV_MSys_TABELLE].[Msg01_s] = [MSys_TABELLE].[Msg01_s],
+								 			[SALV_MSys_TABELLE].[DATAINS_d] = [MSys_TABELLE].[DATAINS_d],
+								 			[SALV_MSys_TABELLE].[DATAAGG_d] = [MSys_TABELLE].[DATAAGG_d],
+								 			[SALV_MSys_TABELLE].[TIMEOPER_d] = [MSys_TABELLE].[TIMEOPER_d]
+								 			;
+
+
+
+
+QUERY_DELETE
+	SALV_MSys_TABELLE_DEL_Qry01_80_}-------------------------------@
+	SALV_MSys_TABELLE_DEL_Qry01_81_TUTTE
+
+

@@ -1,0 +1,223 @@
+MSys_TABELLE
+                    Note
+                        TABELLA del PROGETTO DI GESTIONE DEL DATABASE in cui vengono salvate tutte le tabelle del db corrente comprese quelle di sistema.
+                        LA CHIAVE PRIMARIA delle tabella è il NOME DELLA ENTITA
+                        TABELLA
+
+                        @TABELLE.DB.query.@progetto.gestione.DBMDB
+                        @PROGETTO.GESTIONE.DEL.DATABASE.@DBMDB
+                        @tabella.MSys_TABELLE.@DBMDB
+                        @chiave.primaria.Name1_s
+                        @entita.tabelle@MSys_TABELLE
+
+
+
+                        faq:
+                            @dove.salvare.tutte.le.tabelle.@DBMDB
+                            @dove.vengono.salvate.tutte.le.tabelle.@DBMDB
+                            @le.tabelle.di.sistema.dove.vengono.salvate.@DBMDB
+                            @la.chiave.primaria.il.nome
+                            @quale.è.la.chiave.primaria = Name1_s
+
+
+
+
+QUERY DELETE
+
+    MSys_TABELLE_Qry01_80_}----------------------------------@DELETE
+    MSys_TABELLE_Qry01_81_DELETE_TUTTE
+                    Note
+                        query di cancellazione di tutte le tabelle salvate
+                        @cancella.tabelle@DBMDB
+
+QUERY SELECT
+    
+    MSys_TABELLE_Qry01_01_SELECT_TUTTE
+                    Note
+                        Query di estrazione delle entita tabelle.
+                    
+                    Struttura
+                        SELECT 
+                        MSys_TABELLE.*, 
+                        MSys_TABELLE.COD_PROGETTO_s, 
+                        MSys_TABELLE.NRO_OGGETTO_i AS ORD
+                        FROM MSys_TABELLE
+                        ORDER BY 
+                        MSys_TABELLE.COD_PROGETTO_s, 
+                        MSys_TABELLE.NRO_OGGETTO_i;
+
+
+
+    MSys_TABELLE_Qry01_01_SELECT_Name1_s
+
+                    Note
+                        Query di estrazione della proprieta name1 della tabella
+
+                        Tabella di salvataggio di tutte le query
+                        @progetto.esporta.@MSys
+                        @tutte.le.query.db
+                        @db.tutte.le.query
+                        @db.query.tutte
+                        @query.estrazione.name1
+                            faq:
+                                estrae il name1 delle tabelle
+
+
+                    struttura
+                        SELECT MSys_TABELLE.Name1_s
+                        FROM MSys_TABELLE;
+
+QUERY INSERT
+    MSys_TABELLE_Qry01_70_}----------------------------------@INSERT
+    MSys_TABELLE_Qry01_71_INSERT_toMsys_DF12
+
+                    Note
+                        Query DI INSERIMENTO dati dalla tabelle oggetti TABLES alla tabella
+                        MSys_ELENCO_ObjProgetti
+                                MSys_TABELLE  ----> MSys_ELENCO_ObjProgetti
+                       
+                        @tabella.MSys_TABELLE
+
+
+
+                    STRUTTURA
+
+                        INSERT INTO 
+                        MSys_ELENCO_ObjProgetti ( Scel_b, Name1_s,IdOrd_lng, NRO_OGGETTO_i,
+                                                  TIPOGGETTO_s,
+                                                  COD_PROGETTO_s, 
+                                                  PROGETTO_s,
+                                                  DATAINS_d, TIMEOPER_d)
+                        SELECT 
+                        MSys_TABELLE.Scel_b, 
+                        MSys_TABELLE.Name1_s, 
+                        MSys_TABELLE.ID_TAB_lng, 
+                        MSys_TABELLE.NRO_OGGETTO_i,
+                        "TABELLE"         AS TIPOGGETTO_s,
+                        "MSys"          AS COD_PROGETTO_s,
+                        "PROGETTO MSys" AS PROGETTO_s, 
+                        MSys_TABELLE.DATAINS_d,
+                        MSys_TABELLE.TIMEOPER_d
+
+                        FROM 
+                        MSys_TABELLE LEFT JOIN MSys_ELENCO_ObjProgetti ON MSys_TABELLE.Name1_s = MSys_ELENCO_ObjProgetti.Name1_s
+                        WHERE 
+                        (((MSys_TABELLE.Scel_b)=True) AND ((MSys_ELENCO_ObjProgetti.Name1_s) Is Null))
+                        WITH OWNERACCESS OPTION;
+
+QUERY_UPDATE
+    cmd_sql_Aggiorna_scelto
+                Note
+                    Questo comando sql imposta true tutti i campi scelto tramite l'oggetto cmd
+                    struttura
+                    @SELEZIONA.TRUE.TUTTO.MSys_TABELLE.Scel_b
+
+                    UPDATE 
+                    MSys_TABELLE 
+                    SET 
+                    MSys_TABELLE.Scel_b = True
+                    WHERE (((MSys_TABELLE.TIPOGGETTO_s)>""))
+                    WITH OWNERACCESS OPTION;
+
+                        
+
+FUNZIONE ACCODA TABELLE TO DF12
+                Note
+                    Inserito questa query di esecuzione nella funzione di iterazione oggetti (Function Iterazione_oggetti) al fine di utilizzare questa query con il comando
+                    DoCmd.OpenQuery "MSys_TABELLE_Qry01_71_INSERT_toMsys_DF12"  '//@accoda.TABELLE.to.DF12
+
+                    Per utilizzare questa funzione occorre attivare il comando:
+                            Cmd_Accoda_TABELLE_TO_Msys_DF12
+
+                    Per cancellare tutto nell'elenco oggetti devi utilizzare il comando
+                            Cmd_Cancella_MSys_ELENCO_ObjProgetti
+                    
+
+                        faq
+                            come accodo le tabella in df12
+
+
+FUNZIONE SALVA TABELLE
+                Note
+                    Le tabelle del sistema vengon salvatate con la seguente funzione 
+                        @salvataggio.tabelle  
+
+                    SALVATAGGIO_OGGETTI_DB_PFunct che si trova
+                    nel modulo del controllo oggetti nro 40 
+                    @SALVATAGGIO.TABELLE.OGGETTI
+                    @FUNZIONE.SALVATAGGIO.OGGETTI.DB
+                    @UTIL_MDL40_N00_CONTROLLO_OGGETTI_DB.SALVATAGGIO.TABELLE.OGGETTI
+                    @UTIL_MDL40_N00_CONTROLLO_OGGETTI_DB.TABELLE.salvataggio
+
+
+
+                    ESCLUSIONE DAL SALVATAGGIO: Nella funzione di salvataggio vengono escluse le seguenti tabelle di sistema per evitare il blocco della procedura è
+
+                    il codice è @tabelle.escluse.salvataggio
+                                @esclusione.tabelle
+
+                            elenco:
+                            
+                            MSysAccessObjects
+                            MSysAccessXML
+                            MSysACEs
+                            MSysNavPaneGroupCategories
+                            MSysNavPaneGroups
+                            MSysNavPaneGroupToObjects
+                            MSysNavPaneObjectIDs
+                            MSysObjects
+                            MSysQueries
+                            MSysRelationships
+
+            TODO: DA COSTRUIRE
+                @todo.controllo.preliminare.2.casi
+                OCCORRE FARE UN CONTROLLO PRELIMINARE SULLE TABELLE COLLEGATE SE SONO ATTIVE; _
+                OCCORRE FARE UN CONTROLLO PRELIMINARE SE LA TABELLA DI ESPORTAZIONE ANCORA ESISTE.
+
+                CONTROLLO TABELLE COLLEGATE
+
+
+
+
+                                                            
+                                                            End If
+
+FORM
+    MSys_TABELLE_Frm01_S01_TUTTE
+                Note
+                    Form di gestione degli oggetti tabella.
+
+
+                EVENTI
+                    Name1_TXT               = doppio click
+                        evento sul campo name1 con doppio click che permette la ricerca
+                        della tabella  mediante la funzione di ricerca, vedi codice
+
+                            @CERCA.TABELLA  @CERCA.OGGETTO.TABELLA
+                                faq
+                                    come.ricercare.le.tabelle
+                                    ricerca.tabelle
+
+    QUERY_SOTTOSTANTE
+
+                MSys_TABELLE_Qry01_01_SELECT_Name1_s
+
+                Note
+                    form di visualizzazioni delle tabelle mysys che utilizza questa query per la
+                    visualizzazione del campo.
+                    
+
+                    @form.campo.Name1_s
+                    @campo.Name1_s
+
+                        faq:
+                            dove visualizzo il campo name1
+
+
+                    campo
+                        Name1_s
+                            Nella form seleziono il tipo
+
+                Note
+                    La form gestisce le tabelle con questo oggetto query
+

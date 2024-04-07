@@ -1,0 +1,32 @@
+MSys_ELENCO_ObjProgetti
+                Note
+                    tabella di elenco degli oggtti del progetto
+
+
+
+FORM
+    MSys_ELENCO_ObjProgetti_Frm_S01_Tutti 
+                 Note
+                    FORM che visualiza tutti gli oggetti
+                    @progetto.esporta.@MSys
+                    @form.visualizza.oggetti
+                        faq:
+
+
+QUERY
+
+MSys_ELENCO_ObjProgetti_Qry00-}---------------------@    
+MSys_ELENCO_ObjProgetti_Qry01_81_DELETE_TUTTI
+
+
+                Note
+                    query di cancellazione dei dati
+                    @query.cancella.oggetti.progetti
+                    @cancello.oggetti.query
+
+                struttura
+
+                    DELETE MSys_ELENCO_ObjProgetti.*
+                    FROM MSys_ELENCO_ObjProgetti;
+
+    

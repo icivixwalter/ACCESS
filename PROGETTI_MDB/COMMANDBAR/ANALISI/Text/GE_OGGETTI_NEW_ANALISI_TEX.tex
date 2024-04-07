@@ -1,0 +1,125 @@
+
+%% TUTORIAL LATEX = http://wwwcdf.pd.infn.it/AppuntiLinux/latex_introduzione.htm
+
+%% Impaginazione come articolo, carta A4, caratter 10 punti twoside= fronte/retro
+\documentclass[10pt,a4paper]{article}
+
+%%  SORGENTE IN ITALIANO, ESATTA SEQUENZA DI DI PACCHETTI DA CARICARE.
+%%	Imputec =	SIMBOLI LATINI +  fontec = LETTERE ACCENTATE E SIMBOLI SPECIALI + lingua principale 
+%%  del documento = [italian]{babel}	
+%%---------------------------------------------------------------------------------------------
+%%L'esempio mostra l'inclusione del pacchetto inputenc allo scopo di ammettere 
+%%la codifica dei caratteri ISO 8859-1 (Latin 1) nel sorgente LaTeX, assieme al pacchetto fontenc 
+%%per ottenere una composizione con un tipo di carattere che contenga le lettere accentate
+%% e i simboli speciali piÃ¹ importanti utilizzati in Europa. La lingua ufficiale del 
+%% documento � l'italiano con babel.
+
+\usepackage[latin1]{inputenc}						%Imputec = interpreta correttamente i caratteri inseriti
+\usepackage[T1]{fontenc}							%t1= font usato per l'italiano
+\usepackage[italian]{babel}							%babel= font usato per l'italiano	
+%%---------------------------------------------------------------------------------------------
+
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}			%---------------------> ipertesto
+\usepackage{xcolor}				%---------------------> colore iperlink
+\usepackage{array,booktabs}
+\usepackage{csvsimple, longtable, booktabs}			%---------------------> importa csv
+
+
+%%//			PREAMBOLO IMPOSTAZIONE DEI MARGINI
+%%//=========================================================================================//
+%%				impostazione di margini base
+%%------------------------------------------------------------
+%\setlength{\textwidth}{16 cm}       %16cm  LUNGHEZZA RIGHE.
+%\setlength{\oddsidemargin}{0 cm}    %0cm   MARGINE SINISTRO.
+%\setlength{\topmargin}{0 cm}        %0cm   MARGINE SUPERIORE.
+%\setlength{\textheight}{22 cm}      %22cm  LUNGHEZZA COLONNE.
+%%------------------------------------------------------------
+
+% modifiche rispetto ai margini base
+\setlength{\textwidth}{16 cm}      	 	%16cm  LUNGHEZZA RIGHE.
+\setlength{\oddsidemargin}{-2 cm}    	%0cm   MARGINE SINISTRO.
+\setlength{\topmargin}{-3 cm}          	%0cm   MARGINE SUPERIORE.
+\setlength{\textheight}{20 cm}      	%22cm  LUNGHEZZA COLONNE.
+
+%--------------------> per eliminare il numero di pagina inferiore
+%\pagenumbering{empty}   %DA SCOMMENTARE SE NON SI VUOLE IL NUMERO DI PAGINA.
+%%//=========================================================================================//
+
+
+%//						MODULO_02
+%//============================================================================================//
+%//						MODULO_01
+%//------------------------------------------------------------------------------------------//
+%//---------------------> definizione??
+
+
+
+\hypersetup{%
+	colorlinks=false,% hyperlinks will be black
+	linkbordercolor=red,% hyperlink borders will be red
+	pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
+}
+
+%//--------------------->PREAMBOLO DEL DOCUMENTO
+\begin{document}
+	\textbf{\underline{	APERTURA FORM DETERMINE}}
+	
+	
+
+\part{ANALISI TREE}
+	Gli archivi della gestione delle  sono valorizzati in :\\
+	La path di archivio:\\
+	\detokenize{C:\GESTIONI\GESTIONE_LLPP\25_GESTIONE_LLPP\LLPP_ARCHVI_MDB\LLPP_GESTIONE\LPP_ANALISI\DETERMINE}\\
+	\href{run:e:/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/ACCESS_GE_OGGETTI_NEW/GE_OGGETTI_NEW_TEX+TXT_ANALISI/}{ ... APRI ANALISI}
+	\label{cartella:Determine-Originale}
+	\\
+	Il tex per l'analisi delle Determine \\
+	\detokenize{PRES3000_ANALISI_GESTIONE_Determine.tex}\\
+	%%----------------> \href{run:C:....} attenzione la path deve essere completa con barra rovesciata. Meglio se metti una bat
+	\href{run:C:/GESTIONI/GESTIONE_LLPP/25_GESTIONE_LLPP/LLPP_ARCHVI_MDB/LLPP_GESTIONE/LPP_ANALISI/DETERMINE/DETERMINE_ANALISI.tex}
+	{ ... IL TEX DI ANALISI Determine}\\
+	\label{cartella:Determine-Text}
+	\\
+	Tutti i file e le cartelle per l'analisi delle Determine \\
+	\href{run:C:/GESTIONI/GESTIONE_LLPP/25_GESTIONE_LLPP/LLPP_ARCHVI_MDB/LLPP_GESTIONE/LPP_ANALISI/DETERMINE/DETERMINE_APRI_OGGETTI_DATABASE.bat}
+	{... TUTTI I FILE DELLE DETERMINE APRI .BAT}
+	\label{file:Determine-Bat}
+	%APRI TUTTI I FILE E CARTELLE DELLE Determine CON IL BAT
+		
+	\part{APERTURA FORM**}
+	....
+	Apertura della form vengono resettate tutte le tab
+	con il seguente codice:
+	%//-------------------------------> inserisco il file di codice
+	%\		
+	%	\href{run: C:/TMP/appoggio.pdf}{APRI appoggio}
+	
+	% e' possibile usare path relativi: ./ e' la cartella corrente, ../ e' la directory precedente	
+	
+	%\	href{run:C:\TMP\appoggio.pdf}{apri}
+	\href{run:C:/TMP/appoggio.pdf}{This is my link} 
+	
+	%// RIFERIMENTO A FAILE .TXT
+	%//----------------------------------------------------------------------------------------------------------//
+	%NOTE : L'indirizzo completo è il seguente, %c:\GESTIONI\GESTIONE_LLPP\25_GESTIONE_LLPP\LLPP_ARCHVI_MDB\LLPP_GESTIONE\LPP_ANALISI\DETERMINE\DETERMINE_Mdl02_ROUTINE_CODICE_APERTURA_FORM_(LPDD_DETERMINE).txt ma
+	%ma per evitare errori di caricamento è stato dato solo quello relativo ./DETERMINE_Mdl02_ROUTINE_CODICE_APERTURA_FORM_(LPDD_DETERMINE).txt
+	\href{run:./DETERMINE_Mdl02_ROUTINE_CODICE_APERTURA_FORM_(LPDD_DETERMINE).txt}{Modulo Apri form} 
+	
+	
+	%//----------------------------------------------------------------------------------------------------------//
+	
+	\subsection{EVENTO FORM LOAD}
+
+	
+	
+
+
+		
+	
+\end{document}

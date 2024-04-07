@@ -1,0 +1,25 @@
+Tre_{@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@}_Tab
+Tree
+
+					Note
+								Progetto di gestione della Tree View
+								COD_PROGETTO_s	PROGETTO_s			NOTE_PROGETTO_s
+								TREE_VIEW		PROGETTO_TREE_VIEW	PROGETTO CON LA TREE VIEW
+
+								La Tabella Tree gestisce gli elementi dell'albero.
+
+
+								@TreeView.gestione
+								@Tree.gestione
+
+
+QUERY
+	QUERY_SELECT
+		Tree_Qry00_{@=============================================@}_Qry
+		Tree_Qry01_01_}------------------------------------------@SELECT
+		Tree_Tb01_Qry01_N01_ELENCO
+
+
+
+FORM
+	Tree_Frm_M00_00_{@=====================================@}
