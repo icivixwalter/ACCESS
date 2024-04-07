@@ -1,0 +1,11 @@
+{
+	"installed_packages":
+	[
+		"Package Control",
+		"TerminalProjectFolder",
+		"Terminus",
+	],
+	"in_process_packages":
+	[
+	],
+}
