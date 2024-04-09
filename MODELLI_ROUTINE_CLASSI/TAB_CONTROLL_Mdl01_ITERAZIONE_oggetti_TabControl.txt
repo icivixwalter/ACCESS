@@ -1,0 +1,53 @@
+ITERAZIONE NEGLI OGGETTI DI UN TAB CONTROLL
+
+
+                '//CONTROLLO OGGETTO PAGE DELL'INSIEME PAGES DI UNA TAB CONTROLL
+                '//------------------------------------------------------------------------------------------------------//
+                'Nota :Esempio di oggetto Page e insieme Pages
+                'La routine evento riportata di seguito scorre tutti i controlli di
+                'ogni pagina di un controllo Struttura a schede quando l'utente seleziona tale pagina.
+                'Per provare questo esempio, creare una nuova maschera con un controllo Struttura a schede denominato TabCtl_01
+                'e imposta la relativa proprietà Su modifica della casella di testo.
+                'Passare in visualizzazione Maschera e fare clic sulle diverse schede per scorrere i relativi controlli.
+                
+                    Dim tbc As Control, pge As Page
+                    Dim ctl As Control
+                
+                    ' Restituisce riferimento a controllo struttura a scheda dell'oggetto tab controll
+                    Set tbc = Me!TabCtl_01
+                    ' Restituisce riferimento a pagina correntemente selezionata.
+                    Set pge = tbc.Pages(tbc.Value)
+                    ' Enumera i controlli sulla pagina correntemente selezionata.
+                    Debug.Print pge.NAME & " Controlli:"
+                        For Each ctl In pge.Controls
+                            '//il nome dell'oggetto SOTTOFORM attivato
+                            Debug.Print "              ITERAZIONE DEL CONTROLLO TabCtl_01 E SUE PROPRIETA           "
+                            Debug.Print "---------------------------------------------------------------------------"
+                            
+                            '//controllo della PAGINA
+                            Debug.Print "----------------- la pagina selezionata -------------------"
+                            Debug.Print "Indice della pagina selezionata"
+                            Debug.Print pge.PageIndex
+                            Debug.Print "Proprieta :Caption - Nome etichetta"
+                            Debug.Print pge.Caption
+                            
+                            '//controllo DELLA SOTTOFORM
+                            Debug.Print "----------------- la sottoform attiva ---------------------"
+                            Debug.Print "Proprietà Name (Nome elemento)                             "
+                            Debug.Print ctl.NAME
+                            
+                            Debug.Print "Proprietà SourceObject (Oggetto origine)                   "
+                            Debug.Print ctl.SourceObject
+                            
+                            
+                            
+                            Debug.Print "---------------------------------------------------------------------------"
+                        Next ctl
+                    Debug.Print
+                
+                '//*** FINE ***
+                '//CONTROLLO OGGETTO PAGE DELL'INSIEME PAGES DI UNA TAB CONTROLL
+                '//------------------------------------------------------------------------------------------------------//
+
+
+

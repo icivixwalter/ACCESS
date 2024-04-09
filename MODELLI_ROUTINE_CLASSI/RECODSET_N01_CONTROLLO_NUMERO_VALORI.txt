@@ -1,0 +1,85 @@
+
+'// RECORSET_CONTEGGIO_VALORE_CAMPI
+'//======================================================================================================//
+'//Note           : chiamo la funzione private per il recupero dei valori.
+
+'RECORSET_CONTEGGIO_VALORE_CAMPI
+'..............................................................................................................
+'Tipo           : Routine pubblica.
+'Attività'      : Recupero il valore restituito da una query su di una tabella
+'Note           : Recupero IL TOTALE DI UN CAMPO
+'Parametro      : par_TABELLA_s = anno di imposta e par_CAMPO_s = Codice Tributo F24.
+'Restituisce    : Il la descrizione del tipo di Tributo.
+'Codice         : ITERAZIONE_RECORD_N01_pFunct.01
+'
+
+Public Function ITERAZIONE_RECORD_N01_pFunct(par_TABELLA_s As Integer, _
+                                            par_CAMPO_s As String) As String
+            
+    '....
+On Error GoTo Err_ITERAZIONE_RECORD_N01_pFunct
+
+
+        '//Imposto e resetto le variabili 
+        Dim icount as Integer
+        icount=0
+        
+        '//Imposto i parametri
+        Dim par_AnnoImp_i As Integer
+        Dim par_CodiceTributo_s As String
+
+    '//ITERO NELLA TABELLA
+    '//.....................................................................................................
+    '//Note           : Tramite una Select vengono individuati i valori da restiuire.
+
+        '//RECUPERO PARAMETRO DA TABELLA OGGETTI
+        Set DaoRs = CurrentDb.OpenRecordset("Tabella/Query")
+
+        If DaoRs.EOF = False And DaoRs.BOF = False Then
+
+            DaoRs.MoveFirst
+
+            While Not DaoRs.EOF
+            If DaoRs.Fields("Campo_01") = par_AnnoImp_i _
+            And DaoRs.Fields("Campo_02") = par_CodiceTributo_s Then
+
+                '//Restituisco al Chiamante
+                Recupero_N02_DESCRIZIONE_CODICE_RECORD_DalCodice_pFunct = DaoRs.Fields("Campo_01")
+
+            End If
+
+            DaoRs.MoveNext
+
+            Wend
+
+            DaoRs.Close
+            Set DaoRs = Nothing
+
+        End If
+
+    '//*** fine ***
+    '//ITERO NELLA TABELLA
+    '//.....................................................................................................
+
+'USCITA  E GESTIONE ERRORI
+'..............................................................................................................
+
+
+Exit_ITERAZIONE_RECORD_N01_pFunct:
+    Exit Function
+
+Err_ITERAZIONE_RECORD_N01_pFunct:
+    MsgBox Err.Description
+    Debug.Print ProceduraMessaggioErrore_s
+    Debug.Print ProceduraAttivaEseguita_s
+    Stop
+    Resume Exit_ITERAZIONE_RECORD_N01_pFunct
+
+End Function
+'*** FINE ***
+'RECORSET_CONTEGGIO_VALORE_CAMPI
+'..............................................................................................................
+
+'// RICERCA DATI NEL RECORD
+'//======================================================================================================//
+

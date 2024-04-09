@@ -1,0 +1,150 @@
+
+
+'//EVENTO DOPPIO CLICK NRO FATTURA
+'//===============================================================================================================================//
+'//01)EVENTO_DOPPIO_CLICK_FATTURE :AGGIORNAMENTO FATTURA CORRENTE - _
+   ACCODO LA FATTURA E LE VOCI NELLE TABELLE TMP _
+   routine utilizzata anche in caso di modifica di un campo del recordset tmp
+'//CODICE_OPERAZIONE-->:01)_Nro_Fattura_DblClick
+'//NRO PROCEDURA ----->: 1
+Public Sub Nro_Fattura_DblClick(Cancel As Integer)
+
+'//Parametri Fattura
+'IDFatt, AnnoFattura, sCodiceFiscaleEmittente
+Dim IDFatt_i As Integer, AnnoFattura_i As Integer, sCodiceFiscaleEmittente_s As String
+
+
+On Error GoTo Err_Nro_Fattura_DblClick
+    
+    '//00
+    '//RESET VARIABILI
+    ROUT_NRO_i = 1
+    ROUT_TIPO_MSG_s = "FATTURE DOPPIO CLICK"
+    ROUT_ERR_MSG_s = "ERRORE NELLA FATTURA DOPPIO CLICK"
+            
+    
+    '//01
+    '//CODICE   :01_Nro_Fattura_DblClick_(Cacella i dati tmp)
+    '//RESET    :SVUOTO LE TABELLE TMP FattureEmesse_Tmp, VociFattureEmesse_Tmp e _
+                 Tb10_ParametriFatture_TMP
+    '//............................................................................................
+        
+        '//Cancello i dati nelle tabelle tmp (Fatture Tmp e Voci tmp)
+        DoCmd.OpenQuery ("FATTURE_QryTb02_81_DELETE_Dati_Tb02_Emesse_TMP")                              '//cancello le fatture tmp
+        DoCmd.OpenQuery ("FATTURE_QryTb04_81_DELETE_VociFattureEmesse_TMP")                       '//cancello le voci delle fatture tmp
+        DoCmd.OpenQuery ("FATTURE_QryTb10_81_DELETE->Dati_Tb10_ParametriFatture_TMP")                   '//cancello i parametri tmp
+    '//............................................................................................
+    
+    
+    '//02
+    '//ACCODA I PARAMETRI NELLA TABELLA PARAMETRI + ACCODA FATTURA IN TABELLA FATTURE_TMP
+    '//------------------------------------------------------------------------------------------------
+    '//CODICE   :02_Nro_Fattura_DblClick_(Accodo i parametri)
+    
+        '//PARAMETRI:INSERISCO I PARAMETRI NELLA TABELLA TMP
+        '//............................................................................................
+        '//Note       :Inserimento dei dati nella relativi a 3 parametri
+        '//           della fattura, IDFatt e AnnoFattura e sCodiceFiscaleEmittente i quali rappresentano
+        '//           le chiavi della tabella parametri nella tabella Fatture_Tb10_ParametriFatture_TMP
+        
+        '//NOTE :
+            
+            Long1 = Me.IDFatt
+            
+            Int1 = Me.Nro_Fattura
+            Date1 = Me.Data
+                    
+           
+           'Me.Parent!Lbl_Tit_01.Caption = "GESTIONE FATTURE Selezionata fattura nro ----->  " _
+                     & int1 & "  -------> del " & Date1
+           
+           If Me.IDFatt > 0 And Me.AnnoFattura > 0 And Me.sCodiceFiscaleEmittente_TXT > "" Then
+                IDFatt_i = Me.IDFatt
+                AnnoFattura_i = Me.AnnoFattura
+                sCodiceFiscaleEmittente_s = Me.sCodiceFiscaleEmittente_TXT
+           
+                Bool1 = Parametri_N01_InserisciParametriIn_Tmp_pFunct _
+                        (IDFatt_i, AnnoFattura_i, sCodiceFiscaleEmittente_s)
+            Else
+                    MsgBox "ERRORE PARAMETRI NON VALORIZZATI : IDFatt_i-->" & _
+                    IDFatt_i & " AnnoFattura_i--> " & AnnoFattura_i & _
+                    " sCodiceFiscaleEmittente_s --> " & sCodiceFiscaleEmittente_s
+            End If
+                                   
+        '//***fine***
+        '//ACCODA I PARAMETRI NELLA TABELLA PARAMETRI + ACCODA FATTURA IN TABELLA FATTURE_TMP
+        '//............................................................................................
+    
+    '//------------------------------------------------------------------------------------------------
+    
+    '//ACCODA SOLO LA FATTURA SELEZIONATA E LE VOCI IN TMP
+    '//.................................................................
+    '//Accodo solo la fattura selezionata nella form dal numero della fattura
+    '//e le relative voci nelle tabelle tmp.
+    '//Codice       :Accoda_N03_01_AccodaLaFattura_E_LeVoci_in_Tmp_pFunct.02
+        
+        '//
+        Call Accoda_N03_01_AccodaLaFattura_E_LeVoci_in_Tmp_pFunct
+    
+    '//.................................................................
+    
+    
+    '//AGGIORNA LE VOCI DELLA FATTURA TMP
+    '//-----------------------------------------------------------
+    '//Note         :Aggiorna le voci della fattura tmp in lavorazione.
+    '//Codice       :EsportaBollettiniInCsv.01.call
+        
+        Call Aggiornamento_N02_Fattura_Tmp_pFunct
+    
+    '//-----------------------------------------------------------
+            
+        
+    '//AGGIORNO I DATI FISCALI DELL'EMITTENTE NELLE FATTURE EMESSE
+    '//-----------------------------------------------------------
+    '//NOTE : Aggiorno i dati dell'emittente nell' fatture emesse _
+
+        DoCmd.OpenQuery "AGGIORNA_Qy01-03_AggiornaEMITTENTE->Fatture_Tb01_Emesse"
+        DoCmd.OpenQuery "AGGIORNA_VOCI_FATTURA_QryTb02_VociFatture->DatiFattureEmesse"
+    
+    '//-----------------------------------------------------------
+    
+    
+    '//CHIAMO L'AGGIORNAMENTO DEL CONTROLLO AS SCHEDE
+    
+    'Call Chiama_N01_CONTROLLO_A_SCHEDE
+    'Me.Parent!SottoForm_Pg_02.Requery
+    
+'//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+'//Nro_Fattura_DblClick.03.01)    GESTIONE ERRORI E USCITA ROUTINE
+'//NOTA:
+
+Exit_Nro_Fattura_DblClick:
+    Exit Sub
+
+Err_Nro_Fattura_DblClick:
+        
+        '//COSTRUISCO IL MESSAGGIO DI ERRORE E LO STAMPO CON IL METODO DEBUG.PRINT
+        '//.............................................................................................
+            Vv1 = "DATA ED ORA :" & Date  & " - " & Time() & Chr$(13) & _
+            "ERRORE NRO --------------------->: " & Err.Number & Chr$(13) & _
+            "TIPO DI ERRORE =================>: " & Chr$(13) & Err.Description & Chr$(13) & _
+            "ROUTINE NRO -------------------->: " & ROUT_NRO_i & Chr$(13) & _
+            "ROUTINE TIPO MESSAGGIO --------->: " & ROUT_TIPO_MSG_s & Chr$(13) & _
+            "ROUTINE ERRORE MESSAGGIO ------->: " & ROUT_ERR_MSG_s
+                Debug.Print
+                Debug.Print "           ERRORE DELLA ROUTINE/FUNZIONE                         "
+                Debug.Print "-----------------------------------------------------------------"
+                Debug.Print Vv1
+                Debug.Print "-----------------------------------------------------------------"
+            Str1 = MsgBox(Vv1, vbCritical)
+            
+            '//BLOCCO DELLA ROUTINE.
+            Stop
+            Resume Exit_Nro_Fattura_DblClick
+            
+        '//.............................................................................................
+
+End Sub
+
+'//EVENTO DOPPIO CLICK NRO FATTURA  *** FINE ***
+'//===============================================================================================================================//

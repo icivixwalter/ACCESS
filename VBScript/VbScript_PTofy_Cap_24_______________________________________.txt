@@ -1,0 +1,52 @@
+
+Guida VBScript - Approfondimento FileSystemObject per Esperti
+
+Capitolo 24° - Approfondimento FileSystemObject per Esperti
+
+<< Precedente	
+	Prossimo >>
+Qualche esperto, potrebbe anche creare una versione avanzata dello script che visualizza la dimensione del disco. Se volete, inserisco del codice che visualizza la dimensione del disco in GigaByte e Terabyte in modo arrotondato (tramite delle conversioni). Basti pensare che 1 KiloByte è 1024 Byte, 1 MegaByte è 1024 KiloByte, 1 GigaByte è 1024 MegaByte e 1 TeraByte è 1024 GigaByte. Quindi basta fare valore \ 1024... ma c'è un problema, che analizzeremo dopo. Ecco il codice:
+
+CODICE:
+
+Option Explicit
+On Error Resume Next
+Dim fso,drv,inkb,inmb,ingb
+'Variabili (anche per la conversione)
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+'Creazione oggetto
+
+drv = InputBox("Inserisci il drive di cui vuoi sapere la dimensione")
+'Richiesta del drive
+
+inkb = CCur(fso.GetDrive(drv).TotalSize) / 1024
+'Da byte a kilobyte (byte / 1024)
+
+inmb = CCur(inkb) / 1024
+'Da kilobyte a megabyte (kb / 1024)
+
+ingb = CCur(inmb) / 1024
+'Da megabyte a gigabyte (mb / 1024)
+
+wscript.echo("Dimensione del disco rigido " & drv & " GigaByte (GB) e TeraByte (TB) :")
+'"Introduce"
+
+wscript.echo("")
+'Visualizza una riga vuota
+
+
+wscript.echo(Round(CDbl(ingb)) & " GB")
+'Visualizza in forma arrotondata Round(<valore>)
+'la dimensione in GigaByte
+
+wscript.echo(Round(CDbl(ingb)) / 1024 & " TB")
+'Visualizza in forma arrotondata Round(<valore>)
+'la dimensione in TeraByte
+
+Che ne dite di provarlo al dos col cscript ? Ecco la sintassi:
+
+cscript <nomefile>.vbs
+<< Precedente	
+	Prossimo >>
+Input invalido

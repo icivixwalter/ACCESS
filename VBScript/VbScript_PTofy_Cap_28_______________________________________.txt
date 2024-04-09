@@ -1,0 +1,41 @@
+
+Username: Password:
+oppure
+Guida VBScript - StdIn ed StdOut
+
+Capitolo 28° - StdIn ed StdOut
+
+<< Precedente	
+	
+StdIn ed StdOut, consentono di ricevere l'input da tastiera o visualizzare l'output (sono l'equivalente dei comandi scanf e printf del C). Da sottolineare che rispetto al C sono molto più semplici da usare: non bisogna infatti specificare il tipo di dato. Questo comando è molto utile nel dos (usando il cscript), addirittura talvolta non viene eseguito correttamente su Windows, e non serve per le pagine web. Serve solo ed esclusivamente per il Prompt. Da ricordare che sono due oggetti, quindi useremo il Set, ecco le dichiarazioni:
+
+SINTASSI:
+
+'//STDIN (input)
+Dim StdIn
+Set StdIn = WScript.StdIn
+
+'//STDOUT (output)
+Dim StdOut
+Set StdOut = WScript.StdOut
+
+In realtà potete usare un'altro esempio di già pronto che direttamente include i metodi ReadLine e WriteLine (proprio per ricevere l'input e scrivere sullo schermo):
+
+CODICE:
+
+Function ReadLine()
+    Dim StdIn
+    Set StdIn = WScript.StdIn 'Impostazione
+    ReadLine = StdIn.ReadLine 'Ritorno l'input
+End Function
+
+Sub WriteLine(text)
+    Dim StdOut
+    Set StdOut = WScript.StdOut 'Impostazione
+    StdOut.WriteLine(text) 'Scrivo l'output
+End Sub
+
+Se includiamo queste due funzioni, per prendere il valore ricevuto, userò ReadLine() e per scrivere userò WriteLine().
+<< Precedente	
+	
+Input invalido

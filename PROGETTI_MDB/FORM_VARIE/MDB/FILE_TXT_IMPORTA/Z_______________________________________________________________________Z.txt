@@ -1,0 +1,53 @@
+sì, segui questo esempio.
+1) Crea un file txt fatto ad esempio così:
+http://it.comp.appl.access.narkive.com/zNJBK7MW/natura-campi-in-tabella-collegata-di-tipo-text
+
+lik per il file .ini
+http://msdn2.microsoft.com/en-us/library/ms709353.aspx
+
+
+----
+"Nome";"Cognome";"Data";"Importo"
+"Pippo";"De Pippis";"31/12/2007";15,29
+"Paperino";"Paolino";"31/01/2007";8,19
+----
+
+
+Lo salvi con nome TestTabella.txt
+
+2) Nella stessa cartella in cui hai salvato il file "TestTabella.txt" crea
+un altro file che chiamerai "Schema.ini" così fatto:
+----
+[TestTabella.txt]
+ColNameHeader=True
+Format=Delimited(;)
+MaxScanRows=0
+CharacterSet=OEM
+Col1="Nome" Char Width 15
+Col2="Cognome" Char Width 20
+Col3="Data" Date Width 8
+Col4="Importo" Double
+----
+
+poi alleghi la tabella da codice VBA
+----
+Sub AllegaTabella()
+Dim db As DAO.Database
+Dim tbl As DAO.TableDef
+Set db = CurrentDb()
+Set tbl = db.CreateTableDef("TestTabella")
+
+tbl.Connect = "Text;DATABASE=C:\Dati;TABLE=TestTabella.txt"
+tbl.SourceTableName = "TestTabella.txt"
+db.TableDefs.Append tbl
+db.TableDefs.Refresh
+Set tbl = Nothing
+Set db = Nothing
+End Sub
+----
+cambia C.\Dati con il nome della cartella in cui hai salvato i due files.
+
+Ciao
+--
+Giorgio Rancati
+[Office Access MVP]

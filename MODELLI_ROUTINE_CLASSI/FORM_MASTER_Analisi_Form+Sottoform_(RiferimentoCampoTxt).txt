@@ -1,0 +1,20 @@
+FORM MASTER
+	Riferimento al campo testo di una sottoform esempi:
+	
+	
+	
+	
+	1° caso = Esiste una FORM MASTER con 12 Sottoform caricate.
+		  Per fare riferimento al campo della sottoform  2 occorre qualificare:
+			Riferimento da MASTER ---> SottForm_Pg_02  ---> CAMPO
+				Me.SottForm_Pg_02!OggettoAtto_m_Txt.SetFocus
+				
+	
+	
+	2° caso = MASTER A SCHEDE + SOTTOFORM 01 Master  a schede + Sottoform
+		Esistono 2 form master di cui la prima è la MASTER PRINCIPALE CON  12 
+		schede, e la 2° la Master Secondaria con 12 schede.
+		Per fare riferimento dalla MASTER PRINCIPALE ---> Master Secondaria occorre:
+			e riferimento al campo che si trova nella sottoform 02 questo è lo schema:
+				MASTER ---> Master ---->SottForm_Pg_02  ---> CAMPOTxt
+					Forms![GEST_FrmM00_GESTIONE_Nuova]![SottForm_Pg_02].Form![SottoForm_01]!OggettoAtto_m_Txt.SetFocus

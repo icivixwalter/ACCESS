@@ -1,0 +1,94 @@
+
+
+'//ROUTINE-------->:Form_AfterInsert()
+'//========================================================================================================================================//
+Private Sub Form_AfterInsert()
+
+ 
+
+On Error GoTo Err_Form_AfterInsert
+
+
+'//RESET VARIABILI
+ROUT_NRO_i = 1
+ROUT_ERR_MSG_s = "ERRORE NELL'EVENTO FORM Form_AfterInsert -> " & ME.Name
+ROUT_TIPO_MSG_s = "EVENTO FORM LOAD -> FORM " & ME.NAME
+
+
+
+    '//CARICAMENTO OGGETTI
+    '//----------------------------------------------------------------------------------------------
+    '//GE_CASA_Frm01_S01_S01_MASTRO_Coll_Xls.01.02
+    '//NOTA:  All'inserimento di nuovi record _
+    '//       della form corrente vengon svolte le seguenti attività.
+    
+           
+        '//REIMPOSTO_LA_CASELLA_COMBINATA
+        '//________________________________________________________________________________________
+        
+             '//Imposto il valore della casella combinata
+            'Me.Cmd_01_TXT.RowSourceType = "Elenco valori"
+            
+           ' Str1 = "01_CONTROLLA;02_CANCELLA DATI TMP;03_ACCODA DATI IN ARCHIVIO;04_UTILE 01"
+            
+            
+            '//Ipostazione di base appena visibile
+            'Me.Cmd_01_TXT = "COMANDI INTERNI FORM"
+            
+            
+        '//REIMPOSTO_LA_CASELLA_COMBINATA *** FINE ***
+        '//________________________________________________________________________________________
+  
+    
+    '//CARICAMENTO OGGETTI *** FINE ***
+    '//----------------------------------------------------------------------------------------------
+  
+
+
+
+'//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+'//GE_CASA_Frm01_S01_S01_MASTRO_Coll_Xls.03.01)    GESTIONE ERRORI E USCITA ROUTINE
+'//NOTA:
+
+Exit_Form_AfterInsert:
+    Exit Sub
+
+Err_Form_AfterInsert:
+
+        Vv1 = MsgBox("ERRORE NRO : " & Err.Number & " - TIPO DI ERRORE ==>: " & Err.Description & Chr$(13) _
+        & " - ROUTINE SUB: " & ROUT_NRO_i & " - " & ROUT_TIPO_MSG_s & " - " & ROUT_ERR_MSG_s, vbCritical)
+        
+        Resume Exit_Form_AfterInsert
+
+End Sub
+'//ROUTINE-------->:Form_AfterInsert() *** FINE ***
+'//========================================================================================================================================//
+
+
+
+
+'//MODELLO BASE
+Private Sub Form_AfterInsert()
+
+
+On Error GoTo Err_Form_AfterInsert
+
+
+
+'//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+'//GE_CASA_Frm01_S01_S01_MASTRO_Coll_Xls.03.01)    GESTIONE ERRORI E USCITA ROUTINE
+'//NOTA:
+
+Exit_Form_AfterInsert:
+    Exit Sub
+
+Err_Form_AfterInsert:
+
+        Vv1 = MsgBox("ERRORE NRO : " & Err.Number & " - TIPO DI ERRORE ==>: " & Err.Description & Chr$(13) _
+        & " - ROUTINE SUB: " & ROUT_NRO_i & " - " & ROUT_TIPO_MSG_s & " - " & ROUT_ERR_MSG_s, vbCritical)
+        
+        Resume Exit_Form_AfterInsert
+
+End Sub
+'//ROUTINE-------->:Form_AfterInsert() *** FINE ***
+'//========================================================================================================================================//

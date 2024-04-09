@@ -1,0 +1,47 @@
+
+Username: Password:
+oppure
+Guida VBScript - Oggetto FileSystem
+
+
+Guida VBScript
+
+Capitolo 23° - Oggetto FileSystem
+
+<< Precedente	
+	Prossimo >>
+L'oggetto FileSystem, ci consente di visualizzare le informazioni del disco rigido del computer. Per poter usare questo oggetto, come detto precedentemente, dobbiamo crearlo, col set. Riporto direttamente il codice (l'oggetto si chiama Scripting.FileSystemObject):
+
+CODICE:
+
+Option Explicit
+Dim fso
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+Dalla variabile fso, troveremo tutti i sottomembri:
+
+MEMBRO GETDRIVE:
+
+Il membro getdrive, ci consente di prendere tutte le informazioni rispetto a un drive. Ecco la sintassi:
+
+SINTASSI:
+
+fso.GetDrive(<drive>).<membro>
+
+SOTTOMEMBRI DI GETDRIVE:
+
+Analizziamo come primo membro "TotalSize" che ci restituisce in bytes la dimensione totale del drive.
+Quindi se vogliamo informazioni rispetto al drive C:, useremo:
+
+CODICE:
+
+Option Explicit
+Dim fso,drv
+Set fso = CreateObject("Scripting.FileSystemObject")
+drv = "C:" 'Usiamo il drive C
+wscript.echo(fso.GetDrive(drv).TotalSize)
+
+In questo esempio abbiamo visto come ottenere informazioni sulle dimensioni di un drive.
+<< Precedente	
+	Prossimo >>
+Input invalido

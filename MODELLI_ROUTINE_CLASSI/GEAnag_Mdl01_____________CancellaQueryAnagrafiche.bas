@@ -1,0 +1,1 @@
+Attribute VB_Name = "GEAnag_Mdl01_____________CancellaQueryAnagrafiche"

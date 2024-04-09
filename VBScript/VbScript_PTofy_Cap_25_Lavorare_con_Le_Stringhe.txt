@@ -1,0 +1,54 @@
+
+Username: Password:
+oppure
+Guida VBScript - Lavorare con le Stringhe
+
+
+Capitolo 25° - Lavorare con le Stringhe
+
+<< Precedente	
+	Prossimo >>
+Mi sono accorto che già PieroTofy aveva scritto un articolo per Visual Basic su questo argomento. Io mi limiterò a spiegare alcune funzioni, quelle più usate, ricordo che chi volesse approfondire, può leggere l'articolo di PieroTofy, ma si ricordi che in VBScript non esistono i metodi terminanti con la "$", quindi esiste Mid ma non Mid$ (che da errore). Ecco quindi le spiegazioni varie:
+
+Mid(<stringa>,<posinizio>,<chrs>)
+
+Restituisce dalla <stringa> specificata a partire da <posinizio>, n <chrs> di caratteri.
+
+Left(<stringa>,<chrs>)
+
+Restituisce a partire da sinistra n <chrs> di caratteri.
+
+Right(<stringa>,<chrs>)
+
+Restituisce a partire da destra n <chrs> di caratteri.
+
+LCase(<stringa>)
+
+Converte la stringa in minuscolo.
+
+UCase(<stringa>)
+
+Converte la stringa in maiuscolo.
+
+Asc(<carattere>)
+
+Converte in ascii <carattere>
+
+Chr(<ascii>)
+
+Restituisce il carattere abbinato a quell'ascii.
+
+Len(<stringa>)
+
+Restituisce la lunghezza della stringa.
+
+Trim(<stringa>)
+
+Rimuove gli spazi da una stringa.
+
+String(<numero>,<carattere>)
+
+Crea una stringa in cui <carattere> viene ripetuto <numero> volte.
+<< Precedente	
+	Prossimo >>
+Input invalido

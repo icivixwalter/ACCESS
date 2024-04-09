@@ -1,0 +1,39 @@
+
+Username: Password:
+oppure
+Guida VBScript - Regole e Problemi delle Stringhe
+
+Capitolo 26° - Regole e Problemi delle Stringhe
+
+<< Precedente	
+	Prossimo >>
+Le stringhe hanno delle regole, eccole:
+
+    Il loro valore si immette sempre tra " e " (Ecco perchè talvolta danno problemi)
+    Per concatenare si usa <stringa1> + <stringa2> oppure <stringa1> & <stringa2>
+
+
+Oltre ad avere delle regole, hanno un "grosso" problema:
+
+Condividono l'operatore + con i valori numerici. Quindi se vorremmo creare una calcolatrice in questo modo:
+
+CODICE:
+
+Option Explicit
+Dim a,b
+a = InputBox("Primo numero")
+b = InputBox("Secondo numero")
+wscript.echo(a+b)
+
+E diamo il valore ad a di 25 e a b di 30, vedremo:
+
+2530
+
+La forma corretta di scrivere il codice "wscript.echo(a+b)" è:
+
+wscript.echo(CDbl(a) + CDbl(b))
+
+Questo perchè bisogna prima convertire in Double.
+<< Precedente	
+	Prossimo >>
+Input invalido

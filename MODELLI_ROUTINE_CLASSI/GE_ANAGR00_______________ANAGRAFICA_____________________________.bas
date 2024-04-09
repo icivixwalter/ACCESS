@@ -1,0 +1,3 @@
+Attribute VB_Name = "GE_ANAGR00_______________ANAGRAFICA_____________________________"
+
+

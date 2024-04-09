@@ -1,0 +1,4 @@
+ECHO OFF
+cscript VbScript_PTofy_Cap_28_StdIn_ed_StdOut.vbs
+
+PAUSE

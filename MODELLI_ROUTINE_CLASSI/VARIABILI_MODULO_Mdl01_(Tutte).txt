@@ -1,0 +1,148 @@
+
+'//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+'//       LE VARIABILI DI MODULO
+'//
+'//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+'// LE OPZIONE DEL DATABASE
+'//===================================================================================================//
+
+    Option Compare Database
+    Option Explicit
+
+'//===================================================================================================//
+
+
+'//LE VARIABILI DEL MODULO DEFINITE
+'//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+
+'//01
+'//LE VARIABILI DATABASE
+'//....................................................................//
+    
+    '//Database e Recordset di tipo DAO
+    Dim DaoDB                                       As DAO.Database
+    Dim DaoWks                                      As DAO.Workspace
+    Dim DaoRs                                       As DAO.Recordset
+
+    '//Database e recordset di tipo ADO
+    Dim ADODB                                       As Database
+    Dim AdodaoRs                                    As Recordset
+    
+    
+    '//Stringa ssql e Path e per i Database ADO + DAO
+    Dim sSql                                        As String                       '//STRINGA SQL
+    Dim Path_s                                      As String                       '//la path del database
+
+
+    '//Contatori
+    Dim iCount                                      As Integer
+    Dim dbl_count                                   As Double
+    Dim NRO_CMD_i                                   As Integer                      '//Numero del comando
+    
+    
+    
+    'Le Variabili del Metodo TransferDatabase
+    '//-------------------------------------------------------------------------------
+        
+      Dim Tipo_Trasferimento_s                          As String                     '//Tipo di trasferimento
+         
+          
+      '// Tipo di database traferibili (paradox, excell ecc..)
+      Dim Tipo_Database_Dbase4_s                      As String                       '//...
+      Dim Tipo_Database_Dbase5_s                      As String                       '//...
+      Dim Tipo_Database_Paradox3_s                    As String
+      
+      '//Macro Trasferisci database = parametri
+      Dim Paths_s                                     As String                       '//Path database di destinazione
+      Dim Tipo_Oggetto_s                              As String                       '//Tipo di oggetto (es. acTable = Tabella, acQuery = Query ecc..)
+      Dim DbNomeDatabase_s                            As String                       '//Nome database (es. Database.mdb)
+      '//Gli oggetti del database corrente trasferibili
+      Dim OggettoOrigine_s                            As String                       '//nome oggetto di origine (es. della tabella, query ecc..)
+      Dim OggettoDestinazione_s                       As String                       '//nome oggetto di destinazione ((es. della tabella, query ecc..)
+      Dim SoloStruttura_b                             As Boolean                      '//solo struttura della tabella
+    
+      Dim SalvaIdConnessione_b                        As Boolean                      '//??
+    '//-------------------------------------------------------------------------------
+    
+
+'//....................................................................//
+
+'//02
+'//LE VARIABILI DEI MESSAGGI
+'//....................................................................//
+
+    '//Variabili box messaggi                                                       '//MESSAGGI WINDOWS ACCESS
+    Dim MsgBox_Title_s                              As String                       '//TITOLO DEL MESSAGGIO da emettere
+    Dim MsgBox_s                                    As String                       '//messaggio del modulo da costruire
+    
+'//....................................................................//
+
+
+'//03
+'//LE VARIABILI DEI MESSAGGI DI ERRORE DELLE ROUTINE O FUNZIONI -
+'//....................................................................//
+
+    '//Variabili box messaggi                                                       '//MESSAGGI DI ERRORE DELLE ROUTINE O LE FUNZIONI
+    Dim ROUT_NRO_i                                  As Integer                      '//Numero di routine/funzione
+    Dim ROUT_ERR_MSG_s                              As String                       '//messaggio di Errore della routine o funzione
+    Dim ROUT_NAME_MSG_s                             As String                       '//messaggio che identifica il nome della routine o funzione
+    Dim ROUT_TIPO_MSG_s                             As String                       '//Tipo di messaggio
+    Dim ROUT_TIPO_OPERAZ_MSG_s                      As String                       '//Messaggio sul Tipo di operazione eseguita
+    
+
+'//....................................................................//
+
+
+
+'//04
+'//LE VARIABILI GENERALI DELLA CLASSE FORM E DELLA CLASSE REPORT -
+'//....................................................................//
+
+ '//Variabili delle form e sotto form                                               '//LE VARIABILI PER LA GESTIONE DELLE FORM
+    Dim FormName_s                                  As String                       '//Nome della form
+    Dim SottFormName_s                              As String                       '//Nome della Sotto form collegata
+    Dim ReportName_s                                As String                       '//Nome del REPORT
+    Dim SottRportName_s                             As String                       '//Nome della Sotto REPORT collegata
+
+'....................................................................
+
+
+
+'//05
+'//LE VARIABILI DEGLI OGGETTI TABLE, QUERY, REPORT, MODULI E MACRO -
+'//....................................................................//
+    Dim TableName_s                                  As String                       '//Nome della tabella
+    Dim QueryName_s                                  As String                       '//Nome della tabella
+    Dim ModuloName_s                                 As String                       '//Nome del modulo
+    Dim MacroName_s                                  As String                       '//Nome della macro
+    
+
+
+'//06
+'//LE VARIABILI GENERICHE DI FUNZIONAMENTO
+'//....................................................................//
+
+    'Le variabili generiche
+    Dim Byte1 As Byte
+    Dim Dbl1 As Double
+    Dim Int1 As Integer
+    Dim Long1 As Long
+    Dim Bool1 As Boolean
+    Dim Str1 As String
+    Dim Vv1 As Variant
+    
+'//....................................................................//
+
+
+
+
+'//LE VARIABILI DEL MODULO DEFINITE *** FINE ***
+'//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::://
+
+
+'//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+'//       LE VARIABILI DI MODULO  *** fine ***
+'//
+'//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+

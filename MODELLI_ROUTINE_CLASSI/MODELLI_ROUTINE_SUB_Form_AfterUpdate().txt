@@ -1,0 +1,65 @@
+
+
+'//ROUTINE-------->:Form_AfterUpdate()
+'//========================================================================================================================================//
+Private Sub Form_AfterUpdate()
+
+ 
+
+On Error GoTo Err_Form_AfterUpdate
+
+
+'//RESET VARIABILI
+ROUT_NRO_i = 1
+ROUT_ERR_MSG_s = "ERRORE NELL'EVENTO FORM Form_AfterUpdate -> " & ME.Name
+ROUT_TIPO_MSG_s = "EVENTO FORM LOAD -> FORM " & ME.NAME
+
+
+
+    '//CARICAMENTO OGGETTI
+    '//----------------------------------------------------------------------------------------------
+    '//GE_CASA_Frm01_S01_S01_MASTRO_Coll_Xls.01.02
+    '//NOTA:  All'Aggiornamento del record o della casella combinata _
+    '//       della form corrente vengono svolte le seguenti attività.
+    
+           
+        '//REIMPOSTO_LA_CASELLA_COMBINATA
+        '//________________________________________________________________________________________
+        
+             '//Imposto il valore della casella combinata
+            'Me.Cmd_01_TXT.RowSourceType = "Elenco valori"
+            
+           ' Str1 = "01_CONTROLLA;02_CANCELLA DATI TMP;03_ACCODA DATI IN ARCHIVIO;04_UTILE 01"
+            
+            
+            '//Ipostazione di base appena visibile
+            'Me.Cmd_01_TXT = "COMANDI INTERNI FORM"
+            
+            
+        '//REIMPOSTO_LA_CASELLA_COMBINATA *** FINE ***
+        '//________________________________________________________________________________________
+  
+    
+    '//CARICAMENTO OGGETTI *** FINE ***
+    '//----------------------------------------------------------------------------------------------
+  
+
+
+
+'//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+'//GE_CASA_Frm01_S01_S01_MASTRO_Coll_Xls.03.01)    GESTIONE ERRORI E USCITA ROUTINE
+'//NOTA:
+
+Exit_Form_AfterUpdate:
+    Exit Sub
+
+Err_Form_AfterUpdate:
+
+        Vv1 = MsgBox("ERRORE NRO : " & Err.Number & " - TIPO DI ERRORE ==>: " & Err.Description & Chr$(13) _
+        & " - ROUTINE SUB: " & ROUT_NRO_i & " - " & ROUT_TIPO_MSG_s & " - " & ROUT_ERR_MSG_s, vbCritical)
+        
+        Resume Exit_Form_AfterUpdate
+
+End Sub
+'//ROUTINE-------->:Form_AfterUpdate() *** FINE ***
+'//========================================================================================================================================//

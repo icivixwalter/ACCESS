@@ -1,8 +1,0 @@
-MOD30_Frm01_S01_ELENCO_SCH01_65txt_campi
-
-
-	Note
-		Form di autocaricamento dei campi
-
-
-	

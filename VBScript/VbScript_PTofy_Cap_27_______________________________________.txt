@@ -1,0 +1,35 @@
+
+Username: Password:
+oppure
+Guida VBScript - Cenni di Crittografia
+
+Capitolo 27° - Cenni di Crittografia
+
+<< Precedente	
+	Prossimo >>
+La Crittografia consente di rendere dati in chiaro, dati incomprensibili che devono essere decifrati. Inventarsi un metodo di crittografia Fai-Da-Te è talvolta (sempre se l'algoritmo è robusto) in grado quasi di non essere forzato. Spesso per gli algoritmi di crittografia si usa una chiave, che permette di criptare il messaggio. L'uso della chiave è molto versatile, tranne se è una chiave a pochi bit perchè tramite tentativi vari si può arrivare alla chiave. Faccio subito l'esempio che usa uno XOR per crittografare tra l'ASCII della lettera e la chiave:
+
+CODICE:
+
+Option Explicit
+On Error Resume Next 'Se fa errore, non segnala
+
+Dim a,b,title 'Variabili
+
+title = "xOrCrYpT 0.2" 'titolo
+a = InputBox("Lettera da criptare:",title) 'richiesta della lettera
+b = InputBox("Chiave:",title) 'richiesta della chiave
+
+MsgBox "Ecco la lettera criptata: " & encrypt(a,b),vbInformation,title
+'visualizza la lettera criptata
+
+Function encrypt(char,key)
+'funzione di crittografia
+    encrypt = Asc(CStr(char)) XOR CInt(key)
+    'restituisce lo XOR fra il carattere e la chiave
+End Function
+
+Studiando l'algoritmo, si potrebbe arrivare a risultati migliori, aumentando la robustezza.
+<< Precedente	
+	Prossimo >>
+Input invalido

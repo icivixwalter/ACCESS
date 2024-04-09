@@ -5,6 +5,7 @@ GIT_BAT
 PROGETTI_MDB
 SUBLIME_PREFERENCES
 TUTORIAL
+MODELLI_ROUTINE_CLASSI
 A________________________________________________________________________A.txt
 Progetti_ACCESS.sublime-project
 Progetti_ACCESS.sublime-workspace

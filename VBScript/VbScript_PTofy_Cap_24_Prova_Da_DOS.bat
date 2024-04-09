@@ -1,0 +1,3 @@
+cscript VbScript_PTofy_Cap_24_Oggetto_FileSystem_Approfondimento.vbs
+
+pause

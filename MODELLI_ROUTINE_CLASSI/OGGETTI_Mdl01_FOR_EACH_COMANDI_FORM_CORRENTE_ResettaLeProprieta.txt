@@ -1,0 +1,120 @@
+'//RESETTA I COMANDI CON IL CICLO FOR EACH NELL'INSIEME CONTROLS DELLA FORM
+'//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+'//CODICE----->RESETTA_PROPRIETA_DEI_COMANDI_CicloForEach.Controls.Attiva
+'//-----------------------------------------------------------------------------------------//
+'//Nota         : resetto tutti controlli della form
+'//01           -> ?
+'//02           -> ?
+'//03           -> ?
+'//04           -> ?
+'//-----------------------------------------------------------------------------------------//
+Private Sub RESETTA_PROPRIETA_DEI_COMANDI()
+
+On Error GoTo Err_RESETTA_PROPRIETA_DEI_COMANDI
+
+                   
+                    
+            '//NUOVO SISTEMA DI IMPOSTAZIONE DEI COMANDI CON IL CICLO FOR EACH NEGLI OGGETTI CONTROL DELLA FORM CORRENTE
+            '//CONTROLLO OGGETTO PAGE DELL'INSIEME PAGES DI UNA TAB CONTROLL
+            '//=======================================================================================================================//
+            'Nota : Nell'insieme ALLFORMS viene impostata un variabile oggetto FORM che ha al suo
+            'interno un insieme CONTROLS.
+            'Con il ciclo form Each viene iterato su tutti gli oggetti controls della form corrente finchè la PROPRIETA
+            '.ControlType = 104 OSSIA
+            
+                
+                
+                '//impostazione oggetti da utilizzare
+                Dim tbc As Control                  '//CONTROLLO A SCHEDE con insieme controls da esaminare
+                Dim pge As Page                     '//control = PAGINA DI CONTROLLO DA ESAMINARE dell'insieme controls
+                Dim frm As Form                     '//OGGETTO FORM dell'insieme FORMS da esaminare, è la form corrente
+                Dim ctl As Control                  '//OGGETTO Control della form corrente dell'insieme Controls
+             
+                
+                'Dim intI As Integer, intCanEdit As Integer
+              
+                
+                    '//IMPOSTO I COMANDI DELLA FORM CORRENTE CON IL CICLO FOR EACH
+                    '//------------------------------------------------------------------------------------------------------//
+                            '//RIFERIMENTO AGLI INSIEMI FORMS ED ALL'OGGETTO FORM con il nome maschera
+                            '//NOTE: L'oggetto FORM fa riferimento all'insieme FORMS si può _
+                            fare riferimento al singolo oggetto form con il NOME, L'INDICE. _
+                            In base al nome non subisce modifiche come l'indice tenendo presente che _
+                            se il nome contiene spazzi occorre utilizzare il [] altrimenti (), esempio _
+                            Forms("nomemaschera") Forms("MascheraOrdine") _
+                            Forms![nome maschera] Forms![Maschera Ordine] _
+                            Forms!nomemaschera Forms!MascheraOrdine _
+                            Forms(indice) Forms(0)
+                        
+                            vV1 = Me.Name
+                            '//imposto l'oggetto form
+                            'Set frm = Me.Application.Forms(0)  '// questo con l'indice
+                            'Set frm = Forms("AA")              '//questo con il nome form senza spazi
+                            Set frm = Forms(vV1)
+                            
+            
+                  
+                                
+                            
+                               For Each frm In Forms
+                                ' Stampa nome della maschera.
+                                Debug.Print frm.Name
+                                ' Enumera insieme Controls di ciascuna maschera.
+                                For Each ctl In frm.Controls
+                                    ' Stampa nome di ciascun controllo.
+                                    Debug.Print ">>>"; ctl.Name
+                                    
+                                      With ctl
+                                         '//nell'insieme CONTROLS DELLA FORM CORRENTE _
+                                         individuo quelli command con la costante vba
+                                         Select Case .ControlType
+                                                Case acCommandButton
+                                                    '//del comando esistente imposto le tre proprieta, caption al nome dell'oggetto _
+                                                    e a visibile e abilitato.
+                                                    .Caption = ctl.Name
+                                                    .Visible = True
+                                                    .Enabled = True
+                                                    
+                                                    
+                                                    '//stampa del controllo e delle sue proprieta
+                                                    Debug.Print "trovato il CMDN ------------------------> " & ctl.Name
+                                                    Debug.Print "proprieta TIPO di controllo ------------> " & .ControlType
+                                                    Debug.Print
+                                                    
+                                                    Debug.Print "LE PROPRIETA DEL CONTROLLO IMPOSTATE NEL CICLO"
+                                                    Debug.Print "proprieta .Caption impostata a ---------> " & .Caption
+                                                    Debug.Print "proprieta .Visible impostata a ---------> " & .Visible
+                                                    Debug.Print "proprieta .Enabled impostata a ---------> " & .Enabled
+                                                    
+                                                    
+                                        End Select
+                                        End With
+                                                
+                                Next ctl
+                                
+                                Next frm
+                            
+                               
+            
+            '//*** FINE ***
+            '//CONTROLLO OGGETTO PAGE DELL'INSIEME PAGES DI UNA TAB CONTROLL
+            '//------------------------------------------------------------------------------------------------------//
+
+'//*** fine ***
+'//NUOVO SISTEMA DI IMPOSTAZIONE DEI COMANDI CON IL CICLO FOR EACH NEGLI OGGETTI CONTROL DELLA FORM CORRENTE
+'//CONTROLLO OGGETTO PAGE DELL'INSIEME PAGES DI UNA TAB CONTROLL
+'//=======================================================================================================================//
+
+
+Exit_RESETTA_PROPRIETA_DEI_COMANDI:
+    Exit Sub
+
+Err_RESETTA_PROPRIETA_DEI_COMANDI:
+    MsgBox Err.Description
+    Resume Exit_RESETTA_PROPRIETA_DEI_COMANDI
+
+End Sub
+
+'//*** fine ***
+'//RESETTA I COMANDI CON IL CICLO FOR EACH NELL'INSIEME CONTROLS DELLA FORM
+'//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//

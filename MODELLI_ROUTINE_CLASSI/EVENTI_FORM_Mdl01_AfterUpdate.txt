@@ -1,0 +1,61 @@
+
+'//######################################################################################################################################################//
+'//                                     ROUTINE + FUNZIONI
+'//######################################################################################################################################################//
+
+
+
+
+
+'//ROUTINE--------->:Sub Cmd_01_TXT_AfterUpdate()
+'//========================================================================================================================================//
+'//DA_CAMBIARE----->:Cmd_01_TXT_                                                    (CODICE DA CAMBIARE IN COLLETTIVAMENTE)
+'//Tipo------------>:Routine.
+'//Attività-------->:Aggiornamento campo Cmd_01_TXT _
+'//Note------------>:Aggiorna il campo
+'//Codice---------->:Cmd_01_TXT_AfterUpdate.01
+
+Private Sub Cmd_01_TXT_AfterUpdate()
+
+On Error GoTo Err_Cmd_01_TXT_AfterUpdate
+
+
+
+ '//I comandi della form
+    Dim CMD_NRO_i As Integer                    '//Numero del comando
+    Dim CMD_ERR_MSG_s As String                 '//Messaggio del Comando
+    Dim CMD_TIPO_s As String                    '//TIPO Comando (ES. Evento Load, Update ecc.)
+
+
+'//RESET VARIABILI
+CMD_NRO_i = 0
+CMD_TIPO_s = "EVENTO UPDATE OGGETTO -> Cmd_01_TXT_AfterUpdate"
+CMD_ERR_MSG_s = "ERRORE NELL'EVENTO DI AGGIORNAMENTO DELL'OGGETTO -> Cmd_01_TXT_AfterUpdate (CODICE :Cmd_01_TXT_AfterUpdate.01)"
+
+
+'//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+'//GESTIONE ERRORI E USCITA ROUTINE
+'//Codice---------->:Cmd_01_TXT_AfterUpdate.01
+'//NOTA:...
+
+Exit_Cmd_01_TXT_AfterUpdate:
+    Exit Sub
+
+Err_Cmd_01_TXT_AfterUpdate:
+
+        Vv1 = MsgBox("ERRORE NRO : " & Err.Number & " - TIPO DI ERRORE : " & Err.Description & Chr$(13) _
+        & " - ROUTINE SUB: " & CMD_NRO_i & " - " & CMD_TIPO_s & " - " & CMD_ERR_MSG_s, vbCritical)
+        
+        Resume Exit_Cmd_01_TXT_AfterUpdate
+
+End Sub
+'//ROUTINE-------->:Sub Cmd_01_TXT_AfterUpdate() *** FINE ***
+'//========================================================================================================================================//
+
+
+
+
+'//######################################################################################################################################################//
+'//                                     ROUTINE + FUNZIONI      *** FINE ***
+'//######################################################################################################################################################//
+

@@ -1,0 +1,417 @@
+Option Compare Database
+Option Explicit
+
+'//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+'//       LE VARIABILI DI MODULO
+'//
+'//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+
+'//LE VARIABILI DATABASE
+'//....................................................................//
+    
+    '//Database e Recordset di tipo DAO
+    Dim DaoDB                                       As DAO.Database
+    Dim DaoWks                                      As DAO.Workspace
+    Dim DaoRs                                       As DAO.Recordset
+
+    '//Database e recordset di tipo ADO
+    Dim ADODB                                       As Database
+    Dim AdodaoRs                                    As Recordset
+    
+    
+    '//Stringa ssql e Path e per i Database ADO + DAO
+    Dim sSql                                        As String                       '//STRINGA SQL
+    Dim Path_s                                      As String                       '//la path del database
+
+
+    '//Contatori
+    Dim icount                                      As Integer
+    Dim dbl_count                                   As Double
+    Dim NRO_CMD_i                                   As Integer                      '//Numero del comando
+    
+    'Le Variabili del Metodo TransferDatabase
+    
+    Dim Tipo_Trasferimento_s                        As String                       '//definire funzioni??...
+    Dim Tipo_Database_Dbase4_s                      As String                       '//...
+    Dim Tipo_Database_Paradox3_s                    As String
+    Dim SoloStruttura_b                             As Boolean
+    Dim NomeDabataseDb_s                            As String
+    Dim DbOrigine_s                                 As String
+    Dim DbDestinazione_s                            As String
+    Dim SalvaIdConnessione_b                        As Boolean
+
+'//....................................................................//
+
+
+'//LE VARIABILI DEI MESSAGGI
+'//....................................................................//
+
+    '//Variabili box messaggi                                                       '//MESSAGGI WINDOWS ACCESS
+    Dim MsgBox_Title_s                              As String                       '//TITOLO DEL MESSAGGIO da emettere
+    Dim MsgBox_s                                    As String                       '//messaggio del modulo da costruire
+    
+'//....................................................................//
+
+
+
+'//LE VARIABILI DEI MESSAGGI DI ERRORE DELLE ROUTINE O FUNZIONI -
+'//....................................................................//
+
+    '//Variabili box messaggi                                                       '//MESSAGGI DI ERRORE DELLE ROUTINE O LE FUNZIONI
+    Dim ROUT_NRO_i                                  As String                       '//Numero di routine/funzione
+    Dim ROUT_ERR_MSG_s                              As String                       '//messaggio di Errore della routine o funzione
+    Dim ROUT_NAME_MSG_s                             As String                       '//messaggio che identifica il nome della routine o funzione
+    
+'//....................................................................//
+
+
+
+
+'//LE VARIABILI GENERALI DELLA CLASSE FORM -
+'//....................................................................//
+
+ '//Variabili delle form e sotto form                                               '//LE VARIABILI PER LA GESTIONE DELLE FORM
+    Dim FormName_s                                  As String                       '//Nome della form
+    Dim SottFormName_s                              As String                       '//Nome della Sotto form collegata
+
+'....................................................................
+
+
+
+
+'//LE VARIABILI DI PROCEDURA DEI MODULI E DELLE FUNZIONI
+'//....................................................................//
+
+'//ERRORI PROCEDURA_FUNCTION O ROUTINE
+Dim ProceduraMessaggioErrore_s As String
+Dim ProceduraAttivaEseguita_s As String
+
+
+
+'//LE VARIABILI GENERICHE DI FUNZIONAMENTO
+'//....................................................................//
+
+    'Le variabili generiche
+    Dim Byte1 As Byte
+    Dim Vv1 As Variant
+    Dim Dbl1 As Double
+    Dim Int1 As Integer
+    Dim Long1 As Long
+    Dim Bool1 As Boolean
+    Dim String1 As String
+
+
+'//....................................................................//
+
+'//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+'//       LE VARIABILI DI MODULO  *** fine ***
+'//
+'//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+
+
+
+
+
+
+
+
+
+***********************************************************************************************************************
+' TabCtl_01_Change()
+'
+'***********************************************************************************************************************
+
+'//DENOMINAZIONE---------> TabCtl_01_Change
+'//=================================================================================================================//
+'//TIPO------------------> Routine privata.
+'//ATTIVITA--------------> GESTIONE DELLE PAGINE TAB CONTROLL
+'//NOTE------------------> ....
+'//PARAMETRI-------------> Nessuno
+'//VALORE_DI_RITORNO-----> Nulla
+'//CODICE----------------> TabCtl_01_Change.01.00
+'//=================================================================================================================//
+
+
+Private Sub TabCtl_01_Change()
+
+'//DIM--------------------------
+Dim ixPage As Integer
+
+
+'//-----------------------------
+
+    On Error GoTo Err_TabCtl_01_Change
+        
+       '//Riaggiorno la form principale
+       'Me.Recalc
+       'Me.Requery
+       
+    '//RESET
+    ProceduraMessaggioErrore_s = ""
+    ProceduraAttivaEseguita_s = ""
+
+
+    '//IMPOSTO LE VARIABILI
+    ProceduraMessaggioErrore_s = "GESTIONE DEI FALDONI"
+    ProceduraAttivaEseguita_s = "Modello_FUNZIONE_N01_PFucnt"
+
+       
+    'PAGINE
+    '____________________________________________________________________________________________________________
+        
+        
+        'RECUPERO IL NOME PAGINA CORRENTE
+        '............................................................................
+             ixPage = Me.TabCtl_01
+            
+           '............................................................................
+        
+        
+        If Me.TabCtl_01.Value = 0 Then
+               
+                    'PG_01
+                    '............................................................................
+                
+                        Me.SottForm_Pg_01.Requery
+                        Me.Recalc
+                '............................................................................
+                 
+    'Pag 2
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 1 Then
+    
+                    
+                    'PG_02
+                    '............................................................................
+                        
+                         Me.SottForm_Pg_02.Requery
+                         Me.Recalc
+                
+    'Pag 3
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 2 Then
+    
+                
+                'PG_03 - TAB CONTROLL -> TabCtl_01.value=2
+                '............................................................................
+                          
+                         Me.SottForm_Pg_03.Requery
+                         Me.Recalc
+                        
+                '............................................................................
+                    
+                
+    'Pag 4
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 3 Then
+    
+                
+                'PG_04
+                '............................................................................
+                    'Imposto il valore della casella combinata
+                    
+                        
+                        Me.SottForm_Pg_04.Requery
+                        Me.Recalc
+                        
+                '............................................................................
+            
+    '____________________________________________________________________________________________________________
+
+                 
+    'Pag 5
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 4 Then
+    
+                'Aggiorno form
+                'Me.Pg_05.Requery
+                
+                
+                
+                'PG_05 TAB CONTROLL -> TabCtl_01.value=4
+                '............................................................................
+                    'Imposto il valore della casella combinata
+                   '............................................................................
+                
+                        
+                  
+                    
+                '............................................................................
+                
+                '//REQUERY DELLA SOTTOFORM_5
+                 Me.SottForm_Pg_05.Requery
+                 Me.Recalc
+                         
+    '____________________________________________________________________________________________________________
+
+    'Pag 6
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 5 Then
+    
+                'Aggiorno form
+                'Me.Pg_06.Requery
+                
+                
+                
+                'PG_06 TAB CONTROLL -> TabCtl_01.value=5
+                '............................................................................
+                         
+                         
+                        
+                '............................................................................
+                
+                '//REQUERY DELLA SOTTOFORM_6
+                Me.SottForm_Pg_06.Requery
+                Me.Recalc
+                         
+    '____________________________________________________________________________________________________________
+        
+            
+            
+    'Pag 7
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 6 Then
+    
+                'Aggiorno form
+                'Me.Pg_07.Requery
+                
+                
+                
+                'PG_07 ???
+                '............................................................................
+                   
+                  '............................................................................
+                
+                '//REQUERY DELLA SOTTOFORM_7
+                 Me.SottForm_Pg_07.Requery
+                 Me.Recalc
+                         
+    '____________________________________________________________________________________________________________
+            
+        
+
+            
+    'Pag 8
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 7 Then
+    
+                'Aggiorno form
+                'Me.Pg_08.Requery
+                
+                
+                
+                'PG_08
+                '............................................................................
+                        
+                        
+                '............................................................................
+                
+                '//REQUERY DELLA SOTTOFORM_8
+                 Me.SottForm_Pg_08.Requery
+                 Me.Recalc
+                         
+    '____________________________________________________________________________________________________________
+            
+                
+                
+                
+            
+    'Pag 9
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 8 Then
+    
+                'Aggiorno form
+                'Me.Pg_09.Requery
+                
+                
+                
+                'PG_09
+                '............................................................................
+                    'Imposto il valore della casella combinata
+                    
+                        
+                '............................................................................
+                
+                '//REQUERY DELLA SOTTOFORM_9
+                Me.SottForm_Pg_09.Requery
+                Me.Recalc
+                
+                         
+    '____________________________________________________________________________________________________________
+            
+
+
+            
+    'Pag 10
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 9 Then
+    
+                '
+                
+                
+                
+                'PG_10
+                '............................................................................
+                    'Imposto il valore della casella combinata
+                    
+                        
+                '............................................................................
+                
+                '//REQUERY DELLA SOTTOFORM_10
+                Me.SottForm_Pg_10.Requery
+                Me.Recalc
+                         
+    '____________________________________________________________________________________________________________
+            
+
+            
+    'Pag 11
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 10 Then
+    
+              
+    '____________________________________________________________________________________________________________
+            
+
+    'Pag 12
+    '____________________________________________________________________________________________________________
+        ElseIf Me.TabCtl_01.Value = 11 Then
+    
+              
+    '____________________________________________________________________________________________________________
+            
+   
+                
+        
+    End If
+    
+    
+    '//Aggiorno la form master
+    'Me.Recalc
+    'Me.Requery
+                
+
+'USCITA  E GESTIONE ERRORI
+'..............................................................................................................
+
+Exit_TabCtl_01_Change:
+    Exit Sub
+
+Err_TabCtl_01_Change:
+   
+    MsgBox Err.Description & " " & ProceduraMessaggioErrore_s & " - " & ProceduraAttivaEseguita_s & " --> errore Error$ -> : " & Error$
+    Debug.Print ProceduraMessaggioErrore_s
+    Debug.Print ProceduraAttivaEseguita_s
+    Debug.Assert "BLOCCO PROCEDURA -> " & ProceduraAttivaEseguita_s
+
+    
+    Resume Exit_TabCtl_01_Change
+
+
+End Sub
+
+'//DENOMINAZIONE---------> TabCtl_01_Change *** FINE ***
+'//=================================================================================================================//
+

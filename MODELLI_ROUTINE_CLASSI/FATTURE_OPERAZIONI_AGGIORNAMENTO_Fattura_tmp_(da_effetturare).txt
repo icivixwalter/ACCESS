@@ -1,0 +1,55 @@
+
+
+Creare una funzione che consenta le seguenti operazioni :
+
+01)	SVUOTO I DATI DELLA TABELLA TMP 
+	INSERIMENTO DELLA FATTURA IN LAVORAZIONE NELLA TABELLA fatture_tmp
+
+02)	SVUOTO I DATI DELLA TABELLA TMP 
+	INSERIMENTO DELLE VOCI RELATIVA ALLA FATTURA IN LAVORAZIONE nella tabella Voci fatture tmp
+
+
+
+
+
+
+queste sono le vecchi operazioni da recupeare; vedere se possono essere utili???
+
+        '//07.01.05
+        '//AGGIORNO IL CAMPO IDKEY DELLA FATTURA
+        '//Per salvare l'integrita della tabella collegata con IDFATTURE->IDFATTURE delle voci fatture _
+           solo il campo della tabbella fatture emesse ->IDKeyArch
+        DoCmd.OpenQuery "AGGIORNA_Qy01-01_AggiornaIdKey->Fatture_Tb01_Emesse"
+        
+        
+
+        '//07.01.06 NW
+        '//FATTURE_EMESSE_TMP:CANCELLO I DATI NELLA TABELLA TMP _
+        '//----------------------------------------------------------------- _
+           NUOVE QUERY CHE AGISCONO SULLA TABELLA <<Fatture_Tb02_Emesse_TMP>>
+           
+           '//Cancello i dati ed accodo le fatture e le voci della fattura selezionata
+           '//nelle tabella Archivio Fatture.
+                '//Cancello i dati mediante la query _
+                FATTURE_QryTb02_80_|--------------------------------------DELETE
+                'DoCmd.OpenQuery (FATTURE_QryTb02_81_DELETE_Dati_Tb02_Emesse_TMP)
+                
+                '//Accodo la fattura selezionata nella tabella tmp
+           '??DoCmd.OpenQuery ("FattureVs01_N02-02_FattureEmesse_Tmp_CancellaDati")
+           '?? DoCmd.OpenQuery ("FattureVs01_N02-07_FattureEmesse_AccodaDati_InTmp_RecordCorr")
+        
+        '//-----------------------------------------------------------------
+
+    '//07.01.07
+    '//PARAMETRI_FATTURE: ACCODA DATI NELLA TABELLA Fatture_Tb10_ParametriFatture_TMP
+    '//-----------------------------------------------------------------
+
+        '//Cancello i dati ed accodo i dati della tabella fatture emesse
+        '//nella tabella Fatture_Tb10_ParametriFatture_TMP
+        'DoCmd.OpenQuery ("FATTURE_QryTb10_81_DELETE->Dati_Tb10_ParametriFatture_TMP")
+        'DoCmd.OpenQuery ("FATTURE_QryTb10_71_ACCODA->Dati_Tb10_ParametriFatture_TMP")
+     
+    '//-----------------------------------------------------------------
+    
+
+

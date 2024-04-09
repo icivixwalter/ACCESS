@@ -1,0 +1,89 @@
+
+'//*****************************************************************************************************************************
+'//                                         LE ROUTINE
+'//*****************************************************************************************************************************
+
+
+
+Private Sub NroOrd_Ogg_Colleg_i_TXT_AfterUpdate()
+'//ROUTINE-------->:NroOrd_Ogg_Colleg_i_TXT_AfterUpdate()
+'//========================================================================================================================================//
+'//CODICE       ->NroOrd_Ogg_Colleg_i_TXT_AfterUpdate.00
+'//POSIZIONE    ->POSIZIONE_NroOrd_Ogg_Colleg_i_TXT_AfterUpdate
+    
+
+ 
+
+On Error GoTo Err_NroOrd_Ogg_Colleg_i_TXT_AfterUpdate
+
+
+'//RESET VARIABILI
+ROUT_NRO_i = 1
+ROUT_ERR_MSG_s = "ERRORE NELL'EVENTO AGGIORNA CAMPO -> NroOrd_Ogg_Colleg_i_TXT_AfterUpdate "
+ROUT_TIPO_MSG_s = "EVENTO AGGIORNA CAMPO -> NroOrd_Ogg_Colleg_i_TXT "
+
+
+
+    '//ATTIVITA DI AGGIORNAMENTO CAMPO FORM
+    '//----------------------------------------------------------------------------------------------
+    '//CODICE->NroOrd_Ogg_Colleg_i_TXT_AfterUpdate.02
+    '//NOTA:  All'Aggiornamento del record o della casella combinata _
+    '//       della form corrente vengono svolte le seguenti attività.
+    
+           
+        '//REIMPOSTO_LA_CASELLA_COMBINATA
+        '//________________________________________________________________________________________
+        
+             '//Imposto il valore della casella combinata
+            'Me.Cmd_01_TXT.RowSourceType = "Elenco valori"
+            
+            ' Str1 = "01_CONTROLLA;02_CANCELLA DATI TMP;03_ACCODA DATI IN ARCHIVIO;04_UTILE 01"
+            
+            
+            '//Ipostazione di base appena visibile
+            'Me.Cmd_01_TXT = "COMANDI INTERNI FORM"
+            
+            
+        '//REIMPOSTO_LA_CASELLA_COMBINATA *** FINE ***
+        '//________________________________________________________________________________________
+  
+    
+    '//ATTIVITA DI AGGIORNAMENTO CAMPO FORM *** FINE ***
+    '//----------------------------------------------------------------------------------------------
+  
+
+
+'//GESTIONE ERRORI E USCITA ROUTINE
+'//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+'//NroOrd_Ogg_Colleg_i_TXT_AfterUpdate()_ERROR
+'//NOTA: Uscita e Gestione degli errori dell'Evento.
+
+Exit_NroOrd_Ogg_Colleg_i_TXT_AfterUpdate:
+    Exit Sub
+
+Err_NroOrd_Ogg_Colleg_i_TXT_AfterUpdate:
+
+        Vv1 = MsgBox("ERRORE NRO : " & Err.Number & " - TIPO DI ERRORE ==>: " & Err.Description & Chr$(13) _
+        & " - ROUTINE SUB: " & ROUT_NRO_i & " - " & ROUT_TIPO_MSG_s & " - " & ROUT_ERR_MSG_s, vbCritical)
+            
+        '//Stop + Fine programma.
+        Debug.Print
+        Debug.Print "                   ERRORE_FUNZIONE                             "
+        Debug.Print "---------------------------------------------------------------"
+        Debug.Print "Nome_Funzione          -> " & ROUT_ERR_MSG_s
+        Debug.Print "Posizione programma    ->  POSIZIONE_NroOrd_Ogg_Colleg_i_TXT_AfterUpdate "
+        Debug.Print "---------------------------------------------------------------"
+            Stop
+
+        Resume Exit_NroOrd_Ogg_Colleg_i_TXT_AfterUpdate
+
+End Sub
+'//ROUTINE-------->:NroOrd_Ogg_Colleg_i_TXT_AfterUpdate() *** FINE ***
+'//========================================================================================================================================//
+
+
+
+'//*****************************************************************************************************************************
+'//                                         LE ROUTINE *** FINE ***
+'//*****************************************************************************************************************************
+

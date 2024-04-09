@@ -1,0 +1,92 @@
+Guida VBScript
+
+Capitolo 22° - Le MsgBox
+
+<< Precedente	
+	Prossimo >>
+Le Message Box ci consentono di visualizzare messaggi personalizzati, usando anche icone varie. L'istruzione che ci consente di fare tutto questo è la MsgBox. Ecco in dettaglio MsgBox:
+
+FUNZIONE:
+
+MsgBox text -string, [style], [title -string]
+
+PARAMETRI:
+
+text  = Rappresenta il testo che deve essere visualizzato
+style = Rappresenta lo stile dei bottoni e dell'icona
+title = Titolo della finestra
+
+PARAMETRO STYLE:
+
+Ecco gli stili più importanti:
+Stili pulsanti:
+
+    vbYesNo (Sì, No)
+    vbYesNoCancel (Sì, No, Annulla)
+    vbOk (Ok)
+    vbOkCancel (Ok, Annulla)
+
+
+
+Stili icone:
+
+    vbInformation ("i" Informazione)
+    vbQuestion ("?" Domanda)
+    vbCritical ("x" Errore critico)
+    vbExclamation ("!" Esclamazione)
+
+
+
+VALORI DI RITORNO:
+MsgBox, ogni volta che si preme un pulsante, ritorna un valore ad una variabile.Ecco i valori di ritorno:
+
+    vbOk (Ok)
+    vbYes (Sì)
+    vbNo (No)
+    vbCancel (Annulla)
+
+
+
+REGOLE:
+
+Per usare due stili contemporaneamente (pulsanti + icona), basta usare <vbstilepulsante>+<vbstileicona>
+Per elaborare una richiesta, si usa la seguente sintassi:
+
+SINTASSI:
+
+Dim return 'Valore ritorno
+return = MsgBox(<parametri>) 'MsgBox che ritorna il valore
+If return = <valoreritorno> Then
+'Se il valore di ritorno è... allora...
+<istruzioni>
+End If
+
+Ecco un quiz scritto in VBS:
+
+CODICE:
+
+Option Explicit
+On Error Resume Next
+
+Dim title,risposta
+
+title = "QuIz! 2.0" 'Titolo dell'applicazione
+
+risposta=MsgBox("Il coccige è la parte terminale della colonna vertebrale ?",vbYesNo+vbQuestion,title)
+'Visualizza una MsgBox
+
+if risposta=vbYes then
+'Se la risposta è si
+
+MsgBox "Esatto!",vbInformation,title
+'Visualizza esatto
+
+else
+'altrimenti
+
+MsgBox "Hai sbagliato!" & vbCrLf & "Che ci vuoi fare...",vbExclamation,title
+'Visualizza sbagliato
+end if
+<< Precedente	
+	Prossimo >>
+Input invalido

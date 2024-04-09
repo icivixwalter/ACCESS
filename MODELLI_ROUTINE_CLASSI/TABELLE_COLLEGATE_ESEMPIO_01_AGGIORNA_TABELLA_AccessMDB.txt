@@ -1,0 +1,114 @@
+'//FUNZIONE COLLEGA TABELLA ACCESS PROFESSIONISTI
+'//========================================================================================================================================//
+'//Tipo           : Funzione pubblica senza parametri di COLLEGAMENTO DELLA TABELLA PROFESSIONISTI, refresh LINK
+'//Attività       : Refresh della tabella collegata
+'//Note           : Attenzione se non esiste da errore
+'//Modulo         : Il nome del modulo corrente che contiene la routine è TABELLE_COLLEGATE_Mdl01_DF20_IMPRESE_PROFESSIONISTI , VIENE _
+                    Attivata con una Macro TABELLE_COLLEGATE_MCR01_DF20_IMPRESE_PROFESSIONISTI che attiva il refresh del collegamento. Gli oggetti che sono _
+                    da esportare per tale attività sono i seguenti: _
+                    MACRO   : TABELLE_COLLEGATE_Mcr00_{@====================================@} _
+                    TABELLE_COLLEGATE_MCR01_DF20_IMPRESE_PROFESSIONISTI _
+                    MODULI  :TABELLE_COLLEGATE_Mdl00_{@====================================@} _
+                    TABELLE_COLLEGATE_Mdl01_DF20_IMPRESE_PROFESSIONISTI
+'//Parametro      : ?
+'//Codice         : COLLEGA_TABELLA_ACCESS_Professionisti_PFunct.01
+'//
+
+'//PROVO L'ATTIVAZIONE DELLA PROCEDURA
+Private Sub CHIAMA_COLLEGA_TABELLA_ACCESS_Professionisti_PFunct()
+    '//ATTIVO LA PROCEDURA
+    Call COLLEGA_TABELLA_ACCESS_Professionisti_PFunct
+    
+End Sub
+
+Public Function COLLEGA_TABELLA_ACCESS_Professionisti_PFunct()
+'//Codice         : COLLEGA_TABELLA_ACCESS_Professionisti_PFunct.01
+
+'//Oggetti DAO e DB con tabelle
+Dim Tdf As DAO.TableDef
+Dim Db As DAO.Database
+Set Db = CodeDb
+
+'//MessaggiDiErrore
+Dim ProceduraMessaggioErrore_s As String
+Dim ProceduraAttivaEseguita_s As String
+ 
+ 
+'//Campo path e tabella
+Dim Path_s                          As String
+Dim FileDb_s                        As String
+Dim TabellaCollegata_s              As String
+
+            
+    '//....
+On Error GoTo Err_COLLEGA_TABELLA_ACCESS_Professionisti_PFunct
+
+
+        
+        '//Imposto i parametri=
+        ProceduraAttivaEseguita_s = "COLLEGA_TABELLA_ACCESS_Professionisti_PFunct"
+        ProceduraMessaggioErrore_s = "Errore nella procedura"
+        FileDb_s = "LLPP_ATTI_Tb01_GESTIONE.mdb"
+        Path_s = "C:\GESTIONI\GESTIONE_LLPP\25_GESTIONE_LLPP\LLPP_ARCHVI_MDB\LLPP_GESTIONE\"
+        FileDb_s = "LLPP_ATTI_N02_DEF.mdb"
+        TabellaCollegata_s = "LLPP_DF20_IMPRESE_PROFESSIONISTI"
+      
+    
+            
+    '//CONTROLLO TABELLA COLLEGATA
+    '//.....................................................................................................
+    '//CODICE:---> TABELLA.ACCESS.Collegamento.Refresh.02
+    '//Note           : La tabella viene refreshata ma se non esiste da errore 33044 _
+        attenzione le path della gestione sono: _
+        LE ROUTINE          = c:\CASA\LINGUAGGI\ACCESS\ACCESS_MODELLI_ROUTINE\ _
+        ANALISI LATEX       = c:\CASA\LINGUAGGI\ACCESS\ACCESS_ANALISI_LATEX\ _
+        LE PROCEDURE BAT    = c:\CASA\LINGUAGGI\ACCESS\ACCESS_ANALISI_LATEX\ACCESS_ANALISI_LATEX_PROCEDURE_BAT\
+
+                      
+           '//controllo stringa db e tabella:
+           Debug.Print Str1
+
+            
+        
+            '//SE LA TABELLA NON ESISTE ERRORE = 3265 - QUI viene inserita la tabella
+            Set Tdf = Db.TableDefs("LLPP_DF20_IMPRESE_PROFESSIONISTI")
+        
+            '//SE LA TABELLA NON E' COLLEGATA ERRORE = 3044
+            'Tdf.Connect = ";" & Str1 & ""
+            
+            Tdf.Connect = ";DATABASE=C:\GESTIONI\GESTIONE_LLPP\25_GESTIONE_LLPP\LLPP_ARCHVI_MDB\LLPP_GESTIONE\LLPP_ATTI_N02_DEF.mdb;TABLE=LLPP_DF20_IMPRESE_PROFESSIONISTI"
+            
+            '//ricostruzione stringa di collegamento e attivazione del refresh sugli oggetti tabella come base questo _
+            esempio funzionante = _
+            Tdf.Connect = ";DATABASE=C:\GESTIONI\GESTIONE_LLPP\25_GESTIONE_LLPP\LLPP_ARCHVI_MDB\LLPP_GESTIONE\LLPP_ATTI_N02_DEF.mdb;TABLE=LLPP_DF20_IMPRESE_PROFESSIONISTI"
+                Str1 = ";DATABASE=" & Path_s & ";TABLE=" & TabellaCollegata_s
+                Tdf.RefreshLink
+                
+                MsgBox "REFRESH LINK TABELLA RIUSCITO : " & Str1
+
+
+    '//*** fine ***
+    '//CONTROLLO TABELLA COLLEGATA
+    '//.....................................................................................................
+
+'//USCITA  E GESTIONE ERRORI
+'//..............................................................................................................
+
+
+Exit_COLLEGA_TABELLA_ACCESS_Professionisti_PFunct:
+    Exit Function
+
+Err_COLLEGA_TABELLA_ACCESS_Professionisti_PFunct:
+    MsgBox Err.Description & " - Errore Messaggio -> : " & ProceduraMessaggioErrore_s & " Procedura -> : " & ProceduraMessaggioErrore_s
+    Debug.Print ProceduraMessaggioErrore_s
+    Debug.Print ProceduraAttivaEseguita_s
+    Stop
+    Resume Exit_COLLEGA_TABELLA_ACCESS_Professionisti_PFunct
+
+End Function
+
+'//*** FINE ***
+'//FUNZIONE COLLEGA TABELLA ACCESS PROFESSIONISTI
+'//========================================================================================================================================//
+
+
