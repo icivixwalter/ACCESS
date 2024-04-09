@@ -76,6 +76,12 @@
 	],
 	"file_history":
 	[
+		"/C/CASA/LINGUAGGI/ACCESS/ZIP_7ZIP_INCREMENTALE_FILE_UNICO_(CRIPTA+DECODIFICA_INTERNO).BAT",
+		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_ElencoFile.txt",
+		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_CRIPTA.bat",
+		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_DECODIFICA.bat",
+		"/C/CASA/LINGUAGGI/ACCESS/.gitignore",
+		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_ElencoFileESCLUSI.txt",
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/APRI_FILE.MD",
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/GE_ACCESS_MembriOggettoApplication.txt",
 		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/RECORDSET.MD",
@@ -136,7 +142,7 @@
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
@@ -151,6 +157,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"]",
+			"[",
+			"ZIP_SALVATAGGI_LaQuercia_2023_2024",
+			"c:\\CASA\\CDM\\LaQuercia\\2023_2024\\",
+			"_LaQuercia_2023_2024",
+			"c:\\CASA\\CDM\\LaQuercia\\2023_2024\\ ",
 			"@APRI@FILE",
 			"@RECORSET",
 			"@APRI@UN",
@@ -261,6 +273,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 156.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
