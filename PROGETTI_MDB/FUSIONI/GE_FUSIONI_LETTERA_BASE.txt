@@ -1,0 +1,104 @@
+
+                                            '//M = *M* - CONTROLLO CAMPO CAMPO -> TFR_COD + TFR_RIV
+                                            '//================================================================================================================
+                                                    
+                                                                                
+                                                        '//RECUPERO LA LETTERA
+                                                        M_xs = Trim(Mid(DaoRs.Fields("TFR_COD"), 2, 1))
+                                                        
+                                                        
+                                                        '//01) CONTROLLO SE IL CAMPO DENOMINAZIONE CONTIENE LETTERA M)
+                                                        '//If "M" = M_xs And DaoRs.Fields("DENOMINAZIONE") = "DATA ASS. DATA CESS." Then
+                                                        '//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                                                        If "M" = M_xs And Trim(Mid(DaoRs.Fields("DENOMINAZIONE"), 2, 23)) <> "DATA ASS. DATA CESS." Then
+                                                        
+                                                                '//CONTROLLO IL CONTENUTO DEL CAMPO
+                                                                Debug.Print
+                                                                Debug.Print Trim(Mid(DaoRs.Fields("DENOMINAZIONE"), 2, 23))
+                                                                Debug.Print
+                                                                
+                                                                  
+                                                                '//02) RECUPERO LA MATRICOLA DAL RECORD TMP  TABELLA GE_FUS_DF01_NOMINATIVI_TMP_RECORD_CORR
+                                                                '//RECUPERA LA MATRICOLA DAL RECORD CORRENTE
+                                                                '//.............................................................................
+                                                                '//Codice   :RECUPERA_N01_MATRICOLA_RECORD_CORRENTE_pFunction.01.call
+                                                                '//Nota : Recupera la matricola salvata nella tabella record corrente in lavorazione
+                                                                '//GE_FUS_DF01_NOMINATIVI_TMP_RECORD_CORR.
+                                                                
+                                                                            Lng1 = RECUPERA_N01_MATRICOLA_RECORD_CORRENTE_pFunction()
+        
+                                                                
+                                                                            '//con il parametro numero di matricola
+                                                                            TFR_NRO_MECC_lng = Lng1 '// inserire la matricola/codice meccanografico
+                                                                    
+                                                                '//RECUPERA LA MATRICOLA DAL RECORD CORRENTE *** FINE ***
+                                                                '//.............................................................................
+                                                                
+                                                                    
+
+                                                                '//ID RECORD
+                                                                ID_M_Lng = DaoRs.Fields("ID")
+                                                                
+                                                                                  
+                                                             '//03) CERCA IL NOMINATIVO CON LA MATRICOLA DELLA TABELLA GE_FUS_DF01_NOMINATIVI_TMP_RECORD_CORR
+                                                             '//CERCA_NOMINATIVO
+                                                             '//--------------------------------------------
+                                                             '//Note : La funzione restituisca una stringa
+                                                             '//relativa al nominativo estratto dalla tabella
+                                                             '//GE_FUS_DF01_NOMINATIVI mediante la chiave di
+                                                             '//ricerca del campo TFR_NRO_MECC_s. Se la ricerca
+                                                             '//fallisce viene creata una segnalazione NULLA.
+                                                                     
+                                                                                                                                         
+                                                                     '//RECUPERO LA STRINGA
+                                                                     DENOMINAZIONE_OLD_s = Cerca_N01_NOMINATIVO_pFunct(TFR_NRO_MECC_lng)
+                                                                     
+                                                                     '//controllo apostrofo
+                                                                    Str1 = vControlloApostrofo_pFunct(DENOMINAZIONE_OLD_s)
+                                                                    
+                                                                    
+                                                                    '//Assegno il risultato
+                                                                    DENOMINAZIONE_OLD_s = Str1
+                                                                     
+                                                                    '//Controllo
+                                                                    Debug.Print DENOMINAZIONE_OLD_s
+                                                                     
+                                                            '//CERCA_NOMINATIVO *** FINE ***
+                                                            '//--------------------------------------------
+                                                            
+                                                                  
+                                                                
+                                                                '//04) AGGIORNO I CAMPI DEL RECORD LETTERA M (LETT_ID+COD_DENOMINAZIONE+TFR_NRO_MECC)
+                                                                '//AGGIORNO CAMPO -> LETT_ID CON LA LETTERA M INSIEME AL  "NOME" E "CODICE"
+                                                                '//----------------------------------------------------------------------------
+                                                                '//Note : Aggiorno il campo LETT_ID con la LETTERA M + NOME OLD + NRO MECCANIZZ
+                                                                       
+                                                                        sSql = ""
+                                                                        sSql = sSql & "UPDATE XLS_TB01_Archivio_TMP SET XLS_TB01_Archivio_TMP.TFR_NRO_MECC = " & TFR_NRO_MECC_lng & ","
+                                                                        sSql = sSql & "XLS_TB01_Archivio_TMP.COD_DENOMINAZIONE = '" & DENOMINAZIONE_OLD_s & "',"
+                                                                        sSql = sSql & "XLS_TB01_Archivio_TMP.LETT_ID = 'M'"
+                                                                        sSql = sSql & "WHERE (((XLS_TB01_Archivio_TMP.ID)=" & ID_M_Lng & "));"
+                                                                          
+                                                                         
+                                                                           '//controllo ed esecuzione
+                                                                          Debug.Print "------------- > SALVATAGGIO LETT_ID + DENOMINAZIONE_OLD + TFR_NRO_MECC = 'M' <-------------"
+                                                                          Debug.Print "NRO -> " & DaoRs.Fields("NRO")
+                                                                          Debug.Print sSql
+                                                                          CurrentDb.Execute sSql
+                                                                '//----------------------------------------------------------------------------
+                                                                  
+                                                        
+                                                            '//controllo ed esecuzione
+                                                            Debug.Print sSql
+                                                            CurrentDb.Execute sSql
+                                                            
+                                                            
+                                                            
+                                                        End If '////If "M" = M_xs And DaoRs.Fields("DENOMINAZIONE") = "DATA ASS. DATA CESS." Then
+                                                      
+                            
+                                            
+                                            '//M = *M* - CONTROLLO CAMPO CAMPO -> TFR_COD + TFR_RIV  *** FINE ***
+                                            '//================================================================================================================
+                          
+                          

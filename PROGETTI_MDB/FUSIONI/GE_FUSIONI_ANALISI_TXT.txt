@@ -1,0 +1,49 @@
+
+
+//					ANALISI GE_FUSIONI
+//*****************************************************************************************************************************//
+
+	01 TABELLE
+		Sono state costruite diverse tabelle access per la gestione del tfr da fusioni.
+		
+	STEP_01	
+		XLS_TFR = I dati partono dalla tabella xls che deve essere popolata a mano sencondo
+			l'esatta seguenza dei campi, vedi come esempio la tabella tfr CARDIF.xls che 
+			è stata modificata.
+		
+	STEP_02	
+		XLS_TB01_Archivio_TMP = I dati vengono accodati nella tabella di archivio tmp provenienti
+			dalla tabella xls collegata, mediante la query ACCODA_N10-01_XLS_TFR->XLS_TB01_Archivio_TMP.
+			
+			
+	STEP_03	
+		
+		CONTROLLO I DATI PER OGNI RECORD.
+			
+			01)...
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*****************************************************************************************************************************//			
