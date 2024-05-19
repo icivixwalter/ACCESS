@@ -1,3 +1,5 @@
+@ECHO OFF
+
 
 @CLS
 @echo.@@-------@_PROGETTO_BAT_CRIPTA_@-----------------------
@@ -20,14 +22,14 @@
 					@REM alla fine del ciclo salvo la path corrente
 					@REM per arrivare alla cartella dei salvataggi che viene 
 					@REM creata dalla procedura zip oppure è gia esistente
-					@SET PATH_DEST_S=%currDir_%AA_SALVATAGGI\
+					@SET PATH_DEST_S=%currDir_%AA_SALVATAGGI
 					
 					@ECHO.
 					@ECHO. controllo della path di destinazione
 					@ECHO. %PATH_DEST_S%
 					@ECHO. 
 						DIR %PATH_DEST_S%
-					@REM --> PAUSE
+					@REM PAUSE
 			@REM .......................................................
 
 
@@ -100,7 +102,6 @@
 		@ECHO.
 
 			@ECHO vado nella path di destinazione e faccio il controllo
-			@ECHO %PATH_DEST_S%
 			CD %PATH_DEST_S%
 			DIR 
 
@@ -110,7 +111,7 @@
 					@REM ---->	timeout /t 2 /nobreak > NUL
 					@REM ---->	
 					@TIMEOUT /T %t% /NOBREAK
-					@REM --> Pause
+					@REM Pause
 
 	@CLS
 	@echo.04--------------------------------CRIPTOAGGIO IN GE614
@@ -118,30 +119,16 @@
 		@ECHO.
 		@ECHO.04.00 CRIPTA, RENAME DEL FILE IN .GE614
 		@ECHO.
-		@ECHO.	controllo la variabile TODAY
-		@ECHO.  "%TODAY%*.RAR"
-		@ECHO.  "%TODAY%*.ZIP"
 		@ECHO.
-		@ECHO. 
-		
-		@ECHO. in quale directory ci troviamo ?? 
-		@ECHO. e controllo dir e controllo dir PATH_DEST_S TODAY
-		@ECHO. 
-				@DIR %TODAY%*.ZIP
-					@REM --> Pause
 
-		@ECHO. -----------------------------------------
-		@ECHO. ESEGUO CRIPTA i file .rar .zip in GE614
-		@ECHO. 
-		@ECHO.  cerca TODAY 
-			dir %PATH_DEST_S%\%TODAY%*.RAR
 
-			@RENAME %TODAY%*.RAR %TODAY%*.GE614
+			@REM//CRIPTA i file .rar .zip in GE614
+			@RENAME "%TODAY%*.RAR" "%TODAY%*.GE614"
+			@RENAME "%TODAY%*.ZIP" "%TODAY%*.GE614"
 
-			@RENAME %TODAY%*.ZIP %TODAY%*.GE614"
 
 				@REM SOSPENSIONE TEMPO IMPOSTATA CON T
 					@REM ---->	timeout /t 2 /nobreak > NUL
-					@REM ----> Pause	
+					@REM ---->	
 					@TIMEOUT /T %t% /NOBREAK
-					
+					@REM Pause

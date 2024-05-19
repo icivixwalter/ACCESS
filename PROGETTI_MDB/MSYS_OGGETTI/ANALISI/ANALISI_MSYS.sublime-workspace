@@ -24,13 +24,394 @@
 	"buffers":
 	[
 		{
-			"file": "MSYS_ANALISI/MSYS_README.MD",
+			"file": "ANALISI_MSYS.sublime-project",
 			"settings":
 			{
-				"buffer_size": 3738,
-				"encoding": "UTF-8",
+				"buffer_size": 45,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "MSYS_README.MD",
+			"settings":
+			{
+				"buffer_size": 6755,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "\n\n\n\n"
+					},
+					"CwAAAMsYAAAAAAAAzBgAAAAAAAAAAAAAzBgAAAAAAADXGAAAAAAAAAAAAADXGAAAAAAAANgYAAAAAAAAAAAAANgYAAAAAAAA4xgAAAAAAAAAAAAAzBgAAAAAAADMGAAAAAAAAAsAAAAJCQkJCQkJCSAgINgYAAAAAAAA2RgAAAAAAAAAAAAA2RgAAAAAAADkGAAAAAAAAAAAAADNGAAAAAAAAM0YAAAAAAAACwAAAAkJCQkJCQkJICAg2RgAAAAAAADaGAAAAAAAAAAAAADaGAAAAAAAAOUYAAAAAAAAAAAAAM4YAAAAAAAAzhgAAAAAAAALAAAACQkJCQkJCQkgICA",
+					"AQAAAAAAAAABAAAAyxgAAAAAAADLGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					8,
+					"unindent",
+					null,
+					"CAAAAM8YAAAAAAAAzxgAAAAAAAABAAAACc8YAAAAAAAAzxgAAAAAAAABAAAACc8YAAAAAAAAzxgAAAAAAAABAAAACc8YAAAAAAAAzxgAAAAAAAABAAAACc8YAAAAAAAAzxgAAAAAAAABAAAACc8YAAAAAAAAzxgAAAAAAAABAAAACc8YAAAAAAAAzxgAAAAAAAABAAAACc8YAAAAAAAAzxgAAAAAAAABAAAACQ",
+					"AQAAAAAAAAABAAAA2hgAAAAAAADaGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": "LIBRERI"
+					},
+					"BwAAANIYAAAAAAAA0xgAAAAAAAAAAAAA0xgAAAAAAADUGAAAAAAAAAAAAADUGAAAAAAAANUYAAAAAAAAAAAAANUYAAAAAAAA1hgAAAAAAAAAAAAA1hgAAAAAAADXGAAAAAAAAAAAAADXGAAAAAAAANgYAAAAAAAAAAAAANgYAAAAAAAA2RgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0hgAAAAAAADSGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "E"
+					},
+					"AQAAANkYAAAAAAAA2hgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2RgAAAAAAADZGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": "\n\t"
+					},
+					"AwAAANoYAAAAAAAA2xgAAAAAAAAAAAAA2xgAAAAAAADeGAAAAAAAAAAAAADeGAAAAAAAAN8YAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2hgAAAAAAADaGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"paste",
+					null,
+					"AQAAAN8YAAAAAAAAQBoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3xgAAAAAAADfGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					3,
+					"indent",
+					null,
+					"FQAAADEZAAAAAAAAMhkAAAAAAAAAAAAAjRkAAAAAAACOGQAAAAAAAAAAAAC4GQAAAAAAALkZAAAAAAAAAAAAAN8ZAAAAAAAA4BkAAAAAAAAAAAAAABoAAAAAAAABGgAAAAAAAAAAAAAXGgAAAAAAABgaAAAAAAAAAAAAADAaAAAAAAAAMRoAAAAAAAAAAAAAMRkAAAAAAAAyGQAAAAAAAAAAAACOGQAAAAAAAI8ZAAAAAAAAAAAAALoZAAAAAAAAuxkAAAAAAAAAAAAA4hkAAAAAAADjGQAAAAAAAAAAAAAEGgAAAAAAAAUaAAAAAAAAAAAAABwaAAAAAAAAHRoAAAAAAAAAAAAANhoAAAAAAAA3GgAAAAAAAAAAAAAxGQAAAAAAADIZAAAAAAAAAAAAAI8ZAAAAAAAAkBkAAAAAAAAAAAAAvBkAAAAAAAC9GQAAAAAAAAAAAADlGQAAAAAAAOYZAAAAAAAAAAAAAAgaAAAAAAAACRoAAAAAAAAAAAAAIRoAAAAAAAAiGgAAAAAAAAAAAAA8GgAAAAAAAD0aAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQBoAAAAAAAAwGQAAAAAAAAAAAAAAoHRA"
+				],
+				[
+					20,
+					1,
+					"insert",
+					{
+						"characters": "\n\t"
+					},
+					"AgAAANsYAAAAAAAA3BgAAAAAAAAAAAAA3BgAAAAAAADdGAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2xgAAAAAAADbGAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					22,
+					1,
+					"reindent",
+					null,
+					"AQAAANsYAAAAAAAA3hgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2xgAAAAAAADbGAAAAAAAAAAAAAAAgEpA"
+				],
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": "\t\t"
+					},
+					"AgAAAN4YAAAAAAAA3xgAAAAAAAAAAAAA3xgAAAAAAADgGAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3hgAAAAAAADeGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"insert",
+					{
+						"characters": "p"
+					},
+					"AQAAAOAYAAAAAAAA4RgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4BgAAAAAAADgGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"left_delete",
+					null,
+					"AQAAAOAYAAAAAAAA4BgAAAAAAAABAAAAcA",
+					"AQAAAAAAAAABAAAA4RgAAAAAAADhGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "Per"
+					},
+					"AwAAAOAYAAAAAAAA4RgAAAAAAAAAAAAA4RgAAAAAAADiGAAAAAAAAAAAAADiGAAAAAAAAOMYAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4BgAAAAAAADgGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"insert",
+					{
+						"characters": " carica"
+					},
+					"BwAAAOMYAAAAAAAA5BgAAAAAAAAAAAAA5BgAAAAAAADlGAAAAAAAAAAAAADlGAAAAAAAAOYYAAAAAAAAAAAAAOYYAAAAAAAA5xgAAAAAAAAAAAAA5xgAAAAAAADoGAAAAAAAAAAAAADoGAAAAAAAAOkYAAAAAAAAAAAAAOkYAAAAAAAA6hgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4xgAAAAAAADjGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					28,
+					1,
+					"insert",
+					{
+						"characters": "  la"
+					},
+					"BAAAAOoYAAAAAAAA6xgAAAAAAAAAAAAA6xgAAAAAAADsGAAAAAAAAAAAAADsGAAAAAAAAO0YAAAAAAAAAAAAAO0YAAAAAAAA7hgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6hgAAAAAAADqGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					29,
+					1,
+					"insert",
+					{
+						"characters": " lb"
+					},
+					"AwAAAO4YAAAAAAAA7xgAAAAAAAAAAAAA7xgAAAAAAADwGAAAAAAAAAAAAADwGAAAAAAAAPEYAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7hgAAAAAAADuGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPAYAAAAAAAA8BgAAAAAAAABAAAAYg",
+					"AQAAAAAAAAABAAAA8RgAAAAAAADxGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": "ibreria"
+					},
+					"BwAAAPAYAAAAAAAA8RgAAAAAAAAAAAAA8RgAAAAAAADyGAAAAAAAAAAAAADyGAAAAAAAAPMYAAAAAAAAAAAAAPMYAAAAAAAA9BgAAAAAAAAAAAAA9BgAAAAAAAD1GAAAAAAAAAAAAAD1GAAAAAAAAPYYAAAAAAAAAAAAAPYYAAAAAAAA9xgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8BgAAAAAAADwGAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"insert",
+					{
+						"characters": " c"
+					},
+					"AgAAAPcYAAAAAAAA+BgAAAAAAAAAAAAA+BgAAAAAAAD5GAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9xgAAAAAAAD3GAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPgYAAAAAAAA+BgAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAA+RgAAAAAAAD5GAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					34,
+					1,
+					"insert",
+					{
+						"characters": "OCX"
+					},
+					"AwAAAPgYAAAAAAAA+RgAAAAAAAAAAAAA+RgAAAAAAAD6GAAAAAAAAAAAAAD6GAAAAAAAAPsYAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+BgAAAAAAAD4GAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"insert",
+					{
+						"characters": "  che"
+					},
+					"BQAAAPsYAAAAAAAA/BgAAAAAAAAAAAAA/BgAAAAAAAD9GAAAAAAAAAAAAAD9GAAAAAAAAP4YAAAAAAAAAAAAAP4YAAAAAAAA/xgAAAAAAAAAAAAA/xgAAAAAAAAAGQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+xgAAAAAAAD7GAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					36,
+					1,
+					"insert",
+					{
+						"characters": " si"
+					},
+					"AwAAAAAZAAAAAAAAARkAAAAAAAAAAAAAARkAAAAAAAACGQAAAAAAAAAAAAACGQAAAAAAAAMZAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAABkAAAAAAAAAGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					1,
+					"insert",
+					{
+						"characters": " trova"
+					},
+					"BgAAAAMZAAAAAAAABBkAAAAAAAAAAAAABBkAAAAAAAAFGQAAAAAAAAAAAAAFGQAAAAAAAAYZAAAAAAAAAAAAAAYZAAAAAAAABxkAAAAAAAAAAAAABxkAAAAAAAAIGQAAAAAAAAAAAAAIGQAAAAAAAAkZAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAxkAAAAAAAADGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": " ui"
+					},
+					"AwAAAAkZAAAAAAAAChkAAAAAAAAAAAAAChkAAAAAAAALGQAAAAAAAAAAAAALGQAAAAAAAAwZAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACRkAAAAAAAAJGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					39,
+					2,
+					"left_delete",
+					null,
+					"AgAAAAsZAAAAAAAACxkAAAAAAAABAAAAaQoZAAAAAAAAChkAAAAAAAABAAAAdQ",
+					"AQAAAAAAAAABAAAADBkAAAAAAAAMGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": "qui:"
+					},
+					"BAAAAAoZAAAAAAAACxkAAAAAAAAAAAAACxkAAAAAAAAMGQAAAAAAAAAAAAAMGQAAAAAAAA0ZAAAAAAAAAAAAAA0ZAAAAAAAADhkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAChkAAAAAAAAKGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					43,
+					1,
+					"reindent",
+					null,
+					"AQAAAGUZAAAAAAAAahkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZRkAAAAAAABlGQAAAAAAAAAAAAAASIZA"
+				],
+				[
+					44,
+					1,
+					"insert",
+					{
+						"characters": "\t"
+					},
+					"AQAAAGoZAAAAAAAAaxkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAahkAAAAAAABqGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					1,
+					"insert",
+					{
+						"characters": "\nesgui"
+					},
+					"CAAAAGsZAAAAAAAAbBkAAAAAAAAAAAAAbBkAAAAAAAByGQAAAAAAAAAAAABlGQAAAAAAAGUZAAAAAAAABgAAAAkgICAJCWwZAAAAAAAAbRkAAAAAAAAAAAAAbRkAAAAAAABuGQAAAAAAAAAAAABuGQAAAAAAAG8ZAAAAAAAAAAAAAG8ZAAAAAAAAcBkAAAAAAAAAAAAAcBkAAAAAAABxGQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaxkAAAAAAABrGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "re"
+					},
+					"AgAAAHEZAAAAAAAAchkAAAAAAAAAAAAAchkAAAAAAABzGQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcRkAAAAAAABxGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					47,
+					1,
+					"insert",
+					{
+						"characters": " il"
+					},
+					"AwAAAHMZAAAAAAAAdBkAAAAAAAAAAAAAdBkAAAAAAAB1GQAAAAAAAAAAAAB1GQAAAAAAAHYZAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcxkAAAAAAABzGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					48,
+					1,
+					"insert",
+					{
+						"characters": " comando"
+					},
+					"CAAAAHYZAAAAAAAAdxkAAAAAAAAAAAAAdxkAAAAAAAB4GQAAAAAAAAAAAAB4GQAAAAAAAHkZAAAAAAAAAAAAAHkZAAAAAAAAehkAAAAAAAAAAAAAehkAAAAAAAB7GQAAAAAAAAAAAAB7GQAAAAAAAHwZAAAAAAAAAAAAAHwZAAAAAAAAfRkAAAAAAAAAAAAAfRkAAAAAAAB+GQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdhkAAAAAAAB2GQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					52,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAIsZAAAAAAAAjBkAAAAAAAAAAAAAjBkAAAAAAACPGQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAixkAAAAAAACLGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					54,
+					1,
+					"right_delete",
+					null,
+					"AQAAAI8ZAAAAAAAAjxkAAAAAAABRAAAAYzpcQ0FTQVxMSU5HVUFHR0lcQUNDRVNTXFBST0dFVFRJX01EQlxNU1lTX09HR0VUVElcTURCXERMTF9MSUJSRVJJRVxNU0NPTUNUTC5PQ1gK",
+					"AQAAAAAAAAABAAAAjxkAAAAAAADgGQAAAAAAAAAAAAAAwGNA"
+				],
+				[
+					59,
+					1,
+					"insert",
+					{
+						"characters": "con"
+					},
+					"BAAAAIsZAAAAAAAAjBkAAAAAAAAAAAAAjRkAAAAAAACNGQAAAAAAAAMAAAAJCQmMGQAAAAAAAI0ZAAAAAAAAAAAAAI0ZAAAAAAAAjhkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAixkAAAAAAACLGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					60,
+					1,
+					"insert",
+					{
+						"characters": " il"
+					},
+					"AwAAAI4ZAAAAAAAAjxkAAAAAAAAAAAAAjxkAAAAAAACQGQAAAAAAAAAAAACQGQAAAAAAAJEZAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjhkAAAAAAACOGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					1,
+					"insert",
+					{
+						"characters": " file"
+					},
+					"BQAAAJEZAAAAAAAAkhkAAAAAAAAAAAAAkhkAAAAAAACTGQAAAAAAAAAAAACTGQAAAAAAAJQZAAAAAAAAAAAAAJQZAAAAAAAAlRkAAAAAAAAAAAAAlRkAAAAAAACWGQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkRkAAAAAAACRGQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"insert",
+					{
+						"characters": " .ocx"
+					},
+					"BQAAAJYZAAAAAAAAlxkAAAAAAAAAAAAAlxkAAAAAAACYGQAAAAAAAAAAAACYGQAAAAAAAJkZAAAAAAAAAAAAAJkZAAAAAAAAmhkAAAAAAAAAAAAAmhkAAAAAAACbGQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlhkAAAAAAACWGQAAAAAAAAAAAAAAAPC/"
+				]
+			]
 		}
 	],
 	"build_system": "",
@@ -183,8 +564,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/MSYS_OGGETTI",
-		"/C/CASA/LINGUAGGI/ACCESS/ACCESS_PROGETTI_MDB/MSYS_OGGETTI/SALVATAGGI_MSYS"
+		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/MSYS_OGGETTI/ANALISI"
 	],
 	"file_history":
 	[
@@ -319,7 +699,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 37.6
 	},
 	"find_in_files":
 	{
@@ -363,12 +743,11 @@
 			[
 				{
 					"buffer": 0,
-					"file": "MSYS_ANALISI/MSYS_README.MD",
-					"selected": true,
-					"semi_transient": true,
+					"file": "ANALISI_MSYS.sublime-project",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3738,
+						"buffer_size": 45,
 						"regions":
 						{
 						},
@@ -381,12 +760,44 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"syntax": "Packages/JSON/JSON.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "MSYS_README.MD",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6755,
+								6755
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 598.4,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -398,7 +809,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 37.6
 	},
 	"input":
 	{
@@ -435,7 +846,7 @@
 	"project": "ANALISI_MSYS.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 72.0
 	},
 	"save_all_on_build": false,
 	"select_file":

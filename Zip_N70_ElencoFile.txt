@@ -6,9 +6,11 @@ PROGETTI_MDB
 SUBLIME_PREFERENCES
 TUTORIAL
 MODELLI_ROUTINE_CLASSI
+VBScript
 A________________________________________________________________________A.txt
-Progetti_ACCESS.sublime-project
-Progetti_ACCESS.sublime-workspace
+Project_ACCESS.sublime-workspace
+Project_ACCESS.sublime-project
+
 ReadMe.md
 ZIP_7ZIP_INCREMENTALE_FILE_UNICO_(CRIPTA+DECODIFICA_INTERNO).BAT
 ZIP_7ZIP_________________________________________________________________ZZ.txt
