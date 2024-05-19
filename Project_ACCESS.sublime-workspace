@@ -15,6 +15,17 @@
 	},
 	"buffers":
 	[
+<<<<<<< HEAD:Project_ACCESS.sublime-workspace
+=======
+		{
+			"file": "Zip_N70_ElencoFileESCLUSI.txt",
+			"settings":
+			{
+				"buffer_size": 135,
+				"line_ending": "Windows"
+			}
+		}
+>>>>>>> dfd63315f0cf4fb79eed7b8e8efaa3b95ac41455:Progetti_ACCESS.sublime-workspace
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -27,6 +38,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"term",
+				"Terminus: Open Default Shell in Panel"
+			],
 			[
 				"Package Control: ",
 				"Package Control: Upgrade Package"
@@ -77,12 +92,18 @@
 	],
 	"file_history":
 	[
+<<<<<<< HEAD:Project_ACCESS.sublime-workspace
 		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/FORM_VARIE/MDB/FILE_TXT_IMPORTA/UTILITA_Mdl30_N01_Crea_File_schema_ini.bas",
 		"/C/CASA/LINGUAGGI/ACCESS/MODELLI_ROUTINE_CLASSI/OGGETTI_Mdl01_FOR_EACH_TutteLeForm_TuttiIControlliForm.bas",
 		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/MSYS_OGGETTI/MDB/MENU/MENU_GESTIONE.ldb",
 		"/C/CASA/LINGUAGGI/ACCESS/ZIP_7ZIP_INCREMENTALE_FILE_UNICO_(CRIPTA+DECODIFICA_INTERNO).BAT",
 		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_ElencoFile.txt",
 		"/C/CASA/LINGUAGGI/ACCESS/.gitignore",
+=======
+		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_ElencoFile.txt",
+		"/C/CASA/LINGUAGGI/ACCESS/.gitignore",
+		"/C/CASA/LINGUAGGI/ACCESS/ZIP_7ZIP_INCREMENTALE_FILE_UNICO_(CRIPTA+DECODIFICA_INTERNO).BAT",
+>>>>>>> dfd63315f0cf4fb79eed7b8e8efaa3b95ac41455:Progetti_ACCESS.sublime-workspace
 		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_CRIPTA.bat",
 		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_DECODIFICA.bat",
 		"/C/CASA/LINGUAGGI/ACCESS/Zip_N70_ElencoFileESCLUSI.txt",
@@ -244,6 +265,39 @@
 		{
 			"sheets":
 			[
+<<<<<<< HEAD:Project_ACCESS.sublime-workspace
+=======
+				{
+					"buffer": 0,
+					"file": "Zip_N70_ElencoFileESCLUSI.txt",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+>>>>>>> dfd63315f0cf4fb79eed7b8e8efaa3b95ac41455:Progetti_ACCESS.sublime-workspace
 			]
 		}
 	],
