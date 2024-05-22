@@ -6,7 +6,7 @@ ReadMe.md
 PROFILO GIT SE DA ERRORE
 	
 		P
-			PROFILO GIT
+			@PROFILO GIT
 				per i profilo git questa è l'utenza 
 				email: icivixwalter@gmail.com
 				passw: walter_01_

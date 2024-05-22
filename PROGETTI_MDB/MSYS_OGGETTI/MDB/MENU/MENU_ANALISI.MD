@@ -253,6 +253,29 @@ MENU_ANALISI.MD
 
 			a) per ogni menu selezionato popolare la tabella
 				GEST_MENU_Tb01_VOCI_TMP
-			   codice
+		   
+		    b) per ogni menu selezionato viene popolata la tabella delle
+		    	funzioni tmp 
+
+		    c) le due tabelle quella delle voci tmp e quella della funzioni tmp
+		    	sono collegate tramite i campo 
+		    		CodMenu_s
+
+
+    		TODO: come applicare lo stesso principio alla FORM 
+    			AA_MSys_FORM_M01_GESTIONE_OGGETTI_MASTER ??
+
+
+			1) copio le tabelle tmp progetto 
+				MSYS_N01_OGGETTI.mdb
+					GEST_MENU_Tb01_VOCI
+					GEST_MENU_Tb01_VOCI_TMP
+					GEST_MENU_TB02_FUNZIONI
+					GEST_MENU_TB02_FUNZIONI_TMP
+
+					CON LE QUERY E LE FORM
+					GEST_MENU_Tb01Frm01_M01_GE_VOCI
+					GEST_MENU_Tb01Frm01_S01_VOCI
+					GEST_MENU_Tb01Frm01_S01_VOCI_TMP	
 
 
