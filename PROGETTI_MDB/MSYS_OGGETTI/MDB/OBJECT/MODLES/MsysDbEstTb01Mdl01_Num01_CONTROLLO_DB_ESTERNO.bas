@@ -80,6 +80,8 @@ Public Sub ListTablesInExternalDB()
     
     '//campi
     Dim myScel_b As Boolean
+    Dim myNOTA_OGGETTO_s As String
+    Dim myNOTEex_s As String
     
     '//DIM path, db e tabella
     Dim dbPath As String
@@ -233,28 +235,129 @@ Public Sub ListTablesInExternalDB()
             '//SOLO SE ESISTE IL DB FACCIO IL CONTROLLO
             If myScel_b = True Then
                 
+                '//svuoto la tabella tmp + RESET
+                    CurrentDb.Execute "MsysDbEstTb01Qry01_Dlt01_OBJECT_TMP"
+                    
+                    iCount = 0
+                    
+                
                 '//APRO LE COLLECTION E IL DB ESTERNO
                  Set physicalTables = New Collection
                         'todo: FARE UN CONTROLLO PRELIMINARE DELLA PATH E DEL FILE!!
                 ' Apri il database esterno
                 Set externalDB = DBEngine.Workspaces(0).OpenDatabase(dbPath)
-                         
+                                
                                     
                                 ' Scansiona tutte le tabelle nel database esterno
                                 '//...............................................................................//
                                     For Each tdf In externalDB.TableDefs
                                         ' Verifica se la tabella è di sistema con il confronte nella collection precaricata _
                                           e chiama funzione di controllo
+                                          
+                                        
+                                
+                                           '//resetto le variabili ad oni ciclo
+                                           myNOTA_OGGETTO_s = ""
+                                    
+                                        
+                                        
+                                        
                                         If IsSystemTable(tdf.Name, systemTables) Then
                                             Debug.Print tdf.Name & " (Tavola di sistema)"
+                                                
+                                                iCount = iCount + 1
+                                                
+                                            myNOTA_OGGETTO_s = "TABELLA MSYS (Tavola di sistema)"
+                                            myNOTEex_s = "OGGETTO DATABASE ESTERNO " & myDATABASE_s
                                             
-                                            'se la tabella è collegata aggiunge alla collection
+                                                '//QUI AGGIUNGERE SQL INSERIMENTO IN TABELLA TMP
+                                                '//..........................................................................//
+                                                        sSql = ""
+                                                        sSql = sSql & "INSERT INTO "
+                                                        sSql = sSql & "MsysDbEstTb01_OBJECT_TMP "
+                                                        sSql = sSql & "( NRO_OGGETTO_i, TIPOGGETTO_s, COD_PROGETTO_s, NOTA_OGGETTO_s, NOTEex_s, Name1_s ) "
+                                                        sSql = sSql & "SELECT "
+                                                        sSql = sSql & iCount & " AS [NRO], "
+                                                        sSql = sSql & "'TABLE' AS TIPOGGETTO_s, "
+                                                        sSql = sSql & "'MsysDbEst' AS COD_PROGETTO_s,"
+                                                        sSql = sSql & "'" & myNOTA_OGGETTO_s & "' AS [NOTE], "
+                                                        sSql = sSql & "'" & myNOTEex_s & "' AS [NOTE_EX], "
+                                                        
+                                                        sSql = sSql & "'" & tdf.Name & "' AS [Name1_s] "
+                                                        sSql = sSql & "WITH OWNERACCESS OPTION;"
+                                                        
+                                                        '//CONTROLLO ED ESECUZIONE
+                                                        Debug.Print
+                                                        
+                                                        CurrentDb.Execute (sSql)
+                                                '//..........................................................................//
+                                                
+                                            
+                                          'se la tabella è collegata aggiunge alla collection TABELLE FISICHE
                                         ElseIf Len(tdf.Connect) > 0 Then
+                                        
                                             connectedTables.Add tdf.Name
+                                            myNOTA_OGGETTO_s = "TABELLA Collegata"
+                                            myNOTEex_s = "OGGETTO DATABASE ESTERNO " & myDATABASE_s
+                                            
+                                                iCount = iCount + 1
+                                            
+                                                '//QUI AGGIUNGERE SQL INSERIMENTO IN TABELLA TMP
+                                                '//..........................................................................//
+                                                        sSql = ""
+                                                        sSql = sSql & "INSERT INTO "
+                                                        sSql = sSql & "MsysDbEstTb01_OBJECT_TMP "
+                                                        sSql = sSql & "( NRO_OGGETTO_i, TIPOGGETTO_s, COD_PROGETTO_s, NOTA_OGGETTO_s, NOTEex_s, Name1_s ) "
+                                                        sSql = sSql & "SELECT "
+                                                        sSql = sSql & iCount & " AS [NRO], "
+                                                        sSql = sSql & "'TABLE' AS TIPOGGETTO_s, "
+                                                        sSql = sSql & "'MsysDbEst' AS COD_PROGETTO_s,"
+                                                        sSql = sSql & "'" & myNOTA_OGGETTO_s & "' AS [NOTE], "
+                                                        sSql = sSql & "'" & myNOTEex_s & "' AS [NOTE_EX], "
+                                                        sSql = sSql & "'" & tdf.Name & "' AS [Name1_s] "
+                                                        sSql = sSql & "WITH OWNERACCESS OPTION;"
+                                                        
+                                                        '//CONTROLLO ED ESECUZIONE
+                                                        Debug.Print sSql
+                                                        
+                                                        CurrentDb.Execute (sSql)
+                                                '//..........................................................................//
+                                                
+                                            
+                                            
                                         Else
                                             
-                                            'la tabella è fisica e la aggiunge alla collection
+                                            'la tabella è fisica e la aggiunge alla collection TABELLE COLLEGATE
                                             physicalTables.Add tdf.Name
+                                            
+                                            myNOTA_OGGETTO_s = "TABELLA (Fisica)"
+                                            myNOTEex_s = "OGGETTO DATABASE ESTERNO " & myDATABASE_s
+                                                    
+                                                    iCount = iCount + 1
+                                            
+                                                '//QUI AGGIUNGERE SQL INSERIMENTO IN TABELLA TMP
+                                                '//..........................................................................//
+                                                        sSql = ""
+                                                        sSql = sSql & "INSERT INTO "
+                                                        sSql = sSql & "MsysDbEstTb01_OBJECT_TMP "
+                                                        sSql = sSql & "( NRO_OGGETTO_i, TIPOGGETTO_s, COD_PROGETTO_s, NOTA_OGGETTO_s, NOTEex_s, Name1_s ) "
+                                                        sSql = sSql & "SELECT "
+                                                        sSql = sSql & iCount & " AS [NRO], "
+                                                        sSql = sSql & "'TABLE' AS TIPOGGETTO_s, "
+                                                        sSql = sSql & "'MsysDbEst' AS COD_PROGETTO_s,"
+                                                        sSql = sSql & "'" & myNOTA_OGGETTO_s & "' AS [NOTE], "
+                                                        sSql = sSql & "'" & myNOTEex_s & "' AS [NOTE_EX], "
+                                                        sSql = sSql & "'" & tdf.Name & "' AS [Name1_s] "
+                                                        sSql = sSql & "WITH OWNERACCESS OPTION;"
+                                                        
+                                                        '//CONTROLLO ED ESECUZIONE
+                                                        Debug.Print
+                                                        
+                                                        CurrentDb.Execute (sSql)
+                                                '//..........................................................................//
+                                                
+                                            
+                                            
                                         End If
                                     
                                     Next tdf
