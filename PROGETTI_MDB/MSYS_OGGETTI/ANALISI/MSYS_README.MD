@@ -179,3 +179,19 @@ MSYS_REDME
 								   CON IL MENU  del codice selezioto ...
 
 								   
+
+
+
+   LIBRERIE
+   		Per carica  la libreria OCX  che si trova qui:
+	   	c:\CASA\LINGUAGGI\ACCESS\PROGETTI_MDB\MSYS_OGGETTI\MDB\DLL_LIBRERIE\MSCOMCTL.OCX
+
+	   		esguire il comando
+			regSvr32 con il file .ocx
+
+			per registrare manualmente la ddl ocorre 
+			1) aprire il cmd come amministratore 
+			2) cd.. radice posizionando in 
+				c:\Windows\SysWOW64\
+			3) eseguire il comando:
+				regSvr32 MSCOMCTL.OCX

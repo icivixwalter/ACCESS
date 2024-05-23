@@ -45,7 +45,7 @@ ECHO OFF
 						@REM alla fine del ciclo salvo la path corrente
 						@REM per arrivare alla cartella dei salvataggi che viene 
 						@REM creata dalla procedura zip oppure è gia esistente
-						@SET PATH_DEST_S=%currDir_%AA_SALVATAGGI\
+						@SET PATH_DEST_S=%currDir_%AA_SALVATAGGI
 						
 						@ECHO.
 						@ECHO. controllo della path di destinazione
