@@ -15,11 +15,20 @@
 	},
 	"buffers":
 	[
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Progetti_ACCESS.sublime-workspace
+========
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 		{
 			"file": "ReadMe.md",
 			"settings":
 			{
+<<<<<<< HEAD
 				"buffer_size": 1693,
+=======
+				"buffer_size": 1694,
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			},
@@ -31,18 +40,31 @@
 					"revert",
 					null,
 					"AgAAAAAAAAAAAAAAAAAAAAAAAACiBgAAUmVhZE1lLm1kCgljOlxDQVNBXExJTkdVQUdHSVxBQ0NFU1NcCgoKClBST0ZJTE8gR0lUIFNFIERBIEVSUk9SRQoJCgkJUAoJCQlQUk9GSUxPIEdJVAoJCQkJcGVyIGkgcHJvZmlsbyBnaXQgcXVlc3RhIMOoIGwndXRlbnphIAoJCQkJZW1haWw6IGljaXZpeHdhbHRlckBnbWFpbC5jb20KCQkJCXBhc3N3OiB3YWx0ZXJfMDFfCgoJCQkJcGVyIGNvbmZpZ3VyYXJlIGlsIHByb2ZpbG8gcGVyIHR1dHRvIHV0aWxpenpvIGdsb2JhbGUgY29uIHF1ZXN0aSBjb21hbmRpCgkJCQkgCWdpdCBjb25maWcgLS1nbG9iYWwgdXNlci5lbWFpbCAieW91QGV4YW1wbGUuY29tIgogIAkJCQkJZ2l0IGNvbmZpZyAtLWdsb2JhbCB1c2VyLm5hbWUgIllvdXIgTmFtZSIKCgkJCQlzZSB2dW9pIGltcG9zdGFyIGlsIHByb2ZpbG8gc29sbyBwZXIgbGEgIHJlcG9zaXRvcnkKCQkJCWNvcnJlbnRlIHV0aWxpenphOgoJCQkJZ2l0IGNvbmZpZyB1c2VyLmVtYWlsICJ5b3VAZXhhbXBsZS5jb20iCgkJCQlnaXQgY29uZmlnIHVzZXIubmFtZSAiWW91ciBOYW1lIgoKCQkJCQllc2VtcGlvCgkJCQkJZ2l0IGNvbmZpZyB1c2VyLmVtYWlsICJpY2l2aXh3YWx0ZXJAZ21haWwuY29tIgoJCQkJCWdpdCBjb25maWcgdXNlci5uYW1lICJ3YWx0ZXIiCgoKCgpDUkVBUkUgSSBSQU1JCglHZXN0aW9uZSBkZWxsZSBmaWxpYWxpCgkJVW4gc2luZ29sbyByZXBvc2l0b3J5IEdpdCBwdcOyIG1hbnRlbmVyZSBwacO5IHJhbWkgZGkgc3ZpbHVwcG8uIFBlciBjcmVhcmUgCgkJdW4gbnVvdm8gcmFtbyBkZW5vbWluYXRvICwgdXRpbGl6emFyZWV4cGVyaW1lbnRhbAoJCQlnaXQgYnJhbmNoIGV4cGVyaW1lbnRhbAoJCQlnaXQgYnJhbmNoIHJhbW8yCQkJPSAyIGVzZW1waW8KCgkJcGVyIGNvbnRyb2xsYXJlIHF1YW50aSByYW1pIGVzaXN0b25vIGVzZWd1aXJlCgkJCWdpdCBicmFuY2gKCQlWZXJyw6AgdmlzdWFsaXp6YXRvIHVuIGVsZW5jbyBkaSB0dXR0aSBpIHJhbWkgZXNpc3RlbnRpOgoKCQlJbyBobyBpbCBtYWluIG1hIHBvc3NvIGNyZWFyZSB1biByYW1vIHNlY29uZGFyaW8gZGkgYXBwb2dnaW8KCQkJZ2l0IGJyYW5jaCBhcHBvZ2dpbwoKCQlobyBjcmVhdG8gaWwgYnJhY2ggZSBtaSB0cm92byBhbmNvcmEgc3UgbWFpbiBjb24gbCdhc3RlcmlzY28KCQlwZXIgcGFzc2FyZSBhbCBudW92byBicmFuY2ggZGlnaXRhcmUKCQkJZ2l0IHN3aXRjaCBhcHBvZ2dpbwoKCgkJT3JhIG1vZGlmaWNhIHVuIGZpbGUsIGVzZWd1aSBpbCBjb21taXQgZGVsIGZpbGUgbW9kaWZpY2FyZSBlIHRvcm5hcmUgYWwgcmFtbwoJCQlnaXQgY29tbWl0IC1hCgkJCWdpdCBicmFuY2ggbWFpbgoKCQlBIHF1ZXN0byBwdW50byBpIGR1ZSByYW1pIHNpIHNvbm8gZGl2aXNpLCBjb24gY2FtYmlhbWVudGkgZGl2ZXJzaSBmYXR0byBpbiBjaWFzY3Vuby4gUGVyIHVuaXJlIGxlIG1vZGlmaWNoZSBhcHBvcnRhdGUgaW4gLCAgCgkJCWdpdCBtZXJnZSBhcHBvZ2dpbwoKCQlTZSBsZSBtb2RpZmljaGUgbm9uIHNvbm8gaW4gY29uZmxpdHRvLCBpbCBnaW9jbyDDqCBmYXR0by4gSW4gY2FzbyBkaSBjb25mbGl0dGksIEkgbWFyY2F0b3JpIHZlcnJhbm5vIGxhc2NpYXRpIG5laSBmaWxlIHByb2JsZW1hdGljaSBjaGUgbW9zdHJhbm8gaWwgY29uZmxpdHRvOwoKCQkJZ2l0IGRpZmYKCgoJCXBlciB2ZWRlciB0dXR0ZSBsZSBkaWZmZXJlbnplIHRyYSBpIGdpdCBkaWdpdGFyZQoJCQlnaXRrAAAAAAAAAAB0AgAAAAAAAAAAAAA",
+<<<<<<< HEAD
 					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
+=======
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvw"
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 				],
 				[
 					4,
 					1,
 					"revert",
 					null,
+<<<<<<< HEAD
 					"AwAAAAAAAAAAAAAAAAAAAAAAAAB1AgAAUmVhZE1lLm1kCgljOlxDQVNBXExJTkdVQUdHSVxBQ0NFU1NcCgoKClBST0ZJTE8gR0lUIFNFIERBIEVSUk9SRQoJCgkJUAoJCQlQUk9GSUxPIEdJVAoJCQkJcGVyIGkgcHJvZmlsbyBnaXQgcXVlc3RhIMOoIGwndXRlbnphIAoJCQkJZW1haWw6IGljaXZpeHdhbHRlckBnbWFpbC5jb20KCQkJCXBhc3N3OiB3YWx0ZXJfMDFfCgoJCQkJcGVyIGNvbmZpZ3VyYXJlIGlsIHByb2ZpbG8gcGVyIHR1dHRvIHV0aWxpenpvIGdsb2JhbGUgY29uIHF1ZXN0aSBjb21hbmRpCgkJCQkgCWdpdCBjb25maWcgLS1nbG9iYWwgdXNlci5lbWFpbCAieW91QGV4YW1wbGUuY29tIgogIAkJCQkJZ2l0IGNvbmZpZyAtLWdsb2JhbCB1c2VyLm5hbWUgIllvdXIgTmFtZSIKCgkJCQlzZSB2dW9pIGltcG9zdGFyIGlsIHByb2ZpbG8gc29sbyBwZXIgbGEgIHJlcG9zaXRvcnkKCQkJCWNvcnJlbnRlIHV0aWxpenphOgoJCQkJZ2l0IGNvbmZpZyB1c2VyLmVtYWlsICJ5b3VAZXhhbXBsZS5jb20iCgkJCQlnaXQgY29uZmlnIHVzZXIubmFtZSAiWW91ciBOYW1lIgoKCQkJCQllc2VtcGlvCgkJCQkJZ2l0IGNvbmZpZyB1c2VyLmVtYWlsICJpY2l2aXh3YWx0ZXJAZ21haWwuY29tIgoJCQkJCWdpdCBjb25maWcgdXNlci5uYW1lICJ3YWx0ZXIiCgoAAAAAAAAAAJ0GAAAAAAAAAAAAAAAAAAAAAAAAnQYAAAAAAAAAAAAA",
 					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAB0AgAAAAAAAHQCAAAAAAAAAAAAAAAA8L8"
 				]
 			]
 		}
+=======
+					"BAAAAAAAAAAAAAAAAAAAAAAAAAB1AgAAUmVhZE1lLm1kCgljOlxDQVNBXExJTkdVQUdHSVxBQ0NFU1NcCgoKClBST0ZJTE8gR0lUIFNFIERBIEVSUk9SRQoJCgkJUAoJCQlQUk9GSUxPIEdJVAoJCQkJcGVyIGkgcHJvZmlsbyBnaXQgcXVlc3RhIMOoIGwndXRlbnphIAoJCQkJZW1haWw6IGljaXZpeHdhbHRlckBnbWFpbC5jb20KCQkJCXBhc3N3OiB3YWx0ZXJfMDFfCgoJCQkJcGVyIGNvbmZpZ3VyYXJlIGlsIHByb2ZpbG8gcGVyIHR1dHRvIHV0aWxpenpvIGdsb2JhbGUgY29uIHF1ZXN0aSBjb21hbmRpCgkJCQkgCWdpdCBjb25maWcgLS1nbG9iYWwgdXNlci5lbWFpbCAieW91QGV4YW1wbGUuY29tIgogIAkJCQkJZ2l0IGNvbmZpZyAtLWdsb2JhbCB1c2VyLm5hbWUgIllvdXIgTmFtZSIKCgkJCQlzZSB2dW9pIGltcG9zdGFyIGlsIHByb2ZpbG8gc29sbyBwZXIgbGEgIHJlcG9zaXRvcnkKCQkJCWNvcnJlbnRlIHV0aWxpenphOgoJCQkJZ2l0IGNvbmZpZyB1c2VyLmVtYWlsICJ5b3VAZXhhbXBsZS5jb20iCgkJCQlnaXQgY29uZmlnIHVzZXIubmFtZSAiWW91ciBOYW1lIgoKCQkJCQllc2VtcGlvCgkJCQkJZ2l0IGNvbmZpZyB1c2VyLmVtYWlsICJpY2l2aXh3YWx0ZXJAZ21haWwuY29tIgoJCQkJCWdpdCBjb25maWcgdXNlci5uYW1lICJ3YWx0ZXIiCgoAAAAAAAAAAJ0GAAAAAAAAAAAAAAAAAAAAAAAAnQYAAAAAAAAAAAAAAAAAAAAAAACeBgAAAAAAAAAAAAA",
+					"AwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAHQCAAAAAAAAdAIAAAAAAAAAAAAAAADwvw"
+				]
+			]
+		}
+>>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b:Project_ACCESS.sublime-workspace
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -101,6 +123,15 @@
 	"expanded_folders":
 	[
 		"/C/CASA/LINGUAGGI/ACCESS",
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Progetti_ACCESS.sublime-workspace
+		"/C/CASA/LINGUAGGI/ACCESS/GIT_BAT",
+		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB",
+		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/CMB",
+		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/MSYS_OGGETTI"
+========
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB",
 		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/MSYS_OGGETTI",
 		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/MSYS_OGGETTI/ANALISI",
@@ -108,6 +139,10 @@
 		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/MSYS_OGGETTI/ANALISI/OBJECT/FORM",
 		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/MSYS_OGGETTI/MDB",
 		"/C/CASA/LINGUAGGI/ACCESS/PROGETTI_MDB/MSYS_OGGETTI/MDB/MENU"
+<<<<<<< HEAD
+=======
+>>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b:Project_ACCESS.sublime-workspace
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 	],
 	"file_history":
 	[
@@ -183,7 +218,15 @@
 	],
 	"find":
 	{
+<<<<<<< HEAD
 		"height": 37.6
+=======
+<<<<<<<< HEAD:Progetti_ACCESS.sublime-workspace
+		"height": 27.2
+========
+		"height": 37.6
+>>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b:Project_ACCESS.sublime-workspace
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 	},
 	"find_in_files":
 	{
@@ -282,6 +325,11 @@
 		{
 			"sheets":
 			[
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Progetti_ACCESS.sublime-workspace
+========
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 				{
 					"buffer": 0,
 					"file": "ReadMe.md",
@@ -289,15 +337,24 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 1693,
+=======
+						"buffer_size": 1694,
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								628,
 								628
+=======
+								0,
+								0
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 							]
 						],
 						"settings":
@@ -314,12 +371,24 @@
 					"stack_multiselect": false,
 					"type": "text"
 				}
+<<<<<<< HEAD
+=======
+>>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b:Project_ACCESS.sublime-workspace
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 			]
 		}
 	],
 	"incremental_find":
 	{
+<<<<<<< HEAD
 		"height": 37.6
+=======
+<<<<<<<< HEAD:Progetti_ACCESS.sublime-workspace
+		"height": 27.2
+========
+		"height": 37.6
+>>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b:Project_ACCESS.sublime-workspace
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 	},
 	"input":
 	{
@@ -360,7 +429,15 @@
 	"project": "Project_ACCESS.sublime-project",
 	"replace":
 	{
+<<<<<<< HEAD
 		"height": 72.0
+=======
+<<<<<<<< HEAD:Progetti_ACCESS.sublime-workspace
+		"height": 51.2
+========
+		"height": 72.0
+>>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b:Project_ACCESS.sublime-workspace
+>>>>>>> 3aef9b9e4a5df2325d5808f5bd0ff7f6aa71ab4b
 	},
 	"save_all_on_build": false,
 	"select_file":
