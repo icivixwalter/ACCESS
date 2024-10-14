@@ -8,7 +8,7 @@ Option Compare Database
 '//Note           : Recupero la descrizione del tipo di tributo corrispondente al codice F24.
 '//Parametro      : par_iAnnoImp = anno di imposta e par_sCodiceTributo = Codice Tributo F24.
 '//Codice         : MODELLO_SUB_N00_SENZA_PARAMETRI_pSub.01
-'//
+'//                     @modello@sub_(esempio di modello di @routine)
 
 Public Sub MODELLO_SUB_N00_SENZA_PARAMETRI_pSub()
 
@@ -181,7 +181,7 @@ End Sub
 
 
 
-'//MODELLO_ROUTINE
+'//MODELLO_ROUTINE_CON_2_PARAMETRI  @MODELLO@ROUTINE_(con 2 parametri)
 '//========================================================================================================================================//
 '//Tipo           : Routine pubblica.
 '//Attività       : Recupero il tipo di Tributo del codice F24
@@ -246,8 +246,77 @@ Err_MODELLO_SUB_N01_Routine_2_parametri_pSub:
 End Sub
 
 '//*** FINE ***
-'//MODELLO_ROUTINE
+'//MODELLO_ROUTINE_CON_2_PARAMETRI
 '//========================================================================================================================================//
 
 
+
+
+
+'//MODELLO_ROUTINE_SENZA_PARAMETRI    @MODELLO@ROUTINE_(senza parametri)
+'//======================================================================================================//
+'//Tipo           : Routine pubblica.
+'//Attività       : Esegue codice
+'//Note           : Attivita da definire??
+'//Parametro      : NO PARAMETRI
+'//Codice         : Cmd_Importa_FORM_HELP_Click.01
+'//
+
+Public Sub Cmd_Importa_FORM_HELP_Click ()
+
+'//MessaggiDiErrore
+Dim ProceduraMessaggioErrore_s As String
+Dim ProceduraAttivaEseguita_s As String
+ 
+ 
+'//Campo
+Dim CampoCercato_s As String
+
+'//Campi parametri
+Dim par_AnnoImp_i As Integer
+Dim par_CodiceTributo_s As String
+
+            
+    '//....
+On Error GoTo Err_Cmd_Importa_FORM_HELP_Click 
+
+
+        
+        '//Imposto i parametri
+        ProceduraAttivaEseguita_s = "Cmd_Importa_FORM_HELP_Click "
+        ProceduraMessaggioErrore_s = "Errore nella procedura"
+        
+    '//ITERO NELLA TABELLA
+    '//.....................................................................................................
+    '//Note           : Tramite una Select vengono individuati i valori da restiuire.
+
+        '//RECUPERO PARAMETRO DA TABELLA OGGETTI
+        '//-------------------------------------------------------------------------------
+            
+    '//-------------------------------------------------------------------------------
+    '//*** fine ***
+    '//ITERO NELLA TABELLA
+    '//.....................................................................................................
+
+'//USCITA  E GESTIONE ERRORI
+'//..............................................................................................................
+
+
+Exit_Cmd_Importa_FORM_HELP_Click :
+    Exit Sub
+
+Err_Cmd_Importa_FORM_HELP_Click :
+ '//-------------------------------------------------------------------------------
+    MsgBox Err.Description & " - Errore Messaggio -> : " & ProceduraMessaggioErrore_s & " Procedura -> : " & ProceduraMessaggioErrore_s
+    Debug.Print ProceduraMessaggioErrore_s
+    Debug.Print ProceduraAttivaEseguita_s
+    Stop
+    Resume Exit_Cmd_Importa_FORM_HELP_Click 
+'//-------------------------------------------------------------------------------
+        
+End Sub
+
+'//*** FINE ***
+'//MODELLO_ROUTINE_SENZA_PARAMETRI
+'//======================================================================================================//
 

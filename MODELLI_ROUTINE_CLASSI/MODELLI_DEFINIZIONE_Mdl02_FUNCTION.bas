@@ -22,7 +22,7 @@ Public Function pfFunction_base(par_variabile As String)
 '// DIM SCELTA DATABASE DA APRIRE
 Dim sScelta_db As String
 
-    
+        '//@modello@funzione_(modello di funzione)'
     
         On Error GoTo Err_pfFunction_base
     
