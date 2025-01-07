@@ -19,6 +19,19 @@ POWERSHELL.MD
 			powershell ISE
 				apro l'ide di powershell
 
+		E
+			@EOLO
+				Per le proprieta della rete utilizzare :
+   					SICUREZZA
+   						Tipo di sicurezza 	: WPA2-Personal
+   						Tipo di crittografia : AES
+     					Chiave di sicurezza	: en8PCSGkb
+
+					PROBLEMI
+						se Eolo non è visibile nel centro di 
+						connessione alla rete avviare il controllo di eolo della rete sul router
+						chimato AUTODIAGNOSI
+
 
 
 
@@ -114,3 +127,16 @@ POWERSHELL.MD
 
 			ESECUZIONE_POWERSHELL
 				powershell.exe -ExecutionPolicy Bypass -File "c:\CASA\LINGUAGGI\ACCESS\PROGETTI_MDB\MSYS_OGGETTI\MSYS\OBJECT\POWERSHELL\CHIUDI_EDGE_ProcessiPadre+Figli.ps1"
+
+
+
+		W
+			WIFI RESET SCHEDA
+				reimposta la scheda di rete
+				in cmd impostare la directory
+				cd c:\Windows\sistem32\ 
+				comando	
+					netsh int ip reset resetlog.txt
+
+
+
